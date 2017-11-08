@@ -14,7 +14,7 @@ def show(params):
 	print('Image Size = %s x %d' %(width,height))
 	
 	#plot window size options
-	fig, ax = plt.subplots(figsize=(21, 12), dpi=100) #this allows tight layout, .figure doesn't
+	fig, ax = plt.subplots(figsize=(17, 12), dpi=100) #this allows tight layout, .figure doesn't
 	fig.tight_layout() #tighter fit to plot window
 
 	for i in range(len(params.coords)): #draw points on blank image
