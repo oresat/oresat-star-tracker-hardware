@@ -3,6 +3,10 @@ Star Tracker for OreSat based on Tetra:
 
 https://github.com/brownj4/Tetra/blob/master/tetra.py
 
+Run Tetra with: 'python3 tetra.py'
+
+This will create the hash table(this takes a while, but only has to run once).
+
 (below is original README from Tetra)
 # Tetra
 
