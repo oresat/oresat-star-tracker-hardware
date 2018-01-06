@@ -8,7 +8,7 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 
-#--Oliver was added anywhere I changed code
+#"--Oliver" was added anywhere I changed code
 
 import numpy as np
 import itertools
@@ -96,6 +96,8 @@ num_course_sky_map_bins = 4
 # constant used for randomizing hash functions
 avalanche_constant = 2654435761
   
+#-----Code Break!  
+  
 # converts a hash_code into an index in the hash table
 def hash_code_to_index(hash_code, bins_per_dimension, hash_table_size):
   # convert hashcode to python integers
@@ -112,8 +114,7 @@ def get_nearby_stars_compressed_course(vector, radius):
   # create list of nearby stars
   nearby_star_ids = []
   # given error of at most radius in each dimension, compute the space of hash codes to lookup in the sky map
-  hash_code_space = [range(max(low,0), min(high+1,2*num_course_sky_map_bins)) for (low, high) in zip(((vector + 1 - radius) * num_course_sky_map_bins).astype(np.int),
-                                                                                                     ((vector + 1 + radius) * num_course_sky_map_bins).astype(np.int))]
+  hash_code_space = [range(max(low,0), min(high+1,2*num_course_sky_map_bins)) for (low, high) in zip(((vector + 1 - radius) * num_course_sky_map_bins).astype(np.int), ((vector + 1 + radius) * num_course_sky_map_bins).astype(np.int))]
   # iterate over hash code space, looking up partitions of the sky map that are within range of the given vector
   for hash_code in itertools.product(*hash_code_space):
     hash_index = hash_code_to_index(hash_code, 2*num_course_sky_map_bins, compressed_course_sky_map_hash_table_size)
@@ -393,6 +394,8 @@ if read_failed or str(parameters) != stored_parameters:
   np.save('pattern_catalog.npy', pattern_catalog)
   parameters = open('params.txt', 'w').write(str(parameters))
   
+##--Break between catalogue generation and search algorithm
+
 # run the tetra star tracking algorithm on the given image
 def tetra(image_file_name):
   # read image from file and convert to black and white
