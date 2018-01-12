@@ -242,7 +242,10 @@ if read_failed or str(parameters) != stored_parameters:
   # add all non-double stars brighter than magnitude_minimum to the star table and sky maps
   star_table = np.zeros((STARN+1, 3), dtype=np.float32)
   # create fine sky map hash table, which maps vectors to star ids
-  fine_sky_map = np.zeros(len(stars) / fine_sky_map_fill_factor, dtype=np.uint16)
+ 
+  #original line, gave me 'TypeError: 'float' object cannot be interpreted as an integer', added int() --oliver
+  fine_sky_map = np.zeros(int(len(stars) / fine_sky_map_fill_factor), dtype=np.uint16)
+
   # create course sky map hash table, which maps vectors to star ids
   course_sky_map = {}
   for (vector, mag, star_id) in stars_no_doubles:
@@ -268,14 +271,16 @@ if read_failed or str(parameters) != stored_parameters:
   # the map consists of a hash table, a superlist of stars, and a number representing the size of the hash table
   # the hash table consists of pairs of indices which slice the superlist into the output star id lists
   compressed_course_sky_map_hash_table_size = 2 * len(course_sky_map.keys()) / course_sky_map_fill_factor
-  compressed_course_sky_map = np.zeros(compressed_course_sky_map_hash_table_size + len(stars_no_doubles) + 1, dtype=np.uint16)
+  #original line gave me "TypeError: 'float' object cannot be interpreted as an integer", added int() --oliver
+  compressed_course_sky_map = np.zeros(int(compressed_course_sky_map_hash_table_size + len(stars_no_doubles)) + 1, dtype=np.uint16)
   compressed_course_sky_map[-1] = compressed_course_sky_map_hash_table_size
   # add the items of the course sky map to the compressed course sky map one at a time
   first_open_slot_in_superlist = compressed_course_sky_map_hash_table_size
   for (hash_code, star_id_list) in course_sky_map.items():
     # compute the indices for the slice of the superlist the star id list will occupy
-    slice_indices = (first_open_slot_in_superlist, first_open_slot_in_superlist + len(star_id_list))
-    # add the star id list to the superlist
+    #original gave me "TypeError: slice indices must be integers or None or have an __index__ method", added int() --oliver
+    slice_indices = (int(first_open_slot_in_superlist), int(first_open_slot_in_superlist + len(star_id_list)))
+    # add the star id list to the superlist   
     compressed_course_sky_map[slice(*slice_indices)] = star_id_list
     # increment the counter for the first open slot in the superlist
     first_open_slot_in_superlist += len(star_id_list)
@@ -284,8 +289,9 @@ if read_failed or str(parameters) != stored_parameters:
     for index in ((2 * (hash_index + offset ** 2)) % compressed_course_sky_map_hash_table_size for offset in itertools.count()):
       # if the current slot is empty, add the slice indices to the hash table
       # otherwise, move on to the next slot
-      if not compressed_course_sky_map[index]:
-        compressed_course_sky_map[index:index+2] = slice_indices
+      #original below 2 lines gave me error because index is a float, added int() --oliver
+      if not compressed_course_sky_map[int(index)]:
+        compressed_course_sky_map[int(index):int(index+2)] = slice_indices
         break
   
   # sort list by star magnitude, from brightest to dimmest
