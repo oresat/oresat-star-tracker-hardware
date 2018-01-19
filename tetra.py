@@ -422,7 +422,7 @@ if read_failed or str(parameters) != stored_parameters:
   parameters = open('params.txt', 'w').write(str(parameters))
   
 ##--Break between catalogue generation and search algorithm
-print("Start Search: " + lineno() + " : "str(timeit.default_timer() - start_time))
+print("Start Search: " + str(timeit.default_timer() - start_time))
 
 # run the tetra star tracking algorithm on the given image
 def tetra(image_file_name):
