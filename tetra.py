@@ -18,6 +18,18 @@ import scipy.optimize
 import scipy.stats
 import glob
 
+##debug stuff
+
+import timeit #for timing
+start_time = timeit.default_timer()
+
+import inspect
+
+def lineno():
+    """Returns the current line number in our program."""
+    return inspect.currentframe().f_back.f_lineno
+##end debug stuff
+
 # directory containing input images
 image_directory = './pics'
 
@@ -30,6 +42,8 @@ show_solution = True
 # determines approximately what image fields of view
 # can be identified by the algorithm
 max_fovs = [10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60]
+#max_fovs = [10] #for testing
+
 
 # radius around image stars to search for matching catalog stars
 # as a fraction of image field of view in x dimension
@@ -122,7 +136,8 @@ def get_nearby_stars_compressed_course(vector, radius):
     # the nearby stars list if they're in the correct bin and within range of the vector
     for index in ((2 * (hash_index + offset ** 2)) % compressed_course_sky_map_hash_table_size for offset in itertools.count()):
       # if the current slot is empty, the bin does not exist
-      if not compressed_course_sky_map[index]:
+      #original gave type error, added int() --oliver
+      if not compressed_course_sky_map[int(index)]:
         break
       # otherwise, check if the indices correspond to the correct bin
       indices = compressed_course_sky_map[index:index+2]
@@ -322,6 +337,7 @@ if read_failed or str(parameters) != stored_parameters:
 
   # generate a piece of the catalog for each fov specified
   for max_fov in max_fovs:
+    print(timeit.default_timer() - start_time)
     print("computing " + str(max_fov) + " degree fov patterns...")
   
     # change field of view from degrees to radians
@@ -361,12 +377,16 @@ if read_failed or str(parameters) != stored_parameters:
         if all(np.dot(*star_pair) > np.cos(max_fov_rad) for star_pair in itertools.combinations(vectors[1:], 2)):
           pattern_list[num_patterns_found] = pattern
           num_patterns_found += 1
+    
+    
   # truncate pattern list to only contain valid values
   pattern_list = pattern_list[:num_patterns_found]
 
   # insert star patterns into pattern catalog hash table
   print("inserting patterns into catalog...")
-  pattern_catalog = np.zeros((num_patterns_found / catalog_fill_factor, pattern_size), dtype=np.uint16)
+  print(pattern_size)
+  #original gave TypeError, added int(), --Oliver
+  pattern_catalog = np.zeros(( int(num_patterns_found / catalog_fill_factor), pattern_size), dtype=np.uint16)
   for pattern in pattern_list:
     # retrieve the vectors of the stars in the pattern
     vectors = np.array([star_table[star_id] for star_id in pattern])
@@ -393,6 +413,7 @@ if read_failed or str(parameters) != stored_parameters:
       else:
         continue
 
+  
   # save star table, sky maps, pattern catalog, and parameters to disk
   np.save('star_table.npy', star_table)
   np.save('fine_sky_map.npy', fine_sky_map)
@@ -401,6 +422,7 @@ if read_failed or str(parameters) != stored_parameters:
   parameters = open('params.txt', 'w').write(str(parameters))
   
 ##--Break between catalogue generation and search algorithm
+print("Start Search: " + lineno() + " : "str(timeit.default_timer() - start_time))
 
 # run the tetra star tracking algorithm on the given image
 def tetra(image_file_name):
@@ -539,6 +561,7 @@ def tetra(image_file_name):
           
   # iterate over every combination of size pattern_size of the brightest max_pattern_checking_stars stars in the image
   for pattern_star_centroids in centroid_pattern_generator(star_centroids[:max_pattern_checking_stars], pattern_size):
+    print(str(pattern_star_centroids) + " : " + str(timeit.default_timer() - start_time)) #timing --oliver
     # iterate over possible fields-of-view
     for fov_estimate in max_fovs:
       # compute star vectors using an estimate for the field-of-view in the x dimension
@@ -550,8 +573,7 @@ def tetra(image_file_name):
       # divide the pattern's edges by the largest edge to create dimensionless ratios for lookup in the catalog
       pattern_edge_ratios = pattern_edges[:-1] / pattern_largest_edge
       # given error of at most max_error in the edge_ratios, compute the space of hash codes to lookup in the catalog
-      hash_code_space = [range(max(low,0), min(high+1,num_catalog_bins)) for (low, high) in zip(((pattern_edge_ratios - max_error) * num_catalog_bins).astype(np.int),
-                                                                                                ((pattern_edge_ratios + max_error) * num_catalog_bins).astype(np.int))]
+      hash_code_space = [range(max(low,0), min(high+1,num_catalog_bins)) for (low, high) in zip(((pattern_edge_ratios - max_error) * num_catalog_bins).astype(np.int), ((pattern_edge_ratios + max_error) * num_catalog_bins).astype(np.int))]
       # iterate over hash code space, only looking up non-duplicate codes that are in sorted order
       for hash_code in set([tuple(sorted(code)) for code in itertools.product(*hash_code_space)]):
         hash_code = tuple(hash_code)
@@ -700,6 +722,7 @@ def tetra(image_file_name):
             print("DEC:  %.4f" % dec)
             print("ROLL: %.4f" % roll)
             print("FOV:  %.4f" % fov)
+            print("End Search: " + str(timeit.default_timer() - start_time)) #timing --oliver
             # display input image with green circles around matched catalog stars
             # and red circles around unmatched catalog stars
             if show_solution:
