@@ -184,7 +184,7 @@ except:
 # are different than those specified above
 if read_failed or str(parameters) != stored_parameters:
   # number of stars in BSC5 catalog
-  STARN = 9110
+  STARN = 4447
 
   # BSC5 data storage format
   bsc5_data_type = [("XNO", np.float32),

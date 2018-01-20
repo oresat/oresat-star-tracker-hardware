@@ -17,3 +17,15 @@ TypeError: slice indices must be integers or None or have an __index__ method
 
 	However, the table still seems to generate fine and work after? Investigate later.
 
+-9110
+11111111 11111111 11011100 01101010
+
+11111111 11111111 11011100 01101010
+
+
+-4447
+11111111 11111111 11101110 10100001
+
+10100001 11101110 11111111 11111111
+  A  1     E   E     ff       ff
+
