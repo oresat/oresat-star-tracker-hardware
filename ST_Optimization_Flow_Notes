@@ -4,9 +4,9 @@ ST = Star Tracker
 OS = Oresat
 
 Prediction Mode: OS has not used ST in a while but thinks it knows where it is looking
-    - ADACS System continuously sends predicted RA/DEC to ST
+    - ADACS continuously sends predicted RA/DEC to ST
         > ST finds the narrowest Star Catalogue encompassing those coordinates and loads that catalogue into cache
-    - ADACS System requests attitude from star tracker
+    - ADACS requests attitude from star tracker
         > ST runs Tetra with currently cached catalog.
         > If search succeeds, send back coordinates with time stamp.
 
