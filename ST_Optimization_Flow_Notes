@@ -1,0 +1,21 @@
+Tetra Optimization Flow
+
+ST = Star Tracker
+OS = Oresat
+
+Prediction Mode: OS has not used ST in a while but thinks it knows where it is looking
+- ADACS System continuously sends predicted RA/DEC to ST
+    > ST finds the narrowest Star Catalogue encompassing those coordinates and loads that catalogue into RAM
+- ADACS System tell
+
+    
+    
+    
+    
+    
+Continuous Mode: OS has been STing and has a very good idea where it is looking
+
+Lost in Space Mode: OS has no idea where it is looking. This is default if all other modes fail to find a match
+
+Notes:
+  - The overlap between the cached catalogs should be > half the field of view
