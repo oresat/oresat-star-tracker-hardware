@@ -1,11 +1,6 @@
 """
 Copyright (c) 2016 Julian Brown
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+I deleted the rest of his spiel, find it in the original code.
 """
 
 #"--Oliver" was added anywhere I changed code
@@ -23,11 +18,6 @@ import glob
 import timeit #for timing
 start_time = timeit.default_timer()
 
-import inspect
-
-def lineno():
-    """Returns the current line number in our program."""
-    return inspect.currentframe().f_back.f_lineno
 ##end debug stuff
 
 # directory containing input images
@@ -42,8 +32,6 @@ show_solution = True
 # determines approximately what image fields of view
 # can be identified by the algorithm
 max_fovs = [10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60]
-#max_fovs = [10] #for testing
-
 
 # radius around image stars to search for matching catalog stars
 # as a fraction of image field of view in x dimension
@@ -122,6 +110,7 @@ def hash_code_to_index(hash_code, bins_per_dimension, hash_table_size):
   # take the result modulo the table size to give a random index
   index = (integer_hash_code * avalanche_constant) % hash_table_size
   return index
+
   
 # find all stars within a radius centered on the given vector using the compressed course sky map
 def get_nearby_stars_compressed_course(vector, radius):
@@ -167,15 +156,32 @@ parameters = (max_fovs,
               course_sky_map_fill_factor, 
               num_course_sky_map_bins)
 # try opening the database files
+
+#OLIVER: This is where I need to determine which catalogs to use! Also, I need to read the number of stars in the generated catalog and assign that value to STARN
+
+'''
 try:
-  pattern_catalog = np.load('pattern_catalog.npy')
-  fine_sky_map = np.load('fine_sky_map.npy')
-  compressed_course_sky_map = np.load('compressed_course_sky_map.npy')
+  pattern_catalog = np.load('catalogs/180deg/pattern_catalog.npy')
+  fine_sky_map = np.load('catalogs/180deg/fine_sky_map.npy')
+  compressed_course_sky_map = np.load('catalogs/180deg/compressed_course_sky_map.npy')
   compressed_course_sky_map_hash_table_size = compressed_course_sky_map[-1]
-  star_table = np.load('star_table.npy')
-  stored_parameters = open('params.txt', 'r').read()
+  star_table = np.load('catalogs/180deg/star_table.npy')
+  stored_parameters = open('catalogs/180deg/params.txt', 'r').read()
   # if it got this far, the reads didn't fail
   read_failed = 0
+  
+  ''' 
+try:
+  pattern_catalog = np.load('catalogs/360deg/pattern_catalog.npy')
+  fine_sky_map = np.load('catalogs/360deg/fine_sky_map.npy')
+  compressed_course_sky_map = np.load('catalogs/360deg/compressed_course_sky_map.npy')
+  compressed_course_sky_map_hash_table_size = compressed_course_sky_map[-1]
+  star_table = np.load('catalogs/360deg/star_table.npy')
+  stored_parameters = open('catalogs/360deg/params.txt', 'r').read()
+  # if it got this far, the reads didn't fail
+  read_failed = 0
+  
+
 except:
   # loading from the files failed, so they either didn't existing or weren't complete
   read_failed = 1
@@ -184,6 +190,7 @@ except:
 # are different than those specified above
 if read_failed or str(parameters) != stored_parameters:
   # number of stars in BSC5 catalog
+  #STARN = 9110 #this was original # of stars in catalogue
   STARN = 4447
 
   # BSC5 data storage format
@@ -422,7 +429,8 @@ if read_failed or str(parameters) != stored_parameters:
   parameters = open('params.txt', 'w').write(str(parameters))
   
 ##--Break between catalogue generation and search algorithm
-print("Start Search: " + str(timeit.default_timer() - start_time))
+time1 = timeit.default_timer() #record starting time of search! --Oliver #timing
+print("1: " + str(timeit.default_timer() - start_time))
 
 # run the tetra star tracking algorithm on the given image
 def tetra(image_file_name):
@@ -485,6 +493,7 @@ def tetra(image_file_name):
   seen = set()
   groups = [seen.add(id(group)) or group for group in pixel_to_group.values() if id(group) not in seen]
 
+  print("6: " + str(timeit.default_timer() - start_time))
   # find the brightest pixel for each group containing at least
   # the minimum number of pixels required to be classified as a star
   star_center_pixels = [max(group, key=lambda pixel: normalized_image[pixel]) for group in groups if len(group) > min_pixels_in_group]
@@ -494,6 +503,8 @@ def tetra(image_file_name):
   x_weights = np.fromfunction(lambda y,x:x+.5,(window_size, window_size))
   y_weights = np.fromfunction(lambda y,x:y+.5,(window_size, window_size))
   star_centroids = []
+  print("7: " + str(timeit.default_timer() - start_time))
+  ##The Below loop takes the longest of all functions
   for (y,x) in star_center_pixels:
     # throw out star if it's too close to the edge of the image
     if y < window_radius or y >= height - window_radius or \
@@ -513,6 +524,7 @@ def tetra(image_file_name):
   	#star_centroids.sort(key=lambda yx:-np.sum(normalized_image[yx[0]-window_radius:yx[0]+window_radius+1, yx[1]-window_radius:yx[1]+window_radius+1]))
     star_centroids.sort(key=lambda yx:-np.sum(normalized_image[int(yx[0]-window_radius):int(yx[0]+window_radius+1), int(yx[1]-window_radius):int(yx[1]+window_radius+1)]))
 
+  print("5: " + str(timeit.default_timer() - start_time))
   # compute list of (i,j,k) vectors given list of (y,x) star centroids and
   # an estimate of the image's field-of-view in the x dimension
   # by applying the pinhole camera equations
@@ -531,6 +543,7 @@ def tetra(image_file_name):
       star_vectors.append(np.array([i,j,k]))
     return star_vectors
 
+  print("2: " + str(timeit.default_timer() - start_time))
   # generate star patterns in order of brightness
   def centroid_pattern_generator(star_centroids, pattern_size):
     # break if there aren't enough centroids to make even one pattern
@@ -561,7 +574,6 @@ def tetra(image_file_name):
           
   # iterate over every combination of size pattern_size of the brightest max_pattern_checking_stars stars in the image
   for pattern_star_centroids in centroid_pattern_generator(star_centroids[:max_pattern_checking_stars], pattern_size):
-    print(str(pattern_star_centroids) + " : " + str(timeit.default_timer() - start_time)) #timing --oliver
     # iterate over possible fields-of-view
     for fov_estimate in max_fovs:
       # compute star vectors using an estimate for the field-of-view in the x dimension
@@ -574,6 +586,7 @@ def tetra(image_file_name):
       pattern_edge_ratios = pattern_edges[:-1] / pattern_largest_edge
       # given error of at most max_error in the edge_ratios, compute the space of hash codes to lookup in the catalog
       hash_code_space = [range(max(low,0), min(high+1,num_catalog_bins)) for (low, high) in zip(((pattern_edge_ratios - max_error) * num_catalog_bins).astype(np.int), ((pattern_edge_ratios + max_error) * num_catalog_bins).astype(np.int))]
+      print("3: " + str(timeit.default_timer() - start_time))
       # iterate over hash code space, only looking up non-duplicate codes that are in sorted order
       for hash_code in set([tuple(sorted(code)) for code in itertools.product(*hash_code_space)]):
         hash_code = tuple(hash_code)
@@ -647,7 +660,7 @@ def tetra(image_file_name):
           rotation_matrix = find_rotation_matrix(pattern_sorted_vectors, catalog_sorted_vectors)
           # calculate all star vectors using the new field-of-view
           all_star_vectors = compute_vectors(star_centroids, fov)
-          
+          print("4: " + str(timeit.default_timer() - start_time))
           def find_matches(all_star_vectors, rotation_matrix):
             # rotate each of the star vectors into the catalog frame by
             # using the inverse (transpose) of the tentative rotation matrix
@@ -722,7 +735,8 @@ def tetra(image_file_name):
             print("DEC:  %.4f" % dec)
             print("ROLL: %.4f" % roll)
             print("FOV:  %.4f" % fov)
-            print("End Search: " + str(timeit.default_timer() - start_time)) #timing --oliver
+            time2 = (timeit.default_timer() - time1)
+            print("Search Time: " + str(time2)) #timing --oliver
             # display input image with green circles around matched catalog stars
             # and red circles around unmatched catalog stars
             if show_solution:
@@ -771,7 +785,7 @@ def tetra(image_file_name):
      
                  
               #turn off show image for testing
-              rgb_image.show()
+              #rgb_image.show()
             return
 
   # print failure message

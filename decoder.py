@@ -57,10 +57,7 @@ with open("BSC5orig", "rb") as binary_file:
     	#need to unpack params, filter, and assign sequential star number to matches
     	   	
     	starRA = Angle(RA, u.radian) #assign radians to Angle data
-    	starRA = starRA.degree #convert from radians to degrees
-    	print(starNum)    	
-	
-    	
+    	starRA = starRA.degree #convert from radians to degrees	
     	
     	if (starRA > minRA and starRA < maxRA): #write any entries that match the sort params
     		
@@ -73,35 +70,10 @@ with open("BSC5orig", "rb") as binary_file:
     		data += starWrite #write binary star info into final data
     		matchs += 1
     		
-    		
-    print(matchs)
-    	#print(data)
-
+    print(matchs) #print number of matching stars
 
     #create and write to new star catalogue file
     starCat = open("BSC5", "wb")
     starCat.write(data)
     starCat.close()
-
-
-
-
-
-    '''
-    
-    for i in range(0, abs(headerRead[numStars])): #cycle through all stars in catalogue
-    #for i in range(0, 1): #for testing
-    	binary_file.seek(headerLen + starLen*i)
-    	star = binary_file.read(starLen)
-    	starRead = struct.unpack( starFmt , star)
-    	a = Angle(star[RA], u.radian)
-    	#print(a.radian)
-    	#print(a.to_string(unit=u.hour))
-    	data += star #write star info(not unpacked to data file
-    
-    '''
-    	
-    
-
-
 
