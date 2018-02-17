@@ -124,12 +124,16 @@ int32_t Capture_Image_TO_Bmp(void)
   //LCD_WriteRAM_Prepare();
   //LCD_ReadRAM();
 
+  //16-bit BMP = RRRRR-GGGGG-BBBBB-A
+  uint16_t k = 0;
   for (j = 0; j < 120; j++) {
-	  uint16_t k = 0;
+	  //uint16_t k = 0;
     for(i=0;i<160;i++) {
- //     data_temp = LCD_ReadRAM();
-      image_buf[i*2+1] = image_buffer[k++];
-      image_buf[i*2+0] = image_buffer[k++];
+    	//image_buffer[k*2+0] = 0xF8; //write all red frame
+    	//image_buffer[k*2+1] = 0x00;
+    	image_buf[i*2+1] = image_buffer[k*2+0];
+    	image_buf[i*2+0] = image_buffer[k*2+1];
+    	k++;
     }
     ret = f_write(&file, image_buf, 320, &bw);
   }

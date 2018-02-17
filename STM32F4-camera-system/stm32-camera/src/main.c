@@ -144,7 +144,7 @@ int main(void)
     while (1)
     {
       /* Insert 100ms delay */
-      Delay(300);
+      Delay(10);
 
       if (KeyPressFlg) {
       //if (1) {
@@ -319,6 +319,7 @@ void DCMI_Config(void)
   
   /* DCMI configuration *******************************************************/ 
   DCMI_InitStructure.DCMI_CaptureMode = DCMI_CaptureMode_Continuous;
+  //DCMI_InitStructure.DCMI_CaptureMode = DCMI_CaptureMode_SnapShot;
   DCMI_InitStructure.DCMI_SynchroMode = DCMI_SynchroMode_Hardware;
   DCMI_InitStructure.DCMI_PCKPolarity = DCMI_PCKPolarity_Falling;
   DCMI_InitStructure.DCMI_VSPolarity = DCMI_VSPolarity_High;
@@ -339,7 +340,8 @@ void DCMI_Config(void)
   DMA_InitStructure.DMA_PeripheralBaseAddr = DCMI_DR_ADDRESS;	
   DMA_InitStructure.DMA_Memory0BaseAddr = image_buffer;  //FSMC_LCD_ADDRESS;
   DMA_InitStructure.DMA_DIR = DMA_DIR_PeripheralToMemory;
-  DMA_InitStructure.DMA_BufferSize = 1;
+  //DMA_InitStructure.DMA_BufferSize = 1; //
+  DMA_InitStructure.DMA_BufferSize = 9600; // (120 * 160) * 2(2B/pixel) / 4(4B/word) = 9600
   DMA_InitStructure.DMA_PeripheralInc = DMA_PeripheralInc_Disable;
   DMA_InitStructure.DMA_MemoryInc = DMA_MemoryInc_Enable;
   DMA_InitStructure.DMA_PeripheralDataSize = DMA_PeripheralDataSize_Word;
