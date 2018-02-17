@@ -18,7 +18,7 @@
   * <h2><center>&copy; Portions COPYRIGHT 2011 STMicroelectronics</center></h2>
   ******************************************************************************
   */ 
-/**
+/**xck
   ******************************************************************************
   * <h2><center>&copy; Portions COPYRIGHT 2012 Embest Tech. Co., Ltd.</center></h2>
   * @file    main.c 
