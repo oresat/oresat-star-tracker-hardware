@@ -33,10 +33,10 @@ endif
 all: stm32-camera.elf
 
 # Tool invocations
-stm32-camera.elf: $(OBJS) $(USER_OBJS) C:\Users\Oliver\git\oresat-star-tracker\stm32-camera\stm32-camera\LinkerScript.ld
+stm32-camera.elf: $(OBJS) $(USER_OBJS) C:\Users\Oliver\Documents\GitHub\oresat-star-tracker\stm32-camera\stm32-camera\LinkerScript.ld
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU GCC Linker'
-	arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\Oliver\git\oresat-star-tracker\stm32-camera\stm32-camera\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "stm32-camera.elf" @"objects.list" $(USER_OBJS) $(LIBS) -lm
+	arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\Oliver\Documents\GitHub\oresat-star-tracker\stm32-camera\stm32-camera\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "stm32-camera.elf" @"objects.list" $(USER_OBJS) $(LIBS) -lm
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build
