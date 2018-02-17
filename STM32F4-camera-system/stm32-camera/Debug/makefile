@@ -10,6 +10,9 @@ RM := rm -rf
 -include sources.mk
 -include startup/subdir.mk
 -include src/subdir.mk
+-include Utilities/STM32F4-Discovery/subdir.mk
+-include Utilities/FatFs_vR0.08a/subdir.mk
+-include STM32F4xx_StdPeriph_Driver/src/subdir.mk
 -include subdir.mk
 -include objects.mk
 
@@ -30,22 +33,23 @@ endif
 all: stm32-camera.elf
 
 # Tool invocations
-stm32-camera.elf: $(OBJS) $(USER_OBJS)
+stm32-camera.elf: $(OBJS) $(USER_OBJS) C:\Users\Oliver\Documents\GitHub\oresat-star-tracker\STM32F4-camera-system\stm32-camera\LinkerScript.ld
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU GCC Linker'
-	arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\Oliver\Documents\SWSTM32_workspace\stm32-camera\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "stm32-camera.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\Oliver\Documents\GitHub\oresat-star-tracker\STM32F4-camera-system\stm32-camera\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "stm32-camera.elf" @"objects.list" $(USER_OBJS) $(LIBS) -lm
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build
 
 # Other Targets
 clean:
-	-$(RM) $(EXECUTABLES)$(OBJS)$(S_UPPER_DEPS)$(C_DEPS) stm32-camera.elf
+	-$(RM) *
 	-@echo ' '
 
 post-build:
 	-@echo 'Generating binary and Printing size information:'
-	-arm-none-eabi-objcopy -O binary "stm32-camera.elf" "stm32-camera.bin"; arm-none-eabi-size "stm32-camera.elf"
+	arm-none-eabi-objcopy -O binary "stm32-camera.elf" "stm32-camera.bin"
+	arm-none-eabi-size "stm32-camera.elf"
 	-@echo ' '
 
 .PHONY: all clean dependents

@@ -4,6 +4,7 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../src/USARTprint.c \
 ../src/bmp.c \
 ../src/dcmi_ov9655.c \
 ../src/main.c \
@@ -11,6 +12,7 @@ C_SRCS += \
 ../src/system_stm32f4xx.c 
 
 OBJS += \
+./src/USARTprint.o \
 ./src/bmp.o \
 ./src/dcmi_ov9655.o \
 ./src/main.o \
@@ -18,6 +20,7 @@ OBJS += \
 ./src/system_stm32f4xx.o 
 
 C_DEPS += \
+./src/USARTprint.d \
 ./src/bmp.d \
 ./src/dcmi_ov9655.d \
 ./src/main.d \
@@ -29,7 +32,8 @@ C_DEPS += \
 src/%.o: ../src/%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: MCU GCC Compiler'
-	arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F407VGTx -DSTM32F4DISCOVERY -DDEBUG -I"C:\Users\Oliver\Documents\SWSTM32_workspace\stm32-camera\inc" -include"C:\Users\Oliver\Documents\SWSTM32_workspace\stm32-camera\STM32F4xx_StdPeriph_Driver\inc\misc.h" -include"C:\Users\Oliver\Documents\SWSTM32_workspace\stm32-camera\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_adc.h" -include"C:\Users\Oliver\Documents\SWSTM32_workspace\stm32-camera\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h" -include"C:\Users\Oliver\Documents\SWSTM32_workspace\stm32-camera\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_crc.h" -include"C:\Users\Oliver\Documents\SWSTM32_workspace\stm32-camera\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_cryp.h" -include"C:\Users\Oliver\Documents\SWSTM32_workspace\stm32-camera\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h" -include"C:\Users\Oliver\Documents\SWSTM32_workspace\stm32-camera\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dbgmcu.h" -include"C:\Users\Oliver\Documents\SWSTM32_workspace\stm32-camera\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h" -include"C:\Users\Oliver\Documents\SWSTM32_workspace\stm32-camera\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h" -include"C:\Users\Oliver\Documents\SWSTM32_workspace\stm32-camera\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_exti.h" -include"C:\Users\Oliver\Documents\SWSTM32_workspace\stm32-camera\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_flash.h" -include"C:\Users\Oliver\Documents\SWSTM32_workspace\stm32-camera\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h" -include"C:\Users\Oliver\Documents\SWSTM32_workspace\stm32-camera\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_gpio.h" -include"C:\Users\Oliver\Documents\SWSTM32_workspace\stm32-camera\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_hash.h" -include"C:\Users\Oliver\Documents\SWSTM32_workspace\stm32-camera\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_i2c.h" -include"C:\Users\Oliver\Documents\SWSTM32_workspace\stm32-camera\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_iwdg.h" -include"C:\Users\Oliver\Documents\SWSTM32_workspace\stm32-camera\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_pwr.h" -include"C:\Users\Oliver\Documents\SWSTM32_workspace\stm32-camera\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rcc.h" -include"C:\Users\Oliver\Documents\SWSTM32_workspace\stm32-camera\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rng.h" -include"C:\Users\Oliver\Documents\SWSTM32_workspace\stm32-camera\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rtc.h" -include"C:\Users\Oliver\Documents\SWSTM32_workspace\stm32-camera\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_sdio.h" -include"C:\Users\Oliver\Documents\SWSTM32_workspace\stm32-camera\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h" -include"C:\Users\Oliver\Documents\SWSTM32_workspace\stm32-camera\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_syscfg.h" -include"C:\Users\Oliver\Documents\SWSTM32_workspace\stm32-camera\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_tim.h" -include"C:\Users\Oliver\Documents\SWSTM32_workspace\stm32-camera\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h" -include"C:\Users\Oliver\Documents\SWSTM32_workspace\stm32-camera\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -o "$@" "$<"
+	@echo $(PWD)
+	arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F407VGTx -DSTM32F4DISCOVERY -DDEBUG -DSTM32F40XX -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -I"C:/Users/Oliver/Documents/GitHub/oresat-star-tracker/STM32F4-camera-system/stm32-camera/inc" -I"C:/Users/Oliver/Documents/GitHub/oresat-star-tracker/STM32F4-camera-system/stm32-camera/Utilities/FatFs_vR0.08a" -I"C:/Users/Oliver/Documents/GitHub/oresat-star-tracker/STM32F4-camera-system/stm32-camera/STM32F4xx_StdPeriph_Driver/inc" -I"C:/Users/Oliver/Documents/GitHub/oresat-star-tracker/STM32F4-camera-system/stm32-camera/Utilities/STM32F4-Discovery" -I"C:/Users/Oliver/Documents/GitHub/oresat-star-tracker/STM32F4-camera-system/stm32-camera/CMSIS/Include" -I"C:/Users/Oliver/Documents/GitHub/oresat-star-tracker/STM32F4-camera-system/stm32-camera/CMSIS/Device/ST/STM32F4xx/Include" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
