@@ -1,0 +1,7 @@
+"src/bmp.o"
+"src/dcmi_ov9655.o"
+"src/main.o"
+"src/stm32f4xx_it.o"
+"src/system_stm32f4xx.o"
+"startup/startup_stm32.o"
+"startup/sysmem.o"
