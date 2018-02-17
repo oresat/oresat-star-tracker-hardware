@@ -156,26 +156,9 @@ int main(void)
 
           DCMI_CaptureCmd(DISABLE);
           capture_Flag = DISABLE;
-//          uPrint(USART2,"start capture!\r\n");
-//          LCD_WriteRAM_Prepare();
-//          LCD_ReadRAM();
-//          for(int i=0 ; i < readLines ; i++)
-//			{
-//			  image_buf2[i] = LCD_ReadRAM();
-//			  //Delay(10);
-//			}
-//          uPrint(USART2,"end capture, start print\r\n");
-//          for(int i=0 ; i < 2 ; i++)
-//			{
-//			  //uPrint(USART2, "***\r\n");
-//			  uPrint(USART2, image_buf2[i]);
-//			  //uPrint(USART2, "\r\n");
-//			  Delay(5);
-//			}
-//          uPrint(USART2,"end print\r\n");
           Capture_Image_TO_Bmp();
           //LCD_SetDisplayWindow(0, 0, 320, 240);
-          LCD_WriteRAM_Prepare();
+          //LCD_WriteRAM_Prepare();
           DCMI_CaptureCmd(ENABLE);
           capture_Flag = ENABLE;
 
