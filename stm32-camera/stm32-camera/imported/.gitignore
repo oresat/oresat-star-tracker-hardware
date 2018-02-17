@@ -1,0 +1,8 @@
+/Utilities/
+/makefile
+/objects.list
+/objects.mk
+/sources.mk
+/src/
+/startup/
+/STM32F4xx_StdPeriph_Driver/
