@@ -48,6 +48,8 @@
 #include "bmp.h"
 #include "dcmi_ov9655.h"
 #include "USARTprint.h"
+#include "stm32f4xx_gpio.h"
+#include "stdio.h"
 
 
 /** @addtogroup STM32F4xx_StdPeriph_Examples
@@ -99,31 +101,19 @@ int main(void)
   RCC_GetClocksFreq(&RCC_Clocks);
   SysTick_Config(RCC_Clocks.HCLK_Frequency / 100);
 
-  //LIS302DL_Reset();
-
   /* SET USER Key */
   /* Configure EXTI Line0 (connected to PA0 pin) in interrupt mode */
   EXTILine0_Config();
 
-  /* Initialize the LCD */
-  STM32f4_Discovery_LCD_Init();
-  LCD_Clear(LCD_COLOR_WHITE);
-  LCD_SetTextColor(LCD_COLOR_BLUE);
-
   DCMI_Control_IO_Init();
 
-  LCD_DisplayStringLine(LINE(2), "   Camera Init..");
-
-  init_USART2(230400); // initialize USART2 @ 230400 baud
+  //init_USART2(230400); // initialize USART2 @ 230400 baud
+  //uPrint(USART2, "example print!\r\n");
 		   
-  /* OV9655 Camera Module configuration */
   if (DCMI_OV9655Config() == 0x00)
   {
-    LCD_DisplayStringLine(LINE(2), "                ");
-    LCD_SetDisplayWindow(0, 0, 320, 240);
-    LCD_WriteRAM_Prepare();
 
-    /* Start Image capture and Display on the LCD *****************************/
+    /* Start Image capture */
     /* Enable DMA transfer */
     DMA_Cmd(DMA2_Stream1, ENABLE);
 
@@ -136,19 +126,18 @@ int main(void)
     /*init the picture count*/
     init_picture_count();
 
-    uPrint(USART2, "Init Camera Complete!\r\n");
-    uint16_t image_buf2[8000] = {0};
-    uint16_t readLines = 70;
+    //init GPIO
+    GPIOinit();
+    GPIO_SetBits(GPIOD, GPIO_Pin_13); //Orange LED is status, ON = STANDBY, OFF = BUSY
 
     KeyPressFlg = 0;
     while (1)
     {
-      /* Insert 100ms delay */
-      Delay(10);
+      /* Insert 10ms delay *///Not sure if this is needed
+      Delay(50);
 
       if (KeyPressFlg) {
-      //if (1) {
-    	uPrint(USART2,"take a pic!\r\n");
+    	GPIO_ResetBits(GPIOD, GPIO_Pin_13); //turn off led to show
 
     	KeyPressFlg = 0;
         /* press user KEY take a photo */
@@ -156,23 +145,16 @@ int main(void)
 
           DCMI_CaptureCmd(DISABLE);
           capture_Flag = DISABLE;
-          Capture_Image_TO_Bmp();
-          //LCD_SetDisplayWindow(0, 0, 320, 240);
-          //LCD_WriteRAM_Prepare();
+          Capture_Image_TO_Bmp(); //this is where the magic happens
           DCMI_CaptureCmd(ENABLE);
           capture_Flag = ENABLE;
-
-          uPrint(USART2, "read end\r\n");
+          GPIO_SetBits(GPIOD, GPIO_Pin_13);
         }			
       }
     }  
   } else {
-    LCD_SetTextColor(LCD_COLOR_RED);
 
-    LCD_DisplayStringLine(LINE(2), "Camera Init.. fails");    
-    LCD_DisplayStringLine(LINE(4), "Check the Camera HW ");    
-    LCD_DisplayStringLine(LINE(5), "  and try again ");
-
+	//something went wrong with the camera init, go it infinity
     /* Go to infinite loop */
     while (1);      
   }
@@ -187,6 +169,9 @@ int main(void)
   */
 uint8_t DCMI_OV9655Config(void)
 {
+  //for some reason this camera needs this, otherwise it fails to init
+  Delay(1);
+
   /* I2C1 will be used for OV9655 camera configuration */
   I2C1_Config();
 
@@ -357,53 +342,6 @@ void DCMI_Config(void)
 }
 
 /**
-
-  * @brief  
-  * @param  None
-  * @retval None
-  */
-void LIS302DL_Reset(void)
-{
-  uint8_t ctrl = 0;
-  
-  LIS302DL_InitTypeDef  LIS302DL_InitStruct;
-  LIS302DL_InterruptConfigTypeDef LIS302DL_InterruptStruct;  
-  
-  /* Set configuration of LIS302DL*/
-  LIS302DL_InitStruct.Power_Mode = LIS302DL_LOWPOWERMODE_ACTIVE;
-  LIS302DL_InitStruct.Output_DataRate = LIS302DL_DATARATE_100;
-  LIS302DL_InitStruct.Axes_Enable = LIS302DL_X_ENABLE | LIS302DL_Y_ENABLE | LIS302DL_Z_ENABLE;
-  LIS302DL_InitStruct.Full_Scale = LIS302DL_FULLSCALE_2_3;
-  LIS302DL_InitStruct.Self_Test = LIS302DL_SELFTEST_NORMAL;
-  LIS302DL_Init(&LIS302DL_InitStruct);
-    
-  /* Set configuration of Internal High Pass Filter of LIS302DL*/
-  LIS302DL_InterruptStruct.Latch_Request = LIS302DL_INTERRUPTREQUEST_LATCHED;
-  LIS302DL_InterruptStruct.SingleClick_Axes = LIS302DL_CLICKINTERRUPT_Z_ENABLE;
-  LIS302DL_InterruptStruct.DoubleClick_Axes = LIS302DL_DOUBLECLICKINTERRUPT_Z_ENABLE;
-  LIS302DL_InterruptConfig(&LIS302DL_InterruptStruct);
-
-  /* Required delay for the MEMS Accelerometre: Turn-on time = 3/Output data Rate 
-                                                             = 3/100 = 30ms */
-  Delay(30);
-  
-  /* Configure Click Window */
-  ctrl = 0xC0;
-  LIS302DL_Write(&ctrl, LIS302DL_CLICK_CTRL_REG3_ADDR, 1);
-}
-
-/**
-  * @brief  MEMS accelerometre management of the timeout situation.
-  * @param  None.
-  * @retval None.
-  */
-uint32_t LIS302DL_TIMEOUT_UserCallback(void)
-{
-  /* MEMS Accelerometer Timeout error occured */
-  while (1) ;
-}
- 
-/**
   * @brief  Configures EXTI Line0 (connected to PA0 pin) in interrupt mode
   * @param  None
   * @retval None
@@ -442,6 +380,22 @@ void EXTILine0_Config(void)
   NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
   NVIC_Init(&NVIC_InitStructure);
 }
+
+void GPIOinit()
+{
+	GPIO_InitTypeDef GPIO_InitStruct;
+
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOD, ENABLE); //init gpio clock
+
+	GPIO_InitStruct.GPIO_Pin = GPIO_Pin_13;// | GPIO_Pin_12; // configure LED GPIO pins
+	GPIO_InitStruct.GPIO_Mode = GPIO_Mode_OUT; 		// we want the pins to be an output
+	GPIO_InitStruct.GPIO_Speed = GPIO_Speed_2MHz; 	// this sets the GPIO modules clock speed
+	GPIO_InitStruct.GPIO_OType = GPIO_OType_PP; 	// this sets the pin type to push / pull (as opposed to open drain)
+	GPIO_InitStruct.GPIO_PuPd = GPIO_PuPd_NOPULL; 	// this sets the pullup / pulldown resistors to be inactive
+	GPIO_Init(GPIOD, &GPIO_InitStruct); 			// this finally passes all the values to the GPIO_Init function which takes care of setting the corresponding bits.
+
+}
+
 
 /**
   * @brief  Inserts a delay time.
@@ -490,10 +444,3 @@ void assert_failed(uint8_t* file, uint32_t line)
 }
 #endif
 
-/**
-  * @}
-  */
-
-
-
-/*********** Portions COPYRIGHT 2012 Embest Tech. Co., Ltd.*****END OF FILE****/
