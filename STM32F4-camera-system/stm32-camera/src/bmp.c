@@ -79,7 +79,7 @@ static uint8_t bmp_header[54]={
 };
 #endif
 
-extern uint8_t *image_buffer;
+
 /* Private function prototypes -----------------------------------------------*/
 static int32_t set_pic_count(void);
 static int32_t get_pic_count(void);

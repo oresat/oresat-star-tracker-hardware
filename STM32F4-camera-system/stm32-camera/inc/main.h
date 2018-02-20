@@ -61,4 +61,6 @@ void Delay(__IO uint32_t nTime);
 
 #endif /* __MAIN_H */
 
+extern uint8_t image_buffer[320*120];
+
 /*********** Portions COPYRIGHT 2012 Embest Tech. Co., Ltd.*****END OF FILE****/
