@@ -126,9 +126,9 @@ int32_t Capture_Image_TO_Bmp(void)
 
   //16-bit BMP = RRRRR-GGGGG-BBBBB-A
   uint16_t k = 0;
-  for (j = 0; j < 120; j++) {
+  for (j = 0; j < FRAME_HEIGHT; j++) {
 	  //uint16_t k = 0;
-    for(i=0;i<160;i++) {
+    for(i=0;i<FRAME_WIDTH;i++) {
     	//image_buffer[k*2+0] = 0xF8; //write all red frame
     	//image_buffer[k*2+1] = 0x00;
     	image_buf[i*2+1] = image_buffer[k*2+1];
@@ -136,7 +136,7 @@ int32_t Capture_Image_TO_Bmp(void)
 
     	k++;
     }
-    ret = f_write(&file, image_buf, 320, &bw);
+    ret = f_write(&file, image_buf, FRAME_WIDTH * 2, &bw);
   }
 
 #endif

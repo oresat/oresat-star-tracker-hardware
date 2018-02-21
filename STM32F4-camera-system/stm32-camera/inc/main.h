@@ -54,6 +54,11 @@
 /* Uncomment the line corresponding to the camera resolution */
 #define QVGA_SIZE  /* 320x240 */
 
+#define FRAME_WIDTH 160
+#define FRAME_HEIGHT 120
+//#define FRAME_WIDTH 320
+//#define FRAME_HEIGHT 240
+
 /* Exported macro ------------------------------------------------------------*/
 /* Exported functions ------------------------------------------------------- */
 void TimingDelay_Decrement(void);
@@ -61,6 +66,6 @@ void Delay(__IO uint32_t nTime);
 
 #endif /* __MAIN_H */
 
-extern uint8_t image_buffer[320*120];
+extern uint8_t image_buffer[FRAME_WIDTH*FRAME_HEIGHT*2];
 
 /*********** Portions COPYRIGHT 2012 Embest Tech. Co., Ltd.*****END OF FILE****/

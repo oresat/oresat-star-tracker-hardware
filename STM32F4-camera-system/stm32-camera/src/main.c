@@ -65,6 +65,7 @@
 #define DCMI_DR_ADDRESS     0x50050028
 #define FSMC_LCD_ADDRESS    0x60100000
 
+
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/
 uint8_t KeyPressFlg = 0;
@@ -80,8 +81,8 @@ uint8_t DCMI_OV9655Config(void);
 void DCMI_Config(void);
 void I2C1_Config(void);
 void EXTILine0_Config(void);
-void LIS302DL_Reset(void);
-uint8_t image_buffer[320*120];
+
+uint8_t image_buffer[FRAME_WIDTH*FRAME_HEIGHT*2]; //set array size as # of pixels x2 for 16 bit data
 
 /* Private functions ---------------------------------------------------------*/
 /**
@@ -126,7 +127,7 @@ int main(void)
     /*init the picture count*/
     init_picture_count();
 
-    //init GPIO
+    //init GPIO for debug LEDs
     GPIOinit();
     GPIO_SetBits(GPIOD, GPIO_Pin_13); //Orange LED is status, ON = STANDBY, OFF = BUSY
 
@@ -181,7 +182,8 @@ uint8_t DCMI_OV9655Config(void)
      return (0xFF);
   }
 
-  /* OV9655 Camera size setup */    
+  /* OV9655 Camera size setup */
+  //DCMI_OV9655_QVGASizeSetup();
   DCMI_OV9655_QQVGASizeSetup();
 
   /* Set the RGB565 mode */
@@ -327,6 +329,7 @@ void DCMI_Config(void)
   DMA_InitStructure.DMA_DIR = DMA_DIR_PeripheralToMemory;
   //DMA_InitStructure.DMA_BufferSize = 1; //
   DMA_InitStructure.DMA_BufferSize = 9600; // (120 * 160) * 2(2B/pixel) / 4(4B/word) = 9600
+  //DMA_InitStructure.DMA_BufferSize = (FRAME_HEIGHT * FRAME_WIDTH) / 2; // frame size in 32bit words, (H x W x 2) / 4
   DMA_InitStructure.DMA_PeripheralInc = DMA_PeripheralInc_Disable;
   DMA_InitStructure.DMA_MemoryInc = DMA_MemoryInc_Enable;
   DMA_InitStructure.DMA_PeripheralDataSize = DMA_PeripheralDataSize_Word;
