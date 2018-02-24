@@ -74,15 +74,21 @@ RCC_ClocksTypeDef RCC_Clocks;
 EXTI_InitTypeDef   EXTI_InitStructure;
 uint8_t capture_Flag = ENABLE;
 
-
-
 /* Private function prototypes -----------------------------------------------*/
 uint8_t DCMI_OV9655Config(void);
 void DCMI_Config(void);
 void I2C1_Config(void);
 void EXTILine0_Config(void);
 
-uint8_t image_buffer[FRAME_WIDTH*FRAME_HEIGHT*2]; //set array size as # of pixels x2 for 16 bit data
+uint8_t image_buffer[FRAME_WIDTH*FRAME_HEIGHT*2] = {0}; //set array size as # of pixels x2 for 16 bit data
+
+uint8_t bmp_header2[70] = {
+  0x42, 0x4D, 0x46, 0x96, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x46, 0x00, 0x00, 0x00, 0x28, 0x00,
+  0x00, 0x00, 0xA0, 0x00, 0x00, 0x00, 0x78, 0x00, 0x00, 0x00, 0x01, 0x00, 0x10, 0x00, 0x03, 0x00,
+  0x00, 0x00, 0x00, 0x58, 0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xF8, 0x00, 0x00, 0xE0, 0x07, 0x00, 0x00, 0x1F, 0x00,
+  0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+};
 
 /* Private functions ---------------------------------------------------------*/
 /**
@@ -108,8 +114,9 @@ int main(void)
 
   DCMI_Control_IO_Init();
 
-  //init_USART2(230400); // initialize USART2 @ 230400 baud
-  //uPrint(USART2, "example print!\r\n");
+  init_USART2(230400); // initialize USART2 @ 230400 baud
+  //cPrint(bmp_header2[0]);
+  //uPrint(USART2, "1");
 		   
   if (DCMI_OV9655Config() == 0x00)
   {
@@ -134,8 +141,8 @@ int main(void)
     KeyPressFlg = 0;
     while (1)
     {
-      /* Insert 10ms delay *///Not sure if this is needed
-      Delay(50);
+      /* Insert 200ms delay *///Not sure if this is needed
+      Delay(100);
 
       if (KeyPressFlg) {
     	GPIO_ResetBits(GPIOD, GPIO_Pin_13); //turn off led to show
@@ -146,7 +153,8 @@ int main(void)
 
           DCMI_CaptureCmd(DISABLE);
           capture_Flag = DISABLE;
-          Capture_Image_TO_Bmp(); //this is where the magic happens
+          //Capture_Image_TO_Bmp(); //use this to save to SD card
+          serialImage(); //use this to send over serial
           DCMI_CaptureCmd(ENABLE);
           capture_Flag = ENABLE;
           GPIO_SetBits(GPIOD, GPIO_Pin_13);
@@ -186,14 +194,60 @@ uint8_t DCMI_OV9655Config(void)
   //DCMI_OV9655_QVGASizeSetup();
   DCMI_OV9655_QQVGASizeSetup();
 
-  /* Set the RGB565 mode */
-  DCMI_SingleRandomWrite(OV9655_DEVICE_WRITE_ADDRESS, OV9655_COM7, 0x63);
+//  /* Set the RGB565 mode */
+//  DCMI_SingleRandomWrite(OV9655_DEVICE_WRITE_ADDRESS, OV9655_COM7, 0x63);
+//  Delay(2);
+//  DCMI_SingleRandomWrite(OV9655_DEVICE_WRITE_ADDRESS, OV9655_COM15, 0x10);
+//  Delay(2);
+
+  /* Set the color space mode */
+  DCMI_SingleRandomWrite(OV9655_DEVICE_WRITE_ADDRESS, OV9655_COM7, 0x62); //YUV
+  Delay(2);
   DCMI_SingleRandomWrite(OV9655_DEVICE_WRITE_ADDRESS, OV9655_COM15, 0x10);
+  Delay(2);
+  DCMI_SingleRandomWrite(OV9655_DEVICE_WRITE_ADDRESS, 0x3A, 0xCF); //TSLB 0x3A, original 0xCC
+  Delay(2);
 
   /* Invert the HRef signal*/
   DCMI_SingleRandomWrite(OV9655_DEVICE_WRITE_ADDRESS, OV9655_COM10, 0x08);
+  Delay(2);
+
+  /*Below is Oliver's Experimental Settings. All original settings are still set
+  before this, so just comment out below for original*/
+
+  //COM8, turn off AEC (0xC6), original: 0xC7,
+  DCMI_SingleRandomWrite(OV9655_DEVICE_WRITE_ADDRESS, 0x13, 0xC6);
+  Delay(2);
+
+
+  //This should be the highest exposure but it doesn't appear washed out?
+  DCMI_SingleRandomWrite(OV9655_DEVICE_WRITE_ADDRESS, 0x10, 0x00); //AEC Middle 8 bits, default: 0x40
+  Delay(2);
+  DCMI_SingleRandomWrite(OV9655_DEVICE_WRITE_ADDRESS, 0xA1, 0x41); //AECH High bits [5:0], default: 0x40
+  Delay(2);
+
+//  //lowest exposure
+//  DCMI_SingleRandomWrite(OV9655_DEVICE_WRITE_ADDRESS, 0x10, 0x00); //AEC Middle 8 bits, default: 0x40
+//  DCMI_SingleRandomWrite(OV9655_DEVICE_WRITE_ADDRESS, 0xA1, 0x40); //AECH High bits [5:0], default: 0x40
+//
+
+  DCMI_SingleRandomWrite(OV9655_DEVICE_WRITE_ADDRESS, 0x11, 0x00); //change clock prescaler, original = 0x01
+  Delay(2);
+
+  //below is settings I tried with no effect
+  //COM5, Bit[0] = enable/disable Exposure Step Control, original 0x61
+  //DCMI_SingleRandomWrite(OV9655_DEVICE_WRITE_ADDRESS,0x0e, 0x61);
+  //Delay(2);
 
   /* Configure the DCMI to interface with the OV9655 camera module */
+
+
+  /* When Clock Prescaler is set to external 0x11 0x20, the exposure settings have a much greater effect?
+   *
+   *
+   *
+   *
+   */
   DCMI_Config();
   
   return (0x00);
@@ -399,7 +453,6 @@ void GPIOinit()
 
 }
 
-
 /**
   * @brief  Inserts a delay time.
   * @param  nTime: specifies the delay time length, in milliseconds
@@ -427,23 +480,20 @@ void TimingDelay_Decrement(void)
   }
 }
 
-#ifdef  USE_FULL_ASSERT
-/**
-  * @brief  Reports the name of the source file and the source line number
-  *   where the assert_param error has occurred.
-  * @param  file: pointer to the source file name
-  * @param  line: assert_param error line source number
-  * @retval None
-  */
-void assert_failed(uint8_t* file, uint32_t line)
-{ 
-  /* User can add his own implementation to report the file name and line number,
-     ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
+void serialImage()
+{
+	//cPrint(bmp_header2[0]);
 
-  /* Infinite loop */
-  while (1)
-  {
-  }
+	//Delay(2);
+	for(uint16_t i = 0; i < sizeof(bmp_header2) ; i++)
+	{
+		Delay(1);
+		cPrint(bmp_header2[i]);
+	}
+	Delay(1);
+	for(uint32_t j = 0 ; j < (FRAME_HEIGHT * FRAME_WIDTH * 2) ; j++)
+	{
+		cPrint(image_buffer[j]);
+	}
+
 }
-#endif
-

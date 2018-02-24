@@ -34,11 +34,11 @@ void init_USART2(uint32_t baudrate){
 	/* This sequence sets up the TX and RX pins
 	 * so they work correctly with the USART1 peripheral
 	 */
-	//GPIO_InitStruct.GPIO_Pin = GPIO_Pin_6 | GPIO_Pin_7; // Pins 6 (TX) and 7 (RX) are used
+
 	GPIO_InitStruct.GPIO_Pin = GPIO_Pin_2 | GPIO_Pin_3; // Pins 6 (TX) and 7 (RX) are used
 	GPIO_InitStruct.GPIO_Mode = GPIO_Mode_AF; 			// the pins are configured as alternate function so the USART peripheral has access to them
-	GPIO_InitStruct.GPIO_Speed = GPIO_Speed_50MHz;		// this defines the IO speed and has nothing to do with the baudrate!
-	GPIO_InitStruct.GPIO_OType = GPIO_OType_PP;			// this defines the output type as push pull mode (as opposed to open drain)
+	GPIO_InitStruct.GPIO_Speed = GPIO_Speed_2MHz;		// this defines the IO speed and has nothing to do with the baudrate!
+	GPIO_InitStruct.GPIO_OType = GPIO_OType_OD;			// this defines the output type as push pull mode (as opposed to open drain)
 	GPIO_InitStruct.GPIO_PuPd = GPIO_PuPd_UP;			// this activates the pullup resistors on the IO pins
 	//GPIO_Init(GPIOB, &GPIO_InitStruct);					// now all the values are passed to the GPIO_Init() function which sets the GPIO registers
 	GPIO_Init(GPIOA, &GPIO_InitStruct);
@@ -47,8 +47,6 @@ void init_USART2(uint32_t baudrate){
 	 * so that the USART1 can take over control of the
 	 * pins
 	 */
-	//GPIO_PinAFConfig(GPIOB, GPIO_PinSource6, GPIO_AF_USART1); //
-	//GPIO_PinAFConfig(GPIOB, GPIO_PinSource7, GPIO_AF_USART1);
 
 	GPIO_PinAFConfig(GPIOA, GPIO_PinSource2, GPIO_AF_USART2); //
 	GPIO_PinAFConfig(GPIOA, GPIO_PinSource3, GPIO_AF_USART2);
@@ -109,16 +107,18 @@ void uPrint(USART_TypeDef* USARTx, volatile char *s){
 	}
 }
 
-//int main(void) {
-//
-//  init_USART2(230400); // initialize USART2 @ 230400 baud
-//
-//  USART_puts(USART2, "Init complete! Hello World!\r\n"); // just send a message to indicate that it works
-//
-//  while (1){
-//	  USART_puts(USART2, "say things!\r\n");
-//  }
-//}
+void cPrint(char ch)
+{
+  /* Place your implementation of fputc here */
+  /* e.g. write a character to the USART */
+  USART_SendData(USART2, (uint8_t) ch);
+
+  /* Loop until the end of transmission */
+  while (USART_GetFlagStatus(USART2, USART_FLAG_TC) == RESET)
+  {}
+
+  //return ch;
+}
 
 // this is the interrupt request handler (IRQ) for ALL USART1 interrupts
 void USART1_IRQHandler(void){
@@ -138,7 +138,7 @@ void USART1_IRQHandler(void){
 		}
 		else{ // otherwise reset the character counter and print the received string
 			cnt = 0;
-			uPrint(USART1, received_string);
+			//uPrint(USART1, received_string);
 		}
 	}
 }
