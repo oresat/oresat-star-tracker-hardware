@@ -518,7 +518,7 @@ void DCMI_OV9655_QQVGASizeSetup(void)
   Delay(TIMEOUT);
   DCMI_SingleRandomWrite(OV9655_DEVICE_WRITE_ADDRESS,0x41, 0x41);
   Delay(TIMEOUT);
-  DCMI_SingleRandomWrite(OV9655_DEVICE_WRITE_ADDRESS,0x42, 0xc0);
+  DCMI_SingleRandomWrite(OV9655_DEVICE_WRITE_ADDRESS,0x42, 0xc0); //default 0xC0
   Delay(TIMEOUT);
   DCMI_SingleRandomWrite(OV9655_DEVICE_WRITE_ADDRESS,0x43, 0x0a);
   Delay(TIMEOUT);

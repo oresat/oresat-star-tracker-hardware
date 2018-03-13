@@ -1,6 +1,6 @@
 /**
   ******************************************************************************
-  * @file    OV9655_Camera/src/main.c  
+   * @file    OV9655_Camera/src/main.c
   * @author  MCD Application Team
   * @version V1.0.0
   * @date    18-April-2011
@@ -73,6 +73,7 @@ __IO uint32_t TimingDelay;
 RCC_ClocksTypeDef RCC_Clocks;
 EXTI_InitTypeDef   EXTI_InitStructure;
 uint8_t capture_Flag = ENABLE;
+volatile uint8_t sendFlag = DISABLE;
 
 /* Private function prototypes -----------------------------------------------*/
 uint8_t DCMI_OV9655Config(void);
@@ -81,6 +82,8 @@ void I2C1_Config(void);
 void EXTILine0_Config(void);
 
 uint8_t image_buffer[FRAME_WIDTH*FRAME_HEIGHT*2] = {0}; //set array size as # of pixels x2 for 16 bit data
+
+uint8_t image_buffer2[FRAME_WIDTH*FRAME_HEIGHT*2] = {0};
 
 uint8_t bmp_header2[70] = {
   0x42, 0x4D, 0x46, 0x96, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x46, 0x00, 0x00, 0x00, 0x28, 0x00,
@@ -126,10 +129,11 @@ int main(void)
     DMA_Cmd(DMA2_Stream1, ENABLE);
 
     /* Enable DCMI interface */
-    DCMI_Cmd(ENABLE); 
+    DCMI_Cmd(ENABLE);
 
     /* Start Image capture */ 
-    DCMI_CaptureCmd(ENABLE);   
+    //DCMI_CaptureCmd(ENABLE);
+    DCMI_CaptureCmd(DISABLE);
 
     /*init the picture count*/
     init_picture_count();
@@ -137,28 +141,52 @@ int main(void)
     //init GPIO for debug LEDs
     GPIOinit();
     GPIO_SetBits(GPIOD, GPIO_Pin_13); //Orange LED is status, ON = STANDBY, OFF = BUSY
+    GPIO_SetBits(GPIOD, GPIO_Pin_14);
+
+    GPIO_SetBits(GPIOD, GPIO_Pin_6); //pull this low to enable the camera
 
     KeyPressFlg = 0;
     while (1)
     {
       /* Insert 200ms delay *///Not sure if this is needed
       Delay(100);
+      GPIO_SetBits(GPIOD, GPIO_Pin_14);
+
+      /*
+       * DMA Transfer Summary
+       *
+       * - Enable
+       */
 
       if (KeyPressFlg) {
+    	GPIO_ResetBits(GPIOD, GPIO_Pin_6); //enable and warm up camera, this needs to happen earlier
+    	Delay(500);
     	GPIO_ResetBits(GPIOD, GPIO_Pin_13); //turn off led to show
 
     	KeyPressFlg = 0;
         /* press user KEY take a photo */
         if (capture_Flag == ENABLE) {
 
-          DCMI_CaptureCmd(DISABLE);
-          capture_Flag = DISABLE;
-          //Capture_Image_TO_Bmp(); //use this to save to SD card
-          serialImage(); //use this to send over serial
-          DCMI_CaptureCmd(ENABLE);
-          capture_Flag = ENABLE;
-          GPIO_SetBits(GPIOD, GPIO_Pin_13);
-        }			
+        	DCMI_CaptureCmd(ENABLE);
+        	//while (DMA_GetFlagStatus(DMA2_Stream1,DMA_FLAG_TCIF1)==RESET);
+        	//DCMI_CaptureCmd(DISABLE);
+
+        	// below is old routine
+//          DCMI_CaptureCmd(DISABLE);
+//          capture_Flag = DISABLE;
+//          //Capture_Image_TO_Bmp(); //use this to save to SD card
+//          serialImage(); //use this to send over serial
+//          DCMI_CaptureCmd(ENABLE);
+//          capture_Flag = ENABLE;
+//          GPIO_SetBits(GPIOD, GPIO_Pin_13);
+        }
+        while(sendFlag == DISABLE) {} //wait for complete flag to be set by interrupt
+        GPIO_SetBits(GPIOD, GPIO_Pin_6); //disable camera
+        DCMI_CaptureCmd(DISABLE);
+        	serialImage(); //use this to send over serial
+        	GPIO_SetBits(GPIOD, GPIO_Pin_13);
+        	sendFlag = DISABLE;
+
       }
     }  
   } else {
@@ -201,11 +229,12 @@ uint8_t DCMI_OV9655Config(void)
 //  Delay(2);
 
   /* Set the color space mode */
-  DCMI_SingleRandomWrite(OV9655_DEVICE_WRITE_ADDRESS, OV9655_COM7, 0x62); //YUV
+  //DCMI_SingleRandomWrite(OV9655_DEVICE_WRITE_ADDRESS, OV9655_COM7, 0x62); //YUV
+  DCMI_SingleRandomWrite(OV9655_DEVICE_WRITE_ADDRESS, OV9655_COM7, 0x63 ); //RGB raw
   Delay(2);
   DCMI_SingleRandomWrite(OV9655_DEVICE_WRITE_ADDRESS, OV9655_COM15, 0x10);
   Delay(2);
-  DCMI_SingleRandomWrite(OV9655_DEVICE_WRITE_ADDRESS, 0x3A, 0xCF); //TSLB 0x3A, original 0xCC
+  DCMI_SingleRandomWrite(OV9655_DEVICE_WRITE_ADDRESS, 0x3A, 0xCC); //TSLB 0x3A, original 0xCC
   Delay(2);
 
   /* Invert the HRef signal*/
@@ -216,7 +245,7 @@ uint8_t DCMI_OV9655Config(void)
   before this, so just comment out below for original*/
 
   //COM8, turn off AEC (0xC6), original: 0xC7,
-  DCMI_SingleRandomWrite(OV9655_DEVICE_WRITE_ADDRESS, 0x13, 0xC6);
+  DCMI_SingleRandomWrite(OV9655_DEVICE_WRITE_ADDRESS, 0x13, 0xC7);
   Delay(2);
 
 
@@ -231,7 +260,7 @@ uint8_t DCMI_OV9655Config(void)
 //  DCMI_SingleRandomWrite(OV9655_DEVICE_WRITE_ADDRESS, 0xA1, 0x40); //AECH High bits [5:0], default: 0x40
 //
 
-  DCMI_SingleRandomWrite(OV9655_DEVICE_WRITE_ADDRESS, 0x11, 0x00); //change clock prescaler, original = 0x01
+  DCMI_SingleRandomWrite(OV9655_DEVICE_WRITE_ADDRESS, 0x11, 0x0F); //change clock prescaler, original = 0x01
   Delay(2);
 
   //below is settings I tried with no effect
@@ -359,8 +388,8 @@ void DCMI_Config(void)
   GPIO_Init(GPIOA, &GPIO_InitStructure);
   
   /* DCMI configuration *******************************************************/ 
-  DCMI_InitStructure.DCMI_CaptureMode = DCMI_CaptureMode_Continuous;
-  //DCMI_InitStructure.DCMI_CaptureMode = DCMI_CaptureMode_SnapShot;
+  //DCMI_InitStructure.DCMI_CaptureMode = DCMI_CaptureMode_Continuous;
+  DCMI_InitStructure.DCMI_CaptureMode = DCMI_CaptureMode_SnapShot;
   DCMI_InitStructure.DCMI_SynchroMode = DCMI_SynchroMode_Hardware;
   DCMI_InitStructure.DCMI_PCKPolarity = DCMI_PCKPolarity_Falling;
   DCMI_InitStructure.DCMI_VSPolarity = DCMI_VSPolarity_High;
@@ -386,7 +415,7 @@ void DCMI_Config(void)
   //DMA_InitStructure.DMA_BufferSize = (FRAME_HEIGHT * FRAME_WIDTH) / 2; // frame size in 32bit words, (H x W x 2) / 4
   DMA_InitStructure.DMA_PeripheralInc = DMA_PeripheralInc_Disable;
   DMA_InitStructure.DMA_MemoryInc = DMA_MemoryInc_Enable;
-  DMA_InitStructure.DMA_PeripheralDataSize = DMA_PeripheralDataSize_Word;
+  DMA_InitStructure.DMA_PeripheralDataSize = DMA_PeripheralDataSize_Byte;
   DMA_InitStructure.DMA_MemoryDataSize = DMA_MemoryDataSize_HalfWord;
   DMA_InitStructure.DMA_Mode = DMA_Mode_Circular;
   DMA_InitStructure.DMA_Priority = DMA_Priority_High;
@@ -394,8 +423,41 @@ void DCMI_Config(void)
   DMA_InitStructure.DMA_FIFOThreshold = DMA_FIFOThreshold_Full;
   DMA_InitStructure.DMA_MemoryBurst = DMA_MemoryBurst_Single;
   DMA_InitStructure.DMA_PeripheralBurst = DMA_PeripheralBurst_Single;
+
+  //double buffer config
+  DMA_DoubleBufferModeConfig(DMA2_Stream1, image_buffer2, DMA_Memory_0);
+  DMA_DoubleBufferModeCmd (DMA2_Stream1, ENABLE);
+
+  DMA_ITConfig(DMA2_Stream1, DMA_IT_TC, ENABLE); // Enable DMA2 Transfer Complete interrupt
      
   DMA_Init(DMA2_Stream1, &DMA_InitStructure);
+
+  NVIC_InitTypeDef NVIC_InitStructure;
+
+    	//Enable DMA channel IRQ Channel TX */
+
+    NVIC_InitStructure.NVIC_IRQChannel = DMA2_Stream1_IRQn;
+    //NVIC_InitStructure.NVIC_IRQChannel = DMA2_Stream5_IRQn;
+
+    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
+
+    NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
+
+    NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+
+    NVIC_Init(&NVIC_InitStructure);
+
+    //DMA_ITConfig(DMA2_Stream1, DMA_IT_TC, ENABLE); // Enable DMA1 Channel Transfer Complete interrupt
+}
+
+
+//DMA transfer complete interrupt
+void DMA2_Stream1_IRQHandler(void)
+{
+	GPIO_ResetBits(GPIOD, GPIO_Pin_14);
+	DMA_ClearITPendingBit(DMA2_Stream1, DMA_IT_TCIF1);
+	//DCMI_CaptureCmd(DISABLE);
+	sendFlag = ENABLE;
 }
 
 /**
@@ -444,7 +506,7 @@ void GPIOinit()
 
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOD, ENABLE); //init gpio clock
 
-	GPIO_InitStruct.GPIO_Pin = GPIO_Pin_13;// | GPIO_Pin_12; // configure LED GPIO pins
+	GPIO_InitStruct.GPIO_Pin = GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_6; // configure LED GPIO pins
 	GPIO_InitStruct.GPIO_Mode = GPIO_Mode_OUT; 		// we want the pins to be an output
 	GPIO_InitStruct.GPIO_Speed = GPIO_Speed_2MHz; 	// this sets the GPIO modules clock speed
 	GPIO_InitStruct.GPIO_OType = GPIO_OType_PP; 	// this sets the pin type to push / pull (as opposed to open drain)
