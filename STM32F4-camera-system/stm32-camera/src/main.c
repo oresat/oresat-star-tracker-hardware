@@ -590,9 +590,29 @@ void TimingDelay_Decrement(void)
 
 void serialImage()
 {
-	//cPrint(bmp_header2[0]);
 
-	//Delay(2);
+//	for(uint16_t z = 0 ; z < frameInts/2 ; z++)
+//	{
+//		for(uint16_t x = 0 ; x < 320 ; x++)
+//		{
+//		image_buffer3[(z*320) + x] = image_buffer[(z*320) + x];
+//		}
+//		for(uint16_t y = 0 ; y < 320 ; y++)
+//		{
+//		image_buffer3[((z+1)*320)] = image_buffer2[(z*2)+1];
+//		}
+//	}
+	for(uint16_t i = 0; i < sizeof(bmp_header2) ; i++)
+	{
+		Delay(1);
+		cPrint(bmp_header2[i]);
+	}
+	Delay(1);
+	for(uint32_t j = 0 ; j < (FRAME_HEIGHT * FRAME_WIDTH * 2) ; j++)
+	{
+		cPrint(image_buffer[j]);
+	}
+	Delay(1000);
 	for(uint16_t i = 0; i < sizeof(bmp_header2) ; i++)
 	{
 		Delay(1);
