@@ -75,15 +75,24 @@ EXTI_InitTypeDef   EXTI_InitStructure;
 uint8_t capture_Flag = ENABLE;
 volatile uint8_t sendFlag = DISABLE;
 
+volatile uint16_t frameInts = 119; //number of lines/interrupts in a frame
+
+volatile uint16_t intCount = 0; //counts the number of lines/interrupts have fired
+
 /* Private function prototypes -----------------------------------------------*/
 uint8_t DCMI_OV9655Config(void);
 void DCMI_Config(void);
 void I2C1_Config(void);
 void EXTILine0_Config(void);
 
+
 uint8_t image_buffer[FRAME_WIDTH*FRAME_HEIGHT*2] = {0}; //set array size as # of pixels x2 for 16 bit data
 
+//uint8_t image_buffer[320] = {0}; //set array size as # of pixels x2 for 16 bit data
+
 uint8_t image_buffer2[FRAME_WIDTH*FRAME_HEIGHT*2] = {0};
+
+uint8_t image_buffer3[FRAME_WIDTH*FRAME_HEIGHT*2] = {0};
 
 uint8_t bmp_header2[70] = {
   0x42, 0x4D, 0x46, 0x96, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x46, 0x00, 0x00, 0x00, 0x28, 0x00,
@@ -143,7 +152,8 @@ int main(void)
     GPIO_SetBits(GPIOD, GPIO_Pin_13); //Orange LED is status, ON = STANDBY, OFF = BUSY
     GPIO_SetBits(GPIOD, GPIO_Pin_14);
 
-    GPIO_SetBits(GPIOD, GPIO_Pin_6); //pull this low to enable the camera
+    //GPIO_SetBits(GPIOD, GPIO_Pin_6); //pull this low to enable the camera
+    GPIO_ResetBits(GPIOD, GPIO_Pin_6); //enable the camera
 
     KeyPressFlg = 0;
     while (1)
@@ -155,12 +165,14 @@ int main(void)
       /*
        * DMA Transfer Summary
        *
-       * - Enable
+       * - Enable Transfer
+       * - SPI data out
+       * - check if last line, if not then enable another transfer
        */
 
       if (KeyPressFlg) {
-    	GPIO_ResetBits(GPIOD, GPIO_Pin_6); //enable and warm up camera, this needs to happen earlier
-    	Delay(500);
+
+
     	GPIO_ResetBits(GPIOD, GPIO_Pin_13); //turn off led to show
 
     	KeyPressFlg = 0;
@@ -181,10 +193,11 @@ int main(void)
 //          GPIO_SetBits(GPIOD, GPIO_Pin_13);
         }
         while(sendFlag == DISABLE) {} //wait for complete flag to be set by interrupt
-        GPIO_SetBits(GPIOD, GPIO_Pin_6); //disable camera
+        //GPIO_SetBits(GPIOD, GPIO_Pin_6); //disable camera
         DCMI_CaptureCmd(DISABLE);
+        GPIO_SetBits(GPIOD, GPIO_Pin_13);
         	serialImage(); //use this to send over serial
-        	GPIO_SetBits(GPIOD, GPIO_Pin_13);
+
         	sendFlag = DISABLE;
 
       }
@@ -410,13 +423,16 @@ void DCMI_Config(void)
   DMA_InitStructure.DMA_PeripheralBaseAddr = DCMI_DR_ADDRESS;	
   DMA_InitStructure.DMA_Memory0BaseAddr = image_buffer;  //FSMC_LCD_ADDRESS;
   DMA_InitStructure.DMA_DIR = DMA_DIR_PeripheralToMemory;
-  //DMA_InitStructure.DMA_BufferSize = 1; //
-  DMA_InitStructure.DMA_BufferSize = 9600; // (120 * 160) * 2(2B/pixel) / 4(4B/word) = 9600
+  DMA_InitStructure.DMA_BufferSize = 80; // 320/4 = 1 line
+  //DMA_InitStructure.DMA_BufferSize = 9600; // (120 * 160) * 2(2B/pixel) / 4(4B/word) = 9600
+  //DMA_InitStructure.DMA_BufferSize = 38400; // (120 * 160) * 2(2B/pixel)
   //DMA_InitStructure.DMA_BufferSize = (FRAME_HEIGHT * FRAME_WIDTH) / 2; // frame size in 32bit words, (H x W x 2) / 4
   DMA_InitStructure.DMA_PeripheralInc = DMA_PeripheralInc_Disable;
   DMA_InitStructure.DMA_MemoryInc = DMA_MemoryInc_Enable;
-  DMA_InitStructure.DMA_PeripheralDataSize = DMA_PeripheralDataSize_Byte;
-  DMA_InitStructure.DMA_MemoryDataSize = DMA_MemoryDataSize_HalfWord;
+  DMA_InitStructure.DMA_PeripheralDataSize = DMA_PeripheralDataSize_Word; //this must be WORD
+  DMA_InitStructure.DMA_MemoryDataSize = DMA_MemoryDataSize_HalfWord; //this seems to work with any size
+  //DMA_InitStructure.DMA_PeripheralDataSize = DMA_PeripheralDataSize_Byte;
+  //DMA_InitStructure.DMA_MemoryDataSize = DMA_MemoryDataSize_Byte;
   DMA_InitStructure.DMA_Mode = DMA_Mode_Circular;
   DMA_InitStructure.DMA_Priority = DMA_Priority_High;
   DMA_InitStructure.DMA_FIFOMode = DMA_FIFOMode_Enable;         
@@ -454,10 +470,40 @@ void DCMI_Config(void)
 //DMA transfer complete interrupt
 void DMA2_Stream1_IRQHandler(void)
 {
-	GPIO_ResetBits(GPIOD, GPIO_Pin_14);
-	DMA_ClearITPendingBit(DMA2_Stream1, DMA_IT_TCIF1);
+	GPIO_ResetBits(GPIOD, GPIO_Pin_14); //LED for debug
+	DMA_ClearITPendingBit(DMA2_Stream1, DMA_IT_TCIF1); //clear the transfer complete flag
 	//DCMI_CaptureCmd(DISABLE);
-	sendFlag = ENABLE;
+
+	if(DMA_GetCurrentMemoryTarget(DMA2_Stream1) == 1) //if writing to mem1, reassign mem0 address
+	{
+		DMA2_Stream1->M0AR = &image_buffer[intCount * 320]; //assign new mem0 address and increment by # of lines
+		GPIO_ResetBits(GPIOD, GPIO_Pin_14); //LED for debug
+	}else ///if writing to mem0, reassign mem1 address
+	{
+		DMA2_Stream1->M1AR = &image_buffer2[(intCount + 1) * 320];//assign new mem1 address and increment by # of lines + 1
+		GPIO_SetBits(GPIOD, GPIO_Pin_14); //LED for debug
+	}
+	if(intCount >= frameInts) //when max lines has been read, ready the serial transmission
+	{
+		GPIO_SetBits(GPIOD, GPIO_Pin_15);
+		sendFlag = ENABLE; //set serial transmission flag
+	}
+	intCount++;
+
+//	if(firstInt > 0) //if first interrupt
+//	{
+//		DMA2_Stream1->M0AR = &image_buffer[1000]; //write new memory 0 address
+//		firstInt--;
+//	}else
+//	{
+//		GPIO_SetBits(GPIOD, GPIO_Pin_15);
+//		sendFlag = ENABLE;
+//	}
+
+	//DMA2_Stream1->M1AR = Memory1BaseAddr;
+
+
+
 }
 
 /**
@@ -506,7 +552,7 @@ void GPIOinit()
 
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOD, ENABLE); //init gpio clock
 
-	GPIO_InitStruct.GPIO_Pin = GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_6; // configure LED GPIO pins
+	GPIO_InitStruct.GPIO_Pin = GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_6 | GPIO_Pin_15; // configure LED GPIO pins
 	GPIO_InitStruct.GPIO_Mode = GPIO_Mode_OUT; 		// we want the pins to be an output
 	GPIO_InitStruct.GPIO_Speed = GPIO_Speed_2MHz; 	// this sets the GPIO modules clock speed
 	GPIO_InitStruct.GPIO_OType = GPIO_OType_PP; 	// this sets the pin type to push / pull (as opposed to open drain)
@@ -555,7 +601,7 @@ void serialImage()
 	Delay(1);
 	for(uint32_t j = 0 ; j < (FRAME_HEIGHT * FRAME_WIDTH * 2) ; j++)
 	{
-		cPrint(image_buffer[j]);
+		cPrint(image_buffer2[j]);
 	}
 
 }
