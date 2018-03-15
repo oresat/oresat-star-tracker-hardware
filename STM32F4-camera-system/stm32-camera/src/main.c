@@ -75,9 +75,10 @@ EXTI_InitTypeDef   EXTI_InitStructure;
 uint8_t capture_Flag = ENABLE;
 volatile uint8_t sendFlag = DISABLE;
 
-volatile uint16_t frameInts = 119; //number of lines/interrupts in a frame
+volatile uint16_t frameInts = 118; //number of lines/interrupts in a frame
 
 volatile uint16_t intCount = 0; //counts the number of lines/interrupts have fired
+
 
 /* Private function prototypes -----------------------------------------------*/
 uint8_t DCMI_OV9655Config(void);
@@ -170,8 +171,8 @@ int main(void)
        * - check if last line, if not then enable another transfer
        */
 
+      //cPrint(intCount); //print number of interrupts that have fired
       if (KeyPressFlg) {
-
 
     	GPIO_ResetBits(GPIOD, GPIO_Pin_13); //turn off led to show
 
@@ -192,18 +193,17 @@ int main(void)
 //          capture_Flag = ENABLE;
 //          GPIO_SetBits(GPIOD, GPIO_Pin_13);
         }
+
         while(sendFlag == DISABLE) {} //wait for complete flag to be set by interrupt
         //GPIO_SetBits(GPIOD, GPIO_Pin_6); //disable camera
         DCMI_CaptureCmd(DISABLE);
         GPIO_SetBits(GPIOD, GPIO_Pin_13);
-        	serialImage(); //use this to send over serial
-
-        	sendFlag = DISABLE;
+        serialImage(); //use this to send over serial
+        sendFlag = DISABLE;
 
       }
     }  
   } else {
-
 	//something went wrong with the camera init, go it infinity
     /* Go to infinite loop */
     while (1);      
@@ -425,14 +425,11 @@ void DCMI_Config(void)
   DMA_InitStructure.DMA_DIR = DMA_DIR_PeripheralToMemory;
   DMA_InitStructure.DMA_BufferSize = 80; // 320/4 = 1 line
   //DMA_InitStructure.DMA_BufferSize = 9600; // (120 * 160) * 2(2B/pixel) / 4(4B/word) = 9600
-  //DMA_InitStructure.DMA_BufferSize = 38400; // (120 * 160) * 2(2B/pixel)
   //DMA_InitStructure.DMA_BufferSize = (FRAME_HEIGHT * FRAME_WIDTH) / 2; // frame size in 32bit words, (H x W x 2) / 4
   DMA_InitStructure.DMA_PeripheralInc = DMA_PeripheralInc_Disable;
   DMA_InitStructure.DMA_MemoryInc = DMA_MemoryInc_Enable;
   DMA_InitStructure.DMA_PeripheralDataSize = DMA_PeripheralDataSize_Word; //this must be WORD
   DMA_InitStructure.DMA_MemoryDataSize = DMA_MemoryDataSize_HalfWord; //this seems to work with any size
-  //DMA_InitStructure.DMA_PeripheralDataSize = DMA_PeripheralDataSize_Byte;
-  //DMA_InitStructure.DMA_MemoryDataSize = DMA_MemoryDataSize_Byte;
   DMA_InitStructure.DMA_Mode = DMA_Mode_Circular;
   DMA_InitStructure.DMA_Priority = DMA_Priority_High;
   DMA_InitStructure.DMA_FIFOMode = DMA_FIFOMode_Enable;         
@@ -441,7 +438,7 @@ void DCMI_Config(void)
   DMA_InitStructure.DMA_PeripheralBurst = DMA_PeripheralBurst_Single;
 
   //double buffer config
-  DMA_DoubleBufferModeConfig(DMA2_Stream1, image_buffer2, DMA_Memory_0);
+  DMA_DoubleBufferModeConfig(DMA2_Stream1, &image_buffer2[FRAME_WIDTH * 2], DMA_Memory_0); //set 2nd mem address as second line in buffer
   DMA_DoubleBufferModeCmd (DMA2_Stream1, ENABLE);
 
   DMA_ITConfig(DMA2_Stream1, DMA_IT_TC, ENABLE); // Enable DMA2 Transfer Complete interrupt
@@ -450,10 +447,8 @@ void DCMI_Config(void)
 
   NVIC_InitTypeDef NVIC_InitStructure;
 
-    	//Enable DMA channel IRQ Channel TX */
-
+    //Enable DMA channel IRQ Channel TX */
     NVIC_InitStructure.NVIC_IRQChannel = DMA2_Stream1_IRQn;
-    //NVIC_InitStructure.NVIC_IRQChannel = DMA2_Stream5_IRQn;
 
     NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
 
@@ -463,45 +458,35 @@ void DCMI_Config(void)
 
     NVIC_Init(&NVIC_InitStructure);
 
-    //DMA_ITConfig(DMA2_Stream1, DMA_IT_TC, ENABLE); // Enable DMA1 Channel Transfer Complete interrupt
 }
 
 
-//DMA transfer complete interrupt
+//DMA transfer complete interrupt: runs after every line has been transferred to memory.
+//Double buffers and increments the DMA address
 void DMA2_Stream1_IRQHandler(void)
 {
+	intCount++;
 	GPIO_ResetBits(GPIOD, GPIO_Pin_14); //LED for debug
 	DMA_ClearITPendingBit(DMA2_Stream1, DMA_IT_TCIF1); //clear the transfer complete flag
 	//DCMI_CaptureCmd(DISABLE);
 
 	if(DMA_GetCurrentMemoryTarget(DMA2_Stream1) == 1) //if writing to mem1, reassign mem0 address
 	{
-		DMA2_Stream1->M0AR = &image_buffer[intCount * 320]; //assign new mem0 address and increment by # of lines
+		//assign new mem0 address and increment by (# of interrupts + 1) * (frame width * 2)
+		DMA2_Stream1->M0AR = &image_buffer[(intCount + 1) * (FRAME_WIDTH * 2)];
 		GPIO_ResetBits(GPIOD, GPIO_Pin_14); //LED for debug
 	}else ///if writing to mem0, reassign mem1 address
 	{
-		DMA2_Stream1->M1AR = &image_buffer2[(intCount + 1) * 320];//assign new mem1 address and increment by # of lines + 1
+		//assign new mem1 address and increment by (# of interrupts + 1) * (frame width * 2)
+		DMA2_Stream1->M1AR = &image_buffer2[(intCount + 1) * (FRAME_WIDTH * 2)];
 		GPIO_SetBits(GPIOD, GPIO_Pin_14); //LED for debug
 	}
+
 	if(intCount >= frameInts) //when max lines has been read, ready the serial transmission
 	{
 		GPIO_SetBits(GPIOD, GPIO_Pin_15);
 		sendFlag = ENABLE; //set serial transmission flag
 	}
-	intCount++;
-
-//	if(firstInt > 0) //if first interrupt
-//	{
-//		DMA2_Stream1->M0AR = &image_buffer[1000]; //write new memory 0 address
-//		firstInt--;
-//	}else
-//	{
-//		GPIO_SetBits(GPIOD, GPIO_Pin_15);
-//		sendFlag = ENABLE;
-//	}
-
-	//DMA2_Stream1->M1AR = Memory1BaseAddr;
-
 
 
 }
@@ -591,37 +576,65 @@ void TimingDelay_Decrement(void)
 void serialImage()
 {
 
-//	for(uint16_t z = 0 ; z < frameInts/2 ; z++)
-//	{
-//		for(uint16_t x = 0 ; x < 320 ; x++)
-//		{
-//		image_buffer3[(z*320) + x] = image_buffer[(z*320) + x];
-//		}
-//		for(uint16_t y = 0 ; y < 320 ; y++)
-//		{
-//		image_buffer3[((z+1)*320)] = image_buffer2[(z*2)+1];
-//		}
-//	}
 	for(uint16_t i = 0; i < sizeof(bmp_header2) ; i++)
 	{
 		Delay(1);
 		cPrint(bmp_header2[i]);
 	}
 	Delay(1);
-	for(uint32_t j = 0 ; j < (FRAME_HEIGHT * FRAME_WIDTH * 2) ; j++)
+
+	//combined buffers
+	for(uint16_t j = 0 ; j < FRAME_HEIGHT ; j++) //loop through each line
 	{
-		cPrint(image_buffer[j]);
+		for(uint16_t y = 0 ; y < (FRAME_WIDTH * 2) ; y++) //loop through each 2 byte pixel in row
+		{
+			if(j % 2) //if odd line j % 2
+			{
+				image_buffer3[(j * (FRAME_WIDTH * 2)) + y] = image_buffer2[(j * (FRAME_WIDTH * 2)) + y];
+				//image_buffer3[y] = image_buffer[y];
+			}else
+			{
+				image_buffer3[(j * (FRAME_WIDTH * 2)) + y] = image_buffer[(j * (FRAME_WIDTH * 2)) + y];
+				//image_buffer3[y] = image_buffer2[y];
+			}
+		}
 	}
-	Delay(1000);
+
+	//send combined buffer
+	for(uint32_t z = 0 ; z < (FRAME_HEIGHT * FRAME_WIDTH * 2) ; z++)
+	{
+		cPrint(image_buffer3[z]);
+	}
+
+	Delay(400);
+
+
+	//send 1st buffer
 	for(uint16_t i = 0; i < sizeof(bmp_header2) ; i++)
 	{
 		Delay(1);
 		cPrint(bmp_header2[i]);
 	}
 	Delay(1);
-	for(uint32_t j = 0 ; j < (FRAME_HEIGHT * FRAME_WIDTH * 2) ; j++)
+	for(uint32_t z = 0 ; z < (FRAME_HEIGHT * FRAME_WIDTH * 2) ; z++)
 	{
-		cPrint(image_buffer2[j]);
+		cPrint(image_buffer[z]);
 	}
+
+
+	Delay(400);
+
+	//send 2nd buffer
+	for(uint16_t i = 0; i < sizeof(bmp_header2) ; i++)
+	{
+		Delay(1);
+		cPrint(bmp_header2[i]);
+	}
+	Delay(1);
+	for(uint32_t z = 0 ; z < (FRAME_HEIGHT * FRAME_WIDTH * 2) ; z++)
+	{
+		cPrint(image_buffer2[z]);
+	}
+
 
 }
