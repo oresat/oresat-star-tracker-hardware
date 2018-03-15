@@ -161,17 +161,8 @@ int main(void)
     {
       /* Insert 200ms delay *///Not sure if this is needed
       Delay(100);
-      GPIO_SetBits(GPIOD, GPIO_Pin_14);
+      GPIO_SetBits(GPIOD, GPIO_Pin_14); //LED for debug
 
-      /*
-       * DMA Transfer Summary
-       *
-       * - Enable Transfer
-       * - SPI data out
-       * - check if last line, if not then enable another transfer
-       */
-
-      //cPrint(intCount); //print number of interrupts that have fired
       if (KeyPressFlg) {
 
     	GPIO_ResetBits(GPIOD, GPIO_Pin_13); //turn off led to show
