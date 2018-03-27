@@ -75,8 +75,6 @@ EXTI_InitTypeDef   EXTI_InitStructure;
 uint8_t capture_Flag = ENABLE;
 volatile uint8_t sendFlag = DISABLE;
 
-volatile uint16_t frameInts = 118; //number of lines/interrupts in a frame
-
 volatile uint16_t intCount = 0; //counts the number of lines/interrupts have fired
 
 
@@ -86,14 +84,15 @@ void DCMI_Config(void);
 void I2C1_Config(void);
 void EXTILine0_Config(void);
 
+//These will be used when live transfer is implemented
+//uint8_t image_buffer1[FRAME_WIDTH / 2] = {0}; //set array size as (FRAME_WIDTH * 2B/pixel) / (4B/word) = 1 line
+//uint8_t image_buffer2[FRAME_WIDTH / 2] = {0};
+//uint8_t image_buffer3[FRAME_WIDTH / 2] = {0};
 
-uint8_t image_buffer[FRAME_WIDTH*FRAME_HEIGHT*2] = {0}; //set array size as # of pixels x2 for 16 bit data
-
-//uint8_t image_buffer[320] = {0}; //set array size as # of pixels x2 for 16 bit data
-
-uint8_t image_buffer2[FRAME_WIDTH*FRAME_HEIGHT*2] = {0};
-
-uint8_t image_buffer3[FRAME_WIDTH*FRAME_HEIGHT*2] = {0};
+//These are temporary, needed for storing entire image on board
+uint8_t image_buffer1[FRAME_WIDTH * FRAME_HEIGHT * 2] = {0}; //set array size as (FRAME_WIDTH * 2B/pixel) / (4B/word) = 1 line
+uint8_t image_buffer2[FRAME_WIDTH * FRAME_HEIGHT * 2] = {0};
+uint8_t image_buffer3[FRAME_WIDTH * FRAME_HEIGHT * 2] = {0};
 
 uint8_t bmp_header2[70] = {
   0x42, 0x4D, 0x46, 0x96, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x46, 0x00, 0x00, 0x00, 0x28, 0x00,
@@ -163,6 +162,14 @@ int main(void)
       Delay(100);
       GPIO_SetBits(GPIOD, GPIO_Pin_14); //LED for debug
 
+      //clear the image buffers
+//      for(uint16_t i = 0; i < sizeof(image_buffer1) ; i++)
+//      	{
+//      		image_buffer1[i] = 0;
+//      		image_buffer2[i] = 0;
+//      		image_buffer3[i] = 0;
+//      	}
+
       if (KeyPressFlg) {
 
     	GPIO_ResetBits(GPIOD, GPIO_Pin_13); //turn off led to show
@@ -170,19 +177,7 @@ int main(void)
     	KeyPressFlg = 0;
         /* press user KEY take a photo */
         if (capture_Flag == ENABLE) {
-
         	DCMI_CaptureCmd(ENABLE);
-        	//while (DMA_GetFlagStatus(DMA2_Stream1,DMA_FLAG_TCIF1)==RESET);
-        	//DCMI_CaptureCmd(DISABLE);
-
-        	// below is old routine
-//          DCMI_CaptureCmd(DISABLE);
-//          capture_Flag = DISABLE;
-//          //Capture_Image_TO_Bmp(); //use this to save to SD card
-//          serialImage(); //use this to send over serial
-//          DCMI_CaptureCmd(ENABLE);
-//          capture_Flag = ENABLE;
-//          GPIO_SetBits(GPIOD, GPIO_Pin_13);
         }
 
         while(sendFlag == DISABLE) {} //wait for complete flag to be set by interrupt
@@ -339,104 +334,103 @@ void I2C1_Config(void)
   */
 void DCMI_Config(void)
 {
-  DCMI_InitTypeDef DCMI_InitStructure;
-  GPIO_InitTypeDef GPIO_InitStructure;
-  DMA_InitTypeDef  DMA_InitStructure;
-  
-  /* Enable DCMI GPIOs clocks */
-  RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOC | RCC_AHB1Periph_GPIOE | 
-                         RCC_AHB1Periph_GPIOB | RCC_AHB1Periph_GPIOA, ENABLE); 
+	DCMI_InitTypeDef DCMI_InitStructure;
+	GPIO_InitTypeDef GPIO_InitStructure;
+	DMA_InitTypeDef  DMA_InitStructure;
 
-  /* Enable DCMI clock */
-  RCC_AHB2PeriphClockCmd(RCC_AHB2Periph_DCMI, ENABLE);
+	/* Enable DCMI GPIOs clocks */
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOC | RCC_AHB1Periph_GPIOE |
+						 RCC_AHB1Periph_GPIOB | RCC_AHB1Periph_GPIOA, ENABLE);
 
-  /* Connect DCMI pins to AF13 ************************************************/
-  /* PCLK */
-  GPIO_PinAFConfig(GPIOA, GPIO_PinSource6, GPIO_AF_DCMI);
-  /* D0-D7 */
-  GPIO_PinAFConfig(GPIOC, GPIO_PinSource6, GPIO_AF_DCMI);
-  GPIO_PinAFConfig(GPIOC, GPIO_PinSource7, GPIO_AF_DCMI);
-  GPIO_PinAFConfig(GPIOE, GPIO_PinSource0, GPIO_AF_DCMI);
-  GPIO_PinAFConfig(GPIOE, GPIO_PinSource1, GPIO_AF_DCMI);
-  GPIO_PinAFConfig(GPIOE, GPIO_PinSource4, GPIO_AF_DCMI);
-  GPIO_PinAFConfig(GPIOB, GPIO_PinSource6, GPIO_AF_DCMI);
-  GPIO_PinAFConfig(GPIOE, GPIO_PinSource5, GPIO_AF_DCMI);
-  GPIO_PinAFConfig(GPIOE, GPIO_PinSource6, GPIO_AF_DCMI);
-  /* VSYNC */
-  GPIO_PinAFConfig(GPIOB, GPIO_PinSource7, GPIO_AF_DCMI);
-  /* HSYNC */
-  GPIO_PinAFConfig(GPIOA, GPIO_PinSource4, GPIO_AF_DCMI);
-  
-  /* DCMI GPIO configuration **************************************************/
-  /* D0 D1(PC6/7) */
-  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_6 | GPIO_Pin_7;
-  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
-  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_100MHz;
-  GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
-  GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP ;  
-  GPIO_Init(GPIOC, &GPIO_InitStructure);
+	/* Enable DCMI clock */
+	RCC_AHB2PeriphClockCmd(RCC_AHB2Periph_DCMI, ENABLE);
 
-  /* D2..D4(PE0/1/4) D6/D7(PE5/6) */
-  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0 | GPIO_Pin_1 
-	                              | GPIO_Pin_4 | GPIO_Pin_5 | GPIO_Pin_6;
-  GPIO_Init(GPIOE, &GPIO_InitStructure);
+	/* Connect DCMI pins to AF13 ************************************************/
+	/* PCLK */
+	GPIO_PinAFConfig(GPIOA, GPIO_PinSource6, GPIO_AF_DCMI);
+	/* D0-D7 */
+	GPIO_PinAFConfig(GPIOC, GPIO_PinSource6, GPIO_AF_DCMI);
+	GPIO_PinAFConfig(GPIOC, GPIO_PinSource7, GPIO_AF_DCMI);
+	GPIO_PinAFConfig(GPIOE, GPIO_PinSource0, GPIO_AF_DCMI);
+	GPIO_PinAFConfig(GPIOE, GPIO_PinSource1, GPIO_AF_DCMI);
+	GPIO_PinAFConfig(GPIOE, GPIO_PinSource4, GPIO_AF_DCMI);
+	GPIO_PinAFConfig(GPIOB, GPIO_PinSource6, GPIO_AF_DCMI);
+	GPIO_PinAFConfig(GPIOE, GPIO_PinSource5, GPIO_AF_DCMI);
+	GPIO_PinAFConfig(GPIOE, GPIO_PinSource6, GPIO_AF_DCMI);
+	/* VSYNC */
+	GPIO_PinAFConfig(GPIOB, GPIO_PinSource7, GPIO_AF_DCMI);
+	/* HSYNC */
+	GPIO_PinAFConfig(GPIOA, GPIO_PinSource4, GPIO_AF_DCMI);
 
-  /* D5(PB6), VSYNC(PB7) */
-  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_6 | GPIO_Pin_7;
-  GPIO_Init(GPIOB, &GPIO_InitStructure);
+	/* DCMI GPIO configuration **************************************************/
+	/* D0 D1(PC6/7) */
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_6 | GPIO_Pin_7;
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_100MHz;
+	GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
+	GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP ;
+	GPIO_Init(GPIOC, &GPIO_InitStructure);
 
-  /* PCLK(PA6) HSYNC(PA4)*/
-  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_4 | GPIO_Pin_6;
-  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
-  GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
-  GPIO_Init(GPIOA, &GPIO_InitStructure);
-  
-  /* DCMI configuration *******************************************************/ 
-  //DCMI_InitStructure.DCMI_CaptureMode = DCMI_CaptureMode_Continuous;
-  DCMI_InitStructure.DCMI_CaptureMode = DCMI_CaptureMode_SnapShot;
-  DCMI_InitStructure.DCMI_SynchroMode = DCMI_SynchroMode_Hardware;
-  DCMI_InitStructure.DCMI_PCKPolarity = DCMI_PCKPolarity_Falling;
-  DCMI_InitStructure.DCMI_VSPolarity = DCMI_VSPolarity_High;
-  DCMI_InitStructure.DCMI_HSPolarity = DCMI_HSPolarity_High;
-  DCMI_InitStructure.DCMI_CaptureRate = DCMI_CaptureRate_All_Frame;
-  DCMI_InitStructure.DCMI_ExtendedDataMode = DCMI_ExtendedDataMode_8b;
-  
-  DCMI_Init(&DCMI_InitStructure);
+	/* D2..D4(PE0/1/4) D6/D7(PE5/6) */
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0 | GPIO_Pin_1
+								  | GPIO_Pin_4 | GPIO_Pin_5 | GPIO_Pin_6;
+	GPIO_Init(GPIOE, &GPIO_InitStructure);
 
-  /* Configures the DMA2 to transfer Data from DCMI to the LCD ****************/
-  /* Enable DMA2 clock */
-  RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_DMA2, ENABLE);  
-  
-  /* DMA2 Stream1 Configuration */  
-  DMA_DeInit(DMA2_Stream1);
+	/* D5(PB6), VSYNC(PB7) */
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_6 | GPIO_Pin_7;
+	GPIO_Init(GPIOB, &GPIO_InitStructure);
 
-  DMA_InitStructure.DMA_Channel = DMA_Channel_1;  
-  DMA_InitStructure.DMA_PeripheralBaseAddr = DCMI_DR_ADDRESS;	
-  DMA_InitStructure.DMA_Memory0BaseAddr = image_buffer;  //FSMC_LCD_ADDRESS;
-  DMA_InitStructure.DMA_DIR = DMA_DIR_PeripheralToMemory;
-  DMA_InitStructure.DMA_BufferSize = 80; // 320/4 = 1 line
-  //DMA_InitStructure.DMA_BufferSize = 9600; // (120 * 160) * 2(2B/pixel) / 4(4B/word) = 9600
-  //DMA_InitStructure.DMA_BufferSize = (FRAME_HEIGHT * FRAME_WIDTH) / 2; // frame size in 32bit words, (H x W x 2) / 4
-  DMA_InitStructure.DMA_PeripheralInc = DMA_PeripheralInc_Disable;
-  DMA_InitStructure.DMA_MemoryInc = DMA_MemoryInc_Enable;
-  DMA_InitStructure.DMA_PeripheralDataSize = DMA_PeripheralDataSize_Word; //this must be WORD
-  DMA_InitStructure.DMA_MemoryDataSize = DMA_MemoryDataSize_HalfWord; //this seems to work with any size
-  DMA_InitStructure.DMA_Mode = DMA_Mode_Circular;
-  DMA_InitStructure.DMA_Priority = DMA_Priority_High;
-  DMA_InitStructure.DMA_FIFOMode = DMA_FIFOMode_Enable;         
-  DMA_InitStructure.DMA_FIFOThreshold = DMA_FIFOThreshold_Full;
-  DMA_InitStructure.DMA_MemoryBurst = DMA_MemoryBurst_Single;
-  DMA_InitStructure.DMA_PeripheralBurst = DMA_PeripheralBurst_Single;
+	/* PCLK(PA6) HSYNC(PA4)*/
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_4 | GPIO_Pin_6;
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
+	GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
+	GPIO_Init(GPIOA, &GPIO_InitStructure);
 
-  //double buffer config
-  DMA_DoubleBufferModeConfig(DMA2_Stream1, &image_buffer2[FRAME_WIDTH * 2], DMA_Memory_0); //set 2nd mem address as second line in buffer
-  DMA_DoubleBufferModeCmd (DMA2_Stream1, ENABLE);
+	/* DCMI configuration *******************************************************/
+	//DCMI_InitStructure.DCMI_CaptureMode = DCMI_CaptureMode_Continuous;
+	DCMI_InitStructure.DCMI_CaptureMode = DCMI_CaptureMode_SnapShot;
+	DCMI_InitStructure.DCMI_SynchroMode = DCMI_SynchroMode_Hardware;
+	DCMI_InitStructure.DCMI_PCKPolarity = DCMI_PCKPolarity_Falling;
+	DCMI_InitStructure.DCMI_VSPolarity = DCMI_VSPolarity_High;
+	DCMI_InitStructure.DCMI_HSPolarity = DCMI_HSPolarity_High;
+	DCMI_InitStructure.DCMI_CaptureRate = DCMI_CaptureRate_All_Frame;
+	DCMI_InitStructure.DCMI_ExtendedDataMode = DCMI_ExtendedDataMode_8b;
 
-  DMA_ITConfig(DMA2_Stream1, DMA_IT_TC, ENABLE); // Enable DMA2 Transfer Complete interrupt
-     
-  DMA_Init(DMA2_Stream1, &DMA_InitStructure);
+	DCMI_Init(&DCMI_InitStructure);
 
-  NVIC_InitTypeDef NVIC_InitStructure;
+	/* Configures the DMA2 to transfer Data from DCMI to the LCD ****************/
+	/* Enable DMA2 clock */
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_DMA2, ENABLE);
+
+	/* DMA2 Stream1 Configuration */
+	DMA_DeInit(DMA2_Stream1);
+
+	DMA_InitStructure.DMA_Channel = DMA_Channel_1;
+	DMA_InitStructure.DMA_PeripheralBaseAddr = DCMI_DR_ADDRESS;
+	DMA_InitStructure.DMA_Memory0BaseAddr = image_buffer1; //array name is pointer to mem location
+	DMA_InitStructure.DMA_DIR = DMA_DIR_PeripheralToMemory;
+	DMA_InitStructure.DMA_BufferSize = FRAME_WIDTH / 2; // buffer (FRAME_WIDTH * 2B/pixel) / (4B/word) = 1 line
+	DMA_InitStructure.DMA_PeripheralInc = DMA_PeripheralInc_Disable;
+	DMA_InitStructure.DMA_MemoryInc = DMA_MemoryInc_Enable;
+	DMA_InitStructure.DMA_PeripheralDataSize = DMA_PeripheralDataSize_Word; //this must be WORD
+	DMA_InitStructure.DMA_MemoryDataSize = DMA_MemoryDataSize_HalfWord; //this seems to work with any size
+	DMA_InitStructure.DMA_Mode = DMA_Mode_Circular;
+	DMA_InitStructure.DMA_Priority = DMA_Priority_High;
+	DMA_InitStructure.DMA_FIFOMode = DMA_FIFOMode_Enable;
+	DMA_InitStructure.DMA_FIFOThreshold = DMA_FIFOThreshold_Full;
+	DMA_InitStructure.DMA_MemoryBurst = DMA_MemoryBurst_Single;
+	DMA_InitStructure.DMA_PeripheralBurst = DMA_PeripheralBurst_Single;
+
+	//Double Buffer Config
+	//set 2nd mem address as second line in buffer: this won't be necessary for bigger images
+	DMA_DoubleBufferModeConfig(DMA2_Stream1, &image_buffer2[FRAME_WIDTH * 2], DMA_Memory_0); //set 2nd mem address as second line in buffer
+	DMA_DoubleBufferModeCmd (DMA2_Stream1, ENABLE);
+
+	DMA_ITConfig(DMA2_Stream1, DMA_IT_TC, ENABLE); // Enable DMA2 Transfer Complete interrupt
+
+	DMA_Init(DMA2_Stream1, &DMA_InitStructure);
+
+	NVIC_InitTypeDef NVIC_InitStructure;
 
     //Enable DMA channel IRQ Channel TX */
     NVIC_InitStructure.NVIC_IRQChannel = DMA2_Stream1_IRQn;
@@ -451,7 +445,6 @@ void DCMI_Config(void)
 
 }
 
-
 //DMA transfer complete interrupt: runs after every line has been transferred to memory.
 //Double buffers and increments the DMA address
 void DMA2_Stream1_IRQHandler(void)
@@ -464,7 +457,7 @@ void DMA2_Stream1_IRQHandler(void)
 	if(DMA_GetCurrentMemoryTarget(DMA2_Stream1) == 1) //if writing to mem1, reassign mem0 address
 	{
 		//assign new mem0 address and increment by (# of interrupts + 1) * (frame width * 2)
-		DMA2_Stream1->M0AR = &image_buffer[(intCount + 1) * (FRAME_WIDTH * 2)];
+		DMA2_Stream1->M0AR = &image_buffer1[(intCount + 1) * (FRAME_WIDTH * 2)];
 		GPIO_ResetBits(GPIOD, GPIO_Pin_14); //LED for debug
 	}else ///if writing to mem0, reassign mem1 address
 	{
@@ -473,13 +466,11 @@ void DMA2_Stream1_IRQHandler(void)
 		GPIO_SetBits(GPIOD, GPIO_Pin_14); //LED for debug
 	}
 
-	if(intCount >= frameInts) //when max lines has been read, ready the serial transmission
+	if(intCount >= FRAME_HEIGHT) //when max lines has been read, ready the serial transmission
 	{
 		GPIO_SetBits(GPIOD, GPIO_Pin_15);
 		sendFlag = ENABLE; //set serial transmission flag
 	}
-
-
 }
 
 /**
@@ -585,7 +576,7 @@ void serialImage()
 				//image_buffer3[y] = image_buffer[y];
 			}else
 			{
-				image_buffer3[(j * (FRAME_WIDTH * 2)) + y] = image_buffer[(j * (FRAME_WIDTH * 2)) + y];
+				image_buffer3[(j * (FRAME_WIDTH * 2)) + y] = image_buffer1[(j * (FRAME_WIDTH * 2)) + y];
 				//image_buffer3[y] = image_buffer2[y];
 			}
 		}
@@ -597,35 +588,6 @@ void serialImage()
 		cPrint(image_buffer3[z]);
 	}
 
-	Delay(400);
-
-
-	//send 1st buffer
-	for(uint16_t i = 0; i < sizeof(bmp_header2) ; i++)
-	{
-		Delay(1);
-		cPrint(bmp_header2[i]);
-	}
-	Delay(1);
-	for(uint32_t z = 0 ; z < (FRAME_HEIGHT * FRAME_WIDTH * 2) ; z++)
-	{
-		cPrint(image_buffer[z]);
-	}
-
-
-	Delay(400);
-
-	//send 2nd buffer
-	for(uint16_t i = 0; i < sizeof(bmp_header2) ; i++)
-	{
-		Delay(1);
-		cPrint(bmp_header2[i]);
-	}
-	Delay(1);
-	for(uint32_t z = 0 ; z < (FRAME_HEIGHT * FRAME_WIDTH * 2) ; z++)
-	{
-		cPrint(image_buffer2[z]);
-	}
 
 
 }

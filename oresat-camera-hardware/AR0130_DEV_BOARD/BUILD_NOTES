@@ -1,0 +1,43 @@
+NOTES:
+
+- DONE: breakout out enable lines for voltage regulators
+- DONE: add at least 1 temp sensor
+- DONE: external clock should have an enable
+- NO:add schmidt trigger to test efficacy?
+- DONE: Do I need level shifting b/c max is 2.8v +0.2v
+	-74avcb1642 Bus Tranceiver from schematic
+	
+- VREGs
+	- VDD: 1.8
+	- VDD_IO: 2.8
+	- VAA: 2.8
+	- VAA_PIX: 2.8(maybe can be shared with VAA, though refernce design shows individual)
+	- VDD_PLL: 2.8
+- LATER: power on sequence
+	- attiny or RC circuit
+- NOPE: temp sensors on separate 12c lines???
+- temp sensor under center of image sensor or under image sensor ground pins
+- I2C Repeater on board. ONe of these could be useful on the processor board if separate from camera board.
+- temp sensor running at 3.3 but i2c is translated to 2.8. Just keep this in mind
+- calculate power dissipation of v-regs
+- lens correction EEPROM??
+- clock
+	- clock buffer(might only be needed for level shifting)
+	- Should I use a TCXO
+	- DONE: 27MHz?
+	- DONE: 100 ohm series resistor?
+- YES: Will 3.3v reg be enough for bus tranceiver and temp sensors
+- YES: Will 2.8v VDD_IO reg be enough for bus tranceiver and temp sensors
+- Ribbon Cable output and external input board
+- Reset Voltage Supervisor:TPS3800, to reset when voltage is OK, see dev board.
+- Signals pulled up/down with resistor, and possibilty to be broken out
+- Test points
+	- DONE: clock enable on XO
+	- DONE: level shifter enable
+	- DONE: flash
+	- DONE: vreg outputs
+- VREG Caps
+	- Input: 1uf
+	- NR: .01uf
+	- output: 10uf
+- DONE: unpopulated pullups on 12c
