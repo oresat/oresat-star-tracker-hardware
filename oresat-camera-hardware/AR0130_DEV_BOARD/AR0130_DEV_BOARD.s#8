@@ -8,34 +8,34 @@
 </settings>
 <grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.125" altunitdist="mm" altunit="mm"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
-<layer number="2" name="Route2" color="1" fill="3" visible="yes" active="no"/>
-<layer number="3" name="Route3" color="4" fill="3" visible="yes" active="no"/>
-<layer number="4" name="Route4" color="1" fill="4" visible="yes" active="no"/>
-<layer number="5" name="Route5" color="4" fill="4" visible="yes" active="no"/>
-<layer number="6" name="Route6" color="1" fill="8" visible="yes" active="no"/>
-<layer number="7" name="Route7" color="4" fill="8" visible="yes" active="no"/>
-<layer number="8" name="Route8" color="1" fill="2" visible="yes" active="no"/>
-<layer number="9" name="Route9" color="4" fill="2" visible="yes" active="no"/>
-<layer number="10" name="Route10" color="1" fill="7" visible="yes" active="no"/>
-<layer number="11" name="Route11" color="4" fill="7" visible="yes" active="no"/>
-<layer number="12" name="Route12" color="1" fill="5" visible="yes" active="no"/>
-<layer number="13" name="Route13" color="4" fill="5" visible="yes" active="no"/>
-<layer number="14" name="Route14" color="1" fill="6" visible="yes" active="no"/>
-<layer number="15" name="Route15" color="61" fill="3" visible="yes" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
-<layer number="20" name="Dimension" color="24" fill="1" visible="yes" active="no"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
+<layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
+<layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
+<layer number="6" name="Route6" color="1" fill="8" visible="no" active="no"/>
+<layer number="7" name="Route7" color="4" fill="8" visible="no" active="no"/>
+<layer number="8" name="Route8" color="1" fill="2" visible="no" active="no"/>
+<layer number="9" name="Route9" color="4" fill="2" visible="no" active="no"/>
+<layer number="10" name="Route10" color="1" fill="7" visible="no" active="no"/>
+<layer number="11" name="Route11" color="4" fill="7" visible="no" active="no"/>
+<layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
+<layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
+<layer number="15" name="Route15" color="61" fill="3" visible="no" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
+<layer number="20" name="Dimension" color="24" fill="1" visible="no" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -44,8 +44,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -53,19 +53,19 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
-<layer number="50" name="dxf" color="7" fill="1" visible="yes" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
-<layer number="53" name="tGND_GNDA" color="7" fill="1" visible="yes" active="no"/>
-<layer number="54" name="bGND_GNDA" color="7" fill="1" visible="yes" active="no"/>
-<layer number="56" name="wert" color="7" fill="1" visible="yes" active="no"/>
-<layer number="57" name="tCAD" color="7" fill="1" visible="yes" active="no"/>
-<layer number="59" name="tCarbon" color="7" fill="1" visible="yes" active="no"/>
-<layer number="60" name="bCarbon" color="7" fill="1" visible="yes" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
+<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="53" name="tGND_GNDA" color="7" fill="1" visible="no" active="no"/>
+<layer number="54" name="bGND_GNDA" color="7" fill="1" visible="no" active="no"/>
+<layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
+<layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
+<layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
+<layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
 <layer number="88" name="SimResults" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="89" name="SimProbes" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
@@ -1044,7 +1044,7 @@ Warning: This is the KIT version of this package. This package has a smaller dia
 <wire x1="-12.7041" y1="4.3942" x2="-12.7041" y2="0.5" width="0.1524" layer="51"/>
 <text x="-10.6213" y="-0.889" size="0.508" layer="51" font="vector" ratio="15" rot="SR0">1</text>
 <text x="10.1813" y="-0.889" size="0.508" layer="51" font="vector" ratio="15" rot="SR0">40</text>
-<text x="-3.2807" y="-0.635" size="1.27" layer="25" ratio="6" rot="SR0">&gt;Name</text>
+<text x="-1.8837" y="-1.397" size="0.508" layer="25" font="vector" ratio="15" rot="SR0">&gt;Name</text>
 <circle x="-10.16" y="-1.27" radius="0.179603125" width="0.254" layer="21"/>
 </package>
 <package name="DGK8-M">
@@ -1251,18 +1251,6 @@ Warning: This is the KIT version of this package. This package has a smaller dia
 <wire x1="1.2192" y1="-2.9464" x2="1.9558" y2="-2.9464" width="0.1524" layer="21"/>
 <wire x1="1.9558" y1="2.7178" x2="1.9558" y2="2.9464" width="0.1524" layer="21"/>
 <wire x1="0.2794" y1="2.9464" x2="-0.2794" y2="2.9464" width="0.1524" layer="21"/>
-<polygon width="0.0254" layer="21">
-<vertex x="-2.658" y="-1.5595"/>
-<vertex x="-2.658" y="-1.9405"/>
-<vertex x="-2.404" y="-1.9405"/>
-<vertex x="-2.404" y="-1.5595"/>
-</polygon>
-<polygon width="0.0254" layer="21">
-<vertex x="2.658" y="0.9405"/>
-<vertex x="2.658" y="0.5595"/>
-<vertex x="2.404" y="0.5595"/>
-<vertex x="2.404" y="0.9405"/>
-</polygon>
 <polygon width="0.0254" layer="31">
 <vertex x="-2.125" y="2.365"/>
 <vertex x="-2.125" y="2.135"/>
@@ -1822,18 +1810,18 @@ Warning: This is the KIT version of this package. This package has a smaller dia
 <wire x1="1.8288" y1="-2.8194" x2="1.8288" y2="2.8194" width="0.1524" layer="51"/>
 <wire x1="1.8288" y1="2.8194" x2="-1.8288" y2="2.8194" width="0.1524" layer="51"/>
 <wire x1="-1.8288" y1="2.8194" x2="-1.8288" y2="-2.8194" width="0.1524" layer="51"/>
-<text x="-1.3208" y="1.6764" size="1.27" layer="51" ratio="6" rot="SR0">*</text>
-<text x="-3.2766" y="-0.635" size="1.27" layer="25" ratio="6" rot="SR0">&gt;Name</text>
-<pad name="P$1" x="-0.40625" y="-1.5625" drill="0.254" diameter="0.5"/>
-<pad name="P$2" x="0.40625" y="-1.5625" drill="0.254" diameter="0.5"/>
-<pad name="P$3" x="-0.40625" y="-0.78125" drill="0.254" diameter="0.5"/>
-<pad name="P$4" x="0.40625" y="-0.78125" drill="0.254" diameter="0.5"/>
-<pad name="P$5" x="0.40625" y="0" drill="0.254" diameter="0.5"/>
-<pad name="P$6" x="-0.40625" y="0" drill="0.254" diameter="0.5"/>
-<pad name="P$7" x="0.40625" y="0.78125" drill="0.254" diameter="0.5"/>
-<pad name="P$8" x="-0.40625" y="0.78125" drill="0.254" diameter="0.5"/>
-<pad name="P$9" x="0.40625" y="1.5625" drill="0.254" diameter="0.5"/>
-<pad name="P$10" x="-0.40625" y="1.5625" drill="0.254" diameter="0.5"/>
+<text x="-2.667" y="-0.6096" size="0.508" layer="25" font="vector" ratio="15" rot="SR90">&gt;Name</text>
+<pad name="P$1" x="-0.40625" y="-1.5625" drill="0.254" diameter="0.5" stop="no"/>
+<pad name="P$2" x="0.40625" y="-1.5625" drill="0.254" diameter="0.5" stop="no"/>
+<pad name="P$3" x="-0.40625" y="-0.78125" drill="0.254" diameter="0.5" stop="no"/>
+<pad name="P$4" x="0.40625" y="-0.78125" drill="0.254" diameter="0.5" stop="no"/>
+<pad name="P$5" x="0.40625" y="0" drill="0.254" diameter="0.5" stop="no"/>
+<pad name="P$6" x="-0.40625" y="0" drill="0.254" diameter="0.5" stop="no"/>
+<pad name="P$7" x="0.40625" y="0.78125" drill="0.254" diameter="0.5" stop="no"/>
+<pad name="P$8" x="-0.40625" y="0.78125" drill="0.254" diameter="0.5" stop="no"/>
+<pad name="P$9" x="0.40625" y="1.5625" drill="0.254" diameter="0.5" stop="no"/>
+<pad name="P$10" x="-0.40625" y="1.5625" drill="0.254" diameter="0.5" stop="no"/>
+<circle x="-2.159" y="3.2004" radius="0.091578125" width="0.381" layer="21"/>
 </package>
 <package name="OSC_KYOCERA_KC2520B">
 <smd name="1" x="-0.8001" y="0.925" dx="1.2192" dy="0.8128" layer="1"/>
@@ -1956,30 +1944,6 @@ Warning: This is the KIT version of this package. This package has a smaller dia
 <smd name="48" x="2.8194" y="4.599996875" dx="1.6764" dy="0.2286" layer="1"/>
 <wire x1="-1.8796" y1="-5.0292" x2="1.8796" y2="-5.0292" width="0.1524" layer="21"/>
 <wire x1="1.8796" y1="5.0292" x2="-1.8796" y2="5.0292" width="0.1524" layer="21"/>
-<polygon width="0.0254" layer="21">
-<vertex x="-4.1656" y="1.1905"/>
-<vertex x="-4.1656" y="0.8095"/>
-<vertex x="-3.9116" y="0.8095"/>
-<vertex x="-3.9116" y="1.1905"/>
-</polygon>
-<polygon width="0.0254" layer="21">
-<vertex x="-4.1656" y="-2.8095"/>
-<vertex x="-4.1656" y="-3.1905"/>
-<vertex x="-3.9116" y="-3.1905"/>
-<vertex x="-3.9116" y="-2.8095"/>
-</polygon>
-<polygon width="0.0254" layer="21">
-<vertex x="4.1656" y="-2.4095"/>
-<vertex x="4.1656" y="-2.7905"/>
-<vertex x="3.9116" y="-2.7905"/>
-<vertex x="3.9116" y="-2.4095"/>
-</polygon>
-<polygon width="0.0254" layer="21">
-<vertex x="4.1656" y="1.5905"/>
-<vertex x="4.1656" y="1.2095"/>
-<vertex x="3.9116" y="1.2095"/>
-<vertex x="3.9116" y="1.5905"/>
-</polygon>
 <wire x1="-2.2352" y1="4.4958" x2="-2.2606" y2="4.7244" width="0.1524" layer="51"/>
 <wire x1="-2.2606" y1="4.7244" x2="-3.302" y2="4.7244" width="0.1524" layer="51"/>
 <wire x1="-3.302" y1="4.7244" x2="-3.302" y2="4.4958" width="0.1524" layer="51"/>
@@ -2179,8 +2143,7 @@ Warning: This is the KIT version of this package. This package has a smaller dia
 <wire x1="-0.3048" y1="4.9022" x2="-2.2352" y2="4.9022" width="0.1524" layer="51"/>
 <wire x1="-2.2352" y1="4.9022" x2="-2.2352" y2="-4.9022" width="0.1524" layer="51"/>
 <wire x1="0.3048" y1="4.9022" x2="-0.3048" y2="4.9022" width="0.1524" layer="51" curve="-180"/>
-<text x="-2.4384" y="3.556" size="1.27" layer="51" ratio="6" rot="SR0">*</text>
-<text x="-3.2766" y="-0.635" size="1.27" layer="25" ratio="6" rot="SR0">&gt;Name</text>
+<text x="-1.1176" y="5.588" size="0.508" layer="25" font="vector" ratio="15" rot="SR0">&gt;Name</text>
 </package>
 <package name="DGV48-M">
 <smd name="1" x="-2.8702" y="4.6" dx="1.9812" dy="0.2286" layer="1"/>
@@ -3052,8 +3015,8 @@ Warning: This is the KIT version of this package. This package has a smaller dia
 <wire x1="-1.0668" y1="1.0668" x2="-1.0668" y2="-1.0668" width="0.1524" layer="51"/>
 <wire x1="0.3048" y1="1.0668" x2="-0.3048" y2="1.0414" width="0.1524" layer="51" curve="-180"/>
 <text x="-1.2446" y="1.651" size="0.508" layer="25" font="vector" ratio="15" rot="SR0">&gt;Name</text>
-<pad name="8" x="0" y="0.375" drill="0.254" diameter="0.508"/>
-<pad name="9" x="0" y="-0.4375" drill="0.254" diameter="0.508"/>
+<pad name="8" x="0" y="0.375" drill="0.254" diameter="0.508" stop="no"/>
+<pad name="9" x="0" y="-0.4375" drill="0.254" diameter="0.508" stop="no"/>
 </package>
 <package name="DFN8_2X3MC-M">
 <smd name="1" x="-1.4478" y="0.75" dx="0.9144" dy="0.3048" layer="1"/>
@@ -5488,6 +5451,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="TP4" library="testpad" deviceset="TP" device="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1"/>
 <part name="TP5" library="testpad" deviceset="TP" device="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1"/>
 <part name="TP6" library="testpad" deviceset="TP" device="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1"/>
+<part name="TP7" library="testpad" deviceset="TP" device="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -5586,6 +5550,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <instance part="TP4" gate="G$1" x="-80" y="55" rot="R270"/>
 <instance part="TP5" gate="G$1" x="-80" y="32.125" rot="R270"/>
 <instance part="TP6" gate="G$1" x="-80" y="27.125" rot="R270"/>
+<instance part="TP7" gate="G$1" x="10" y="83" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -6648,8 +6613,9 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <net name="FLASH" class="0">
 <segment>
 <pinref part="U0" gate="G$1" pin="13-FLASH"/>
-<wire x1="24" y1="83" x2="19" y2="83" width="0.1524" layer="91"/>
 <label x="14" y="83" size="1.778" layer="95"/>
+<pinref part="TP7" gate="G$1" pin="TP"/>
+<wire x1="12.54" y1="83" x2="24" y2="83" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$56" class="0">

@@ -1044,7 +1044,7 @@ Warning: This is the KIT version of this package. This package has a smaller dia
 <wire x1="-12.7041" y1="4.3942" x2="-12.7041" y2="0.5" width="0.1524" layer="51"/>
 <text x="-10.6213" y="-0.889" size="0.508" layer="51" font="vector" ratio="15" rot="SR0">1</text>
 <text x="10.1813" y="-0.889" size="0.508" layer="51" font="vector" ratio="15" rot="SR0">40</text>
-<text x="-3.2807" y="-0.635" size="1.27" layer="25" ratio="6" rot="SR0">&gt;Name</text>
+<text x="-1.8837" y="-1.397" size="0.508" layer="25" font="vector" ratio="15" rot="SR0">&gt;Name</text>
 <circle x="-10.16" y="-1.27" radius="0.179603125" width="0.254" layer="21"/>
 </package>
 <package name="DGK8-M">
@@ -1251,18 +1251,6 @@ Warning: This is the KIT version of this package. This package has a smaller dia
 <wire x1="1.2192" y1="-2.9464" x2="1.9558" y2="-2.9464" width="0.1524" layer="21"/>
 <wire x1="1.9558" y1="2.7178" x2="1.9558" y2="2.9464" width="0.1524" layer="21"/>
 <wire x1="0.2794" y1="2.9464" x2="-0.2794" y2="2.9464" width="0.1524" layer="21"/>
-<polygon width="0.0254" layer="21">
-<vertex x="-2.658" y="-1.5595"/>
-<vertex x="-2.658" y="-1.9405"/>
-<vertex x="-2.404" y="-1.9405"/>
-<vertex x="-2.404" y="-1.5595"/>
-</polygon>
-<polygon width="0.0254" layer="21">
-<vertex x="2.658" y="0.9405"/>
-<vertex x="2.658" y="0.5595"/>
-<vertex x="2.404" y="0.5595"/>
-<vertex x="2.404" y="0.9405"/>
-</polygon>
 <polygon width="0.0254" layer="31">
 <vertex x="-2.125" y="2.365"/>
 <vertex x="-2.125" y="2.135"/>
@@ -1822,18 +1810,18 @@ Warning: This is the KIT version of this package. This package has a smaller dia
 <wire x1="1.8288" y1="-2.8194" x2="1.8288" y2="2.8194" width="0.1524" layer="51"/>
 <wire x1="1.8288" y1="2.8194" x2="-1.8288" y2="2.8194" width="0.1524" layer="51"/>
 <wire x1="-1.8288" y1="2.8194" x2="-1.8288" y2="-2.8194" width="0.1524" layer="51"/>
-<text x="-1.3208" y="1.6764" size="1.27" layer="51" ratio="6" rot="SR0">*</text>
-<text x="-3.2766" y="-0.635" size="1.27" layer="25" ratio="6" rot="SR0">&gt;Name</text>
-<pad name="P$1" x="-0.40625" y="-1.5625" drill="0.254" diameter="0.5"/>
-<pad name="P$2" x="0.40625" y="-1.5625" drill="0.254" diameter="0.5"/>
-<pad name="P$3" x="-0.40625" y="-0.78125" drill="0.254" diameter="0.5"/>
-<pad name="P$4" x="0.40625" y="-0.78125" drill="0.254" diameter="0.5"/>
-<pad name="P$5" x="0.40625" y="0" drill="0.254" diameter="0.5"/>
-<pad name="P$6" x="-0.40625" y="0" drill="0.254" diameter="0.5"/>
-<pad name="P$7" x="0.40625" y="0.78125" drill="0.254" diameter="0.5"/>
-<pad name="P$8" x="-0.40625" y="0.78125" drill="0.254" diameter="0.5"/>
-<pad name="P$9" x="0.40625" y="1.5625" drill="0.254" diameter="0.5"/>
-<pad name="P$10" x="-0.40625" y="1.5625" drill="0.254" diameter="0.5"/>
+<text x="-2.667" y="-0.6096" size="0.508" layer="25" font="vector" ratio="15" rot="SR90">&gt;Name</text>
+<pad name="P$1" x="-0.40625" y="-1.5625" drill="0.254" diameter="0.5" stop="no"/>
+<pad name="P$2" x="0.40625" y="-1.5625" drill="0.254" diameter="0.5" stop="no"/>
+<pad name="P$3" x="-0.40625" y="-0.78125" drill="0.254" diameter="0.5" stop="no"/>
+<pad name="P$4" x="0.40625" y="-0.78125" drill="0.254" diameter="0.5" stop="no"/>
+<pad name="P$5" x="0.40625" y="0" drill="0.254" diameter="0.5" stop="no"/>
+<pad name="P$6" x="-0.40625" y="0" drill="0.254" diameter="0.5" stop="no"/>
+<pad name="P$7" x="0.40625" y="0.78125" drill="0.254" diameter="0.5" stop="no"/>
+<pad name="P$8" x="-0.40625" y="0.78125" drill="0.254" diameter="0.5" stop="no"/>
+<pad name="P$9" x="0.40625" y="1.5625" drill="0.254" diameter="0.5" stop="no"/>
+<pad name="P$10" x="-0.40625" y="1.5625" drill="0.254" diameter="0.5" stop="no"/>
+<circle x="-2.159" y="3.2004" radius="0.091578125" width="0.381" layer="21"/>
 </package>
 <package name="OSC_KYOCERA_KC2520B">
 <smd name="1" x="-0.8001" y="0.925" dx="1.2192" dy="0.8128" layer="1"/>
@@ -1956,30 +1944,6 @@ Warning: This is the KIT version of this package. This package has a smaller dia
 <smd name="48" x="2.8194" y="4.599996875" dx="1.6764" dy="0.2286" layer="1"/>
 <wire x1="-1.8796" y1="-5.0292" x2="1.8796" y2="-5.0292" width="0.1524" layer="21"/>
 <wire x1="1.8796" y1="5.0292" x2="-1.8796" y2="5.0292" width="0.1524" layer="21"/>
-<polygon width="0.0254" layer="21">
-<vertex x="-4.1656" y="1.1905"/>
-<vertex x="-4.1656" y="0.8095"/>
-<vertex x="-3.9116" y="0.8095"/>
-<vertex x="-3.9116" y="1.1905"/>
-</polygon>
-<polygon width="0.0254" layer="21">
-<vertex x="-4.1656" y="-2.8095"/>
-<vertex x="-4.1656" y="-3.1905"/>
-<vertex x="-3.9116" y="-3.1905"/>
-<vertex x="-3.9116" y="-2.8095"/>
-</polygon>
-<polygon width="0.0254" layer="21">
-<vertex x="4.1656" y="-2.4095"/>
-<vertex x="4.1656" y="-2.7905"/>
-<vertex x="3.9116" y="-2.7905"/>
-<vertex x="3.9116" y="-2.4095"/>
-</polygon>
-<polygon width="0.0254" layer="21">
-<vertex x="4.1656" y="1.5905"/>
-<vertex x="4.1656" y="1.2095"/>
-<vertex x="3.9116" y="1.2095"/>
-<vertex x="3.9116" y="1.5905"/>
-</polygon>
 <wire x1="-2.2352" y1="4.4958" x2="-2.2606" y2="4.7244" width="0.1524" layer="51"/>
 <wire x1="-2.2606" y1="4.7244" x2="-3.302" y2="4.7244" width="0.1524" layer="51"/>
 <wire x1="-3.302" y1="4.7244" x2="-3.302" y2="4.4958" width="0.1524" layer="51"/>
@@ -2179,8 +2143,7 @@ Warning: This is the KIT version of this package. This package has a smaller dia
 <wire x1="-0.3048" y1="4.9022" x2="-2.2352" y2="4.9022" width="0.1524" layer="51"/>
 <wire x1="-2.2352" y1="4.9022" x2="-2.2352" y2="-4.9022" width="0.1524" layer="51"/>
 <wire x1="0.3048" y1="4.9022" x2="-0.3048" y2="4.9022" width="0.1524" layer="51" curve="-180"/>
-<text x="-2.4384" y="3.556" size="1.27" layer="51" ratio="6" rot="SR0">*</text>
-<text x="-3.2766" y="-0.635" size="1.27" layer="25" ratio="6" rot="SR0">&gt;Name</text>
+<text x="-1.1176" y="5.588" size="0.508" layer="25" font="vector" ratio="15" rot="SR0">&gt;Name</text>
 </package>
 <package name="DGV48-M">
 <smd name="1" x="-2.8702" y="4.6" dx="1.9812" dy="0.2286" layer="1"/>
@@ -3052,8 +3015,8 @@ Warning: This is the KIT version of this package. This package has a smaller dia
 <wire x1="-1.0668" y1="1.0668" x2="-1.0668" y2="-1.0668" width="0.1524" layer="51"/>
 <wire x1="0.3048" y1="1.0668" x2="-0.3048" y2="1.0414" width="0.1524" layer="51" curve="-180"/>
 <text x="-1.2446" y="1.651" size="0.508" layer="25" font="vector" ratio="15" rot="SR0">&gt;Name</text>
-<pad name="8" x="0" y="0.375" drill="0.254" diameter="0.508"/>
-<pad name="9" x="0" y="-0.4375" drill="0.254" diameter="0.508"/>
+<pad name="8" x="0" y="0.375" drill="0.254" diameter="0.508" stop="no"/>
+<pad name="9" x="0" y="-0.4375" drill="0.254" diameter="0.508" stop="no"/>
 </package>
 <package name="DFN8_2X3MC-M">
 <smd name="1" x="-1.4478" y="0.75" dx="0.9144" dy="0.3048" layer="1"/>
@@ -3073,14 +3036,14 @@ Warning: This is the KIT version of this package. This package has a smaller dia
 </polygon>
 <wire x1="-0.7366" y1="-1.1176" x2="0.7366" y2="-1.1176" width="0.1524" layer="21"/>
 <wire x1="0.7366" y1="1.1176" x2="-0.7366" y2="1.1176" width="0.1524" layer="21"/>
-<wire x1="-2.2352" y1="0.6858" x2="-2.2352" y2="0.8128" width="0.1524" layer="21" curve="-208"/>
 <wire x1="-1.4986" y1="-1.016" x2="1.4986" y2="-1.016" width="0.1524" layer="51"/>
 <wire x1="1.4986" y1="-1.016" x2="1.4986" y2="1.016" width="0.1524" layer="51"/>
 <wire x1="1.4986" y1="1.016" x2="0.3048" y2="1.016" width="0.1524" layer="51"/>
 <wire x1="0.3048" y1="1.016" x2="-1.4986" y2="1.016" width="0.1524" layer="51"/>
 <wire x1="-1.4986" y1="1.016" x2="-1.4986" y2="-1.016" width="0.1524" layer="51"/>
 <wire x1="0.3048" y1="1.016" x2="-0.3048" y2="0.9906" width="0.1524" layer="51" curve="-180"/>
-<text x="-3.2766" y="-0.635" size="1.27" layer="25" ratio="6" rot="SR0">&gt;Name</text>
+<text x="-1.1938" y="1.4224" size="0.508" layer="25" font="vector" ratio="15" rot="SR0">&gt;Name</text>
+<circle x="-2.4384" y="0.7874" radius="0.0254" width="0.381" layer="21"/>
 </package>
 <package name="DFN8_2X3MC">
 <smd name="1" x="-1.397" y="0.75" dx="0.8128" dy="0.3048" layer="1"/>
