@@ -4176,15 +4176,15 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="13.250503125" y1="8.186996875" x2="13.25" y2="8.1875" width="0.1524" layer="1"/>
 <via x="13.25" y="8.1875" extent="1-16" drill="0.254"/>
 <via x="1.75" y="30.625" extent="1-16" drill="0.254"/>
-<wire x1="1.75" y1="29.62" x2="1.8825" y2="29.4875" width="0.1524" layer="1"/>
+<wire x1="1.8825" y1="29.4875" x2="1.75" y2="29.62" width="0.1524" layer="1"/>
 <wire x1="13.25" y1="8.1875" x2="12.8125" y2="8.1875" width="0.1524" layer="16"/>
 <wire x1="2.5" y1="29.875" x2="1.75" y2="30.625" width="0.1524" layer="16"/>
 <wire x1="12.8125" y1="8.1875" x2="2.5" y2="18.5" width="0.1524" layer="16"/>
 <wire x1="2.5" y1="18.5" x2="2.5" y2="29.875" width="0.1524" layer="16"/>
-<wire x1="1.75" y1="29.355" x2="1.75" y2="30.625" width="0.1524" layer="1"/>
+<wire x1="1.75" y1="29.425" x2="1.75" y2="30.625" width="0.1524" layer="1"/>
 <wire x1="3.6999" y1="29.425" x2="1.75" y2="29.425" width="0.1524" layer="1"/>
-<wire x1="1.75" y1="29.425" x2="1.75" y2="29.355" width="0.1524" layer="1"/>
-<wire x1="1.75" y1="29.425" x2="1.8825" y2="29.4875" width="0" layer="19" extent="1-1"/>
+<wire x1="1.75" y1="29.355" x2="1.75" y2="29.425" width="0.1524" layer="1"/>
+<wire x1="1.75" y1="29.355" x2="1.8825" y2="29.4875" width="0.1524" layer="1"/>
 </signal>
 <signal name="SCL_I">
 <contactref element="U9" pad="2"/>

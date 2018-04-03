@@ -3,13 +3,13 @@
 <eagle version="8.7.1">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.0125" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
-<layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
+<layer number="2" name="Route2" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
 <layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
 <layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
@@ -22,7 +22,7 @@
 <layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
 <layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
 <layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
-<layer number="15" name="Route15" color="61" fill="3" visible="yes" active="yes"/>
+<layer number="15" name="Route15" color="61" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
@@ -2904,7 +2904,7 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <via x="33.5625" y="18.3125" extent="1-16" drill="0.254"/>
 <via x="32.125" y="18.1875" extent="1-16" drill="0.254"/>
 <via x="33" y="12" extent="1-16" drill="0.254"/>
-<via x="15.125" y="15.3125" extent="1-16" drill="0.254"/>
+<via x="15.225" y="14.6125" extent="1-16" drill="0.254"/>
 <via x="7" y="17" extent="1-16" drill="0.254"/>
 <via x="4.15" y="16.225" extent="1-16" drill="0.254"/>
 <via x="3.875" y="14.9375" extent="1-16" drill="0.254"/>
@@ -3054,15 +3054,6 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 </signal>
 <signal name="N$2">
 <contactref element="U0" pad="48"/>
-</signal>
-<signal name="N$29">
-<contactref element="U0" pad="37"/>
-</signal>
-<signal name="N$30">
-<contactref element="U0" pad="36"/>
-</signal>
-<signal name="N$31">
-<contactref element="U0" pad="35"/>
 </signal>
 <signal name="TRIG_I">
 <contactref element="U0" pad="33"/>
@@ -4288,12 +4279,6 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="2.7675" y1="10.75" x2="2.795" y2="10.7775" width="0.1524" layer="1"/>
 <wire x1="2.795" y1="10.7775" x2="5.025" y2="10.7775" width="0.1524" layer="1"/>
 </signal>
-<signal name="N$6">
-<contactref element="U6" pad="3"/>
-</signal>
-<signal name="N$1">
-<contactref element="U7" pad="3"/>
-</signal>
 <signal name="SADDR_E">
 <contactref element="J2" pad="23"/>
 <contactref element="U13" pad="3"/>
@@ -4443,11 +4428,6 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <approved hash="5,1,d1bcd4397b0c827f"/>
 <approved hash="5,1,d91e9ba779031edb"/>
 <approved hash="5,1,40b345393901a070"/>
-<approved hash="5,16,1c8cc7ae589e92f5"/>
-<approved hash="5,16,1a5f5a0df35c4962"/>
-<approved hash="5,16,18ae268b8f5237d3"/>
-<approved hash="5,16,5be51b8abd230720"/>
-<approved hash="5,16,5df6c62f16219cb1"/>
 </errors>
 </board>
 </drawing>

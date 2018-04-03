@@ -3,7 +3,7 @@
 <eagle version="8.7.1">
 <drawing>
 <settings>
-<setting alwaysvectorfont="no"/>
+<setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.0125" altunitdist="mm" altunit="mm"/>
@@ -22,7 +22,7 @@
 <layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
 <layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
 <layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
-<layer number="15" name="Route15" color="61" fill="3" visible="no" active="yes"/>
+<layer number="15" name="Route15" color="61" fill="3" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
@@ -232,7 +232,7 @@ PULLUPS</text>
 <wire x1="37" y1="0" x2="40" y2="3" width="0" layer="20" curve="90"/>
 <wire x1="40" y1="47" x2="37" y2="50" width="0" layer="20" curve="90"/>
 <wire x1="3" y1="50" x2="0" y2="47" width="0" layer="20" curve="90"/>
-<text x="8.5" y="29" size="0.6096" layer="21" font="vector" ratio="14">EXTCLK</text>
+<text x="7.5" y="29" size="0.6096" layer="21" font="vector" ratio="14">EXTCLK</text>
 </plain>
 <libraries>
 <library name="Oliver_Custom" urn="urn:adsk.eagle:library:2197211">
@@ -2375,10 +2375,7 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <via x="9.3125" y="15.5" extent="1-16" drill="0.254"/>
 <wire x1="9.3125" y1="15.5" x2="30.8125" y2="15.5" width="0.4064" layer="15"/>
 <via x="30.8125" y="15.5" extent="1-16" drill="0.254"/>
-<wire x1="5.3001" y1="29.425" x2="7.2375" y2="29.425" width="0.254" layer="1"/>
-<wire x1="7.2375" y1="29.425" x2="7.25" y2="29.4375" width="0.254" layer="1"/>
-<via x="7.25" y="29.4375" extent="1-16" drill="0.254"/>
-<wire x1="7.25" y1="29.4375" x2="7.25" y2="24.2981625" width="0.4064" layer="15"/>
+<via x="6.65" y="29.3875" extent="1-16" drill="0.254"/>
 <wire x1="7.25" y1="24.2981625" x2="7.22591875" y2="24.27408125" width="0.254" layer="15"/>
 <via x="15.5625" y="42.625" extent="1-16" drill="0.254"/>
 <wire x1="17.8" y1="24.3194" x2="17.8" y2="22.5125" width="0.254" layer="1"/>
@@ -2410,6 +2407,10 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="15.33" y1="42.3925" x2="15.5625" y2="42.625" width="0.3048" layer="16"/>
 <contactref element="TP4" pad="TP"/>
 <wire x1="37" y1="14.5" x2="38" y2="13.5" width="0.254" layer="1"/>
+<wire x1="6.65" y1="29.3875" x2="6.65" y2="24.8981625" width="0.4064" layer="15"/>
+<wire x1="6.65" y1="24.8981625" x2="7.25" y2="24.2981625" width="0.4064" layer="15"/>
+<wire x1="5.3001" y1="29.425" x2="6.6125" y2="29.425" width="0.254" layer="1"/>
+<wire x1="6.6125" y1="29.425" x2="6.65" y2="29.3875" width="0.254" layer="1"/>
 </signal>
 <signal name="VDD_IO_EN">
 <contactref element="U14" pad="6"/>

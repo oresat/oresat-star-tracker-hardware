@@ -1824,16 +1824,16 @@ Warning: This is the KIT version of this package. This package has a smaller dia
 <wire x1="-1.8288" y1="2.8194" x2="-1.8288" y2="-2.8194" width="0.1524" layer="51"/>
 <text x="-1.3208" y="1.6764" size="1.27" layer="51" ratio="6" rot="SR0">*</text>
 <text x="-2.667" y="-0.6096" size="0.508" layer="25" font="vector" ratio="15" rot="SR90">&gt;Name</text>
-<pad name="P$1" x="-0.40625" y="-1.5625" drill="0.254" diameter="0.5"/>
-<pad name="P$2" x="0.40625" y="-1.5625" drill="0.254" diameter="0.5"/>
-<pad name="P$3" x="-0.40625" y="-0.78125" drill="0.254" diameter="0.5"/>
-<pad name="P$4" x="0.40625" y="-0.78125" drill="0.254" diameter="0.5"/>
-<pad name="P$5" x="0.40625" y="0" drill="0.254" diameter="0.5"/>
-<pad name="P$6" x="-0.40625" y="0" drill="0.254" diameter="0.5"/>
-<pad name="P$7" x="0.40625" y="0.78125" drill="0.254" diameter="0.5"/>
-<pad name="P$8" x="-0.40625" y="0.78125" drill="0.254" diameter="0.5"/>
-<pad name="P$9" x="0.40625" y="1.5625" drill="0.254" diameter="0.5"/>
-<pad name="P$10" x="-0.40625" y="1.5625" drill="0.254" diameter="0.5"/>
+<pad name="P$1" x="-0.40625" y="-1.5625" drill="0.254" diameter="0.5" stop="no"/>
+<pad name="P$2" x="0.40625" y="-1.5625" drill="0.254" diameter="0.5" stop="no"/>
+<pad name="P$3" x="-0.40625" y="-0.78125" drill="0.254" diameter="0.5" stop="no"/>
+<pad name="P$4" x="0.40625" y="-0.78125" drill="0.254" diameter="0.5" stop="no"/>
+<pad name="P$5" x="0.40625" y="0" drill="0.254" diameter="0.5" stop="no"/>
+<pad name="P$6" x="-0.40625" y="0" drill="0.254" diameter="0.5" stop="no"/>
+<pad name="P$7" x="0.40625" y="0.78125" drill="0.254" diameter="0.5" stop="no"/>
+<pad name="P$8" x="-0.40625" y="0.78125" drill="0.254" diameter="0.5" stop="no"/>
+<pad name="P$9" x="0.40625" y="1.5625" drill="0.254" diameter="0.5" stop="no"/>
+<pad name="P$10" x="-0.40625" y="1.5625" drill="0.254" diameter="0.5" stop="no"/>
 </package>
 <package name="OSC_KYOCERA_KC2520B">
 <smd name="1" x="-0.8001" y="0.925" dx="1.2192" dy="0.8128" layer="1"/>

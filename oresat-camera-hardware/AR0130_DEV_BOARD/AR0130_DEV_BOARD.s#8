@@ -3073,14 +3073,14 @@ Warning: This is the KIT version of this package. This package has a smaller dia
 </polygon>
 <wire x1="-0.7366" y1="-1.1176" x2="0.7366" y2="-1.1176" width="0.1524" layer="21"/>
 <wire x1="0.7366" y1="1.1176" x2="-0.7366" y2="1.1176" width="0.1524" layer="21"/>
-<wire x1="-2.2352" y1="0.6858" x2="-2.2352" y2="0.8128" width="0.1524" layer="21" curve="-208"/>
 <wire x1="-1.4986" y1="-1.016" x2="1.4986" y2="-1.016" width="0.1524" layer="51"/>
 <wire x1="1.4986" y1="-1.016" x2="1.4986" y2="1.016" width="0.1524" layer="51"/>
 <wire x1="1.4986" y1="1.016" x2="0.3048" y2="1.016" width="0.1524" layer="51"/>
 <wire x1="0.3048" y1="1.016" x2="-1.4986" y2="1.016" width="0.1524" layer="51"/>
 <wire x1="-1.4986" y1="1.016" x2="-1.4986" y2="-1.016" width="0.1524" layer="51"/>
 <wire x1="0.3048" y1="1.016" x2="-0.3048" y2="0.9906" width="0.1524" layer="51" curve="-180"/>
-<text x="-3.2766" y="-0.635" size="1.27" layer="25" ratio="6" rot="SR0">&gt;Name</text>
+<text x="-1.1938" y="1.4224" size="0.508" layer="25" font="vector" ratio="15" rot="SR0">&gt;Name</text>
+<circle x="-2.4384" y="0.7874" radius="0.0254" width="0.381" layer="21"/>
 </package>
 <package name="DFN8_2X3MC">
 <smd name="1" x="-1.397" y="0.75" dx="0.8128" dy="0.3048" layer="1"/>
