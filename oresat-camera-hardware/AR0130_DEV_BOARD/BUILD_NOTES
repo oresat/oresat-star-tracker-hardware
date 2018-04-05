@@ -41,3 +41,4 @@ NOTES:
 	- NR: .01uf
 	- output: 10uf
 - DONE: unpopulated pullups on 12c
+- connect output tranceiver enable and i2c repeater enable?
