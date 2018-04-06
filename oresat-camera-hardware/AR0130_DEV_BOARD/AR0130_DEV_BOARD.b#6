@@ -6,10 +6,10 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="3" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.0625" altunitdist="mm" altunit="mm"/>
+<grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.0125" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
-<layer number="2" name="Route2" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="2" name="Route2" color="15" fill="1" visible="no" active="yes"/>
 <layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
 <layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
 <layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
@@ -22,7 +22,7 @@
 <layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
 <layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
 <layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
-<layer number="15" name="Route15" color="61" fill="1" visible="yes" active="yes"/>
+<layer number="15" name="Route15" color="61" fill="1" visible="no" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
@@ -32,7 +32,7 @@
 <layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
@@ -46,8 +46,8 @@
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
 <layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
-<layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
-<layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
 <layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
@@ -173,18 +173,18 @@ PULLUPS</text>
 <hole x="37" y="41" drill="3"/>
 <hole x="3" y="41" drill="3"/>
 <polygon width="0.1524" layer="29">
-<vertex x="0" y="50"/>
 <vertex x="0" y="44"/>
-<vertex x="3" y="44" curve="90"/>
-<vertex x="6" y="47"/>
-<vertex x="6" y="50"/>
+<vertex x="0" y="38"/>
+<vertex x="3" y="38" curve="90"/>
+<vertex x="6" y="41"/>
+<vertex x="6" y="44"/>
 </polygon>
 <polygon width="0.1524" layer="29">
-<vertex x="40" y="50"/>
-<vertex x="34" y="50"/>
-<vertex x="34" y="47" curve="90"/>
-<vertex x="37" y="44"/>
 <vertex x="40" y="44"/>
+<vertex x="34" y="44"/>
+<vertex x="34" y="41" curve="90"/>
+<vertex x="37" y="38"/>
+<vertex x="40" y="38"/>
 </polygon>
 <polygon width="0.1524" layer="29">
 <vertex x="0" y="0"/>
@@ -201,18 +201,18 @@ PULLUPS</text>
 <vertex x="40" y="6"/>
 </polygon>
 <polygon width="0.1524" layer="30">
-<vertex x="0" y="50"/>
 <vertex x="0" y="44"/>
-<vertex x="3" y="44" curve="90"/>
-<vertex x="6" y="47"/>
-<vertex x="6" y="50"/>
+<vertex x="0" y="38"/>
+<vertex x="3" y="38" curve="90"/>
+<vertex x="6" y="41"/>
+<vertex x="6" y="44"/>
 </polygon>
 <polygon width="0.1524" layer="30">
-<vertex x="40" y="50"/>
-<vertex x="34" y="50"/>
-<vertex x="34" y="47" curve="90"/>
-<vertex x="37" y="44"/>
 <vertex x="40" y="44"/>
+<vertex x="34" y="44"/>
+<vertex x="34" y="41" curve="90"/>
+<vertex x="37" y="38"/>
+<vertex x="40" y="38"/>
 </polygon>
 <polygon width="0.1524" layer="30">
 <vertex x="40" y="0"/>
@@ -280,7 +280,7 @@ We've spent an enormous amount of time creating and checking these footprints an
 &lt;br&gt;
 You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
 <packages>
-<package name="0402" urn="urn:adsk.eagle:footprint:2058580/1" library_version="3">
+<package name="0402" urn="urn:adsk.eagle:footprint:2058580/1" locally_modified="yes" library_version="3" library_locally_modified="yes">
 <description>&lt;p&gt;&lt;b&gt;Generic 1005 (0402) package&lt;/b&gt;&lt;/p&gt;
 &lt;p&gt;0.2mm courtyard excess rounded to nearest 0.05mm.&lt;/p&gt;</description>
 <wire x1="-0.2704" y1="0.2286" x2="0.2704" y2="0.2286" width="0.1524" layer="51"/>
@@ -291,15 +291,15 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="-1.2" y1="-0.65" x2="-1.2" y2="0.65" width="0.0508" layer="39"/>
 <smd name="1" x="-0.58" y="0" dx="0.85" dy="0.9" layer="1"/>
 <smd name="2" x="0.58" y="0" dx="0.85" dy="0.9" layer="1"/>
-<text x="0" y="0.762" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
-<text x="0" y="-0.762" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
+<text x="0" y="0.762" size="0.5" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-0.762" size="0.5" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
 <rectangle x1="-0.554" y1="-0.3048" x2="-0.254" y2="0.3048" layer="51"/>
 <rectangle x1="0.2588" y1="-0.3048" x2="0.5588" y2="0.3048" layer="51"/>
 <rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
 </package>
 </packages>
 <packages3d>
-<package3d name="0402" urn="urn:adsk.eagle:package:2058625/2" type="model" library_version="3">
+<package3d name="0402" urn="urn:adsk.eagle:package:2058625/2" locally_modified="yes" type="model" library_version="3" library_locally_modified="yes">
 <description>Generic 1005 (0402) package
 0.2mm courtyard excess rounded to nearest 0.05mm.</description>
 <packageinstances>
@@ -323,7 +323,7 @@ We've spent an enormous amount of time creating and checking these footprints an
 &lt;br&gt;
 You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
 <packages>
-<package name="0402" urn="urn:adsk.eagle:footprint:2054902/1" library_version="3">
+<package name="0402" urn="urn:adsk.eagle:footprint:2054902/1" locally_modified="yes" library_version="3" library_locally_modified="yes">
 <description>&lt;p&gt;&lt;b&gt;Generic 1005 (0402) package&lt;/b&gt;&lt;/p&gt;
 &lt;p&gt;0.2mm courtyard excess rounded to nearest 0.05mm.&lt;/p&gt;</description>
 <wire x1="-0.2704" y1="0.2286" x2="0.2704" y2="0.2286" width="0.1524" layer="51"/>
@@ -334,15 +334,15 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="-1.2" y1="-0.65" x2="-1.2" y2="0.65" width="0.0508" layer="39"/>
 <smd name="1" x="-0.58" y="0" dx="0.85" dy="0.9" layer="1"/>
 <smd name="2" x="0.58" y="0" dx="0.85" dy="0.9" layer="1"/>
-<text x="0" y="0.762" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
-<text x="0" y="-0.762" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
+<text x="0" y="0.762" size="0.508" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-0.762" size="0.5" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
 <rectangle x1="-0.554" y1="-0.3048" x2="-0.254" y2="0.3048" layer="51"/>
 <rectangle x1="0.2588" y1="-0.3048" x2="0.5588" y2="0.3048" layer="51"/>
 <rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
 </package>
 </packages>
 <packages3d>
-<package3d name="0402" urn="urn:adsk.eagle:package:2054929/3" type="model" library_version="3">
+<package3d name="0402" urn="urn:adsk.eagle:package:2054929/3" locally_modified="yes" type="model" library_version="3" library_locally_modified="yes">
 <description>Generic 1005 (0402) package
 0.2mm courtyard excess rounded to nearest 0.05mm.</description>
 <packageinstances>
@@ -2104,8 +2104,9 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <attribute name="MANUFACTURER_PART_NUMBER" value="MCP9808TEMC" x="27" y="23.875" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="VENDOR" value="Microchip" x="27" y="23.875" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="U9" library="Oliver_Custom" package="DGK8-M" value="TCA9509DGKRDGK8-M" x="6.3125" y="11" rot="R270">
+<element name="U9" library="Oliver_Custom" package="DGK8-M" value="TCA9509DGKRDGK8-M" x="6.3125" y="11" smashed="yes" rot="R270">
 <attribute name="MANUFACTURER_PART_NUMBER" value="TCA9509DGKR" x="6.3125" y="11" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="NAME" x="5.1949" y="14.429" size="0.5" layer="25" font="vector" ratio="20" rot="SR0"/>
 <attribute name="VENDOR" value="Texas Instruments" x="6.3125" y="11" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="U10" library="Oliver_Custom" package="DGV48" value="SN74AVCB164245VR" x="20" y="18" rot="R270">
@@ -2116,36 +2117,37 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <attribute name="MANUFACTURER_PART_NUMBER" value="KC2520B27.0000C10E00" x="5" y="26.5" size="1.778" layer="27" display="off"/>
 <attribute name="VENDOR" value="Kyocera" x="5" y="26.5" size="1.778" layer="27" display="off"/>
 </element>
-<element name="R1" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value="100" x="8.5" y="28.5" rot="R90">
+<element name="R1" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value=" " x="8.5" y="28.5" rot="R90">
 <attribute name="PROD_ID" value=" " x="8.5" y="28.5" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="R2" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value="10k" x="2.4375" y="26.775" rot="R90">
+<element name="R2" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value=" " x="2.4375" y="26.775" rot="R90">
 <attribute name="PROD_ID" value=" " x="2.4375" y="26.775" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="R3" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value="10k" x="3.1875" y="8.75" rot="R180">
+<element name="R3" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value=" " x="3.1875" y="8.75" rot="R180">
 <attribute name="PROD_ID" value=" " x="3.1875" y="8.75" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="U7" library="Oliver_Custom" package="DFN8_2X3MC-M" value="MCP9808T-E/MCDFN8_2X3MC-M" x="24.375" y="35.1875" rot="MR180">
 <attribute name="MANUFACTURER_PART_NUMBER" value="MCP9808TEMC" x="24.375" y="35.1875" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="VENDOR" value="Microchip" x="24.375" y="35.1875" size="1.778" layer="28" rot="MR180" display="off"/>
 </element>
-<element name="U13" library="Oliver_Custom" package="RHL24_4P05X2P05" value="SN74AVCH8T245RHLR" x="10.5" y="18" rot="R90">
+<element name="U13" library="Oliver_Custom" package="RHL24_4P05X2P05" value="SN74AVCH8T245RHLR" x="10.5" y="18" smashed="yes" rot="R90">
 <attribute name="MANUFACTURER_PART_NUMBER" value="SN74AVCH8T245RHLR" x="10.5" y="18" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="NAME" x="11.1096" y="15.333" size="0.5" layer="25" font="vector" ratio="20" rot="SR180"/>
 <attribute name="VENDOR" value="Texas Instruments" x="10.5" y="18" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="R4" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value="10k" x="5" y="16.5" rot="R270">
+<element name="R4" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value=" " x="5" y="16.5" rot="R270">
 <attribute name="PROD_ID" value=" " x="5" y="16.5" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="R5" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value="10k" x="26.5" y="19.5" rot="R180">
+<element name="R5" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value=" " x="26.5" y="19.5" rot="R180">
 <attribute name="PROD_ID" value=" " x="26.5" y="19.5" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="R6" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value="10k" x="26.5" y="18" rot="R180">
+<element name="R6" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value=" " x="26.5" y="18" rot="R180">
 <attribute name="PROD_ID" value=" " x="26.5" y="18" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="R8" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value="10k" x="26.5" y="16.5">
+<element name="R8" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value=" " x="26.5" y="16.5">
 <attribute name="PROD_ID" value=" " x="26.5" y="16.5" size="1.778" layer="27" display="off"/>
 </element>
-<element name="R9" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value="10k" x="5" y="19.5" rot="R270">
+<element name="R9" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value=" " x="5" y="19.5" rot="R270">
 <attribute name="PROD_ID" value=" " x="5" y="19.5" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="C1" library="Oliver_Custom" library_urn="urn:adsk.eagle:library:2197211" package="0402" package3d_urn="urn:adsk.eagle:package:2054929/3" value="10uF" x="18.375" y="37.6875" rot="MR270">
@@ -2236,20 +2238,28 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <attribute name="MANUFACTURER_PART_NUMBER" value="TPS7192828DRVT" x="33" y="24.5" size="1.778" layer="27" display="off"/>
 <attribute name="VENDOR" value="Texas Instruments" x="33" y="24.5" size="1.778" layer="27" display="off"/>
 </element>
-<element name="R7" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value="10k" x="3" y="15" rot="R180">
+<element name="R7" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value=" " x="3" y="15" smashed="yes" rot="R180">
+<attribute name="NAME" x="3" y="14.238" size="0.6096" layer="25" font="vector" ratio="20" rot="R180" align="bottom-center"/>
 <attribute name="PROD_ID" value=" " x="2.5" y="15" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="VALUE" x="3" y="15.762" size="0.6096" layer="27" font="vector" ratio="20" rot="R180" align="top-center"/>
 </element>
-<element name="R10" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value="10k" x="3" y="13.5">
+<element name="R10" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value=" " x="3" y="13.5" smashed="yes">
+<attribute name="NAME" x="3" y="14.262" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
 <attribute name="PROD_ID" value=" " x="3.5" y="13.5" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="3" y="12.738" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
 </element>
-<element name="R11" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value="10k" x="3" y="10.5">
+<element name="R11" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value=" " x="3" y="10.5" smashed="yes">
+<attribute name="NAME" x="3" y="11.262" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
 <attribute name="PROD_ID" value=" " x="3.5" y="10.5" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="3" y="9.738" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
 </element>
-<element name="R12" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value="10k" x="3" y="12" rot="R180">
+<element name="R12" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value=" " x="3" y="12" smashed="yes" rot="R180">
+<attribute name="NAME" x="3" y="11.238" size="0.6096" layer="25" font="vector" ratio="20" rot="R180" align="bottom-center"/>
 <attribute name="PROD_ID" value=" " x="2.5" y="12" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="VALUE" x="3" y="12.762" size="0.6096" layer="27" font="vector" ratio="20" rot="R180" align="top-center"/>
 </element>
 <element name="U$1" library="Oliver_Custom" package="M12-LENS-MOUNT" value="" x="20" y="34.5"/>
-<element name="JP1" library="SparkFun-Passives" package="SJ_3_PASTE1&amp;2" value="" x="8.5" y="25.5"/>
+<element name="JP1" library="SparkFun-Passives" package="SJ_3_PASTE1&amp;2" value="CLKSEL" x="8.5" y="25.5"/>
 <element name="U$2" library="Oliver_Custom" package="AR0130CSSM00SPCA0−DRBR1-847AC" value="AR0130CSSM00SPCA0−DRBR1-847AC" x="20" y="34.5"/>
 <element name="C7" library="SparkFun-Capacitors" package="0402" value="1.0uF" x="30.3125" y="16.875" rot="R180">
 <attribute name="PROD_ID" value="CAP-12417" x="29.8125" y="16.875" size="1.778" layer="27" rot="R180" display="off"/>
@@ -2891,7 +2901,7 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <signal name="EXTCLK">
 <contactref element="R1" pad="1"/>
 <contactref element="JP1" pad="2"/>
-<wire x1="8.5" y1="27.92" x2="8.5" y2="25.5" width="0.127" layer="1"/>
+<wire x1="8.5" y1="27.92" x2="8.5" y2="25.5" width="0.1524" layer="1"/>
 </signal>
 <signal name="HSYNC_E">
 <contactref element="U10" pad="30"/>
@@ -3110,12 +3120,12 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <signal name="N$7">
 <contactref element="R4" pad="2"/>
 <contactref element="U13" pad="2"/>
-<wire x1="5" y1="15.92" x2="5" y2="15.2667" width="0.127" layer="1"/>
-<wire x1="5" y1="15.2667" x2="7.1406" y2="15.2667" width="0.127" layer="1"/>
-<wire x1="7.1406" y1="15.2667" x2="7.3264" y2="15.0809" width="0.127" layer="1"/>
-<wire x1="7.3264" y1="15.0809" x2="7.8309" y2="15.0809" width="0.127" layer="1"/>
-<wire x1="8.25" y1="15.5" x2="8.25" y2="16.275" width="0.127" layer="1"/>
-<wire x1="7.8309" y1="15.0809" x2="8.25" y2="15.5" width="0.127" layer="1"/>
+<wire x1="8.25" y1="16.275" x2="8.25" y2="15.5" width="0.1524" layer="1"/>
+<wire x1="5.6406" y1="15.2794" x2="5" y2="15.92" width="0.1524" layer="1"/>
+<wire x1="6.1157375" y1="15.2794" x2="5.6406" y2="15.2794" width="0.1524" layer="1"/>
+<wire x1="7.8182" y1="15.0682" x2="6.3269375" y2="15.0682" width="0.1524" layer="1"/>
+<wire x1="6.3269375" y1="15.0682" x2="6.1157375" y2="15.2794" width="0.1524" layer="1"/>
+<wire x1="8.25" y1="15.5" x2="7.8182" y2="15.0682" width="0.1524" layer="1"/>
 </signal>
 <signal name="INPUT_DRVR_EN">
 <contactref element="U13" pad="22"/>
@@ -3136,10 +3146,10 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="16.1601" y1="4.2507" x2="16.3125" y2="4.0983" width="0.1524" layer="1"/>
 <wire x1="16.3125" y1="4.0983" x2="16.3125" y2="5.0057" width="0.1524" layer="16"/>
 <wire x1="16.3125" y1="5.0057" x2="14" y2="7.3182" width="0.1524" layer="16"/>
-<wire x1="5" y1="20.08" x2="5" y2="21" width="0.127" layer="1"/>
-<wire x1="5" y1="21" x2="5.375" y2="21.375" width="0.127" layer="1"/>
-<wire x1="5.375" y1="21.375" x2="8.5" y2="21.375" width="0.127" layer="1"/>
-<wire x1="8.5" y1="21.375" x2="8.875" y2="21" width="0.127" layer="1"/>
+<wire x1="5" y1="20.08" x2="5" y2="21" width="0.1524" layer="1"/>
+<wire x1="5" y1="21" x2="5.375" y2="21.375" width="0.1524" layer="1"/>
+<wire x1="5.375" y1="21.375" x2="8.5" y2="21.375" width="0.1524" layer="1"/>
+<wire x1="8.5" y1="21.375" x2="8.875" y2="21" width="0.1524" layer="1"/>
 </signal>
 <signal name="OE_BAR_E">
 <contactref element="U13" pad="6"/>
@@ -3182,9 +3192,9 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <signal name="N$1">
 <contactref element="R1" pad="2"/>
 <contactref element="U$2" pad="11"/>
-<wire x1="8.5" y1="29.08" x2="8.5" y2="30" width="0.127" layer="1"/>
-<wire x1="14.2" y1="35.7" x2="14.785" y2="35.7" width="0.127" layer="1"/>
-<wire x1="8.5" y1="30" x2="14.2" y2="35.7" width="0.127" layer="1"/>
+<wire x1="8.5" y1="29.08" x2="8.5" y2="30" width="0.1524" layer="1"/>
+<wire x1="14.2" y1="35.7" x2="14.785" y2="35.7" width="0.1524" layer="1"/>
+<wire x1="8.5" y1="30" x2="14.2" y2="35.7" width="0.1524" layer="1"/>
 </signal>
 <signal name="1.8V">
 <contactref element="C1" pad="1"/>
@@ -3315,12 +3325,12 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="2.42" y1="17.92" x2="2.42" y2="15" width="0.254" layer="1"/>
 <wire x1="3.42" y1="18.92" x2="2.42" y2="17.92" width="0.254" layer="1"/>
 <wire x1="2.42" y1="15" x2="2.42" y2="13.5" width="0.254" layer="1"/>
-<via x="7.3125" y="14.6618" extent="1-16" drill="0.254"/>
-<wire x1="7.3125" y1="15.005" x2="7.3125" y2="14.6618" width="0.254" layer="16"/>
+<via x="7.3125" y="14.5368" extent="1-16" drill="0.254"/>
+<wire x1="7.3125" y1="15.005" x2="7.3125" y2="14.5368" width="0.254" layer="16"/>
 <wire x1="7.0174" y1="15.3001" x2="7.3125" y2="15.005" width="0.254" layer="16"/>
 <wire x1="7.0174" y1="19.0174" x2="7.0174" y2="15.3001" width="0.254" layer="16"/>
 <wire x1="7.5" y1="19.5" x2="7.0174" y2="19.0174" width="0.254" layer="16"/>
-<wire x1="7.3125" y1="14.6618" x2="7.3125" y2="13.2475" width="0.254" layer="1"/>
+<wire x1="7.3125" y1="14.5368" x2="7.3125" y2="13.2475" width="0.254" layer="1"/>
 <wire x1="7.3125" y1="13.2475" x2="7.2875" y2="13.2225" width="0.254" layer="1"/>
 <wire x1="7.2875" y1="13.2225" x2="7.93" y2="12.58" width="0.254" layer="1"/>
 <wire x1="7.93" y1="12.58" x2="8.8125" y2="12.58" width="0.254" layer="1"/>
@@ -3538,10 +3548,9 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <signal name="DI_8">
 <contactref element="U10" pad="13"/>
 <contactref element="U$2" pad="20"/>
-<wire x1="19.8" y1="20.8194" x2="19.7175" y2="20.9019" width="0.1524" layer="1"/>
-<wire x1="16.4" y1="27.890275" x2="16.4" y2="29.285" width="0.1524" layer="1"/>
-<wire x1="19.7175" y1="20.9019" x2="19.7175" y2="24.572775" width="0.1524" layer="1"/>
-<wire x1="19.7175" y1="24.572775" x2="16.4" y2="27.890275" width="0.1524" layer="1"/>
+<wire x1="16.4" y1="29.285" x2="16.4" y2="27.890275" width="0.1524" layer="1"/>
+<wire x1="19.8" y1="24.490275" x2="19.8" y2="20.8194" width="0.1524" layer="1"/>
+<wire x1="16.4" y1="27.890275" x2="19.8" y2="24.490275" width="0.1524" layer="1"/>
 </signal>
 <signal name="DI_9">
 <contactref element="U10" pad="14"/>
@@ -3723,7 +3732,7 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <contactref element="U11" pad="3"/>
 <contactref element="JP1" pad="1"/>
 <wire x1="5.8001" y1="25.575" x2="5.8751" y2="25.5" width="0.127" layer="1"/>
-<wire x1="5.8751" y1="25.5" x2="7.6872" y2="25.5" width="0.127" layer="1"/>
+<wire x1="5.8751" y1="25.5" x2="7.6872" y2="25.5" width="0.1524" layer="1"/>
 </signal>
 <signal name="EXTCLK_E">
 <contactref element="JP1" pad="3"/>
