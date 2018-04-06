@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="2" display="yes" altdistance="0.0125" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="2" display="yes" altdistance="0.0125" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -5964,14 +5964,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="GND41" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="GND43" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="GND42" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="SUPPLY60" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
-<part name="SUPPLY61" library="SparkFun-PowerSymbols" deviceset="1.8V" device=""/>
-<part name="SUPPLY62" library="SparkFun-PowerSymbols" deviceset="2.8V" device="" value="2.8V_1"/>
-<part name="2.8V_7" library="SparkFun-PowerSymbols" deviceset="VCC" device="" value="2.8V_2"/>
-<part name="SUPPLY63" library="SparkFun-PowerSymbols" deviceset="VCC_1" device="" value="2.8V_3"/>
-<part name="SUPPLY64" library="SparkFun-PowerSymbols" deviceset="VCC_2" device="" value="2.8V_4"/>
-<part name="SUPPLY65" library="SparkFun-PowerSymbols" deviceset="5V" device=""/>
-<part name="GND44" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="GND45" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="GND46" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="SUPPLY66" library="SparkFun-PowerSymbols" deviceset="2.8V" device="" value="2.8V_1"/>
@@ -6001,13 +5993,13 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <text x="257.1" y="261" size="3.81" layer="97">27MHz XO</text>
 <text x="150.78" y="130.4225" size="3.81" layer="97">Input Level Shifter A=3.3V&gt;&gt;B=2.8V</text>
 <text x="120.13" y="156.9" size="3.81" layer="97">Level Shifters</text>
-<text x="-114.3" y="86.36" size="5.08" layer="95">VDD_IO = 2.8V_1</text>
+<text x="294.64" y="127" size="1.778" layer="95">VDD_IO = 2.8V_1</text>
 <text x="119.38" y="44.45" size="1.27" layer="95">Optional I2C Pullup</text>
 <text x="119.38" y="30.48" size="1.27" layer="95">Optional I2C Pullup</text>
-<text x="-114.3" y="93.98" size="5.08" layer="95">VDD = 1.8V</text>
-<text x="-114.3" y="71.12" size="5.08" layer="95">VDD_PLL = 2.8V_3</text>
-<text x="-114.3" y="78.74" size="5.08" layer="95">VAA = 2.8V_2</text>
-<text x="-114.3" y="63.5" size="5.08" layer="95">VAA_PIX = 2.8V_4</text>
+<text x="294.64" y="129.54" size="1.778" layer="95">VDD = 1.8V</text>
+<text x="294.64" y="121.92" size="1.778" layer="95">VDD_PLL = 2.8V_3</text>
+<text x="294.64" y="124.46" size="1.778" layer="95">VAA = 2.8V_2</text>
+<text x="294.64" y="119.38" size="1.778" layer="95">VAA_PIX = 2.8V_4</text>
 <text x="278.13" y="236.22" size="1.778" layer="97">EXTCLK SELECT JUMPER</text>
 <wire x1="314.96" y1="271.78" x2="220.98" y2="271.78" width="0.508" layer="97"/>
 <wire x1="220.98" y1="271.78" x2="220.98" y2="218.44" width="0.508" layer="97"/>
@@ -6057,9 +6049,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="C3" gate="G$1" x="43.18" y="228.6"/>
 <instance part="C4" gate="G$1" x="53.34" y="228.6"/>
 <instance part="C5" gate="G$1" x="63.5" y="228.6"/>
-<instance part="C13" gate="G$1" x="290.83" y="105.41"/>
-<instance part="C14" gate="G$1" x="300.99" y="105.41"/>
-<instance part="C15" gate="G$1" x="311.15" y="105.41"/>
+<instance part="C13" gate="G$1" x="295.91" y="100.33"/>
+<instance part="C14" gate="G$1" x="306.07" y="100.33"/>
+<instance part="C15" gate="G$1" x="316.23" y="100.33"/>
 <instance part="C19" gate="G$1" x="22.86" y="200.66"/>
 <instance part="C20" gate="G$1" x="33.02" y="200.66"/>
 <instance part="C21" gate="G$1" x="43.18" y="200.66"/>
@@ -6256,8 +6248,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <attribute name="VALUE" x="331.47" y="86.106" size="1.778" layer="96" rot="R180" align="bottom-center"/>
 </instance>
 <instance part="GND26" gate="1" x="306.07" y="62.23"/>
-<instance part="SUPPLY46" gate="G$1" x="300.99" y="113.03"/>
-<instance part="GND25" gate="1" x="300.99" y="97.79"/>
+<instance part="SUPPLY46" gate="G$1" x="306.07" y="107.95"/>
+<instance part="GND25" gate="1" x="306.07" y="92.71"/>
 <instance part="SUPPLY47" gate="G$1" x="405.13" y="114.3" smashed="yes" rot="R270">
 <attribute name="VALUE" x="410.21" y="113.284" size="1.27" layer="96" align="bottom-center"/>
 </instance>
@@ -6320,30 +6312,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </instance>
 <instance part="GND42" gate="1" x="387.35" y="157.48" smashed="yes">
 <attribute name="VALUE" x="386.334" y="153.67" size="1.27" layer="96" rot="R90" align="top-center"/>
-</instance>
-<instance part="SUPPLY60" gate="G$1" x="-102.87" y="146.05" smashed="yes" rot="R270">
-<attribute name="VALUE" x="-96.52" y="144.78" size="1.27" layer="96" align="bottom-center"/>
-</instance>
-<instance part="SUPPLY61" gate="G$1" x="-102.87" y="133.35" smashed="yes" rot="R270">
-<attribute name="VALUE" x="-96.52" y="132.334" size="1.27" layer="96" align="bottom-center"/>
-</instance>
-<instance part="SUPPLY62" gate="G$1" x="-102.87" y="135.89" smashed="yes" rot="R270">
-<attribute name="VALUE" x="-95.25" y="134.874" size="1.27" layer="96" align="bottom-center"/>
-</instance>
-<instance part="2.8V_7" gate="G$1" x="-102.87" y="138.43" smashed="yes" rot="R270">
-<attribute name="VALUE" x="-95.25" y="137.414" size="1.27" layer="96" align="bottom-center"/>
-</instance>
-<instance part="SUPPLY63" gate="G$2" x="-102.87" y="140.97" smashed="yes" rot="R270">
-<attribute name="VALUE" x="-95.25" y="139.954" size="1.27" layer="96" align="bottom-center"/>
-</instance>
-<instance part="SUPPLY64" gate="G$1" x="-102.87" y="143.51" smashed="yes" rot="R270">
-<attribute name="VALUE" x="-95.25" y="142.494" size="1.27" layer="96" align="bottom-center"/>
-</instance>
-<instance part="SUPPLY65" gate="G$1" x="-102.87" y="148.59" smashed="yes" rot="R270">
-<attribute name="VALUE" x="-96.52" y="147.32" size="1.27" layer="96" align="bottom-center"/>
-</instance>
-<instance part="GND44" gate="1" x="-100.33" y="151.13" smashed="yes" rot="R90">
-<attribute name="VALUE" x="-96.52" y="150.114" size="1.27" layer="96" rot="R180" align="top-center"/>
 </instance>
 <instance part="GND45" gate="1" x="243.84" y="243.84" smashed="yes" rot="R270">
 <attribute name="VALUE" x="241.3" y="244.5385" size="1.27" layer="96" align="top-center"/>
@@ -6466,14 +6434,14 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <net name="5V" class="0">
 <segment>
 <pinref part="C13" gate="G$1" pin="1"/>
-<wire x1="290.83" y1="110.49" x2="290.83" y2="113.03" width="0.1524" layer="91"/>
-<wire x1="290.83" y1="113.03" x2="300.99" y2="113.03" width="0.1524" layer="91"/>
-<wire x1="300.99" y1="113.03" x2="311.15" y2="113.03" width="0.1524" layer="91"/>
+<wire x1="295.91" y1="105.41" x2="295.91" y2="107.95" width="0.1524" layer="91"/>
+<wire x1="295.91" y1="107.95" x2="306.07" y2="107.95" width="0.1524" layer="91"/>
+<wire x1="306.07" y1="107.95" x2="316.23" y2="107.95" width="0.1524" layer="91"/>
 <pinref part="C14" gate="G$1" pin="1"/>
-<wire x1="300.99" y1="110.49" x2="300.99" y2="113.03" width="0.1524" layer="91"/>
-<junction x="300.99" y="113.03"/>
+<wire x1="306.07" y1="105.41" x2="306.07" y2="107.95" width="0.1524" layer="91"/>
+<junction x="306.07" y="107.95"/>
 <pinref part="C15" gate="G$1" pin="1"/>
-<wire x1="311.15" y1="110.49" x2="311.15" y2="113.03" width="0.1524" layer="91"/>
+<wire x1="316.23" y1="105.41" x2="316.23" y2="107.95" width="0.1524" layer="91"/>
 <pinref part="SUPPLY46" gate="G$1" pin="5V"/>
 </segment>
 <segment>
@@ -6585,14 +6553,14 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </segment>
 <segment>
 <pinref part="C13" gate="G$1" pin="2"/>
-<wire x1="290.83" y1="102.87" x2="290.83" y2="100.33" width="0.1524" layer="91"/>
-<wire x1="290.83" y1="100.33" x2="300.99" y2="100.33" width="0.1524" layer="91"/>
-<wire x1="300.99" y1="100.33" x2="311.15" y2="100.33" width="0.1524" layer="91"/>
+<wire x1="295.91" y1="97.79" x2="295.91" y2="95.25" width="0.1524" layer="91"/>
+<wire x1="295.91" y1="95.25" x2="306.07" y2="95.25" width="0.1524" layer="91"/>
+<wire x1="306.07" y1="95.25" x2="316.23" y2="95.25" width="0.1524" layer="91"/>
 <pinref part="C15" gate="G$1" pin="2"/>
-<wire x1="311.15" y1="102.87" x2="311.15" y2="100.33" width="0.1524" layer="91"/>
+<wire x1="316.23" y1="97.79" x2="316.23" y2="95.25" width="0.1524" layer="91"/>
 <pinref part="C14" gate="G$1" pin="2"/>
-<wire x1="300.99" y1="102.87" x2="300.99" y2="100.33" width="0.1524" layer="91"/>
-<junction x="300.99" y="100.33"/>
+<wire x1="306.07" y1="97.79" x2="306.07" y2="95.25" width="0.1524" layer="91"/>
+<junction x="306.07" y="95.25"/>
 <pinref part="GND25" gate="1" pin="GND"/>
 </segment>
 <segment>

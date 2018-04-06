@@ -6034,6 +6034,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="210.82" y1="215.9" x2="323.85" y2="215.9" width="0.508" layer="97"/>
 <wire x1="323.85" y1="215.9" x2="323.85" y2="168.91" width="0.508" layer="97"/>
 <wire x1="210.82" y1="168.91" x2="323.85" y2="168.91" width="0.508" layer="97"/>
+<text x="15" y="81" size="1.778" layer="97" rot="R90">IMAGE SENSOR</text>
+<text x="103" y="96" size="1.778" layer="97" rot="R270">EXTERNAL</text>
 </plain>
 <instances>
 <instance part="U6" gate="A" x="355.6" y="228.6"/>
