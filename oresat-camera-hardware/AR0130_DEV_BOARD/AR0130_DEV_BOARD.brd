@@ -3,10 +3,10 @@
 <eagle version="8.7.1">
 <drawing>
 <settings>
-<setting alwaysvectorfont="no"/>
+<setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.0625" altunitdist="mm" altunit="mm"/>
+<grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.0125" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="15" fill="1" visible="no" active="yes"/>
@@ -173,18 +173,18 @@ PULLUPS</text>
 <hole x="37" y="41" drill="3"/>
 <hole x="3" y="41" drill="3"/>
 <polygon width="0.1524" layer="29">
-<vertex x="0" y="50"/>
 <vertex x="0" y="44"/>
-<vertex x="3" y="44" curve="90"/>
-<vertex x="6" y="47"/>
-<vertex x="6" y="50"/>
+<vertex x="0" y="38"/>
+<vertex x="3" y="38" curve="90"/>
+<vertex x="6" y="41"/>
+<vertex x="6" y="44"/>
 </polygon>
 <polygon width="0.1524" layer="29">
-<vertex x="40" y="50"/>
-<vertex x="34" y="50"/>
-<vertex x="34" y="47" curve="90"/>
-<vertex x="37" y="44"/>
 <vertex x="40" y="44"/>
+<vertex x="34" y="44"/>
+<vertex x="34" y="41" curve="90"/>
+<vertex x="37" y="38"/>
+<vertex x="40" y="38"/>
 </polygon>
 <polygon width="0.1524" layer="29">
 <vertex x="0" y="0"/>
@@ -201,18 +201,18 @@ PULLUPS</text>
 <vertex x="40" y="6"/>
 </polygon>
 <polygon width="0.1524" layer="30">
-<vertex x="0" y="50"/>
 <vertex x="0" y="44"/>
-<vertex x="3" y="44" curve="90"/>
-<vertex x="6" y="47"/>
-<vertex x="6" y="50"/>
+<vertex x="0" y="38"/>
+<vertex x="3" y="38" curve="90"/>
+<vertex x="6" y="41"/>
+<vertex x="6" y="44"/>
 </polygon>
 <polygon width="0.1524" layer="30">
-<vertex x="40" y="50"/>
-<vertex x="34" y="50"/>
-<vertex x="34" y="47" curve="90"/>
-<vertex x="37" y="44"/>
 <vertex x="40" y="44"/>
+<vertex x="34" y="44"/>
+<vertex x="34" y="41" curve="90"/>
+<vertex x="37" y="38"/>
+<vertex x="40" y="38"/>
 </polygon>
 <polygon width="0.1524" layer="30">
 <vertex x="40" y="0"/>
@@ -2249,7 +2249,7 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <attribute name="PROD_ID" value=" " x="2.5" y="12" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="U$1" library="Oliver_Custom" package="M12-LENS-MOUNT" value="" x="20" y="34.5"/>
-<element name="JP1" library="SparkFun-Passives" package="SJ_3_PASTE1&amp;2" value="" x="8.5" y="25.5"/>
+<element name="JP1" library="SparkFun-Passives" package="SJ_3_PASTE1&amp;2" value="CLKSEL" x="8.5" y="25.5"/>
 <element name="U$2" library="Oliver_Custom" package="AR0130CSSM00SPCA0−DRBR1-847AC" value="AR0130CSSM00SPCA0−DRBR1-847AC" x="20" y="34.5"/>
 <element name="C7" library="SparkFun-Capacitors" package="0402" value="1.0uF" x="30.3125" y="16.875" rot="R180">
 <attribute name="PROD_ID" value="CAP-12417" x="29.8125" y="16.875" size="1.778" layer="27" rot="R180" display="off"/>

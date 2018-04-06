@@ -5989,8 +5989,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="SUPPLY57" library="SparkFun-PowerSymbols" deviceset="2.8V" device="" value="2.8V_1"/>
 <part name="SUPPLY58" library="SparkFun-PowerSymbols" deviceset="2.8V" device="" value="2.8V_1"/>
 <part name="SUPPLY52" library="SparkFun-PowerSymbols" deviceset="2.8V" device="" value="2.8V_1"/>
-<part name="TP7" library="testpad" deviceset="TP" device="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1"/>
-<part name="TP8" library="testpad" deviceset="TP" device="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1"/>
+<part name="J1" library="Oliver_Custom" deviceset="4-1734592-0" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -6392,8 +6391,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="SUPPLY52" gate="G$1" x="387.35" y="172.72" smashed="yes">
 <attribute name="VALUE" x="388.366" y="180.34" size="1.27" layer="96" rot="R90" align="bottom-center"/>
 </instance>
-<instance part="TP7" gate="G$1" x="130.81" y="41.91"/>
-<instance part="TP8" gate="G$1" x="130.81" y="34.29" rot="R180"/>
 </instances>
 <busses>
 <bus name="DI_[0..11],HSYNC_I,VSYNC_I,PIXCLK_I">
@@ -7018,11 +7015,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <label x="123.19" y="39.37" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="R7" gate="G$1" pin="1"/>
 <wire x1="139.7" y1="39.37" x2="157.48" y2="39.37" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="39.37" x2="130.81" y2="39.37" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="39.37" x2="123.19" y2="39.37" width="0.1524" layer="91"/>
 <junction x="139.7" y="39.37"/>
-<pinref part="TP7" gate="G$1" pin="TP"/>
-<wire x1="130.81" y1="39.37" x2="123.19" y2="39.37" width="0.1524" layer="91"/>
-<junction x="130.81" y="39.37"/>
 </segment>
 <segment>
 <pinref part="U6" gate="A" pin="SCL"/>
@@ -7046,11 +7040,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <label x="123.19" y="36.83" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="R10" gate="G$1" pin="2"/>
 <wire x1="139.7" y1="36.83" x2="157.48" y2="36.83" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="36.83" x2="130.81" y2="36.83" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="36.83" x2="123.19" y2="36.83" width="0.1524" layer="91"/>
 <junction x="139.7" y="36.83"/>
-<pinref part="TP8" gate="G$1" pin="TP"/>
-<wire x1="130.81" y1="36.83" x2="123.19" y2="36.83" width="0.1524" layer="91"/>
-<junction x="130.81" y="36.83"/>
 </segment>
 <segment>
 <pinref part="U6" gate="A" pin="SDA"/>
@@ -7825,6 +7816,17 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <label x="266.7" y="189.23" size="1.27" layer="95" rot="R90" xref="yes"/>
 </segment>
 </net>
+</nets>
+</sheet>
+<sheet>
+<plain>
+</plain>
+<instances>
+<instance part="J1" gate="A" x="50.8" y="29.21"/>
+</instances>
+<busses>
+</busses>
+<nets>
 </nets>
 </sheet>
 </sheets>

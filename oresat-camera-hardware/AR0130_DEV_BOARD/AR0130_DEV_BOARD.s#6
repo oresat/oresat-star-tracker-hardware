@@ -7011,10 +7011,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <net name="SCL_I" class="0">
 <segment>
 <pinref part="U9" gate="A" pin="SCLA"/>
-<label x="134.62" y="39.37" size="1.27" layer="95" rot="R180" xref="yes"/>
+<label x="123.19" y="39.37" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="R7" gate="G$1" pin="1"/>
 <wire x1="139.7" y1="39.37" x2="157.48" y2="39.37" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="39.37" x2="134.62" y2="39.37" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="39.37" x2="123.19" y2="39.37" width="0.1524" layer="91"/>
 <junction x="139.7" y="39.37"/>
 </segment>
 <segment>
@@ -7036,10 +7036,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <net name="SDA_I" class="0">
 <segment>
 <pinref part="U9" gate="A" pin="SDAA"/>
-<label x="134.62" y="36.83" size="1.27" layer="95" rot="R180" xref="yes"/>
+<label x="123.19" y="36.83" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="R10" gate="G$1" pin="2"/>
 <wire x1="139.7" y1="36.83" x2="157.48" y2="36.83" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="36.83" x2="134.62" y2="36.83" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="36.83" x2="123.19" y2="36.83" width="0.1524" layer="91"/>
 <junction x="139.7" y="36.83"/>
 </segment>
 <segment>

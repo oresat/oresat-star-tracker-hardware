@@ -578,7 +578,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </plain>
 <instances>
 <instance part="J1" gate="A" x="48.26" y="58.42" rot="R90"/>
-<instance part="U$1" gate="A" x="50.8" y="-27.94"/>
+<instance part="U$1" gate="A" x="50.8" y="-27.94" smashed="yes">
+<attribute name="NAME" x="22.86" y="-17.78" size="1.778" layer="95" rot="MR0"/>
+</instance>
 <instance part="GND1" gate="1" x="0" y="38.1" smashed="yes">
 <attribute name="VALUE" x="-1.016" y="34.798" size="1.778" layer="96" rot="R90" align="top-center"/>
 </instance>

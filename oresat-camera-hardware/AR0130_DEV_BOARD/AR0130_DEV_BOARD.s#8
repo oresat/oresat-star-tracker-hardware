@@ -5999,7 +5999,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <text x="81.41" y="258.42" size="3.81" layer="97">Image Sensor</text>
 <text x="16.54" y="139.63" size="3.81" layer="97">Output Level Shifter B=2.8V&gt;&gt;A=3.3V</text>
 <text x="257.1" y="261" size="3.81" layer="97">27MHz XO</text>
-<text x="144.43" y="139.63" size="3.81" layer="97">Input Level Shifter A=3.3V&gt;&gt;B=2.8V</text>
+<text x="150.78" y="130.4225" size="3.81" layer="97">Input Level Shifter A=3.3V&gt;&gt;B=2.8V</text>
 <text x="120.13" y="156.9" size="3.81" layer="97">Level Shifters</text>
 <text x="-114.3" y="86.36" size="5.08" layer="95">VDD_IO = 2.8V_1</text>
 <text x="119.38" y="44.45" size="1.27" layer="95">Optional I2C Pullup</text>
@@ -6030,9 +6030,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="266.7" y1="3.81" x2="266.7" y2="166.37" width="0.508" layer="97"/>
 <wire x1="266.7" y1="166.37" x2="8.89" y2="166.37" width="0.508" layer="97"/>
 <text x="240.59" y="210.2" size="3.81" layer="97">RIBBON CABLE</text>
-<wire x1="210.82" y1="177.8" x2="210.82" y2="215.9" width="0.508" layer="97"/>
+<wire x1="210.82" y1="168.91" x2="210.82" y2="215.9" width="0.508" layer="97"/>
 <wire x1="210.82" y1="215.9" x2="323.85" y2="215.9" width="0.508" layer="97"/>
 <wire x1="323.85" y1="215.9" x2="323.85" y2="168.91" width="0.508" layer="97"/>
+<wire x1="210.82" y1="168.91" x2="323.85" y2="168.91" width="0.508" layer="97"/>
 </plain>
 <instances>
 <instance part="U6" gate="A" x="355.6" y="228.6"/>

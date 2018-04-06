@@ -2287,12 +2287,6 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <element name="TP6" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="32.6875" y="29">
 <attribute name="TP_SIGNAL_NAME" value="" x="32.6875" y="29" size="1.778" layer="27" display="off"/>
 </element>
-<element name="TP7" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="3" y="-3">
-<attribute name="TP_SIGNAL_NAME" value="" x="3" y="-3" size="1.778" layer="27" display="off"/>
-</element>
-<element name="TP8" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="3" y="-6">
-<attribute name="TP_SIGNAL_NAME" value="" x="3" y="-6" size="1.778" layer="27" display="off"/>
-</element>
 </elements>
 <signals>
 <signal name="VDD18_EN">
@@ -2768,6 +2762,8 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <via x="4.4375" y="14.5" extent="1-16" drill="0.254"/>
 <via x="4.5625" y="11.125" extent="1-16" drill="0.254"/>
 <via x="4.6875" y="9.875" extent="1-16" drill="0.254"/>
+<wire x1="26.25" y1="25.3228" x2="26.25" y2="24.625" width="0.254" layer="1"/>
+<wire x1="26.25" y1="24.625" x2="27" y2="23.875" width="0.254" layer="1"/>
 </signal>
 <signal name="3.3V">
 <contactref element="U9" pad="8"/>
@@ -2993,8 +2989,6 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="23.1967625" y1="33.5331" x2="22.9173625" y2="33.8125" width="0.1524" layer="16"/>
 <wire x1="27" y1="30" x2="23.4669" y2="33.5331" width="0.1524" layer="16"/>
 <wire x1="22" y1="33.8125" x2="22" y2="34.9375" width="0.1524" layer="1"/>
-<contactref element="TP7" pad="TP"/>
-<wire x1="3" y1="-3" x2="6.625" y2="12" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SDA_I">
 <contactref element="U9" pad="3"/>
@@ -3027,8 +3021,6 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="23.3125" y1="33.8125" x2="22.9272" y2="34.1978" width="0.1524" layer="16"/>
 <wire x1="22.9272" y1="34.1978" x2="22.9272" y2="34.4375" width="0.1524" layer="16"/>
 <wire x1="28" y1="29.5" x2="23.6875" y2="33.8125" width="0.1524" layer="16"/>
-<contactref element="TP8" pad="TP"/>
-<wire x1="3" y1="-6" x2="6.625" y2="11.25" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SCL_E">
 <contactref element="U9" pad="7"/>
