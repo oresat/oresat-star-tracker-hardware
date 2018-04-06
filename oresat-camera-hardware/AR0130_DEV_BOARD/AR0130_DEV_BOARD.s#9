@@ -5854,7 +5854,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="R10" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" deviceset="RESISTOR" device="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value="10k"/>
 <part name="R11" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" deviceset="RESISTOR" device="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value="10k"/>
 <part name="R12" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" deviceset="RESISTOR" device="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value="10k"/>
-<part name="JP1" library="SparkFun-Passives" deviceset="SOLDERJUMPER_2WAY" device="PASTE1&amp;2"/>
+<part name="JP1" library="SparkFun-Passives" deviceset="SOLDERJUMPER_2WAY" device="PASTE1&amp;2" value="CLKSEL"/>
 <part name="GND1" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="SUPPLY1" library="SparkFun-PowerSymbols" deviceset="1.8V" device=""/>
 <part name="SUPPLY2" library="SparkFun-PowerSymbols" deviceset="2.8V" device="" value="2.8V_1"/>
@@ -6034,6 +6034,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="210.82" y1="215.9" x2="323.85" y2="215.9" width="0.508" layer="97"/>
 <wire x1="323.85" y1="215.9" x2="323.85" y2="168.91" width="0.508" layer="97"/>
 <wire x1="210.82" y1="168.91" x2="323.85" y2="168.91" width="0.508" layer="97"/>
+<text x="15" y="81" size="1.778" layer="97" rot="R90">IMAGE SENSOR</text>
+<text x="103" y="96" size="1.778" layer="97" rot="R270">EXTERNAL</text>
 </plain>
 <instances>
 <instance part="U6" gate="A" x="355.6" y="228.6"/>
@@ -6082,7 +6084,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="R10" gate="G$1" x="139.7" y="31.75" rot="R90"/>
 <instance part="R11" gate="G$1" x="215.9" y="31.75" rot="R90"/>
 <instance part="R12" gate="G$1" x="215.9" y="44.45" rot="R90"/>
-<instance part="JP1" gate="G$1" x="289.56" y="229.87" rot="R90"/>
+<instance part="JP1" gate="G$1" x="289.56" y="229.87" smashed="yes" rot="R90">
+<attribute name="NAME" x="291.465" y="234.3785" size="1.778" layer="95"/>
+<attribute name="VALUE" x="291.1475" y="232.41" size="1.778" layer="96"/>
+</instance>
 <instance part="GND1" gate="1" x="43.18" y="190.5"/>
 <instance part="SUPPLY1" gate="G$1" x="22.86" y="237.49"/>
 <instance part="SUPPLY2" gate="G$1" x="33.02" y="237.49"/>

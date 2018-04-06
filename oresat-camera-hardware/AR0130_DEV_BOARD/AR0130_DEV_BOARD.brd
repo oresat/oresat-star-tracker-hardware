@@ -3,10 +3,10 @@
 <eagle version="8.7.1">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.0625" altunitdist="mm" altunit="mm"/>
+<grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.0125" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="15" fill="1" visible="no" active="yes"/>
@@ -1920,6 +1920,43 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </package>
 </packages>
 </library>
+<library name="SparkFun-LED">
+<description>&lt;h3&gt;SparkFun LEDs&lt;/h3&gt;
+This library contains discrete LEDs for illumination or indication, but no displays.
+&lt;br&gt;
+&lt;br&gt;
+We've spent an enormous amount of time creating and checking these footprints and parts, but it is &lt;b&gt; the end user's responsibility&lt;/b&gt; to ensure correctness and suitablity for a given componet or application. 
+&lt;br&gt;
+&lt;br&gt;If you enjoy using this library, please buy one of our products at &lt;a href=" www.sparkfun.com"&gt;SparkFun.com&lt;/a&gt;.
+&lt;br&gt;
+&lt;br&gt;
+&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
+&lt;br&gt;
+&lt;br&gt;
+You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
+<packages>
+<package name="LED-0603">
+<description>&lt;B&gt;LED 0603 SMT&lt;/B&gt;&lt;p&gt;
+0603, surface mount.
+&lt;p&gt;Specifications:
+&lt;ul&gt;&lt;li&gt;Pin count: 2&lt;/li&gt;
+&lt;li&gt;Pin pitch:0.075inch &lt;/li&gt;
+&lt;li&gt;Area: 0.06" x 0.03"&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+&lt;p&gt;Example device(s):
+&lt;ul&gt;&lt;li&gt;LED - BLUE&lt;/li&gt;</description>
+<smd name="C" x="0.877" y="0" dx="1" dy="1" layer="1" roundness="30" rot="R270"/>
+<smd name="A" x="-0.877" y="0" dx="1" dy="1" layer="1" roundness="30" rot="R270"/>
+<text x="0" y="0.635" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-0.635" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
+<wire x1="1.5875" y1="0.47625" x2="1.5875" y2="-0.47625" width="0.127" layer="21"/>
+<wire x1="0.15875" y1="0.47625" x2="0.15875" y2="0" width="0.127" layer="51"/>
+<wire x1="0.15875" y1="0" x2="0.15875" y2="-0.47625" width="0.127" layer="51"/>
+<wire x1="0.15875" y1="0" x2="-0.15875" y2="0.3175" width="0.127" layer="51"/>
+<wire x1="0.15875" y1="0" x2="-0.15875" y2="-0.3175" width="0.127" layer="51"/>
+</package>
+</packages>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -2404,6 +2441,10 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <attribute name="TP_SIGNAL_NAME" value="" x="32.6875" y="27.095" size="1" layer="37"/>
 <attribute name="VALUE" x="32.4335" y="28.619" size="0.0254" layer="27"/>
 </element>
+<element name="D1" library="SparkFun-LED" package="LED-0603" value="" x="8" y="6" rot="R180"/>
+<element name="R13" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value=" " x="4.5" y="6.5" rot="R180">
+<attribute name="PROD_ID" value=" " x="7.5" y="3" size="1.778" layer="27" rot="R180" display="off"/>
+</element>
 </elements>
 <signals>
 <signal name="VDD18_EN">
@@ -2487,6 +2528,9 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="31.1875" y1="20" x2="31" y2="20.1875" width="0.254" layer="16"/>
 <wire x1="31" y1="20.1875" x2="31" y2="20.5" width="0.254" layer="16"/>
 <wire x1="31.1875" y1="24.5" x2="31" y2="24.6875" width="0.254" layer="16"/>
+<contactref element="D1" pad="A"/>
+<wire x1="8.877" y1="6" x2="11.625" y2="6" width="0.254" layer="1"/>
+<wire x1="11.625" y1="6" x2="11.75" y2="6.125" width="0.254" layer="1"/>
 </signal>
 <signal name="GND">
 <contactref element="U11" pad="2"/>
@@ -2838,7 +2882,7 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <via x="27" y="9" extent="1-16" drill="0.254"/>
 <via x="27" y="12" extent="1-16" drill="0.254"/>
 <via x="29.5" y="10.5" extent="1-16" drill="0.254"/>
-<via x="6" y="6" extent="1-16" drill="0.254"/>
+<via x="2.5" y="6.5" extent="1-16" drill="0.254"/>
 <via x="9" y="3" extent="1-16" drill="0.254"/>
 <via x="12" y="3" extent="1-16" drill="0.254"/>
 <via x="10.625" y="10.625" extent="1-16" drill="0.254"/>
@@ -2881,6 +2925,7 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="26.25" y1="24.625" x2="27" y2="23.875" width="0.254" layer="1"/>
 <via x="10.3125" y="30.5625" extent="1-16" drill="0.254"/>
 <via x="9" y="31.875" extent="1-16" drill="0.254"/>
+<contactref element="R13" pad="2"/>
 </signal>
 <signal name="3.3V">
 <contactref element="U9" pad="8"/>
@@ -3851,6 +3896,13 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="20.2505" y1="5.7495" x2="14.5" y2="11.5" width="0.1524" layer="1"/>
 <wire x1="9.3128" y1="25.5" x2="9.5" y2="25.3128" width="0.254" layer="1"/>
 <wire x1="9.5" y1="25.3128" x2="9.5" y2="25" width="0.254" layer="1"/>
+</signal>
+<signal name="N$2">
+<contactref element="R13" pad="1"/>
+<contactref element="D1" pad="C"/>
+<wire x1="7.123" y1="6" x2="6.375" y2="6" width="0.254" layer="1"/>
+<wire x1="5.875" y1="6.5" x2="5.08" y2="6.5" width="0.254" layer="1"/>
+<wire x1="6.375" y1="6" x2="5.875" y2="6.5" width="0.254" layer="1"/>
 </signal>
 </signals>
 </board>
