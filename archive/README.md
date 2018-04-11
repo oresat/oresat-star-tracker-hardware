@@ -1,19 +1,27 @@
+NOTE: OreSat is no longer using Tetra for its star tracking system.
+
+(original README follows)
+
+------------
+
 # star-tracker
+
 Star Tracker for OreSat based on Tetra:
 
 https://github.com/brownj4/Tetra/blob/master/tetra.py
 
 Run Tetra with: 'python3 tetra.py'
 
-This will create the hash table(this takes a while, but only has to run once).
+This will create the hash table (this takes a while, but only has to run once).
 
 (below is original README from Tetra)
+
 # Tetra
 
-##Try Tetra Out
+## Try Tetra Out
 Test Tetra before you download it with the web demo: <a href="http://tetra.rocks" target="_blank">tetra.rocks</a>.
 
-##Run Tetra on Your Personal Computer
+## Run Tetra on Your Personal Computer
 
 1. Create a directory (i.e. Tetra).
 2. Place tetra.py in the directory.
@@ -24,6 +32,6 @@ Test Tetra before you download it with the web demo: <a href="http://tetra.rocks
 
 The first run may take a while as it needs to generate the catalog.  From then on, the majority of the runtime will be taken up by loading the catalog into memory and image processing.
 
-#OreSat Notes
+### OreSat Notes
 - use python3
 - scipy, numpy, pillow are needed
