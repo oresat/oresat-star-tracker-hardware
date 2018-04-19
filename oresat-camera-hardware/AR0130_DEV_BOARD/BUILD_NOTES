@@ -42,3 +42,9 @@ NOTES:
 	- output: 10uf
 - DONE: unpopulated pullups on 12c
 - connect output tranceiver enable and i2c repeater enable?
+
+
+NOTES:
+- Test points
+- Sense resistor on PSUs
+- 
