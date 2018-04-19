@@ -19,6 +19,7 @@ video.queue_all_buffers()
 video.set_exposure_auto(1)
 
 
+
 # Capture a single image
 def captureImage():
 
@@ -102,7 +103,6 @@ while response != "q":
 		print "Finished exposure burst."
 	elif response == "h":
 		help()
-
 	response = raw_input("\nEnter command: ")
 
 
