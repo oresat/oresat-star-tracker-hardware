@@ -38,7 +38,7 @@ def move(gcode, wait): # gcode, wait: 1 = wait for movement to finish
                 	sleep(.1) #wait 
                 	ser.write('?') #write '?' to get status update
                 	line = ser.readline().strip('<') #read in info string and remove < from beginning
-                	print(line[0])
+                	#print(line[0])
                 	if (line[0] == 'I'): #first character is the first letter of the status. Check if 'Idle'
                         	moving = False #when Idle, exit loop
                 	ser.flushInput() #flush serial buffer
@@ -123,17 +123,30 @@ def help():
 def run():
 	
 	#test(rate, exp, imgs, xstart, ystart, xend, yend)		
+	#startExp = 250
+	
+	startExp = 3750
+	endExp = 5000
+	startRate = 360
+	endRate = 1800
+	xstart = 0
+	xend = 0
+	ystart = 0
+	yend = 45
+	numPics = 5 #this currently controls nothing, pictures are taken every 10 degrees of movement
+	expStep = 250 #250 = exposure step of .025 seconds
+	rateStep = 180 #180 degrees per step = .5 RPM per step
 	home()
-	test(360, 200, 10, 0, 45, 0, 135)
-	test(540, 200, 10, 0, 45, 0, 135)
-	test(720, 200, 10, 0, 45, 0, 135)
-	test(900, 200, 10, 0, 45, 0, 135)
-	test(1080, 200, 10, 0, 45, 0, 135)
-	test(1260, 200, 10, 0, 45, 0, 135)
-	test(1440, 200, 10, 0, 45, 0, 135)
-	test(1620, 200, 10, 0, 45, 0, 135)
+
+	for exp in range(startExp, endExp, expStep):
+		for rate in range(startRate, endRate, rateStep):
+			test(rate, exp, numPics, xstart, ystart, xend, yend) #loop through settings
 
 def test(rate, exp, imgs, xstart, ystart, xend, yend):
+	
+	print("Rate: " + str(rate))
+	print("Exposure: " + str(exp))	
+	#print("")
 	
 	video.set_exposure_absolute(exp) 
 	
@@ -142,6 +155,12 @@ def test(rate, exp, imgs, xstart, ystart, xend, yend):
 	
 	#(degrees per pic / degrees per second) - (exposure time uS > S) = seconds between pics 
 	buf = (float(degperpic) / (float(rate)/float(60))) - (float(exp) / float(10000)) 
+	
+	if (buf < .02):
+		buf = .02
+	print(str(buf))
+	print("")
+
 	
 	#home()
 
@@ -156,7 +175,7 @@ def test(rate, exp, imgs, xstart, ystart, xend, yend):
         while (moving):
 		
 		captureImage(rate)
-		print(buf)
+		#print(buf)
 		sleep(buf)
 	
                 ser.write('?') #write '?' to get status update
@@ -168,18 +187,6 @@ def test(rate, exp, imgs, xstart, ystart, xend, yend):
                 line = '' #clear line var
 
 
-	'''	
-	move("g0 x" + xstart + " y" + start, 1)
-	move("g1 x" + str(xend) + " y" + str(yend) + " f" + str(rate) , 0)
-	print(str(rate/360) + "RPM") #display RPM
-
-	for i in range(0, imgs):
-		captureImage(rate)
-		sleep(delay)
-	'''	
-	
-
-
 
 # Prompt the user for a command in a loop
 response = raw_input("Enter command (use h for help): ")
@@ -187,7 +194,7 @@ response = raw_input("Enter command (use h for help): ")
 while response != "q":
 
 	if response == "p":
-		captureImage()
+		captureImage(0)
 		print "Saved image."
 	elif response == "e":
 		setExposure()
