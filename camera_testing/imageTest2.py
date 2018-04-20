@@ -117,17 +117,17 @@ def help():
 	print "v - take a burst of photos with varying exposures"
 	print "q - quit the program"
 	print "m - move"
-	print "t - test"
+	print "1 - test 1"
+	print "s - static image test"
 
 
-def run():
+def run1():
 	
 	#test(rate, exp, imgs, xstart, ystart, xend, yend)		
-	#startExp = 250
-	
-	startExp = 3750
+	startExp = 250
+	#startExp = 4750
 	endExp = 5000
-	startRate = 360
+	startRate = 180
 	endRate = 1800
 	xstart = 0
 	xend = 0
@@ -138,8 +138,8 @@ def run():
 	rateStep = 180 #180 degrees per step = .5 RPM per step
 	home()
 
-	for exp in range(startExp, endExp, expStep):
-		for rate in range(startRate, endRate, rateStep):
+	for exp in range(startExp, endExp+1, expStep):
+		for rate in range(startRate, endRate+1, rateStep):
 			test(rate, exp, numPics, xstart, ystart, xend, yend) #loop through settings
 
 def test(rate, exp, imgs, xstart, ystart, xend, yend):
@@ -186,6 +186,20 @@ def test(rate, exp, imgs, xstart, ystart, xend, yend):
                 ser.flushInput() #flush serial buffer
                 line = '' #clear line var
 
+def static():
+	
+	expMin = 250
+	expMax = 5000
+	expStep = 250	
+	for y in range(10,81,10):
+		for x in range(-180,181,30):
+			for exp in range(expMin, expMax, expStep):
+				
+				video.set_exposure_absolute(exp) 	
+				move("g0 x" + str(x) + " y" + str(y), 1)
+				captureImage(0)
+
+
 
 
 # Prompt the user for a command in a loop
@@ -210,8 +224,10 @@ while response != "q":
 		move("g0 x90 f720", 0)
 	elif response == "c":
 		home()
-	elif response == "t":
-		run()
+	elif response == "1":
+		run1()
+	elif response == "s":
+		static()
 
 
 	response = raw_input("\nEnter command: ")
