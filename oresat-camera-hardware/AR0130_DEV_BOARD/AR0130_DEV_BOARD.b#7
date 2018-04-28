@@ -32,8 +32,8 @@
 <layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
@@ -1740,37 +1740,37 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <smd name="10" x="-4.5" y="1.75" dx="0.8" dy="0.4" layer="1"/>
 <smd name="9" x="-4.5" y="2.45" dx="0.8" dy="0.4" layer="1"/>
 <smd name="8" x="-4.5" y="3.15" dx="0.8" dy="0.4" layer="1"/>
-<smd name="7" x="-4.5" y="3.85" dx="0.5" dy="0.3" layer="1"/>
+<smd name="7" x="-4.5" y="3.85" dx="0.5" dy="0.3" layer="1" stop="no"/>
 <smd name="14" x="-4.5" y="-1.05" dx="0.8" dy="0.4" layer="1"/>
 <smd name="15" x="-4.5" y="-1.75" dx="0.8" dy="0.4" layer="1"/>
 <smd name="16" x="-4.5" y="-2.45" dx="0.8" dy="0.4" layer="1"/>
 <smd name="17" x="-4.5" y="-3.15" dx="0.8" dy="0.4" layer="1"/>
-<smd name="18" x="-4.5" y="-3.85" dx="0.5" dy="0.3" layer="1"/>
+<smd name="18" x="-4.5" y="-3.85" dx="0.5" dy="0.3" layer="1" stop="no" cream="no"/>
 <smd name="36" x="4.5" y="-0.35" dx="0.8" dy="0.4" layer="1"/>
 <smd name="37" x="4.5" y="0.35" dx="0.8" dy="0.4" layer="1"/>
 <smd name="38" x="4.5" y="1.05" dx="0.8" dy="0.4" layer="1"/>
 <smd name="39" x="4.5" y="1.75" dx="0.8" dy="0.4" layer="1"/>
 <smd name="40" x="4.5" y="2.45" dx="0.8" dy="0.4" layer="1"/>
 <smd name="41" x="4.5" y="3.15" dx="0.8" dy="0.4" layer="1"/>
-<smd name="42" x="4.5" y="3.85" dx="0.5" dy="0.3" layer="1"/>
+<smd name="42" x="4.5" y="3.85" dx="0.5" dy="0.3" layer="1" stop="no" cream="no"/>
 <smd name="35" x="4.5" y="-1.05" dx="0.8" dy="0.4" layer="1"/>
 <smd name="34" x="4.5" y="-1.75" dx="0.8" dy="0.4" layer="1"/>
 <smd name="33" x="4.5" y="-2.45" dx="0.8" dy="0.4" layer="1"/>
 <smd name="32" x="4.5" y="-3.15" dx="0.8" dy="0.4" layer="1"/>
-<smd name="31" x="4.5" y="-3.85" dx="0.5" dy="0.3" layer="1"/>
+<smd name="31" x="4.5" y="-3.85" dx="0.5" dy="0.3" layer="1" stop="no" cream="no"/>
 <smd name="24" x="-0.35" y="-4.5" dx="0.4" dy="0.8" layer="1"/>
 <smd name="23" x="-1.05" y="-4.5" dx="0.4" dy="0.8" layer="1"/>
 <smd name="22" x="-1.75" y="-4.5" dx="0.4" dy="0.8" layer="1"/>
 <smd name="21" x="-2.45" y="-4.5" dx="0.4" dy="0.8" layer="1"/>
 <smd name="20" x="-3.15" y="-4.5" dx="0.4" dy="0.8" layer="1"/>
-<smd name="19" x="-3.85" y="-4.5" dx="0.3" dy="0.5" layer="1"/>
+<smd name="19" x="-3.85" y="-4.5" dx="0.3" dy="0.5" layer="1" stop="no" cream="no"/>
 <smd name="25" x="0.35" y="-4.5" dx="0.4" dy="0.8" layer="1"/>
 <smd name="26" x="1.05" y="-4.5" dx="0.4" dy="0.8" layer="1"/>
 <smd name="27" x="1.75" y="-4.5" dx="0.4" dy="0.8" layer="1"/>
 <smd name="28" x="2.45" y="-4.5" dx="0.4" dy="0.8" layer="1"/>
 <smd name="29" x="3.15" y="-4.5" dx="0.4" dy="0.8" layer="1"/>
-<smd name="30" x="3.85" y="-4.5" dx="0.3" dy="0.5" layer="1"/>
-<smd name="43" x="3.85" y="4.5" dx="0.3" dy="0.5" layer="1"/>
+<smd name="30" x="3.85" y="-4.5" dx="0.3" dy="0.5" layer="1" stop="no" cream="no"/>
+<smd name="43" x="3.85" y="4.5" dx="0.3" dy="0.5" layer="1" stop="no" cream="no"/>
 <smd name="44" x="3.15" y="4.5" dx="0.4" dy="0.8" layer="1"/>
 <smd name="45" x="2.45" y="4.5" dx="0.4" dy="0.8" layer="1"/>
 <smd name="46" x="1.75" y="4.5" dx="0.4" dy="0.8" layer="1"/>
@@ -1781,7 +1781,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <smd name="3" x="-1.75" y="4.5" dx="0.4" dy="0.8" layer="1"/>
 <smd name="4" x="-2.45" y="4.5" dx="0.4" dy="0.8" layer="1"/>
 <smd name="5" x="-3.15" y="4.5" dx="0.4" dy="0.8" layer="1"/>
-<smd name="6" x="-3.85" y="4.5" dx="0.3" dy="0.5" layer="1"/>
+<smd name="6" x="-3.85" y="4.5" dx="0.3" dy="0.5" layer="1" stop="no" cream="no"/>
 <wire x1="0" y1="1" x2="0" y2="-1" width="0.1" layer="51"/>
 <wire x1="1" y1="0" x2="-1" y2="0" width="0.1" layer="51"/>
 <text x="-3" y="1.5" size="0.5" layer="51" font="vector" ratio="10">OPTICAL CENTER =
@@ -1797,7 +1797,7 @@ PACKAGE CENTER</text>
 <vertex x="-4.3" y="-4.05"/>
 <vertex x="-4.9" y="-4.05"/>
 </polygon>
-<polygon width="0" layer="1">
+<polygon width="0.01" layer="1">
 <vertex x="-4.9" y="4.05"/>
 <vertex x="-4.3" y="4.05"/>
 <vertex x="-4.1" y="3.85"/>
@@ -1825,7 +1825,7 @@ PACKAGE CENTER</text>
 <vertex x="-3.65" y="-4.1"/>
 <vertex x="-3.65" y="-4.9"/>
 </polygon>
-<polygon width="0" layer="1">
+<polygon width="0.01" layer="1">
 <vertex x="-3.65" y="4.9"/>
 <vertex x="-3.65" y="4.1"/>
 <vertex x="-3.85" y="4.1"/>
@@ -1845,6 +1845,118 @@ PACKAGE CENTER</text>
 <vertex x="3.85" y="-4.1"/>
 <vertex x="4.05" y="-4.3"/>
 <vertex x="4.05" y="-4.9"/>
+</polygon>
+<polygon width="0.01" layer="31">
+<vertex x="-4.9" y="4.05"/>
+<vertex x="-4.3" y="4.05"/>
+<vertex x="-4.1" y="3.85"/>
+<vertex x="-4.1" y="3.65"/>
+<vertex x="-4.9" y="3.65"/>
+</polygon>
+<polygon width="0.2" layer="29">
+<vertex x="-3.65" y="4.9"/>
+<vertex x="-3.65" y="4.1"/>
+<vertex x="-3.85" y="4.1"/>
+<vertex x="-4.05" y="4.3"/>
+<vertex x="-4.05" y="4.9"/>
+</polygon>
+<polygon width="0.2" layer="29">
+<vertex x="-4.9" y="4.05"/>
+<vertex x="-4.3" y="4.05"/>
+<vertex x="-4.1" y="3.85"/>
+<vertex x="-4.1" y="3.65"/>
+<vertex x="-4.9" y="3.65"/>
+</polygon>
+<polygon width="0.2" layer="29">
+<vertex x="4.05" y="4.9"/>
+<vertex x="4.05" y="4.3"/>
+<vertex x="3.85" y="4.1"/>
+<vertex x="3.65" y="4.1"/>
+<vertex x="3.65" y="4.9"/>
+</polygon>
+<polygon width="0.2" layer="29">
+<vertex x="4.9" y="-4.05"/>
+<vertex x="4.3" y="-4.05"/>
+<vertex x="4.1" y="-3.85"/>
+<vertex x="4.1" y="-3.65"/>
+<vertex x="4.9" y="-3.65"/>
+</polygon>
+<polygon width="0.2" layer="29">
+<vertex x="-4.05" y="-4.9"/>
+<vertex x="-4.05" y="-4.3"/>
+<vertex x="-3.85" y="-4.1"/>
+<vertex x="-3.65" y="-4.1"/>
+<vertex x="-3.65" y="-4.9"/>
+</polygon>
+<polygon width="0.2" layer="29">
+<vertex x="4.9" y="3.65"/>
+<vertex x="4.1" y="3.65"/>
+<vertex x="4.1" y="3.85"/>
+<vertex x="4.3" y="4.05"/>
+<vertex x="4.9" y="4.05"/>
+</polygon>
+<polygon width="0.2" layer="29">
+<vertex x="3.65" y="-4.9"/>
+<vertex x="3.65" y="-4.1"/>
+<vertex x="3.85" y="-4.1"/>
+<vertex x="4.05" y="-4.3"/>
+<vertex x="4.05" y="-4.9"/>
+</polygon>
+<polygon width="0.2" layer="29">
+<vertex x="-4.9" y="-3.65"/>
+<vertex x="-4.1" y="-3.65"/>
+<vertex x="-4.1" y="-3.85"/>
+<vertex x="-4.3" y="-4.05"/>
+<vertex x="-4.9" y="-4.05"/>
+</polygon>
+<polygon width="0.01" layer="31">
+<vertex x="4.05" y="4.9"/>
+<vertex x="4.05" y="4.3"/>
+<vertex x="3.85" y="4.1"/>
+<vertex x="3.65" y="4.1"/>
+<vertex x="3.65" y="4.9"/>
+</polygon>
+<polygon width="0.01" layer="31">
+<vertex x="4.9" y="-4.05"/>
+<vertex x="4.3" y="-4.05"/>
+<vertex x="4.1" y="-3.85"/>
+<vertex x="4.1" y="-3.65"/>
+<vertex x="4.9" y="-3.65"/>
+</polygon>
+<polygon width="0.01" layer="31">
+<vertex x="-4.05" y="-4.9"/>
+<vertex x="-4.05" y="-4.3"/>
+<vertex x="-3.85" y="-4.1"/>
+<vertex x="-3.65" y="-4.1"/>
+<vertex x="-3.65" y="-4.9"/>
+</polygon>
+<polygon width="0.01" layer="31">
+<vertex x="-3.65" y="4.9"/>
+<vertex x="-3.65" y="4.1"/>
+<vertex x="-3.85" y="4.1"/>
+<vertex x="-4.05" y="4.3"/>
+<vertex x="-4.05" y="4.9"/>
+</polygon>
+<polygon width="0.01" layer="31">
+<vertex x="4.9" y="3.65"/>
+<vertex x="4.1" y="3.65"/>
+<vertex x="4.1" y="3.85"/>
+<vertex x="4.3" y="4.05"/>
+<vertex x="4.9" y="4.05"/>
+</polygon>
+<polygon width="0.01" layer="31">
+<vertex x="3.65" y="-4.9"/>
+<vertex x="3.65" y="-4.1"/>
+<vertex x="3.85" y="-4.1"/>
+<vertex x="4.05" y="-4.3"/>
+<vertex x="4.05" y="-4.9"/>
+</polygon>
+<polygon width="0.01" layer="31">
+<vertex x="-4.9" y="-3.65"/>
+<vertex x="-4.1" y="-3.65"/>
+<vertex x="-4.1" y="-3.85"/>
+<vertex x="-4.3" y="-4.05"/>
+<vertex x="-4.9" y="-4.05"/>
 </polygon>
 </package>
 </packages>
@@ -2258,27 +2370,27 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <attribute name="VALUE" x="4.238" y="19.5" size="0.508" layer="27" font="vector" ratio="15" rot="R270" align="top-center"/>
 </element>
 <element name="C1" library="SparkFun-Capacitors" package="0603" value="10uF" x="18.8125" y="36.40625" smashed="yes" rot="MR270">
-<attribute name="NAME" x="19.875" y="36.04325" size="0.5" layer="26" font="vector" ratio="15" rot="MR0" align="bottom-center"/>
+<attribute name="NAME" x="19.01925" y="34.4375" size="0.5" layer="26" font="vector" ratio="15" rot="MR270" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-11015" x="18.8125" y="36.40625" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="VALUE" x="19.5745" y="36.40625" size="0.6096" layer="28" font="vector" ratio="20" rot="MR270" align="top-center"/>
 </element>
 <element name="C2" library="SparkFun-Capacitors" package="0603" value="10uF" x="12.90625" y="37.21875" smashed="yes" rot="MR0">
-<attribute name="NAME" x="12.90625" y="36.10575" size="0.5" layer="26" font="vector" ratio="15" rot="MR0" align="bottom-center"/>
+<attribute name="NAME" x="10.90625" y="36.91825" size="0.5" layer="26" font="vector" ratio="15" rot="MR0" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-11015" x="12.90625" y="37.21875" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="VALUE" x="12.90625" y="36.45675" size="0.6096" layer="28" font="vector" ratio="20" rot="MR0" align="top-center"/>
 </element>
 <element name="C3" library="SparkFun-Capacitors" package="0603" value="10uF" x="21.15625" y="41.0625" smashed="yes" rot="MR0">
-<attribute name="NAME" x="21.4375" y="41.91825" size="0.5" layer="26" font="vector" ratio="15" rot="MR0" align="bottom-center"/>
+<attribute name="NAME" x="23.1875" y="41.41825" size="0.5" layer="26" font="vector" ratio="15" rot="MR0" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-11015" x="21.15625" y="41.0625" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="VALUE" x="21.15625" y="40.3005" size="0.6096" layer="28" font="vector" ratio="20" rot="MR0" align="top-center"/>
 </element>
 <element name="C4" library="SparkFun-Capacitors" package="0603" value="10uF" x="17.5" y="41.0625" smashed="yes" rot="MR0">
-<attribute name="NAME" x="18.375" y="42.1755" size="0.5" layer="26" font="vector" ratio="15" rot="MR180" align="bottom-center"/>
+<attribute name="NAME" x="15.5" y="41.3005" size="0.5" layer="26" font="vector" ratio="15" rot="MR180" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-11015" x="17.5" y="41.0625" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="VALUE" x="17.5" y="40.3005" size="0.6096" layer="28" font="vector" ratio="20" rot="MR0" align="top-center"/>
 </element>
 <element name="C5" library="SparkFun-Capacitors" package="0603" value="10uF" x="27.375" y="38.375" smashed="yes" rot="MR180">
-<attribute name="NAME" x="26.1755" y="38.375" size="0.5" layer="26" font="vector" ratio="15" rot="MR270" align="bottom-center"/>
+<attribute name="NAME" x="29.5" y="38.613" size="0.5" layer="26" font="vector" ratio="15" rot="MR180" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-11015" x="27.375" y="38.375" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="VALUE" x="27.375" y="39.137" size="0.6096" layer="28" font="vector" ratio="20" rot="MR180" align="top-center"/>
 </element>
@@ -2298,27 +2410,27 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <attribute name="VALUE" x="29.8125" y="25.262" size="0.5" layer="27" font="vector" ratio="15" rot="R180" align="top-center"/>
 </element>
 <element name="C19" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:2054894" package="0402" package3d_urn="urn:adsk.eagle:package:2054929/3" value="0.1uF" x="17.375" y="36.78125" smashed="yes" rot="MR270">
-<attribute name="NAME" x="17.1875" y="37.91825" size="0.508" layer="26" font="vector" ratio="15" rot="MR0" align="bottom-center"/>
+<attribute name="NAME" x="17.58175" y="34.9375" size="0.508" layer="26" font="vector" ratio="15" rot="MR270" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-12416" x="17.375" y="36.78125" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="VALUE" x="18.137" y="36.78125" size="0.5" layer="28" font="vector" ratio="15" rot="MR270" align="top-center"/>
 </element>
 <element name="C20" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:2054894" package="0402" package3d_urn="urn:adsk.eagle:package:2054929/3" value="0.1uF" x="13.25" y="38.65625" smashed="yes" rot="MR0">
-<attribute name="NAME" x="13.25" y="39.76925" size="0.508" layer="26" font="vector" ratio="15" rot="MR180" align="bottom-center"/>
+<attribute name="NAME" x="11.4375" y="38.89425" size="0.508" layer="26" font="vector" ratio="15" rot="MR180" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-12416" x="18.75" y="35.15625" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="VALUE" x="13.25" y="37.89425" size="0.5" layer="28" font="vector" ratio="15" rot="MR0" align="top-center"/>
 </element>
 <element name="C21" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:2054894" package="0402" package3d_urn="urn:adsk.eagle:package:2054929/3" value="0.1uF" x="21.375" y="39.625" smashed="yes" rot="MR0">
-<attribute name="NAME" x="22.637" y="39.8125" size="0.508" layer="26" font="vector" ratio="15" rot="MR90" align="bottom-center"/>
+<attribute name="NAME" x="23.1875" y="39.0745" size="0.508" layer="26" font="vector" ratio="15" rot="MR0" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-12416" x="21.375" y="36.125" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="VALUE" x="21.375" y="38.863" size="0.5" layer="28" font="vector" ratio="15" rot="MR0" align="top-center"/>
 </element>
 <element name="C22" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:2054894" package="0402" package3d_urn="urn:adsk.eagle:package:2054929/3" value="0.1uF" x="17.9375" y="39.625" smashed="yes" rot="MR0">
-<attribute name="NAME" x="19.5625" y="39.1755" size="0.508" layer="26" font="vector" ratio="15" rot="MR180" align="bottom-center"/>
+<attribute name="NAME" x="16.125" y="39.863" size="0.508" layer="26" font="vector" ratio="15" rot="MR180" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-12416" x="23.4375" y="32.625" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="VALUE" x="17.9375" y="38.863" size="0.5" layer="28" font="vector" ratio="15" rot="MR0" align="top-center"/>
 </element>
 <element name="C23" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:2054894" package="0402" package3d_urn="urn:adsk.eagle:package:2054929/3" value="0.1uF" x="27" y="36.9375" smashed="yes" rot="MR180">
-<attribute name="NAME" x="25.8005" y="36.8125" size="0.508" layer="26" font="vector" ratio="15" rot="MR270" align="bottom-center"/>
+<attribute name="NAME" x="28.9375" y="37.1755" size="0.508" layer="26" font="vector" ratio="15" rot="MR180" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-12416" x="27" y="43.9375" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="VALUE" x="27" y="37.6995" size="0.5" layer="28" font="vector" ratio="15" rot="MR180" align="top-center"/>
 </element>
@@ -2363,7 +2475,7 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <attribute name="VALUE" x="9.5745" y="9.5" size="0.5" layer="27" font="vector" ratio="15" rot="R90" align="top-center"/>
 </element>
 <element name="C39" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:2054894" package="0402" package3d_urn="urn:adsk.eagle:package:2054929/3" value="0.1uF" x="27.125" y="34.9375" smashed="yes" rot="MR90">
-<attribute name="NAME" x="27.887" y="34.9375" size="0.508" layer="26" font="vector" ratio="15" rot="MR90" align="bottom-center"/>
+<attribute name="NAME" x="27.8245" y="34.9375" size="0.508" layer="26" font="vector" ratio="15" rot="MR90" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-12416" x="27.125" y="34.9375" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="VALUE" x="26.363" y="34.9375" size="0.5" layer="28" font="vector" ratio="15" rot="MR90" align="top-center"/>
 </element>
@@ -2591,7 +2703,8 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <via x="31.1875" y="15.75" extent="1-16" drill="0.254"/>
 <via x="31.1875" y="20.25" extent="1-16" drill="0.254"/>
 <via x="31.1875" y="24.75" extent="1-16" drill="0.254"/>
-<wire x1="30.8125" y1="11.875" x2="30.8125" y2="15.5" width="1.27" layer="16"/>
+<wire x1="30.8125" y1="11.875" x2="30.8125" y2="12.5" width="1.27" layer="16"/>
+<wire x1="30.8125" y1="12.5" x2="30.8125" y2="15.5" width="1.27" layer="16"/>
 <wire x1="30.8125" y1="15.5" x2="30.8125" y2="20.5" width="1.27" layer="16"/>
 <wire x1="30.8125" y1="24.6875" x2="30.8125" y2="20.5" width="1.27" layer="16"/>
 <wire x1="31.1875" y1="15.75" x2="30.8125" y2="15.5" width="0.254" layer="16"/>
@@ -2647,6 +2760,7 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="30.5" y1="12" x2="31" y2="12" width="0.254" layer="15"/>
 <wire x1="31" y1="11.5" x2="31" y2="12" width="0.254" layer="15"/>
 <wire x1="12.25" y1="4.0625" x2="11.75" y2="4.0625" width="0.254" layer="15"/>
+<wire x1="11.75" y1="4.0625" x2="11.25" y2="4.0625" width="0.254" layer="15"/>
 <wire x1="11.2505" y1="5" x2="11.25" y2="5.9375" width="0.3048" layer="1"/>
 <wire x1="12.2505" y1="5" x2="12.25" y2="5.9375" width="0.3048" layer="1"/>
 <wire x1="12.2505" y1="5" x2="12.25" y2="4.0625" width="0.3048" layer="1"/>
@@ -2657,9 +2771,9 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="12.25" y1="5.9375" x2="11.75" y2="5.9375" width="0.6096" layer="1"/>
 <wire x1="11.75" y1="5.9375" x2="11.25" y2="5.9375" width="0.6096" layer="1"/>
 <wire x1="12.25" y1="4.0625" x2="11.75" y2="4.0625" width="0.6096" layer="1"/>
-<wire x1="11.75" y1="4.0625" x2="11.25" y2="4.0625" width="0.6096" layer="1"/>
-<wire x1="31" y1="12" x2="30.8125" y2="11.875" width="0" layer="19" extent="16-16"/>
-<wire x1="31" y1="12.5" x2="31.5" y2="12.5" width="0" layer="19" extent="1-1"/>
+<wire x1="31" y1="12" x2="30.8125" y2="11.875" width="0.6096" layer="16"/>
+<wire x1="31.5" y1="12.5" x2="31" y2="12.5" width="0.6096" layer="16"/>
+<wire x1="31" y1="12.5" x2="30.8125" y2="12.5" width="0.6096" layer="16"/>
 </signal>
 <signal name="GND">
 <contactref element="U11" pad="2"/>
@@ -3072,6 +3186,7 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="16.15" y1="39" x2="15" y2="39" width="0.254" layer="1"/>
 <wire x1="16.15" y1="39" x2="16.15" y2="38.35" width="0.254" layer="1"/>
 <wire x1="16.15" y1="38.35" x2="16.5" y2="38" width="0.254" layer="1"/>
+<via x="8.5" y="36" extent="1-16" drill="0.254"/>
 </signal>
 <signal name="3.3V">
 <contactref element="U9" pad="8"/>

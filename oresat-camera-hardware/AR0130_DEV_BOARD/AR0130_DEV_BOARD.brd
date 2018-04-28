@@ -2306,12 +2306,12 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 </element>
 <element name="U9" library="Oliver_Custom" package="DGK8-M" value="TCA9509DGKRDGK8-M" x="6.3125" y="11" smashed="yes" rot="R270">
 <attribute name="MANUFACTURER_PART_NUMBER" value="TCA9509DGKR" x="6.3125" y="11" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="NAME" x="7.7574" y="13.4915" size="0.5" layer="25" font="vector" ratio="15" rot="SR0"/>
+<attribute name="NAME" x="8.2574" y="11.9915" size="0.5" layer="25" font="vector" ratio="15" rot="SR0"/>
 <attribute name="VENDOR" value="Texas Instruments" x="6.3125" y="11" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="U10" library="Oliver_Custom" package="DGV48" value="SN74AVCB164245VR" x="20" y="18" smashed="yes" rot="R270">
 <attribute name="MANUFACTURER_PART_NUMBER" value="SN74AVCB164245VR" x="20" y="18" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="NAME" x="19.365" y="21.2766" size="1.27" layer="25" ratio="6" rot="SR270"/>
+<attribute name="NAME" x="15.2234" y="13.6775" size="0.5" layer="25" font="vector" ratio="15" rot="SR0"/>
 <attribute name="VENDOR" value="Texas Instruments" x="20" y="18" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="U11" library="Oliver_Custom" package="OSC_KYOCERA_KC2520B" value="KC2520B27.0000C10E00" x="5" y="26.5" smashed="yes">
@@ -2733,23 +2733,22 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <via x="31.5" y="11.5" extent="1-16" drill="0.254"/>
 <wire x1="30.5" y1="12" x2="31.5" y2="12" width="1.27" layer="16"/>
 <wire x1="30.5" y1="12" x2="30.5" y2="12.5" width="1.27" layer="16"/>
-<wire x1="30.5" y1="12.5" x2="30.5" y2="11.5" width="1.27" layer="16"/>
 <wire x1="31.5" y1="11.5" x2="31.5" y2="12.5" width="1.27" layer="16"/>
 <wire x1="30.5" y1="11.5" x2="31.5" y2="11.5" width="1.27" layer="16"/>
 <via x="31.1875" y="15.25" extent="1-16" drill="0.254"/>
 <wire x1="31.1875" y1="15.75" x2="31.1875" y2="15.5" width="0.508" layer="1"/>
 <wire x1="31.1875" y1="15.5" x2="31.1875" y2="15.25" width="0.508" layer="1"/>
-<wire x1="30.3925" y1="15.5" x2="31.1875" y2="15.5" width="0.6096" layer="1"/>
+<wire x1="30.3925" y1="15.5" x2="31.1875" y2="15.5" width="0.8128" layer="1"/>
 <wire x1="31.1875" y1="15.5" x2="31.95" y2="15.5" width="0.4064" layer="1"/>
 <via x="31.1875" y="19.75" extent="1-16" drill="0.254"/>
 <wire x1="31.1875" y1="19.75" x2="31.1875" y2="20.25" width="0.6096" layer="1"/>
-<wire x1="30.3925" y1="20" x2="30.9375" y2="20" width="0.6096" layer="1"/>
+<wire x1="30.3925" y1="20" x2="30.9375" y2="20" width="0.8128" layer="1"/>
 <wire x1="30.9375" y1="20" x2="31.1875" y2="19.75" width="0.6096" layer="1" curve="-90"/>
 <wire x1="31.95" y1="20" x2="31.4375" y2="20" width="0.4064" layer="1"/>
 <wire x1="31.4375" y1="20" x2="31.1875" y2="20.25" width="0.4064" layer="1" curve="-90"/>
 <via x="31.1875" y="24.25" extent="1-16" drill="0.254"/>
 <wire x1="31.1875" y1="24.75" x2="31.1875" y2="24.25" width="0.6096" layer="1"/>
-<wire x1="30.3925" y1="24.5" x2="30.9375" y2="24.5" width="0.6096" layer="1"/>
+<wire x1="30.3925" y1="24.5" x2="30.9375" y2="24.5" width="0.8128" layer="1"/>
 <wire x1="30.9375" y1="24.5" x2="31.1875" y2="24.75" width="0.6096" layer="1" curve="90"/>
 <wire x1="31.95" y1="24.5" x2="31.4375" y2="24.5" width="0.4064" layer="1"/>
 <wire x1="31.4375" y1="24.5" x2="31.1875" y2="24.75" width="0.4064" layer="1" curve="-90"/>
@@ -2774,6 +2773,12 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="31" y1="12" x2="30.8125" y2="11.875" width="0.6096" layer="16"/>
 <wire x1="31.5" y1="12.5" x2="31" y2="12.5" width="0.6096" layer="16"/>
 <wire x1="31" y1="12.5" x2="30.8125" y2="12.5" width="0.6096" layer="16"/>
+<wire x1="31" y1="12.5" x2="31" y2="11.5" width="0.6096" layer="1"/>
+<wire x1="30.5" y1="12.5" x2="30.5" y2="11.5" width="0.6096" layer="1"/>
+<wire x1="31" y1="12.5" x2="31" y2="11.5" width="0.6096" layer="1"/>
+<wire x1="31.5" y1="12.5" x2="31.5" y2="11.5" width="0.6096" layer="1"/>
+<wire x1="30.5" y1="12.5" x2="31.5" y2="12.5" width="0.6096" layer="1"/>
+<wire x1="30.5" y1="11.5" x2="31.5" y2="11.5" width="0.6096" layer="1"/>
 </signal>
 <signal name="GND">
 <contactref element="U11" pad="2"/>

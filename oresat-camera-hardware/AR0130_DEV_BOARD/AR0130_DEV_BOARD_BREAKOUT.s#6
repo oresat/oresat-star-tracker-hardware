@@ -796,8 +796,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </segment>
 <segment>
 <pinref part="U$1" gate="A" pin="32"/>
-<wire x1="38.1" y1="-15.24" x2="43.18" y2="-7.62" width="0.1524" layer="91"/>
-<label x="43.18" y="-7.62" size="1.27" layer="95" rot="R90" xref="yes"/>
+<wire x1="38.1" y1="-15.24" x2="38.18" y2="-7.62" width="0.1524" layer="91"/>
+<label x="38.18" y="-7.62" size="1.27" layer="95" rot="R90" xref="yes"/>
 </segment>
 </net>
 <net name="CLK_EN" class="0">
@@ -820,8 +820,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </segment>
 <segment>
 <pinref part="U$1" gate="A" pin="28"/>
-<wire x1="43.18" y1="-15.24" x2="38.1" y2="-7.62" width="0.1524" layer="91"/>
-<label x="38.1" y="-7.62" size="1.27" layer="95" rot="R90" xref="yes"/>
+<wire x1="43.18" y1="-15.24" x2="43.1" y2="-7.62" width="0.1524" layer="91"/>
+<label x="43.1" y="-7.62" size="1.27" layer="95" rot="R90" xref="yes"/>
 </segment>
 </net>
 <net name="OUTPUT_DRVR_EN" class="0">
