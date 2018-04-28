@@ -3017,8 +3017,8 @@ Warning: This is the KIT version of this package. This package has a smaller dia
 <wire x1="-1.0668" y1="1.0668" x2="-1.0668" y2="-1.0668" width="0.1524" layer="51"/>
 <wire x1="0.3048" y1="1.0668" x2="-0.3048" y2="1.0414" width="0.1524" layer="51" curve="-180"/>
 <text x="-1.2446" y="1.651" size="0.508" layer="25" font="vector" ratio="15" rot="SR0">&gt;Name</text>
-<pad name="8" x="0" y="0.375" drill="0.254" diameter="0.508" stop="no"/>
-<pad name="9" x="0" y="-0.4375" drill="0.254" diameter="0.508" stop="no"/>
+<pad name="8" x="0" y="0.375" drill="0.254" diameter="0.508" stop="no" thermals="no"/>
+<pad name="9" x="0" y="-0.4375" drill="0.254" diameter="0.508" stop="no" thermals="no"/>
 <circle x="-1.905" y="1.016" radius="0.0508" width="0.3048" layer="21"/>
 </package>
 <package name="DFN8_2X3MC-M">

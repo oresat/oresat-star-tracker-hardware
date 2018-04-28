@@ -3,10 +3,10 @@
 <eagle version="8.7.1">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.0625" altunitdist="mm" altunit="mm"/>
+<grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.0125" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="15" fill="1" visible="no" active="yes"/>
@@ -36,7 +36,7 @@
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
 <layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
@@ -2306,7 +2306,7 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 </element>
 <element name="U9" library="Oliver_Custom" package="DGK8-M" value="TCA9509DGKRDGK8-M" x="6.3125" y="11" smashed="yes" rot="R270">
 <attribute name="MANUFACTURER_PART_NUMBER" value="TCA9509DGKR" x="6.3125" y="11" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="NAME" x="7.7574" y="7.9915" size="0.5" layer="25" font="vector" ratio="15" rot="SR0"/>
+<attribute name="NAME" x="8.2574" y="11.9915" size="0.5" layer="25" font="vector" ratio="15" rot="SR0"/>
 <attribute name="VENDOR" value="Texas Instruments" x="6.3125" y="11" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="U10" library="Oliver_Custom" package="DGV48" value="SN74AVCB164245VR" x="20" y="18" smashed="yes" rot="R270">

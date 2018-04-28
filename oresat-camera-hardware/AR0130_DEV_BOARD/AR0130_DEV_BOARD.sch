@@ -3098,56 +3098,56 @@ PACKAGE CENTER</text>
 <vertex x="-4.1" y="3.65"/>
 <vertex x="-4.9" y="3.65"/>
 </polygon>
-<polygon width="0.2" layer="29">
+<polygon width="0.15" layer="29">
 <vertex x="-3.65" y="4.9"/>
 <vertex x="-3.65" y="4.1"/>
 <vertex x="-3.85" y="4.1"/>
 <vertex x="-4.05" y="4.3"/>
 <vertex x="-4.05" y="4.9"/>
 </polygon>
-<polygon width="0.2" layer="29">
+<polygon width="0.15" layer="29">
 <vertex x="-4.9" y="4.05"/>
 <vertex x="-4.3" y="4.05"/>
 <vertex x="-4.1" y="3.85"/>
 <vertex x="-4.1" y="3.65"/>
 <vertex x="-4.9" y="3.65"/>
 </polygon>
-<polygon width="0.2" layer="29">
+<polygon width="0.15" layer="29">
 <vertex x="4.05" y="4.9"/>
 <vertex x="4.05" y="4.3"/>
 <vertex x="3.85" y="4.1"/>
 <vertex x="3.65" y="4.1"/>
 <vertex x="3.65" y="4.9"/>
 </polygon>
-<polygon width="0.2" layer="29">
+<polygon width="0.15" layer="29">
 <vertex x="4.9" y="-4.05"/>
 <vertex x="4.3" y="-4.05"/>
 <vertex x="4.1" y="-3.85"/>
 <vertex x="4.1" y="-3.65"/>
 <vertex x="4.9" y="-3.65"/>
 </polygon>
-<polygon width="0.2" layer="29">
+<polygon width="0.15" layer="29">
 <vertex x="-4.05" y="-4.9"/>
 <vertex x="-4.05" y="-4.3"/>
 <vertex x="-3.85" y="-4.1"/>
 <vertex x="-3.65" y="-4.1"/>
 <vertex x="-3.65" y="-4.9"/>
 </polygon>
-<polygon width="0.2" layer="29">
+<polygon width="0.15" layer="29">
 <vertex x="4.9" y="3.65"/>
 <vertex x="4.1" y="3.65"/>
 <vertex x="4.1" y="3.85"/>
 <vertex x="4.3" y="4.05"/>
 <vertex x="4.9" y="4.05"/>
 </polygon>
-<polygon width="0.2" layer="29">
+<polygon width="0.15" layer="29">
 <vertex x="3.65" y="-4.9"/>
 <vertex x="3.65" y="-4.1"/>
 <vertex x="3.85" y="-4.1"/>
 <vertex x="4.05" y="-4.3"/>
 <vertex x="4.05" y="-4.9"/>
 </polygon>
-<polygon width="0.2" layer="29">
+<polygon width="0.15" layer="29">
 <vertex x="-4.9" y="-3.65"/>
 <vertex x="-4.1" y="-3.65"/>
 <vertex x="-4.1" y="-3.85"/>

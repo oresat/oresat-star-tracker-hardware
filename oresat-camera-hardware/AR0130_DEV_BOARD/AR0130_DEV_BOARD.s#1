@@ -3035,7 +3035,7 @@ PACKAGE CENTER</text>
 <wire x1="-5" y1="-5" x2="5" y2="-5" width="0.1" layer="51" style="shortdash"/>
 <wire x1="5" y1="-5" x2="5" y2="5" width="0.1" layer="51" style="shortdash"/>
 <wire x1="5" y1="5" x2="-5" y2="5" width="0.1" layer="51" style="shortdash"/>
-<polygon width="0" layer="1">
+<polygon width="0.01" layer="1">
 <vertex x="-4.9" y="-3.65"/>
 <vertex x="-4.1" y="-3.65"/>
 <vertex x="-4.1" y="-3.85"/>
@@ -3049,21 +3049,21 @@ PACKAGE CENTER</text>
 <vertex x="-4.1" y="3.65"/>
 <vertex x="-4.9" y="3.65"/>
 </polygon>
-<polygon width="0" layer="1">
+<polygon width="0.01" layer="1">
 <vertex x="4.05" y="4.9"/>
 <vertex x="4.05" y="4.3"/>
 <vertex x="3.85" y="4.1"/>
 <vertex x="3.65" y="4.1"/>
 <vertex x="3.65" y="4.9"/>
 </polygon>
-<polygon width="0" layer="1">
+<polygon width="0.01" layer="1">
 <vertex x="4.9" y="-4.05"/>
 <vertex x="4.3" y="-4.05"/>
 <vertex x="4.1" y="-3.85"/>
 <vertex x="4.1" y="-3.65"/>
 <vertex x="4.9" y="-3.65"/>
 </polygon>
-<polygon width="0" layer="1">
+<polygon width="0.01" layer="1">
 <vertex x="-4.05" y="-4.9"/>
 <vertex x="-4.05" y="-4.3"/>
 <vertex x="-3.85" y="-4.1"/>
@@ -3077,14 +3077,14 @@ PACKAGE CENTER</text>
 <vertex x="-4.05" y="4.3"/>
 <vertex x="-4.05" y="4.9"/>
 </polygon>
-<polygon width="0" layer="1">
+<polygon width="0.01" layer="1">
 <vertex x="4.9" y="3.65"/>
 <vertex x="4.1" y="3.65"/>
 <vertex x="4.1" y="3.85"/>
 <vertex x="4.3" y="4.05"/>
 <vertex x="4.9" y="4.05"/>
 </polygon>
-<polygon width="0" layer="1">
+<polygon width="0.01" layer="1">
 <vertex x="3.65" y="-4.9"/>
 <vertex x="3.65" y="-4.1"/>
 <vertex x="3.85" y="-4.1"/>

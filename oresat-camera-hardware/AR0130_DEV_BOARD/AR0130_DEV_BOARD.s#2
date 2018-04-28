@@ -2985,37 +2985,37 @@ Commonly used for small ceramic capacitors. Like our 0.1uF (http://www.sparkfun.
 <smd name="10" x="-4.5" y="1.75" dx="0.8" dy="0.4" layer="1"/>
 <smd name="9" x="-4.5" y="2.45" dx="0.8" dy="0.4" layer="1"/>
 <smd name="8" x="-4.5" y="3.15" dx="0.8" dy="0.4" layer="1"/>
-<smd name="7" x="-4.5" y="3.85" dx="0.5" dy="0.3" layer="1"/>
+<smd name="7" x="-4.5" y="3.85" dx="0.5" dy="0.3" layer="1" stop="no"/>
 <smd name="14" x="-4.5" y="-1.05" dx="0.8" dy="0.4" layer="1"/>
 <smd name="15" x="-4.5" y="-1.75" dx="0.8" dy="0.4" layer="1"/>
 <smd name="16" x="-4.5" y="-2.45" dx="0.8" dy="0.4" layer="1"/>
 <smd name="17" x="-4.5" y="-3.15" dx="0.8" dy="0.4" layer="1"/>
-<smd name="18" x="-4.5" y="-3.85" dx="0.5" dy="0.3" layer="1"/>
+<smd name="18" x="-4.5" y="-3.85" dx="0.5" dy="0.3" layer="1" stop="no" cream="no"/>
 <smd name="36" x="4.5" y="-0.35" dx="0.8" dy="0.4" layer="1"/>
 <smd name="37" x="4.5" y="0.35" dx="0.8" dy="0.4" layer="1"/>
 <smd name="38" x="4.5" y="1.05" dx="0.8" dy="0.4" layer="1"/>
 <smd name="39" x="4.5" y="1.75" dx="0.8" dy="0.4" layer="1"/>
 <smd name="40" x="4.5" y="2.45" dx="0.8" dy="0.4" layer="1"/>
 <smd name="41" x="4.5" y="3.15" dx="0.8" dy="0.4" layer="1"/>
-<smd name="42" x="4.5" y="3.85" dx="0.5" dy="0.3" layer="1"/>
+<smd name="42" x="4.5" y="3.85" dx="0.5" dy="0.3" layer="1" stop="no" cream="no"/>
 <smd name="35" x="4.5" y="-1.05" dx="0.8" dy="0.4" layer="1"/>
 <smd name="34" x="4.5" y="-1.75" dx="0.8" dy="0.4" layer="1"/>
 <smd name="33" x="4.5" y="-2.45" dx="0.8" dy="0.4" layer="1"/>
 <smd name="32" x="4.5" y="-3.15" dx="0.8" dy="0.4" layer="1"/>
-<smd name="31" x="4.5" y="-3.85" dx="0.5" dy="0.3" layer="1"/>
+<smd name="31" x="4.5" y="-3.85" dx="0.5" dy="0.3" layer="1" stop="no" cream="no"/>
 <smd name="24" x="-0.35" y="-4.5" dx="0.4" dy="0.8" layer="1"/>
 <smd name="23" x="-1.05" y="-4.5" dx="0.4" dy="0.8" layer="1"/>
 <smd name="22" x="-1.75" y="-4.5" dx="0.4" dy="0.8" layer="1"/>
 <smd name="21" x="-2.45" y="-4.5" dx="0.4" dy="0.8" layer="1"/>
 <smd name="20" x="-3.15" y="-4.5" dx="0.4" dy="0.8" layer="1"/>
-<smd name="19" x="-3.85" y="-4.5" dx="0.3" dy="0.5" layer="1"/>
+<smd name="19" x="-3.85" y="-4.5" dx="0.3" dy="0.5" layer="1" stop="no" cream="no"/>
 <smd name="25" x="0.35" y="-4.5" dx="0.4" dy="0.8" layer="1"/>
 <smd name="26" x="1.05" y="-4.5" dx="0.4" dy="0.8" layer="1"/>
 <smd name="27" x="1.75" y="-4.5" dx="0.4" dy="0.8" layer="1"/>
 <smd name="28" x="2.45" y="-4.5" dx="0.4" dy="0.8" layer="1"/>
 <smd name="29" x="3.15" y="-4.5" dx="0.4" dy="0.8" layer="1"/>
-<smd name="30" x="3.85" y="-4.5" dx="0.3" dy="0.5" layer="1"/>
-<smd name="43" x="3.85" y="4.5" dx="0.3" dy="0.5" layer="1"/>
+<smd name="30" x="3.85" y="-4.5" dx="0.3" dy="0.5" layer="1" stop="no" cream="no"/>
+<smd name="43" x="3.85" y="4.5" dx="0.3" dy="0.5" layer="1" stop="no" cream="no"/>
 <smd name="44" x="3.15" y="4.5" dx="0.4" dy="0.8" layer="1"/>
 <smd name="45" x="2.45" y="4.5" dx="0.4" dy="0.8" layer="1"/>
 <smd name="46" x="1.75" y="4.5" dx="0.4" dy="0.8" layer="1"/>
@@ -3026,7 +3026,7 @@ Commonly used for small ceramic capacitors. Like our 0.1uF (http://www.sparkfun.
 <smd name="3" x="-1.75" y="4.5" dx="0.4" dy="0.8" layer="1"/>
 <smd name="4" x="-2.45" y="4.5" dx="0.4" dy="0.8" layer="1"/>
 <smd name="5" x="-3.15" y="4.5" dx="0.4" dy="0.8" layer="1"/>
-<smd name="6" x="-3.85" y="4.5" dx="0.3" dy="0.5" layer="1"/>
+<smd name="6" x="-3.85" y="4.5" dx="0.3" dy="0.5" layer="1" stop="no" cream="no"/>
 <wire x1="0" y1="1" x2="0" y2="-1" width="0.1" layer="51"/>
 <wire x1="1" y1="0" x2="-1" y2="0" width="0.1" layer="51"/>
 <text x="-3" y="1.5" size="0.5" layer="51" font="vector" ratio="10">OPTICAL CENTER =
@@ -3042,7 +3042,7 @@ PACKAGE CENTER</text>
 <vertex x="-4.3" y="-4.05"/>
 <vertex x="-4.9" y="-4.05"/>
 </polygon>
-<polygon width="0" layer="1">
+<polygon width="0.01" layer="1">
 <vertex x="-4.9" y="4.05"/>
 <vertex x="-4.3" y="4.05"/>
 <vertex x="-4.1" y="3.85"/>
@@ -3070,7 +3070,7 @@ PACKAGE CENTER</text>
 <vertex x="-3.65" y="-4.1"/>
 <vertex x="-3.65" y="-4.9"/>
 </polygon>
-<polygon width="0" layer="1">
+<polygon width="0.01" layer="1">
 <vertex x="-3.65" y="4.9"/>
 <vertex x="-3.65" y="4.1"/>
 <vertex x="-3.85" y="4.1"/>
@@ -3090,6 +3090,118 @@ PACKAGE CENTER</text>
 <vertex x="3.85" y="-4.1"/>
 <vertex x="4.05" y="-4.3"/>
 <vertex x="4.05" y="-4.9"/>
+</polygon>
+<polygon width="0.01" layer="31">
+<vertex x="-4.9" y="4.05"/>
+<vertex x="-4.3" y="4.05"/>
+<vertex x="-4.1" y="3.85"/>
+<vertex x="-4.1" y="3.65"/>
+<vertex x="-4.9" y="3.65"/>
+</polygon>
+<polygon width="0.2" layer="29">
+<vertex x="-3.65" y="4.9"/>
+<vertex x="-3.65" y="4.1"/>
+<vertex x="-3.85" y="4.1"/>
+<vertex x="-4.05" y="4.3"/>
+<vertex x="-4.05" y="4.9"/>
+</polygon>
+<polygon width="0.2" layer="29">
+<vertex x="-4.9" y="4.05"/>
+<vertex x="-4.3" y="4.05"/>
+<vertex x="-4.1" y="3.85"/>
+<vertex x="-4.1" y="3.65"/>
+<vertex x="-4.9" y="3.65"/>
+</polygon>
+<polygon width="0.2" layer="29">
+<vertex x="4.05" y="4.9"/>
+<vertex x="4.05" y="4.3"/>
+<vertex x="3.85" y="4.1"/>
+<vertex x="3.65" y="4.1"/>
+<vertex x="3.65" y="4.9"/>
+</polygon>
+<polygon width="0.2" layer="29">
+<vertex x="4.9" y="-4.05"/>
+<vertex x="4.3" y="-4.05"/>
+<vertex x="4.1" y="-3.85"/>
+<vertex x="4.1" y="-3.65"/>
+<vertex x="4.9" y="-3.65"/>
+</polygon>
+<polygon width="0.2" layer="29">
+<vertex x="-4.05" y="-4.9"/>
+<vertex x="-4.05" y="-4.3"/>
+<vertex x="-3.85" y="-4.1"/>
+<vertex x="-3.65" y="-4.1"/>
+<vertex x="-3.65" y="-4.9"/>
+</polygon>
+<polygon width="0.2" layer="29">
+<vertex x="4.9" y="3.65"/>
+<vertex x="4.1" y="3.65"/>
+<vertex x="4.1" y="3.85"/>
+<vertex x="4.3" y="4.05"/>
+<vertex x="4.9" y="4.05"/>
+</polygon>
+<polygon width="0.2" layer="29">
+<vertex x="3.65" y="-4.9"/>
+<vertex x="3.65" y="-4.1"/>
+<vertex x="3.85" y="-4.1"/>
+<vertex x="4.05" y="-4.3"/>
+<vertex x="4.05" y="-4.9"/>
+</polygon>
+<polygon width="0.2" layer="29">
+<vertex x="-4.9" y="-3.65"/>
+<vertex x="-4.1" y="-3.65"/>
+<vertex x="-4.1" y="-3.85"/>
+<vertex x="-4.3" y="-4.05"/>
+<vertex x="-4.9" y="-4.05"/>
+</polygon>
+<polygon width="0.01" layer="31">
+<vertex x="4.05" y="4.9"/>
+<vertex x="4.05" y="4.3"/>
+<vertex x="3.85" y="4.1"/>
+<vertex x="3.65" y="4.1"/>
+<vertex x="3.65" y="4.9"/>
+</polygon>
+<polygon width="0.01" layer="31">
+<vertex x="4.9" y="-4.05"/>
+<vertex x="4.3" y="-4.05"/>
+<vertex x="4.1" y="-3.85"/>
+<vertex x="4.1" y="-3.65"/>
+<vertex x="4.9" y="-3.65"/>
+</polygon>
+<polygon width="0.01" layer="31">
+<vertex x="-4.05" y="-4.9"/>
+<vertex x="-4.05" y="-4.3"/>
+<vertex x="-3.85" y="-4.1"/>
+<vertex x="-3.65" y="-4.1"/>
+<vertex x="-3.65" y="-4.9"/>
+</polygon>
+<polygon width="0.01" layer="31">
+<vertex x="-3.65" y="4.9"/>
+<vertex x="-3.65" y="4.1"/>
+<vertex x="-3.85" y="4.1"/>
+<vertex x="-4.05" y="4.3"/>
+<vertex x="-4.05" y="4.9"/>
+</polygon>
+<polygon width="0.01" layer="31">
+<vertex x="4.9" y="3.65"/>
+<vertex x="4.1" y="3.65"/>
+<vertex x="4.1" y="3.85"/>
+<vertex x="4.3" y="4.05"/>
+<vertex x="4.9" y="4.05"/>
+</polygon>
+<polygon width="0.01" layer="31">
+<vertex x="3.65" y="-4.9"/>
+<vertex x="3.65" y="-4.1"/>
+<vertex x="3.85" y="-4.1"/>
+<vertex x="4.05" y="-4.3"/>
+<vertex x="4.05" y="-4.9"/>
+</polygon>
+<polygon width="0.01" layer="31">
+<vertex x="-4.9" y="-3.65"/>
+<vertex x="-4.1" y="-3.65"/>
+<vertex x="-4.1" y="-3.85"/>
+<vertex x="-4.3" y="-4.05"/>
+<vertex x="-4.9" y="-4.05"/>
 </polygon>
 </package>
 </packages>

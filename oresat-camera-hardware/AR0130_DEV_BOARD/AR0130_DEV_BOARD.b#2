@@ -2306,7 +2306,7 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 </element>
 <element name="U9" library="Oliver_Custom" package="DGK8-M" value="TCA9509DGKRDGK8-M" x="6.3125" y="11" smashed="yes" rot="R270">
 <attribute name="MANUFACTURER_PART_NUMBER" value="TCA9509DGKR" x="6.3125" y="11" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="NAME" x="7.7574" y="13.4915" size="0.5" layer="25" font="vector" ratio="15" rot="SR0"/>
+<attribute name="NAME" x="7.7574" y="7.9915" size="0.5" layer="25" font="vector" ratio="15" rot="SR0"/>
 <attribute name="VENDOR" value="Texas Instruments" x="6.3125" y="11" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="U10" library="Oliver_Custom" package="DGV48" value="SN74AVCB164245VR" x="20" y="18" smashed="yes" rot="R270">

@@ -3,10 +3,10 @@
 <eagle version="8.7.1">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.0625" altunitdist="mm" altunit="mm"/>
+<grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.0125" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="15" fill="1" visible="no" active="yes"/>
@@ -38,7 +38,7 @@
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
-<layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="yes" active="yes"/>
 <layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
 <layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
@@ -1853,56 +1853,56 @@ PACKAGE CENTER</text>
 <vertex x="-4.1" y="3.65"/>
 <vertex x="-4.9" y="3.65"/>
 </polygon>
-<polygon width="0.2" layer="29">
+<polygon width="0.15" layer="29">
 <vertex x="-3.65" y="4.9"/>
 <vertex x="-3.65" y="4.1"/>
 <vertex x="-3.85" y="4.1"/>
 <vertex x="-4.05" y="4.3"/>
 <vertex x="-4.05" y="4.9"/>
 </polygon>
-<polygon width="0.2" layer="29">
+<polygon width="0.15" layer="29">
 <vertex x="-4.9" y="4.05"/>
 <vertex x="-4.3" y="4.05"/>
 <vertex x="-4.1" y="3.85"/>
 <vertex x="-4.1" y="3.65"/>
 <vertex x="-4.9" y="3.65"/>
 </polygon>
-<polygon width="0.2" layer="29">
+<polygon width="0.15" layer="29">
 <vertex x="4.05" y="4.9"/>
 <vertex x="4.05" y="4.3"/>
 <vertex x="3.85" y="4.1"/>
 <vertex x="3.65" y="4.1"/>
 <vertex x="3.65" y="4.9"/>
 </polygon>
-<polygon width="0.2" layer="29">
+<polygon width="0.15" layer="29">
 <vertex x="4.9" y="-4.05"/>
 <vertex x="4.3" y="-4.05"/>
 <vertex x="4.1" y="-3.85"/>
 <vertex x="4.1" y="-3.65"/>
 <vertex x="4.9" y="-3.65"/>
 </polygon>
-<polygon width="0.2" layer="29">
+<polygon width="0.15" layer="29">
 <vertex x="-4.05" y="-4.9"/>
 <vertex x="-4.05" y="-4.3"/>
 <vertex x="-3.85" y="-4.1"/>
 <vertex x="-3.65" y="-4.1"/>
 <vertex x="-3.65" y="-4.9"/>
 </polygon>
-<polygon width="0.2" layer="29">
+<polygon width="0.15" layer="29">
 <vertex x="4.9" y="3.65"/>
 <vertex x="4.1" y="3.65"/>
 <vertex x="4.1" y="3.85"/>
 <vertex x="4.3" y="4.05"/>
 <vertex x="4.9" y="4.05"/>
 </polygon>
-<polygon width="0.2" layer="29">
+<polygon width="0.15" layer="29">
 <vertex x="3.65" y="-4.9"/>
 <vertex x="3.65" y="-4.1"/>
 <vertex x="3.85" y="-4.1"/>
 <vertex x="4.05" y="-4.3"/>
 <vertex x="4.05" y="-4.9"/>
 </polygon>
-<polygon width="0.2" layer="29">
+<polygon width="0.15" layer="29">
 <vertex x="-4.9" y="-3.65"/>
 <vertex x="-4.1" y="-3.65"/>
 <vertex x="-4.1" y="-3.85"/>
