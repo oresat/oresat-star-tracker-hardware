@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.0125" altunitdist="mm" altunit="mm"/>
+<grid distance="4" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.0125" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -720,6 +720,7 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <vertex x="44.5" y="30"/>
 <vertex x="0" y="30"/>
 </polygon>
+<via x="10" y="10" extent="1-16" drill="0.35"/>
 </signal>
 <signal name="D0">
 <contactref element="J1" pad="38"/>

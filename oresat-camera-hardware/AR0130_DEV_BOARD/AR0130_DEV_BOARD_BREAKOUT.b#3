@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.0125" altunitdist="mm" altunit="mm"/>
+<grid distance="2" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.0125" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -720,6 +720,78 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <vertex x="44.5" y="30"/>
 <vertex x="0" y="30"/>
 </polygon>
+<via x="10" y="10" extent="1-16" drill="0.35"/>
+<via x="6" y="2" extent="1-16" drill="0.35"/>
+<via x="8" y="2" extent="1-16" drill="0.35"/>
+<via x="10" y="2" extent="1-16" drill="0.35"/>
+<via x="12" y="2" extent="1-16" drill="0.35"/>
+<via x="14" y="2" extent="1-16" drill="0.35"/>
+<via x="16" y="2" extent="1-16" drill="0.35"/>
+<via x="18" y="2" extent="1-16" drill="0.35"/>
+<via x="20" y="2" extent="1-16" drill="0.35"/>
+<via x="22" y="2" extent="1-16" drill="0.35"/>
+<via x="24" y="2" extent="1-16" drill="0.35"/>
+<via x="26" y="2" extent="1-16" drill="0.35"/>
+<via x="28" y="2" extent="1-16" drill="0.35"/>
+<via x="30" y="2" extent="1-16" drill="0.35"/>
+<via x="32" y="2" extent="1-16" drill="0.35"/>
+<via x="34" y="2" extent="1-16" drill="0.35"/>
+<via x="36" y="2" extent="1-16" drill="0.35"/>
+<via x="38" y="2" extent="1-16" drill="0.35"/>
+<via x="40" y="2" extent="1-16" drill="0.35"/>
+<via x="42" y="2" extent="1-16" drill="0.35"/>
+<via x="44" y="2" extent="1-16" drill="0.35"/>
+<via x="46" y="2" extent="1-16" drill="0.35"/>
+<via x="48" y="2" extent="1-16" drill="0.35"/>
+<via x="50" y="2" extent="1-16" drill="0.35"/>
+<via x="52" y="2" extent="1-16" drill="0.35"/>
+<via x="54" y="2" extent="1-16" drill="0.35"/>
+<via x="56" y="2" extent="1-16" drill="0.35"/>
+<via x="58" y="2" extent="1-16" drill="0.35"/>
+<via x="60" y="2" extent="1-16" drill="0.35"/>
+<via x="62" y="2" extent="1-16" drill="0.35"/>
+<via x="64" y="2" extent="1-16" drill="0.35"/>
+<via x="68" y="6" extent="1-16" drill="0.35"/>
+<via x="68" y="8" extent="1-16" drill="0.35"/>
+<via x="68" y="10" extent="1-16" drill="0.35"/>
+<via x="68" y="12" extent="1-16" drill="0.35"/>
+<via x="68" y="14" extent="1-16" drill="0.35"/>
+<via x="68" y="16" extent="1-16" drill="0.35"/>
+<via x="68" y="18" extent="1-16" drill="0.35"/>
+<via x="68" y="20" extent="1-16" drill="0.35"/>
+<via x="68" y="22" extent="1-16" drill="0.35"/>
+<via x="2" y="6" extent="1-16" drill="0.35"/>
+<via x="2" y="8" extent="1-16" drill="0.35"/>
+<via x="2" y="10" extent="1-16" drill="0.35"/>
+<via x="2" y="12" extent="1-16" drill="0.35"/>
+<via x="2" y="14" extent="1-16" drill="0.35"/>
+<via x="2" y="16" extent="1-16" drill="0.35"/>
+<via x="2" y="18" extent="1-16" drill="0.35"/>
+<via x="2" y="20" extent="1-16" drill="0.35"/>
+<via x="2" y="22" extent="1-16" drill="0.35"/>
+<via x="2" y="24" extent="1-16" drill="0.35"/>
+<via x="6" y="28" extent="1-16" drill="0.35"/>
+<via x="8" y="28" extent="1-16" drill="0.35"/>
+<via x="10" y="28" extent="1-16" drill="0.35"/>
+<via x="12" y="28" extent="1-16" drill="0.35"/>
+<via x="14" y="28" extent="1-16" drill="0.35"/>
+<via x="16" y="28" extent="1-16" drill="0.35"/>
+<via x="18" y="28" extent="1-16" drill="0.35"/>
+<via x="20" y="28" extent="1-16" drill="0.35"/>
+<via x="22" y="28" extent="1-16" drill="0.35"/>
+<via x="24" y="28" extent="1-16" drill="0.35"/>
+<via x="26" y="28" extent="1-16" drill="0.35"/>
+<via x="28" y="28" extent="1-16" drill="0.35"/>
+<via x="30" y="28" extent="1-16" drill="0.35"/>
+<via x="48" y="28" extent="1-16" drill="0.35"/>
+<via x="50" y="28" extent="1-16" drill="0.35"/>
+<via x="52" y="28" extent="1-16" drill="0.35"/>
+<via x="54" y="28" extent="1-16" drill="0.35"/>
+<via x="56" y="28" extent="1-16" drill="0.35"/>
+<via x="58" y="28" extent="1-16" drill="0.35"/>
+<via x="60" y="28" extent="1-16" drill="0.35"/>
+<via x="62" y="28" extent="1-16" drill="0.35"/>
+<via x="64" y="28" extent="1-16" drill="0.35"/>
 </signal>
 <signal name="D0">
 <contactref element="J1" pad="38"/>

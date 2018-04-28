@@ -1150,6 +1150,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="113,1,100.413,66.571,FRAME1,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 <compatibility>

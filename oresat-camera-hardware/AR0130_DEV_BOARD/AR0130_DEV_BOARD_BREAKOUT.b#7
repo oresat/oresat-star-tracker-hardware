@@ -704,13 +704,14 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <contactref element="U$1" pad="40"/>
 <contactref element="U$1" pad="34"/>
 <contactref element="U$1" pad="36"/>
-<wire x1="44.2495" y1="25.04" x2="44.7495" y2="25.04" width="0" layer="19" extent="1-1"/>
-<wire x1="25.7495" y1="25.04" x2="44.2495" y2="25.04" width="0" layer="19" extent="1-1"/>
-<wire x1="25.249496875" y1="25.04" x2="25.7495" y2="25.04" width="0" layer="19" extent="1-1"/>
-<wire x1="18.49" y1="11.27" x2="25.249496875" y2="25.04" width="0" layer="19" extent="1-1"/>
-<wire x1="15.95" y1="11.27" x2="18.49" y2="11.27" width="0" layer="19" extent="1-1"/>
-<wire x1="13.41" y1="11.27" x2="15.95" y2="11.27" width="0" layer="19" extent="1-1"/>
-<wire x1="10.87" y1="11.27" x2="13.41" y2="11.27" width="0" layer="19" extent="1-1"/>
+<polygon width="0.2" layer="1">
+<vertex x="0" y="0"/>
+<vertex x="70" y="0"/>
+<vertex x="70" y="25.75"/>
+<vertex x="70" y="30"/>
+<vertex x="44.5" y="30"/>
+<vertex x="0" y="30"/>
+</polygon>
 </signal>
 <signal name="D0">
 <contactref element="J1" pad="38"/>
@@ -933,11 +934,22 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <contactref element="U$1" pad="37"/>
 <contactref element="U$1" pad="39"/>
 <contactref element="U$1" pad="35"/>
-<wire x1="26.749496875" y1="25.04" x2="27.2495" y2="25.04" width="0" layer="19" extent="1-1"/>
-<wire x1="26.2495" y1="25.04" x2="26.749496875" y2="25.04" width="0" layer="19" extent="1-1"/>
-<wire x1="15.95" y1="8.73" x2="26.2495" y2="25.04" width="0" layer="19" extent="1-1"/>
-<wire x1="13.41" y1="8.73" x2="15.95" y2="8.73" width="0" layer="19" extent="1-1"/>
-<wire x1="10.87" y1="8.73" x2="13.41" y2="8.73" width="0" layer="19" extent="1-1"/>
+<wire x1="27.2495" y1="25.04" x2="26.749496875" y2="25.04" width="0.254" layer="1"/>
+<wire x1="26.2495" y1="25.04" x2="26.749496875" y2="25.04" width="0.254" layer="1"/>
+<wire x1="26.749496875" y1="25.04" x2="26.749496875" y2="24" width="0.254" layer="1"/>
+<wire x1="26.749496875" y1="24" x2="26.749496875" y2="23.750503125" width="0.254" layer="1"/>
+<wire x1="26.749496875" y1="23.750503125" x2="26.75" y2="23.75" width="0.254" layer="1"/>
+<wire x1="27.2495" y1="25.04" x2="27.2495" y2="24.25050625" width="0.254" layer="1"/>
+<wire x1="27.2495" y1="24.25050625" x2="26.749496875" y2="23.750503125" width="0.254" layer="1"/>
+<wire x1="26.2495" y1="25.04" x2="26.2495" y2="24.2505" width="0.254" layer="1"/>
+<wire x1="26.2495" y1="24.2505" x2="26.749496875" y2="23.750503125" width="0.254" layer="1"/>
+<wire x1="26.749496875" y1="24" x2="26.749496875" y2="22.686996875" width="0.6096" layer="1"/>
+<wire x1="15.95" y1="9.5457875" x2="15.95" y2="8.73" width="0.6096" layer="1"/>
+<wire x1="17.1692" y1="13.1067" x2="17.1692" y2="10.7649875" width="0.6096" layer="1"/>
+<wire x1="17.1692" y1="10.7649875" x2="15.95" y2="9.5457875" width="0.6096" layer="1"/>
+<wire x1="26.749496875" y1="22.686996875" x2="17.1692" y2="13.1067" width="0.6096" layer="1"/>
+<wire x1="15.95" y1="8.73" x2="13.41" y2="8.73" width="0.6096" layer="1"/>
+<wire x1="13.41" y1="8.73" x2="10.87" y2="8.73" width="0.6096" layer="1"/>
 </signal>
 </signals>
 </board>
