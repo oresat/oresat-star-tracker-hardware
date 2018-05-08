@@ -10,3 +10,4 @@ Below is an explanation of each directory:
 - archive - old files and projects no longer in use
 - camera_testing - files related to testing our AR0130-based cameras
 - AR0130_DEV_BOARD - development board for use with AR0130 image sensor
+- openstartracker - star tracker software, based on OpenStarTracker from Univ. of Buffalo
