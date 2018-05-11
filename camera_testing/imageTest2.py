@@ -5,7 +5,7 @@ import select
 import v4l2capture
 import serial
 import math
-
+import subprocess
 
 ser = serial.Serial(
     port='/dev/ttyUSB0',
@@ -79,6 +79,18 @@ def setExposure():
 	expRaw = video.get_exposure_absolute()
 	print "The new exposure is " + str(expRaw) + "."
 
+# Set the gain of the camera
+def setGain():
+
+	newGain = raw_input("Enter the desired gain: ")
+
+	while int(newGain) < 0 or int(newGain) > 100:
+		newGain = raw_input("That was invalid. Try again: ")
+
+	subprocess.call("v4l2-ctl --set-ctrl=gain=" + newGain, shell=True)
+	print "Set the gain."
+
+
 # Capture a burst of images based on a time delay
 def burst_time(delay, numImages):
 
@@ -113,6 +125,7 @@ def help():
 	
 	print "p - capture a single image"
 	print "e - manually set the exposure of the camera"
+	print "g - manually set the gain of the camera"
 	print "b - take a burst of photos with a specified delay between each"
 	print "v - take a burst of photos with varying exposures"
 	print "q - quit the program"
@@ -212,6 +225,8 @@ while response != "q":
 		print "Saved image."
 	elif response == "e":
 		setExposure()
+	elif response == "g":
+		setGain()
 	elif response == "b":
 		burst_time()
 		print "Finished time burst."

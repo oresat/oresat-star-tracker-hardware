@@ -3,6 +3,7 @@ from datetime import datetime
 from time import sleep
 import select
 import v4l2capture
+import subprocess
 
 
 # Open the video device
@@ -45,6 +46,17 @@ def setExposure():
 
 	expRaw = video.get_exposure_absolute()
 	print "The new exposure is " + str(expRaw) + "."
+
+# Set the gain of the camera
+def setGain():
+
+	newGain = raw_input("Enter the desired gain: ")
+
+	while int(newGain) < 0 or int(newGain) > 100:
+		newGain = raw_input("That was invalid. Try again: ")
+
+	subprocess.call("v4l2-ctl --set-ctrl=gain=" + newGain, shell=True)
+	print "Set the gain."
 
 # Capture a burst of images based on a time delay
 def burst_time():
@@ -95,6 +107,8 @@ while response != "q":
 		print "Saved image."
 	elif response == "e":
 		setExposure()
+	elif response == "g":
+		setGain()
 	elif response == "t":
 		burst_time()
 		print "Finished time burst."
