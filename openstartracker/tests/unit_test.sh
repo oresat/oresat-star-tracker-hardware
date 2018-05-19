@@ -52,7 +52,9 @@ if [[ $ESA_TEST == 1 ]]; then
 	make || exit
 fi
 if [[ $IMG_TEST == 1 ]]; then
-	./beast/go || exit
+	pushd beast >/dev/null
+	./go || exit
+	popd>/dev/null
 fi
 if [[ $CALIBRATE == 1 ]]; then
 	time python2.7 calibrate.py $TESTDIR || exit
@@ -88,3 +90,5 @@ fi
 if [ "$KILLPID" != "" ] ; then 
 	kill $KILLPID
 fi
+popd>/dev/null
+

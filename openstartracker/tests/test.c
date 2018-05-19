@@ -26,7 +26,7 @@
  * authorization.                                                           *
  ****************************************************************************/
 
-#include "beast/beast.h"
+#include "../beast/beast.h"
 
 #include <stdio.h>
 #include <stdlib.h>
