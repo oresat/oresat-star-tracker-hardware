@@ -1903,11 +1903,13 @@ Warning: This is the KIT version of this package. This package has a smaller dia
 <wire x1="3.302" y1="4.7244" x2="2.2352" y2="4.7244" width="0.1524" layer="51"/>
 <wire x1="-2.2352" y1="-4.9022" x2="2.2352" y2="-4.9022" width="0.1524" layer="51"/>
 <wire x1="2.2352" y1="-4.9022" x2="2.2352" y2="4.9022" width="0.1524" layer="51"/>
-<wire x1="2.2352" y1="4.9022" x2="-2.2352" y2="4.9022" width="0.1524" layer="51"/>
+<wire x1="2.2352" y1="4.9022" x2="0.3048" y2="4.9022" width="0.1524" layer="51"/>
+<wire x1="0.3048" y1="4.9022" x2="-0.3048" y2="4.9022" width="0.1524" layer="51"/>
+<wire x1="-0.3048" y1="4.9022" x2="-2.2352" y2="4.9022" width="0.1524" layer="51"/>
 <wire x1="-2.2352" y1="4.9022" x2="-2.2352" y2="-4.9022" width="0.1524" layer="51"/>
 <wire x1="0.3048" y1="4.9022" x2="-0.3048" y2="4.9022" width="0.1524" layer="21" curve="-180"/>
 <text x="-3.2766" y="-0.635" size="1.27" layer="25" ratio="6" rot="SR0">&gt;Name</text>
-<circle x="-4.191" y="4.572" radius="0.1016" width="0.254" layer="21"/>
+<circle x="-3.175" y="5.207" radius="0.1016" width="0.254" layer="21"/>
 </package>
 <package name="DGV48-M">
 <smd name="1" x="-2.8702" y="4.6" dx="1.9812" dy="0.2286" layer="1"/>
@@ -3160,7 +3162,6 @@ PACKAGE CENTER</text>
 <vertex x="-4.3" y="-4.05"/>
 <vertex x="-4.9" y="-4.05"/>
 </polygon>
-<circle x="-0.381" y="5.588" radius="0.1016" width="0.2286" layer="21"/>
 </package>
 <package name="OSC_KYOCERA_KC2520B-M">
 <smd name="4" x="-0.8509" y="0.925" dx="1.524" dy="0.9144" layer="1"/>

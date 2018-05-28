@@ -3,7 +3,7 @@
 <eagle version="9.0.0">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="2" display="yes" altdistance="0.0125" altunitdist="inch" altunit="inch"/>
@@ -1903,11 +1903,13 @@ Warning: This is the KIT version of this package. This package has a smaller dia
 <wire x1="3.302" y1="4.7244" x2="2.2352" y2="4.7244" width="0.1524" layer="51"/>
 <wire x1="-2.2352" y1="-4.9022" x2="2.2352" y2="-4.9022" width="0.1524" layer="51"/>
 <wire x1="2.2352" y1="-4.9022" x2="2.2352" y2="4.9022" width="0.1524" layer="51"/>
-<wire x1="2.2352" y1="4.9022" x2="-2.2352" y2="4.9022" width="0.1524" layer="51"/>
+<wire x1="2.2352" y1="4.9022" x2="0.3048" y2="4.9022" width="0.1524" layer="51"/>
+<wire x1="0.3048" y1="4.9022" x2="-0.3048" y2="4.9022" width="0.1524" layer="51"/>
+<wire x1="-0.3048" y1="4.9022" x2="-2.2352" y2="4.9022" width="0.1524" layer="51"/>
 <wire x1="-2.2352" y1="4.9022" x2="-2.2352" y2="-4.9022" width="0.1524" layer="51"/>
 <wire x1="0.3048" y1="4.9022" x2="-0.3048" y2="4.9022" width="0.1524" layer="21" curve="-180"/>
 <text x="-3.2766" y="-0.635" size="1.27" layer="25" ratio="6" rot="SR0">&gt;Name</text>
-<circle x="-4.191" y="4.572" radius="0.1016" width="0.254" layer="21"/>
+<circle x="-3.175" y="5.207" radius="0.1016" width="0.254" layer="21"/>
 </package>
 <package name="DGV48-M">
 <smd name="1" x="-2.8702" y="4.6" dx="1.9812" dy="0.2286" layer="1"/>
@@ -2792,7 +2794,7 @@ Warning: This is the KIT version of this package. This package has a smaller dia
 <smd name="6" x="1.4478" y="-0.25" dx="0.9144" dy="0.3048" layer="1"/>
 <smd name="7" x="1.4478" y="0.25" dx="0.9144" dy="0.3048" layer="1"/>
 <smd name="8" x="1.4478" y="0.75" dx="0.9144" dy="0.3048" layer="1"/>
-<smd name="9" x="0" y="0" dx="1.5748" dy="1.524" layer="1" cream="no"/>
+<smd name="9" x="0" y="0" dx="1.7" dy="1.5494" layer="1" cream="no"/>
 <polygon width="0.0254" layer="31">
 <vertex x="-0.8763" y="0.7747"/>
 <vertex x="-0.8763" y="-0.7747"/>
@@ -3160,7 +3162,6 @@ PACKAGE CENTER</text>
 <vertex x="-4.3" y="-4.05"/>
 <vertex x="-4.9" y="-4.05"/>
 </polygon>
-<circle x="-0.381" y="5.588" radius="0.1016" width="0.2286" layer="21"/>
 </package>
 <package name="OSC_KYOCERA_KC2520B-M">
 <smd name="4" x="-0.8509" y="0.925" dx="1.524" dy="0.9144" layer="1"/>
@@ -4104,7 +4105,7 @@ Warning: This is the KIT version of this package. This package has a smaller dia
 <device name="" package="AR0130CSSM00SPCA0−DRBR1-847AB">
 <connects>
 <connect gate="G$1" pin="AGND" pad="35 39"/>
-<connect gate="G$1" pin="DGND" pad="6 25 30 44"/>
+<connect gate="G$1" pin="DGND" pad="6 30 44"/>
 <connect gate="G$1" pin="DOUT0" pad="45"/>
 <connect gate="G$1" pin="DOUT1" pad="46"/>
 <connect gate="G$1" pin="DOUT10" pad="10"/>

@@ -1,0 +1,14 @@
+rev 2 updates:
+
+- DONE oscillator footprint wrong!
+- DONE connector footprint wrong
+- DINEpin 1 dot not printed on top temp sensor
+- OSHPARKS FAULT! what's with the borders?
+- DONE pin 1 dot on regulators is on pad
+- OSHPARKS FAULT! regulator silkscreen is not centered
+- DONE image sensor board needs silk around board
+- breakout board 5v and gnd labels wrong!
+- are 0402 and 0603 footprints the right size
+- NO should I separate digital/analog ground
+- DONE increase separation from temp sensor pad and pins
+- DONE lens mount outline should be doc not place

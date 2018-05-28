@@ -51,14 +51,16 @@
 #include "stm32f4xx_gpio.h"
 #include "stdio.h"
 
+//added for SD support
+#include <string.h>
+#include "ff.h"
 
-/** @addtogroup STM32F4xx_StdPeriph_Examples
-  * @{
-  */
+FATFS filesys;        /* volume lable */
 
-/** @addtogroup DCMI_OV9655_Camera
-  * @{
-  */ 
+/* save the picture count  */
+uint32_t pic_counter2 = 0;
+
+//end for
 
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
@@ -88,11 +90,12 @@ void EXTILine0_Config(void);
 //uint8_t image_buffer1[FRAME_WIDTH / 2] = {0}; //set array size as (FRAME_WIDTH * 2B/pixel) / (4B/word) = 1 line
 //uint8_t image_buffer2[FRAME_WIDTH / 2] = {0};
 //uint8_t image_buffer3[FRAME_WIDTH / 2] = {0};
-
 //These are temporary, needed for storing entire image on board
 uint8_t image_buffer1[FRAME_WIDTH * FRAME_HEIGHT * 2] = {0}; //set array size as (FRAME_WIDTH * 2B/pixel) / (4B/word) = 1 line
 uint8_t image_buffer2[FRAME_WIDTH * FRAME_HEIGHT * 2] = {0};
 uint8_t image_buffer3[FRAME_WIDTH * FRAME_HEIGHT * 2] = {0};
+
+
 
 uint8_t bmp_header2[70] = {
   0x42, 0x4D, 0x46, 0x96, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x46, 0x00, 0x00, 0x00, 0x28, 0x00,
@@ -184,6 +187,7 @@ int main(void)
         //GPIO_SetBits(GPIOD, GPIO_Pin_6); //disable camera
         DCMI_CaptureCmd(DISABLE);
         GPIO_SetBits(GPIOD, GPIO_Pin_13);
+        //Capture_Image_TO_Bmp;
         serialImage(); //use this to send over serial
         sendFlag = DISABLE;
 
@@ -558,11 +562,11 @@ void TimingDelay_Decrement(void)
 void serialImage()
 {
 
-	for(uint16_t i = 0; i < sizeof(bmp_header2) ; i++)
-	{
-		Delay(1);
-		cPrint(bmp_header2[i]);
-	}
+//	for(uint16_t i = 0; i < sizeof(bmp_header2) ; i++)
+//	{
+//		Delay(1);
+//		cPrint(bmp_header2[i]);
+//	}
 	Delay(1);
 
 	//combined buffers
@@ -583,11 +587,69 @@ void serialImage()
 	}
 
 	//send combined buffer
-	for(uint32_t z = 0 ; z < (FRAME_HEIGHT * FRAME_WIDTH * 2) ; z++)
-	{
-		cPrint(image_buffer3[z]);
-	}
+//	for(uint32_t z = 0 ; z < (FRAME_HEIGHT * FRAME_WIDTH * 2) ; z++)
+//	{
+//		cPrint(image_buffer3[z]);
+//	}
+	//Capture_Image_TO_Bmp();
+
+	//Write to SD stuff Start. Just copied and pasted Capture_Image_TO_Bmp();
+	  int32_t  ret = -1;
+	  int32_t  i = 0;
+	  int32_t  j = 0;
+	  int16_t  data_temp = 0;
+	  uint32_t bw = 0;
+
+	  char  file_str[30] = {0};
+	  FIL file;        /* File object */
 
 
+	  /* mount the filesys */
+	  if (f_mount(0, &filesys) != FR_OK) {
+		  cPrint("1");
+		  //return -1;
+	  }
+	  Delay(10);
+
+	  sprintf(file_str, "pic%d.bmp",pic_counter2);
+
+	  ret = f_open(&file, file_str, FA_WRITE | FA_CREATE_ALWAYS);
+//	  if (ret) {
+//	    return ret;
+//	  }
+
+	#ifdef BMP_16BIT
+	  /* write the bmp header */
+	  ret = f_write(&file, bmp_header, 70, &bw);
+
+	  //16-bit BMP = RRRRR-GGGGG-BBBBB-A
+	  uint16_t k = 0;
+	  for (j = 0; j < FRAME_HEIGHT; j++) {
+		  cPrint("2");
+		  //uint16_t k = 0;
+	    for(i=0;i<FRAME_WIDTH;i++) {
+	    	//image_buffer[k*2+0] = 0xF8; //write all red frame
+	    	//image_buffer[k*2+1] = 0x00;
+	    	image_buf[i*2+1] = image_buffer3[k*2+1];
+	    	image_buf[i*2+0] = image_buffer3[k*2+0];
+
+	    	k++;
+	    }
+	    ret = f_write(&file, image_buf, FRAME_WIDTH * 2, &bw);
+	  }
+
+	#endif
+
+	  ret = f_close(&file);
+
+	  f_mount(0, NULL);
+
+	  /* statistics the take pictures count */
+	  pic_counter2++;
+	  //set_pic_count();
+
+	  //return ret;
+
+	//Write to SD stuff End
 
 }

@@ -68,4 +68,9 @@ void Delay(__IO uint32_t nTime);
 
 extern uint8_t image_buffer[FRAME_WIDTH*FRAME_HEIGHT*2];
 
+//These are temporary, needed for storing entire image on board
+extern uint8_t image_buffer1[FRAME_WIDTH * FRAME_HEIGHT * 2]; //set array size as (FRAME_WIDTH * 2B/pixel) / (4B/word) = 1 line
+extern uint8_t image_buffer2[FRAME_WIDTH * FRAME_HEIGHT * 2];
+extern uint8_t image_buffer3[FRAME_WIDTH * FRAME_HEIGHT * 2];
+
 /*********** Portions COPYRIGHT 2012 Embest Tech. Co., Ltd.*****END OF FILE****/

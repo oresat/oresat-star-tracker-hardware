@@ -131,8 +131,8 @@ int32_t Capture_Image_TO_Bmp(void)
     for(i=0;i<FRAME_WIDTH;i++) {
     	//image_buffer[k*2+0] = 0xF8; //write all red frame
     	//image_buffer[k*2+1] = 0x00;
-    	image_buf[i*2+1] = image_buffer[k*2+1];
-    	image_buf[i*2+0] = image_buffer[k*2+0];
+    	image_buf[i*2+1] = image_buffer3[k*2+1];
+    	image_buf[i*2+0] = image_buffer3[k*2+0];
 
     	k++;
     }

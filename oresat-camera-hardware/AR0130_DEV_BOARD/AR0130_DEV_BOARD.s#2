@@ -3160,7 +3160,6 @@ PACKAGE CENTER</text>
 <vertex x="-4.3" y="-4.05"/>
 <vertex x="-4.9" y="-4.05"/>
 </polygon>
-<circle x="-0.381" y="5.588" radius="0.1016" width="0.2286" layer="21"/>
 </package>
 <package name="OSC_KYOCERA_KC2520B-M">
 <smd name="4" x="-0.8509" y="0.925" dx="1.524" dy="0.9144" layer="1"/>
