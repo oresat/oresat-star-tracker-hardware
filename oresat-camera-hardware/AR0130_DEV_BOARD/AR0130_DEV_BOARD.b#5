@@ -6,10 +6,10 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.0625" altunitdist="mm" altunit="mm"/>
+<grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.0125" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
-<layer number="2" name="Route2" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="2" name="Route2" color="15" fill="1" visible="no" active="yes"/>
 <layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
 <layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
 <layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
@@ -30,35 +30,35 @@
 <layer number="20" name="Dimension" color="24" fill="1" visible="yes" active="yes"/>
 <layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
-<layer number="30" name="bStop" color="7" fill="6" visible="yes" active="yes"/>
-<layer number="31" name="tCream" color="7" fill="4" visible="yes" active="yes"/>
-<layer number="32" name="bCream" color="7" fill="5" visible="yes" active="yes"/>
-<layer number="33" name="tFinish" color="6" fill="3" visible="yes" active="yes"/>
-<layer number="34" name="bFinish" color="6" fill="6" visible="yes" active="yes"/>
-<layer number="35" name="tGlue" color="7" fill="4" visible="yes" active="yes"/>
-<layer number="36" name="bGlue" color="7" fill="5" visible="yes" active="yes"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
+<layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
+<layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
+<layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
+<layer number="35" name="tGlue" color="7" fill="4" visible="no" active="yes"/>
+<layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
-<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
 <layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
-<layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
+<layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
-<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="yes"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="53" name="tGND_GNDA" color="7" fill="1" visible="no" active="no"/>
 <layer number="54" name="bGND_GNDA" color="7" fill="1" visible="no" active="no"/>
@@ -79,59 +79,59 @@
 <layer number="98" name="Guide" color="6" fill="1" visible="no" active="no"/>
 <layer number="99" name="SpiceOrder" color="7" fill="1" visible="no" active="no"/>
 <layer number="100" name="Muster" color="7" fill="1" visible="no" active="no"/>
-<layer number="101" name="Patch_Top" color="12" fill="4" visible="yes" active="yes"/>
-<layer number="102" name="Vscore" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="103" name="tMap" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="104" name="Name" color="16" fill="1" visible="yes" active="yes"/>
-<layer number="105" name="tPlate" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="106" name="bPlate" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="107" name="Crop" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="108" name="tplace-old" color="10" fill="1" visible="yes" active="yes"/>
-<layer number="109" name="ref-old" color="11" fill="1" visible="yes" active="yes"/>
-<layer number="110" name="fp0" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="111" name="LPC17xx" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="112" name="tSilk" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="113" name="IDFDebug" color="4" fill="1" visible="yes" active="yes"/>
-<layer number="114" name="Badge_Outline" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="115" name="ReferenceISLANDS" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="116" name="Patch_BOT" color="9" fill="4" visible="yes" active="yes"/>
-<layer number="118" name="Rect_Pads" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="121" name="_tsilk" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="122" name="_bsilk" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="123" name="tTestmark" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="124" name="bTestmark" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="125" name="_tNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="126" name="_bNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="127" name="_tValues" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="128" name="_bValues" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="129" name="Mask" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="131" name="tAdjust" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="132" name="bAdjust" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="144" name="Drill_legend" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="150" name="Notes" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="151" name="HeatSink" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="152" name="_bDocu" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="153" name="FabDoc1" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="154" name="FabDoc2" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="155" name="FabDoc3" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="199" name="Contour" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="200" name="200bmp" color="1" fill="10" visible="yes" active="yes"/>
-<layer number="201" name="201bmp" color="2" fill="10" visible="yes" active="yes"/>
-<layer number="202" name="202bmp" color="3" fill="10" visible="yes" active="yes"/>
-<layer number="203" name="203bmp" color="4" fill="10" visible="yes" active="yes"/>
-<layer number="204" name="204bmp" color="5" fill="10" visible="yes" active="yes"/>
-<layer number="205" name="205bmp" color="6" fill="10" visible="yes" active="yes"/>
-<layer number="206" name="206bmp" color="7" fill="10" visible="yes" active="yes"/>
-<layer number="207" name="207bmp" color="8" fill="10" visible="yes" active="yes"/>
-<layer number="208" name="208bmp" color="9" fill="10" visible="yes" active="yes"/>
-<layer number="209" name="209bmp" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="210" name="210bmp" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="211" name="211bmp" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="212" name="212bmp" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="213" name="213bmp" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="214" name="214bmp" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="215" name="215bmp" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="216" name="216bmp" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="101" name="Patch_Top" color="12" fill="4" visible="no" active="yes"/>
+<layer number="102" name="Vscore" color="7" fill="1" visible="no" active="yes"/>
+<layer number="103" name="tMap" color="7" fill="1" visible="no" active="yes"/>
+<layer number="104" name="Name" color="16" fill="1" visible="no" active="yes"/>
+<layer number="105" name="tPlate" color="7" fill="1" visible="no" active="yes"/>
+<layer number="106" name="bPlate" color="7" fill="1" visible="no" active="yes"/>
+<layer number="107" name="Crop" color="7" fill="1" visible="no" active="yes"/>
+<layer number="108" name="tplace-old" color="10" fill="1" visible="no" active="yes"/>
+<layer number="109" name="ref-old" color="11" fill="1" visible="no" active="yes"/>
+<layer number="110" name="fp0" color="7" fill="1" visible="no" active="yes"/>
+<layer number="111" name="LPC17xx" color="7" fill="1" visible="no" active="yes"/>
+<layer number="112" name="tSilk" color="7" fill="1" visible="no" active="yes"/>
+<layer number="113" name="IDFDebug" color="4" fill="1" visible="no" active="yes"/>
+<layer number="114" name="Badge_Outline" color="7" fill="1" visible="no" active="yes"/>
+<layer number="115" name="ReferenceISLANDS" color="7" fill="1" visible="no" active="yes"/>
+<layer number="116" name="Patch_BOT" color="9" fill="4" visible="no" active="yes"/>
+<layer number="118" name="Rect_Pads" color="7" fill="1" visible="no" active="yes"/>
+<layer number="121" name="_tsilk" color="7" fill="1" visible="no" active="yes"/>
+<layer number="122" name="_bsilk" color="7" fill="1" visible="no" active="yes"/>
+<layer number="123" name="tTestmark" color="7" fill="1" visible="no" active="yes"/>
+<layer number="124" name="bTestmark" color="7" fill="1" visible="no" active="yes"/>
+<layer number="125" name="_tNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="126" name="_bNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="127" name="_tValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="128" name="_bValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="129" name="Mask" color="7" fill="1" visible="no" active="yes"/>
+<layer number="131" name="tAdjust" color="7" fill="1" visible="no" active="yes"/>
+<layer number="132" name="bAdjust" color="7" fill="1" visible="no" active="yes"/>
+<layer number="144" name="Drill_legend" color="7" fill="1" visible="no" active="yes"/>
+<layer number="150" name="Notes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="151" name="HeatSink" color="7" fill="1" visible="no" active="yes"/>
+<layer number="152" name="_bDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="153" name="FabDoc1" color="7" fill="1" visible="no" active="yes"/>
+<layer number="154" name="FabDoc2" color="7" fill="1" visible="no" active="yes"/>
+<layer number="155" name="FabDoc3" color="7" fill="1" visible="no" active="yes"/>
+<layer number="199" name="Contour" color="7" fill="1" visible="no" active="yes"/>
+<layer number="200" name="200bmp" color="1" fill="10" visible="no" active="yes"/>
+<layer number="201" name="201bmp" color="2" fill="10" visible="no" active="yes"/>
+<layer number="202" name="202bmp" color="3" fill="10" visible="no" active="yes"/>
+<layer number="203" name="203bmp" color="4" fill="10" visible="no" active="yes"/>
+<layer number="204" name="204bmp" color="5" fill="10" visible="no" active="yes"/>
+<layer number="205" name="205bmp" color="6" fill="10" visible="no" active="yes"/>
+<layer number="206" name="206bmp" color="7" fill="10" visible="no" active="yes"/>
+<layer number="207" name="207bmp" color="8" fill="10" visible="no" active="yes"/>
+<layer number="208" name="208bmp" color="9" fill="10" visible="no" active="yes"/>
+<layer number="209" name="209bmp" color="7" fill="1" visible="no" active="yes"/>
+<layer number="210" name="210bmp" color="7" fill="1" visible="no" active="yes"/>
+<layer number="211" name="211bmp" color="7" fill="1" visible="no" active="yes"/>
+<layer number="212" name="212bmp" color="7" fill="1" visible="no" active="yes"/>
+<layer number="213" name="213bmp" color="7" fill="1" visible="no" active="yes"/>
+<layer number="214" name="214bmp" color="7" fill="1" visible="no" active="yes"/>
+<layer number="215" name="215bmp" color="7" fill="1" visible="no" active="yes"/>
+<layer number="216" name="216bmp" color="7" fill="1" visible="no" active="yes"/>
 <layer number="217" name="217bmp" color="18" fill="1" visible="no" active="no"/>
 <layer number="218" name="218bmp" color="19" fill="1" visible="no" active="no"/>
 <layer number="219" name="219bmp" color="20" fill="1" visible="no" active="no"/>
@@ -140,21 +140,21 @@
 <layer number="222" name="222bmp" color="23" fill="1" visible="no" active="no"/>
 <layer number="223" name="223bmp" color="24" fill="1" visible="no" active="no"/>
 <layer number="224" name="224bmp" color="25" fill="1" visible="no" active="no"/>
-<layer number="225" name="225bmp" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="226" name="226bmp" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="227" name="227bmp" color="11" fill="1" visible="yes" active="yes"/>
-<layer number="228" name="228bmp" color="10" fill="1" visible="yes" active="yes"/>
-<layer number="229" name="229bmp" color="14" fill="1" visible="yes" active="yes"/>
-<layer number="230" name="230bmp" color="12" fill="1" visible="yes" active="yes"/>
-<layer number="231" name="231bmp" color="9" fill="1" visible="yes" active="yes"/>
-<layer number="232" name="Eagle3D_PG2" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="233" name="Eagle3D_PG3" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="248" name="Housing" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="249" name="Edge" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="225" name="225bmp" color="7" fill="1" visible="no" active="yes"/>
+<layer number="226" name="226bmp" color="7" fill="1" visible="no" active="yes"/>
+<layer number="227" name="227bmp" color="11" fill="1" visible="no" active="yes"/>
+<layer number="228" name="228bmp" color="10" fill="1" visible="no" active="yes"/>
+<layer number="229" name="229bmp" color="14" fill="1" visible="no" active="yes"/>
+<layer number="230" name="230bmp" color="12" fill="1" visible="no" active="yes"/>
+<layer number="231" name="231bmp" color="9" fill="1" visible="no" active="yes"/>
+<layer number="232" name="Eagle3D_PG2" color="7" fill="1" visible="no" active="yes"/>
+<layer number="233" name="Eagle3D_PG3" color="7" fill="1" visible="no" active="yes"/>
+<layer number="248" name="Housing" color="7" fill="1" visible="no" active="yes"/>
+<layer number="249" name="Edge" color="7" fill="1" visible="no" active="yes"/>
 <layer number="250" name="Descript" color="3" fill="1" visible="no" active="no"/>
 <layer number="251" name="SMDround" color="12" fill="11" visible="no" active="no"/>
-<layer number="254" name="cooling" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="255" name="routoute" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="254" name="cooling" color="7" fill="1" visible="no" active="yes"/>
+<layer number="255" name="routoute" color="7" fill="1" visible="no" active="yes"/>
 </layers>
 <board>
 <plain>
@@ -233,8 +233,8 @@ PULLUPS</text>
 <wire x1="3" y1="44" x2="0" y2="41" width="0" layer="20" curve="90"/>
 <text x="10.25" y="24.875" size="0.6096" layer="21" font="vector" ratio="14">EXTCLK
 SELECT</text>
-<text x="7.5" y="29.5" size="1.5" layer="22" font="vector" ratio="15" rot="MR270">AR0130-DEV-BOARD
-ORESAT 2018-04-06
+<text x="7.7125" y="35.25" size="1.5" layer="22" font="vector" ratio="15" rot="MR270">AR0130-DEV-BOARD REV.2
+ORESAT 2018-05-28
 OLIVER REW</text>
 <wire x1="0" y1="0" x2="0" y2="44" width="2.54" layer="29"/>
 <wire x1="0" y1="44" x2="40" y2="44" width="2.54" layer="29"/>
@@ -3178,22 +3178,22 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <attribute name="VALUE" x="22.18975" y="27.3565" size="0.0254" layer="27"/>
 </element>
 <element name="TP22" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="26.075" y="31.325" smashed="yes">
-<attribute name="NAME" x="27.0375" y="31.325" size="0.508" layer="25" font="vector" ratio="15"/>
+<attribute name="NAME" x="27.1125" y="31.05" size="0.508" layer="25" font="vector" ratio="15"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="26.075" y="29.42" size="1" layer="37"/>
 <attribute name="VALUE" x="25.821" y="30.944" size="0.0254" layer="27"/>
 </element>
 <element name="TP23" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="26.6" y="32.025" smashed="yes">
-<attribute name="NAME" x="27.0375" y="32.025" size="0.508" layer="25" font="vector" ratio="15"/>
+<attribute name="NAME" x="27.1125" y="31.75" size="0.508" layer="25" font="vector" ratio="15"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="26.6" y="30.12" size="1" layer="37"/>
 <attribute name="VALUE" x="26.346" y="31.644" size="0.0254" layer="27"/>
 </element>
 <element name="TP24" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="26.075" y="32.725" smashed="yes">
-<attribute name="NAME" x="27.0375" y="32.725" size="0.508" layer="25" font="vector" ratio="15"/>
+<attribute name="NAME" x="27.1125" y="32.45" size="0.508" layer="25" font="vector" ratio="15"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="26.075" y="30.82" size="1" layer="37"/>
 <attribute name="VALUE" x="25.821" y="32.344" size="0.0254" layer="27"/>
 </element>
 <element name="TP25" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="26.6" y="33.425" smashed="yes">
-<attribute name="NAME" x="27.0375" y="33.425" size="0.508" layer="25" font="vector" ratio="15"/>
+<attribute name="NAME" x="27.1125" y="33.15" size="0.508" layer="25" font="vector" ratio="15"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="26.6" y="31.52" size="1" layer="37"/>
 <attribute name="VALUE" x="26.346" y="33.044" size="0.0254" layer="27"/>
 </element>
@@ -3208,7 +3208,7 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <attribute name="VALUE" x="16.67725" y="27.3565" size="0.0254" layer="27"/>
 </element>
 <element name="TP28" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="26.075" y="34.3" smashed="yes">
-<attribute name="NAME" x="27.0375" y="34.125" size="0.508" layer="25" font="vector" ratio="15"/>
+<attribute name="NAME" x="27.0875" y="34.0875" size="0.508" layer="25" font="vector" ratio="15"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="26.075" y="32.395" size="1" layer="37"/>
 <attribute name="VALUE" x="25.821" y="33.919" size="0.0254" layer="27"/>
 </element>
@@ -3432,8 +3432,6 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <contactref element="U$2" pad="30"/>
 <contactref element="U$2" pad="6"/>
 <contactref element="U$2" pad="44"/>
-<contactref element="U$2" pad="39"/>
-<contactref element="U$2" pad="35"/>
 <contactref element="U10" pad="21"/>
 <contactref element="U10" pad="15"/>
 <contactref element="U10" pad="10"/>
@@ -3701,9 +3699,9 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <via x="28" y="2" extent="1-16" drill="0.254"/>
 <via x="26" y="2" extent="1-16" drill="0.254"/>
 <via x="24" y="2" extent="1-16" drill="0.254"/>
-<via x="22" y="2" extent="1-16" drill="0.254"/>
+<via x="23" y="2" extent="1-16" drill="0.254"/>
 <via x="20" y="2.6875" extent="1-16" drill="0.254"/>
-<via x="18" y="2" extent="1-16" drill="0.254"/>
+<via x="17" y="2" extent="1-16" drill="0.254"/>
 <via x="16" y="2" extent="1-16" drill="0.254"/>
 <via x="14" y="2" extent="1-16" drill="0.254"/>
 <via x="12" y="2" extent="1-16" drill="0.254"/>
@@ -3748,6 +3746,8 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 </polygon>
 <via x="28" y="8.5" extent="1-16" drill="0.254"/>
 <via x="13.25" y="8.75" extent="1-16" drill="0.254"/>
+<contactref element="U$2" pad="39"/>
+<contactref element="U$2" pad="35"/>
 </signal>
 <signal name="3.3V">
 <contactref element="U9" pad="8"/>
@@ -3786,14 +3786,14 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="21.5" y1="13.34375" x2="18" y2="13.34375" width="2" layer="15"/>
 <wire x1="18" y1="13.34375" x2="14.90625" y2="13.34375" width="2" layer="15"/>
 <wire x1="17.8" y1="15.1806" x2="17.8" y2="16.39375" width="0.254" layer="1"/>
-<wire x1="17.8" y1="16.39375" x2="17.8125" y2="16.40625" width="0.254" layer="1"/>
-<via x="17.8125" y="16.40625" extent="1-16" drill="0.254"/>
-<wire x1="17.8125" y1="16.40625" x2="17.8125" y2="13.53125" width="1.016" layer="15"/>
+<wire x1="17.8" y1="16.39375" x2="17.8125" y2="16.90625" width="0.254" layer="1"/>
+<via x="17.8125" y="16.90625" extent="1-16" drill="0.254"/>
+<wire x1="17.8125" y1="16.90625" x2="17.8125" y2="13.53125" width="1.016" layer="15"/>
 <wire x1="17.8125" y1="13.53125" x2="18" y2="13.34375" width="1.016" layer="15"/>
 <wire x1="22.199996875" y1="15.1806" x2="22.199996875" y2="16.393753125" width="0.254" layer="1"/>
-<wire x1="22.199996875" y1="16.393753125" x2="22.1875" y2="16.40625" width="0.254" layer="1"/>
-<via x="22.1875" y="16.40625" extent="1-16" drill="0.254"/>
-<wire x1="22.1875" y1="16.40625" x2="22.1875" y2="14.03125" width="1.016" layer="15"/>
+<wire x1="22.199996875" y1="16.393753125" x2="22.1875" y2="16.90625" width="0.254" layer="1"/>
+<via x="22.1875" y="16.90625" extent="1-16" drill="0.254"/>
+<wire x1="22.1875" y1="16.90625" x2="22.1875" y2="14.03125" width="1.016" layer="15"/>
 <wire x1="22.1875" y1="14.03125" x2="21.5" y2="13.34375" width="1.016" layer="15"/>
 <wire x1="32.875" y1="13.34375" x2="32.875" y2="14.0625" width="0.254" layer="15"/>
 <wire x1="32.875" y1="14.0625" x2="32.375" y2="14.0625" width="0.254" layer="15"/>
@@ -4511,7 +4511,6 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <via x="22.4375" y="31.3125" extent="1-16" drill="0.254"/>
 <via x="22.4375" y="30.8125" extent="1-16" drill="0.254"/>
 <wire x1="32.875" y1="18.5625" x2="32.875" y2="18.5" width="1.27" layer="15"/>
-<wire x1="23.6875" y1="29.5625" x2="23.625" y2="20.9375" width="1.27" layer="16"/>
 <wire x1="23.6875" y1="29.5625" x2="22.4375" y2="30.8125" width="1.27" layer="16"/>
 <polygon width="0.127" layer="16" thermals="no">
 <vertex x="21.25" y="29.625"/>
@@ -4530,14 +4529,15 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="22.4375" y1="31.3125" x2="22.4375" y2="30.8125" width="0.3048" layer="1"/>
 <wire x1="22.4375" y1="30.8125" x2="22.45" y2="30.8" width="0.254" layer="1"/>
 <wire x1="22.45" y1="30.8" x2="22.45" y2="30" width="0.3048" layer="1"/>
-<wire x1="23.625" y1="20.9375" x2="24.5" y2="20.0625" width="1.27" layer="16"/>
-<wire x1="24.5" y1="20.0625" x2="24.5" y2="19.5006" width="1.27" layer="16"/>
+<wire x1="24.5" y1="19.5006" x2="24.5" y2="20.0625" width="1.27" layer="16"/>
 <via x="24.5" y="19" extent="1-16" drill="0.254"/>
 <wire x1="25" y1="18.5" x2="24.5" y2="19" width="1.27" layer="15"/>
 <wire x1="32.875" y1="18.5" x2="25" y2="18.5" width="1.27" layer="15"/>
 <via x="24.5" y="19.5006" extent="1-16" drill="0.254"/>
 <wire x1="24.5" y1="19.5006" x2="24.5" y2="19" width="1.27" layer="16"/>
 <wire x1="24.5" y1="19" x2="24.5" y2="19.5625" width="1.27" layer="15"/>
+<wire x1="24.5" y1="20.0625" x2="23.6875" y2="20.875" width="1.27" layer="16"/>
+<wire x1="23.6875" y1="20.875" x2="23.6875" y2="29.5625" width="1.27" layer="16"/>
 </signal>
 <signal name="VCC_2">
 <contactref element="C5" pad="1"/>

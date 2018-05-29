@@ -3258,11 +3258,9 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <contactref element="C13" pad="1"/>
 <contactref element="C14" pad="1"/>
 <contactref element="C15" pad="1"/>
-<contactref element="J2" pad="36"/>
 <contactref element="U12" pad="2"/>
 <contactref element="U14" pad="2"/>
 <contactref element="U15" pad="2"/>
-<contactref element="J2" pad="37"/>
 <contactref element="J2" pad="38"/>
 <contactref element="D1" pad="A"/>
 <via x="12.25" y="6" extent="1-16" drill="0.254"/>
@@ -3352,6 +3350,8 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <vertex x="32.21875" y="7.5"/>
 <vertex x="12" y="7.5"/>
 </polygon>
+<contactref element="J2" pad="37"/>
+<contactref element="J2" pad="36"/>
 </signal>
 <signal name="GND">
 <contactref element="U11" pad="2"/>
@@ -3378,9 +3378,7 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <contactref element="C32" pad="2"/>
 <contactref element="C39" pad="2"/>
 <contactref element="C40" pad="2"/>
-<contactref element="J2" pad="2"/>
 <contactref element="J2" pad="1"/>
-<contactref element="J2" pad="39"/>
 <contactref element="C6" pad="1"/>
 <contactref element="U12" pad="5"/>
 <contactref element="U12" pad="9"/>
@@ -3432,8 +3430,6 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <contactref element="U$2" pad="30"/>
 <contactref element="U$2" pad="6"/>
 <contactref element="U$2" pad="44"/>
-<contactref element="U$2" pad="39"/>
-<contactref element="U$2" pad="35"/>
 <contactref element="U10" pad="21"/>
 <contactref element="U10" pad="15"/>
 <contactref element="U10" pad="10"/>
@@ -3748,6 +3744,10 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 </polygon>
 <via x="28" y="8.5" extent="1-16" drill="0.254"/>
 <via x="13.25" y="8.75" extent="1-16" drill="0.254"/>
+<contactref element="J2" pad="39"/>
+<contactref element="J2" pad="2"/>
+<contactref element="U$2" pad="39"/>
+<contactref element="U$2" pad="35"/>
 </signal>
 <signal name="3.3V">
 <contactref element="U9" pad="8"/>
