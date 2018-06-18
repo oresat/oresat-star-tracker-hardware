@@ -125,7 +125,8 @@ if __name__ == '__main__':
 		if len(astrometry_results[i])>maxstars:
 			bestimage=i
 			maxstars=len(astrometry_results[i])
-	astrometry_results_all=np.vstack(astrometry_results.values())
+	astrometry_results_all=np.vstack(np.array(astrometry_results.values()))
+        astrometry_results_all=astrometry_results_all.astype('float')
 	
 	#find the dimmest star
 	dimmest_match = astrometry_results_all[np.argmax(astrometry_results_all[:,1]),:]
