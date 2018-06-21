@@ -82,8 +82,6 @@ if [[ $IMG_TEST == 1 ]]; then
 	for i in $TESTDIR/samples/*; do
 		echo "rgb.solve_image('$i')" | nc 127.0.0.1 8010
 		sleep 0.5
-		echo "rgb.solve_image('$i')" | nc 127.0.0.1 8010
-		sleep 0.5
 	done
 	echo 'quit()' | nc 127.0.0.1 8010
 fi
