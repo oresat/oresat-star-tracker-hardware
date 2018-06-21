@@ -1,20 +1,12 @@
 #!/bin/bash
 
 CALIBRATE=0
-REGENERATE=0
-ESA_TEST=0
 IMG_TEST=0
 
-while getopts ":crei" opt; do
+while getopts ":ci" opt; do
   case $opt in
     c)
 	  CALIBRATE=1
-      ;;
-    r)
-	  REGENERATE=1
-      ;;
-    e)
-	  ESA_TEST=1
       ;;
     i)
 	  IMG_TEST=1
@@ -23,8 +15,6 @@ while getopts ":crei" opt; do
       echo "Usage: ./unit_test.sh [options] testdir [cmd]"
       echo -e ""
       echo -e "\t-c\tCalibrate based on images in testdir/samples/"
-      echo -e "\t-r\tRegenerate ESA test"
-      echo -e "\t-e\tRun ESA test"
       echo -e "\t-i\tRun image test"
       echo -e ""
       echo -e "Example cmd:"
@@ -48,28 +38,14 @@ fi
 shift
 
 KILLPID=""
-if [[ $ESA_TEST == 1 ]]; then
-	make || exit
-fi
 if [[ $IMG_TEST == 1 ]]; then
 	pushd beast >/dev/null
 	./go || exit
 	popd>/dev/null
 fi
+
 if [[ $CALIBRATE == 1 ]]; then
 	time python2.7 calibrate.py $TESTDIR || exit
-fi
-if [[ $REGENERATE == 1 ]]; then
-	time python2.7 simulator.py $TESTDIR/calibration.txt $TESTDIR/input.csv $TESTDIR/result.csv || exit
-fi
-
-if [[ $ESA_TEST == 1 ]]; then
-	make &&
-	time $@ ./test $TESTDIR/input.csv $TESTDIR/calibration.txt 1991.25 | tee $TESTDIR/result_real.csv &&
-	gprof test | gprof2dot -s | dot -Tpdf -o test.pdf &&
-	echo "camera coverage simulation percent:" &&
-	echo "100-`diff --suppress-common-lines --speed-large-files -y $TESTDIR/result.csv $TESTDIR/result_real.csv | wc -l`/1" | bc -l &&
-	python2.7 score.py $TESTDIR/result.csv $TESTDIR/result_real.csv 
 fi
 
 if [[ $IMG_TEST == 1 ]]; then
@@ -85,8 +61,9 @@ if [[ $IMG_TEST == 1 ]]; then
 	done
 	echo 'quit()' | nc 127.0.0.1 8010
 fi
+
 if [ "$KILLPID" != "" ] ; then 
 	kill $KILLPID
 fi
-popd>/dev/null
 
+popd>/dev/null
