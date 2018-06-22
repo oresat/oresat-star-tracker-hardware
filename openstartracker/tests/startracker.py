@@ -9,10 +9,6 @@ import fcntl
 import beast
 
 P_MATCH_THRESH = 0.99
-SIMULATE = 0
-
-if 'WATCHDOG_USEC' not in os.environ:
-	os.environ['WATCHDOG_USEC'] = "30000000"
 
 def trace(frame, event, arg):
 	print>>sys.stderr,"%s, %s:%d" % (event, frame.f_code.co_filename, frame.f_lineno)
@@ -47,70 +43,10 @@ C_DB = beast.constellation_db(S_FILTERED, 2 + beast.cvar.DB_REDUNDANCY, 0)
 
 print "Ready"
 
-# Utility functions
-def a2q(A):
-
-	q4 = 0.5 * np.sqrt(1 + np.trace(A));
-	
-	q1 = 1 / (4 * q4) * (A[1,2] - A[2,1]);
-	q2 = 1 / (4 * q4) * (A[2,0] - A[0,2]);
-	q3 = 1 / (4 * q4) * (A[0,1] - A[1,0]);
-	
-	return np.array([q1, q2, q3, q4])
-
-def q2a(q):
-
-	q = q / LA.norm(q)
-	return np.array( [[q[0] ** 2 - q[1] ** 2 - q[2] ** 2 + q[3] ** 2, 2 * (q[0] * q[1] + q[2] * q[3]), 2 * (q[0] * q[2] - q[1] * q[3])], [2 * (q[0] * q[1] - q[2] * q[3]), -q[0] ** 2 + q[1] ** 2 - q[2] ** 2 + q[3] ** 2, 2 * (q[1] * q[2] + q[0] * q[3])], [2 * (q[0] * q[2] + q[1] * q[3]), 2 * (q[1] * q[2] - q[0] * q[3]), -q[0] ** 2 - q[1] ** 2 + q[2] ** 2 + q[3] ** 2]])
-
-def extrapolate_matrix(A, B, t1, t2, t3):
-
-	# Calculate error angles between A and B via small angle approximation of MRPs.
-	R = np.dot(B, np.transpose(A))
-	dq = a2q(R)
-	dp = np.array([dq[0], dq[1], dq[2]]) / (1 + dq[3])
-	anglesAB = 4 * dp
-
-	# Extrapolate to new error angles between B and C.
-	anglesBC = anglesAB / (t2 - t1) * (t3 - t2)
-
-	# Convert to a quaternion via small angle approximation, then get C.
-	C = q2a(np.array([0.5 * anglesBC[0], 0.5 * anglesBC[1], 0.5 * anglesBC[2], 1]))
-
-	return (C, (1000000.0) * anglesAB / (t2 - t1))
-
 ###########
 # Note: SWIG's policy is to garbage collect objects created with
 # constructors, but not objects created by returning from a function
 ###########
-
-# Takes in two matrices of points and finds the attitude matrix needed to transform one onto the other.
-# 
-# Input:
-#	A: nx3 matrix - x,y,z in body frame
-#	B: nx3 matrix - x,y,z in eci
-#	Note: the "n" dimension of both matrices must match
-#
-# Output:
-#	attitude_matrix: returned as a numpy matrix
-def wahba(A, B, weight=[]):
-	
-	assert len(A) == len(B)
-
-	if (len(weight) == 0):
-		weight = np.array([1] * len(A))
-
-	# dot is matrix multiplication for array
-	H = np.dot(np.transpose(A) * weight, B)
-
-	# calculate attitude matrix
-	# (from http://malcolmdshuster.com/FC_MarkleyMortari_Girdwood_1999_AAS.pdf)
-	U, S, Vt = LA.svd(H)
-	flip = LA.det(U) * LA.det(Vt)
-	U[:,2] *= flip
-
-	body2ECI = np.dot(U, Vt)
-	return body2ECI
 
 # Print orientation
 def print_ori(body2ECI):
@@ -214,33 +150,6 @@ class star_image:
 			y = lis.winner.R21
 			z = lis.winner.R31
 			self.match_near(x, y, z, beast.cvar.MAXFOV / 2)
-			
-	def match_rel(self, last_match):
-
-		# Make copy of stars from lastmatch
-		img_stars_from_lm = last_match.img_stars.copy()
-		w = last_match.match.winner
-
-		# Convert the stars to ECI
-		for i in range(img_stars_from_lm.size()):
-			s = img_stars_from_lm.get_star(i)
-			x = s.x * w.R11 + s.y * w.R12 + s.z * w.R13
-			y = s.x * w.R21 + s.y * w.R22 + s.z * w.R23
-			z = s.x * w.R31 + s.y * w.R32 + s.z * w.R33
-			s.x = x
-			s.y = y
-			s.z = z
-
-		# Create constellation from last match
-		self.const_from_lm = beast.constellation_db(img_stars_from_lm, beast.cvar.MAX_FALSE_STARS + 2, 1)
-		
-		# Match between last and current
-		img_const = beast.constellation_db(self.img_stars, beast.cvar.MAX_FALSE_STARS + 2, 1)
-		rel = beast.db_match(self.const_from_lm, img_const)
-
-		if rel.p_match > P_MATCH_THRESH:
-			self.match_from_lm = rel
-			self.db_stars_from_lm = rel.winner.from_match()
 				
 	def print_match(self, bodyCorrection = None, angrate_string = ""):
 		
@@ -250,152 +159,10 @@ class star_image:
 		if self.match is not None:
 			self.match.winner.print_ori()
 
-		db = self.db_stars
-		im = self.img_stars
-
-		if db is None:
-			if self.db_stars_from_lm is None:
-				# neither relative nor absolute matching could be used
-				print ""
-				return
-			else:
-				db = self.db_stars_from_lm
-
-		assert(db.size() == im.size())
-
-		star_out = []
-
-		for i in range(db.size()):
-			s_im = im.get_star(i)
-			s_db = db.get_star(i)
-
-			if (s_db.id >= 0):
-				weight = 1.0 / (s_db.sigma_sq + s_im.sigma_sq)
-				temp = np.dot(bodyCorrection, np.array([[s_im.x], [s_im.y], [s_im.z]]))
-				star_out.append(str(temp[0,0]) + ', ' + str(temp[1,0]) + ', ' + str(temp[2,0]) + ', ' + str(s_db.x) + ', ' + str(s_db.y) + ', ' + str(s_db.z) + ', ' + str(weight))
-		print >>sys.stderr, "stars", len(star_out)
-		print >>sys.stderr, "ang_rate: " +angrate_string
-		print " ".join(star_out) + " " + angrate_string
-
-NONSTARS = {}
-NONSTAR_NEXT_ID = 0
-NONSTAR_DATAFILENAME="/dev/null"
-NONSTAR_DATAFILE = open(NONSTAR_DATAFILENAME, "w")
-
-# Define nonstars
-class nonstar:
-
-	def __init__(self, current_image, i, source):
-
-		global NONSTARS, NONSTAR_NEXT_ID, NONSTAR_DATAFILENAME, NONSTAR_DATAFILE
-		self.id = NONSTAR_NEXT_ID
-		NONSTARS[self.id] = self
-		current_image.img_stars.get_star(i).id = self.id
-		NONSTAR_NEXT_ID += 1
-		self.data = []
-		self.add_data(current_image, i, source)
-		
-	def add_data(self,current_image,i,source):
-
-		s_im = current_image.img_stars.get_star(i)
-		s_db_x = 0.0
-		s_db_y = 0.0
-		s_db_z = 0.0
-		w = None
-
-		if (current_image.match != None and current_image.match.p_match > P_MATCH_THRESH):
-			w = current_image.match.winner
-		elif (current_image.match != None and current_image.match.p_match > P_MATCH_THRESH):
-			w = current_image.match_from_lm.winner
-
-		if w != None:
-			# convert the stars to ECI
-			s_db_x = s_im.x * w.R11 + s_im.y * w.R12 + s_im.z * w.R13
-			s_db_y = s_im.x * w.R21 + s_im.y * w.R22 + s_im.z * w.R23
-			s_db_z = s_im.x * w.R31 + s_im.y * w.R32 + s_im.z * w.R33
-
-		self.data.append([source, s_im.x, s_im.y, s_im.z, s_db_x, s_db_y, s_db_z] + current_image.img_data[i])
-
-	def write_data(self, fd):
-
-		os.write(fd, str(self.id) + " " + str(len(self.data)) + "\n")
-
-		for i in self.data:
-			s = [str(j) for j in i]
-			os.write(fd, " ".join(s) + "\n")
-
-	def __del__(self):
-		self.write_data(NONSTAR_DATAFILE.fileno())
-
-def flush_nonstars():
-
-	global NONSTARS, NONSTAR_NEXT_ID, NONSTAR_DATAFILENAME, NONSTAR_DATAFILE
-	NONSTARS = {}
-	NONSTAR_NEXT_ID = 0
-	gc.collect()
-	NONSTAR_DATAFILE.close()
-	NONSTAR_DATAFILENAME = "data" + str(time()) + ".txt"
-	NONSTAR_DATAFILE = open(NONSTAR_DATAFILENAME, "w")
-	
-def update_nonstars(current_image, source):
-
-	global NONSTARS, NONSTAR_NEXT_ID
-	nonstars_next = {}
-	im = current_image.img_stars
-	db = current_image.db_stars
-	db_lm = current_image.db_stars_from_lm
-
-	if (db != None):
-		assert(db.size() == im.size())
-
-	if (db_lm != None):
-		assert(db_lm.size() == im.size())
-		for i in range(im.size()):
-			im.get_star(i).id = db_lm.get_star(i).id
-
-	for i in range(im.size()):
-		s_im = im.get_star(i)
-
-		# is this a star? if so remove from nonstars
-		if (db != None and db.get_star(i).id >= 0):
-			if (s_im.id in NONSTARS):
-				del NONSTARS[s_im.id]
-			s_im.id = -1
-
-		# if it's already there, add the latest mesurement
-		elif (s_im.id in NONSTARS):
-			NONSTARS[s_im.id].add_data(current_image, i, source)
-			nonstars_next[s_im.id] = NONSTARS[s_im.id]
-
-		# otherwise add a new nonstar
-		else:
-			ns = nonstar(current_image, i, source)
-			nonstars_next[ns.id] = ns
-
-	NONSTARS = nonstars_next
-	
-	# wrap around to prevent integer overflow
-	if (NONSTAR_NEXT_ID > 2 ** 30):
-		flush_nonstars()
-
-def winner_attitude(w):
-
-	eci2body = np.array([[1,0,0], [0,1,0], [0,0,1]], dtype=float)
-	eci2body[0,0] = w.R11
-	eci2body[0,1] = w.R12
-	eci2body[0,2] = w.R13
-	eci2body[1,0] = w.R21
-	eci2body[1,1] = w.R22
-	eci2body[1,2] = w.R23
-	eci2body[2,0] = w.R31
-	eci2body[2,1] = w.R32
-	eci2body[2,2] = w.R33
-	return np.transpose(eci2body)
-
 # Define the star camera
 class star_camera:
 
-	def __init__(self, median_file, source= "RGB"):
+	def __init__(self, median_file, source = "RGB"):
 
 		self.source = source
 		self.current_image = None
@@ -404,40 +171,17 @@ class star_camera:
 	
 	def solve_image(self, imagefile, lis = 1, quiet = 0):
 
-		starttime=time()
-
-		if (SIMULATE == 1 and quiet == 0):
-			s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-			s.connect(("jeb", 7011))
-			data = s.recv(2048)
-			s.close()
-
-		print>>sys.stderr, "Time1: " + str(time() - starttime)
-
+		starttime = time()
 		self.current_image = star_image(imagefile, self.median_image)
-		print>>sys.stderr, "Time2: " + str(time() - starttime)
-
-		if (lis == 1):
-			self.current_image.match_lis()
-		print>>sys.stderr, "Time3: " + str(time() - starttime)
-
-		if self.last_match is not None:
-			self.current_image.match_rel(self.last_match)
-		if (quiet == 0):
-			if (SIMULATE == 1): 
-				print data.rstrip("\n").rstrip("\r")
-			else:
-				self.current_image.print_match()
-			print>>sys.stderr, "Time4: " + str(time() - starttime)
-			
-		update_nonstars(self.current_image, self.source)
-		print>>sys.stderr, "Time5: " + str(time() - starttime)
+		self.current_image.match_lis()
+		self.current_image.print_match()
 
 		if self.current_image.match is not None:
 			self.last_match = self.current_image
 		else:
 			self.last_match = None
-		print>>sys.stderr, "Time6: " + str(time() - starttime)
+
+		print>>sys.stderr, "Time: " + str(time() - starttime)
 
 rgb = star_camera(sys.argv[3])
 
