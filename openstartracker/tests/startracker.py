@@ -438,21 +438,8 @@ class star_camera:
 		else:
 			self.last_match = None
 		print>>sys.stderr, "Time6: " + str(time() - starttime)
-		
-# Define the science camera
-class science_camera:
-
-	def __init__(self, median_file, source = "IR"):
-		self.source = source
-		self.current_image = None
-		self.last_match = None
-		self.median_image = cv2.imread(median_file)
-
-	def solve_image(self, imagefile):
-		os.write(1, os.path.abspath(NONSTAR_DATAFILENAME))
 
 rgb = star_camera(sys.argv[3])
-ir =science_camera(sys.argv[3])
 
 CONNECTIONS = {}
 
