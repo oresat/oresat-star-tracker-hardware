@@ -7,7 +7,6 @@ import numpy.linalg as LA
 import cStringIO
 import fcntl
 import beast
-from systemd import daemon
 
 P_MATCH_THRESH = 0.99
 SIMULATE = 0
@@ -521,17 +520,9 @@ try:
 except IOError:
 	pass
 
-daemon.notify("WATCHDOG=1")
-lastPing = time()
-
 while True:
 
-	# systemd watchdog
-	events = epoll.poll(float(os.environ['WATCHDOG_USEC']) / 2.0e6 - (time() - lastPing))
-
-	if len(events) == 0 or time() >= lastPing + float(os.environ['WATCHDOG_USEC']) / 2.0e6:
-		daemon.notify("WATCHDOG=1")
-		lastPing = time()
+	events = epoll.poll()
 
 	for fd, event_type in events:
 
