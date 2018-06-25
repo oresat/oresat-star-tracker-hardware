@@ -120,7 +120,7 @@ if __name__ == '__main__':
 		img = np.clip(images[n], a_min = 0, a_max = 255).astype(np.uint8)
 		cv2.imwrite(image_name, img)
 
-		solve_cmd = "solve-field --skip-solved --cpulimit 60 " + image_name
+		solve_cmd = "solve-field --skip-solved --no-plots --cpulimit 60 " + image_name
 		print solve_cmd
 		system(solve_cmd)
 
