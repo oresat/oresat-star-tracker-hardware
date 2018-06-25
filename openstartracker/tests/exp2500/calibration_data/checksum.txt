@@ -1,7 +1,0 @@
-205916b9b193b724272036f03fca83b9  exp2500/samples/1.bmp
-57659b740bea9733c3e015bdff7ef8ac  exp2500/samples/2.bmp
-187bf1055824027c29b04df8bb8c7ad6  exp2500/samples/3.bmp
-d4617ebb435ffd1ab45bdeaee96ac253  exp2500/samples/4.bmp
-8281b937e250c05b4bcfedc7e2a17010  exp2500/samples/5.bmp
-d85fba8100ab0d00d1710ea9fd75a93b  exp2500/samples/6.bmp
-31796a79e9f400d96ff67934954470cd  exp2500/samples/7.bmp

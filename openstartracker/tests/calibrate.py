@@ -97,19 +97,17 @@ def basename(filename):
 # only do this part if we were run as a python script
 if __name__ == '__main__':
 
+	# Get images and generate median image
 	samplepath = sys.argv[1] + "/samples"
 	image_names = [ f for f in listdir(samplepath) if isfile(join(samplepath, f)) ]
 	num_images = len(image_names)
 	images = np.asarray([cv2.imread( join(samplepath,image_names[n]) ).astype(float) for n in range(0, num_images)])
 	median_image = np.median(images, axis=0)
 	cv2.imwrite(sys.argv[1] + "/median_image.png", median_image)
-	system("md5sum " + samplepath + "/* >" + sys.argv[1] + "/checksum.txt")
 
-	if system("diff -q " + sys.argv[1] + "/checksum.txt " + sys.argv[1] + "/calibration_data/checksum.txt") != 0:
-		print "Clearing old calibration data:"
-		system("rm -rfv " + sys.argv[1] + "/calibration_data/* ")
-	
-	system("mv " + sys.argv[1] + "/checksum.txt " + sys.argv[1] + "/calibration_data/checksum.txt")
+	# Remove old calibration data
+	print "Clearing old calibration data:"
+	system("rm -rfv " + sys.argv[1] + "/calibration_data/* ")
 		
 	stardb = getstardb()
 	astrometry_results = {}
