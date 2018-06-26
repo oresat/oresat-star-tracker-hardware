@@ -5,6 +5,7 @@ import numpy as np
 import sys
 from astropy.io import fits
 from scipy import spatial
+import cPickle as pickle
 
 # Exposure time
 try: EXPOSURE_TIME = float(environ['EXPOSURE_TIME'])
@@ -103,10 +104,20 @@ if __name__ == '__main__':
 	cv2.imwrite(sys.argv[1] + "/median_image.png", median_image)
 
 	# Remove old calibration data
-	print "Clearing old calibration data:"
+	print "\nClearing old calibration data:"
 	system("rm -rfv " + sys.argv[1] + "/calibration_data/* ")
 		
-	stardb = getstardb()
+	# Load or create the star database
+	stardb = {}
+
+	if isfile("stardb.p"):
+		print "\nLoading database from pickle"
+		stardb = pickle.load(open("stardb.p", "rb"))
+	else:
+		print "\nGenerating database"
+		stardb = getstardb()
+		pickle.dump(stardb, open("stardb.p", "wb"))
+	
 	astrometry_results = {}
 
 	# filter the background image for astrometry - more important for starfield generator
