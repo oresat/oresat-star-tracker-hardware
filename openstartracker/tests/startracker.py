@@ -25,7 +25,7 @@ server.listen(5)
 server.setblocking(0)
 
 # Prepare star tracker
-print "Loading config" 
+print "\nLoading config" 
 beast.load_config(CONFIGFILE)
 
 print "Loading hip_main.dat" 
