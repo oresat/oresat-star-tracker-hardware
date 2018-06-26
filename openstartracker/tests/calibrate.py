@@ -1,12 +1,9 @@
-from os import listdir,system,environ
+from os import listdir, system, environ
 from os.path import isfile, join
 import cv2
 import numpy as np
-import math
-from scipy.stats import poisson
 import sys
 from astropy.io import fits
-from astropy import wcs
 from scipy import spatial
 
 # Exposure time
