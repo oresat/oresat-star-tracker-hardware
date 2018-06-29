@@ -103,6 +103,11 @@ if __name__ == '__main__':
 	median_image = np.median(images, axis=0)
 	cv2.imwrite(sys.argv[1] + "/median_image.png", median_image)
 
+	# Determine if downsampling is required
+	downsample = ""
+	if (images[0].shape[1] >= 1280):
+		downsample = " --downsample 2"
+
 	# Remove old calibration data
 	print "\nClearing old calibration data:"
 	system("rm -rfv " + sys.argv[1] + "/calibration_data/* ")
@@ -128,7 +133,7 @@ if __name__ == '__main__':
 		img = np.clip(images[n], a_min = 0, a_max = 255).astype(np.uint8)
 		cv2.imwrite(image_name, img)
 
-		solve_cmd = "solve-field --skip-solved --no-plots --downsample 2 --cpulimit 60 " + image_name
+		solve_cmd = "solve-field --skip-solved --no-plots" + downsample + " --cpulimit 60 " + image_name
 		print solve_cmd
 		system(solve_cmd)
 
