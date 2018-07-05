@@ -1,6 +1,7 @@
 import os
 import cv2
 import numpy as np
+from time import time
 
 # # Open the ideal image
 # ideal = cv2.imread("ideal.png", cv2.IMREAD_GRAYSCALE)
@@ -10,6 +11,8 @@ import numpy as np
 
 # Go through all files in the sample directory
 for filename in os.listdir("samples"):
+
+	start = time()
 
 	# Open the sample
 	sample = cv2.imread("samples/" + filename, cv2.IMREAD_GRAYSCALE)
@@ -30,4 +33,7 @@ for filename in os.listdir("samples"):
 	elif sample_black <= 306900:
 		message = "not a pure star field"
 
-	print filename + ": " + str(sample_black) + ", " + message 
+	total = time() - start
+
+	print "\n" + filename + ": " + str(sample_black) + ", " + message 
+	print "Time: " + str(total)
