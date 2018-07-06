@@ -2,8 +2,9 @@
 
 CALIBRATE=0
 IMG_TEST=0
+RECOMPILE=0
 
-while getopts ":ci" opt; do
+while getopts ":cir" opt; do
   case $opt in
     c)
 	  CALIBRATE=1
@@ -11,16 +12,15 @@ while getopts ":ci" opt; do
     i)
 	  IMG_TEST=1
       ;;
+    r)
+	  RECOMPILE=1
+      ;;
    \?)
       echo "Usage: ./unit_test.sh [options] testdir [cmd]"
       echo -e ""
       echo -e "\t-c\tCalibrate based on images in testdir/samples/"
       echo -e "\t-i\tRun image test"
-      echo -e ""
-      echo -e "Example cmd:"
-	  echo -e "\tmassif-visualizer: valgrind --tool=massif"
-	  echo -e "\tkcachegrind: valgrind --tool=cachegrind"
-      echo -e ""
+      echo -e "\t-r\tRecompile the backend"
       exit
       ;;
   esac
@@ -38,7 +38,7 @@ fi
 shift
 
 KILLPID=""
-if [[ $IMG_TEST == 1 ]]; then
+if [[ $RECOMPILE == 1 ]]; then
 	pushd beast >/dev/null
 	./go || exit
 	popd>/dev/null
