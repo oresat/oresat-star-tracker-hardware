@@ -28,9 +28,9 @@ for filename in os.listdir("samples"):
 
 	if sample_black > 307190:
 		message = "too few stars"
-	elif sample_black < 307000 and sample_black > 306900:
+	elif sample_black < 306950 and sample_black > 306850:
 		message = "too many stars"
-	elif sample_black <= 306900:
+        elif sample_black <= 306850:
 		message = "not a pure star field"
 
 	total = time() - start
