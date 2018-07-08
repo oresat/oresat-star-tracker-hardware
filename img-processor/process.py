@@ -3,37 +3,64 @@ import cv2
 import numpy as np
 from time import time
 
-# # Open the ideal image
-# ideal = cv2.imread("ideal.png", cv2.IMREAD_GRAYSCALE)
+# Function to process black/white pixel ratio
+def test_samples():
 
-# # Count the number of black pixels in the ideal image
-# ideal_black = (640 * 480) - cv2.countNonZero(ideal)
+	# Go through all files in the sample directory
+	for filename in os.listdir("samples"):
 
-# Go through all files in the sample directory
-for filename in os.listdir("samples"):
+		start = time()
 
-	start = time()
+		# Open the sample
+		sample = cv2.imread("samples/" + filename, cv2.IMREAD_GRAYSCALE)
 
-	# Open the sample
-	sample = cv2.imread("samples/" + filename, cv2.IMREAD_GRAYSCALE)
+		# Threshold the sample
+		ret, threshold = cv2.threshold(sample, 80, 255, cv2.THRESH_BINARY)
 
-	# Threshold the sample
-	ret, threshold = cv2.threshold(sample, 80, 255, cv2.THRESH_BINARY)
+		# Count the number of black pixels in the sample image
+		sample_black = (640 * 480) - cv2.countNonZero(threshold)
 
-	# Count the number of black pixels in the sample image
-	sample_black = (640 * 480) - cv2.countNonZero(threshold)
+		# Print appropriate message
+		message = "good"
 
-	# Print appropriate message
-	message = "good"
+		if sample_black > 307190:
+			message = "too few stars"
+		elif sample_black < 306950 and sample_black > 306850:
+			message = "too many stars"
+	        elif sample_black <= 306850:
+			message = "not a pure star field"
 
-	if sample_black > 307190:
-		message = "too few stars"
-	elif sample_black < 306950 and sample_black > 306850:
-		message = "too many stars"
-        elif sample_black <= 306850:
-		message = "not a pure star field"
+		total = time() - start
 
-	total = time() - start
+		print "\n" + filename + ": " + str(sample_black) + ", " + message 
+		print "Time: " + str(total)
 
-	print "\n" + filename + ": " + str(sample_black) + ", " + message 
-	print "Time: " + str(total)
+
+# Function to test blur detection
+def test_blur():
+
+	# Go through all files in the blur directory
+	for filename in os.listdir("blur"):
+
+		start = time()
+
+		# Open the sample
+		sample = cv2.imread("blur/" + filename, cv2.IMREAD_GRAYSCALE)
+
+		print "\n" + filename + ": " + str(cv2.Laplacian(sample, cv2.CV_64F).var())
+		print "Time: " + str(time() - start)
+
+
+# Control loop
+response = "a"
+
+while response != "q":
+
+	response = raw_input("\nEnter 's' for sample test or 'b' for blur test: ")
+
+	if response == "s":
+		test_samples()
+	elif response == "b":
+		test_blur()
+
+print "\n"
