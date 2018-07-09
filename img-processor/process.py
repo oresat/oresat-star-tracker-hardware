@@ -39,13 +39,13 @@ def test_samples():
 # Function to test blur detection
 def test_blur():
 
-	# Go through all files in the blur directory
-	for filename in os.listdir("blur"):
+	# Go through all files in the samples directory
+	for filename in os.listdir("samples"):
 
 		start = time()
 
 		# Open the sample
-		sample = cv2.imread("blur/" + filename, cv2.IMREAD_GRAYSCALE)
+		sample = cv2.imread("samples/" + filename, cv2.IMREAD_GRAYSCALE)
 
 		print "\n" + filename + ": " + str(cv2.Laplacian(sample, cv2.CV_64F).var())
 		print "Time: " + str(time() - start)
