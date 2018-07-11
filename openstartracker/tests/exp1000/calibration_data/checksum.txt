@@ -1,8 +1,0 @@
-e68e0eb938c4e0779d38ef318ed0545a  exp1000/samples/1.bmp
-929d97f32379979209903be4a81539c5  exp1000/samples/2.bmp
-4e02350789fa6a0b6dd21b7df4963b35  exp1000/samples/3.bmp
-5fb68bab917e7cbe2a4d3fd0006ae356  exp1000/samples/4.bmp
-ef64e1c511b8724a45d2ef3d4a7fb4f1  exp1000/samples/5.bmp
-2f6ac6768a1f38b8f4895a088885ad6c  exp1000/samples/6.bmp
-d86db0768b1c45f298389cde3950f6af  exp1000/samples/7.bmp
-ef58af3a70793f25978412b7b12d7679  exp1000/samples/8.bmp
