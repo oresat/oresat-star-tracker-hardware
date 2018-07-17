@@ -77,12 +77,9 @@ class star_image:
 		self.img_data = []
 		self.match = None
 		self.db_stars = None
-		self.match_from_lm = None
-		self.db_stars_from_lm = None
 		
 		# Placeholders so that these don't get garbage collected by SWIG
 		self.fov_db = None
-		self.const_from_lm = None
 		
 		# TODO: improve memory efficiency
 		if "://" in imagefile:
