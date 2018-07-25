@@ -9,11 +9,6 @@ import fcntl
 import beast
 
 P_MATCH_THRESH = 0.99
-
-def trace(frame, event, arg):
-	print>>sys.stderr,"%s, %s:%d" % (event, frame.f_code.co_filename, frame.f_lineno)
-	return trace
-
 CONFIGFILE = sys.argv[1]
 YEAR = float(sys.argv[2])
 
