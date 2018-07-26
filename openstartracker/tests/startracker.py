@@ -12,6 +12,41 @@ import numpy as np
 import beast
 
 
+# Utility function to see if an image is worth solving
+def check_image(img):
+
+	# Generate test parameters
+	height, width, channels = img.shape
+	total_pixels = height * width
+	blur_check = int(total_pixels * 0.99996744)
+	too_many_check = int(total_pixels * 0.99918619)
+
+	# Convert and threshold the image
+	img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
+	ret, threshold = cv2.threshold(img, 80, 255, cv2.THRESH_BINARY)
+
+	# Count the number of black pixels in the thresholded image
+	threshold_black = total_pixels - cv2.countNonZero(threshold)
+
+	# Check the test values and return appropriate value
+	if threshold_black > blur_check:
+
+		blur = cv2.Laplacian(img, cv2.CV_64F).var()
+
+		if blur != 0 and blur < 5:
+			print "Image too blurry"
+		else:
+			print "Too few stars in image"
+
+		return 0
+
+	elif threshold_black < too_many_check:
+		print "Image has too many stars or is not a pure star field"
+		return 0
+
+	return 1
+
+
 # Prepare constants and get system arguments
 P_MATCH_THRESH = 0.99
 CONFIGFILE = sys.argv[1]
@@ -52,9 +87,20 @@ for image in os.listdir(SAMPLE_DIR):
 	img_stars = beast.star_db()
 	match = None
 	fov_db = None
+
+	# Start output for iteration
+	print "\n\n" + filename
 	
-	# Load and process the image
+	# Load and check if the image is worth processing
 	img = cv2.imread(filename)
+	result = check_image(img)
+
+	# If the image failed testing, skip it
+	if result == 0:
+		print "\nTime: " + str(time() - starttime)
+		continue
+
+	# Process the image for solving
 	img = np.clip(img.astype(np.int16) - MEDIAN_IMAGE, a_min = 0, a_max = 255).astype(np.uint8)
 	img_grey = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
 	
@@ -109,9 +155,7 @@ for image in os.listdir(SAMPLE_DIR):
 		if near.p_match > P_MATCH_THRESH:
 			match = near
 
-	# Print results
-	print "\n\n" + filename
-
+	# Print solution
 	if match is not None:
 
 		match.winner.print_ori()
