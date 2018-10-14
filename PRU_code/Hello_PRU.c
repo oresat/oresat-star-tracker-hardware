@@ -11,8 +11,7 @@
 #define SIZE 32
 #define ARM_2_PRU 0x00000001
 #define PRU_2_ARM 0x00000002
-#define STATUS 0xFF //status reg offset set
-#define MAX (MEMLOC + STATUS + SIZE)
+#define STATUS 0x2 //status reg offset set
 
 void flash(char led);
 void dance();
@@ -53,10 +52,10 @@ void main(void)
 		int *addr = ptr + STATUS;
 		int j = 0;
 
-		for(addr ; addr < (ptr + STATUS + SIZE) ; ++addr)
+		for(addr ; addr < (ptr + STATUS + SIZE) ; addr++)
 		{
 			*addr = j;
-			++j;
+			j++;
 		}
 
 		//send finished flag
