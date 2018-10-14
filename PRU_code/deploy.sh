@@ -1,5 +1,4 @@
 #! /bin/bash
-set -e
 
 ##############################################################################
 #
@@ -67,7 +66,7 @@ echo "git clone git://git.ti.com/pru-software-support-package/pru-software-suppo
 
 echo "-Building project"
 	make clean
-	make
+	make || exit 1
 
 echo "-Placing the firmware"
 	cp gen/*.out /lib/firmware/am335x-pru$PRU_CORE-fw

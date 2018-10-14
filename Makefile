@@ -5,7 +5,7 @@ CC=gcc
 all: $(MYPROGRAM)
 
 $(MYPROGRAM): $(SOURCE)
-	$(CC) $(SOURCE) -o $(MYPROGRAM)
+	$(CC) $(SOURCE) -o $(MYPROGRAM) -Wall
 
 clean:
 	rm -f $(MYPROGRAM)

@@ -14,10 +14,11 @@
 //this is arbitray and unsafe until I reserve this memory somehow
 #define MEMLOC 0xa0000000 
 //#define SIZE 1000000
-#define SIZE 8
+#define SIZE 32
 
 #define ARM_2_PRU 0x00000001
 #define PRU_2_ARM 0x00000002
+#define STATUS 0xFF //status reg offset set
 
 int main()
 {
@@ -43,28 +44,53 @@ int main()
 	*ptr &= !ARM_2_PRU;
 	*ptr &= !PRU_2_ARM;
 
-	//set status reg to one
-	//*(ptr + ARM_2_PRU) = 1;
-	printf("before: %x\n", *ptr);
-	*ptr += ARM_2_PRU;
-	sleep(1);
-	printf("after: %x\n", *ptr);
-	printf("and %x\n", *ptr & PRU_2_ARM);
-	printf("%x\n", ((*ptr & PRU_2_ARM)>>1));
 
-	for(int i = 0 ; i < 5 ; ++i)
+	//set starting location
+	int *addr = ptr + STATUS;
+
+	//zero the space
+	for(int i = 0 ; i < SIZE ; ++i)
 	{
-		if((*ptr & PRU_2_ARM) > 0)
-		{
-			printf("recieved response from PRU\n");
-			*ptr &= !PRU_2_ARM; //clear the reciece flag
-			//*ptr |= ARM_2_PRU; //set the send flag again
-		}else{
-			printf("waiting for respose\n");
-			*ptr |= ARM_2_PRU;
-		}
-		sleep(1);
+		*addr = 0x00;
+		addr++; //increment address by one byte each time
 	}
+
+	//send start flag to PRU
+	*ptr += ARM_2_PRU;
+
+	//int *addr = ptr + STATUS;
+
+	//wait for response
+	while((*ptr & PRU_2_ARM) < 1); //TODO: need a timeout here 
+
+	printf("PRU Response Received\n");
+
+	//reset starting location
+	addr = ptr + STATUS;
+
+	//read back data 
+	for(int i = 0 ; i < SIZE ; ++i)
+	{
+		printf("%x = %x\n", addr, *addr);
+		addr++; //increment address by one byte each time
+	}
+
+	/*
+	   for(int i = 0 ; i < 5 ; ++i)
+	   {
+	   if((*ptr & PRU_2_ARM) > 0)
+	   {
+	   printf("recieved response from PRU\n");
+	 *ptr &= !PRU_2_ARM; //clear the reciece flag
+	// *ptr |= ARM_2_PRU; //set the send flag again
+	}else{
+	printf("waiting for respose\n");
+	 *ptr |= ARM_2_PRU;
+	 }
+	 sleep(1);
+	 }
+
+	 */
 	printf("cleaning up\n");
 
 	//unmap memory
