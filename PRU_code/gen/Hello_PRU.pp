@@ -1,0 +1,12 @@
+gen/Hello_PRU.object: Hello_PRU.c
+gen/Hello_PRU.object: /usr/share/ti/cgt-pru/include/stdint.h
+gen/Hello_PRU.object: /usr/share/ti/cgt-pru/include/stdlib.h
+gen/Hello_PRU.object: /usr/share/ti/cgt-pru/include/linkage.h
+gen/Hello_PRU.object: /usr/share/ti/cgt-pru/include/stdio.h
+gen/Hello_PRU.object: /usr/share/ti/cgt-pru/include/stdarg.h
+gen/Hello_PRU.object: include/am335x/pru_cfg.h
+gen/Hello_PRU.object: resource_table_empty.h
+gen/Hello_PRU.object: /usr/share/ti/cgt-pru/include/stddef.h
+gen/Hello_PRU.object: include/rsc_types.h
+gen/Hello_PRU.object: include/pru_types.h
+gen/Hello_PRU.object: include/am335x/pru_ctrl.h
