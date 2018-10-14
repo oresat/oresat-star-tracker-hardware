@@ -12,6 +12,7 @@
 #define ARM_2_PRU 0x00000001
 #define PRU_2_ARM 0x00000002
 #define STATUS 0xFF //status reg offset set
+#define MAX (MEMLOC + STATUS + SIZE)
 
 void flash(char led);
 void dance();
@@ -31,7 +32,7 @@ void main(void)
 
 	// Clear SYSCFG[STANDBY_INIT] to enable OCP master port
 	// This is supposed to allow us to write to the global memory space?
-	// it works without this, but....
+	// it works without this, sooo....
 	CT_CFG.SYSCFG_bit.STANDBY_INIT = 0;
 
 	int *ptr;
@@ -42,7 +43,6 @@ void main(void)
 
 	while(1)
 	{
-
 		//zero status registers
 		*ptr &= ~ARM_2_PRU;
 		*ptr &= ~PRU_2_ARM;
@@ -53,23 +53,10 @@ void main(void)
 		int *addr = ptr + STATUS;
 		int j = 0;
 
-		/*
-		*(addr + (0 * (int)0xff)) = 0xff;
-		*(addr + (1 * (int)0xff)) = 0xff;
-		*(addr + (2 * (int)0xff)) = 0xff;
-		*(addr + (3 * (int)0xff)) = 0xff;
-		*(addr + (4 * (int)0xff)) = 0xff;
-		*(addr + (5 * (int)0xff)) = 0xff;
-		*(addr + (6 * (int)0xff)) = 0xff;
-		*(addr + (7 * (int)0xff)) = 0xff;
-		*/
-		
-		for(j ; j < SIZE ; j++)
+		for(addr ; addr < (ptr + STATUS + SIZE) ; ++addr)
 		{
-			//char temp = j;
-			char temp = j;
-			*addr = temp;
-			addr++;
+			*addr = j;
+			++j;
 		}
 
 		//send finished flag
@@ -78,24 +65,6 @@ void main(void)
 		//victory dance!
 		flash(2);
 	}
-
-	/*
-	   while(1) 
-	   {
-	   if((*ptr & ARM_2_PRU) == 1) {
-	   __R30 |= pru0_0;
-	   __delay_cycles(DELAY);
-	 *ptr &= ~ARM_2_PRU; //clear the flag
-	 __R30 &= ~pru0_0;
-
-//send response
-	 *ptr |= PRU_2_ARM;
-	 }else{
-	 __R30 ^= pru0_1;
-	 __delay_cycles(DELAY/10);
-	 }
-	 }
-	 */
 }
 
 
@@ -114,6 +83,7 @@ void flash(char led)
 	}
 }
 
+//flash all LEDs
 void dance()
 {
 	flash(0);
@@ -122,7 +92,26 @@ void dance()
 	flash(3);
 }
 
+//Where code goes to die
+
 /*
+	
+	   while(1) 
+	   {
+	   if((*ptr & ARM_2_PRU) == 1) {
+	   __R30 |= pru0_0;
+	   __delay_cycles(DELAY);
+	 *ptr &= ~ARM_2_PRU; //clear the flag
+	 __R30 &= ~pru0_0;
+
+//send response
+	 *ptr |= PRU_2_ARM;
+	 }else{
+	 __R30 ^= pru0_1;
+	 __delay_cycles(DELAY/10);
+	 }
+	 }
+	 
    while (1) {
 
    if(!(__R31 & pru0_5))

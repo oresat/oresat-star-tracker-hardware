@@ -18,7 +18,7 @@
 
 #define ARM_2_PRU 0x00000001
 #define PRU_2_ARM 0x00000002
-#define STATUS 0xFF //status reg offset set
+#define STATUS 0x2 //8 bit status reg offset. Apparently each increment is 4 bits, I don't quite understand this?
 
 int main()
 {
@@ -39,26 +39,25 @@ int main()
 		perror("Error mmapping the file");
 		exit(EXIT_FAILURE);
 	}
+	printf("ptr= %x\n", ptr);
+	printf("*ptr= %x\n", *ptr);
 
-	//zero status registers
+	//zero status flags
 	*ptr &= !ARM_2_PRU;
 	*ptr &= !PRU_2_ARM;
 
 
 	//set starting location
 	int *addr = ptr + STATUS;
+	printf("addr= %x\n", addr);
+	printf("*addr= %x\n", *addr);
 
 	//zero the space
-	for(int i = 0 ; i < SIZE ; ++i)
-	{
+	for(addr ; addr < (ptr + STATUS + SIZE) ; ++addr)
 		*addr = 0x00;
-		addr++; //increment address by one byte each time
-	}
 
 	//send start flag to PRU
 	*ptr += ARM_2_PRU;
-
-	//int *addr = ptr + STATUS;
 
 	//wait for response
 	while((*ptr & PRU_2_ARM) < 1); //TODO: need a timeout here 
@@ -69,12 +68,17 @@ int main()
 	addr = ptr + STATUS;
 
 	//read back data 
-	for(int i = 0 ; i < SIZE ; ++i)
-	{
+	for(addr ; addr < (ptr + STATUS + SIZE) ; ++addr)
 		printf("%x = %x\n", addr, *addr);
-		addr++; //increment address by one byte each time
-	}
 
+	printf("cleaning up\n");
+
+	//unmap memory
+	munmap(ptr, SIZE);
+}
+
+
+//Sorry, Oliver is a old code horder, deal with it...
 	/*
 	   for(int i = 0 ; i < 5 ; ++i)
 	   {
@@ -91,12 +95,6 @@ int main()
 	 }
 
 	 */
-	printf("cleaning up\n");
-
-	//unmap memory
-	munmap(ptr, SIZE);
-}
-
 
 
 /*
