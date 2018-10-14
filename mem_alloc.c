@@ -12,13 +12,18 @@
 #include <sys/mman.h>
 
 //this is arbitray and unsafe until I reserve this memory somehow
-#define MEMLOC 0xa0000000 
+#define MEMLOC 0xa0000004 
 //#define SIZE 1000000
-#define SIZE 32
+#define SIZE 1050
 
-#define ARM_2_PRU 0x00000001
-#define PRU_2_ARM 0x00000002
-#define STATUS 0x2 //8 bit status reg offset. Apparently each increment is 4 bits, I don't quite understand this?
+#define ARM_2_PRU 0x01
+#define PRU_2_ARM 0x02
+#define STATUS 0x01 // first memloc is that status/communication register
+/*
+   BEAGLEBONE MEMORY STRUCTURE
+   From What I can tell, the beaglebone's memory structure is 32 bit words located at 
+   addresses 0x04 bits apart
+ */
 
 int main()
 {
@@ -39,25 +44,20 @@ int main()
 		perror("Error mmapping the file");
 		exit(EXIT_FAILURE);
 	}
-	printf("ptr= %x\n", ptr);
-	printf("*ptr= %x\n", *ptr);
 
 	//zero status flags
 	*ptr &= !ARM_2_PRU;
 	*ptr &= !PRU_2_ARM;
 
-
 	//set starting location
 	int *addr = ptr + STATUS;
-	printf("addr= %x\n", addr);
-	printf("*addr= %x\n", *addr);
 
 	//zero the space
-	for(addr ; addr < (ptr + STATUS + SIZE) ; ++addr)
+	for(addr ; addr < (ptr + STATUS + SIZE) ; addr++)
 		*addr = 0x00;
 
 	//send start flag to PRU
-	*ptr += ARM_2_PRU;
+	*ptr |= ARM_2_PRU;
 
 	//wait for response
 	while((*ptr & PRU_2_ARM) < 1); //TODO: need a timeout here 
@@ -68,10 +68,14 @@ int main()
 	addr = ptr + STATUS;
 
 	//read back data 
-	for(addr ; addr < (ptr + STATUS + SIZE) ; ++addr)
-		printf("%x = %x\n", addr, *addr);
+	int k = 0;
+	for(addr ; addr < (ptr + STATUS + SIZE) ; addr++)
+	{
+		printf("%x(%i) = %x\n", addr, k, *addr);
+		k++;
+	}
 
-	printf("cleaning up\n");
+	printf("Deallocating Memory\n");
 
 	//unmap memory
 	munmap(ptr, SIZE);
@@ -79,22 +83,22 @@ int main()
 
 
 //Sorry, Oliver is a old code horder, deal with it...
-	/*
-	   for(int i = 0 ; i < 5 ; ++i)
-	   {
-	   if((*ptr & PRU_2_ARM) > 0)
-	   {
-	   printf("recieved response from PRU\n");
-	 *ptr &= !PRU_2_ARM; //clear the reciece flag
-	// *ptr |= ARM_2_PRU; //set the send flag again
-	}else{
-	printf("waiting for respose\n");
-	 *ptr |= ARM_2_PRU;
-	 }
-	 sleep(1);
-	 }
+/*
+   for(int i = 0 ; i < 5 ; ++i)
+   {
+   if((*ptr & PRU_2_ARM) > 0)
+   {
+   printf("recieved response from PRU\n");
+ *ptr &= !PRU_2_ARM; //clear the reciece flag
+// *ptr |= ARM_2_PRU; //set the send flag again
+}else{
+printf("waiting for respose\n");
+ *ptr |= ARM_2_PRU;
+ }
+ sleep(1);
+ }
 
-	 */
+ */
 
 
 /*

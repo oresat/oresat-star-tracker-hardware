@@ -1,0 +1,12 @@
+gen/pru_fw.object: pru_fw.c
+gen/pru_fw.object: /usr/share/ti/cgt-pru/include/stdint.h
+gen/pru_fw.object: /usr/share/ti/cgt-pru/include/stdlib.h
+gen/pru_fw.object: /usr/share/ti/cgt-pru/include/linkage.h
+gen/pru_fw.object: /usr/share/ti/cgt-pru/include/stdio.h
+gen/pru_fw.object: /usr/share/ti/cgt-pru/include/stdarg.h
+gen/pru_fw.object: include/am335x/pru_cfg.h
+gen/pru_fw.object: resource_table_empty.h
+gen/pru_fw.object: /usr/share/ti/cgt-pru/include/stddef.h
+gen/pru_fw.object: include/rsc_types.h
+gen/pru_fw.object: include/pru_types.h
+gen/pru_fw.object: include/am335x/pru_ctrl.h
