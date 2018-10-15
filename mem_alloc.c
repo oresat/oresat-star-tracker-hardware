@@ -12,7 +12,7 @@
 #include <sys/mman.h>
 
 //this is arbitray and unsafe until I reserve this memory somehow
-#define MEMLOC 0xa0000004 
+#define MEMLOC 0xa0000000 
 //#define SIZE 1000000
 #define SIZE 1050
 
