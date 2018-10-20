@@ -5,10 +5,10 @@ CC=gcc
 all: $(MYPROGRAM)
 
 $(MYPROGRAM): $(SOURCE)
-	$(CC) $(SOURCE) -o $(MYPROGRAM).o -Wall
+	$(CC) $(SOURCE) -o $(MYPROGRAM).out -Wall
 
 clean:
-	rm -f $(MYPROGRAM).o
+	rm -f $(MYPROGRAM).out
 
 
 

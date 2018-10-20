@@ -7,11 +7,15 @@
 
 #define DELAY 100000000
 
-#define MEMLOC 0x90000000
-#define SIZE 1050
+//#define MEMLOC 0xa0000000
+#define SIZE 1000
 #define ARM_2_PRU 0x00000001
 #define PRU_2_ARM 0x00000002
 #define STATUS 0x1 //status reg offset set
+//#define PRU_BASE_ADDR 0x4a300000
+#define PRU_BASE_ADDR 0x00000000
+#define PRU0_RAM 0x00001000
+#define MEMLOC (PRU_BASE_ADDR + PRU0_RAM)
 /*
    BEAGLEBONE MEMORY STRUCTURE
    From What I can tell, the beaglebone's memory structure is 32 bit words located at 
@@ -20,6 +24,7 @@
 
 void flash(char led);
 void dance();
+void clear();
 
 volatile register uint32_t __R30;
 volatile register uint32_t __R31;
@@ -39,40 +44,50 @@ void main(void)
 	// it works without this, sooo....
 	CT_CFG.SYSCFG_bit.STANDBY_INIT = 0;
 
-	int *ptr;
-	ptr = (int *)MEMLOC;
+	volatile int *ptr;
+	ptr = (volatile int *)MEMLOC;
 
 	//Flash the LEDs a few times at startup
 	dance();
+	clear();
 
+	//zero status registers
+	*ptr &= ~ARM_2_PRU;
+	*ptr &= ~PRU_2_ARM;
+	int count = 0; //making this volatile slows it down alot!!
+	volatile int *startAddr = ptr + STATUS;
+	volatile int *addr;
+
+	//HOLY COW, casting ptr to int increased speed x4 !!!!
+	int max = (int)ptr + STATUS + SIZE; //making this volatile slows it down alot!!
 	while(1)
 	{
-		//zero status registers
-		*ptr &= !ARM_2_PRU;
-		*ptr &= !PRU_2_ARM;
-
 		//wait for signal
 		while((*ptr & ARM_2_PRU) < 1) //TODO: need a timeout here 
-			flash(0);
+			__delay_cycles(5); //delay is needed between checking memory???
+			//Minimum neede delay is  just 1. However, more delay give the linux side time to access memory?
+
+		//clear the flag
+		*ptr &= ~ARM_2_PRU;
 
 		//set starting address
-		int *addr = ptr + STATUS;
-		int j = 0;
+		addr = startAddr;
 
-		for(addr ; addr < (ptr + STATUS + SIZE) ; addr++)
-		{
-			*addr = addr;
-			j++;
-		}
+		for(; addr < max ; ++addr)
+			*addr = count++;
 
 		//send finished flag
 		*ptr |= PRU_2_ARM;
-
-		//victory dance!
-		flash(2);
 	}
 }
 
+//clear all LEDs
+void clear()
+{
+	int i = 0;
+	for(; i < 4 ; i++)
+		__R30 &= ~LED[i];
+}
 
 //flash the specified LED
 void flash(char led)
@@ -80,12 +95,12 @@ void flash(char led)
 	if (led > 3)
 		led = 3;
 	int i = 0;
-	for(i ; i < 4 ; i++)
+	for(; i < 4 ; i++)
 	{
 		__R30 |= LED[led];
-		__delay_cycles(DELAY/10);
+		__delay_cycles(DELAY/50);
 		__R30 &= ~LED[led];
-		__delay_cycles(DELAY/10);
+		__delay_cycles(DELAY/50);
 	}
 }
 
