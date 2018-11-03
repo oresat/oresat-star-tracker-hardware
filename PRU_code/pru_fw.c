@@ -11,16 +11,12 @@
 #define SIZE 1000
 #define ARM_2_PRU 0x00000001
 #define PRU_2_ARM 0x00000002
-#define STATUS 0x1 //status reg offset set
 //#define PRU_BASE_ADDR 0x4a300000
 #define PRU_BASE_ADDR 0x00000000
-#define PRU0_RAM 0x00001000
+#define PRU0_RAM 0x00010000
+#define STATUS 0x1000
 #define MEMLOC (PRU_BASE_ADDR + PRU0_RAM)
-/*
-   BEAGLEBONE MEMORY STRUCTURE
-   From What I can tell, the beaglebone's memory structure is 32 bit words located at 
-   addresses 0x04 bits apart
- */
+#define STATUS_MEM (PRU_BASE_ADDR + STATUS)
 
 void flash(char led);
 void dance();
@@ -55,29 +51,34 @@ void main(void)
 	*ptr &= ~ARM_2_PRU;
 	*ptr &= ~PRU_2_ARM;
 	int count = 0; //making this volatile slows it down alot!!
-	volatile int *startAddr = ptr + STATUS;
+	volatile int *startAddr;
+	startAddr = ptr;
 	volatile int *addr;
 
+	int *status;
+	status = (int*)STATUS_MEM;
+
 	//HOLY COW, casting ptr to int increased speed x4 !!!!
-	int max = (int)ptr + STATUS + SIZE; //making this volatile slows it down alot!!
+	int *max = (int*)ptr + (SIZE); //making this volatile slows it down alot!!
 	while(1)
 	{
 		//wait for signal
-		while((*ptr & ARM_2_PRU) < 1) //TODO: need a timeout here 
-			__delay_cycles(5); //delay is needed between checking memory???
+		while((*status & ARM_2_PRU) < 1) //TODO: need a timeout here 
+			__delay_cycles(1); //delay is needed between checking memory???
 			//Minimum neede delay is  just 1. However, more delay give the linux side time to access memory?
 
 		//clear the flag
-		*ptr &= ~ARM_2_PRU;
-
+		*status &= ~ARM_2_PRU;
+		
 		//set starting address
 		addr = startAddr;
 
+		//don't understand why I need the +1?? It doesn't work if I add it above?
 		for(; addr < max ; ++addr)
-			*addr = count++;
-
+			*addr = ++count;
+		
 		//send finished flag
-		*ptr |= PRU_2_ARM;
+		*status |= PRU_2_ARM;
 	}
 }
 

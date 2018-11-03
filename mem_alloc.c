@@ -14,16 +14,15 @@
 
 
 //this is arbitray and unsafe until I reserve this memory somehow
-//#define MEMLOC 0xa0000000 
-//#define SIZE 1000000
 #define SIZE 1000 //column width, pixel/column
 #define PRU_BASE_ADDR 0x4a300000
-#define PRU0_RAM 0x00001000
+#define STATUS 0x1000
+#define PRU0_RAM 0x00010000
 #define MEMLOC (PRU_BASE_ADDR + PRU0_RAM)
+#define STATUS_MEM (PRU_BASE_ADDR + STATUS)
 
 #define ARM_2_PRU 0x01
 #define PRU_2_ARM 0x02
-#define STATUS 0x01 // first memloc is that status/communication register
 /*
    BEAGLEBONE MEMORY STRUCTURE
    From What I can tell, the beaglebone's memory structure is 32 bit words located at 
@@ -34,22 +33,30 @@
 
 int main()
 {
-	volatile int image[ROWS * SIZE];
+	int image[ROWS * SIZE];
 	volatile int pos = 0; //this showed the greatest speed gain when changed to volatile???
 	//open /dev/mem which gives us access to physical memory
 
 	struct timeval before , after;
 
-	volatile int fd = open("/dev/mem", O_RDWR | O_SYNC);
+	int fd = open("/dev/mem", O_RDWR | O_SYNC);
 	if (fd == -1) 
 	{
 		printf("failed to open\n");
 		return 0;
 	}
 
+	int *status = mmap(0, 4, PROT_READ | PROT_WRITE, MAP_SHARED, fd, STATUS_MEM);
+	if (status == MAP_FAILED)
+	{
+		close(fd);
+		perror("Error mmapping the file");
+		exit(EXIT_FAILURE);
+	}
+
 	//mmap our physical mem location to a virtual address
 	//should this be volatile and unsigned?
-	volatile int *ptr = mmap(0, SIZE, PROT_READ | PROT_WRITE, MAP_SHARED, fd, MEMLOC);
+	int *ptr = mmap(0, SIZE*4, PROT_READ | PROT_WRITE, MAP_SHARED, fd, MEMLOC);
 	if (ptr == MAP_FAILED)
 	{
 		close(fd);
@@ -58,47 +65,40 @@ int main()
 	}
 
 	//zero status flags
-	*ptr &= ~ARM_2_PRU;
-	*ptr &= ~PRU_2_ARM;
+	*status &= ~ARM_2_PRU;
+	*status &= ~PRU_2_ARM;
 
 	//set starting location
-	volatile int *addr = ptr + STATUS;
+	//casting ptr to int here slows it down dramatically!
+	volatile int *addr;
+	addr = ptr;
 
 	//zero the space
-	for(; addr < (ptr + STATUS + SIZE) ; addr++)
-		*addr = 0x00;
+	for(int *tempAddr = (int*)addr; tempAddr < addr + SIZE; tempAddr++)
+		*tempAddr = 0x00;
 
 	printf("====STARTING\n");
 	gettimeofday(&before , NULL);
 
-	//casting ptr to int here slows it down dramatically!
-	volatile int *startAddr = ptr + STATUS;
-
-	//HOLY COW, casting ptr to int increased speed x3 !!!
-	int max = (int)ptr + STATUS + SIZE;
-
 	for(int i = 0 ; i < ROWS ; ++i)
 	{
 		//send start flag to PRU
-		*ptr |= ARM_2_PRU;
+		*status |= ARM_2_PRU;
 
-		//printf("Sent Start to PRU\n");
 		//wait for response
-		while((*ptr & PRU_2_ARM) < 1); //TODO: need a timeout here 
-		
-			//clear the flag
-			*ptr &= ~PRU_2_ARM;
+		while((*status & PRU_2_ARM) < 1); //TODO: need a timeout here 
 
-			//reset starting location
-			addr = startAddr;
+		//clear the flag
+		*status &= ~PRU_2_ARM;
 
-			//copy data	
-			for(; addr < (int*)max ; ++addr)
-				image[++pos] = *addr;
-		
+		//copy data	
+		memcpy(&(image[pos]), (void*)addr, SIZE*4);
+		pos += 1000;
 	}
+
 	gettimeofday(&after , NULL);
 	printf("====ENDING\n");
+	printf("pos: %d\n", pos);
 	long uSecs = after.tv_usec - before.tv_usec;
 	double secs = (double)uSecs / 1000000;
 	double data =(double)(SIZE * ROWS * 4);
@@ -116,7 +116,6 @@ int main()
 	printf("Image Row Time: %Lf uS\n", imageRowTime);
 	printf("Pixel Time(Row Time / 1280): %Lf nS\n", pixelTime * 1000); 
 	printf("Max Frequency: %Lf MHz\n", maxFreq); 
-
 	printf("Deallocating Memory\n");
 
 	//zero status flags
@@ -126,6 +125,17 @@ int main()
 	//unmap memory
 	munmap(ptr, SIZE);
 
-		for(int i = 0 ; i < ROWS * SIZE ; ++i)
-			printf("Image[%d]: %x\n", i, image[i]);
+	int end = ROWS * SIZE;
+
+	int diff;
+	for(int i = 0 ; i < end ; ++i)
+	{
+		diff = image[i+1] - image[i];
+		if( i == end -1)
+			continue;
+		if(diff != 1)
+			printf("image[%d]: %x, image[%d]: %x, diff: %d\n",i ,image[i], i+1, image[i+1], diff);
+	//	printf("Image[%d]: %x\n", i, image[i]);
+	}
+
 }
