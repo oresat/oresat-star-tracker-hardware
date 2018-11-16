@@ -1,4 +1,5 @@
 #/bin/bash
+export PRU_CGT=/usr/share/ti/cgt-pru
 cd PRU_code
 ./deploy.sh
 cd ..

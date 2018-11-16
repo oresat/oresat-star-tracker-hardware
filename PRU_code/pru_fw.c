@@ -12,7 +12,8 @@
 #define ARM_2_PRU 0x00000001
 #define PRU_2_ARM 0x00000002
 //#define PRU_BASE_ADDR 0x4a300000
-#define PRU_BASE_ADDR 0x00000000
+//#define PRU_BASE_ADDR 0x00000000
+#define PRU_BASE_ADDR 0x80000000
 #define PRU0_RAM 0x00010000
 #define STATUS 0x1000
 #define MEMLOC (PRU_BASE_ADDR + PRU0_RAM)
@@ -40,6 +41,14 @@ void main(void)
 	// it works without this, sooo....
 	CT_CFG.SYSCFG_bit.STANDBY_INIT = 0;
 
+
+	/*
+	while(1)
+	{
+ 		__R30 ^= LED[2];
+		__delay_cycles(500000000);
+	}
+	*/
 	volatile int *ptr;
 	ptr = (volatile int *)MEMLOC;
 

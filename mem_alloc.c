@@ -15,7 +15,8 @@
 
 //this is arbitray and unsafe until I reserve this memory somehow
 #define SIZE 1000 //column width, pixel/column
-#define PRU_BASE_ADDR 0x4a300000
+//#define PRU_BASE_ADDR 0x4a300000
+#define PRU_BASE_ADDR 0x80000000
 #define STATUS 0x1000
 #define PRU0_RAM 0x00010000
 #define MEMLOC (PRU_BASE_ADDR + PRU0_RAM)
