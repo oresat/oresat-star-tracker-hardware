@@ -134,9 +134,9 @@ int main()
 		diff = image[i+1] - image[i];
 		if( i == end -1)
 			continue;
-		if(diff != 1)
-			printf("image[%d]: %x, image[%d]: %x, diff: %d\n",i ,image[i], i+1, image[i+1], diff);
-	//	printf("Image[%d]: %x\n", i, image[i]);
+		//if(diff != 1)
+			//printf("image[%d]: %x, image[%d]: %x, diff: %d\n",i ,image[i], i+1, image[i+1], diff);
+		printf("Image[%d]: %x\n", i, image[i]);
 	}
 
 }

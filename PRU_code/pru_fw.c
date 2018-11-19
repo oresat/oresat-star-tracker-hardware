@@ -41,20 +41,35 @@ void main(void)
 	// it works without this, sooo....
 	CT_CFG.SYSCFG_bit.STANDBY_INIT = 0;
 
-
 	/*
+	//Apparently there is no difference when parallel capture is used!?!?!
+	//Parallel Capture Settings
+	CT_CFG.GPCFG0_bit.PRU0_GPI_MODE = 0x01; //enable parallel capture
+	CT_CFG.GPCFG0_bit.PRU0_GPI_CLK_MODE = 0x00; //capture on positive edge
+	*/
+
+	CT_CFG.GPCFG0_bit.PRU0_GPI_MODE = 0x00; //GPIO direct mode(default)
+
+/*
 	while(1)
 	{
- 		__R30 ^= LED[2];
-		__delay_cycles(500000000);
+		while((__R31 & 0x00010000) == 0) //wait for R31[16] to go high
+			__R30 &= 0x0000;
+
+		while(__R31 & 0x00010000) //wait for R31[16] to go low // TODO This bit math should be more efficient!
+		__R30 |= 0x0001;
+
+		//__R30 ^= LED[2];
+		//__delay_cycles(500000000);
 	}
-	*/
+*/
+
 	volatile int *ptr;
 	ptr = (volatile int *)MEMLOC;
 
 	//Flash the LEDs a few times at startup
-	dance();
-	clear();
+	//dance();
+	//clear();
 
 	//zero status registers
 	*ptr &= ~ARM_2_PRU;
@@ -67,25 +82,29 @@ void main(void)
 	int *status;
 	status = (int*)STATUS_MEM;
 
-	//HOLY COW, casting ptr to int increased speed x4 !!!!
 	int *max = (int*)ptr + (SIZE); //making this volatile slows it down alot!!
 	while(1)
 	{
 		//wait for signal
 		while((*status & ARM_2_PRU) < 1) //TODO: need a timeout here 
-			__delay_cycles(1); //delay is needed between checking memory???
-			//Minimum neede delay is  just 1. However, more delay give the linux side time to access memory?
+			__delay_cycles(1); //delay is needed between checking memory??? TODO: Use interupts!
+		//Minimum needed delay is just 1. However, more delay give the linux side time to access memory?
 
 		//clear the flag
 		*status &= ~ARM_2_PRU;
-		
+
 		//set starting address
 		addr = startAddr;
 
-		//don't understand why I need the +1?? It doesn't work if I add it above?
 		for(; addr < max ; ++addr)
-			*addr = ++count;
-		
+		{
+			while(__R31 & 0x00010000); //wait for R31[16] to go low 
+			while((__R31 & 0x00010000) == 0); //wait for R31[16] to go high
+
+			*addr = __R31; //write to address
+		}
+		//*addr = ++count;
+
 		//send finished flag
 		*status |= PRU_2_ARM;
 	}

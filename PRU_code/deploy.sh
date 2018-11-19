@@ -55,11 +55,21 @@ PRU_CORE=0
 #PIN4=P9_28 #PRU0_GPO3
 #PIN5=P9_27 #PRU0_GPO3
 
-PIN1=P2_34
-PIN2=P2_32 #PRU0_GP02
-PIN3=P2_30 #PRU0_GPO3
-PIN4=P2_28
-PIN5=P2_28
+PRU0_0=P1_36
+PRU0_1=P1_33
+PRU0_2=P2_32
+PRU0_3=P2_30
+PRU0_4=P1_31
+PRU0_5=P2_34
+PRU0_6=P2_28
+PRU0_7=P1_29
+#PRU0_15=P2_33
+PRU0_16=P1_20
+
+#PIN2=P2_32 #PRU0_GP02
+#PIN3=P2_30 #PRU0_GPO3
+#PIN4=P2_28
+#PIN5=P2_28
 
 
 echo "*******************************************************"
@@ -80,19 +90,36 @@ echo "-Configuring pinmux"
 	#config-pin -a $HEADER$PIN_NUMBER pruout
 	#config-pin -q $HEADER$PIN_NUMBER
 
-	#Setup Outputs
-	config-pin -a $PIN1 pruout
-	config-pin -q $PIN1
-	config-pin -a $PIN2 pruout
-	config-pin -q $PIN2
-	config-pin -a $PIN3 pruout
-	config-pin -q $PIN3
-	config-pin -a $PIN4 pruout
-	config-pin -q $PIN4
+	#Setup Inputs
+	config-pin -a $PRU0_0 pruin
+	config-pin -q $PRU0_0
+	config-pin -a $PRU0_1 pruin
+	config-pin -q $PRU0_1
+	config-pin -a $PRU0_2 pruin
+	config-pin -q $PRU0_2
+	config-pin -a $PRU0_3 pruin
+	config-pin -q $PRU0_3
+	config-pin -a $PRU0_4 pruin
+	config-pin -q $PRU0_4
+	config-pin -a $PRU0_5 pruin
+	config-pin -q $PRU0_5
+	config-pin -a $PRU0_6 pruin
+	config-pin -q $PRU0_6
+	config-pin -a $PRU0_7 pruin
+	config-pin -q $PRU0_7
+	#config-pin -a $PRU0_15 pruin
+	#config-pin -q $PRU0_15
+	config-pin -a $PRU0_16 pruin
+	config-pin -q $PRU0_16
+
+	#config-pin -a $PIN1 pruout
+	#config-pin -q $PIN1
+	#config-pin -a $PIN2 pruout
+	#config-pin -q $PIN2
 
 	#Setup Inputs
-	config-pin -a $PIN5 pruin
-	config-pin -q $PIN5
+	#config-pin -a $PIN5 pruin
+	#config-pin -q $PIN5
 
 
 echo "-Rebooting"

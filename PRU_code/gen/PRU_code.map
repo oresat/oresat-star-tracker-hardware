@@ -1,7 +1,7 @@
 ******************************************************************************
                      PRU Linker Unix v2.1.5                    
 ******************************************************************************
->> Linked Fri Nov 16 23:45:41 2018
+>> Linked Sun Nov 18 00:53:58 2018
 
 OUTPUT FILE NAME:   <gen/PRU_code.out>
 ENTRY POINT SYMBOL: "_c_int00_noinit_noargs_noexit"  address: 00000000
@@ -12,10 +12,10 @@ MEMORY CONFIGURATION
          name            origin    length      used     unused   attr    fill
 ----------------------  --------  ---------  --------  --------  ----  --------
 PAGE 0:
-  PRU_IMEM              00000000   00002000  00000148  00001eb8  RWIX
+  PRU_IMEM              00000000   00002000  000000c4  00001f3c  RWIX
 
 PAGE 1:
-  PRU_DMEM_0_1          00000000   00002000  00000124  00001edc  RWIX
+  PRU_DMEM_0_1          00000000   00002000  00000114  00001eec  RWIX
   PRU_DMEM_1_0          00002000   00002000  00000000  00002000  RWIX
 
 PAGE 2:
@@ -60,20 +60,14 @@ section   page    origin      length       input sections
 *          0    00000000    00000014     
                   00000000    00000014     rtspruv3_le.lib : boot_special.obj (.text:_c_int00_noinit_noargs_noexit)
 
-.text      0    00000014    00000134     
-                  00000014    00000088     pru_fw.object (.text:main)
-                  0000009c    00000058     pru_fw.object (.text:flash)
-                  000000f4    00000028     pru_fw.object (.text:dance)
-                  0000011c    0000001c     pru_fw.object (.text:clear)
-                  00000138    00000008     rtspruv3_le.lib : exit.obj (.text:abort)
-                  00000140    00000008                     : exit.obj (.text:loader_exit)
+.text      0    00000014    000000b0     
+                  00000014    000000a0     pru_fw.object (.text:main)
+                  000000b4    00000008     rtspruv3_le.lib : exit.obj (.text:abort)
+                  000000bc    00000008                     : exit.obj (.text:loader_exit)
 
 .stack     1    00000000    00000100     UNINITIALIZED
                   00000000    00000004     rtspruv3_le.lib : boot.obj (.stack)
                   00000004    000000fc     --HOLE--
-
-.data      1    00000114    00000010     
-                  00000114    00000010     pru_fw.object (.data:LED)
 
 .cinit     1    00000000    00000000     UNINITIALIZED
 
@@ -107,9 +101,8 @@ GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name
 
 page  address   name                         
 ----  -------   ----                         
-0     00000140  C$$EXIT                      
+0     000000bc  C$$EXIT                      
 2     00026000  CT_CFG                       
-1     00000114  LED                          
 abs   481cc000  __PRU_CREG_BASE_DCAN0        
 abs   481d0000  __PRU_CREG_BASE_DCAN1        
 abs   80000000  __PRU_CREG_BASE_DDR          
@@ -180,11 +173,8 @@ abs   ffffffff  __binit__
 abs   ffffffff  __c_args__                   
 0     00000000  _c_int00_noinit_noargs_noexit
 1     00000000  _stack                       
-0     00000138  abort                        
+0     000000b4  abort                        
 abs   ffffffff  binit                        
-0     0000011c  clear                        
-0     000000f4  dance                        
-0     0000009c  flash                        
 0     00000014  main                         
 1     00000100  pru_remoteproc_ResourceTable 
 
@@ -195,15 +185,11 @@ page  address   name
 ----  -------   ----                         
 0     00000000  _c_int00_noinit_noargs_noexit
 0     00000014  main                         
-0     0000009c  flash                        
-0     000000f4  dance                        
-0     0000011c  clear                        
-0     00000138  abort                        
-0     00000140  C$$EXIT                      
+0     000000b4  abort                        
+0     000000bc  C$$EXIT                      
 1     00000000  _stack                       
 1     00000100  __TI_STACK_END               
 1     00000100  pru_remoteproc_ResourceTable 
-1     00000114  LED                          
 2     00026000  CT_CFG                       
 abs   00000000  __PRU_CREG_BASE_PRU_DMEM_0_1 
 abs   00000000  __PRU_CREG_PRU_INTC          
@@ -274,4 +260,4 @@ abs   ffffffff  __binit__
 abs   ffffffff  __c_args__                   
 abs   ffffffff  binit                        
 
-[80 symbols]
+[76 symbols]
