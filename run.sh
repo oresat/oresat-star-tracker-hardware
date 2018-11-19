@@ -4,5 +4,5 @@ cd PRU_code
 ./deploy.sh
 cd ..
 make
-sleep 1
+sleep .25
 ./mem_alloc.out

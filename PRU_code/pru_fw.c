@@ -11,13 +11,18 @@
 #define SIZE 1000
 #define ARM_2_PRU 0x00000001
 #define PRU_2_ARM 0x00000002
+#define BUF 0x00000004
 //#define PRU_BASE_ADDR 0x4a300000
 //#define PRU_BASE_ADDR 0x00000000
 #define PRU_BASE_ADDR 0x80000000
-#define PRU0_RAM 0x00010000
 #define STATUS 0x1000
-#define MEMLOC (PRU_BASE_ADDR + PRU0_RAM)
 #define STATUS_MEM (PRU_BASE_ADDR + STATUS)
+#define BUF0  (PRU_BASE_ADDR + 0x00002000)
+#define BUF1  (PRU_BASE_ADDR + 0x00003000)
+
+#define ROWS 975  //rows per image
+#define COLS 1280 //pixels per row
+#define CELLS COLS/4 //a cell is a 32 bit word hold 4 byte sized pixels //320
 
 void flash(char led);
 void dance();
@@ -50,63 +55,130 @@ void main(void)
 
 	CT_CFG.GPCFG0_bit.PRU0_GPI_MODE = 0x00; //GPIO direct mode(default)
 
-/*
-	while(1)
-	{
-		while((__R31 & 0x00010000) == 0) //wait for R31[16] to go high
-			__R30 &= 0x0000;
+	/*
+	   while(1)
+	   {
+	   while((__R31 & 0x00010000) == 0) //wait for R31[16] to go high
+	   __R30 &= 0x0000;
 
-		while(__R31 & 0x00010000) //wait for R31[16] to go low // TODO This bit math should be more efficient!
-		__R30 |= 0x0001;
+	   while(__R31 & 0x00010000) //wait for R31[16] to go low // TODO This bit math should be more efficient!
+	   __R30 |= 0x0001;
 
-		//__R30 ^= LED[2];
-		//__delay_cycles(500000000);
+	//__R30 ^= LED[2];
+	//__delay_cycles(500000000);
 	}
-*/
+	*/
 
-	volatile int *ptr;
-	ptr = (volatile int *)MEMLOC;
+	//volatile int *ptr;
+	//ptr = (volatile int *)MEMLOC;
+	volatile int *buf0 = (volatile int *)BUF0;
+	volatile int *buf1 = (volatile int *)BUF1;
 
 	//Flash the LEDs a few times at startup
 	//dance();
 	//clear();
 
-	//zero status registers
-	*ptr &= ~ARM_2_PRU;
-	*ptr &= ~PRU_2_ARM;
-	int count = 0; //making this volatile slows it down alot!!
-	volatile int *startAddr;
-	startAddr = ptr;
-	volatile int *addr;
-
 	int *status;
 	status = (int*)STATUS_MEM;
 
-	int *max = (int*)ptr + (SIZE); //making this volatile slows it down alot!!
+	//zero status flags
+	*status &= ~ARM_2_PRU;
+	*status &= ~PRU_2_ARM;
+
+	//int count = 0; //making this volatile slows it down alot!!
+
+	/*
+	   volatile int *startAddr;
+	   startAddr = ptr;
+	   volatile int *addr;
+	   */
+	int count = 0;
+	volatile int *addr;
+
+	//holds to current buffer to write to
+	int curBuf = 0;
+
+	//int *max = (int*)ptr + (SIZE); //making this volatile slows it down alot!!
+	int *buf0max = (int*)buf0 + CELLS ; //making this volatile slows it down alot!!
+	int *buf1max = (int*)buf1 + CELLS ; //making this volatile slows it down alot!!
+
+	//wait for signal
+	while((*status & ARM_2_PRU) < 1) //TODO: need a timeout here 
+		__delay_cycles(1); //delay is needed between checking memory??? TODO: Use interupts!
+	//Minimum needed delay is just 1. However, more delay give the linux side time to access memory?
+	//
+	//clear the flag
+	*status &= ~ARM_2_PRU;
+
+	int writeReg = 0x00;
+
 	while(1)
 	{
-		//wait for signal
-		while((*status & ARM_2_PRU) < 1) //TODO: need a timeout here 
-			__delay_cycles(1); //delay is needed between checking memory??? TODO: Use interupts!
-		//Minimum needed delay is just 1. However, more delay give the linux side time to access memory?
+		writeReg = 0x00;
+		if(!curBuf) //if on buf0
+		{
+			//loop through every word in buffer
+			for(addr = buf0 ; addr < buf0max ; ++addr)
+			{
+				/* Section Improvements:
+				 * - use macro when waiting for clock
+				 * - don't need to mask <<24 shift?
+				*/
 
-		//clear the flag
-		*status &= ~ARM_2_PRU;
+				int testReg = 0x1232e3;
+				//not using for loop here for speed!
+				//while(__R31 & 0x00010000); //wait for R31[16] to go low 
+				//while((__R31 & 0x00010000) == 0); //wait for R31[16] to go high
+				
+				writeReg |= (testReg & 0x000000ff) << 24;
+				writeReg |= (testReg & 0x000000ff) << 16; 
+				writeReg |= (testReg & 0x000000ff) << 8; 
+				writeReg |= (testReg & 0x000000ff); 
 
-		//set starting address
-		addr = startAddr;
+				*addr = writeReg;
+				//*addr = count++;
+			}
+			curBuf = 1;
+			//clear buf flag for buf 0
+			*status &= ~BUF;
+		}else{
+			//loop through every word in buffer
+			for(addr = buf1 ; addr < buf1max ; ++addr)
+			{
+				int testReg = 0xf36aa8;
+				//not using for loop here for speed!
+				//while(__R31 & 0x00010000); //wait for R31[16] to go low 
+				//while((__R31 & 0x00010000) == 0); //wait for R31[16] to go high
+				
+				writeReg |= (testReg & 0x000000ff) << 24;
+				writeReg |= (testReg & 0x000000ff) << 16; 
+				writeReg |= (testReg & 0x000000ff) << 8; 
+				writeReg |= (testReg & 0x000000ff); 
+
+				*addr = writeReg;
+				//*addr = count++;
+				//*addr = count++;
+			}
+			curBuf = 0;
+			//set buf flag for buf1
+			*status |= BUF;
+		}
+
+		/*
 
 		for(; addr < max ; ++addr)
 		{
-			while(__R31 & 0x00010000); //wait for R31[16] to go low 
-			while((__R31 & 0x00010000) == 0); //wait for R31[16] to go high
+		//while(__R31 & 0x00010000); //wait for R31[16] to go low 
+		//while((__R31 & 0x00010000) == 0); //wait for R31[16] to go high
 
-			*addr = __R31; //write to address
-		}
-		//*addr = ++count;
-
+		// *addr = __R31; //write to address
+		 *addr = 0xaa; //write to address
+		 }
+		// *addr = ++count;
+		*/
 		//send finished flag
 		*status |= PRU_2_ARM;
+		__delay_cycles(40000); //delay is needed between checking memory??? TODO: Use interupts!
 	}
 }
 

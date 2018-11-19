@@ -14,32 +14,36 @@
 
 
 //this is arbitray and unsafe until I reserve this memory somehow
-#define SIZE 1000 //column width, pixel/column
 //#define PRU_BASE_ADDR 0x4a300000
 #define PRU_BASE_ADDR 0x80000000
 #define STATUS 0x1000
-#define PRU0_RAM 0x00010000
-#define MEMLOC (PRU_BASE_ADDR + PRU0_RAM)
+#define BUF0  (PRU_BASE_ADDR + 0x00002000)
+#define BUF1  (PRU_BASE_ADDR + 0x00003000)
 #define STATUS_MEM (PRU_BASE_ADDR + STATUS)
 
 #define ARM_2_PRU 0x01
 #define PRU_2_ARM 0x02
+//Buffer Flag. 0 = buf0, 1 = buf1
+#define BUF 0x04
 /*
    BEAGLEBONE MEMORY STRUCTURE
    From What I can tell, the beaglebone's memory structure is 32 bit words located at 
    addresses 0x04 bits apart
- */
+   */
 
-#define ROWS 461
+
+#define ROWS 975  //rows per image
+#define COLS 1280 //pixels per row
+#define CELLS COLS/4 //a cell is a 32 bit word hold 4 byte sized pixels
 
 int main()
 {
-	int image[ROWS * SIZE];
+	int image[ROWS * CELLS];
 	volatile int pos = 0; //this showed the greatest speed gain when changed to volatile???
-	//open /dev/mem which gives us access to physical memory
 
 	struct timeval before , after;
 
+	//open /dev/mem which gives us access to physical memory
 	int fd = open("/dev/mem", O_RDWR | O_SYNC);
 	if (fd == -1) 
 	{
@@ -56,9 +60,16 @@ int main()
 	}
 
 	//mmap our physical mem location to a virtual address
-	//should this be volatile and unsigned?
-	int *ptr = mmap(0, SIZE*4, PROT_READ | PROT_WRITE, MAP_SHARED, fd, MEMLOC);
-	if (ptr == MAP_FAILED)
+	//Map 2 buffers
+	int *buf0 = mmap(0, CELLS, PROT_READ | PROT_WRITE, MAP_SHARED, fd, BUF0);
+	if (buf0 == MAP_FAILED)
+	{
+		close(fd);
+		perror("Error mmapping the file");
+		exit(EXIT_FAILURE);
+	}
+	int *buf1 = mmap(0, CELLS, PROT_READ | PROT_WRITE, MAP_SHARED, fd, BUF1);
+	if (buf1 == MAP_FAILED)
 	{
 		close(fd);
 		perror("Error mmapping the file");
@@ -69,32 +80,44 @@ int main()
 	*status &= ~ARM_2_PRU;
 	*status &= ~PRU_2_ARM;
 
-	//set starting location
-	//casting ptr to int here slows it down dramatically!
-	volatile int *addr;
-	addr = ptr;
-
 	//zero the space
-	for(int *tempAddr = (int*)addr; tempAddr < addr + SIZE; tempAddr++)
+	for(int *tempAddr = buf0; tempAddr < (buf0 + CELLS); tempAddr++)
+		*tempAddr = 0x00;
+	//
+	//zero the space
+	for(int *tempAddr = buf1; tempAddr < (buf1 + CELLS); tempAddr++)
 		*tempAddr = 0x00;
 
 	printf("====STARTING\n");
 	gettimeofday(&before , NULL);
 
+	//printf("Sending Start\n");
+	//send start flag to PRU
+	*status |= ARM_2_PRU;
+
 	for(int i = 0 ; i < ROWS ; ++i)
 	{
-		//send start flag to PRU
-		*status |= ARM_2_PRU;
 
 		//wait for response
 		while((*status & PRU_2_ARM) < 1); //TODO: need a timeout here 
-
 		//clear the flag
 		*status &= ~PRU_2_ARM;
+		//printf("Recieved reply\n");
 
-		//copy data	
-		memcpy(&(image[pos]), (void*)addr, SIZE*4);
-		pos += 1000;
+		if(*status & BUF)
+		{
+			//printf("buf1111111111\n");
+			//read from buf1
+			memcpy(&(image[pos]), (void*)buf1, COLS);
+			pos += CELLS;
+		}
+		else
+		{
+			//printf("buf0000000000000000000000\n");
+			//read from buf0
+			memcpy(&(image[pos]), (void*)buf0, COLS);
+			pos += CELLS;
+		}
 	}
 
 	gettimeofday(&after , NULL);
@@ -102,7 +125,7 @@ int main()
 	printf("pos: %d\n", pos);
 	long uSecs = after.tv_usec - before.tv_usec;
 	double secs = (double)uSecs / 1000000;
-	double data =(double)(SIZE * ROWS * 4);
+	double data =(double)(COLS * ROWS * 4);
 	double dataRate = data / secs; //bytes per second
 	long imageRowData = (1280*12)/8;
 	long double imageRowTime =  (long double)imageRowData / ((long double)dataRate / (long double)1000000);
@@ -119,14 +142,13 @@ int main()
 	printf("Max Frequency: %Lf MHz\n", maxFreq); 
 	printf("Deallocating Memory\n");
 
-	//zero status flags
-	*ptr &= !ARM_2_PRU;
-	*ptr &= !PRU_2_ARM;
-
 	//unmap memory
-	munmap(ptr, SIZE);
+	munmap(status, CELLS);
+	munmap(buf0, CELLS);
+	munmap(buf1, CELLS);
 
-	int end = ROWS * SIZE;
+	int end = ROWS * CELLS;
+	//int end = 100;
 
 	int diff;
 	for(int i = 0 ; i < end ; ++i)
@@ -134,8 +156,8 @@ int main()
 		diff = image[i+1] - image[i];
 		if( i == end -1)
 			continue;
-		//if(diff != 1)
-			//printf("image[%d]: %x, image[%d]: %x, diff: %d\n",i ,image[i], i+1, image[i+1], diff);
+//		if(diff != 1)
+//			printf("image[%d]: %x, image[%d]: %x, diff: %d\n",i ,image[i], i+1, image[i+1], diff);
 		printf("Image[%d]: %x\n", i, image[i]);
 	}
 
