@@ -15,7 +15,7 @@
 
 //this is arbitray and unsafe until I reserve this memory somehow
 //#define PRU_BASE_ADDR 0x4a300000
-#define PRU_BASE_ADDR 0x80000000
+#define PRU_BASE_ADDR 0x90000000
 #define STATUS 0x1000
 #define BUF0  (PRU_BASE_ADDR + 0x00002000)
 #define BUF1  (PRU_BASE_ADDR + 0x00003000)
@@ -96,8 +96,8 @@ int main()
 	*status |= ARM_2_PRU;
 
 	for(int i = 0 ; i < ROWS ; ++i)
+	//for(int i = 0 ; i < 1 ; ++i)
 	{
-
 		//wait for response
 		while((*status & PRU_2_ARM) < 1); //TODO: need a timeout here 
 		//clear the flag
@@ -148,7 +148,7 @@ int main()
 	munmap(buf1, CELLS);
 
 	int end = ROWS * CELLS;
-	//int end = 100;
+	//int end = 320;
 
 	int diff;
 	for(int i = 0 ; i < end ; ++i)
@@ -158,7 +158,7 @@ int main()
 			continue;
 //		if(diff != 1)
 //			printf("image[%d]: %x, image[%d]: %x, diff: %d\n",i ,image[i], i+1, image[i+1], diff);
-		printf("Image[%d]: %x\n", i, image[i]);
+		printf("Image[%d]: %08x\n", i, image[i]);
 	}
 
 }
