@@ -19,7 +19,6 @@
 #define STATUS_MEM (PRU_BASE_ADDR + STATUS)
 #define BUF0  (PRU_BASE_ADDR + 0x00002000)
 #define BUF1  (PRU_BASE_ADDR + 0x00003000)
-#define BUFTEMP 0x00010000
 
 #define ROWS 975  //rows per image
 #define COLS 1280 //pixels per row
@@ -51,31 +50,14 @@ void main(void)
 	CT_CFG.SYSCFG_bit.STANDBY_INIT = 0;
 
 
-	/*
+
 	//Apparently there is no difference when parallel capture is used!?!?!
 	//Parallel Capture Settings
 	CT_CFG.GPCFG0_bit.PRU0_GPI_MODE = 0x00; //enable parallel capture
 	CT_CFG.GPCFG0_bit.PRU0_GPI_CLK_MODE = 0x01; //capture on positive edge
-	*/
-	CT_CFG.GPCFG0_bit.PRU0_GPI_MODE = 0x00; //GPIO direct mode(default)
 
-	/*
-	   while(1)
-	   {
-	   while((__R31 & 0x00010000) == 0) //wait for R31[16] to go high
-	   __R30 &= 0x0000;
+	//CT_CFG.GPCFG0_bit.PRU0_GPI_MODE = 0x00; //GPIO direct mode(default)
 
-	   while(__R31 & 0x00010000) //wait for R31[16] to go low // TODO This bit math should be more efficient!
-	   __R30 |= 0x0001;
-
-	//__R30 ^= LED[2];
-	//__delay_cycles(500000000);
-	}
-	*/
-
-	//volatile int *ptr;
-	//ptr = (volatile int *)MEMLOC;
-	//volatile int *buf0 = (volatile int *)BUF0;
 	volatile int *buf0 = (volatile int *)BUF0;
 	volatile int *buf1 = (volatile int *)BUF1;
 
@@ -109,115 +91,66 @@ void main(void)
 
 	int writeReg = 0x00;
 
-	/*
-	   while(1)
-	   {
-	   while(__R31 & 0x00010000); //wait for R31[16] to go low 
-	   while((__R31 & 0x00010000) == 0); //wait for R31[16] to go high
-
-	   for(addr = buf0 ; addr < buf0max ; ++addr)
-	 *addr = 0xaa;
-
-	 *status |= BUF;
-	 *status |= PRU_2_ARM;
-	 }
-	 */
-	int image[320];
-	int count = 0;
-
 	while(1)
 	{
 		while((__R31 & VSYNC) == 0); //wait for VSYNC to go high
-		while(__R31 & VSYNC) //while VSYNC is high
+		//while(__R31 & VSYNC) //while VSYNC is high //used to contain below within this loop, not sure which is better. TODO test!
+
+		//TODO should I loop through the number of lines here?
+		if(!curBuf) //if on buf0
 		{
-			//writeReg = 0x000000; //TODO: Why does initializing this as 0x00 screw everything up!?!?!?!
-			if(!curBuf) //if on buf0
-			{
-				//loop through every word in buffer
-				for(addr = buf0 ; addr < buf0max ; ++addr)
-				{
-					/* Section Improvements:
-					 * - use macro when waiting for clock
-					 * - don't need to mask <<24 shift?
-					 */
-					//not using for loop here for speed!
-					while((__R31 & HSYNC) == 0); //wait for HSYNC to go high
-
-					while(__R31 & 0x00010000); //wait for R31[16] to go low 
-					while((__R31 & 0x00010000) == 0); //wait for R31[16] to go high
-					writeReg = (__R31 & 0x000000fc) << 22; //I am assigning here instead of ORing in order to clear writeReg
-					while(__R31 & 0x00010000); 
-					while((__R31 & 0x00010000) == 0); 
-					writeReg |= (__R31 & 0x000000fc) << 14; 
-					while(__R31 & 0x00010000); 
-					while((__R31 & 0x00010000) == 0); 
-					writeReg |= (__R31 & 0x000000fc) << 6; 
-					while(__R31 & 0x00010000); 
-					while((__R31 & 0x00010000) == 0); 
-					writeReg |= (__R31 & 0x000000fc) >> 2; 
-
-					//image[count++] = writeReg;
-					//image[count++] = __R31;
-					//*addr = __R31;
-					*addr = writeReg;
-					//*addr = 0xaa;
-					//*addr = count++;
-				}
-				curBuf = 1;
-				//clear buf flag for buf 0
-				*status &= ~BUF;
-			}else{
-				//loop through every word in buffer
-				for(addr = buf1 ; addr < buf1max ; ++addr)
-				{
-					//not using for loop here for speed!
-					while((__R31 & HSYNC) == 0); //wait for HSYNC to go high
-
-					while(__R31 & 0x00010000); 
-					while((__R31 & 0x00010000) == 0); 
-					writeReg = (__R31 & 0x000000fc) << 22;
-					while(__R31 & 0x00010000); 
-					while((__R31 & 0x00010000) == 0); 
-					writeReg |= (__R31 & 0x000000fc) << 14; 
-					while(__R31 & 0x00010000); 
-					while((__R31 & 0x00010000) == 0); 
-					writeReg |= (__R31 & 0x000000fc) << 6; 
-					while(__R31 & 0x00010000); 
-					while((__R31 & 0x00010000) == 0); 
-					writeReg |= (__R31 & 0x000000fc) >> 2; 
-
-					*addr = writeReg;
-					//*addr = __R31;
-					//*addr = 0xbb;
-				}
-				curBuf = 0;
-				//set buf flag for buf1
-				*status |= BUF;
-			}
-			
-		/*	
-			count = 0;
+			//loop through every word in buffer
 			for(addr = buf0 ; addr < buf0max ; ++addr)
-				*addr = image[count++];
-		*/	
-			*status |= PRU_2_ARM;
+			{
+				//TODO use macro when waiting for clock
+				//not using for loop here for speed!
+				while((__R31 & HSYNC) == 0); //wait for HSYNC to go high
+
+				while(__R31 & 0x00010000); //wait for R31[16] to go low 
+				while((__R31 & 0x00010000) == 0); //wait for R31[16] to go high
+				writeReg = (__R31 & 0x000000fc) << 22; //I am assigning here instead of ORing in order to clear writeReg
+				while(__R31 & 0x00010000); 
+				while((__R31 & 0x00010000) == 0); 
+				writeReg |= (__R31 & 0x000000fc) << 14; 
+				while(__R31 & 0x00010000); 
+				while((__R31 & 0x00010000) == 0); 
+				writeReg |= (__R31 & 0x000000fc) << 6; 
+				while(__R31 & 0x00010000); 
+				while((__R31 & 0x00010000) == 0); 
+				writeReg |= (__R31 & 0x000000fc) >> 2; 
+
+				*addr = writeReg; //write to memory
+			}
+			curBuf = 1; //switch buffer
+			*status &= ~BUF; //clear buf flag for buf 0
+		}else{
+			//loop through every word in buffer
+			for(addr = buf1 ; addr < buf1max ; ++addr)
+			{
+				//not using for loop here for speed!
+				while((__R31 & HSYNC) == 0); //wait for HSYNC to go high
+
+				while(__R31 & 0x00010000); 
+				while((__R31 & 0x00010000) == 0); 
+				writeReg = (__R31 & 0x000000fc) << 22;
+				while(__R31 & 0x00010000); 
+				while((__R31 & 0x00010000) == 0); 
+				writeReg |= (__R31 & 0x000000fc) << 14; 
+				while(__R31 & 0x00010000); 
+				while((__R31 & 0x00010000) == 0); 
+				writeReg |= (__R31 & 0x000000fc) << 6; 
+				while(__R31 & 0x00010000); 
+				while((__R31 & 0x00010000) == 0); 
+				writeReg |= (__R31 & 0x000000fc) >> 2; 
+
+				*addr = writeReg; //write to memory
+			}
+			curBuf = 0; //switch buffer
+			*status |= BUF; //set buf flag for buf1
 		}
 
-		/*
-
-		   for(; addr < max ; ++addr)
-		   {
-		//while(__R31 & 0x00010000); //wait for R31[16] to go low 
-		//while((__R31 & 0x00010000) == 0); //wait for R31[16] to go high
-
-		// *addr = __R31; //write to address
-		 *addr = 0xaa; //write to address
-		 }
-		// *addr = ++count;
-		*/
-		//send finished flag
-		//*status |= PRU_2_ARM;
-		//__delay_cycles(40000); //delay is needed between checking memory??? TODO: Use interupts!
+		//send finished flag to ARM
+		*status |= PRU_2_ARM;
 	}
 }
 
@@ -252,50 +185,4 @@ void dance()
 	flash(2);
 	flash(3);
 }
-
-//Where code goes to die
-
-/*
-
-   while(1) 
-   {
-   if((*ptr & ARM_2_PRU) == 1) {
-   __R30 |= pru0_0;
-   __delay_cycles(DELAY);
- *ptr &= ~ARM_2_PRU; //clear the flag
- __R30 &= ~pru0_0;
-
-//send response
- *ptr |= PRU_2_ARM;
- }else{
- __R30 ^= pru0_1;
- __delay_cycles(DELAY/10);
- }
- }
-
- while (1) {
-
- if(!(__R31 & pru0_5))
- {
- __R30 ^= pru0_0;
- __delay_cycles(DELAY);
- __R30 ^= pru0_1;
- __delay_cycles(DELAY);
- __R30 ^= pru0_2;
- __delay_cycles(DELAY);
- __R30 ^= pru0_3;
- __delay_cycles(DELAY);
- }else{
- __R30 = 0x0000;
-
- __R30 ^= 0x0020;
- __delay_cycles(DELAY);
- __R30 ^= 0x0010;
- __delay_cycles(DELAY);
- __R30 ^= 0x0008;
- __delay_cycles(DELAY);
- }
- }*/
-
-
 

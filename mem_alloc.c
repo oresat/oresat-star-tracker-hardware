@@ -96,7 +96,6 @@ int main()
 	*status |= ARM_2_PRU;
 
 	for(int i = 0 ; i < ROWS ; ++i)
-	//for(int i = 0 ; i < 1 ; ++i)
 	{
 		//wait for response
 		while((*status & PRU_2_ARM) < 1); //TODO: need a timeout here 
@@ -106,14 +105,12 @@ int main()
 
 		if(*status & BUF)
 		{
-			//printf("buf1111111111\n");
 			//read from buf1
 			memcpy(&(image[pos]), (void*)buf1, COLS);
 			pos += CELLS;
 		}
 		else
 		{
-			//printf("buf0000000000000000000000\n");
 			//read from buf0
 			memcpy(&(image[pos]), (void*)buf0, COLS);
 			pos += CELLS;
@@ -122,10 +119,9 @@ int main()
 
 	gettimeofday(&after , NULL);
 	printf("====ENDING\n");
-	printf("pos: %d\n", pos);
 	long uSecs = after.tv_usec - before.tv_usec;
 	double secs = (double)uSecs / 1000000;
-	double data =(double)(COLS * ROWS * 4);
+	double data =(double)((COLS * ROWS * 12)/8); //bytes
 	double dataRate = data / secs; //bytes per second
 	long imageRowData = (1280*12)/8;
 	long double imageRowTime =  (long double)imageRowData / ((long double)dataRate / (long double)1000000);
@@ -148,16 +144,10 @@ int main()
 	munmap(buf1, CELLS);
 
 	int end = ROWS * CELLS;
-	//int end = 320;
+//	int end = 1000;
 
-	int diff;
 	for(int i = 0 ; i < end ; ++i)
 	{
-		diff = image[i+1] - image[i];
-		if( i == end -1)
-			continue;
-//		if(diff != 1)
-//			printf("image[%d]: %x, image[%d]: %x, diff: %d\n",i ,image[i], i+1, image[i+1], diff);
 		printf("Image[%d]: %08x\n", i, image[i]);
 	}
 
