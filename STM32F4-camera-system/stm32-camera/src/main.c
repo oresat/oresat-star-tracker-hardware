@@ -45,20 +45,12 @@
 #include "stm32f4_discovery_lcd.h"
 #include "stm32f4_discovery_lis302dl.h"
 #include "main.h"
-#include "bmp.h"
+//#include "bmp.h"
 #include "dcmi_ov9655.h"
 #include "USARTprint.h"
 #include "stm32f4xx_gpio.h"
 #include "stdio.h"
-
-//added for SD support
-#include <string.h>
-#include "ff.h"
-
-FATFS filesys;        /* volume lable */
-
-/* save the picture count  */
-uint32_t pic_counter2 = 0;
+#include "SD.h"
 
 //end for
 
@@ -95,15 +87,13 @@ uint8_t image_buffer1[FRAME_WIDTH * FRAME_HEIGHT * 2] = {0}; //set array size as
 uint8_t image_buffer2[FRAME_WIDTH * FRAME_HEIGHT * 2] = {0};
 uint8_t image_buffer3[FRAME_WIDTH * FRAME_HEIGHT * 2] = {0};
 
+//temp bufs for saving to SD, these can probably be smaller
+uint8_t temp_buf1[1024] = {0};
+uint8_t temp_buf2[1024] = {0};
 
-
-uint8_t bmp_header2[70] = {
-  0x42, 0x4D, 0x46, 0x96, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x46, 0x00, 0x00, 0x00, 0x28, 0x00,
-  0x00, 0x00, 0xA0, 0x00, 0x00, 0x00, 0x78, 0x00, 0x00, 0x00, 0x01, 0x00, 0x10, 0x00, 0x03, 0x00,
-  0x00, 0x00, 0x00, 0x58, 0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xF8, 0x00, 0x00, 0xE0, 0x07, 0x00, 0x00, 0x1F, 0x00,
-  0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-};
+//flags for saving to SD
+uint8_t send_SD_1 = 0;
+uint8_t send_SD_2 = 0;
 
 /* Private functions ---------------------------------------------------------*/
 /**
@@ -174,8 +164,10 @@ int main(void)
 //      	}
 
       if (KeyPressFlg) {
+    	intCount = 0;
 
     	GPIO_ResetBits(GPIOD, GPIO_Pin_13); //turn off led to show
+    	prepareSD(); //get SD ready
 
     	KeyPressFlg = 0;
         /* press user KEY take a photo */
@@ -183,14 +175,29 @@ int main(void)
         	DCMI_CaptureCmd(ENABLE);
         }
 
-        while(sendFlag == DISABLE) {} //wait for complete flag to be set by interrupt
+        //while(sendFlag == DISABLE) {} //wait for complete flag to be set by interrupt ORIGINAL WORKS!
         //GPIO_SetBits(GPIOD, GPIO_Pin_6); //disable camera
+        while(sendFlag == DISABLE)
+        {
+        	//write to SD when flag is set
+        	if(send_SD_1)
+        	{
+        		saveSDpart(temp_buf2);
+        		send_SD_1 = 0; //disable flag
+        	}
+        	if(send_SD_2)
+        	{
+        		saveSDpart(temp_buf1);
+        		send_SD_2 = 0; //disable flag
+        	}
+        }
+
         DCMI_CaptureCmd(DISABLE);
+        closeSD(); //finish SD write
         GPIO_SetBits(GPIOD, GPIO_Pin_13);
         //Capture_Image_TO_Bmp;
-        serialImage(); //use this to send over serial
+        //serialImage(); //use this to send over serial
         sendFlag = DISABLE;
-
       }
     }  
   } else {
@@ -263,7 +270,8 @@ uint8_t DCMI_OV9655Config(void)
 //  DCMI_SingleRandomWrite(OV9655_DEVICE_WRITE_ADDRESS, 0xA1, 0x40); //AECH High bits [5:0], default: 0x40
 //
 
-  DCMI_SingleRandomWrite(OV9655_DEVICE_WRITE_ADDRESS, 0x11, 0x0F); //change clock prescaler, original = 0x01
+  //0x3F = 187.5 KHz
+  DCMI_SingleRandomWrite(OV9655_DEVICE_WRITE_ADDRESS, 0x11, 0x3F); //change clock prescaler, original = 0x01
   Delay(2);
 
   //below is settings I tried with no effect
@@ -461,18 +469,22 @@ void DMA2_Stream1_IRQHandler(void)
 	if(DMA_GetCurrentMemoryTarget(DMA2_Stream1) == 1) //if writing to mem1, reassign mem0 address
 	{
 		//assign new mem0 address and increment by (# of interrupts + 1) * (frame width * 2)
-		DMA2_Stream1->M0AR = &image_buffer1[(intCount + 1) * (FRAME_WIDTH * 2)];
+		//DMA2_Stream1->M0AR = &image_buffer1[(intCount + 1) * (FRAME_WIDTH * 2)];
+		DMA2_Stream1->M0AR = &temp_buf1;
 		GPIO_ResetBits(GPIOD, GPIO_Pin_14); //LED for debug
+		send_SD_1 = 1; //set send_SD_1 to positive int count
 	}else ///if writing to mem0, reassign mem1 address
 	{
 		//assign new mem1 address and increment by (# of interrupts + 1) * (frame width * 2)
-		DMA2_Stream1->M1AR = &image_buffer2[(intCount + 1) * (FRAME_WIDTH * 2)];
+		//DMA2_Stream1->M1AR = &image_buffer2[(intCount + 1) * (FRAME_WIDTH * 2)];
+		DMA2_Stream1->M1AR = &temp_buf2;
 		GPIO_SetBits(GPIOD, GPIO_Pin_14); //LED for debug
+		send_SD_2 = 1; //set send_SD_1 to positive int count
 	}
 
 	if(intCount >= FRAME_HEIGHT) //when max lines has been read, ready the serial transmission
 	{
-		GPIO_SetBits(GPIOD, GPIO_Pin_15);
+		GPIO_ResetBits(GPIOD, GPIO_Pin_14);
 		sendFlag = ENABLE; //set serial transmission flag
 	}
 }
@@ -586,69 +598,31 @@ void serialImage()
 		}
 	}
 
+	prepareSD();
+	uint8_t tempbuf[1024] = {0};
+	for (uint8_t j = 0 ; j < FRAME_HEIGHT ; j++)
+	{
+		for(uint16_t i=0 ; i<(FRAME_WIDTH*2) ; i++)
+		{
+			tempbuf[i] = image_buffer3[(j*FRAME_WIDTH*2) + i];
+		}
+		saveSDpart(tempbuf);
+	}
+	//saveSD();
+	closeSD();
+
+
 	//send combined buffer
 //	for(uint32_t z = 0 ; z < (FRAME_HEIGHT * FRAME_WIDTH * 2) ; z++)
 //	{
 //		cPrint(image_buffer3[z]);
 //	}
 	//Capture_Image_TO_Bmp();
-
-	//Write to SD stuff Start. Just copied and pasted Capture_Image_TO_Bmp();
-	  int32_t  ret = -1;
-	  int32_t  i = 0;
-	  int32_t  j = 0;
-	  int16_t  data_temp = 0;
-	  uint32_t bw = 0;
-
-	  char  file_str[30] = {0};
-	  FIL file;        /* File object */
+	//prepareSD();
+	//saveSD();
+	//closeSD();
 
 
-	  /* mount the filesys */
-	  if (f_mount(0, &filesys) != FR_OK) {
-		  cPrint("1");
-		  //return -1;
-	  }
-	  Delay(10);
-
-	  sprintf(file_str, "pic%d.bmp",pic_counter2);
-
-	  ret = f_open(&file, file_str, FA_WRITE | FA_CREATE_ALWAYS);
-//	  if (ret) {
-//	    return ret;
-//	  }
-
-	#ifdef BMP_16BIT
-	  /* write the bmp header */
-	  ret = f_write(&file, bmp_header, 70, &bw);
-
-	  //16-bit BMP = RRRRR-GGGGG-BBBBB-A
-	  uint16_t k = 0;
-	  for (j = 0; j < FRAME_HEIGHT; j++) {
-		  cPrint("2");
-		  //uint16_t k = 0;
-	    for(i=0;i<FRAME_WIDTH;i++) {
-	    	//image_buffer[k*2+0] = 0xF8; //write all red frame
-	    	//image_buffer[k*2+1] = 0x00;
-	    	image_buf[i*2+1] = image_buffer3[k*2+1];
-	    	image_buf[i*2+0] = image_buffer3[k*2+0];
-
-	    	k++;
-	    }
-	    ret = f_write(&file, image_buf, FRAME_WIDTH * 2, &bw);
-	  }
-
-	#endif
-
-	  ret = f_close(&file);
-
-	  f_mount(0, NULL);
-
-	  /* statistics the take pictures count */
-	  pic_counter2++;
-	  //set_pic_count();
-
-	  //return ret;
 
 	//Write to SD stuff End
 
