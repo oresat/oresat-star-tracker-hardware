@@ -73,4 +73,7 @@ extern uint8_t image_buffer1[FRAME_WIDTH * FRAME_HEIGHT * 2]; //set array size a
 extern uint8_t image_buffer2[FRAME_WIDTH * FRAME_HEIGHT * 2];
 extern uint8_t image_buffer3[FRAME_WIDTH * FRAME_HEIGHT * 2];
 
+//temp bufs for saving to SD, these can probably be smaller
+extern uint8_t temp_buf1[1024];
+extern uint8_t temp_buf2[1024];
 /*********** Portions COPYRIGHT 2012 Embest Tech. Co., Ltd.*****END OF FILE****/
