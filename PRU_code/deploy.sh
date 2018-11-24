@@ -55,16 +55,17 @@ PRU_CORE=0
 #PIN4=P9_28 #PRU0_GPO3
 #PIN5=P9_27 #PRU0_GPO3
 
-PRU0_0=P1_36 #VSYNC
-PRU0_1=P1_33 #HSYNC
-PRU0_2=P2_32 #D0
-PRU0_3=P2_30 #D1
-PRU0_4=P1_31 #D2
-PRU0_5=P2_34 #D3
-PRU0_6=P2_28 #D4
-PRU0_7=P1_29 #D5
-#PRU0_15=P2_33
-PRU0_16=P1_20
+PRU0_0=P1_36 #D0
+PRU0_1=P1_33 #D1
+PRU0_2=P2_32 #D2
+PRU0_3=P2_30 #D3
+PRU0_4=P1_31 #D4
+PRU0_5=P2_34 #D5
+PRU0_6=P2_28 #D6
+PRU0_7=P1_29 #D7
+PRU0_14=P2_22 #VSYNC
+PRU0_15=P2_18 #HSYNC
+PRU0_16=P1_20 #PIXCLK
 
 #PIN2=P2_32 #PRU0_GP02
 #PIN3=P2_30 #PRU0_GPO3
@@ -107,8 +108,10 @@ echo "-Configuring pinmux"
 	config-pin -q $PRU0_6
 	config-pin -a $PRU0_7 pruin
 	config-pin -q $PRU0_7
-	#config-pin -a $PRU0_15 pruin
-	#config-pin -q $PRU0_15
+	config-pin -a $PRU0_14 pruin
+	config-pin -q $PRU0_14
+	config-pin -a $PRU0_15 pruin
+	config-pin -q $PRU0_15
 	config-pin -a $PRU0_16 pruin
 	config-pin -q $PRU0_16
 

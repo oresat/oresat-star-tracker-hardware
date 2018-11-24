@@ -11,6 +11,7 @@
 #include <sys/types.h>
 #include <sys/mman.h>
 #include <sys/time.h>
+#include <stdint.h>
 
 
 //this is arbitray and unsafe until I reserve this memory somehow
@@ -23,6 +24,7 @@
 
 #define ARM_2_PRU 0x01
 #define PRU_2_ARM 0x02
+#define END	  0x08
 //Buffer Flag. 0 = buf0, 1 = buf1
 #define BUF 0x04
 /*
@@ -79,6 +81,7 @@ int main()
 	//zero status flags
 	*status &= ~ARM_2_PRU;
 	*status &= ~PRU_2_ARM;
+	*status &= ~END;
 
 	//zero the space
 	for(int *tempAddr = buf0; tempAddr < (buf0 + CELLS); tempAddr++)
@@ -91,17 +94,24 @@ int main()
 	printf("====STARTING\n");
 	gettimeofday(&before , NULL);
 
-	//printf("Sending Start\n");
 	//send start flag to PRU
 	*status |= ARM_2_PRU;
 
 	for(int i = 0 ; i < ROWS ; ++i)
 	{
+		//printf("dsadasdsa\n");
+		if((*status & END) > 0) //TODO: need a timeout here 
+		{
+			printf("End Frame\n");
+			break;
+		}
+		
+		
 		//wait for response
 		while((*status & PRU_2_ARM) < 1); //TODO: need a timeout here 
+
 		//clear the flag
 		*status &= ~PRU_2_ARM;
-		//printf("Recieved reply\n");
 
 		if(*status & BUF)
 		{
@@ -143,12 +153,50 @@ int main()
 	munmap(buf0, CELLS);
 	munmap(buf1, CELLS);
 
-	int end = ROWS * CELLS;
-//	int end = 1000;
+	//int end = ROWS * CELLS;
+	int end = 1000;
 
 	for(int i = 0 ; i < end ; ++i)
 	{
-		printf("Image[%d]: %08x\n", i, image[i]);
+//		printf("Image[%d]: %08x\n", i, image[i]);
 	}
 
+	//int image[ROWS * COLS];
+
+	FILE* pgmimg; 
+	pgmimg = fopen("capture.pgm", "wb"); 
+
+	// Writing Magic Number to the File 
+	fprintf(pgmimg, "P2\n");  
+
+	// Writing Width and Height 
+	fprintf(pgmimg, "%d %d\n", COLS, ROWS);  
+
+	// Writing the maximum gray value 
+	fprintf(pgmimg, "255\n");  
+	for (int i = 0; i < ROWS; i++) { 
+		for (int j = 0; j < CELLS; j++) { 
+
+			// Writing the gray values in the 2D array to the file 
+			fprintf(pgmimg, "%d ", (uint8_t)((image[(i*CELLS)+j] & 0xff000000)>>24)); 
+			fprintf(pgmimg, "%d ", (uint8_t)((image[(i*CELLS)+j] & 0x00ff0000)>>16)); 
+			fprintf(pgmimg, "%d ", (uint8_t)((image[(i*CELLS)+j] & 0x0000ff00)>>8)); 
+			fprintf(pgmimg, "%d ", (uint8_t)((image[(i*CELLS)+j] & 0x000000ff))); 
+			/*
+			   int temp;
+			   if(j > (CELLS/2))
+			   {
+			   temp = 0x99999999;	
+			   }else{
+			   temp = 0x33333333;
+			   }
+			   fprintf(pgmimg, "%d ", ((temp & 0xff000000)>>24)); 
+			   fprintf(pgmimg, "%d ", ((temp & 0x00ff0000)>>16)); 
+			   fprintf(pgmimg, "%d ", ((temp & 0x0000ff00)>>8)); 
+			   fprintf(pgmimg, "%d ", ((temp & 0x000000ff))); 
+			   */
+		}
+		fprintf(pgmimg, "\n"); 
+	}   
+	fclose(pgmimg); 
 }
