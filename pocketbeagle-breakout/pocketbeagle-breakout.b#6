@@ -2304,10 +2304,8 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <via x="69.85" y="62.70625" extent="1-16" drill="0.254"/>
 <via x="92.71" y="63.97625" extent="1-16" drill="0.254"/>
 <via x="90.17" y="63.97625" extent="1-16" drill="0.254"/>
-<via x="90.17" y="60.16625" extent="1-16" drill="0.254"/>
 <via x="92.71" y="60.16625" extent="1-16" drill="0.254"/>
 <via x="95.25" y="60.16625" extent="1-16" drill="0.254"/>
-<via x="95.25" y="63.97625" extent="1-16" drill="0.254"/>
 <via x="87.63" y="61.43625" extent="1-16" drill="0.254"/>
 <via x="87.63" y="56.35625" extent="1-16" drill="0.254"/>
 <via x="90.17" y="58.89625" extent="1-16" drill="0.254"/>
@@ -3989,12 +3987,12 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <vertex x="91.44" y="56.515"/>
 <vertex x="91.44" y="53.34"/>
 <vertex x="90.805" y="52.705"/>
-<vertex x="84.455" y="52.705"/>
-<vertex x="80.01" y="57.15"/>
+<vertex x="85.09" y="52.705"/>
+<vertex x="80.645" y="57.15"/>
 <vertex x="78.74" y="57.15"/>
-<vertex x="78.74" y="51.435"/>
-<vertex x="83.82" y="51.435"/>
-<vertex x="85.725" y="49.53"/>
+<vertex x="78.74" y="51.196875"/>
+<vertex x="83.423125" y="51.196875"/>
+<vertex x="85.09" y="49.53"/>
 <vertex x="94.9325" y="49.53"/>
 <vertex x="95.25" y="49.8475"/>
 <vertex x="95.25" y="56.515"/>
@@ -5006,7 +5004,6 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <signal name="N$24">
 <contactref element="D1" pad="C"/>
 <contactref element="R1" pad="1"/>
-<wire x1="88.507" y1="48.73625" x2="88.48" y2="48.73625" width="0.254" layer="1"/>
 <wire x1="88.507" y1="48.73625" x2="89.955" y2="48.73625" width="0.254" layer="1"/>
 </signal>
 <signal name="N$25">
@@ -5629,6 +5626,24 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <approved hash="7,39,3e10f7a9c8cd64f4"/>
 <approved hash="7,39,68b0d169bee53dbc"/>
 <approved hash="7,39,e43de4124d124d3d"/>
+<approved hash="7,39,7804780165a225a6"/>
+<approved hash="7,39,857b07675462ce59"/>
+<approved hash="7,39,85af1c994fb0cead"/>
+<approved hash="7,39,03e40332dcf2dc24"/>
+<approved hash="7,39,6cf1f004c5e73c92"/>
+<approved hash="7,39,03d3add3ddca494a"/>
+<approved hash="7,39,e43de5d24cd24d3d"/>
+<approved hash="7,39,b3905a29246de1d4"/>
+<approved hash="7,39,038403aedc6edc44"/>
+<approved hash="7,39,c4f1b8040cc75c32"/>
+<approved hash="19,1,4bdddc9e142218b0"/>
+<approved hash="19,16,a3e5cafbb92f175b"/>
+<approved hash="19,16,a235c742b485e8a9"/>
+<approved hash="19,16,77476add7bd75f16"/>
+<approved hash="19,16,891098e277cba153"/>
+<approved hash="19,16,1de223150384fbfd"/>
+<approved hash="19,16,8e7051f9e4effa7d"/>
+<approved hash="19,16,71d25c14e9d304f0"/>
 </errors>
 </board>
 </drawing>
