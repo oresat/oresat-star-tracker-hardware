@@ -327,10 +327,10 @@ CLK1</text>
 <wire x1="102.87" y1="64.77" x2="99.06" y2="68.58" width="0" layer="20" curve="90"/>
 <wire x1="3.81" y1="68.58" x2="0" y2="64.77" width="0" layer="20" curve="90"/>
 <text x="73.3425" y="24.4475" size="0.6096" layer="21" font="vector" ratio="10" distance="111" align="bottom-center">EXT CLK</text>
-<text x="53.49875" y="10.00125" size="1.778" layer="21" ratio="12" distance="40">ORESAT CAMERA
+<text x="49.05375" y="10.00125" size="1.778" layer="21" ratio="12" distance="40">ORESAT CAMERA
 POCKETBEAGLE
 BREAKOUT</text>
-<text x="53.49875" y="6.82625" size="1.016" layer="21" ratio="12" distance="40">OLIVER REW
+<text x="49.05375" y="6.82625" size="1.016" layer="21" ratio="12" distance="40">OLIVER REW
 2018-11-24</text>
 <text x="98.58375" y="45.805" size="0.6096" layer="21" font="vector" ratio="10" distance="240" rot="R180" align="top-right">3.3V</text>
 <text x="93.50375" y="45.805" size="0.6096" layer="21" font="vector" ratio="10" distance="240" rot="R180" align="top-right">GND</text>

@@ -2396,9 +2396,9 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <via x="16.35125" y="6.0325" extent="1-16" drill="0.254"/>
 <via x="15.39875" y="6.0325" extent="1-16" drill="0.254"/>
 <via x="46.355" y="13.335" extent="1-16" drill="0.254"/>
-<via x="51.435" y="13.335" extent="1-16" drill="0.254"/>
+<via x="51.1175" y="13.335" extent="1-16" drill="0.254"/>
 <via x="57.15" y="13.335" extent="1-16" drill="0.254"/>
-<via x="63.5" y="13.49375" extent="1-16" drill="0.254"/>
+<via x="63.579375" y="13.890625" extent="1-16" drill="0.254"/>
 <via x="67.945" y="13.81125" extent="1-16" drill="0.254"/>
 <via x="73.025" y="13.335" extent="1-16" drill="0.254"/>
 <via x="70.485" y="14.605" extent="1-16" drill="0.254"/>
