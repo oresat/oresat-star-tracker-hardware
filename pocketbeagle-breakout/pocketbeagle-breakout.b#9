@@ -4276,12 +4276,12 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <vertex x="91.44" y="56.515"/>
 <vertex x="91.44" y="53.34"/>
 <vertex x="90.805" y="52.705"/>
-<vertex x="84.455" y="52.705"/>
-<vertex x="80.01" y="57.15"/>
+<vertex x="85.09" y="52.705"/>
+<vertex x="80.645" y="57.15"/>
 <vertex x="78.74" y="57.15"/>
-<vertex x="78.74" y="51.435"/>
-<vertex x="83.82" y="51.435"/>
-<vertex x="85.725" y="49.53"/>
+<vertex x="78.74" y="51.196875"/>
+<vertex x="83.423125" y="51.196875"/>
+<vertex x="85.09" y="49.53"/>
 <vertex x="94.9325" y="49.53"/>
 <vertex x="95.25" y="49.8475"/>
 <vertex x="95.25" y="56.515"/>
