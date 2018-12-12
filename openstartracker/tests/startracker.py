@@ -106,7 +106,7 @@ for image in os.listdir(SAMPLE_DIR):
 	
 	# Remove areas of the image that don't meet our brightness threshold and then extract contours
 	ret, thresh = cv2.threshold(img_grey, beast.cvar.THRESH_FACTOR * beast.cvar.IMAGE_VARIANCE, 255, cv2.THRESH_BINARY)
-	contours, hierarchy = cv2.findContours(thresh, 1, 2);
+	thresh_contours, contours, hierarchy = cv2.findContours(thresh, 1, 2);
 
 	# Process the contours
 	for c in contours:
