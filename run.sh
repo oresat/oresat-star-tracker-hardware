@@ -5,4 +5,4 @@ cd PRU_code
 cd ..
 make
 sleep .25
-./mem_alloc.out
+./camera_arm.out

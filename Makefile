@@ -1,5 +1,6 @@
-SOURCE=mem_alloc.c
-MYPROGRAM=mem_alloc
+#SOURCE=arm_camera.c
+SOURCE=*.c
+MYPROGRAM=camera_arm
 CC=gcc
 
 all: $(MYPROGRAM)
