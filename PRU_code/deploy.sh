@@ -66,6 +66,7 @@ PRU0_7=P1_29 #D7
 PRU0_14=P2_22 #VSYNC
 PRU0_15=P2_18 #HSYNC
 PRU0_16=P1_20 #PIXCLK
+PRU0_15O=P2_33 #OUT
 
 #PIN2=P2_32 #PRU0_GP02
 #PIN3=P2_30 #PRU0_GPO3
@@ -114,6 +115,8 @@ echo "-Configuring pinmux"
 	config-pin -q $PRU0_15
 	config-pin -a $PRU0_16 pruin
 	config-pin -q $PRU0_16
+	config-pin -a $PRU0_15O pruout
+	config-pin -q $PRU0_15O
 
 	#config-pin -a $PIN1 pruout
 	#config-pin -q $PIN1

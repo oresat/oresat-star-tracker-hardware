@@ -13,7 +13,6 @@
 #include <sys/time.h>
 #include <stdint.h>
 
-
 //this is arbitray and unsafe until I reserve this memory somehow
 //#define PRU_BASE_ADDR 0x4a300000
 #define PRU_BASE_ADDR 0x90000000
@@ -25,14 +24,9 @@
 #define ARM_2_PRU 0x01
 #define PRU_2_ARM 0x02
 #define END	  0x08
+
 //Buffer Flag. 0 = buf0, 1 = buf1
 #define BUF 0x04
-/*
-   BEAGLEBONE MEMORY STRUCTURE
-   From What I can tell, the beaglebone's memory structure is 32 bit words located at 
-   addresses 0x04 bits apart
-   */
-
 
 #define ROWS 975  //rows per image
 #define COLS 1280 //pixels per row
@@ -61,6 +55,8 @@ int main()
 		exit(EXIT_FAILURE);
 	}
 
+	*status = 0x00000000;
+
 	//mmap our physical mem location to a virtual address
 	//Map 2 buffers
 	int *buf0 = mmap(0, CELLS, PROT_READ | PROT_WRITE, MAP_SHARED, fd, BUF0);
@@ -86,7 +82,7 @@ int main()
 	//zero the space
 	for(int *tempAddr = buf0; tempAddr < (buf0 + CELLS); tempAddr++)
 		*tempAddr = 0x00;
-	//
+	
 	//zero the space
 	for(int *tempAddr = buf1; tempAddr < (buf1 + CELLS); tempAddr++)
 		*tempAddr = 0x00;
@@ -99,13 +95,11 @@ int main()
 
 	for(int i = 0 ; i < ROWS ; ++i)
 	{
-		//printf("dsadasdsa\n");
 		if((*status & END) > 0) //TODO: need a timeout here 
 		{
 			printf("End Frame\n");
 			break;
 		}
-		
 		
 		//wait for response
 		while((*status & PRU_2_ARM) < 1); //TODO: need a timeout here 

@@ -25,8 +25,8 @@
 #define COLS 1280 //pixels per row
 #define CELLS COLS/4 //a cell is a 32 bit word hold 4 byte sized pixels //320
 
-#define VSYNC 0x00004000
-#define HSYNC 0x00008000
+#define VSYNC 0x00008000
+#define HSYNC 0x00004000
 
 void flash(char led);
 void dance();
@@ -50,21 +50,17 @@ void main(void)
 	// it works without this, sooo....
 	CT_CFG.SYSCFG_bit.STANDBY_INIT = 0;
 
-	/*
+	
 	//Apparently there is no difference when parallel capture is used!?!?!
 	//Parallel Capture Settings
 	CT_CFG.GPCFG0_bit.PRU0_GPI_MODE = 0x00; //enable parallel capture
 	CT_CFG.GPCFG0_bit.PRU0_GPI_CLK_MODE = 0x01; //capture on positive edge
-	*/
-
+	
+/*
 	CT_CFG.GPCFG0_bit.PRU0_GPI_MODE = 0x00; //GPIO direct mode(default)
-
+*/
 	volatile int *buf0 = (volatile int *)BUF0;
 	volatile int *buf1 = (volatile int *)BUF1;
-
-	//Flash the LEDs a few times at startup
-	//dance();
-	//clear();
 
 	int *status;
 	status = (int*)STATUS_MEM;
@@ -73,6 +69,7 @@ void main(void)
 	*status &= ~ARM_2_PRU;
 	*status &= ~PRU_2_ARM;
 	*status &= ~END;
+	__R30 &= ~0x8000;
 
 	volatile int *addr;
 
@@ -83,12 +80,21 @@ void main(void)
 	int *buf0max = (int*)buf0 + CELLS ; //making this volatile slows it down alot!!
 	int *buf1max = (int*)buf1 + CELLS ; //making this volatile slows it down alot!!
 
+/*	
+	while(1)
+	{
+		while((__R31 & 0x00010000) > 0) //wait for VSYNC to go low
+			__R30 |= 0x8000;
+		while((__R31 & 0x00010000) == 0) //while VSYNC is high //used to contain below within this loop, not sure which is better. TODO test!
+			__R30 &= ~0x8000;
+	}
+*/	
+	//__R30 &= ~0x8000; //unset gpio 15
 
 	int writeReg = 0x00;
 	int line;
 	while(1)
 	{
-
 		//wait for signal
 		while((*status & ARM_2_PRU) < 1) //TODO: need a timeout here 
 			__delay_cycles(1); //delay is needed between checking memory??? TODO: Use interupts!
@@ -97,12 +103,15 @@ void main(void)
 		//clear the flag
 		*status &= ~ARM_2_PRU;
 
+		//__R30 |= 0x8000; //set gpio 15
 		while((__R31 & VSYNC) > 0); //wait for VSYNC to go low
+
 		while((__R31 & VSYNC) == 0); //while VSYNC is high //used to contain below within this loop, not sure which is better. TODO test!
-		//{
+		//__R30 |= 0x8000; //set gpio 15
+
 		//TODO should I loop through the number of lines here?
-		for(line = 0 ; line < ROWS ; line++)
-			//while((__R31 & VSYNC) > 0) //wait for VSYNC to go low
+		for(line = 0 ; (line < ROWS-10) ; line++)
+		//while((__R31 & VSYNC) > 0) //wait for VSYNC to go low
 		{
 			if(!curBuf) //if on buf0
 			{
@@ -111,7 +120,6 @@ void main(void)
 				{
 					//TODO use macro when waiting for clock
 					//not using for loop here for speed!
-					//while((__R31 & HSYNC) > 0); //wait for HSYNC to go high
 					while((__R31 & HSYNC) == 0); //wait for HSYNC to go high
 
 					while(__R31 & 0x00010000); //wait for R31[16] to go low 
@@ -126,7 +134,6 @@ void main(void)
 					while(__R31 & 0x00010000); 
 					while((__R31 & 0x00010000) == 0); 
 					writeReg |= (__R31 & 0x000000ff); 
-
 					*addr = writeReg; //write to memory
 				}
 				curBuf = 1; //switch buffer
@@ -152,7 +159,6 @@ void main(void)
 					writeReg |= (__R31 & 0x000000ff); 
 
 					*addr = writeReg; //write to memory
-
 				}
 				curBuf = 0; //switch buffer
 				*status |= BUF; //set buf flag for buf1
@@ -160,8 +166,11 @@ void main(void)
 			//send finished flag to ARM
 			*status |= PRU_2_ARM;
 		}
-		//send finished flag to ARM
+		
+	//	__R30 &= ~0x8000; //unset gpio 15
+
 		*status |= END;
+		
 	}
 	}
 
