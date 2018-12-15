@@ -1,14 +1,13 @@
 # pru_arm_transfer
 
 Run everything as root.
-$sudo -s
+$sudo su
 
-upload FW to the PRU first
-$ cd PRU_code
-$ ./deploy.sh
+I wrote a script that does everything, just execute it with:
+$ ./run.sh
 
-make Linux C program(from `pru_arm_transfer` directory)
-$ make
-
-run program
-$ ./camera_arm.c
+It's first building and uploaded the firmware to the PRU, then making the ARM
+side program which programs the camera via i2c and lastly tells the PRU to
+start the transfer and receives the image. Image is saved as 'capture.pgm',
+you'll have to scp it onto your machine to view it. pgm is a very simple image
+format.
