@@ -31,11 +31,11 @@ int writeRegs(camReg *regs, int size)
   //write all registers
   for(int i = 0 ; i < len ; i++)
   {
-    printf("reg = 0x%04x, val = 0x%04x\n", regs[i].reg, regs[i].val);
     int err = i2cWrite(regs[i].reg, regs[i].val);
     if (err > 0)
     {
       printf("ERROR: i2cWrite() returned error code: %d\n", err);
+      printf("reg = 0x%04x, val = 0x%04x\n", regs[i].reg, regs[i].val);
       ret = err;
     }
   }
@@ -109,7 +109,7 @@ int i2cWrite(uint16_t reg, uint16_t val)
   //reg == 0 means delay
   if(reg == 0)
   {
-    printf("Delay %d ms\n", val);
+    //printf("Delay %d ms\n", val);
     sleep(.001*val);
     return 0;
   }
@@ -156,7 +156,7 @@ int i2cWrite(uint16_t reg, uint16_t val)
     return 1;
   }
 
-  printf("Finished Write\n");
+  //printf("Finished Write\n");
   return 0;
 }
 

@@ -97,7 +97,7 @@ camReg startupRegs[] = {
 	{.reg = 0x30E0, .val = 0x5470}, //ADC_BITS_2_3
 	{.reg = 0x30E6, .val = 0xC4CC}, //ADC_CONFIG1
 	{.reg = 0x30E8, .val = 0x8050}, //ADC_CONFIG2
-	//{.reg = 0x0000, .val = 100}, // delay 100 ms
+	{.reg = 0x0000, .val = 100}, // delay 100 ms
 	//delay here
 	{.reg = 0x3082, .val = 0x0029}, //OP MODE CTL
 	{.reg = 0x301E, .val = 0x00C8}, // DATA_PEDESTAL
@@ -135,12 +135,12 @@ camReg startupRegs[] = {
 	{.reg = 0x30B0, .val = 0x1300}, // DIGITAL_TEST
 	//{.reg = 0x30B0, .val = 0x5300}, // DIGITAL_TEST with PLL disable
 	//delay here
-	//{.reg = 0x0000, .val = 100}, // delay 100 ms
+	{.reg = 0x0000, .val = 100}, // delay 100 ms
 	{.reg = 0x3100, .val = 0x0000}, // ae_ctrl_reg
 	{.reg = 0x3064, .val = 0x1802}, //DISABLE EMB. DATA
 
 	{.reg = 0x301A, .val = 0x10DC},  //Disable Serial, Enable Parallel, Drive Outputs(no hi-z), lock reg, streaming mode(not low power)
-	//{.reg = 0x0000, .val = 100}, // delay 100 ms
+	{.reg = 0x0000, .val = 100}, // delay 100 ms
 	
 	{.reg = 0x3070, .val = 0x0000}, //walking 1s test pattern
 };

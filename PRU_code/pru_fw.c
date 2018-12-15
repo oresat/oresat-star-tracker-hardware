@@ -21,7 +21,7 @@
 #define BUF0  (PRU_BASE_ADDR + 0x00002000)
 #define BUF1  (PRU_BASE_ADDR + 0x00003000)
 
-#define ROWS 975  //rows per image
+#define ROWS 960  //rows per image
 #define COLS 1280 //pixels per row
 #define CELLS COLS/4 //a cell is a 32 bit word hold 4 byte sized pixels //320
 
@@ -108,7 +108,7 @@ void main(void)
 		//__R30 |= 0x8000; //set gpio 15
 
 		//TODO should I loop through the number of lines here?
-		for(line = 0 ; (line < ROWS - 16) ; line++)
+		for(line = 0 ; (line < ROWS) ; line++)
 		//while((__R31 & VSYNC) > 0) //wait for VSYNC to go low
 		{
 			if(!curBuf) //if on buf0

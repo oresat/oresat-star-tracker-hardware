@@ -71,7 +71,8 @@ int main()
     }
 
     //wait for response
-    while((*status & PRU_2_ARM) < 1); //TODO: need a timeout here 
+    while((*status & PRU_2_ARM) < 1) //TODO: need a timeout here 
+      for(int i = 0 ; i < 2 ; i++); //this is purely for a small delay so this while loop doesn't hog reading the memory
 
     //clear the flag
     *status &= ~PRU_2_ARM;
@@ -168,6 +169,7 @@ int initCamera()
 {
   int err = writeRegs(startupRegs, sizeof(startupRegs));
 
+  printf("Programming Image Sensor...\n");
   sleep(0.25); //wait for regs to take effect, may not be necessary
 
   if(err > 0)
