@@ -1,0 +1,8 @@
+
+*.o
+*.out
+PRU_code/gen/*.out
+PRU_code/gen/*.map
+PRU_code/gen/*.object
+*.swp
+*.pgm
