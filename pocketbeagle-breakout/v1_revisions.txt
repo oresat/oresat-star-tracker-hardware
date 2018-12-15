@@ -1,0 +1,6 @@
+- tie USB VB to 5v
+- tie USB ID to gnd
+- add optional pullups to i2c bus
+- breakout points on CAN transciever should by 2.54mm spacing
+- label signals on solder jumpers on bottom.
+- pull(up/down) resistors on the control signal jumpers so when they are connected to the beagle they don't accidentally shorts pins to VCC or GND

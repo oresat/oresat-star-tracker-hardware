@@ -1,1 +1,5 @@
 - Do both direction lines on the output buffer need individual pullups??
+- plate mounting holes
+- change i2c addresses on temp sensors to not conflict with sensor
+- another LED for 3.3v?
+- footprint for small uC to sequence power supplies?
