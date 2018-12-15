@@ -56,9 +56,8 @@ void main(void)
 	CT_CFG.GPCFG0_bit.PRU0_GPI_MODE = 0x00; //enable parallel capture
 	CT_CFG.GPCFG0_bit.PRU0_GPI_CLK_MODE = 0x01; //capture on positive edge
 	
-/*
-	CT_CFG.GPCFG0_bit.PRU0_GPI_MODE = 0x00; //GPIO direct mode(default)
-*/
+	//CT_CFG.GPCFG0_bit.PRU0_GPI_MODE = 0x00; //GPIO direct mode(default)
+
 	volatile int *buf0 = (volatile int *)BUF0;
 	volatile int *buf1 = (volatile int *)BUF1;
 
@@ -76,7 +75,6 @@ void main(void)
 	//holds to current buffer to write to
 	int curBuf = 0;
 
-	//int *max = (int*)ptr + (SIZE); //making this volatile slows it down alot!!
 	int *buf0max = (int*)buf0 + CELLS ; //making this volatile slows it down alot!!
 	int *buf1max = (int*)buf1 + CELLS ; //making this volatile slows it down alot!!
 
@@ -110,7 +108,7 @@ void main(void)
 		//__R30 |= 0x8000; //set gpio 15
 
 		//TODO should I loop through the number of lines here?
-		for(line = 0 ; (line < ROWS-10) ; line++)
+		for(line = 0 ; (line < ROWS - 16) ; line++)
 		//while((__R31 & VSYNC) > 0) //wait for VSYNC to go low
 		{
 			if(!curBuf) //if on buf0

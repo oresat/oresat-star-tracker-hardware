@@ -113,7 +113,7 @@ camReg startupRegs[] = {
 	{.reg = 0x3ED6, .val = 0x00BD}, // DAC_LD_10_11
 	{.reg = 0x30B0, .val = 0x1300}, // DIGITAL_TEST
 	{.reg = 0x30D4, .val = 0xE007}, // COLUMN_CORRECTION
-	{.reg = 0x3012, .val = 0x00A0}, // COARSE_INTEGRATION_TIME
+	{.reg = 0x3012, .val = 0x0060}, // COARSE_INTEGRATION_TIME
 	{.reg = 0x3032, .val = 0x0000}, // DIGITAL_BINNING
 	{.reg = 0x3002, .val = 0x0002}, // Y_ADDR_START = 2
 	{.reg = 0x3004, .val = 0x0000}, // X_ADDR_START = 0

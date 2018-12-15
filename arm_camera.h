@@ -32,6 +32,6 @@ int initCamera();
 //Buffer Flag. 0 = buf0, 1 = buf1
 #define BUF 0x04
 
-#define ROWS 975  //rows per image
+#define ROWS 960  //rows per image
 #define COLS 1280 //pixels per row
 #define CELLS COLS/4 //a cell is a 32 bit word hold 4 byte sized pixels
