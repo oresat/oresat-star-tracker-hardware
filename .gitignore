@@ -46,3 +46,10 @@ eagle.epf
 # file locks introduced since 7.x
 *.lck
 
+*.o
+*.out
+PRU_code/gen/*.out
+PRU_code/gen/*.map
+PRU_code/gen/*.object
+*.swp
+*.pgm
