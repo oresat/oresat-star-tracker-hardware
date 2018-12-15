@@ -11,3 +11,4 @@ Below is an explanation of each directory:
 - camera_testing - files related to testing our AR0130-based cameras
 - openstartracker - star tracker software, based on OpenStarTracker from Univ. of Buffalo
 - oresat-camera-hardware - directories related to hardware for OreSat camera system
+
