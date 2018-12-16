@@ -35,3 +35,5 @@ int initCamera();
 #define ROWS 960  //rows per image
 #define COLS 1280 //pixels per row
 #define CELLS COLS/4 //a cell is a 32 bit word hold 4 byte sized pixels
+
+#define IMGFILE "capture.pgm"

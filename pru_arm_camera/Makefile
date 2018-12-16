@@ -1,4 +1,3 @@
-#SOURCE=arm_camera.c
 SOURCE=*.c
 MYPROGRAM=camera_arm
 CC=gcc
