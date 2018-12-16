@@ -10,7 +10,7 @@
 
 camReg startupRegs[] = {
 	{.reg = 0x301A, .val = 0x0001}, //RESET
-	{.reg = 0x0000, .val = 100}, // delay 100 ms
+	//{.reg = 0x0000, .val = 100}, // delay 100 ms
 	{.reg = 0x301A, .val = 0x10D8}, //Disable Serial, Enable Parallel, Drive Outputs(no hi-z), lock reg
 	{.reg = 0x3088, .val = 0x8000}, //SEQ CTL PORT
 	{.reg = 0x3086, .val = 0x0225}, //SEQ RAM
