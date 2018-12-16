@@ -66,13 +66,13 @@ int main()
   {
     if((*status & END) > 0) //TODO: need a timeout here 
     {
-      printf("Warning: End Signal Recieved Early, image may be out of sync\n");
+      printf("Warning: Early End Signal Recieved, image may be out of sync\n");
       break;
     }
 
     //wait for response
     while((*status & PRU_2_ARM) < 1) //TODO: need a timeout here 
-      for(int i = 0 ; i < 2 ; i++); //this is purely for a small delay so this while loop doesn't hog reading the memory
+      for(volatile int i = 0 ; i < 2 ; i++); //this is purely for a small delay so this while loop doesn't hog reading the memory
 
     //clear the flag
     *status &= ~PRU_2_ARM;
