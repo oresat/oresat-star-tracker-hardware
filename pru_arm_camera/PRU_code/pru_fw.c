@@ -16,8 +16,8 @@
 #define BUF 0x00000004
 //#define PRU_BASE_ADDR 0x4a300000
 //#define PRU_BASE_ADDR 0x00000000
-#define PRU_BASE_ADDR 0x90000000
-//#define PRU_BASE_ADDR 0x9c800000
+//#define PRU_BASE_ADDR 0x90000000
+#define PRU_BASE_ADDR 0x9c800000
 #define STATUS 0x1000
 #define STATUS_MEM (PRU_BASE_ADDR + STATUS)
 #define BUF0  (PRU_BASE_ADDR + 0x00002000)
@@ -91,8 +91,9 @@ void main(void)
   int writeReg = 0x00;
   int line;
   
-  //TODO: I don't understand why this has to be x2. 
-  int *temp = (int *)SHARED;
+  //point it to the PRU shared RAM
+  //int *temp = (int *)SHARED;
+  int temp[COLS];
   int pos = 0;
   while(1)
   {
