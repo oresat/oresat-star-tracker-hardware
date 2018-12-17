@@ -8,6 +8,7 @@
 #define DELAY 100000000
 
 //#define MEMLOC 0xa0000000
+#define SHARED 0x00010000
 #define SIZE 1000
 #define ARM_2_PRU 0x00000001
 #define PRU_2_ARM 0x00000002
@@ -15,8 +16,8 @@
 #define BUF 0x00000004
 //#define PRU_BASE_ADDR 0x4a300000
 //#define PRU_BASE_ADDR 0x00000000
-//#define PRU_BASE_ADDR 0x90000000
-#define PRU_BASE_ADDR 0x9c800000
+#define PRU_BASE_ADDR 0x90000000
+//#define PRU_BASE_ADDR 0x9c800000
 #define STATUS 0x1000
 #define STATUS_MEM (PRU_BASE_ADDR + STATUS)
 #define BUF0  (PRU_BASE_ADDR + 0x00002000)
@@ -76,9 +77,6 @@ void main(void)
   //holds to current buffer to write to
   int curBuf = 0;
 
-  int *buf0max = (int*)buf0 + CELLS ; //making this volatile slows it down alot!!
-  int *buf1max = (int*)buf1 + CELLS ; //making this volatile slows it down alot!!
-
   /*	
       while(1)
       {
@@ -92,7 +90,9 @@ void main(void)
 
   int writeReg = 0x00;
   int line;
-  int temp[CELLS];
+  
+  //TODO: I don't understand why this has to be x2. 
+  int *temp = (int *)SHARED;
   int pos = 0;
   while(1)
   {
@@ -166,6 +166,7 @@ void main(void)
           temp[pos++] = writeReg;
         }
         memcpy(buf1, temp, COLS);
+        memcpy(buf1+(CELLS/2), temp + (CELLS/2), COLS/2);
         curBuf = 0; //switch buffer
         *status |= BUF; //set buf flag for buf1
       }
