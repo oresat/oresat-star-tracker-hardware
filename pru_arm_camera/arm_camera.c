@@ -65,7 +65,7 @@ int main()
   {
     if((*status & END) > 0) //TODO: need a timeout here 
     {
-      printf("Warning: Early End Signal Recieved, image may be out of sync\n");
+      printf("Warning: Early End Signal Received, only %d rows have been received image may be out of sync\n", i);
       break;
     }
 

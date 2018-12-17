@@ -37,171 +37,178 @@ volatile register uint32_t __R30;
 volatile register uint32_t __R31;
 
 volatile uint32_t LED[] = {
-	0x0001, //D1 Blue
-	0x0002, //D2 Green
-	0x0004, //D3 Orange
-	0x0008  //D4 Red
+  0x0001, //D1 Blue
+  0x0002, //D2 Green
+  0x0004, //D3 Orange
+  0x0008  //D4 Red
 };
 
 void main(void)
 {
 
-	// Clear SYSCFG[STANDBY_INIT] to enable OCP master port
-	// This is supposed to allow us to write to the global memory space?
-	// it works without this, sooo....
-	CT_CFG.SYSCFG_bit.STANDBY_INIT = 0;
+  // Clear SYSCFG[STANDBY_INIT] to enable OCP master port
+  // This is supposed to allow us to write to the global memory space?
+  // it works without this, sooo....
+  CT_CFG.SYSCFG_bit.STANDBY_INIT = 0;
 
-	
-	//Apparently there is no difference when parallel capture is used!?!?!
-	//Parallel Capture Settings
-	CT_CFG.GPCFG0_bit.PRU0_GPI_MODE = 0x00; //enable parallel capture
-	CT_CFG.GPCFG0_bit.PRU0_GPI_CLK_MODE = 0x01; //capture on positive edge
-	
-	//CT_CFG.GPCFG0_bit.PRU0_GPI_MODE = 0x00; //GPIO direct mode(default)
 
-	volatile int *buf0 = (volatile int *)BUF0;
-	volatile int *buf1 = (volatile int *)BUF1;
+  //Apparently there is no difference when parallel capture is used!?!?!
+  //Parallel Capture Settings
+  CT_CFG.GPCFG0_bit.PRU0_GPI_MODE = 0x00; //enable parallel capture
+  CT_CFG.GPCFG0_bit.PRU0_GPI_CLK_MODE = 0x01; //capture on positive edge
 
-	int *status;
-	status = (int*)STATUS_MEM;
+  //CT_CFG.GPCFG0_bit.PRU0_GPI_MODE = 0x00; //GPIO direct mode(default)
 
-	//zero status flags
-	*status &= ~ARM_2_PRU;
-	*status &= ~PRU_2_ARM;
-	*status &= ~END;
-	__R30 &= ~0x8000;
+  int *buf0 = (int *)BUF0;
+  int *buf1 = (int *)BUF1;
 
-	volatile int *addr;
+  int *status;
+  status = (int*)STATUS_MEM;
 
-	//holds to current buffer to write to
-	int curBuf = 0;
+  //zero status flags
+  *status &= ~ARM_2_PRU;
+  *status &= ~PRU_2_ARM;
+  *status &= ~END;
+  __R30 &= ~0x8000;
 
-	int *buf0max = (int*)buf0 + CELLS ; //making this volatile slows it down alot!!
-	int *buf1max = (int*)buf1 + CELLS ; //making this volatile slows it down alot!!
+  int addr;
 
-/*	
-	while(1)
-	{
-		while((__R31 & 0x00010000) > 0) //wait for VSYNC to go low
-			__R30 |= 0x8000;
-		while((__R31 & 0x00010000) == 0) //while VSYNC is high //used to contain below within this loop, not sure which is better. TODO test!
-			__R30 &= ~0x8000;
-	}
-*/	
-	//__R30 &= ~0x8000; //unset gpio 15
+  //holds to current buffer to write to
+  int curBuf = 0;
 
-	int writeReg = 0x00;
-	int line;
-	while(1)
-	{
-		//wait for signal
-		while((*status & ARM_2_PRU) < 1) //TODO: need a timeout here 
-			__delay_cycles(1); //delay is needed between checking memory??? TODO: Use interupts!
-		//Minimum needed delay is just 1. However, more delay give the linux side time to access memory?
+  int *buf0max = (int*)buf0 + CELLS ; //making this volatile slows it down alot!!
+  int *buf1max = (int*)buf1 + CELLS ; //making this volatile slows it down alot!!
 
-		//clear the flag
-		*status &= ~ARM_2_PRU;
+  /*	
+      while(1)
+      {
+      while((__R31 & 0x00010000) > 0) //wait for VSYNC to go low
+      __R30 |= 0x8000;
+      while((__R31 & 0x00010000) == 0) //while VSYNC is high //used to contain below within this loop, not sure which is better. TODO test!
+      __R30 &= ~0x8000;
+      }
+      */	
+  //__R30 &= ~0x8000; //unset gpio 15
 
-		//__R30 |= 0x8000; //set gpio 15
-		while((__R31 & VSYNC) > 0); //wait for VSYNC to go low
+  int writeReg = 0x00;
+  int line;
+  int temp[CELLS];
+  int pos = 0;
+  while(1)
+  {
+    //wait for signal
+    while((*status & ARM_2_PRU) < 1) //TODO: need a timeout here 
+      __delay_cycles(1); //delay is needed between checking memory??? TODO: Use interupts!
+    //Minimum needed delay is just 1. However, more delay give the linux side time to access memory?
 
-		while((__R31 & VSYNC) == 0); //while VSYNC is high //used to contain below within this loop, not sure which is better. TODO test!
-		//__R30 |= 0x8000; //set gpio 15
+    //clear the flag
+    *status &= ~ARM_2_PRU;
 
-		//TODO should I loop through the number of lines here?
-		for(line = 0 ; (line < ROWS) ; line++)
-		//while((__R31 & VSYNC) > 0) //wait for VSYNC to go low
-		{
-			if(!curBuf) //if on buf0
-			{
-				//loop through every word in buffer
-				for(addr = buf0 ; addr < buf0max ; ++addr)
-				{
-					//TODO use macro when waiting for clock
-					//not using for loop here for speed!
-					while((__R31 & HSYNC) == 0); //wait for HSYNC to go high
+    //__R30 |= 0x8000; //set gpio 15
+    while((__R31 & VSYNC) > 0); //wait for VSYNC to go low
 
-					while(__R31 & 0x00010000); //wait for R31[16] to go low 
-					while((__R31 & 0x00010000) == 0); //wait for R31[16] to go high
-					writeReg = (__R31 & 0x000000ff) << 24; //I am assigning here instead of ORing in order to clear writeReg
-					while(__R31 & 0x00010000); 
-					while((__R31 & 0x00010000) == 0); 
-					writeReg |= (__R31 & 0x000000ff) << 16; 
-					while(__R31 & 0x00010000); 
-					while((__R31 & 0x00010000) == 0); 
-					writeReg |= (__R31 & 0x000000ff) << 8; 
-					while(__R31 & 0x00010000); 
-					while((__R31 & 0x00010000) == 0); 
-					writeReg |= (__R31 & 0x000000ff); 
-					*addr = writeReg; //write to memory
-				}
-				curBuf = 1; //switch buffer
-				*status &= ~BUF; //clear buf flag for buf 0
-			}else{
-				//loop through every word in buffer
-				for(addr = buf1 ; addr < buf1max ; ++addr)
-				{
-					//not using for loop here for speed!
-					while((__R31 & HSYNC) == 0); //wait for HSYNC to go high
+    while((__R31 & VSYNC) == 0); //while VSYNC is high //used to contain below within this loop, not sure which is better. TODO test!
+    //__R30 |= 0x8000; //set gpio 15
 
-					while(__R31 & 0x00010000); //wait for R31[16] to go low 
-					while((__R31 & 0x00010000) == 0); //wait for R31[16] to go high
-					writeReg = (__R31 & 0x000000ff) << 24; //I am assigning here instead of ORing in order to clear writeReg
-					while(__R31 & 0x00010000); 
-					while((__R31 & 0x00010000) == 0); 
-					writeReg |= (__R31 & 0x000000ff) << 16; 
-					while(__R31 & 0x00010000); 
-					while((__R31 & 0x00010000) == 0); 
-					writeReg |= (__R31 & 0x000000ff) << 8; 
-					while(__R31 & 0x00010000); 
-					while((__R31 & 0x00010000) == 0); 
-					writeReg |= (__R31 & 0x000000ff); 
+    //TODO should I loop through the number of lines here?
+    for(line = 0 ; (line < ROWS) ; line++)
+      //while((__R31 & VSYNC) > 0) //wait for VSYNC to go low
+    {
+      pos = 0;
+      if(!curBuf) //if on buf0
+      {
+        //loop through every word in buffer
+        for(addr = 0 ; addr < CELLS ; ++addr)
+        {
+          //TODO use macro when waiting for clock
+          //not using for loop here for speed!
+          while((__R31 & HSYNC) == 0); //wait for HSYNC to go high
 
-					*addr = writeReg; //write to memory
-				}
-				curBuf = 0; //switch buffer
-				*status |= BUF; //set buf flag for buf1
-			}
-			//send finished flag to ARM
-			*status |= PRU_2_ARM;
-		}
-		
-	//	__R30 &= ~0x8000; //unset gpio 15
+          while(__R31 & 0x00010000); //wait for R31[16] to go low 
+          while((__R31 & 0x00010000) == 0); //wait for R31[16] to go high
+          writeReg = (__R31 & 0x000000ff) << 24; //I am assigning here instead of ORing in order to clear writeReg
+          while(__R31 & 0x00010000); 
+          while((__R31 & 0x00010000) == 0); 
+          writeReg |= (__R31 & 0x000000ff) << 16; 
+          while(__R31 & 0x00010000); 
+          while((__R31 & 0x00010000) == 0); 
+          writeReg |= (__R31 & 0x000000ff) << 8; 
+          while(__R31 & 0x00010000); 
+          while((__R31 & 0x00010000) == 0); 
+          writeReg |= (__R31 & 0x000000ff); 
+          //*addr = writeReg; //write to memory
+          temp[pos++] = writeReg;
+        }
+        memcpy(buf0, temp, COLS);
+        curBuf = 1; //switch buffer
+        *status &= ~BUF; //clear buf flag for buf 0
+      }else{
+        //loop through every word in buffer
+        for(addr = 0 ; addr < CELLS ; ++addr)
+        {
+          //not using for loop here for speed!
+          while((__R31 & HSYNC) == 0); //wait for HSYNC to go high
 
-		*status |= END;
-		
-	}
-	}
+          while(__R31 & 0x00010000); //wait for R31[16] to go low 
+          while((__R31 & 0x00010000) == 0); //wait for R31[16] to go high
+          writeReg = (__R31 & 0x000000ff) << 24; //I am assigning here instead of ORing in order to clear writeReg
+          while(__R31 & 0x00010000); 
+          while((__R31 & 0x00010000) == 0); 
+          writeReg |= (__R31 & 0x000000ff) << 16; 
+          while(__R31 & 0x00010000); 
+          while((__R31 & 0x00010000) == 0); 
+          writeReg |= (__R31 & 0x000000ff) << 8; 
+          while(__R31 & 0x00010000); 
+          while((__R31 & 0x00010000) == 0); 
+          writeReg |= (__R31 & 0x000000ff); 
 
-	//clear all LEDs
-	void clear()
-	{
-		int i = 0;
-		for(; i < 4 ; i++)
-			__R30 &= ~LED[i];
-	}
+          //*addr = writeReg; //write to memory
+          temp[pos++] = writeReg;
+        }
+        memcpy(buf1, temp, COLS);
+        curBuf = 0; //switch buffer
+        *status |= BUF; //set buf flag for buf1
+      }
+      //send finished flag to ARM
+      *status |= PRU_2_ARM;
+    }
 
-	//flash the specified LED
-	void flash(char led)
-	{
-		if (led > 3)
-			led = 3;
-		int i = 0;
-		for(; i < 4 ; i++)
-		{
-			__R30 |= LED[led];
-			__delay_cycles(DELAY/50);
-			__R30 &= ~LED[led];
-			__delay_cycles(DELAY/50);
-		}
-	}
+    //	__R30 &= ~0x8000; //unset gpio 15
 
-	//flash all LEDs
-	void dance()
-	{
-		flash(0);
-		flash(1);
-		flash(2);
-		flash(3);
-	}
+    *status |= END;
+
+  }
+}
+
+//clear all LEDs
+void clear()
+{
+  int i = 0;
+  for(; i < 4 ; i++)
+    __R30 &= ~LED[i];
+}
+
+//flash the specified LED
+void flash(char led)
+{
+  if (led > 3)
+    led = 3;
+  int i = 0;
+  for(; i < 4 ; i++)
+  {
+    __R30 |= LED[led];
+    __delay_cycles(DELAY/50);
+    __R30 &= ~LED[led];
+    __delay_cycles(DELAY/50);
+  }
+}
+
+//flash all LEDs
+void dance()
+{
+  flash(0);
+  flash(1);
+  flash(2);
+  flash(3);
+}
 
