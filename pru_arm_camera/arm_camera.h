@@ -19,8 +19,8 @@ int initCamera();
 
 //this is arbitray and unsafe until I reserve this memory somehow
 //#define PRU_BASE_ADDR 0x4a300000
-//#define PRU_BASE_ADDR 0x90000000
-#define PRU_BASE_ADDR 0x9c800000
+#define PRU_BASE_ADDR 0x90000000
+//#define PRU_BASE_ADDR 0x9c800000
 #define STATUS 0x1000
 #define BUF0  (PRU_BASE_ADDR + 0x00002000)
 #define BUF1  (PRU_BASE_ADDR + 0x00003000)
