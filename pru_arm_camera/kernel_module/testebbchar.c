@@ -27,6 +27,7 @@ int main(){
       perror("Failed to open the device...");
       return errno;
    }
+   /*
    printf("Type in a short string to send to the kernel module:\n");
    scanf("%[^\n]%*c", stringToSend);                // Read in a string (with spaces)
    printf("Writing message to the device [%s].\n", stringToSend);
@@ -38,14 +39,16 @@ int main(){
 
    printf("Press ENTER to read back from the device...\n");
    getchar();
+*/
 
+   char ptr_str[12];
    printf("Reading from the device...\n");
-   ret = read(fd, receive, BUFFER_LENGTH);        // Read the response from the LKM
+   ret = read(fd, ptr_str, 12);        // Read the response from the LKM
    if (ret < 0){
       perror("Failed to read the message from the device.");
       return errno;
    }
-   printf("The received message is: [%s]\n", receive);
+   printf("The received message is: [%s]\n", ptr_str);
    printf("End of the program\n");
    return 0;
 }

@@ -1,1 +1,0 @@
-cmd_/home/debian/oresat-star-tracker/pru_arm_camera/ebbchar/ebbchar.ko := ld -EL -r  -T ./scripts/module-common.lds --build-id  -T ./arch/arm/kernel/module.lds -o /home/debian/oresat-star-tracker/pru_arm_camera/ebbchar/ebbchar.ko /home/debian/oresat-star-tracker/pru_arm_camera/ebbchar/ebbchar.o /home/debian/oresat-star-tracker/pru_arm_camera/ebbchar/ebbchar.mod.o ;  true

@@ -51,6 +51,11 @@ static struct file_operations fops =
   .release = dev_release,
 };
 
+//Memory pointers: TODO is there anything wrong with these being global?
+dma_addr_t dma_handle = NULL;
+int *cpu_addr = NULL;
+
+
 /** @brief The LKM initialization function
  *  The static keyword restricts the visibility of the function to within this C file. The __init
  *  macro means that for a built-in driver (not a LKM) the function is only used at initialization
@@ -123,9 +128,7 @@ static int dev_open(struct inode *inodep, struct file *filep){
    * I am unsure what the ideal flags for this are, but GFP_KERNEL seems to
    * work
    */
-
-  dma_addr_t dma_handle;
-  int *cpu_addr = dma_alloc_coherent(ebbcharDevice, SIZE, &dma_handle, GFP_KERNEL);
+  cpu_addr = dma_alloc_coherent(ebbcharDevice, SIZE, &dma_handle, GFP_KERNEL);
   if(cpu_addr == NULL)
   {
     printk(KERN_INFO "Failed to allocate memory\n");
@@ -135,8 +138,6 @@ static int dev_open(struct inode *inodep, struct file *filep){
   printk(KERN_INFO "Virtual Address: %x\n", cpu_addr);
   printk(KERN_INFO "Physical Address: %x\n", (int*)dma_handle);
 
-  dma_free_coherent(ebbcharDevice, SIZE, cpu_addr, dma_handle);
-  printk(KERN_INFO "Freed %d bytes\n", SIZE); 
 
   return 0;
 }
@@ -174,8 +175,6 @@ static ssize_t dev_read(struct file *filep, char *buffer, size_t len, loff_t *of
  */
 static ssize_t dev_write(struct file *filep, const char *buffer, size_t len, loff_t *offset){
   printk(KERN_INFO "============WRITE============\n");
-  //printk(KERN_INFO "buffer: %c\n", buffer[0]);
-  //sprintf(message, "%s(%zu letters)", buffer, len);   // appending received string with its length
   copy_from_user(message,buffer,5);
   size_of_message = strlen(message);                 // store the length of the stored message
   printk(KERN_INFO "len: %d\n", size_of_message);
@@ -193,6 +192,9 @@ static ssize_t dev_write(struct file *filep, const char *buffer, size_t len, lof
  *  @param filep A pointer to a file object (defined in linux/fs.h)
  */
 static int dev_release(struct inode *inodep, struct file *filep){
+  dma_free_coherent(ebbcharDevice, SIZE, cpu_addr, dma_handle);
+  printk(KERN_INFO "Freed %d bytes\n", SIZE); 
+
   printk(KERN_INFO "EBBChar: Device successfully closed\n");
   return 0;
 }
