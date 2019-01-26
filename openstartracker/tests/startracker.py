@@ -8,6 +8,7 @@ from time import time
 import sys
 import os
 import cv2
+import socket
 import numpy as np
 import beast
 

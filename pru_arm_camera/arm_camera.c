@@ -4,7 +4,7 @@ int main()
 {
   initCamera();
   int image[ROWS * CELLS];
-  volatile int pos = 0; //this showed the greatest speed gain when changed to volatile???
+  int pos = 0; //this showed the greatest speed gain when changed to volatile???
 
   struct timeval before , after;
 
@@ -16,7 +16,7 @@ int main()
     return 0;
   }
 
-  int *status = mmap(0, 4, PROT_READ | PROT_WRITE, MAP_SHARED, fd, STATUS_MEM);
+  volatile int *status = mmap(0, 4, PROT_READ | PROT_WRITE, MAP_SHARED, fd, STATUS_MEM);
   if (status == MAP_FAILED)
   {
     close(fd);
@@ -28,14 +28,14 @@ int main()
 
   //mmap our physical mem location to a virtual address
   //Map 2 buffers
-  int *buf0 = mmap(0, CELLS, PROT_READ | PROT_WRITE, MAP_SHARED, fd, BUF0);
+  volatile int *buf0 = mmap(0, CELLS, PROT_READ | PROT_WRITE, MAP_SHARED, fd, BUF0);
   if (buf0 == MAP_FAILED)
   {
     close(fd);
     perror("Error mmapping the file");
     exit(EXIT_FAILURE);
   }
-  int *buf1 = mmap(0, CELLS, PROT_READ | PROT_WRITE, MAP_SHARED, fd, BUF1);
+  volatile int *buf1 = mmap(0, CELLS, PROT_READ | PROT_WRITE, MAP_SHARED, fd, BUF1);
   if (buf1 == MAP_FAILED)
   {
     close(fd);
@@ -48,12 +48,11 @@ int main()
   *status &= ~PRU_2_ARM;
   *status &= ~END;
 
-  //zero the space
-  for(int *tempAddr = buf0; tempAddr < (buf0 + CELLS); tempAddr++)
+  //zero the space TODO: this may not be necessary
+  for(volatile int *tempAddr = buf0; tempAddr < (buf0 + CELLS); tempAddr++)
     *tempAddr = 0x00;
 
-  //zero the space
-  for(int *tempAddr = buf1; tempAddr < (buf1 + CELLS); tempAddr++)
+  for(volatile int *tempAddr = buf1; tempAddr < (buf1 + CELLS); tempAddr++)
     *tempAddr = 0x00;
 
   printf("====STARTING CAPTURE\n");
@@ -72,7 +71,7 @@ int main()
 
     //wait for response
     while((*status & PRU_2_ARM) < 1) //TODO: need a timeout here 
-      for(volatile int i = 0 ; i < 2 ; i++); //this is purely for a small delay so this while loop doesn't hog reading the memory
+      for(volatile int i = 0 ; i < 10 ; i++); //this is purely for a small delay so this while loop doesn't hog reading the memory
 
     //clear the flag
     *status &= ~PRU_2_ARM;
@@ -94,6 +93,10 @@ int main()
   gettimeofday(&after , NULL);
   printf("====ENDING CAPTURE\n");
   long uSecs = after.tv_usec - before.tv_usec;
+
+  if(uSecs < 0) //occaisionally this number is 1000000 off??
+    uSecs += 1000000;
+
   double secs = (double)uSecs / 1000000;
   double data =(double)((COLS * ROWS * 12)/8); //bytes
   double dataRate = data / secs; //bytes per second
@@ -112,9 +115,9 @@ int main()
  // printf("Deallocating Memory\n");
 
   //unmap memory
-  munmap(status, CELLS);
-  munmap(buf0, CELLS);
-  munmap(buf1, CELLS);
+  munmap((void *)status, CELLS);
+  munmap((void *)buf0, CELLS);
+  munmap((void *)buf1, CELLS);
 
   /*
   //int end = ROWS * CELLS;
