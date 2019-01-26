@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.0.0">
+<eagle version="9.2.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.0125" altunitdist="mm" altunit="mm"/>
+<grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.0125" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
-<layer number="2" name="Route2" color="15" fill="1" visible="no" active="yes"/>
+<layer number="2" name="Route2" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
 <layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
 <layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
@@ -30,7 +30,7 @@
 <layer number="20" name="Dimension" color="24" fill="1" visible="yes" active="yes"/>
 <layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
@@ -46,19 +46,19 @@
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
 <layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
-<layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
-<layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
 <layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
-<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="53" name="tGND_GNDA" color="7" fill="1" visible="no" active="no"/>
 <layer number="54" name="bGND_GNDA" color="7" fill="1" visible="no" active="no"/>
@@ -2698,6 +2698,9 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <param name="checkRestrict" value="1"/>
 <param name="checkStop" value="0"/>
 <param name="checkValues" value="0"/>
+<param name="checkNames" value="1"/>
+<param name="checkWireStubs" value="1"/>
+<param name="checkPolygonWidth" value="0"/>
 <param name="useDiameter" value="13"/>
 <param name="maxErrors" value="50"/>
 </designrules>
@@ -2798,416 +2801,416 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 </pass>
 </autorouter>
 <elements>
-<element name="U6" library="Oliver_Custom" package="DFN8_2X3MC-M" value="MCP9808T-E/MCDFN8_2X3MC-M" x="27" y="23.875" smashed="yes" rot="R270">
+<element name="U6" library="Oliver_Custom" package="DFN8_2X3MC-M" value="MCP9808T-E/MCDFN8_2X3MC-M" x="27" y="23.875" rot="R270">
 <attribute name="MANUFACTURER_PART_NUMBER" value="MCP9808TEMC" x="27" y="23.875" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="NAME" x="24.9312" y="22.4224" size="0.508" layer="25" font="vector" ratio="15" rot="SR0"/>
 <attribute name="VENDOR" value="Microchip" x="27" y="23.875" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="U9" library="Oliver_Custom" package="DGK8-M" value="TCA9509DGKRDGK8-M" x="6.3125" y="11" smashed="yes" rot="R270">
+<element name="U9" library="Oliver_Custom" package="DGK8-M" value="TCA9509DGKRDGK8-M" x="6.3125" y="11" rot="R270">
 <attribute name="MANUFACTURER_PART_NUMBER" value="TCA9509DGKR" x="6.3125" y="11" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="NAME" x="7.8199" y="7.429" size="0.5" layer="25" font="vector" ratio="15" rot="SR0"/>
 <attribute name="VENDOR" value="Texas Instruments" x="6.3125" y="11" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="U10" library="Oliver_Custom" package="DGV48" value="SN74AVCB164245VR" x="20" y="18" smashed="yes" rot="R270">
+<element name="U10" library="Oliver_Custom" package="DGV48" value="SN74AVCB164245VR" x="20" y="18" rot="R270">
 <attribute name="MANUFACTURER_PART_NUMBER" value="SN74AVCB164245VR" x="20" y="18" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="NAME" x="15.0359" y="13.5525" size="0.5" layer="25" font="vector" ratio="15" rot="SR0"/>
 <attribute name="VENDOR" value="Texas Instruments" x="20" y="18" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="U11" library="Oliver_Custom" package="OSC_KYOCERA_KC2520B" value="KC2520B27.0000C10E00" x="5" y="26.5" smashed="yes">
+<element name="U11" library="Oliver_Custom" package="OSC_KYOCERA_KC2520B" value="KC2520B27.0000C10E00" x="5" y="26.5">
 <attribute name="MANUFACTURER_PART_NUMBER" value="KC2520B27.0000C10E00" x="5" y="26.5" size="1.778" layer="27" display="off"/>
 <attribute name="NAME" x="4.4469" y="24.3405" size="0.508" layer="25" font="vector" ratio="15" rot="SR0"/>
 <attribute name="VENDOR" value="Kyocera" x="5" y="26.5" size="1.778" layer="27" display="off"/>
 </element>
-<element name="R1" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value="100" x="8.5" y="28.5" smashed="yes" rot="R90">
+<element name="R1" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value="100" x="8.5" y="28.5" rot="R90">
 <attribute name="NAME" x="7.738" y="28.5" size="0.508" layer="25" font="vector" ratio="15" rot="R90" align="bottom-center"/>
 <attribute name="PROD_ID" value=" " x="8.5" y="28.5" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="9.262" y="28.5" size="0.508" layer="27" font="vector" ratio="15" rot="R90" align="top-center"/>
 </element>
-<element name="R2" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value="10k" x="2.5625" y="26.225" smashed="yes" rot="R270">
+<element name="R2" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value="10k" x="2.5625" y="26.225" rot="R270">
 <attribute name="NAME" x="1.262" y="26.2875" size="0.508" layer="25" font="vector" ratio="15" rot="R270" align="bottom-center"/>
 <attribute name="PROD_ID" value=" " x="2.5625" y="26.225" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="VALUE" x="1.8005" y="26.225" size="0.508" layer="27" font="vector" ratio="15" rot="R270" align="top-center"/>
 </element>
-<element name="R3" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value="10k" x="3.1875" y="8.75" smashed="yes" rot="R180">
+<element name="R3" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value="10k" x="3.1875" y="8.75" rot="R180">
 <attribute name="NAME" x="3.1875" y="7.988" size="0.508" layer="25" font="vector" ratio="15" rot="R180" align="bottom-center"/>
 <attribute name="PROD_ID" value=" " x="3.1875" y="8.75" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="3.1875" y="9.512" size="0.508" layer="27" font="vector" ratio="15" rot="R180" align="top-center"/>
 </element>
-<element name="U7" library="Oliver_Custom" package="DFN8_2X3MC-M" value="MCP9808T-E/MCDFN8_2X3MC-M" x="16" y="40" smashed="yes" rot="MR0">
+<element name="U7" library="Oliver_Custom" package="DFN8_2X3MC-M" value="MCP9808T-E/MCDFN8_2X3MC-M" x="16" y="40" rot="MR0">
 <attribute name="MANUFACTURER_PART_NUMBER" value="MCP9808TEMC" x="16" y="40" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="NAME" x="16.3188" y="41.2974" size="0.508" layer="26" font="vector" ratio="15" rot="SMR0"/>
 <attribute name="VENDOR" value="Microchip" x="16" y="40" size="1.778" layer="28" rot="MR0" display="off"/>
 </element>
-<element name="U13" library="Oliver_Custom" package="RHL24_4P05X2P05" value="SN74AVCH8T245RHLR" x="10.5" y="18" smashed="yes" rot="R90">
+<element name="U13" library="Oliver_Custom" package="RHL24_4P05X2P05" value="SN74AVCH8T245RHLR" x="10.5" y="18" rot="R90">
 <attribute name="MANUFACTURER_PART_NUMBER" value="SN74AVCH8T245RHLR" x="10.5" y="18" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="12.2654" y="15.1045" size="0.5" layer="25" font="vector" ratio="15" rot="SR0"/>
 <attribute name="VENDOR" value="Texas Instruments" x="10.5" y="18" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="R4" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value="10k" x="5" y="16.5" smashed="yes" rot="R270">
+<element name="R4" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value="10k" x="5" y="16.5" rot="R270">
 <attribute name="NAME" x="5.125" y="14.387" size="0.508" layer="25" font="vector" ratio="15" align="bottom-center"/>
 <attribute name="PROD_ID" value=" " x="5" y="16.5" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="VALUE" x="4.238" y="16.5" size="0.508" layer="27" font="vector" ratio="15" rot="R270" align="top-center"/>
 </element>
-<element name="R5" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value="10k" x="26.5" y="19.5" smashed="yes" rot="R180">
+<element name="R5" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value="10k" x="26.5" y="19.5" rot="R180">
 <attribute name="NAME" x="27.9375" y="19.738" size="0.508" layer="25" font="vector" ratio="15" rot="R180" align="bottom-center"/>
 <attribute name="PROD_ID" value=" " x="26.5" y="19.5" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="26.5" y="20.262" size="0.508" layer="27" font="vector" ratio="15" rot="R180" align="top-center"/>
 </element>
-<element name="R6" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value="10k" x="26.5" y="18" smashed="yes" rot="R180">
+<element name="R6" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value="10k" x="26.5" y="18" rot="R180">
 <attribute name="NAME" x="28" y="18.238" size="0.508" layer="25" font="vector" ratio="15" rot="R180" align="bottom-center"/>
 <attribute name="PROD_ID" value=" " x="26.5" y="18" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="26.5" y="18.762" size="0.508" layer="27" font="vector" ratio="15" rot="R180" align="top-center"/>
 </element>
-<element name="R8" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value="10k" x="26.5" y="16.5" smashed="yes">
+<element name="R8" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value="10k" x="26.5" y="16.5">
 <attribute name="NAME" x="28.0625" y="16.262" size="0.508" layer="25" font="vector" ratio="15" align="bottom-center"/>
 <attribute name="PROD_ID" value=" " x="26.5" y="16.5" size="1.778" layer="27" display="off"/>
 <attribute name="VALUE" x="26.5" y="15.738" size="0.508" layer="27" font="vector" ratio="15" align="top-center"/>
 </element>
-<element name="R9" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value="10k" x="5" y="19.5" smashed="yes" rot="R270">
+<element name="R9" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value="10k" x="5" y="19.5" rot="R270">
 <attribute name="NAME" x="4.9375" y="17.8245" size="0.508" layer="25" font="vector" ratio="15" align="bottom-center"/>
 <attribute name="PROD_ID" value=" " x="5" y="19.5" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="VALUE" x="4.238" y="19.5" size="0.508" layer="27" font="vector" ratio="15" rot="R270" align="top-center"/>
 </element>
-<element name="C1" library="SparkFun-Capacitors" package="0603" value="10uF" x="21.71875" y="33.8125" smashed="yes" rot="MR0">
+<element name="C1" library="SparkFun-Capacitors" package="0603" value="10uF" x="21.71875" y="33.8125" rot="MR0">
 <attribute name="NAME" x="19.75" y="33.60575" size="0.5" layer="26" font="vector" ratio="15" rot="MR0" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-11015" x="21.71875" y="33.8125" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="VALUE" x="21.71875" y="33.0505" size="0.6096" layer="28" font="vector" ratio="20" rot="MR0" align="top-center"/>
 </element>
-<element name="C2" library="SparkFun-Capacitors" package="0603" value="10uF" x="25.65625" y="40.15625" smashed="yes" rot="MR90">
+<element name="C2" library="SparkFun-Capacitors" package="0603" value="10uF" x="25.65625" y="40.15625" rot="MR90">
 <attribute name="NAME" x="25.35575" y="42.15625" size="0.5" layer="26" font="vector" ratio="15" rot="MR90" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-11015" x="25.65625" y="40.15625" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="VALUE" x="24.89425" y="40.15625" size="0.6096" layer="28" font="vector" ratio="20" rot="MR90" align="top-center"/>
 </element>
-<element name="C3" library="SparkFun-Capacitors" package="0603" value="10uF" x="13.5" y="35.75" smashed="yes" rot="MR90">
+<element name="C3" library="SparkFun-Capacitors" package="0603" value="10uF" x="13.5" y="35.75" rot="MR90">
 <attribute name="NAME" x="12.29325" y="35.78125" size="0.5" layer="26" font="vector" ratio="15" rot="MR90" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-11015" x="13.5" y="35.75" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="VALUE" x="12.738" y="35.75" size="0.6096" layer="28" font="vector" ratio="20" rot="MR90" align="top-center"/>
 </element>
-<element name="C4" library="SparkFun-Capacitors" package="0603" value="10uF" x="20.5" y="31.4375" smashed="yes" rot="MR0">
+<element name="C4" library="SparkFun-Capacitors" package="0603" value="10uF" x="20.5" y="31.4375" rot="MR0">
 <attribute name="NAME" x="18.5" y="31.6755" size="0.5" layer="26" font="vector" ratio="15" rot="MR180" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-11015" x="20.5" y="31.4375" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="VALUE" x="20.5" y="30.6755" size="0.6096" layer="28" font="vector" ratio="20" rot="MR0" align="top-center"/>
 </element>
-<element name="C5" library="SparkFun-Capacitors" package="0603" value="10uF" x="15.5" y="36.5" smashed="yes" rot="MR90">
+<element name="C5" library="SparkFun-Capacitors" package="0603" value="10uF" x="15.5" y="36.5" rot="MR90">
 <attribute name="NAME" x="15.3245" y="34.375" size="0.5" layer="26" font="vector" ratio="15" rot="MR90" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-11015" x="15.5" y="36.5" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="VALUE" x="14.738" y="36.5" size="0.6096" layer="28" font="vector" ratio="20" rot="MR90" align="top-center"/>
 </element>
-<element name="C13" library="SparkFun-Capacitors" package="0402" value="1.0uF" x="29.8125" y="20" smashed="yes" rot="R180">
+<element name="C13" library="SparkFun-Capacitors" package="0402" value="1.0uF" x="29.8125" y="20" rot="R180">
 <attribute name="NAME" x="28.6755" y="20.4375" size="0.508" layer="25" font="vector" ratio="15" rot="R90" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-12417" x="29.8125" y="20" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="29.8125" y="20.762" size="0.508" layer="27" font="vector" ratio="15" rot="R180" align="top-center"/>
 </element>
-<element name="C14" library="SparkFun-Capacitors" package="0402" value="1.0uF" x="29.8125" y="15.5" smashed="yes" rot="R180">
+<element name="C14" library="SparkFun-Capacitors" package="0402" value="1.0uF" x="29.8125" y="15.5" rot="R180">
 <attribute name="NAME" x="28.1995" y="15.5" size="0.508" layer="25" font="vector" ratio="15" rot="R270" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-12417" x="35.3125" y="19" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="29.8125" y="16.262" size="0.508" layer="27" font="vector" ratio="15" rot="R180" align="top-center"/>
 </element>
-<element name="C15" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:2054894" package="0402" value="1.0uF" x="29.8125" y="24.5" smashed="yes" rot="R180">
+<element name="C15" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:2054894" package="0402" value="1.0uF" x="29.8125" y="24.5" rot="R180">
 <attribute name="NAME" x="28.738" y="24.5625" size="0.508" layer="25" font="vector" ratio="15" rot="R90" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-12417" x="29.8125" y="28" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="29.8125" y="25.262" size="0.5" layer="27" font="vector" ratio="15" rot="R180" align="top-center"/>
 </element>
-<element name="C19" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:2054894" package="0402" package3d_urn="urn:adsk.eagle:package:2054929/3" value="0.1uF" x="22.09375" y="35.25" smashed="yes" rot="MR0">
+<element name="C19" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:2054894" package="0402" package3d_urn="urn:adsk.eagle:package:2054929/3" value="0.1uF" x="22.09375" y="35.25" rot="MR0">
 <attribute name="NAME" x="20.25" y="35.04325" size="0.508" layer="26" font="vector" ratio="15" rot="MR0" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-12416" x="22.09375" y="35.25" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="VALUE" x="22.09375" y="34.488" size="0.5" layer="28" font="vector" ratio="15" rot="MR0" align="top-center"/>
 </element>
-<element name="C20" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:2054894" package="0402" package3d_urn="urn:adsk.eagle:package:2054929/3" value="0.1uF" x="27.09375" y="39.75" smashed="yes" rot="MR90">
+<element name="C20" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:2054894" package="0402" package3d_urn="urn:adsk.eagle:package:2054929/3" value="0.1uF" x="27.09375" y="39.75" rot="MR90">
 <attribute name="NAME" x="27.33175" y="41.5625" size="0.508" layer="26" font="vector" ratio="15" rot="MR270" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-12416" x="23.59375" y="34.25" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="VALUE" x="26.33175" y="39.75" size="0.5" layer="28" font="vector" ratio="15" rot="MR90" align="top-center"/>
 </element>
-<element name="C21" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:2054894" package="0402" package3d_urn="urn:adsk.eagle:package:2054929/3" value="0.1uF" x="13.5" y="32.875" smashed="yes" rot="MR270">
+<element name="C21" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:2054894" package="0402" package3d_urn="urn:adsk.eagle:package:2054929/3" value="0.1uF" x="13.5" y="32.875" rot="MR270">
 <attribute name="NAME" x="12.738" y="32.8125" size="0.508" layer="26" font="vector" ratio="15" rot="MR270" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-12416" x="17" y="32.875" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="VALUE" x="14.262" y="32.875" size="0.5" layer="28" font="vector" ratio="15" rot="MR270" align="top-center"/>
 </element>
-<element name="C22" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:2054894" package="0402" package3d_urn="urn:adsk.eagle:package:2054929/3" value="0.1uF" x="21" y="30" smashed="yes" rot="MR0">
+<element name="C22" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:2054894" package="0402" package3d_urn="urn:adsk.eagle:package:2054929/3" value="0.1uF" x="21" y="30" rot="MR0">
 <attribute name="NAME" x="19.1875" y="30.238" size="0.508" layer="26" font="vector" ratio="15" rot="MR180" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-12416" x="26.5" y="23" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="VALUE" x="21" y="29.238" size="0.5" layer="28" font="vector" ratio="15" rot="MR0" align="top-center"/>
 </element>
-<element name="C23" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:2054894" package="0402" package3d_urn="urn:adsk.eagle:package:2054929/3" value="0.1uF" x="16.9375" y="36.5625" smashed="yes" rot="MR90">
+<element name="C23" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:2054894" package="0402" package3d_urn="urn:adsk.eagle:package:2054929/3" value="0.1uF" x="16.9375" y="36.5625" rot="MR90">
 <attribute name="NAME" x="16.6995" y="34.5" size="0.508" layer="26" font="vector" ratio="15" rot="MR90" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-12416" x="9.9375" y="36.5625" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="VALUE" x="16.1755" y="36.5625" size="0.5" layer="28" font="vector" ratio="15" rot="MR90" align="top-center"/>
 </element>
-<element name="C24" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:2054894" package="0402" package3d_urn="urn:adsk.eagle:package:2054929/3" value="0.1uF" x="6.5" y="16.5" smashed="yes" rot="R270">
+<element name="C24" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:2054894" package="0402" package3d_urn="urn:adsk.eagle:package:2054929/3" value="0.1uF" x="6.5" y="16.5" rot="R270">
 <attribute name="NAME" x="6.625" y="14.387" size="0.508" layer="25" font="vector" ratio="15" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-12416" x="6.5" y="16.5" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="VALUE" x="5.738" y="16.5" size="0.5" layer="27" font="vector" ratio="15" rot="R270" align="top-center"/>
 </element>
-<element name="C25" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:2054894" package="0402" package3d_urn="urn:adsk.eagle:package:2054929/3" value="0.1uF" x="6.5" y="19.5" smashed="yes" rot="R90">
+<element name="C25" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:2054894" package="0402" package3d_urn="urn:adsk.eagle:package:2054929/3" value="0.1uF" x="6.5" y="19.5" rot="R90">
 <attribute name="NAME" x="6.5" y="17.8245" size="0.508" layer="25" font="vector" ratio="15" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-12416" x="6.5" y="19.5" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="7.262" y="19.5" size="0.5" layer="27" font="vector" ratio="15" rot="R90" align="top-center"/>
 </element>
-<element name="C28" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:2054894" package="0402" package3d_urn="urn:adsk.eagle:package:2054929/3" value="0.1uF" x="17.8125" y="12.5" smashed="yes" rot="R270">
+<element name="C28" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:2054894" package="0402" package3d_urn="urn:adsk.eagle:package:2054929/3" value="0.1uF" x="17.8125" y="12.5" rot="R270">
 <attribute name="NAME" x="18.5745" y="12.5" size="0.508" layer="25" font="vector" ratio="15" rot="R270" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-12416" x="17.8125" y="12.5" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="VALUE" x="17.0505" y="12.5" size="0.5" layer="27" font="vector" ratio="15" rot="R270" align="top-center"/>
 </element>
-<element name="C29" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:2054894" package="0402" package3d_urn="urn:adsk.eagle:package:2054929/3" value="0.1uF" x="22.1875" y="12.5" smashed="yes" rot="R270">
+<element name="C29" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:2054894" package="0402" package3d_urn="urn:adsk.eagle:package:2054929/3" value="0.1uF" x="22.1875" y="12.5" rot="R270">
 <attribute name="NAME" x="22.9495" y="12.5" size="0.508" layer="25" font="vector" ratio="15" rot="R270" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-12416" x="22.1875" y="12.5" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="VALUE" x="21.4255" y="12.5" size="0.5" layer="27" font="vector" ratio="15" rot="R270" align="top-center"/>
 </element>
-<element name="C30" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:2054894" package="0402" package3d_urn="urn:adsk.eagle:package:2054929/3" value="0.1uF" x="22.1875" y="23.4375" smashed="yes" rot="R90">
+<element name="C30" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:2054894" package="0402" package3d_urn="urn:adsk.eagle:package:2054929/3" value="0.1uF" x="22.1875" y="23.4375" rot="R90">
 <attribute name="NAME" x="21.4255" y="23.4375" size="0.508" layer="25" font="vector" ratio="15" rot="R90" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-12416" x="22.1875" y="23.4375" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="22.9495" y="23.4375" size="0.5" layer="27" font="vector" ratio="15" rot="R90" align="top-center"/>
 </element>
-<element name="C31" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:2054894" package="0402" package3d_urn="urn:adsk.eagle:package:2054929/3" value="0.1uF" x="17.8125" y="23.5" smashed="yes" rot="R90">
+<element name="C31" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:2054894" package="0402" package3d_urn="urn:adsk.eagle:package:2054929/3" value="0.1uF" x="17.8125" y="23.5" rot="R90">
 <attribute name="NAME" x="17.0505" y="23.5" size="0.508" layer="25" font="vector" ratio="15" rot="R90" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-12416" x="17.8125" y="23.5" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="18.5745" y="23.5" size="0.5" layer="27" font="vector" ratio="15" rot="R90" align="top-center"/>
 </element>
-<element name="C27" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:2054894" package="0402" package3d_urn="urn:adsk.eagle:package:2054929/3" value="0.1uF" x="8.8125" y="12" smashed="yes" rot="R270">
+<element name="C27" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:2054894" package="0402" package3d_urn="urn:adsk.eagle:package:2054929/3" value="0.1uF" x="8.8125" y="12" rot="R270">
 <attribute name="NAME" x="10.5625" y="12" size="0.508" layer="25" font="vector" ratio="15" rot="R90" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-12416" x="8.8125" y="12" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="VALUE" x="8.0505" y="12" size="0.5" layer="27" font="vector" ratio="15" rot="R270" align="top-center"/>
 </element>
-<element name="C32" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:2054894" package="0402" package3d_urn="urn:adsk.eagle:package:2054929/3" value="0.1uF" x="8.8125" y="9.5" smashed="yes" rot="R90">
+<element name="C32" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:2054894" package="0402" package3d_urn="urn:adsk.eagle:package:2054929/3" value="0.1uF" x="8.8125" y="9.5" rot="R90">
 <attribute name="NAME" x="10.5505" y="9.5625" size="0.508" layer="25" font="vector" ratio="15" rot="R90" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-12416" x="8.8125" y="9.5" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="9.5745" y="9.5" size="0.5" layer="27" font="vector" ratio="15" rot="R90" align="top-center"/>
 </element>
-<element name="C39" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:2054894" package="0402" package3d_urn="urn:adsk.eagle:package:2054929/3" value="0.1uF" x="12.875" y="40.0625" smashed="yes" rot="MR270">
+<element name="C39" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:2054894" package="0402" package3d_urn="urn:adsk.eagle:package:2054929/3" value="0.1uF" x="12.875" y="40.0625" rot="MR270">
 <attribute name="NAME" x="11.738" y="40.0625" size="0.508" layer="26" font="vector" ratio="15" rot="MR270" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-12416" x="12.875" y="40.0625" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="VALUE" x="13.637" y="40.0625" size="0.5" layer="28" font="vector" ratio="15" rot="MR270" align="top-center"/>
 </element>
-<element name="C40" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:2054894" package="0402" package3d_urn="urn:adsk.eagle:package:2054929/3" value="0.1uF" x="27" y="21.125" smashed="yes" rot="R180">
+<element name="C40" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:2054894" package="0402" package3d_urn="urn:adsk.eagle:package:2054929/3" value="0.1uF" x="27" y="21.125" rot="R180">
 <attribute name="NAME" x="25.387" y="21.125" size="0.508" layer="25" font="vector" ratio="15" rot="R270" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-12416" x="27" y="21.125" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="27" y="21.887" size="0.5" layer="27" font="vector" ratio="15" rot="R180" align="top-center"/>
 </element>
-<element name="J2" library="Oliver_Custom" package="TE_4-1734592-0" value="4-1734592-04-1734592-0" x="20" y="5" smashed="yes" rot="R180">
+<element name="J2" library="Oliver_Custom" package="TE_4-1734592-0" value="4-1734592-04-1734592-0" x="20" y="5" rot="R180">
 <attribute name="NAME" x="8.8038" y="5.4155" size="0.508" layer="25" font="vector" ratio="15" rot="SR0"/>
 </element>
-<element name="C6" library="Oliver_Custom" package="0402" package3d_urn="urn:adsk.eagle:package:2054929/3" value="10nF" x="5" y="28.75" smashed="yes" rot="R180">
+<element name="C6" library="Oliver_Custom" package="0402" package3d_urn="urn:adsk.eagle:package:2054929/3" value="10nF" x="5" y="28.75" rot="R180">
 <attribute name="NAME" x="5" y="29.988" size="0.5" layer="25" font="vector" ratio="15" rot="R180" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-12416" x="4.5" y="28.75" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="5" y="29.512" size="0.6096" layer="27" font="vector" ratio="20" rot="R180" align="top-center"/>
 </element>
-<element name="U12" library="Oliver_Custom" package="DRV6_1P6X1" value="TPS71818-33DRVT" x="33" y="15.5" smashed="yes">
+<element name="U12" library="Oliver_Custom" package="DRV6_1P6X1" value="TPS71818-33DRVT" x="33" y="15.5">
 <attribute name="MANUFACTURER_PART_NUMBER" value="TPS7181833DRVT" x="33" y="15.5" size="1.778" layer="27" display="off"/>
 <attribute name="NAME" x="33.4375" y="17.1875" size="0.508" layer="25" font="vector" ratio="15" rot="SR0"/>
 <attribute name="VENDOR" value="Texas Instruments" x="33" y="15.5" size="1.778" layer="27" display="off"/>
 </element>
-<element name="U14" library="Oliver_Custom" package="DRV6_1P6X1" value="TPS71928-28DRVT" x="33" y="20" smashed="yes">
+<element name="U14" library="Oliver_Custom" package="DRV6_1P6X1" value="TPS71928-28DRVT" x="33" y="20">
 <attribute name="MANUFACTURER_PART_NUMBER" value="TPS7192828DRVT" x="33" y="20" size="1.778" layer="27" display="off"/>
 <attribute name="NAME" x="33.4375" y="21.6875" size="0.508" layer="25" font="vector" ratio="15" rot="SR0"/>
 <attribute name="VENDOR" value="Texas Instruments" x="33" y="20" size="1.778" layer="27" display="off"/>
 </element>
-<element name="U15" library="Oliver_Custom" package="DRV6_1P6X1" value="TPS71928-28DRVT" x="33" y="24.5" smashed="yes">
+<element name="U15" library="Oliver_Custom" package="DRV6_1P6X1" value="TPS71928-28DRVT" x="33" y="24.5">
 <attribute name="MANUFACTURER_PART_NUMBER" value="TPS7192828DRVT" x="33" y="24.5" size="1.778" layer="27" display="off"/>
 <attribute name="NAME" x="33.4375" y="26.1875" size="0.508" layer="25" font="vector" ratio="15" rot="SR0"/>
 <attribute name="VENDOR" value="Texas Instruments" x="33" y="24.5" size="1.778" layer="27" display="off"/>
 </element>
-<element name="R7" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value="10k" x="3" y="15" smashed="yes" rot="R180">
+<element name="R7" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value="10k" x="3" y="15" rot="R180">
 <attribute name="NAME" x="1.3245" y="13.5625" size="0.508" layer="25" font="vector" ratio="15" rot="R270" align="bottom-center"/>
 <attribute name="PROD_ID" value=" " x="2.5" y="15" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="3" y="15.762" size="0.508" layer="27" font="vector" ratio="15" rot="R180" align="top-center"/>
 </element>
-<element name="R10" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value="10k" x="3" y="13.5" smashed="yes">
+<element name="R10" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value="10k" x="3" y="13.5">
 <attribute name="NAME" x="1.8005" y="15" size="0.508" layer="25" font="vector" ratio="15" rot="R90" align="bottom-center"/>
 <attribute name="PROD_ID" value=" " x="3.5" y="13.5" size="1.778" layer="27" display="off"/>
 <attribute name="VALUE" x="3" y="12.738" size="0.508" layer="27" font="vector" ratio="15" align="top-center"/>
 </element>
-<element name="R11" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value="10k" x="3" y="10.5" smashed="yes">
+<element name="R11" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value="10k" x="3" y="10.5">
 <attribute name="NAME" x="1.8125" y="12" size="0.508" layer="25" font="vector" ratio="15" rot="R90" align="bottom-center"/>
 <attribute name="PROD_ID" value=" " x="3.5" y="10.5" size="1.778" layer="27" display="off"/>
 <attribute name="VALUE" x="3" y="9.738" size="0.508" layer="27" font="vector" ratio="15" align="top-center"/>
 </element>
-<element name="R12" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value="10k" x="3" y="12" smashed="yes" rot="R180">
+<element name="R12" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value="10k" x="3" y="12" rot="R180">
 <attribute name="NAME" x="1.3245" y="10.5625" size="0.508" layer="25" font="vector" ratio="15" rot="R270" align="bottom-center"/>
 <attribute name="PROD_ID" value=" " x="2.5" y="12" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="3" y="12.762" size="0.508" layer="27" font="vector" ratio="15" rot="R180" align="top-center"/>
 </element>
-<element name="U$1" library="Oliver_Custom" package="M12-LENS-MOUNT" value="" x="20" y="34.5" smashed="yes"/>
-<element name="JP1" library="SparkFun-Passives" package="SJ_3_PASTE1&amp;2" value="CLKSEL" x="8.5" y="25.5" smashed="yes">
+<element name="U$1" library="Oliver_Custom" package="M12-LENS-MOUNT" value="" x="20" y="34.5"/>
+<element name="JP1" library="SparkFun-Passives" package="SJ_3_PASTE1&amp;2" value="CLKSEL" x="8.5" y="25.5">
 <attribute name="NAME" x="6.9175" y="23.77" size="0.508" layer="25" font="vector" ratio="15"/>
 <attribute name="VALUE" x="8.3999" y="25.5" size="0.02" layer="27"/>
 <attribute name="VALUE" x="7.23" y="23.595" size="0.508" layer="27" font="vector" ratio="15"/>
 </element>
-<element name="U$2" library="Oliver_Custom" package="AR0130CSSM00SPCA0−DRBR1-847AB" value="AR0130CSSM00SPCA0−DRBR1-847AC-ILCC" x="20" y="34.5" smashed="yes" rot="R180"/>
-<element name="C7" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:2054894" package="0402" value="1.0uF" x="30.3125" y="16.875" smashed="yes" rot="R180">
+<element name="U$2" library="Oliver_Custom" package="AR0130CSSM00SPCA0−DRBR1-847AB" value="AR0130CSSM00SPCA0−DRBR1-847AC-ILCC" x="20" y="34.5" rot="R180"/>
+<element name="C7" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:2054894" package="0402" value="1.0uF" x="30.3125" y="16.875" rot="R180">
 <attribute name="NAME" x="28.6995" y="16.875" size="0.508" layer="25" font="vector" ratio="15" rot="R270" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-12417" x="29.8125" y="16.875" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="30.3125" y="17.637" size="0.5" layer="27" font="vector" ratio="15" rot="R180" align="top-center"/>
 </element>
-<element name="C8" library="SparkFun-Capacitors" package="0402" value="1.0uF" x="30.3125" y="21.375" smashed="yes" rot="R180">
+<element name="C8" library="SparkFun-Capacitors" package="0402" value="1.0uF" x="30.3125" y="21.375" rot="R180">
 <attribute name="NAME" x="28.6995" y="21.375" size="0.508" layer="25" font="vector" ratio="15" rot="R270" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-12417" x="32.8125" y="24.875" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="30.3125" y="22.137" size="0.508" layer="27" font="vector" ratio="15" rot="R180" align="top-center"/>
 </element>
-<element name="C9" library="SparkFun-Capacitors" package="0402" value="1.0uF" x="30.3125" y="25.875" smashed="yes" rot="R180">
+<element name="C9" library="SparkFun-Capacitors" package="0402" value="1.0uF" x="30.3125" y="25.875" rot="R180">
 <attribute name="NAME" x="29.238" y="25.875" size="0.508" layer="25" font="vector" ratio="15" rot="R90" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-12417" x="29.8125" y="29.375" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="30.3125" y="26.637" size="0.508" layer="27" font="vector" ratio="15" rot="R180" align="top-center"/>
 </element>
-<element name="C10" library="SparkFun-Capacitors" package="0402" value="1.0uF" x="30.3125" y="18.625" smashed="yes" rot="R180">
+<element name="C10" library="SparkFun-Capacitors" package="0402" value="1.0uF" x="30.3125" y="18.625" rot="R180">
 <attribute name="NAME" x="29.1755" y="18.625" size="0.508" layer="25" font="vector" ratio="15" rot="R90" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-12417" x="32.8125" y="25.625" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="30.3125" y="19.387" size="0.508" layer="27" font="vector" ratio="15" rot="R180" align="top-center"/>
 </element>
-<element name="C11" library="SparkFun-Capacitors" package="0402" value="1.0uF" x="30.3125" y="23.125" smashed="yes" rot="R180">
+<element name="C11" library="SparkFun-Capacitors" package="0402" value="1.0uF" x="30.3125" y="23.125" rot="R180">
 <attribute name="NAME" x="28.762" y="23.125" size="0.508" layer="25" font="vector" ratio="15" rot="R270" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-12417" x="29.8125" y="30.125" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="30.3125" y="23.887" size="0.508" layer="27" font="vector" ratio="15" rot="R180" align="top-center"/>
 </element>
-<element name="C12" library="SparkFun-Capacitors" package="0402" value="1.0uF" x="30.3125" y="14.125" smashed="yes" rot="R180">
+<element name="C12" library="SparkFun-Capacitors" package="0402" value="1.0uF" x="30.3125" y="14.125" rot="R180">
 <attribute name="NAME" x="28.637" y="14.125" size="0.508" layer="25" font="vector" ratio="15" rot="R270" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-12417" x="29.8125" y="14.125" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="30.3125" y="14.887" size="0.508" layer="27" font="vector" ratio="15" rot="R180" align="top-center"/>
 </element>
-<element name="TP1" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="37" y="13.75" smashed="yes">
+<element name="TP1" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="37" y="13.75">
 <attribute name="NAME" x="35" y="13.5" size="0.508" layer="25" font="vector" ratio="15"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="37" y="11.845" size="1" layer="37"/>
 <attribute name="VALUE" x="36.746" y="13.369" size="0.0254" layer="27"/>
 </element>
-<element name="TP2" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="37" y="16.25" smashed="yes">
+<element name="TP2" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="37" y="16.25">
 <attribute name="NAME" x="35" y="16" size="0.508" layer="25" font="vector" ratio="15"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="37" y="14.345" size="1" layer="37"/>
 <attribute name="VALUE" x="36.746" y="15.869" size="0.0254" layer="27"/>
 </element>
-<element name="TP3" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="37" y="18.75" smashed="yes">
+<element name="TP3" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="37" y="18.75">
 <attribute name="NAME" x="35" y="18.5" size="0.508" layer="25" font="vector" ratio="15"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="37" y="16.845" size="1" layer="37"/>
 <attribute name="VALUE" x="36.746" y="18.369" size="0.0254" layer="27"/>
 </element>
-<element name="TP4" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="37" y="21.25" smashed="yes">
+<element name="TP4" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="37" y="21.25">
 <attribute name="NAME" x="35" y="21" size="0.508" layer="25" font="vector" ratio="15"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="37" y="19.345" size="1" layer="37"/>
 <attribute name="VALUE" x="36.746" y="20.869" size="0.0254" layer="27"/>
 </element>
-<element name="TP5" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="37" y="23.75" smashed="yes">
+<element name="TP5" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="37" y="23.75">
 <attribute name="NAME" x="35" y="23.5" size="0.508" layer="25" font="vector" ratio="15"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="37" y="21.845" size="1" layer="37"/>
 <attribute name="VALUE" x="36.746" y="23.369" size="0.0254" layer="27"/>
 </element>
-<element name="TP6" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="37" y="26.25" smashed="yes">
+<element name="TP6" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="37" y="26.25">
 <attribute name="NAME" x="35" y="26" size="0.508" layer="25" font="vector" ratio="15"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="37" y="24.345" size="1" layer="37"/>
 <attribute name="VALUE" x="36.746" y="25.869" size="0.0254" layer="27"/>
 </element>
-<element name="D1" library="SparkFun-LED" package="LED-0603" value="" x="28.5" y="11" smashed="yes" rot="R270">
+<element name="D1" library="SparkFun-LED" package="LED-0603" value="" x="28.5" y="11" rot="R270">
 <attribute name="NAME" x="29.135" y="11" size="0.6096" layer="25" font="vector" ratio="20" rot="R270" align="bottom-center"/>
 <attribute name="VALUE" x="27.865" y="11" size="0.6096" layer="27" font="vector" ratio="20" rot="R270" align="top-center"/>
 </element>
-<element name="R13" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value="1k" x="27" y="11" smashed="yes" rot="R90">
+<element name="R13" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:2058534" package="0402" package3d_urn="urn:adsk.eagle:package:2058625/2" value="1k" x="27" y="11" rot="R90">
 <attribute name="NAME" x="26.238" y="11" size="0.508" layer="25" font="vector" ratio="15" rot="R90" align="bottom-center"/>
 <attribute name="PROD_ID" value=" " x="23.5" y="8" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="27.762" y="11" size="0.508" layer="27" font="vector" ratio="15" rot="R90" align="top-center"/>
 </element>
-<element name="TP7" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="9" y="22.5" smashed="yes">
+<element name="TP7" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="9" y="22.5">
 <attribute name="NAME" x="9.2874" y="22.825" size="0.508" layer="25" font="vector" ratio="15" rot="R90"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="9" y="20.595" size="1" layer="37"/>
 <attribute name="VALUE" x="8.746" y="22.119" size="0.0254" layer="27"/>
 </element>
-<element name="TP8" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="11" y="22.5" smashed="yes">
+<element name="TP8" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="11" y="22.5">
 <attribute name="NAME" x="11.2874" y="22.825" size="0.508" layer="25" font="vector" ratio="15" rot="R90"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="11" y="20.595" size="1" layer="37"/>
 <attribute name="VALUE" x="10.746" y="22.119" size="0.0254" layer="27"/>
 </element>
-<element name="TP9" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="13" y="22.5" smashed="yes">
+<element name="TP9" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="13" y="22.5">
 <attribute name="NAME" x="15.4749" y="22.325" size="0.508" layer="25" font="vector" ratio="15" rot="R90"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="13" y="20.595" size="1" layer="37"/>
 <attribute name="VALUE" x="12.746" y="22.119" size="0.0254" layer="27"/>
 </element>
-<element name="TP10" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="12" y="22.5" smashed="yes">
+<element name="TP10" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="12" y="22.5">
 <attribute name="NAME" x="12.2874" y="22.825" size="0.508" layer="25" font="vector" ratio="15" rot="R90"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="12" y="20.595" size="1" layer="37"/>
 <attribute name="VALUE" x="11.746" y="22.119" size="0.0254" layer="27"/>
 </element>
-<element name="TP11" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="10" y="22.5" smashed="yes">
+<element name="TP11" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="10" y="22.5">
 <attribute name="NAME" x="10.2874" y="22.825" size="0.508" layer="25" font="vector" ratio="15" rot="R90"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="10" y="20.595" size="1" layer="37"/>
 <attribute name="VALUE" x="9.746" y="22.119" size="0.0254" layer="27"/>
 </element>
-<element name="TP12" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="15.1875" y="24" smashed="yes">
+<element name="TP12" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="15.1875" y="24">
 <attribute name="NAME" x="13.31865" y="22.825" size="0.508" layer="25" font="vector" ratio="15" rot="R90"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="15.1875" y="22.095" size="1" layer="37"/>
 <attribute name="VALUE" x="14.9335" y="23.619" size="0.0254" layer="27"/>
 </element>
-<element name="TP13" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="14.0625" y="24" smashed="yes">
+<element name="TP13" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="14.0625" y="24">
 <attribute name="NAME" x="14.31865" y="21.91875" size="0.508" layer="25" font="vector" ratio="15" rot="R90"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="14.0625" y="22.095" size="1" layer="37"/>
 <attribute name="VALUE" x="13.8085" y="23.619" size="0.0254" layer="27"/>
 </element>
-<element name="TP14" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="17.54375" y="28.30625" smashed="yes">
+<element name="TP14" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="17.54375" y="28.30625">
 <attribute name="NAME" x="17.85" y="25.375" size="0.508" layer="25" font="vector" ratio="15" rot="R90"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="17.54375" y="26.40125" size="1" layer="37"/>
 <attribute name="VALUE" x="17.28975" y="27.92525" size="0.0254" layer="27"/>
 </element>
-<element name="TP15" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="18.24375" y="27.7375" smashed="yes">
+<element name="TP15" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="18.24375" y="27.7375">
 <attribute name="NAME" x="18.55" y="25.375" size="0.508" layer="25" font="vector" ratio="15" rot="R90"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="18.24375" y="25.8325" size="1" layer="37"/>
 <attribute name="VALUE" x="17.98975" y="27.3565" size="0.0254" layer="27"/>
 </element>
-<element name="TP16" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="18.94375" y="28.30625" smashed="yes">
+<element name="TP16" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="18.94375" y="28.30625">
 <attribute name="NAME" x="19.25" y="25.375" size="0.508" layer="25" font="vector" ratio="15" rot="R90"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="18.94375" y="26.40125" size="1" layer="37"/>
 <attribute name="VALUE" x="18.68975" y="27.92525" size="0.0254" layer="27"/>
 </element>
-<element name="TP17" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="19.6" y="27.7375" smashed="yes">
+<element name="TP17" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="19.6" y="27.7375">
 <attribute name="NAME" x="19.95" y="25.375" size="0.508" layer="25" font="vector" ratio="15" rot="R90"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="19.6" y="25.8325" size="1" layer="37"/>
 <attribute name="VALUE" x="19.346" y="27.3565" size="0.0254" layer="27"/>
 </element>
-<element name="TP18" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="20.34375" y="28.30625" smashed="yes">
+<element name="TP18" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="20.34375" y="28.30625">
 <attribute name="NAME" x="20.65" y="25.375" size="0.508" layer="25" font="vector" ratio="15" rot="R90"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="20.34375" y="26.40125" size="1" layer="37"/>
 <attribute name="VALUE" x="20.08975" y="27.92525" size="0.0254" layer="27"/>
 </element>
-<element name="TP19" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="21.04375" y="27.7375" smashed="yes">
+<element name="TP19" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="21.04375" y="27.7375">
 <attribute name="NAME" x="21.35" y="25.375" size="0.508" layer="25" font="vector" ratio="15" rot="R90"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="21.04375" y="25.8325" size="1" layer="37"/>
 <attribute name="VALUE" x="20.78975" y="27.3565" size="0.0254" layer="27"/>
 </element>
-<element name="TP20" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="21.74375" y="28.30625" smashed="yes">
+<element name="TP20" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="21.74375" y="28.30625">
 <attribute name="NAME" x="22.05" y="25.375" size="0.508" layer="25" font="vector" ratio="15" rot="R90"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="21.74375" y="26.40125" size="1" layer="37"/>
 <attribute name="VALUE" x="21.48975" y="27.92525" size="0.0254" layer="27"/>
 </element>
-<element name="TP21" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="22.44375" y="27.7375" smashed="yes">
+<element name="TP21" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="22.44375" y="27.7375">
 <attribute name="NAME" x="22.75" y="25.375" size="0.508" layer="25" font="vector" ratio="15" rot="R90"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="22.44375" y="25.8325" size="1" layer="37"/>
 <attribute name="VALUE" x="22.18975" y="27.3565" size="0.0254" layer="27"/>
 </element>
-<element name="TP22" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="26.075" y="31.325" smashed="yes">
+<element name="TP22" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="26.075" y="31.325">
 <attribute name="NAME" x="27.1125" y="31.05" size="0.508" layer="25" font="vector" ratio="15"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="26.075" y="29.42" size="1" layer="37"/>
 <attribute name="VALUE" x="25.821" y="30.944" size="0.0254" layer="27"/>
 </element>
-<element name="TP23" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="26.6" y="32.025" smashed="yes">
+<element name="TP23" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="26.6" y="32.025">
 <attribute name="NAME" x="27.1125" y="31.75" size="0.508" layer="25" font="vector" ratio="15"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="26.6" y="30.12" size="1" layer="37"/>
 <attribute name="VALUE" x="26.346" y="31.644" size="0.0254" layer="27"/>
 </element>
-<element name="TP24" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="26.075" y="32.725" smashed="yes">
+<element name="TP24" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="26.075" y="32.725">
 <attribute name="NAME" x="27.1125" y="32.45" size="0.508" layer="25" font="vector" ratio="15"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="26.075" y="30.82" size="1" layer="37"/>
 <attribute name="VALUE" x="25.821" y="32.344" size="0.0254" layer="27"/>
 </element>
-<element name="TP25" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="26.6" y="33.425" smashed="yes">
+<element name="TP25" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="26.6" y="33.425">
 <attribute name="NAME" x="27.1125" y="33.15" size="0.508" layer="25" font="vector" ratio="15"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="26.6" y="31.52" size="1" layer="37"/>
 <attribute name="VALUE" x="26.346" y="33.044" size="0.0254" layer="27"/>
 </element>
-<element name="TP26" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="16.1875" y="28.26875" smashed="yes">
+<element name="TP26" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="16.1875" y="28.26875">
 <attribute name="NAME" x="16.45" y="25.375" size="0.508" layer="25" font="vector" ratio="15" rot="R90"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="16.1875" y="26.36375" size="1" layer="37"/>
 <attribute name="VALUE" x="15.9335" y="27.88775" size="0.0254" layer="27"/>
 </element>
-<element name="TP27" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="16.93125" y="27.7375" smashed="yes">
+<element name="TP27" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="16.93125" y="27.7375">
 <attribute name="NAME" x="17.15" y="25.375" size="0.508" layer="25" font="vector" ratio="15" rot="R90"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="16.93125" y="25.8325" size="1" layer="37"/>
 <attribute name="VALUE" x="16.67725" y="27.3565" size="0.0254" layer="27"/>
 </element>
-<element name="TP28" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="26.075" y="34.3" smashed="yes">
+<element name="TP28" library="testpad" package="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1" value="TPTP06R" x="26.075" y="34.3">
 <attribute name="NAME" x="27.0875" y="34.0875" size="0.508" layer="25" font="vector" ratio="15"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="26.075" y="32.395" size="1" layer="37"/>
 <attribute name="VALUE" x="25.821" y="33.919" size="0.0254" layer="27"/>
@@ -4962,6 +4965,13 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="27.297" y1="10.123" x2="27" y2="10.42" width="0.254" layer="1"/>
 </signal>
 </signals>
+<mfgpreviewcolors>
+<mfgpreviewcolor name="soldermaskcolor" color="0xC8008000"/>
+<mfgpreviewcolor name="silkscreencolor" color="0xFFFEFEFE"/>
+<mfgpreviewcolor name="backgroundcolor" color="0xFF282828"/>
+<mfgpreviewcolor name="coppercolor" color="0xFFFFBF00"/>
+<mfgpreviewcolor name="substratecolor" color="0xFF786E46"/>
+</mfgpreviewcolors>
 </board>
 </drawing>
 <compatibility>
