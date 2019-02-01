@@ -19,19 +19,18 @@ CONFIGFILE = sys.argv[1]
 YEAR = float(sys.argv[2])
 MEDIAN_IMAGE = cv2.imread(sys.argv[3])
 SAMPLE_DIR = CONFIGFILE.split('/')[0] + "/samples"
-PORT = 5555       
+SOCKET_ADDR = "./ost_sock"
 BUFFER_SIZE = 1024
 data = ""
 b_conf = [time(), beast.cvar.PIXSCALE, beast.cvar.BASE_FLUX]
 
 # Prepare socket
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)      
+s = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)    
 print "Socket created"
   
 # Bind to the port 
-s.bind(('', PORT))         
-print "Socket bound to %s" %(PORT) 
+s.bind(SOCKET_ADDR)         
+print "Socket bound to %s" %(SOCKET_ADDR)
 
 # Prepare star tracker
 print "\nLoading config" 
@@ -192,7 +191,7 @@ while True:
 	
 	# Establish connection with client. 
 	c, addr = s.accept()      
-	print "Got connection from", addr 
+	print "Received connection" 
 
 	# Receive data w/ CYA policy
 	try:
