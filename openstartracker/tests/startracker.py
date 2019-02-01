@@ -13,6 +13,46 @@ import numpy as np
 import beast
 
 
+# Prepare constants and get system arguments
+P_MATCH_THRESH = 0.99
+CONFIGFILE = sys.argv[1]
+YEAR = float(sys.argv[2])
+MEDIAN_IMAGE = cv2.imread(sys.argv[3])
+SAMPLE_DIR = CONFIGFILE.split('/')[0] + "/samples"
+PORT = 5555       
+BUFFER_SIZE = 1024
+data = ""
+b_conf = [time(), beast.cvar.PIXSCALE, beast.cvar.BASE_FLUX]
+
+# Prepare socket
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)      
+print "Socket created"
+  
+# Bind to the port 
+s.bind(('', PORT))         
+print "Socket bound to %s" %(PORT) 
+
+# Prepare star tracker
+print "\nLoading config" 
+beast.load_config(CONFIGFILE)
+
+print "Loading hip_main.dat" 
+S_DB = beast.star_db()
+S_DB.load_catalog("hip_main.dat", YEAR)
+
+print "Filtering stars" 
+SQ_RESULTS = beast.star_query(S_DB)
+SQ_RESULTS.kdmask_filter_catalog()
+SQ_RESULTS.kdmask_uniform_density(beast.cvar.REQUIRED_STARS)
+S_FILTERED = SQ_RESULTS.from_kdmask()
+
+print "Generating DB" 
+C_DB = beast.constellation_db(S_FILTERED, 2 + beast.cvar.DB_REDUNDANCY, 0)
+
+print "Ready"
+
+
 # Utility function to see if an image is worth solving
 def check_image(img):
 
@@ -48,58 +88,28 @@ def check_image(img):
 	return 1
 
 
-# Prepare constants and get system arguments
-P_MATCH_THRESH = 0.99
-CONFIGFILE = sys.argv[1]
-YEAR = float(sys.argv[2])
-MEDIAN_IMAGE = cv2.imread(sys.argv[3])
-SAMPLE_DIR = CONFIGFILE.split('/')[0] + "/samples"
-b_conf = [time(), beast.cvar.PIXSCALE, beast.cvar.BASE_FLUX]
-
-
-# Prepare star tracker
-print "\nLoading config" 
-beast.load_config(CONFIGFILE)
-
-print "Loading hip_main.dat" 
-S_DB = beast.star_db()
-S_DB.load_catalog("hip_main.dat", YEAR)
-
-print "Filtering stars" 
-SQ_RESULTS = beast.star_query(S_DB)
-SQ_RESULTS.kdmask_filter_catalog()
-SQ_RESULTS.kdmask_uniform_density(beast.cvar.REQUIRED_STARS)
-S_FILTERED = SQ_RESULTS.from_kdmask()
-
-print "Generating DB" 
-C_DB = beast.constellation_db(S_FILTERED, 2 + beast.cvar.DB_REDUNDANCY, 0)
-
-print "Ready"
-
-
-# Process each image in the samples directory
-for image in os.listdir(SAMPLE_DIR):
+# Solution function
+def solve_image(filepath):
 
 	# Keep track of solution time
 	starttime = time()
 
 	# Create and initialize variables
-	filename = SAMPLE_DIR + "/" + image
 	img_stars = beast.star_db()
 	match = None
 	fov_db = None
 
 	# Start output for iteration
-	print "\n\n" + filename
+	print "\n\n" + filepath
 	
 	# Load and check if the image is worth processing
-	img = cv2.imread(filename)
+	img = cv2.imread(filepath)
 	result = check_image(img)
 
 	# If the image failed testing, skip it
 	if result == 0:
 		print "\nTime: " + str(time() - starttime)
-		continue
+		return
 
 	# Process the image for solving
 	img = np.clip(img.astype(np.int16) - MEDIAN_IMAGE, a_min = 0, a_max = 255).astype(np.uint8)
@@ -171,5 +181,36 @@ for image in os.listdir(SAMPLE_DIR):
 
 	# Calculate how long it took to process
 	print "\nTime: " + str(time() - starttime)
+
+
+# Put socket in istening mode 
+s.listen(5)      
+print "\nSocket is listening"   
+
+# Listen for connections until broken
+while True: 
+	
+	# Establish connection with client. 
+	c, addr = s.accept()      
+	print "Got connection from", addr 
+
+	# Receive data w/ CYA policy
+	try:
+		data = c.recv(BUFFER_SIZE)
+	except:
+		print "An error occurred"
+
+	# Remove stray whitespace
+	data = data.strip()
+
+	# Execute appropriate action
+	if data == "quit":
+		c.send("Quitting...")
+		c.close()
+		break
+	else:
+		solve_image(data)
+	
+	c.close()
 
 print "\n"
