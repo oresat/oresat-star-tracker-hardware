@@ -4,7 +4,6 @@
 #include <pru_cfg.h>
 #include "resource_table_empty.h"
 #include <pru_ctrl.h>
-
 #define DELAY 100000000
 
 //#define MEMLOC 0xa0000000
@@ -60,6 +59,17 @@ void main(void)
 
   //CT_CFG.GPCFG0_bit.PRU0_GPI_MODE = 0x00; //GPIO direct mode(default)
 
+  while(1)
+  {
+    volatile int* shared;
+    int shareRead;
+
+    shared = (volatile int*)SHARED;
+    shareRead = *shared;
+    shareRead += 0x1234;
+    shared++; 
+    *shared = shareRead;
+  }
   int *buf0 = (int *)BUF0;
   int *buf1 = (int *)BUF1;
 
@@ -90,7 +100,7 @@ void main(void)
 
   int writeReg = 0x00;
   int line;
-  
+
   //point it to the PRU shared RAM
   //int *temp = (int *)SHARED;
   int temp[COLS];

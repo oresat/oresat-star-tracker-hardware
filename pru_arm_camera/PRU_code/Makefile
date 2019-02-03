@@ -47,6 +47,7 @@ printEnd:
 $(TARGET): $(OBJECTS) $(LINKER_COMMAND_FILE)
 	@echo 'Building target: $@'
 	@echo 'Invoking: PRU Linker'
+	#TODO point this at PRU_CGT bin
 	/usr/bin/clpru $(CFLAGS) -z -i$(PRU_CGT)/lib -i$(PRU_CGT)/include $(LFLAGS) -o $(TARGET) $(OBJECTS) -m$(MAP) $(LINKER_COMMAND_FILE) --library=libc.a $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo 'Output files can be found in the "$(GEN_DIR)" directory'

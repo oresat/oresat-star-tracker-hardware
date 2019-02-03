@@ -138,8 +138,77 @@ static int dev_open(struct inode *inodep, struct file *filep){
   printk(KERN_INFO "Virtual Address: %x\n", cpu_addr);
   printk(KERN_INFO "Physical Address: %x\n", (int*)dma_handle);
 
+  //int* mem_addr = ioremap_nocache((int*)dma_handle, SIZE);
+  //printk(KERN_INFO "Phys Mapped: %x\n", (int*)mem_addr);
 
-  return 0;
+  //*mem_addr = 0xff;
+  //
+  int* physAddr = (int*)dma_handle;
+  //int* addr = cpu_addr;
+  printk(KERN_INFO "physAddr: %x\n", physAddr);
+
+  /*
+     for(i = 0 ; i < SIZE ; i++)
+     {
+   *addr = i;
+   printk(KERN_INFO "i=%d , v-addr: %x = %x , p-addr: %x\n", i, addr, *addr, physAddr);
+   physAddr++;
+   addr++;
+   }
+   */
+
+  /* 
+   * So here I am writing, without permission to the PRU shared RAM. This
+   * should be ok, but in the future I should set aside of piece of PRU shared
+   * RAM to ensure it doesn't accidentally use i
+   */
+#define PRUBASE 0x4a300000
+#define PRUSHAREDRAM PRUBASE + 0x10000
+#define PRUWRBACK PRUSHAREDRAM + 0x4
+#define WRITEBACK_KEY 0x1234
+  printk(KERN_INFO "pru shared RAM: %x\n", PRUSHAREDRAM);
+  printk(KERN_INFO "pru write back: %x\n", PRUWRBACK);
+
+      //volatile int* pru_shared_ram = phys_to_virt(PRUSHAREDRAM);
+      volatile int* pru_shared_ram;
+      pru_shared_ram = 0xe0230000;
+      printk(KERN_INFO "pru_shared_ram virt: %x\n", pru_shared_ram);
+
+      //volatile int* pru_write_back = phys_to_virt(PRUWRBACK);
+      volatile int* pru_write_back;
+      pru_write_back = pru_shared_ram + 0x01; //write back addr is one above shared ram
+      printk(KERN_INFO "pru_write_back virt: %x\n", pru_write_back);
+
+      //zero PRU writeback data
+      *pru_write_back = 0x0;
+
+      //write physical address to PRU shared RAM where a PRU can find it
+      *pru_shared_ram = (int)physAddr;
+
+      int key = (int)physAddr + WRITEBACK_KEY;
+      printk(KERN_INFO "key: %x\n", key);
+
+      volatile int i = 0;
+      int success = 0;
+
+      for(i ; i < 1<<25 ; i++)
+      {
+        if(*pru_write_back !=  key)
+          continue;
+        printk(KERN_INFO "writeback success!\n");
+        success = 1;
+      }
+
+      if(!success)
+      {
+        printk(KERN_INFO "writeback fail!\n");
+        return -1;
+
+      }
+
+      printk(KERN_INFO "writeback success!\n");
+
+      return 0;
 }
 
 /** @brief This function is called whenever device is being read from user space i.e. data is
