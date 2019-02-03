@@ -67,7 +67,7 @@ void main(void)
     shared = (volatile int*)SHARED;
     shareRead = *shared;
     shareRead += 0x1234;
-    shared++; 
+    shared++;
     *shared = shareRead;
   }
   int *buf0 = (int *)BUF0;

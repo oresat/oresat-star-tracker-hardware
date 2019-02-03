@@ -8,6 +8,8 @@ ins:
 	insmod $(mod_name)
 rm:
 	rmmod $(mod_name)
+test: rm ins
+	./test
 	
 clean:
 	make -C /lib/modules/$(shell uname -r)/build/ M=$(PWD) clean
