@@ -18,7 +18,6 @@ P_MATCH_THRESH = 0.99
 CONFIGFILE = sys.argv[1]
 YEAR = float(sys.argv[2])
 MEDIAN_IMAGE = cv2.imread(sys.argv[3])
-SAMPLE_DIR = CONFIGFILE.split('/')[0] + "/samples"
 SOCKET_ADDR = "./ost_sock"
 BUFFER_SIZE = 1024
 data = ""
@@ -53,7 +52,7 @@ print "Ready"
 
 
 # Utility function to see if an image is worth solving
-def check_image(img):
+def check_image(img, connection):
 
 	# Generate test parameters
 	height, width, channels = img.shape
@@ -74,21 +73,21 @@ def check_image(img):
 		blur = cv2.Laplacian(img, cv2.CV_64F).var()
 
 		if blur != 0 and blur < 5:
-			print "Image too blurry"
+			connection.send("Image too blurry")
 		else:
-			print "Too few stars in image"
+			connection.send("Too few stars in image")
 
 		return 0
 
 	elif threshold_black < too_many_check:
-		print "Image has too many stars or is not a pure star field"
+		connection.send("Image has too many stars or is not a pure star field")
 		return 0
 
 	return 1
 
 
 # Solution function
-def solve_image(filepath):
+def solve_image(filepath, connection):
 
 	# Keep track of solution time
 	starttime = time()
@@ -99,15 +98,15 @@ def solve_image(filepath):
 	fov_db = None
 
 	# Start output for iteration
-	print "\n\n" + filepath
+	connection.send("\n\n" + filepath)
 	
 	# Load and check if the image is worth processing
 	img = cv2.imread(filepath)
-	result = check_image(img)
+	result = check_image(img, connection)
 
 	# If the image failed testing, skip it
 	if result == 0:
-		print "\nTime: " + str(time() - starttime)
+		connection.send("\nTime: " + str(time() - starttime))
 		return
 
 	# Process the image for solving
@@ -176,10 +175,10 @@ def solve_image(filepath):
 		# - ORIENTATION - rotation about the camera axis
 
 	else:
-		print "Image could not be processed; no match found"
+		connection.send("Image could not be processed; no match found")
 
 	# Calculate how long it took to process
-	print "\nTime: " + str(time() - starttime)
+	connection.send("\nTime: " + str(time() - starttime))
 
 
 # Put socket in istening mode 
@@ -190,25 +189,25 @@ print "\nSocket is listening"
 while True: 
 	
 	# Establish connection with client. 
-	c, addr = s.accept()      
-	print "Received connection" 
+	c, addr = s.accept()
+	c.send("Received connection\n")  
 
 	# Receive data w/ CYA policy
 	try:
 		data = c.recv(BUFFER_SIZE)
 	except:
-		print "An error occurred"
+		c.send("An error occurred, closing link\n")
 
 	# Remove stray whitespace
 	data = data.strip()
 
 	# Execute appropriate action
 	if data == "quit":
-		c.send("Quitting...")
+		c.send("Shutting down OpenStarTracker, closing link...\n")
 		c.close()
 		break
 	else:
-		solve_image(data)
+		solve_image(data, c)
 	
 	c.close()
 
