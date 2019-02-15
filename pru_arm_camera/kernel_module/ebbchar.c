@@ -1,14 +1,3 @@
-/**
- * @file   ebbchar.c
- * @author Derek Molloy
- * @date   7 April 2015
- * @version 0.1
- * @brief   An introductory character driver to support the second article of my series on
- * Linux loadable kernel module (LKM) development. This module maps to /dev/ebbchar and
- * comes with a helper C program that can be run in Linux user space to communicate with
- * this the LKM.
- * @see http://www.derekmolloy.ie/ for a full description and follow-up descriptions.
- */
 
 #include <linux/init.h>           // Macros used to mark up functions e.g. __init __exit
 #include <linux/module.h>         // Core header for loading LKMs into the kernel
@@ -38,6 +27,7 @@ static int     dev_open(struct inode *, struct file *);
 static int     dev_release(struct inode *, struct file *);
 static ssize_t dev_read(struct file *, char *, size_t, loff_t *);
 static ssize_t dev_write(struct file *, const char *, size_t, loff_t *);
+static int pru_handshake(int physAddr);
 
 /** @brief Devices are represented as file structure in the kernel. The file_operations structure from
  *  /linux/fs.h lists the callback functions that you wish to associated with your file operations
@@ -112,9 +102,8 @@ static void __exit ebbchar_exit(void){
  *  @param filep A pointer to a file object (defined in linux/fs.h)
  */
 static int dev_open(struct inode *inodep, struct file *filep){
-  numberOpens++;
-  printk(KERN_INFO "EBBChar: Device has been opened %d time(s)\n", numberOpens);
-
+  int ret = 0; //return value
+  //set DMA mask
   int retMask = dma_set_coherent_mask(ebbcharDevice, 0xffffffff);
   if(retMask != 0)
   {
@@ -138,37 +127,39 @@ static int dev_open(struct inode *inodep, struct file *filep){
   printk(KERN_INFO "Virtual Address: %x\n", (int)cpu_addr);
   printk(KERN_INFO "Physical Address: %x\n", (int)dma_handle);
 
-  //int* mem_addr = ioremap_nocache((int*)dma_handle, SIZE);
-  //printk(KERN_INFO "Phys Mapped: %x\n", (int*)mem_addr);
-
-  //*mem_addr = 0xff;
-  //
   int* physAddr = (int*)dma_handle;
-  //int* addr = cpu_addr;
   printk(KERN_INFO "physAddr: %x\n", (int)physAddr);
 
-  /*
-     for(i = 0 ; i < SIZE ; i++)
-     {
-   *addr = i;
-   printk(KERN_INFO "i=%d , v-addr: %x = %x , p-addr: %x\n", i, addr, *addr, physAddr);
-   physAddr++;
-   addr++;
-   }
-   */
 
-  /* 
-   * Below is a basic handshake with the PRU. This module writes the value of
-   * physical memory pointer to a mutually agreed upon(between kernel and PRU)
-   * memory location in the PRU shared RAM. The PRU reads this value,
-   * increments it by a agreed upon key, and writes it back to the memory
-   * location + 1. The kernel driver sees this value, increments it again and
-   * writes it back that the memory location + 2. The PRU sees this value,
-   * verifying the handshake and moving on.
-   * I am writing without permission to the PRU shared RAM. This
-   * should be ok, but in the future I should set aside of piece of PRU shared
-   * RAM to ensure it doesn't accidentally use i
-   */
+  int handshake = pru_handshake((int)physAddr);
+  if(handshake < 0) 
+  {
+    ret = -1;
+    printk(KERN_ERR "PRU Handshake failed: %x\n", (int)physAddr);
+    goto exit;
+  }
+
+exit:
+  return ret;
+}
+
+//TODO do I need to check for some sort of error on readl() and writel()
+
+/* 
+ * Below is a basic handshake with the PRU. This module writes the value of
+ * physical memory pointer to a mutually agreed upon(between kernel and PRU)
+ * memory location in the PRU shared RAM. The PRU reads this value,
+ * increments it by a agreed upon key, and writes it back to the memory
+ * location + 1. The kernel driver sees this value, increments it again and
+ * writes it back that the memory location + 2. The PRU sees this value,
+ * verifying the handshake and moving on.
+ * I am writing without permission to the PRU shared RAM. This
+ * should be ok, but in the future I should set aside of piece of PRU shared
+ * RAM to ensure it doesn't accidentally use i
+ */
+static int pru_handshake(int physAddr )
+{
+  //TODO mode these above or to header
 #define PRUBASE 0x4a300000
 #define PRUSHAREDRAM PRUBASE + 0x10000
 #define PRUWRBACK PRUSHAREDRAM + 0x4
@@ -177,27 +168,24 @@ static int dev_open(struct inode *inodep, struct file *filep){
   printk(KERN_INFO "pru shared RAM: %x\n", PRUSHAREDRAM);
   printk(KERN_INFO "pru write back: %x\n", PRUWRBACK);
 
-  //ioremap physical locations in the PRU shared ram TODO do one ioremap and
-  //add to it
+  //ioremap physical locations in the PRU shared ram 
   void __iomem *pru_shared_ram;
-  pru_shared_ram = ioremap_nocache((int)PRUSHAREDRAM, 4);
+  pru_shared_ram = ioremap_nocache((int)PRUSHAREDRAM, 16);
   printk(KERN_INFO "pru_shared_ram virt: %x\n", (int)pru_shared_ram);
 
-  void __iomem *pru_write_back;
-  //void __iomem *pru_write_back = pru_shared_ram + 4;
-  pru_write_back = ioremap_nocache((int)PRUWRBACK, 4); //pru write back addr is one above shared ram
+  //where the PRU will write back the key to kernel
+  void __iomem *pru_write_back = pru_shared_ram + 4;
   printk(KERN_INFO "pru_write_back virt: %x\n", (int)pru_write_back);
 
-  void __iomem *kernel_write_back;
-  //void __iomem *kernel_write_back = pru_shared_ram + 8;
-  kernel_write_back = ioremap_nocache((int)KERNELWRBACK, 4); //kernel write back addr is one above shared ram
+  //where the kernel will re-write back to PRU
+  void __iomem *kernel_write_back = pru_shared_ram + 8;
   printk(KERN_INFO "kernel_write_back virt: %x\n", (int)kernel_write_back);
 
   //zero PRU writeback data
   writel(0x0, pru_write_back);
 
   //write physical address to PRU shared RAM where a PRU can find it
-  writel((int)physAddr, pru_shared_ram);
+  writel(physAddr, pru_shared_ram);
 
   int key = (int)physAddr + WRITEBACK_KEY;
   printk(KERN_INFO "key: %x\n", key);
@@ -205,30 +193,36 @@ static int dev_open(struct inode *inodep, struct file *filep){
   volatile int i = 0;
   int success = 0;
 
+  int pru_read_back;
+
   //wait for a short time for the PRU to respond to the handshake
   for(i ; i < 1<<8 ; i++)
   {
-    if((int)readl(pru_write_back) !=  key)
+    pru_read_back = readl(pru_write_back);
+    if(pru_read_back !=  key)
       continue;
     success = 1;
     break;
   }
-
-  //TODO add additional handshake send back to PRU
 
   int ret = 0;
   if(!success)
   {
     printk(KERN_INFO "writeback fail!\n");
     ret = -1;
+    goto handshake_exit;
   }else{
-    printk(KERN_INFO "writeback success!\n");
+    printk(KERN_INFO "PRU replied successfully!\n");
   }
 
+  printk(KERN_INFO "Writing back to PRU !\n");
+  key += WRITEBACK_KEY;
+
+  writel(key, kernel_write_back);
+
+handshake_exit:
   //unmap iomem
   iounmap(pru_shared_ram);
-  iounmap(pru_write_back);
-  iounmap(kernel_write_back);
 
   return ret;
 }

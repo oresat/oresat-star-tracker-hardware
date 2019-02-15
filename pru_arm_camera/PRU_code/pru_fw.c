@@ -21,6 +21,7 @@
 #define STATUS_MEM (PRU_BASE_ADDR + STATUS)
 #define BUF0  (PRU_BASE_ADDR + 0x00002000)
 #define BUF1  (PRU_BASE_ADDR + 0x00003000)
+#define key 0x1234
 
 #define ROWS 960  //rows per image
 #define COLS 1280 //pixels per row
@@ -59,17 +60,40 @@ void main(void)
 
   //CT_CFG.GPCFG0_bit.PRU0_GPI_MODE = 0x00; //GPIO direct mode(default)
 
+  /*
+   * Basic handshake with kernel driver. Kernel driver allocated memory region.
+   * It writes the address to a shared location known to both the PRU and the
+   * kernel. The PRU reads that location, adds a shared key, and writes it back
+   * to the next memory location. The kernel then reads this value, adds the
+   * key again, and finally writes it back to the next memory location. After
+   * this last step the PRU exits this loop.
+   */
+  volatile int* shared; //location of PRU shared memory
+  volatile int *pru_write_back; //location where PRU writes back to kernel
+  volatile int *kernel_write_back; //location where kernel writes back to PRU 
+  int shareRead;
+  shared = (volatile int*)SHARED;   
+  pru_write_back = shared + 1; 
+  kernel_write_back = pru_write_back + 1; 
+  *kernel_write_back = 0x00; //zero the kernel writeback to verify new value
+
   while(1)
   {
-    volatile int* shared;
-    int shareRead;
+    shareRead = *shared; //read value in shared memory
 
-    shared = (volatile int*)SHARED;
-    shareRead = *shared;
-    shareRead += 0x1234;
-    shared++;
-    *shared = shareRead;
+    shareRead += key; //add key to value
+
+    *pru_write_back = shareRead; //write back value with key to new location
+
+    //after writing, PRU verifys another value read from the kernel
+    shareRead += key; //add key to value
+
+    //TODO should this be a loop to run a certain amount of times  
+    //read value and break if the kernel responded successfully
+    if(*kernel_write_back == shareRead)
+      break;
   }
+
   int *buf0 = (int *)BUF0;
   int *buf1 = (int *)BUF1;
 
