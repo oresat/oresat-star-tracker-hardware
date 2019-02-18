@@ -6,6 +6,8 @@
 #include <linux/fs.h>             // Header for the Linux file system support
 #include <linux/uaccess.h>          // Required for the copy to user function
 #include <linux/dma-mapping.h>
+#include <linux/interrupt.h>
+#include <linux/platform_device.h>
 #define  DEVICE_NAME "ebbchar"    ///< The device will appear at /dev/ebbchar using this value
 #define  CLASS_NAME  "ebb"        ///< The device class -- this is a character device driver
 #define SIZE 0x200000 //2 MiB is enough for one image
@@ -28,6 +30,9 @@ static int     dev_release(struct inode *, struct file *);
 static ssize_t dev_read(struct file *, char *, size_t, loff_t *);
 static ssize_t dev_write(struct file *, const char *, size_t, loff_t *);
 static int pru_handshake(int physAddr);
+static irq_handler_t irqhandler(unsigned int irq, void *dev_id, struct pt_regs *regs);
+int pru_probe(struct platform_device*);
+int pru_rm(struct platform_device*);
 
 /** @brief Devices are represented as file structure in the kernel. The file_operations structure from
  *  /linux/fs.h lists the callback functions that you wish to associated with your file operations
@@ -45,6 +50,28 @@ static struct file_operations fops =
 dma_addr_t dma_handle = NULL;
 int *cpu_addr = NULL;
 
+static struct platform_device prudev = {
+  .name = "prudev",
+};
+
+static struct platform_driver prudrvr = {
+  .driver = {
+    .name = "prudev",
+    .owner = THIS_MODULE,
+  },
+  .probe = pru_probe,
+  .remove = pru_rm,
+};
+
+int pru_probe(struct platform_device* dev)
+{
+  return 0;
+}
+
+int pru_rm(struct platform_device* dev)
+{
+  return 0;
+}
 
 /** @brief The LKM initialization function
  *  The static keyword restricts the visibility of the function to within this C file. The __init
@@ -71,6 +98,19 @@ static int __init ebbchar_init(void){
     return PTR_ERR(ebbcharClass);          // Correct way to return an error on a pointer
   }
   printk(KERN_INFO "EBBChar: device class registered correctly\n");
+
+  int regDrvr = platform_driver_register(&prudrvr);
+  printk(KERN_INFO "EBBChar: platform driver register returned: %d\n", regDrvr);
+
+  int regDev = platform_device_register(&prudev);
+  printk(KERN_INFO "EBBChar: platform device register returned: %d\n", regDev);
+
+  //TODO THIS IS STILL RETURNING -6 NO DEVICE
+  int irq_num = platform_get_irq(&prudev, 20);
+  printk(KERN_ERR "EBBChar: platform_get_irq(%d) returned: %d\n", 20, irq_num);
+
+  //TODO CALLING THIS REQUIRES A RELEASE FUNCTION?
+  platform_device_unregister(&prudev);
 
   // Register the device driver
   ebbcharDevice = device_create(ebbcharClass, NULL, MKDEV(majorNumber, 0), NULL, DEVICE_NAME);
@@ -271,12 +311,19 @@ static ssize_t dev_write(struct file *filep, const char *buffer, size_t len, lof
   return len;
 }
 
+static irq_handler_t irqhandler(unsigned int irq, void *dev_id, struct pt_regs *regs)
+{
+  printk(KERN_INFO "IRQ_HANDLER!!!\n");
+  return (irq_handler_t) 0;
+}
+
 /** @brief The device release function that is called whenever the device is closed/released by
  *  the userspace program
  *  @param inodep A pointer to an inode object (defined in linux/fs.h)
  *  @param filep A pointer to a file object (defined in linux/fs.h)
  */
 static int dev_release(struct inode *inodep, struct file *filep){
+  free_irq(20, NULL);
   dma_free_coherent(ebbcharDevice, SIZE, cpu_addr, dma_handle);
   printk(KERN_INFO "Freed %d bytes\n", SIZE); 
 
