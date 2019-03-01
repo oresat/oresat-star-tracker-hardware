@@ -33,6 +33,7 @@ static int pru_handshake(int physAddr);
 static irq_handler_t irqhandler(unsigned int irq, void *dev_id, struct pt_regs *regs);
 int pru_probe(struct platform_device*);
 int pru_rm(struct platform_device*);
+int release_dev(void);
 
 /** @brief Devices are represented as file structure in the kernel. The file_operations structure from
  *  /linux/fs.h lists the callback functions that you wish to associated with your file operations
@@ -50,9 +51,16 @@ static struct file_operations fops =
 dma_addr_t dma_handle = NULL;
 int *cpu_addr = NULL;
 
-static struct platform_device prudev = {
-  .name = "prudev",
+static struct resource prudev_resources[] = {
+  {
+    .start = 20,
+    .end = 20,
+    .flags = IORESOURCE_IRQ,
+    .name = "irq"
+  }
 };
+
+struct platform_device *prudev;
 
 static struct platform_driver prudrvr = {
   .driver = {
@@ -65,6 +73,18 @@ static struct platform_driver prudrvr = {
 
 int pru_probe(struct platform_device* dev)
 {
+  printk(KERN_INFO "EBBChar: probing...\n");
+
+
+  //TODO THIS IS STILL RETURNING -6 NO DEVICE
+  int irq_num = platform_get_irq(dev, 20);
+  printk(KERN_ERR "EBBChar: platform_get_irq(%d) returned: %d\n", 20, irq_num);
+
+
+  return 0;
+}
+
+int release_dev(void) {
   return 0;
 }
 
@@ -102,15 +122,7 @@ static int __init ebbchar_init(void){
   int regDrvr = platform_driver_register(&prudrvr);
   printk(KERN_INFO "EBBChar: platform driver register returned: %d\n", regDrvr);
 
-  int regDev = platform_device_register(&prudev);
-  printk(KERN_INFO "EBBChar: platform device register returned: %d\n", regDev);
-
-  //TODO THIS IS STILL RETURNING -6 NO DEVICE
-  int irq_num = platform_get_irq(&prudev, 20);
-  printk(KERN_ERR "EBBChar: platform_get_irq(%d) returned: %d\n", 20, irq_num);
-
-  //TODO CALLING THIS REQUIRES A RELEASE FUNCTION?
-  platform_device_unregister(&prudev);
+  printk(KERN_INFO "EBBChar: platform device registered\n");
 
   // Register the device driver
   ebbcharDevice = device_create(ebbcharClass, NULL, MKDEV(majorNumber, 0), NULL, DEVICE_NAME);
@@ -129,6 +141,10 @@ static int __init ebbchar_init(void){
  *  code is used for a built-in driver (not a LKM) that this function is not required.
  */
 static void __exit ebbchar_exit(void){
+  //unregister platform device and driver
+  platform_device_unregister(prudev);
+  platform_driver_unregister(&prudrvr);
+
   device_destroy(ebbcharClass, MKDEV(majorNumber, 0));     // remove the device
   class_unregister(ebbcharClass);                          // unregister the device class
   class_destroy(ebbcharClass);                             // remove the device class
@@ -136,11 +152,6 @@ static void __exit ebbchar_exit(void){
   printk(KERN_INFO "EBBChar: Goodbye from the LKM!\n");
 }
 
-/** @brief The device open function that is called each time the device is opened
- *  This will only increment the numberOpens counter in this case.
- *  @param inodep A pointer to an inode object (defined in linux/fs.h)
- *  @param filep A pointer to a file object (defined in linux/fs.h)
- */
 static int dev_open(struct inode *inodep, struct file *filep){
   int ret = 0; //return value
   //set DMA mask
@@ -150,6 +161,11 @@ static int dev_open(struct inode *inodep, struct file *filep){
     printk(KERN_INFO "Failed to set DMA mask : error %d\n", retMask);
     return 0;
   }
+
+  // int regDev = platform_device_register(&prudev);
+  //using the "simple" function stopped the "no release func" error
+  prudev = platform_device_register_simple("prudev", 1, prudev_resources, 1);
+  //TODO how do I check for success here
 
 
   /*
@@ -199,7 +215,7 @@ exit:
  */
 static int pru_handshake(int physAddr )
 {
-  //TODO mode these above or to header
+  //TODO move these above or to header
 #define PRUBASE 0x4a300000
 #define PRUSHAREDRAM PRUBASE + 0x10000
 #define PRUWRBACK PRUSHAREDRAM + 0x4
@@ -323,7 +339,6 @@ static irq_handler_t irqhandler(unsigned int irq, void *dev_id, struct pt_regs *
  *  @param filep A pointer to a file object (defined in linux/fs.h)
  */
 static int dev_release(struct inode *inodep, struct file *filep){
-  free_irq(20, NULL);
   dma_free_coherent(ebbcharDevice, SIZE, cpu_addr, dma_handle);
   printk(KERN_INFO "Freed %d bytes\n", SIZE); 
 
