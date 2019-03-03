@@ -34,6 +34,7 @@ static irq_handler_t irqhandler(unsigned int irq, void *dev_id, struct pt_regs *
 int pru_probe(struct platform_device*);
 int pru_rm(struct platform_device*);
 int release_dev(void);
+int irq;
 
 /** @brief Devices are represented as file structure in the kernel. The file_operations structure from
  *  /linux/fs.h lists the callback functions that you wish to associated with your file operations
@@ -77,8 +78,12 @@ int pru_probe(struct platform_device* dev)
 
 
   //TODO THIS IS STILL RETURNING -6 NO DEVICE
-  int irq_num = platform_get_irq(dev, 20);
-  printk(KERN_ERR "EBBChar: platform_get_irq(%d) returned: %d\n", 20, irq_num);
+  //int irq_num = platform_get_irq(dev, 20);
+  //printk(KERN_ERR "EBBChar: platform_get_irq(%d) returned: %d\n", 20, irq_num);
+
+  int pru_evt0_irq = 62;
+  irq = request_irq(pru_evt0_irq, (irq_handler_t)irqhandler, 0, "prudev", NULL);
+  printk(KERN_ERR "EBBChar: platform_get_irq(%d) returned: %d\n", pru_evt0_irq, irq);
 
 
   return 0;
@@ -148,6 +153,7 @@ static void __exit ebbchar_exit(void){
   device_destroy(ebbcharClass, MKDEV(majorNumber, 0));     // remove the device
   class_unregister(ebbcharClass);                          // unregister the device class
   class_destroy(ebbcharClass);                             // remove the device class
+  free_irq(irq, NULL);
   unregister_chrdev(majorNumber, DEVICE_NAME);             // unregister the major number
   printk(KERN_INFO "EBBChar: Goodbye from the LKM!\n");
 }
@@ -187,6 +193,7 @@ static int dev_open(struct inode *inodep, struct file *filep){
   printk(KERN_INFO "physAddr: %x\n", (int)physAddr);
 
 
+  /* SKIP THE HANDSHAKE FOR NOW WHILE WE'RE TESTING INTERRUPTS
   int handshake = pru_handshake((int)physAddr);
   if(handshake < 0) 
   {
@@ -194,6 +201,7 @@ static int dev_open(struct inode *inodep, struct file *filep){
     printk(KERN_ERR "PRU Handshake failed: %x\n", (int)physAddr);
     goto exit;
   }
+  */
 
 exit:
   return ret;

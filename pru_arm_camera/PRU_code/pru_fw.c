@@ -59,6 +59,30 @@ void main(void)
   CT_CFG.GPCFG0_bit.PRU0_GPI_CLK_MODE = 0x01; //capture on positive edge
 
   //CT_CFG.GPCFG0_bit.PRU0_GPI_MODE = 0x00; //GPIO direct mode(default)
+  
+  /*
+   * Interrupt procedure
+   *
+   * Use pr1_pru_mst_intr[0]_intr_req, system event 16 to trigger PRU_EVT0,
+   *   host-2, intc 20
+   *
+   *  SETUP
+   * - set active high polarity: write 0x10000 to SIPR0(0xd00)
+   * - set pulse type(default?): write 0x00 to SITR0(0xd80)
+   * - map sys_evt 16 to channel 0(default?): write 0x00 to CMR4(0x410)
+   * - map channel 0 to host-2: write 0x02 to HMR0(0x800)
+   * - clear all system events: write 0xffffffff to SECR0(0x280) and
+   *   SECR1(0x284)
+   * - enable host-2 interrupt: write 0x02 to  HIER(0x1500)
+   * - enable global host interrupts: write 0x01 to GER(0x10)
+   * - WHAT? Why don't I have to enable with EISR or HIEISR??????
+   *
+   *  TRIGGER
+   * - trigger pr1_pru_mst_intr_[0]_intr_req: write 0b100000 (0x20) to R31
+   *   //TABLE 4-11, PG 212
+   *
+   *
+   */
 
   /*
    * Basic handshake with kernel driver. Kernel driver allocated memory region.
