@@ -27,7 +27,6 @@ final_data.append(remainder)
 
 for i in range(num_blank):
     bus.send(can.Message(arbitration_id = 0x00, data = [0]))
-    time.sleep(0.0001)
 bus.send(can.Message(arbitration_id = 0x01, data = final_data))
 time.sleep(0.1)
 
@@ -36,20 +35,17 @@ print("Sent image size...")
 # Send the image
 while bytes_left > 0:
 
-    # Get the number of bytes to send in this loop
-    num_to_add = 8
+    # Send the appropriate data packet
     if bytes_left < 8:
-        num_to_add = bytes_left
-
-    # Add the data to the list to send
-    msg_data = []
-    for i in range(num_to_add):
-        msg_data.append(image[counter])
-        counter += 1
-        bytes_left -=1
-
-    # Create and send the CAN message
-    bus.send(can.Message(arbitration_id = 0x01, data = msg_data))
-    time.sleep(0.0001)
+        msg_data = []
+        for i in range(bytes_left):
+            msg_data.append(image[counter])
+            counter += 1
+            bytes_left -=1
+        bus.send(can.Message(arbitration_id = 0x01, data = msg_data))
+    else:
+        bus.send(can.Message(arbitration_id = 0x01, data = [image[counter], image[counter + 1], image[counter + 2], image[counter + 3], image[counter + 4], image[counter + 5], image[counter + 6], image[counter + 7]]))
+        counter += 8
+        bytes_left -= 8
 
 print("Image sent...")
