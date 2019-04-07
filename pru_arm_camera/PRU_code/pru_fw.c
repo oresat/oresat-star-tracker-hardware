@@ -2,7 +2,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <pru_cfg.h>
+#include <pru_intc.h>
 #include "resource_table_empty.h"
+//#include "resource_table_0.h"
 #include <pru_ctrl.h>
 #define DELAY 100000000
 
@@ -69,7 +71,8 @@ void main(void)
    *  SETUP
    * - set active high polarity: write 0x10000 to SIPR0(0xd00)
    * - set pulse type(default?): write 0x00 to SITR0(0xd80)
-   * - map sys_evt 16 to channel 0(default?): write 0x00 to CMR4(0x410)
+   * - map sys_evt 16 to channel 0(default?): write 0x00 to CMR4(0x410) //MAYBE
+   *   I SHOULD USE CHANNEL 2?
    * - map channel 0 to host-2: write 0x02 to HMR0(0x800)
    * - clear all system events: write 0xffffffff to SECR0(0x280) and
    *   SECR1(0x284)
@@ -80,8 +83,6 @@ void main(void)
    *  TRIGGER
    * - trigger pr1_pru_mst_intr_[0]_intr_req: write 0b100000 (0x20) to R31
    *   //TABLE 4-11, PG 212
-   *
-   *
    */
 
   /*
@@ -100,6 +101,40 @@ void main(void)
   pru_write_back = shared + 1; 
   kernel_write_back = pru_write_back + 1; 
   *kernel_write_back = 0x00; //zero the kernel writeback to verify new value
+
+  
+  CT_INTC.SICR_bit.STS_CLR_IDX = 0x02; //clear interrupts //NOT SURE?
+
+  CT_INTC.SIPR0_bit.POLARITY_31_0 = 0x10000;
+  CT_INTC.SITR0_bit.TYPE_31_0 = 0x00;
+  CT_INTC.CMR4_bit.CH_MAP_16 = 0x00; //is this syntax right?
+  CT_INTC.HMR0_bit.HINT_MAP_0 = 0x02;
+  CT_INTC.SECR0_bit.ENA_STS_31_0 = 0xffffffff;
+  CT_INTC.SECR1_bit.ENA_STS_63_32 = 0xffffffff;
+  CT_INTC.HIER_bit.EN_HINT = 0x02;
+  CT_INTC.EISR_bit.EN_SET_IDX = 16;
+  CT_INTC.HIEISR_bit.HINT_EN_SET_IDX = 2;
+  CT_INTC.GER_bit.EN_HINT_ANY = 0x01;
+  
+
+  /* NOTES
+   * still cant see the interrupt firing in /proc/interrupts
+   * however, if I remove the delays from the loop below, the board
+   * immmediately freezes, which tells me that I am doing something right,
+   * maybe spamming the interrupt so hard the system can't do anything else?
+   * I should try using channel 2?
+   * Need to register this interrupt correctly!
+   */
+    
+  while(1) {
+    volatile int i;
+    //__R30 |= 0x40000000; //trigger interrupt
+    __R31 = 0x20;
+    for(i = 0 ; i < 1000000 ; i++);
+    //__R30 &= ~0x40000000; //trigger interrupt
+    CT_INTC.SICR_bit.STS_CLR_IDX = 0x02; //clear interrupts
+    for(i = 0 ; i < 1000000 ; i++);
+  }
 
   while(1)
   {

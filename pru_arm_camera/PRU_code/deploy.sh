@@ -7,6 +7,7 @@
 # Copyright (C) 2016 Zubeen Tolani <ZeekHuge - zeekhuge@gmail.com>
 #############################################################################
 
+export PRU_CGT=/usr/share/ti/cgt-pru
 # The script builds, uploads, and starts PRU image capture firmware 
 
 #If changing these variables, make sure the given pin can be muxed to the given pru.

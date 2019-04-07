@@ -34,7 +34,7 @@ static irq_handler_t irqhandler(unsigned int irq, void *dev_id, struct pt_regs *
 int pru_probe(struct platform_device*);
 int pru_rm(struct platform_device*);
 int release_dev(void);
-int irq;
+int irq = 62;
 
 /** @brief Devices are represented as file structure in the kernel. The file_operations structure from
  *  /linux/fs.h lists the callback functions that you wish to associated with your file operations
@@ -63,27 +63,41 @@ static struct resource prudev_resources[] = {
 
 struct platform_device *prudev;
 
+static const struct of_device_id my_of_ids[] = {
+  { .compatible = "prudev,prudev" },
+  { },
+};
+
 static struct platform_driver prudrvr = {
   .driver = {
     .name = "prudev",
     .owner = THIS_MODULE,
+    .of_match_table = my_of_ids
   },
   .probe = pru_probe,
   .remove = pru_rm,
 };
 
+
 int pru_probe(struct platform_device* dev)
 {
-  printk(KERN_INFO "EBBChar: probing...\n");
+  printk(KERN_INFO "EBBChar: probing %s\n", dev->name);
 
-
+  
+  //   for(int i = 0 ; i < 128 ; i++) {
   //TODO THIS IS STILL RETURNING -6 NO DEVICE
-  //int irq_num = platform_get_irq(dev, 20);
-  //printk(KERN_ERR "EBBChar: platform_get_irq(%d) returned: %d\n", 20, irq_num);
+  //int irq_num = platform_get_irq(dev, i);
+  //int num = 24;
+  //int irq_num = platform_get_irq(dev, num);
+  int irq_num = platform_get_irq_byname(dev, "20");
+  printk(KERN_INFO "EBBChar: platform_get_irq(%d) returned: %d\n", 1, irq_num);
+  irq = request_irq(irq_num, (irq_handler_t)irqhandler, 0, "prudev", NULL);
 
-  int pru_evt0_irq = 62;
-  irq = request_irq(pru_evt0_irq, (irq_handler_t)irqhandler, 0, "prudev", NULL);
-  printk(KERN_ERR "EBBChar: platform_get_irq(%d) returned: %d\n", pru_evt0_irq, irq);
+  //}
+
+  //  int pru_evt0_irq = 62;
+  //  irq = request_irq(pru_evt0_irq, (irq_handler_t)irqhandler, 0, "prudev", NULL);
+  //  printk(KERN_ERR "EBBChar: platform_get_irq(%d) returned: %d\n", pru_evt0_irq, irq);
 
 
   return 0;
@@ -104,8 +118,9 @@ int pru_rm(struct platform_device* dev)
  *  time and that it can be discarded and its memory freed up after that point.
  *  @return returns 0 if successful
  */
+
 static int __init ebbchar_init(void){
-  printk(KERN_INFO "EBBChar: Initializing the EBBChar LKM\n");
+  printk(KERN_INFO "EBBChar: Initializing the EBBChar v1\n");
 
   // Try to dynamically allocate a major number for the device -- more difficult but worth it
   majorNumber = register_chrdev(0, DEVICE_NAME, &fops);
@@ -127,7 +142,7 @@ static int __init ebbchar_init(void){
   int regDrvr = platform_driver_register(&prudrvr);
   printk(KERN_INFO "EBBChar: platform driver register returned: %d\n", regDrvr);
 
-  printk(KERN_INFO "EBBChar: platform device registered\n");
+  //printk(KERN_INFO "EBBChar: platform device registered\n");
 
   // Register the device driver
   ebbcharDevice = device_create(ebbcharClass, NULL, MKDEV(majorNumber, 0), NULL, DEVICE_NAME);
@@ -141,10 +156,12 @@ static int __init ebbchar_init(void){
   return 0;
 }
 
+
 /** @brief The LKM cleanup function
  *  Similar to the initialization function, it is static. The __exit macro notifies that if this
  *  code is used for a built-in driver (not a LKM) that this function is not required.
  */
+
 static void __exit ebbchar_exit(void){
   //unregister platform device and driver
   platform_device_unregister(prudev);
@@ -153,10 +170,11 @@ static void __exit ebbchar_exit(void){
   device_destroy(ebbcharClass, MKDEV(majorNumber, 0));     // remove the device
   class_unregister(ebbcharClass);                          // unregister the device class
   class_destroy(ebbcharClass);                             // remove the device class
-  free_irq(irq, NULL);
+  //free_irq(62, NULL);
   unregister_chrdev(majorNumber, DEVICE_NAME);             // unregister the major number
   printk(KERN_INFO "EBBChar: Goodbye from the LKM!\n");
 }
+
 
 static int dev_open(struct inode *inodep, struct file *filep){
   int ret = 0; //return value
@@ -192,16 +210,25 @@ static int dev_open(struct inode *inodep, struct file *filep){
   int* physAddr = (int*)dma_handle;
   printk(KERN_INFO "physAddr: %x\n", (int)physAddr);
 
-
-  /* SKIP THE HANDSHAKE FOR NOW WHILE WE'RE TESTING INTERRUPTS
-  int handshake = pru_handshake((int)physAddr);
-  if(handshake < 0) 
+  /*
+  //irq = 62;
+  for( irq = 0 ; irq < 256 ; irq++)
   {
-    ret = -1;
-    printk(KERN_ERR "PRU Handshake failed: %x\n", (int)physAddr);
-    goto exit;
+  int pru_evt0_irq = irq;
+  int irqRet = request_irq(pru_evt0_irq, (irq_handler_t)irqhandler, 0, "prudev", NULL);
+  printk(KERN_ERR "EBBChar: request_irq(%d) returned: %d\n", pru_evt0_irq, irqRet);
   }
   */
+
+  /* SKIP THE HANDSHAKE FOR NOW WHILE WE'RE TESTING INTERRUPTS
+     int handshake = pru_handshake((int)physAddr);
+     if(handshake < 0) 
+     {
+     ret = -1;
+     printk(KERN_ERR "PRU Handshake failed: %x\n", (int)physAddr);
+     goto exit;
+     }
+     */
 
 exit:
   return ret;
