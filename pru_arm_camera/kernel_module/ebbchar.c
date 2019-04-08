@@ -50,6 +50,7 @@ static struct file_operations fops =
 //Memory pointers: TODO is there anything wrong with these being global?
 dma_addr_t dma_handle = NULL;
 int *cpu_addr = NULL;
+volatile int int_triggered = 0;
 
 static const struct of_device_id my_of_ids[] = {
   { .compatible = "prudev,prudev" },
@@ -143,10 +144,17 @@ static int __init ebbchar_init(void){
   }
   printk(KERN_INFO "EBBChar: device class registered correctly\n");
 
+  /* Register the platform driver. This causes the system the scan the platform
+   * bus for devices that match this driver. As defined in the device-tree,
+   * there should be a platform device that is found, at which point the
+   * drivers probe function is called on the device and the driver can read and
+   * request the interrupt line associated with that device
+   */
   int regDrvr = platform_driver_register(&prudrvr);
   printk(KERN_INFO "EBBChar: platform driver register returned: %d\n", regDrvr);
 
-  //printk(KERN_INFO "EBBChar: platform device registered\n");
+  //set interrupt to not triggered yet
+  int_triggered = 0;
 
   // Register the device driver
   ebbcharDevice = device_create(ebbcharClass, NULL, MKDEV(majorNumber, 0), NULL, DEVICE_NAME);
@@ -160,12 +168,10 @@ static int __init ebbchar_init(void){
   return 0;
 }
 
-
 /** @brief The LKM cleanup function
  *  Similar to the initialization function, it is static. The __exit macro notifies that if this
  *  code is used for a built-in driver (not a LKM) that this function is not required.
  */
-
 static void __exit ebbchar_exit(void){
   //unregister platform driver
   platform_driver_unregister(&prudrvr);
@@ -182,14 +188,9 @@ static void __exit ebbchar_exit(void){
 
 static void free_irqs(void){
   for(int i = 0 ; i < NUM_IRQS ; i++)
-  {
     if(irqs[i].num > -1)
-    {
       free_irq(irqs[i].num, NULL);
-    }
-  }
 }
-
 
 static int dev_open(struct inode *inodep, struct file *filep){
   int ret = 0; //return value
@@ -201,17 +202,12 @@ static int dev_open(struct inode *inodep, struct file *filep){
     return 0;
   }
 
-  // int regDev = platform_device_register(&prudev);
-  //using the "simple" function stopped the "no release func" error
-  //prudev = platform_device_register_simple("prudev", 1, prudev_resources, 1);
-  //TODO how do I check for success here
-
-
   /*
    * I initial used GFP_DMA flag below, but I could not allocate >1 MiB
    * I am unsure what the ideal flags for this are, but GFP_KERNEL seems to
    * work
    */
+  //TODO I NEED TO FREE THIS THING!!!
   cpu_addr = dma_alloc_coherent(ebbcharDevice, SIZE, &dma_handle, GFP_KERNEL);
   if(cpu_addr == NULL)
   {
@@ -225,25 +221,40 @@ static int dev_open(struct inode *inodep, struct file *filep){
   int* physAddr = (int*)dma_handle;
   printk(KERN_INFO "physAddr: %x\n", (int)physAddr);
 
-  /*
-  //irq = 62;
-  for( irq = 0 ; irq < 256 ; irq++)
+  int handshake = pru_handshake((int)physAddr);
+  if(handshake < 0) 
   {
-  int pru_evt0_irq = irq;
-  int irqRet = request_irq(pru_evt0_irq, (irq_handler_t)irqhandler, 0, "prudev", NULL);
-  printk(KERN_ERR "EBBChar: request_irq(%d) returned: %d\n", pru_evt0_irq, irqRet);
+    ret = -1;
+    printk(KERN_ERR "PRU Handshake failed: %x\n", (int)physAddr);
+    goto exit;
   }
-  */
 
-  /* SKIP THE HANDSHAKE FOR NOW WHILE WE'RE TESTING INTERRUPTS
-     int handshake = pru_handshake((int)physAddr);
-     if(handshake < 0) 
-     {
-     ret = -1;
-     printk(KERN_ERR "PRU Handshake failed: %x\n", (int)physAddr);
-     goto exit;
-     }
-     */
+  /*
+   * TODO
+   * handshake stays in open()
+   * in read(), send separate signal after handshake that PRU waits on
+   * ALSO free the dma_alloc above!!!
+   */
+
+  //wait for intc to be triggered
+  while(!int_triggered);
+  int_triggered = 0;
+
+  printk(KERN_INFO "Interrupt Triggered!\n");
+
+  int* physBase;
+  physBase = cpu_addr;
+  printk(KERN_INFO "physBase: %x\n", physBase);
+  
+  //this just reads back a few values from the PRU to verify everything is
+  //working
+  for(int i = 0 ; i < 255 ; i++)
+  {
+    printk(KERN_INFO "phys: %x\n", *physBase);
+    physBase++;
+  }
+
+
 
 exit:
   return ret;
@@ -261,7 +272,7 @@ exit:
  * verifying the handshake and moving on.
  * I am writing without permission to the PRU shared RAM. This
  * should be ok, but in the future I should set aside of piece of PRU shared
- * RAM to ensure it doesn't accidentally use i
+ * RAM to ensure it doesn't accidentally use it
  */
 static int pru_handshake(int physAddr )
 {
@@ -276,7 +287,7 @@ static int pru_handshake(int physAddr )
 
   //ioremap physical locations in the PRU shared ram 
   void __iomem *pru_shared_ram;
-  pru_shared_ram = ioremap_nocache((int)PRUSHAREDRAM, 16);
+  pru_shared_ram = ioremap_nocache((int)PRUSHAREDRAM, 16); //TODO why is this 16 when I am only using 3 bytes?
   printk(KERN_INFO "pru_shared_ram virt: %x\n", (int)pru_shared_ram);
 
   //where the PRU will write back the key to kernel
@@ -382,7 +393,10 @@ static irq_handler_t irqhandler(unsigned int irqN, void *dev_id, struct pt_regs 
   //  if(irqN != irq)
   // return (irq_handler_t) IRQ_NONE; 
   printk(KERN_INFO "IRQ_HANDLER: %d\n", irqN);
-  //return (irq_handler_t) 0;
+
+  //signal that interrupt has been triggered
+  int_triggered = 1;
+
   return (irq_handler_t) IRQ_HANDLED;
 }
 

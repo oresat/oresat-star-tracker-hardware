@@ -4,7 +4,6 @@
 #include <pru_cfg.h>
 #include <pru_intc.h>
 #include "resource_table_empty.h"
-//#include "resource_table_0.h"
 #include <pru_ctrl.h>
 #define DELAY 100000000
 #define MASK_16_23 0xFF0000
@@ -49,94 +48,50 @@ volatile uint32_t LED[] = {
 
 void main(void)
 {
-
   // Clear SYSCFG[STANDBY_INIT] to enable OCP master port
   // This is supposed to allow us to write to the global memory space?
   // it works without this, sooo....
   CT_CFG.SYSCFG_bit.STANDBY_INIT = 0;
 
-
   //Apparently there is no difference when parallel capture is used!?!?!
   //Parallel Capture Settings
-  //CT_CFG.GPCFG0_bit.PRU0_GPI_MODE = 0x00; //enable parallel capture
+  //CT_CFG.GPCFG0_bit.PRU0_GPI_MODE = 0x01; //enable parallel capture
   //CT_CFG.GPCFG0_bit.PRU0_GPI_CLK_MODE = 0x01; //capture on positive edge
 
-  //CT_CFG.GPCFG0_bit.PRU0_GPI_MODE = 0x00; //GPIO direct mode(default)
+  CT_CFG.GPCFG0_bit.PRU0_GPI_MODE = 0x00; //GPIO direct mode(default)
 
-  /*
-   * Interrupt procedure
-   *
-   * Use pr1_pru_mst_intr[0]_intr_req, system event 16 to trigger PRU_EVT0,
-   *   host-2, intc 20
-   *
-   *  SETUP
-   * - set active high polarity: write 0x10000 to SIPR0(0xd00)
-   * - set pulse type(default?): write 0x00 to SITR0(0xd80)
-   * - map sys_evt 16 to channel 0(default?): write 0x00 to CMR4(0x410) //MAYBE
-   *   I SHOULD USE CHANNEL 2?
-   * - map channel 0 to host-2: write 0x02 to HMR0(0x800)
-   * - clear all system events: write 0xffffffff to SECR0(0x280) and
-   *   SECR1(0x284)
-   * - enable host-2 interrupt: write 0x02 to  HIER(0x1500)
-   * - enable global host interrupts: write 0x01 to GER(0x10)
-   * - WHAT? Why don't I have to enable with EISR or HIEISR??????
-   *
-   *  TRIGGER
-   * - trigger pr1_pru_mst_intr_[0]_intr_req: write 0b100000 (0x20) to R31
-   *   //TABLE 4-11, PG 212
-   */
 
-  /*
-   * Basic handshake with kernel driver. Kernel driver allocated memory region.
-   * It writes the address to a shared location known to both the PRU and the
-   * kernel. The PRU reads that location, adds a shared key, and writes it back
-   * to the next memory location. The kernel then reads this value, adds the
-   * key again, and finally writes it back to the next memory location. After
-   * this last step the PRU exits this loop.
-   */
-  /*
-  volatile int* shared; //location of PRU shared memory
-  volatile int *pru_write_back; //location where PRU writes back to kernel
-  volatile int *kernel_write_back; //location where kernel writes back to PRU 
-  int shareRead;
-  shared = (volatile int*)SHARED;   
-  pru_write_back = shared + 1; 
-  kernel_write_back = pru_write_back + 1; 
-  *kernel_write_back = 0x00; //zero the kernel writeback to verify new value
-  */
-  /*
-  CT_INTC.SICR_bit.STS_CLR_IDX = 24; //clear system event
-  */
-
+  //====PRU INTC SETUP====
   // map sys events 16-23 --> channels 2-9 --> host 2-9
-  
-  //clear all system events NOT SURE IF I NEED THIS
-  CT_INTC.SECR0 = 0xFFFFFFFF;
-  CT_INTC.SECR1 = 0xFFFFFFFF;
+  //TABLE 4-11, PG 212
 
-  //TODO MAYBE WRITE ZEROS TO __R31 at some point?
-
-  //TODO COMMENTS HERE PLEASE!
   CT_INTC.SIPR0_bit.POLARITY_31_0 = MASK_16_23; //set 16-23 to active high
   CT_INTC.SITR0_bit.TYPE_31_0 = 0x00; //set all to pulse type interrupt //MAYBE PLAY WITH THIS?
   
   //map events to channels to hosts
-  CT_INTC.CMR4_bit.CH_MAP_16 = 0x02; //sys evt 16 --> chan 2
-  CT_INTC.CMR4_bit.CH_MAP_17 = 0x03; //sys evt 17 --> chan 3
-  CT_INTC.CMR4_bit.CH_MAP_18 = 0x04; //sys evt 18 --> chan 4
-  CT_INTC.CMR4_bit.CH_MAP_19 = 0x05; //sys evt 19 --> chan 5
-  CT_INTC.CMR5_bit.CH_MAP_20 = 0x06; //sys evt 20 --> chan 6
-  CT_INTC.CMR5_bit.CH_MAP_21 = 0x07; //sys evt 21 --> chan 7
-  CT_INTC.CMR5_bit.CH_MAP_22 = 0x08; //sys evt 22 --> chan 8
-  CT_INTC.CMR5_bit.CH_MAP_23 = 0x09; //sys evt 23 --> chan 9
-  CT_INTC.HMR0_bit.HINT_MAP_2 = 0x02; //chan 2 --> host 2
-  CT_INTC.HMR0_bit.HINT_MAP_3 = 0x03; //chan 3 --> host 3
-  CT_INTC.HMR1_bit.HINT_MAP_4 = 0x04; //chan 4 --> host 4
-  CT_INTC.HMR1_bit.HINT_MAP_5 = 0x05; //chan 5 --> host 5
-  CT_INTC.HMR1_bit.HINT_MAP_6 = 0x06; //chan 6 --> host 6
-  CT_INTC.HMR1_bit.HINT_MAP_7 = 0x07; //chan 7 --> host 7
-  CT_INTC.HMR2_bit.HINT_MAP_8 = 0x08; //chan 8 --> host 8
-  CT_INTC.HMR2_bit.HINT_MAP_9 = 0x09; //chan 9 --> host 9
+  /* Something is broken here. No matter what I try, sys events 20-23 will ONLY
+   * map to INTC 20-23, whil the below mapping says 16-19 should map to INTC
+   * 20-23. This makes NO sense according to the documentation. Furthermore,
+   * I seem to only be able to get INTC 20-23 to trigger, regardless of what
+   * events I trigger(I tried SRSR reg). The mappings seem to have almost no
+   * effect. Come back to this.
+   */
+  CT_INTC.CMR4_bit.CH_MAP_16 = 2; //sys evt 16 --> chan 2
+  CT_INTC.CMR4_bit.CH_MAP_17 = 3; //sys evt 17 --> chan 3
+  CT_INTC.CMR4_bit.CH_MAP_18 = 4; //sys evt 18 --> chan 4
+  CT_INTC.CMR4_bit.CH_MAP_19 = 5; //sys evt 19 --> chan 5
+  CT_INTC.CMR5_bit.CH_MAP_20 = 6; //sys evt 20 --> chan 6
+  CT_INTC.CMR5_bit.CH_MAP_21 = 7; //sys evt 21 --> chan 7
+  CT_INTC.CMR5_bit.CH_MAP_22 = 8; //sys evt 22 --> chan 8
+  CT_INTC.CMR5_bit.CH_MAP_23 = 9; //sys evt 23 --> chan 9
+  CT_INTC.HMR0_bit.HINT_MAP_2 = 2; //chan 2 --> host 2
+  CT_INTC.HMR0_bit.HINT_MAP_3 = 3; //chan 3 --> host 3
+  CT_INTC.HMR1_bit.HINT_MAP_4 = 4; //chan 4 --> host 4
+  CT_INTC.HMR1_bit.HINT_MAP_5 = 5; //chan 5 --> host 5
+  CT_INTC.HMR1_bit.HINT_MAP_6 = 6; //chan 6 --> host 6
+  CT_INTC.HMR1_bit.HINT_MAP_7 = 7; //chan 7 --> host 7
+  CT_INTC.HMR2_bit.HINT_MAP_8 = 8; //chan 8 --> host 8
+  CT_INTC.HMR2_bit.HINT_MAP_9 = 9; //chan 9 --> host 9
   
   //clear all system events
   CT_INTC.SECR0_bit.ENA_STS_31_0 = 0xFFFFFFFF;
@@ -148,110 +103,101 @@ void main(void)
   //enable system events 16-23
   CT_INTC.ESR0_bit.EN_SET_31_0 = MASK_16_23;
 
-  //CT_INTC.EISR_bit.EN_SET_IDX = 16;
-  //CT_INTC.HIEISR_bit.HINT_EN_SET_IDX = 2;
-  
   //enable global interrupts
   CT_INTC.GER_bit.EN_HINT_ANY = 0x01; 
 
+  //====END PRU INTC CONFIG====
 
-  __R31 = 0x20;
-  __R31 = 0x21;
-  __R31 = 0x22;
-  __R31 = 0x23;
-  __R31 = 0x24;
-  __R31 = 0x25;
-  __R31 = 0x26;
-  __R31 = 0x27;
-
-  //TODO maybe trigger with SRSR0 reg
-
-  while(1);
-
-  /* NOTES
-   * still cant see the interrupt firing in /proc/interrupts
-   * however, if I remove the delays from the loop below, the board
-   * immmediately freezes, which tells me that I am doing something right,
-   * maybe spamming the interrupt so hard the system can't do anything else?
-   * I should try using channel 2?
-   * Need to register this interrupt correctly!
-   */
   /*
-  volatile int x;
-
-  for(x = 0x00 ; x < 0x10 ; x++) {
-  //__R30 |= 0x40000000; //trigger interrupt
-  //__R31 = 0x20;
-  CT_INTC.SICR_bit.STS_CLR_IDX = 24; //clear system event
-  CT_INTC.SECR0 = 0xFFFFFFFF;
-  CT_INTC.SECR1 = 0xFFFFFFFF;
-  __R31 = 0x20 | x ;
-  CT_INTC.SICR_bit.STS_CLR_IDX = 24; //clear system event
-  CT_INTC.SECR0 = 0xFFFFFFFF;
-  CT_INTC.SECR1 = 0xFFFFFFFF;
-  //for(i = 0 ; i < 1000000 ; i++);
-  //__R30 &= ~0x40000000; //trigger interrupt
-  //CT_INTC.SICR_bit.STS_CLR_IDX = 0x02; //clear interrupts
-  //CT_INTC.SECR0_bit.ENA_STS_31_0 = 0xffffffff;
-  //CT_INTC.SECR1_bit.ENA_STS_63_32 = 0xffffffff;
-  //for(i = 0 ; i < 1000000 ; i++);
-  }
-  while(1);
+  __R31 = 0x24; //trigger INTC 20
+  __R31 = 0x25; //trigger INTC 21
+  __R31 = 0x26; //trigger INTC 22
+  __R31 = 0x27; //trigger INTC 23
   */
+  
+  //approx 1 second delay
+  //volatile int i;
+  //for(i = 0 ; i < 10000000 ; i++);
+
 
   /*
+   * Basic handshake with kernel driver. Kernel driver allocated memory region.
+   * It writes the address to a shared location known to both the PRU and the
+   * kernel. The PRU reads that location, adds a shared key, and writes it back
+   * to the next memory location. The kernel then reads this value, adds the
+   * key again, and finally writes it back to the next memory location. After
+   * this last step the PRU exits this loop.
+   */
+  volatile int* shared; //location of PRU shared memory
+  volatile int *pru_write_back; //location where PRU writes back to kernel
+  volatile int *kernel_write_back; //location where kernel writes back to PRU 
+  int shareRead; //value read from location, which will be base address if handshake successful
+  int writeBack; //value to writeback to ARM and check against response
+  int* base; //base address for the actual image transfer
+  shared = (volatile int*)SHARED;   
+  pru_write_back = shared + 1; 
+  kernel_write_back = pru_write_back + 1; 
+  *kernel_write_back = 0x00; //zero the kernel writeback to verify new value
+  
   while(1)
   {
     shareRead = *shared; //read value in shared memory
 
-    shareRead += key; //add key to value
+    writeBack = shareRead + key; //add key to value
 
-    *pru_write_back = shareRead; //write back value with key to new location
+    *pru_write_back = writeBack; //write back value with key to new location
 
     //after writing, PRU verifys another value read from the kernel
-    shareRead += key; //add key to value
+    writeBack += key; //add key to value
 
     //TODO should this be a loop to run a certain amount of times  
     //read value and break if the kernel responded successfully
-    if(*kernel_write_back == shareRead)
+    if(*kernel_write_back == writeBack)
+    {
+      base = (int*)shareRead;
       break;
+    }
   }
-  */
+
+  //write back some sequential values to ensure it's working
+  volatile int i;
+  for(i = 0 ; i < 256 ; i++)
+  {
+    *base = i;
+    base++;
+  }
+
+  //signal done
+  __R31 = 0x24; //trigger INTC 20
+
+  while(1);
 
   int *buf0 = (int *)BUF0;
   int *buf1 = (int *)BUF1;
 
+  /*
+   * status is used to recieve signals from ARM. Status will be the base address
+   * we recieved in the handshake
+  */
   int *status;
-  status = (int*)STATUS_MEM;
+  status = (int*)base;
 
   //zero status flags
   *status &= ~ARM_2_PRU;
   *status &= ~PRU_2_ARM;
   *status &= ~END;
-  __R30 &= ~0x8000;
 
   int addr;
 
   //holds to current buffer to write to
   int curBuf = 0;
 
-  /*	
-      while(1)
-      {
-      while((__R31 & 0x00010000) > 0) //wait for VSYNC to go low
-      __R30 |= 0x8000;
-      while((__R31 & 0x00010000) == 0) //while VSYNC is high //used to contain below within this loop, not sure which is better. TODO test!
-      __R30 &= ~0x8000;
-      }
-      */	
-  //__R30 &= ~0x8000; //unset gpio 15
-
   int writeReg = 0x00;
   int line;
 
   //point it to the PRU shared RAM
   //int *temp = (int *)SHARED;
-  int temp[COLS];
+  int temp[COLS]; //TODO feel like this only needs to be CELLS ?
   int pos = 0;
   while(1)
   {
