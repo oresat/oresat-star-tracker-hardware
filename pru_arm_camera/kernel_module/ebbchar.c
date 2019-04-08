@@ -33,8 +33,7 @@ static int pru_handshake(int physAddr);
 static irq_handler_t irqhandler(unsigned int irq, void *dev_id, struct pt_regs *regs);
 int pru_probe(struct platform_device*);
 int pru_rm(struct platform_device*);
-int release_dev(void);
-int irq = 62;
+static void free_irqs(void);
 
 /** @brief Devices are represented as file structure in the kernel. The file_operations structure from
  *  /linux/fs.h lists the callback functions that you wish to associated with your file operations
@@ -52,17 +51,6 @@ static struct file_operations fops =
 dma_addr_t dma_handle = NULL;
 int *cpu_addr = NULL;
 
-static struct resource prudev_resources[] = {
-  {
-    .start = 20,
-    .end = 20,
-    .flags = IORESOURCE_IRQ,
-    .name = "irq"
-  }
-};
-
-struct platform_device *prudev;
-
 static const struct of_device_id my_of_ids[] = {
   { .compatible = "prudev,prudev" },
   { },
@@ -78,35 +66,52 @@ static struct platform_driver prudrvr = {
   .remove = pru_rm,
 };
 
+static struct irq_info {
+  char* name;
+  int   num;
+};
+
+#define NUM_IRQS 8
+/*
+ * mapping of an irq name(from the platfor device in the device device-tree)
+ * to it's assigned linux irq number(in /proc/interrupt). When the irq is 
+ * successfully retrieved and requested, the 'num' will be assigned.
+ */
+struct irq_info irqs[8] = {
+  {"20", -1},
+  {"21", -1},
+  {"22", -1},
+  {"23", -1},
+  {"24", -1},
+  {"25", -1},
+  {"26", -1},
+  {"27", -1}
+};
 
 int pru_probe(struct platform_device* dev)
 {
   printk(KERN_INFO "EBBChar: probing %s\n", dev->name);
 
-  
-  //   for(int i = 0 ; i < 128 ; i++) {
-  //TODO THIS IS STILL RETURNING -6 NO DEVICE
-  //int irq_num = platform_get_irq(dev, i);
-  //int num = 24;
-  //int irq_num = platform_get_irq(dev, num);
-  int irq_num = platform_get_irq_byname(dev, "20");
-  printk(KERN_INFO "EBBChar: platform_get_irq(%d) returned: %d\n", 1, irq_num);
-  irq = request_irq(irq_num, (irq_handler_t)irqhandler, 0, "prudev", NULL);
+  for(int i = 0 ; i < NUM_IRQS ; i++)
+  {
+    int irq = platform_get_irq_byname(dev, irqs[i].name);
+    printk(KERN_INFO "EBBChar: platform_get_irq(%s) returned: %d\n", irqs[i].name, irq);
+    //of not zero, return errno
+    if(irq < 0)
+      return irq;
 
-  //}
+    int ret = request_irq(irq, (irq_handler_t)irqhandler, IRQF_TRIGGER_RISING, "prudev", NULL);
+    printk(KERN_INFO "EBBChar: request_irq(%d) returned: %d\n", irq, ret);
+    if(ret < 0)
+      return ret;
 
-  //  int pru_evt0_irq = 62;
-  //  irq = request_irq(pru_evt0_irq, (irq_handler_t)irqhandler, 0, "prudev", NULL);
-  //  printk(KERN_ERR "EBBChar: platform_get_irq(%d) returned: %d\n", pru_evt0_irq, irq);
-
+    irqs[i].num = irq;
+  }
 
   return 0;
 }
 
-int release_dev(void) {
-  return 0;
-}
-
+//TODO need to define this
 int pru_rm(struct platform_device* dev)
 {
   return 0;
@@ -118,7 +123,6 @@ int pru_rm(struct platform_device* dev)
  *  time and that it can be discarded and its memory freed up after that point.
  *  @return returns 0 if successful
  */
-
 static int __init ebbchar_init(void){
   printk(KERN_INFO "EBBChar: Initializing the EBBChar v1\n");
 
@@ -163,16 +167,27 @@ static int __init ebbchar_init(void){
  */
 
 static void __exit ebbchar_exit(void){
-  //unregister platform device and driver
-  platform_device_unregister(prudev);
+  //unregister platform driver
   platform_driver_unregister(&prudrvr);
+
+  //free irqs
+  free_irqs();
 
   device_destroy(ebbcharClass, MKDEV(majorNumber, 0));     // remove the device
   class_unregister(ebbcharClass);                          // unregister the device class
   class_destroy(ebbcharClass);                             // remove the device class
-  //free_irq(62, NULL);
   unregister_chrdev(majorNumber, DEVICE_NAME);             // unregister the major number
   printk(KERN_INFO "EBBChar: Goodbye from the LKM!\n");
+}
+
+static void free_irqs(void){
+  for(int i = 0 ; i < NUM_IRQS ; i++)
+  {
+    if(irqs[i].num > -1)
+    {
+      free_irq(irqs[i].num, NULL);
+    }
+  }
 }
 
 
@@ -188,7 +203,7 @@ static int dev_open(struct inode *inodep, struct file *filep){
 
   // int regDev = platform_device_register(&prudev);
   //using the "simple" function stopped the "no release func" error
-  prudev = platform_device_register_simple("prudev", 1, prudev_resources, 1);
+  //prudev = platform_device_register_simple("prudev", 1, prudev_resources, 1);
   //TODO how do I check for success here
 
 
@@ -362,10 +377,13 @@ static ssize_t dev_write(struct file *filep, const char *buffer, size_t len, lof
   return len;
 }
 
-static irq_handler_t irqhandler(unsigned int irq, void *dev_id, struct pt_regs *regs)
+static irq_handler_t irqhandler(unsigned int irqN, void *dev_id, struct pt_regs *regs)
 {
-  printk(KERN_INFO "IRQ_HANDLER!!!\n");
-  return (irq_handler_t) 0;
+  //  if(irqN != irq)
+  // return (irq_handler_t) IRQ_NONE; 
+  printk(KERN_INFO "IRQ_HANDLER: %d\n", irqN);
+  //return (irq_handler_t) 0;
+  return (irq_handler_t) IRQ_HANDLED;
 }
 
 /** @brief The device release function that is called whenever the device is closed/released by

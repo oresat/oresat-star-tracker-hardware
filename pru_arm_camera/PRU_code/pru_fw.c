@@ -7,6 +7,7 @@
 //#include "resource_table_0.h"
 #include <pru_ctrl.h>
 #define DELAY 100000000
+#define MASK_16_23 0xFF0000
 
 //#define MEMLOC 0xa0000000
 #define SHARED 0x00010000
@@ -57,11 +58,11 @@ void main(void)
 
   //Apparently there is no difference when parallel capture is used!?!?!
   //Parallel Capture Settings
-  CT_CFG.GPCFG0_bit.PRU0_GPI_MODE = 0x00; //enable parallel capture
-  CT_CFG.GPCFG0_bit.PRU0_GPI_CLK_MODE = 0x01; //capture on positive edge
+  //CT_CFG.GPCFG0_bit.PRU0_GPI_MODE = 0x00; //enable parallel capture
+  //CT_CFG.GPCFG0_bit.PRU0_GPI_CLK_MODE = 0x01; //capture on positive edge
 
   //CT_CFG.GPCFG0_bit.PRU0_GPI_MODE = 0x00; //GPIO direct mode(default)
-  
+
   /*
    * Interrupt procedure
    *
@@ -93,6 +94,7 @@ void main(void)
    * key again, and finally writes it back to the next memory location. After
    * this last step the PRU exits this loop.
    */
+  /*
   volatile int* shared; //location of PRU shared memory
   volatile int *pru_write_back; //location where PRU writes back to kernel
   volatile int *kernel_write_back; //location where kernel writes back to PRU 
@@ -101,21 +103,70 @@ void main(void)
   pru_write_back = shared + 1; 
   kernel_write_back = pru_write_back + 1; 
   *kernel_write_back = 0x00; //zero the kernel writeback to verify new value
+  */
+  /*
+  CT_INTC.SICR_bit.STS_CLR_IDX = 24; //clear system event
+  */
 
+  // map sys events 16-23 --> channels 2-9 --> host 2-9
   
-  CT_INTC.SICR_bit.STS_CLR_IDX = 0x02; //clear interrupts //NOT SURE?
+  //clear all system events NOT SURE IF I NEED THIS
+  CT_INTC.SECR0 = 0xFFFFFFFF;
+  CT_INTC.SECR1 = 0xFFFFFFFF;
 
-  CT_INTC.SIPR0_bit.POLARITY_31_0 = 0x10000;
-  CT_INTC.SITR0_bit.TYPE_31_0 = 0x00;
-  CT_INTC.CMR4_bit.CH_MAP_16 = 0x00; //is this syntax right?
-  CT_INTC.HMR0_bit.HINT_MAP_0 = 0x02;
-  CT_INTC.SECR0_bit.ENA_STS_31_0 = 0xffffffff;
-  CT_INTC.SECR1_bit.ENA_STS_63_32 = 0xffffffff;
-  CT_INTC.HIER_bit.EN_HINT = 0x02;
-  CT_INTC.EISR_bit.EN_SET_IDX = 16;
-  CT_INTC.HIEISR_bit.HINT_EN_SET_IDX = 2;
-  CT_INTC.GER_bit.EN_HINT_ANY = 0x01;
+  //TODO MAYBE WRITE ZEROS TO __R31 at some point?
+
+  //TODO COMMENTS HERE PLEASE!
+  CT_INTC.SIPR0_bit.POLARITY_31_0 = MASK_16_23; //set 16-23 to active high
+  CT_INTC.SITR0_bit.TYPE_31_0 = 0x00; //set all to pulse type interrupt //MAYBE PLAY WITH THIS?
   
+  //map events to channels to hosts
+  CT_INTC.CMR4_bit.CH_MAP_16 = 0x02; //sys evt 16 --> chan 2
+  CT_INTC.CMR4_bit.CH_MAP_17 = 0x03; //sys evt 17 --> chan 3
+  CT_INTC.CMR4_bit.CH_MAP_18 = 0x04; //sys evt 18 --> chan 4
+  CT_INTC.CMR4_bit.CH_MAP_19 = 0x05; //sys evt 19 --> chan 5
+  CT_INTC.CMR5_bit.CH_MAP_20 = 0x06; //sys evt 20 --> chan 6
+  CT_INTC.CMR5_bit.CH_MAP_21 = 0x07; //sys evt 21 --> chan 7
+  CT_INTC.CMR5_bit.CH_MAP_22 = 0x08; //sys evt 22 --> chan 8
+  CT_INTC.CMR5_bit.CH_MAP_23 = 0x09; //sys evt 23 --> chan 9
+  CT_INTC.HMR0_bit.HINT_MAP_2 = 0x02; //chan 2 --> host 2
+  CT_INTC.HMR0_bit.HINT_MAP_3 = 0x03; //chan 3 --> host 3
+  CT_INTC.HMR1_bit.HINT_MAP_4 = 0x04; //chan 4 --> host 4
+  CT_INTC.HMR1_bit.HINT_MAP_5 = 0x05; //chan 5 --> host 5
+  CT_INTC.HMR1_bit.HINT_MAP_6 = 0x06; //chan 6 --> host 6
+  CT_INTC.HMR1_bit.HINT_MAP_7 = 0x07; //chan 7 --> host 7
+  CT_INTC.HMR2_bit.HINT_MAP_8 = 0x08; //chan 8 --> host 8
+  CT_INTC.HMR2_bit.HINT_MAP_9 = 0x09; //chan 9 --> host 9
+  
+  //clear all system events
+  CT_INTC.SECR0_bit.ENA_STS_31_0 = 0xFFFFFFFF;
+  CT_INTC.SECR1_bit.ENA_STS_63_32 = 0xFFFFFFFF;
+
+  //enable host interrupts 2-9
+  CT_INTC.HIER_bit.EN_HINT = 0x3FC;
+
+  //enable system events 16-23
+  CT_INTC.ESR0_bit.EN_SET_31_0 = MASK_16_23;
+
+  //CT_INTC.EISR_bit.EN_SET_IDX = 16;
+  //CT_INTC.HIEISR_bit.HINT_EN_SET_IDX = 2;
+  
+  //enable global interrupts
+  CT_INTC.GER_bit.EN_HINT_ANY = 0x01; 
+
+
+  __R31 = 0x20;
+  __R31 = 0x21;
+  __R31 = 0x22;
+  __R31 = 0x23;
+  __R31 = 0x24;
+  __R31 = 0x25;
+  __R31 = 0x26;
+  __R31 = 0x27;
+
+  //TODO maybe trigger with SRSR0 reg
+
+  while(1);
 
   /* NOTES
    * still cant see the interrupt firing in /proc/interrupts
@@ -125,17 +176,30 @@ void main(void)
    * I should try using channel 2?
    * Need to register this interrupt correctly!
    */
-    
-  while(1) {
-    volatile int i;
-    //__R30 |= 0x40000000; //trigger interrupt
-    __R31 = 0x20;
-    for(i = 0 ; i < 1000000 ; i++);
-    //__R30 &= ~0x40000000; //trigger interrupt
-    CT_INTC.SICR_bit.STS_CLR_IDX = 0x02; //clear interrupts
-    for(i = 0 ; i < 1000000 ; i++);
-  }
+  /*
+  volatile int x;
 
+  for(x = 0x00 ; x < 0x10 ; x++) {
+  //__R30 |= 0x40000000; //trigger interrupt
+  //__R31 = 0x20;
+  CT_INTC.SICR_bit.STS_CLR_IDX = 24; //clear system event
+  CT_INTC.SECR0 = 0xFFFFFFFF;
+  CT_INTC.SECR1 = 0xFFFFFFFF;
+  __R31 = 0x20 | x ;
+  CT_INTC.SICR_bit.STS_CLR_IDX = 24; //clear system event
+  CT_INTC.SECR0 = 0xFFFFFFFF;
+  CT_INTC.SECR1 = 0xFFFFFFFF;
+  //for(i = 0 ; i < 1000000 ; i++);
+  //__R30 &= ~0x40000000; //trigger interrupt
+  //CT_INTC.SICR_bit.STS_CLR_IDX = 0x02; //clear interrupts
+  //CT_INTC.SECR0_bit.ENA_STS_31_0 = 0xffffffff;
+  //CT_INTC.SECR1_bit.ENA_STS_63_32 = 0xffffffff;
+  //for(i = 0 ; i < 1000000 ; i++);
+  }
+  while(1);
+  */
+
+  /*
   while(1)
   {
     shareRead = *shared; //read value in shared memory
@@ -152,6 +216,7 @@ void main(void)
     if(*kernel_write_back == shareRead)
       break;
   }
+  */
 
   int *buf0 = (int *)BUF0;
   int *buf1 = (int *)BUF1;

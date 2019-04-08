@@ -14,8 +14,9 @@ test: rm ins
 	./test
 	
 clean:
-	@make -C /lib/modules/$(shell uname -r)/build/ M=$(PWD) clean > /dev/null &
-	@rm test &
+	@make -C /lib/modules/$(shell uname -r)/build/ M=$(PWD) clean > /dev/null 
+	@rm -f test 
+	@rm -f prudev-00A0.dtbo
 
 
 deploy:

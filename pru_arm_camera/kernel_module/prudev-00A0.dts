@@ -28,8 +28,8 @@
 
 				pruss = <&pruss>;
 				interrupt-parent = <&pruss_intc>;
-				interrupts = <20>, <21>, <22>;
-				interrupt-names = "20", "21", "22";
+				interrupts = <20>, <21>, <22>, <23>, <24>, <25>, <26>, <27>;
+				interrupt-names = "20", "21", "22", "23", "24", "25", "26", "27";
 			};
 		};
 	};
