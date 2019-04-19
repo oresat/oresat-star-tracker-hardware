@@ -23,6 +23,7 @@ remainder = num_frames % 2048
 final_data = []
 while remainder > 256:
     final_data.append(256)
+    remainder -= 256
 final_data.append(remainder)
 
 for i in range(num_blank):
