@@ -7,6 +7,7 @@
 #include <pru_ctrl.h>
 #define DELAY 100000000
 #define MASK_16_23 0xFF0000
+#define MASK_16_24 0x1FF0000
 
 //#define MEMLOC 0xa0000000
 #define SHARED 0x00010000
@@ -15,15 +16,11 @@
 #define PRU_2_ARM 0x00000002
 #define END	  0x08
 #define BUF 0x00000004
-//#define PRU_BASE_ADDR 0x4a300000
-//#define PRU_BASE_ADDR 0x00000000
-//#define PRU_BASE_ADDR 0x90000000
 #define PRU_BASE_ADDR 0x9c800000
 #define STATUS 0x1000
 #define STATUS_MEM (PRU_BASE_ADDR + STATUS)
 #define BUF0  (PRU_BASE_ADDR + 0x00002000)
 #define BUF1  (PRU_BASE_ADDR + 0x00003000)
-#define key 0x1234
 
 #define ROWS 960  //rows per image
 #define COLS 1280 //pixels per row
@@ -65,17 +62,19 @@ void main(void)
   // map sys events 16-23 --> channels 2-9 --> host 2-9
   //TABLE 4-11, PG 212
 
-  CT_INTC.SIPR0_bit.POLARITY_31_0 = MASK_16_23; //set 16-23 to active high
+  //CT_INTC.SIPR0_bit.POLARITY_31_0 = MASK_16_23; //set 16-23 to active high
+  CT_INTC.SIPR0_bit.POLARITY_31_0 = MASK_16_24; //set 16-24 to active high
   CT_INTC.SITR0_bit.TYPE_31_0 = 0x00; //set all to pulse type interrupt //MAYBE PLAY WITH THIS?
-  
+
   //map events to channels to hosts
   /* Something is broken here. No matter what I try, sys events 20-23 will ONLY
-   * map to INTC 20-23, whil the below mapping says 16-19 should map to INTC
+   * map to INTC 20-23, while the below mapping says 16-19 should map to INTC
    * 20-23. This makes NO sense according to the documentation. Furthermore,
    * I seem to only be able to get INTC 20-23 to trigger, regardless of what
    * events I trigger(I tried SRSR reg). The mappings seem to have almost no
    * effect. Come back to this.
    */
+  //sys events to channels
   CT_INTC.CMR4_bit.CH_MAP_16 = 2; //sys evt 16 --> chan 2
   CT_INTC.CMR4_bit.CH_MAP_17 = 3; //sys evt 17 --> chan 3
   CT_INTC.CMR4_bit.CH_MAP_18 = 4; //sys evt 18 --> chan 4
@@ -84,6 +83,10 @@ void main(void)
   CT_INTC.CMR5_bit.CH_MAP_21 = 7; //sys evt 21 --> chan 7
   CT_INTC.CMR5_bit.CH_MAP_22 = 8; //sys evt 22 --> chan 8
   CT_INTC.CMR5_bit.CH_MAP_23 = 9; //sys evt 23 --> chan 9
+  CT_INTC.CMR6_bit.CH_MAP_24 = 1; //sys evt 24 --> chan 1 for the host to interrupt the PRU
+
+  //channels to host
+  CT_INTC.HMR0_bit.HINT_MAP_1 = 1; //chan 1 --> host 1 for the host to interrupt the PRU 
   CT_INTC.HMR0_bit.HINT_MAP_2 = 2; //chan 2 --> host 2
   CT_INTC.HMR0_bit.HINT_MAP_3 = 3; //chan 3 --> host 3
   CT_INTC.HMR1_bit.HINT_MAP_4 = 4; //chan 4 --> host 4
@@ -92,16 +95,22 @@ void main(void)
   CT_INTC.HMR1_bit.HINT_MAP_7 = 7; //chan 7 --> host 7
   CT_INTC.HMR2_bit.HINT_MAP_8 = 8; //chan 8 --> host 8
   CT_INTC.HMR2_bit.HINT_MAP_9 = 9; //chan 9 --> host 9
-  
+
   //clear all system events
   CT_INTC.SECR0_bit.ENA_STS_31_0 = 0xFFFFFFFF;
   CT_INTC.SECR1_bit.ENA_STS_63_32 = 0xFFFFFFFF;
 
   //enable host interrupts 2-9
-  CT_INTC.HIER_bit.EN_HINT = 0x3FC;
+  //CT_INTC.HIER_bit.EN_HINT = 0x3FC;
+
+  //enable host interrupts 1-9
+  CT_INTC.HIER_bit.EN_HINT = 0x3FE;
 
   //enable system events 16-23
-  CT_INTC.ESR0_bit.EN_SET_31_0 = MASK_16_23;
+  //CT_INTC.ESR0_bit.EN_SET_31_0 = MASK_16_23;
+
+  //enable system events 16-24
+  CT_INTC.ESR0_bit.EN_SET_31_0 = MASK_16_24;
 
   //enable global interrupts
   CT_INTC.GER_bit.EN_HINT_ANY = 0x01; 
@@ -109,12 +118,12 @@ void main(void)
   //====END PRU INTC CONFIG====
 
   /*
-  __R31 = 0x24; //trigger INTC 20
-  __R31 = 0x25; //trigger INTC 21
-  __R31 = 0x26; //trigger INTC 22
-  __R31 = 0x27; //trigger INTC 23
-  */
-  
+     __R31 = 0x24; //trigger INTC 20
+     __R31 = 0x25; //trigger INTC 21
+     __R31 = 0x26; //trigger INTC 22
+     __R31 = 0x27; //trigger INTC 23
+     */
+
   //approx 1 second delay
   //volatile int i;
   //for(i = 0 ; i < 10000000 ; i++);
@@ -129,46 +138,43 @@ void main(void)
    * this last step the PRU exits this loop.
    */
   volatile int* shared; //location of PRU shared memory
-  volatile int *pru_write_back; //location where PRU writes back to kernel
-  volatile int *kernel_write_back; //location where kernel writes back to PRU 
-  int shareRead; //value read from location, which will be base address if handshake successful
-  int writeBack; //value to writeback to ARM and check against response
-  int* base; //base address for the actual image transfer
   shared = (volatile int*)SHARED;   
-  pru_write_back = shared + 1; 
-  kernel_write_back = pru_write_back + 1; 
-  *kernel_write_back = 0x00; //zero the kernel writeback to verify new value
-  
-  while(1)
-  {
-    shareRead = *shared; //read value in shared memory
+  int* base; //base address for the actual image transfer
 
-    writeBack = shareRead + key; //add key to value
+  //manually trigger r31:31 set bit 24 in PRU SRSR0 to trigger event 24
+  //CT_INTC.SRSR0_bit.RAW_STS_31_0 = 0x1000000; 
+#define ALLOC_SIZE 1<<21
 
-    *pru_write_back = writeBack; //write back value with key to new location
+  while(1) {
+    //wait for R31 bit 31 to go high
+   while((__R31 & 0x80000000) < 1 )
+      __delay_cycles(1); //delay is needed between checking memory??? TODO: Use interupts!
 
-    //after writing, PRU verifys another value read from the kernel
-    writeBack += key; //add key to value
+    //clear all system events
+    CT_INTC.SECR0_bit.ENA_STS_31_0 = 0xFFFFFFFF;
 
-    //TODO should this be a loop to run a certain amount of times  
-    //read value and break if the kernel responded successfully
-    if(*kernel_write_back == writeBack)
+    //read from shared memory location
+    base = *shared; //read value in shared memory
+
+    //write back some sequential values to ensure it's working
+    volatile int i;
+    int write;
+    for(i = 0 ; i < ALLOC_SIZE ; )
     {
-      base = (int*)shareRead;
-      break;
+      
+      write = 0;
+      write |= (char)i++;
+      write |= ((char)i++ << 8);
+      write |= ((char)i++ << 16);
+      write |= ((char)i++ << 24);
+
+      *base = write;
+      base++;
     }
-  }
 
-  //write back some sequential values to ensure it's working
-  volatile int i;
-  for(i = 0 ; i < 256 ; i++)
-  {
-    *base = i;
-    base++;
+    //signal done
+    __R31 = 0x24; //trigger INTC 20
   }
-
-  //signal done
-  __R31 = 0x24; //trigger INTC 20
 
   while(1);
 
@@ -178,7 +184,7 @@ void main(void)
   /*
    * status is used to recieve signals from ARM. Status will be the base address
    * we recieved in the handshake
-  */
+   */
   int *status;
   status = (int*)base;
 

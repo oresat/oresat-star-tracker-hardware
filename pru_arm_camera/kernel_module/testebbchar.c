@@ -41,14 +41,23 @@ int main(){
    getchar();
 */
 
-   char ptr_str[12];
+   
+#define SIZE 1<<21
+   char ptr_str[SIZE];
    printf("Reading from the device...\n");
-   ret = read(fd, ptr_str, 12);        // Read the response from the LKM
+   ret = read(fd, ptr_str, SIZE);        // Read the response from the LKM
    if (ret < 0){
       perror("Failed to read the message from the device.");
       return errno;
    }
-   printf("The received message is: [%s]\n", ptr_str);
+
+   /*
+   for(int i = 0 ; i < SIZE ; i++) {
+      printf("[%d] = %d\n", i, ptr_str[i]);
+   }
+   */
+   
+
    printf("End of the program\n");
    return 0;
 }

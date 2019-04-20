@@ -10,17 +10,16 @@
 #include <linux/platform_device.h>
 #define  DEVICE_NAME "ebbchar"    ///< The device will appear at /dev/ebbchar using this value
 #define  CLASS_NAME  "ebb"        ///< The device class -- this is a character device driver
-#define SIZE 0x200000 //2 MiB is enough for one image
+#define SIZE 1<<21 //2 MiB is enough for one image
 
 MODULE_LICENSE("GPL");            ///< The license type -- this affects available functionality
-MODULE_AUTHOR("Derek Molloy");    ///< The author -- visible when you use modinfo
-MODULE_DESCRIPTION("A simple Linux char driver for the BBB");  ///< The description -- see modinfo
+MODULE_AUTHOR("Oliver Rew");    ///< The author -- visible when you use modinfo
+MODULE_DESCRIPTION("write this");  ///< The description -- see modinfo
 MODULE_VERSION("0.1");            ///< A version number to inform users
 
 static int    majorNumber;                  ///< Stores the device number -- determined automatically
 static char   message[256] = {0};           ///< Memory for the string that is passed from userspace
 static short  size_of_message;              ///< Used to remember the size of the string stored
-static int    numberOpens = 0;              ///< Counts the number of times the device is opened
 static struct class*  ebbcharClass  = NULL; ///< The device-driver class struct pointer
 static struct device* ebbcharDevice = NULL; ///< The device-driver device struct pointer
 
@@ -50,6 +49,7 @@ static struct file_operations fops =
 //Memory pointers: TODO is there anything wrong with these being global?
 dma_addr_t dma_handle = NULL;
 int *cpu_addr = NULL;
+int* physAddr = NULL;
 volatile int int_triggered = 0;
 
 static const struct of_device_id my_of_ids[] = {
@@ -97,7 +97,7 @@ int pru_probe(struct platform_device* dev)
   {
     int irq = platform_get_irq_byname(dev, irqs[i].name);
     printk(KERN_INFO "EBBChar: platform_get_irq(%s) returned: %d\n", irqs[i].name, irq);
-    //of not zero, return errno
+    //if not zero, return errno
     if(irq < 0)
       return irq;
 
@@ -207,70 +207,30 @@ static int dev_open(struct inode *inodep, struct file *filep){
    * I am unsure what the ideal flags for this are, but GFP_KERNEL seems to
    * work
    */
-  //TODO I NEED TO FREE THIS THING!!!
   cpu_addr = dma_alloc_coherent(ebbcharDevice, SIZE, &dma_handle, GFP_KERNEL);
   if(cpu_addr == NULL)
   {
     printk(KERN_INFO "Failed to allocate memory\n");
-    return 0;
+    return -1;
   }
 
   printk(KERN_INFO "Virtual Address: %x\n", (int)cpu_addr);
-  printk(KERN_INFO "Physical Address: %x\n", (int)dma_handle);
 
-  int* physAddr = (int*)dma_handle;
-  printk(KERN_INFO "physAddr: %x\n", (int)physAddr);
-
-  int handshake = pru_handshake((int)physAddr);
-  if(handshake < 0) 
-  {
-    ret = -1;
-    printk(KERN_ERR "PRU Handshake failed: %x\n", (int)physAddr);
-    goto exit;
-  }
-
-  /*
-   * TODO
-   * handshake stays in open()
-   * in read(), send separate signal after handshake that PRU waits on
-   * ALSO free the dma_alloc above!!!
-   */
-
-  //wait for intc to be triggered
-  while(!int_triggered);
-  int_triggered = 0;
-
-  printk(KERN_INFO "Interrupt Triggered!\n");
-
-  int* physBase;
-  physBase = cpu_addr;
-  printk(KERN_INFO "physBase: %x\n", physBase);
-  
-  //this just reads back a few values from the PRU to verify everything is
-  //working
-  for(int i = 0 ; i < 255 ; i++)
-  {
-    printk(KERN_INFO "phys: %x\n", *physBase);
-    physBase++;
-  }
+  physAddr = (int*)dma_handle;
+  printk(KERN_INFO "Physical Address: %x\n", (int)physAddr);
 
 
-
-exit:
   return ret;
 }
 
 //TODO do I need to check for some sort of error on readl() and writel()
 
 /* 
- * Below is a basic handshake with the PRU. This module writes the value of
- * physical memory pointer to a mutually agreed upon(between kernel and PRU)
- * memory location in the PRU shared RAM. The PRU reads this value,
- * increments it by a agreed upon key, and writes it back to the memory
- * location + 1. The kernel driver sees this value, increments it again and
- * writes it back that the memory location + 2. The PRU sees this value,
- * verifying the handshake and moving on.
- * I am writing without permission to the PRU shared RAM. This
+ * pru_handshake() writes directly to the the PRU SRSR0 register that manually
+ * triggers PRU system events, which can fire the PRU interrupt bit in R31.
+ * Then it writes the address of the physical memory it allocated to a known
+ * location in PRU shared RAM. THe PRU reads this and writes the image to this
+ * address. I am writing without permission to the PRU shared RAM. This
  * should be ok, but in the future I should set aside of piece of PRU shared
  * RAM to ensure it doesn't accidentally use it
  */
@@ -282,66 +242,33 @@ static int pru_handshake(int physAddr )
 #define PRUWRBACK PRUSHAREDRAM + 0x4
 #define KERNELWRBACK PRUSHAREDRAM + 0x8
 #define WRITEBACK_KEY 0x1234
-  printk(KERN_INFO "pru shared RAM: %x\n", PRUSHAREDRAM);
-  printk(KERN_INFO "pru write back: %x\n", PRUWRBACK);
+#define PRUINTC_OFFSET 0x20000
+#define SRSR0_OFFSET 0x200
 
   //ioremap physical locations in the PRU shared ram 
   void __iomem *pru_shared_ram;
-  pru_shared_ram = ioremap_nocache((int)PRUSHAREDRAM, 16); //TODO why is this 16 when I am only using 3 bytes?
+  pru_shared_ram = ioremap_nocache((int)PRUSHAREDRAM, 4); 
   printk(KERN_INFO "pru_shared_ram virt: %x\n", (int)pru_shared_ram);
-
-  //where the PRU will write back the key to kernel
-  void __iomem *pru_write_back = pru_shared_ram + 4;
-  printk(KERN_INFO "pru_write_back virt: %x\n", (int)pru_write_back);
-
-  //where the kernel will re-write back to PRU
-  void __iomem *kernel_write_back = pru_shared_ram + 8;
-  printk(KERN_INFO "kernel_write_back virt: %x\n", (int)kernel_write_back);
-
-  //zero PRU writeback data
-  writel(0x0, pru_write_back);
 
   //write physical address to PRU shared RAM where a PRU can find it
   writel(physAddr, pru_shared_ram);
 
-  int key = (int)physAddr + WRITEBACK_KEY;
-  printk(KERN_INFO "key: %x\n", key);
+  printk(KERN_INFO "srsr0 offset: %x\n", (int)(PRUBASE + PRUINTC_OFFSET + SRSR0_OFFSET));
+  //ioremap PRU SRSR0 reg
+  void __iomem *pru_srsr0;
+  pru_srsr0 = ioremap_nocache((int)(PRUBASE + PRUINTC_OFFSET + SRSR0_OFFSET), 4); 
+  printk(KERN_INFO "pru_srsr0 virt: %x\n", (int)pru_srsr0);
 
-  volatile int i = 0;
-  int success = 0;
+  //set bit 24 in PRU SRSR0 to trigger event 24
+  writel(0x1000000, pru_srsr0);
 
-  int pru_read_back;
+  //TODO add a response via an interrupt from the PRU and return error
 
-  //wait for a short time for the PRU to respond to the handshake
-  for(i ; i < 1<<8 ; i++)
-  {
-    pru_read_back = readl(pru_write_back);
-    if(pru_read_back !=  key)
-      continue;
-    success = 1;
-    break;
-  }
-
-  int ret = 0;
-  if(!success)
-  {
-    printk(KERN_INFO "writeback fail!\n");
-    ret = -1;
-    goto handshake_exit;
-  }else{
-    printk(KERN_INFO "PRU replied successfully!\n");
-  }
-
-  printk(KERN_INFO "Writing back to PRU !\n");
-  key += WRITEBACK_KEY;
-
-  writel(key, kernel_write_back);
-
-handshake_exit:
   //unmap iomem
   iounmap(pru_shared_ram);
+  iounmap(pru_srsr0);
 
-  return ret;
+  return 0; 
 }
 
 /** @brief This function is called whenever device is being read from user space i.e. data is
@@ -353,10 +280,43 @@ handshake_exit:
  *  @param offset The offset if required
  */
 static ssize_t dev_read(struct file *filep, char *buffer, size_t len, loff_t *offset){
+  //TODO address to known location with checksum to other location  this can replace the handshake
+  
+  //signal PRU and tell it where to write the data
+  int handshake = pru_handshake((int)physAddr);
+  if(handshake < 0) 
+  {
+    printk(KERN_ERR "PRU Handshake failed: %x\n", (int)physAddr);
+    return -1;
+  }
+
+  //wait for intc to be triggered
+  while(!int_triggered);
+  int_triggered = 0;
+
+  printk(KERN_INFO "Interrupt Triggered!\n");
+
+  char* physBase;
+  physBase = (char*)cpu_addr;
+  printk(KERN_INFO "physBase: %x\n", physBase);
+
+  //TODO tried to use SIZE, but it crashed!?!
+  
   int error_count = 0;
   // copy_to_user has the format ( * to, *from, size) and returns 0 on success
-  error_count = copy_to_user(buffer, message, size_of_message);
+  error_count = copy_to_user(buffer, physBase, 1<<21); //TODO use __copy_to_user
 
+  physBase = (char*)cpu_addr;
+  //this just reads back a few values from the PRU to verify everything is
+  //working
+  /*
+  for(int i = 0 ; i < 16 ; i++)
+  {
+    printk(KERN_INFO "phys: %x\n", *physBase);
+    physBase++;
+  }
+  */
+  
   if (error_count==0){            // if true then have success
     printk(KERN_INFO "EBBChar: Sent %d characters to the user\n", size_of_message);
     return (size_of_message=0);  // clear the position to the start and return 0
