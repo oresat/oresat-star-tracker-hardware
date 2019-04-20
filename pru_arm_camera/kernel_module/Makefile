@@ -5,7 +5,7 @@ dto=prudev-00A0
 
 all:
 	make -C /lib/modules/$(shell uname -r)/build/ M=$(PWD) modules $(ccflag-y) 
-	$(CC) testebbchar.c -o test
+	$(CC) testebbchar.c camera-i2c.c -o test
 ins:
 	insmod $(mod_name)
 rm:

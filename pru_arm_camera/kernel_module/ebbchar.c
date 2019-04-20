@@ -34,6 +34,12 @@ int pru_probe(struct platform_device*);
 int pru_rm(struct platform_device*);
 static void free_irqs(void);
 
+/*
+ * TODO
+ * - dedicated error interrupt line from PRU that triggers handler to shut down
+ *   other opperations
+ */
+
 /** @brief Devices are represented as file structure in the kernel. The file_operations structure from
  *  /linux/fs.h lists the callback functions that you wish to associated with your file operations
  *  using a C99 syntax structure. char devices usually implement open, read, write and release calls
@@ -218,6 +224,7 @@ static int dev_open(struct inode *inodep, struct file *filep){
 
   physAddr = (int*)dma_handle;
   printk(KERN_INFO "Physical Address: %x\n", (int)physAddr);
+  int_triggered = 0;
 
 
   return ret;
@@ -290,8 +297,19 @@ static ssize_t dev_read(struct file *filep, char *buffer, size_t len, loff_t *of
     return -1;
   }
 
+  volatile int j;
+
+  printk(KERN_INFO "...waiting for interrupt\n");
+
   //wait for intc to be triggered
-  while(!int_triggered);
+  //while(!int_triggered);
+  for(j = 0 ; j < (1<<27) && !int_triggered ; j++);
+
+  if(!int_triggered) {
+    printk(KERN_ERR "Interrupt never triggered!\n");
+    return -1;
+  }
+
   int_triggered = 0;
 
   printk(KERN_INFO "Interrupt Triggered!\n");

@@ -29,6 +29,11 @@
 #define VSYNC 0x00008000
 #define HSYNC 0x00004000
 
+/*
+ * TODO
+ * - other PRU does data transfer AND acts as watchdog for other?
+ */
+
 void flash(char led);
 void dance();
 void clear();
@@ -128,7 +133,6 @@ void main(void)
   //volatile int i;
   //for(i = 0 ; i < 10000000 ; i++);
 
-
   /*
    * Basic handshake with kernel driver. Kernel driver allocated memory region.
    * It writes the address to a shared location known to both the PRU and the
@@ -143,77 +147,27 @@ void main(void)
 
   //manually trigger r31:31 set bit 24 in PRU SRSR0 to trigger event 24
   //CT_INTC.SRSR0_bit.RAW_STS_31_0 = 0x1000000; 
-#define ALLOC_SIZE 1<<21
-
-  while(1) {
-    //wait for R31 bit 31 to go high
-   while((__R31 & 0x80000000) < 1 )
-      __delay_cycles(1); //delay is needed between checking memory??? TODO: Use interupts!
-
-    //clear all system events
-    CT_INTC.SECR0_bit.ENA_STS_31_0 = 0xFFFFFFFF;
-
-    //read from shared memory location
-    base = *shared; //read value in shared memory
-
-    //write back some sequential values to ensure it's working
-    volatile int i;
-    int write;
-    for(i = 0 ; i < ALLOC_SIZE ; )
-    {
-      
-      write = 0;
-      write |= (char)i++;
-      write |= ((char)i++ << 8);
-      write |= ((char)i++ << 16);
-      write |= ((char)i++ << 24);
-
-      *base = write;
-      base++;
-    }
-
-    //signal done
-    __R31 = 0x24; //trigger INTC 20
-  }
-
-  while(1);
-
-  int *buf0 = (int *)BUF0;
-  int *buf1 = (int *)BUF1;
-
-  /*
-   * status is used to recieve signals from ARM. Status will be the base address
-   * we recieved in the handshake
-   */
-  int *status;
-  status = (int*)base;
-
-  //zero status flags
-  *status &= ~ARM_2_PRU;
-  *status &= ~PRU_2_ARM;
-  *status &= ~END;
 
   int addr;
-
-  //holds to current buffer to write to
-  int curBuf = 0;
-
   int writeReg = 0x00;
   int line;
 
-  //point it to the PRU shared RAM
-  //int *temp = (int *)SHARED;
   int temp[COLS]; //TODO feel like this only needs to be CELLS ?
   int pos = 0;
   while(1)
   {
-    //wait for signal
-    while((*status & ARM_2_PRU) < 1) //TODO: need a timeout here 
-      __delay_cycles(1); //delay is needed between checking memory??? TODO: Use interupts!
-    //Minimum needed delay is just 1. However, more delay give the linux side time to access memory?
+    //wait for signal from ARM, R31 bit 31 will go high
+    while((__R31 & 0x80000000) < 1 )
+      __delay_cycles(1); //delay is needed between checking memory??? TODO dont think I need this
 
-    //clear the flag
-    *status &= ~ARM_2_PRU;
+    //clear all system events
+    CT_INTC.SECR0_bit.ENA_STS_31_0 = 0xFFFFFFFF;
+
+    //TEMPORARY!!
+    //__R31 = 0x24; //trigger INTC 20
+
+    //read from shared memory location
+    base = *shared; //read value in shared memory //
 
     //__R30 |= 0x8000; //set gpio 15
     while((__R31 & VSYNC) > 0); //wait for VSYNC to go low
@@ -226,69 +180,39 @@ void main(void)
       //while((__R31 & VSYNC) > 0) //wait for VSYNC to go low
     {
       pos = 0;
-      if(!curBuf) //if on buf0
+      //loop through every word in buffer
+      for(addr = 0 ; addr < CELLS ; ++addr)
       {
-        //loop through every word in buffer
-        for(addr = 0 ; addr < CELLS ; ++addr)
-        {
-          //TODO use macro when waiting for clock
-          //not using for loop here for speed!
-          while((__R31 & HSYNC) == 0); //wait for HSYNC to go high
+        //TODO use macro when waiting for clock
+        //not using for loop here for speed!
+        while((__R31 & HSYNC) == 0); //wait for HSYNC to go high
 
-          while(__R31 & 0x00010000); //wait for R31[16] to go low 
-          while((__R31 & 0x00010000) == 0); //wait for R31[16] to go high
-          writeReg = (__R31 & 0x000000ff) << 24; //I am assigning here instead of ORing in order to clear writeReg
-          while(__R31 & 0x00010000); 
-          while((__R31 & 0x00010000) == 0); 
-          writeReg |= (__R31 & 0x000000ff) << 16; 
-          while(__R31 & 0x00010000); 
-          while((__R31 & 0x00010000) == 0); 
-          writeReg |= (__R31 & 0x000000ff) << 8; 
-          while(__R31 & 0x00010000); 
-          while((__R31 & 0x00010000) == 0); 
-          writeReg |= (__R31 & 0x000000ff); 
-          //*addr = writeReg; //write to memory
-          temp[pos++] = writeReg;
-        }
-        memcpy(buf0, temp, COLS);
-        curBuf = 1; //switch buffer
-        *status &= ~BUF; //clear buf flag for buf 0
-      }else{
-        //loop through every word in buffer
-        for(addr = 0 ; addr < CELLS ; ++addr)
-        {
-          //not using for loop here for speed!
-          while((__R31 & HSYNC) == 0); //wait for HSYNC to go high
+        while(__R31 & 0x00010000); //wait for R31[16] to go low 
+        while((__R31 & 0x00010000) == 0); //wait for R31[16] to go high
+        writeReg = (__R31 & 0x000000ff) << 24; //I am assigning here instead of ORing in order to clear writeReg
+        while(__R31 & 0x00010000); 
+        while((__R31 & 0x00010000) == 0); 
+        writeReg |= (__R31 & 0x000000ff) << 16; 
+        while(__R31 & 0x00010000); 
+        while((__R31 & 0x00010000) == 0); 
+        writeReg |= (__R31 & 0x000000ff) << 8; 
+        while(__R31 & 0x00010000); 
+        while((__R31 & 0x00010000) == 0); 
+        writeReg |= (__R31 & 0x000000ff); 
 
-          while(__R31 & 0x00010000); //wait for R31[16] to go low 
-          while((__R31 & 0x00010000) == 0); //wait for R31[16] to go high
-          writeReg = (__R31 & 0x000000ff) << 24; //I am assigning here instead of ORing in order to clear writeReg
-          while(__R31 & 0x00010000); 
-          while((__R31 & 0x00010000) == 0); 
-          writeReg |= (__R31 & 0x000000ff) << 16; 
-          while(__R31 & 0x00010000); 
-          while((__R31 & 0x00010000) == 0); 
-          writeReg |= (__R31 & 0x000000ff) << 8; 
-          while(__R31 & 0x00010000); 
-          while((__R31 & 0x00010000) == 0); 
-          writeReg |= (__R31 & 0x000000ff); 
-
-          //*addr = writeReg; //write to memory
-          temp[pos++] = writeReg;
-        }
-        memcpy(buf1, temp, COLS);
-        memcpy(buf1+(CELLS/2), temp + (CELLS/2), COLS/2);
-        curBuf = 0; //switch buffer
-        *status |= BUF; //set buf flag for buf1
+        temp[pos++] = writeReg;
       }
-      //send finished flag to ARM
-      *status |= PRU_2_ARM;
-    }
+      //transfer line to memory
+      memcpy(base, temp, COLS);
 
+      //offset base address
+      base += CELLS;
+
+    }
     //	__R30 &= ~0x8000; //unset gpio 15
 
-    *status |= END;
-
+    //signal done
+    __R31 = 0x24; //trigger INTC 20
   }
 }
 

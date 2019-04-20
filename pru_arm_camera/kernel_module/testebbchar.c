@@ -7,57 +7,82 @@
  * string to the LKM and reads the response from the LKM. For this example to work the device
  * must be called /dev/ebbchar.
  * @see http://www.derekmolloy.ie/ for a full description and follow-up descriptions.
-*/
-#include<stdio.h>
-#include<stdlib.h>
-#include<errno.h>
-#include<fcntl.h>
-#include<string.h>
-#include<unistd.h>
+ */
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <string.h>
+#include <unistd.h>
+#include "camera-i2c.h"
+#include "regs.h"
 
 #define BUFFER_LENGTH 256               ///< The buffer length (crude but fine)
 static char receive[BUFFER_LENGTH];     ///< The receive buffer from the LKM
+int initCamera(void);
 
 int main(){
-   int ret, fd;
-   char stringToSend[BUFFER_LENGTH];
-   printf("Starting device test code example...\n");
-   fd = open("/dev/ebbchar", O_RDWR);             // Open the device with read/write access
-   if (fd < 0){
-      perror("Failed to open the device...");
-      return errno;
-   }
-   /*
-   printf("Type in a short string to send to the kernel module:\n");
-   scanf("%[^\n]%*c", stringToSend);                // Read in a string (with spaces)
-   printf("Writing message to the device [%s].\n", stringToSend);
-   ret = write(fd, stringToSend, strlen(stringToSend)); // Send the string to the LKM
-   if (ret < 0){
-      perror("Failed to write the message to the device.");
-      return errno;
-   }
+  int ret, fd;
 
-   printf("Press ENTER to read back from the device...\n");
-   getchar();
-*/
+  ret = initCamera();
+  if(ret < 1) {
+    printf("error programming camera, exiting...\n");
+    return ret;
+  }
 
-   
+  char stringToSend[BUFFER_LENGTH];
+  printf("Starting device test code example...\n");
+  fd = open("/dev/ebbchar", O_RDWR);             // Open the device with read/write access
+  if (fd < 0){
+    perror("Failed to open the device...");
+    return errno;
+  }
+  /*
+     printf("Type in a short string to send to the kernel module:\n");
+     scanf("%[^\n]%*c", stringToSend);                // Read in a string (with spaces)
+     printf("Writing message to the device [%s].\n", stringToSend);
+     ret = write(fd, stringToSend, strlen(stringToSend)); // Send the string to the LKM
+     if (ret < 0){
+     perror("Failed to write the message to the device.");
+     return errno;
+     }
+
+     printf("Press ENTER to read back from the device...\n");
+     getchar();
+     */
+
+
 #define SIZE 1<<21
-   char ptr_str[SIZE];
-   printf("Reading from the device...\n");
-   ret = read(fd, ptr_str, SIZE);        // Read the response from the LKM
-   if (ret < 0){
-      perror("Failed to read the message from the device.");
-      return errno;
-   }
+  char ptr_str[SIZE];
+  printf("Reading from the device...\n");
+  ret = read(fd, ptr_str, SIZE);        // Read the response from the LKM
+  if (ret < 0){
+    perror("Failed to read the message from the device.");
+    return errno;
+  }
 
-   /*
-   for(int i = 0 ; i < SIZE ; i++) {
-      printf("[%d] = %d\n", i, ptr_str[i]);
-   }
-   */
-   
 
-   printf("End of the program\n");
-   return 0;
+     for(int i = 0 ; i < SIZE ; i += 1<<11) {
+     printf("[%d] = %d\n", i, ptr_str[i]);
+     }
+     
+
+
+  printf("End of the program\n");
+  return 0;
+}
+
+int initCamera()
+{
+  int err = writeRegs(startupRegs, sizeof(startupRegs));
+
+  printf("Programming Image Sensor...\n");
+  sleep(0.25); //wait for regs to take effect, may not be necessary
+
+  if(err > 0)
+  {
+    printf("ERROR writeRegs returned error code: %d\n", err);
+    return 1;
+  }
+  return 0;
 }
