@@ -51,7 +51,6 @@ static struct file_operations fops =
 {
   .open = dev_open,
   .read = dev_read,
-  .write = dev_write,
   .release = dev_release,
 };
 
@@ -254,16 +253,13 @@ static int pru_handshake(int physAddr )
   //ioremap physical locations in the PRU shared ram 
   void __iomem *pru_shared_ram;
   pru_shared_ram = ioremap_nocache((int)PRUSHAREDRAM, 4); 
-  printk(KERN_INFO "pru_shared_ram virt: %x\n", (int)pru_shared_ram);
 
   //write physical address to PRU shared RAM where a PRU can find it
   writel(physAddr, pru_shared_ram);
 
-  printk(KERN_INFO "srsr0 offset: %x\n", (int)(PRUBASE + PRUINTC_OFFSET + SRSR0_OFFSET));
   //ioremap PRU SRSR0 reg
   void __iomem *pru_srsr0;
   pru_srsr0 = ioremap_nocache((int)(PRUBASE + PRUINTC_OFFSET + SRSR0_OFFSET), 4); 
-  printk(KERN_INFO "pru_srsr0 virt: %x\n", (int)pru_srsr0);
 
   //set bit 24 in PRU SRSR0 to trigger event 24
   writel(0x1000000, pru_srsr0);
@@ -279,7 +275,7 @@ static int pru_handshake(int physAddr )
 
 static ssize_t dev_read(struct file *filep, char *buffer, size_t len, loff_t *offset){
   //TODO address to known location with checksum to other location  this can replace the handshake
-  
+
   //signal PRU and tell it where to write the data
   int handshake = pru_handshake((int)physAddr);
   if(handshake < 0) 
@@ -287,8 +283,6 @@ static ssize_t dev_read(struct file *filep, char *buffer, size_t len, loff_t *of
     printk(KERN_ERR "PRU Handshake failed: %x\n", (int)physAddr);
     return -1;
   }
-
-  printk(KERN_INFO "...waiting for interrupt\n");
 
   //wait for intc to be triggered
   volatile int i;
@@ -305,51 +299,14 @@ static ssize_t dev_read(struct file *filep, char *buffer, size_t len, loff_t *of
 
   char* physBase;
   physBase = (char*)cpu_addr;
-  
-  int error_count = 0;
+
+  int err = 0;
   // copy_to_user has the format ( * to, *from, size) and returns 0 on success
-  error_count = copy_to_user(buffer, physBase, PIXELS); //TODO use __copy_to_user
+  err = copy_to_user(buffer, physBase, PIXELS); //TODO use __copy_to_user
 
-  physBase = (char*)cpu_addr;
-  //this just reads back a few values from the PRU to verify everything is
-  //working
-  /*
-  for(int i = 0 ; i < 16 ; i++)
-  {
-    printk(KERN_INFO "phys: %x\n", *physBase);
-    physBase++;
+  if(err != 0) {
+    return -EFAULT;
   }
-  */
-  
-  if (error_count==0){            // if true then have success
-    printk(KERN_INFO "EBBChar: Sent %d characters to the user\n", size_of_message);
-    return (size_of_message=0);  // clear the position to the start and return 0
-  }
-  else {
-    printk(KERN_INFO "EBBChar: Failed to send %d characters to the user\n", error_count);
-    return -EFAULT;              // Failed -- return a bad address message (i.e. -14)
-  }
-}
-
-/** @brief This function is called whenever the device is being written to from user space i.e.
- *  data is sent to the device from the user. The data is copied to the message[] array in this
- *  LKM using the sprintf() function along with the length of the string.
- *  @param filep A pointer to a file object
- *  @param buffer The buffer to that contains the string to write to the device
- *  @param len The length of the array of data that is being passed in the const char buffer
- *  @param offset The offset if required
- */
-static ssize_t dev_write(struct file *filep, const char *buffer, size_t len, loff_t *offset){
-  printk(KERN_INFO "============WRITE============\n");
-  copy_from_user(message,buffer,5);
-  size_of_message = strlen(message);                 // store the length of the stored message
-  printk(KERN_INFO "len: %d\n", size_of_message);
-  //printk(KERN_INFO "buffer: %c\n", buffer[0]);
-  printk(KERN_INFO "message: %c\n", message[0]);
-  //message[0] = 'g';
-  printk(KERN_INFO "============WRITE============\n");
-  printk(KERN_INFO "EBBChar: Received %zu characters from the user\n", len);
-  return len;
 }
 
 static irq_handler_t irqhandler(unsigned int irqN, void *dev_id, struct pt_regs *regs)

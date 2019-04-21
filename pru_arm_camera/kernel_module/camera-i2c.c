@@ -1,4 +1,5 @@
 #include "camera-i2c.h"
+int file_i2c;
 
 //char *filename = (char *)"/dev/i2c-2";
 //int file_i2c;
@@ -23,6 +24,13 @@ int writeRegs(camReg *regs, int size)
     return 1;
   }
 
+  if ((file_i2c = open(FILENAME, O_RDWR)) < 0)
+  {
+    //ERROR HANDLING: you can check errno to see what went wrong
+    printf("Failed to open the i2c bus");
+    return 1;
+  }
+
   //get length of array TODO I wish there was a better way to do this
   int len = size / sizeof(regs[0]);
 
@@ -38,6 +46,10 @@ int writeRegs(camReg *regs, int size)
       printf("reg = 0x%04x, val = 0x%04x\n", regs[i].reg, regs[i].val);
       ret = err;
     }
+  }
+
+  if(close(file_i2c)){
+    printf("file close error: %d\n");
   }
 
   return ret;
@@ -105,19 +117,12 @@ int i2cDump()
 //TODO Write header, handle errors
 int i2cWrite(uint16_t reg, uint16_t val)
 {
-  int file_i2c;
   //reg == 0 means delay
   if(reg == 0)
   {
     //printf("Delay %d ms\n", val);
     sleep(.001*val);
     return 0;
-  }
-  if ((file_i2c = open(FILENAME, O_RDWR)) < 0)
-  {
-    //ERROR HANDLING: you can check errno to see what went wrong
-    printf("Failed to open the i2c bus");
-    return 1;
   }
 
   //acquire i2c bus
@@ -155,6 +160,7 @@ int i2cWrite(uint16_t reg, uint16_t val)
     printf("ioctl error return code %d \n", rc);
     return 1;
   }
+
 
   //printf("Finished Write\n");
   return 0;

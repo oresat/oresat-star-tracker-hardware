@@ -123,8 +123,7 @@ void main(void)
   //manually trigger r31:31 set bit 24 in PRU SRSR0 to trigger event 24
   //CT_INTC.SRSR0_bit.RAW_STS_31_0 = 0x1000000; 
 
-  int* base; //base address for the actual image transfer
-  int addr;
+  volatile int* base; //base address for the actual image transfer
   int writeReg = 0x00;
   int line;
 
@@ -133,32 +132,33 @@ void main(void)
   while(1)
   {
     //wait for signal from ARM, R31 bit 31 will go high
-    while((__R31 & 0x80000000) < 1 ) {
-      __delay_cycles(1); //delay is needed between checking memory??? TODO I get all zeros when this is removed??
-    }
+    while((__R31 & 0x80000000) == 0 );
+
+    //without this delay somewhere in this section, blacks frames are often
+    //returned! I don't know why this is.
+    __delay_cycles(1);
+
     //clear all system events
     CT_INTC.SECR0_bit.ENA_STS_31_0 = 0xFFFFFFFF;
-
+    
     /*
      * The kernel will write the address of the allocated memory location into
      * a known shared memory location. Here we read that address from that
      * location.
      */
-    base = *(int**)SHARED; 
+    base = *(volatile int**)SHARED; 
 
-    //__R30 |= 0x8000; //set gpio 15
     while((__R31 & VSYNC) > 0); //wait for VSYNC to go low
-
     while((__R31 & VSYNC) == 0); //while VSYNC is high //used to contain below within this loop, not sure which is better. TODO test!
-    //__R30 |= 0x8000; //set gpio 15
 
     //TODO should I loop through the number of lines here?
-    for(line = 0 ; (line < ROWS) ; line++)
+    for(line = 0 ; line < ROWS ; line++)
       //while((__R31 & VSYNC) > 0) //wait for VSYNC to go low
     {
       pos = 0;
       //loop through every word in buffer
-      for(addr = 0 ; addr < CELLS ; ++addr)
+      int i;
+      for(i = 0 ; i < CELLS ; ++i)
       {
         //TODO use macro when waiting for clock
         //not using for loop here for speed!
@@ -174,7 +174,7 @@ void main(void)
         while(__R31 & 0x00010000); 
         while((__R31 & 0x00010000) == 0); 
         writeReg |= (__R31 & 0x000000ff) << 16; 
-        while(__R31 & 0x00010000); //wait for R31[16] to go low 
+        while(__R31 & 0x00010000); 
         while((__R31 & 0x00010000) == 0); 
         writeReg |= (__R31 & 0x000000ff) << 24; 
 
@@ -185,44 +185,9 @@ void main(void)
 
       //offset base address
       base += CELLS;
-
     }
-    //	__R30 &= ~0x8000; //unset gpio 15
 
     //signal done
     __R31 = 0x24; //trigger INTC 20
   }
 }
-
-//clear all LEDs
-void clear()
-{
-  int i = 0;
-  for(; i < 4 ; i++)
-    __R30 &= ~LED[i];
-}
-
-//flash the specified LED
-void flash(char led)
-{
-  if (led > 3)
-    led = 3;
-  int i = 0;
-  for(; i < 4 ; i++)
-  {
-    __R30 |= LED[led];
-    __delay_cycles(DELAY/50);
-    __R30 &= ~LED[led];
-    __delay_cycles(DELAY/50);
-  }
-}
-
-//flash all LEDs
-void dance()
-{
-  flash(0);
-  flash(1);
-  flash(2);
-  flash(3);
-}
-

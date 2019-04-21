@@ -20,10 +20,11 @@ int main(){
 
   //program camera via i2c
   ret = initCamera();
-  if(ret < 1) {
+  if(ret < 0) {
     printf("error programming camera, exiting...\n");
     return ret;
   }
+
 
   struct timeval before, after;
 
@@ -53,9 +54,9 @@ int main(){
 
 
   /*
-  for(int i = 0 ; i < PIXELS ; i += 1<<11) {
-    printf("[%d] = %d\n", i, buf[i]);
-  }*/
+     for(int i = 0 ; i < PIXELS ; i += 1<<11) {
+     printf("[%d] = %d\n", i, buf[i]);
+     }*/
 
   printf("Elapsed time: %ld uSec\n", uSecs);
 
@@ -97,7 +98,7 @@ int initCamera()
   if(err > 0)
   {
     printf("ERROR writeRegs returned error code: %d\n", err);
-    return 1;
+    return -1;
   }
   return 0;
 }
