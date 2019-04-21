@@ -11,6 +11,9 @@
 #define  DEVICE_NAME "ebbchar"    ///< The device will appear at /dev/ebbchar using this value
 #define  CLASS_NAME  "ebb"        ///< The device class -- this is a character device driver
 #define SIZE 1<<21 //2 MiB is enough for one image
+#define ROWS 960
+#define COLS 1280
+#define PIXELS ROWS * COLS
 
 MODULE_LICENSE("GPL");            ///< The license type -- this affects available functionality
 MODULE_AUTHOR("Oliver Rew");    ///< The author -- visible when you use modinfo
@@ -226,7 +229,6 @@ static int dev_open(struct inode *inodep, struct file *filep){
   printk(KERN_INFO "Physical Address: %x\n", (int)physAddr);
   int_triggered = 0;
 
-
   return ret;
 }
 
@@ -246,9 +248,6 @@ static int pru_handshake(int physAddr )
   //TODO move these above or to header
 #define PRUBASE 0x4a300000
 #define PRUSHAREDRAM PRUBASE + 0x10000
-#define PRUWRBACK PRUSHAREDRAM + 0x4
-#define KERNELWRBACK PRUSHAREDRAM + 0x8
-#define WRITEBACK_KEY 0x1234
 #define PRUINTC_OFFSET 0x20000
 #define SRSR0_OFFSET 0x200
 
@@ -278,14 +277,6 @@ static int pru_handshake(int physAddr )
   return 0; 
 }
 
-/** @brief This function is called whenever device is being read from user space i.e. data is
- *  being sent from the device to the user. In this case is uses the copy_to_user() function to
- *  send the buffer string to the user and captures any errors.
- *  @param filep A pointer to a file object (defined in linux/fs.h)
- *  @param buffer The pointer to the buffer to which this function writes the data
- *  @param len The length of the b
- *  @param offset The offset if required
- */
 static ssize_t dev_read(struct file *filep, char *buffer, size_t len, loff_t *offset){
   //TODO address to known location with checksum to other location  this can replace the handshake
   
@@ -297,13 +288,11 @@ static ssize_t dev_read(struct file *filep, char *buffer, size_t len, loff_t *of
     return -1;
   }
 
-  volatile int j;
-
   printk(KERN_INFO "...waiting for interrupt\n");
 
   //wait for intc to be triggered
-  //while(!int_triggered);
-  for(j = 0 ; j < (1<<27) && !int_triggered ; j++);
+  volatile int i;
+  for(i = 0 ; i < (1<<27) && !int_triggered ; i++);
 
   if(!int_triggered) {
     printk(KERN_ERR "Interrupt never triggered!\n");
@@ -316,13 +305,10 @@ static ssize_t dev_read(struct file *filep, char *buffer, size_t len, loff_t *of
 
   char* physBase;
   physBase = (char*)cpu_addr;
-  printk(KERN_INFO "physBase: %x\n", physBase);
-
-  //TODO tried to use SIZE, but it crashed!?!
   
   int error_count = 0;
   // copy_to_user has the format ( * to, *from, size) and returns 0 on success
-  error_count = copy_to_user(buffer, physBase, 1<<21); //TODO use __copy_to_user
+  error_count = copy_to_user(buffer, physBase, PIXELS); //TODO use __copy_to_user
 
   physBase = (char*)cpu_addr;
   //this just reads back a few values from the PRU to verify everything is

@@ -3,9 +3,14 @@ mod_name=ebbchar.ko
 ccflags-y := -std=gnu99 -Wno-declaration-after-statement #this disables the C90 warnings
 dto=prudev-00A0
 
-all:
-	make -C /lib/modules/$(shell uname -r)/build/ M=$(PWD) modules $(ccflag-y) 
+all: tester module
+
+tester:
 	$(CC) testebbchar.c camera-i2c.c -o test
+
+module:
+	make -C /lib/modules/$(shell uname -r)/build/ M=$(PWD) modules $(ccflag-y) 
+
 ins:
 	insmod $(mod_name)
 rm:

@@ -1,6 +1,6 @@
 ;******************************************************************************
 ;* PRU C/C++ Codegen                                              Unix v2.1.5 *
-;* Date/Time created: Sat Apr 20 20:26:34 2019                                *
+;* Date/Time created: Sun Apr 21 00:16:34 2019                                *
 ;******************************************************************************
 	.compiler_opts --abi=eabi --endian=little --hll_source=on --object_format=elf --silicon_version=3 --symdebug:dwarf --symdebug:dwarf_version=3 
 
@@ -88,13 +88,13 @@ $C$DW$9	.dwtag  DW_TAG_variable, DW_AT_name("pru_remoteproc_ResourceTable")
 $C$DW$10	.dwtag  DW_TAG_variable, DW_AT_name("LED")
 	.dwattr $C$DW$10, DW_AT_TI_symbol_name("LED")
 	.dwattr $C$DW$10, DW_AT_location[DW_OP_addr ||LED||]
-	.dwattr $C$DW$10, DW_AT_type(*$C$DW$T$296)
+	.dwattr $C$DW$10, DW_AT_type(*$C$DW$T$295)
 	.dwattr $C$DW$10, DW_AT_external
 	.dwattr $C$DW$10, DW_AT_decl_file("pru_fw.c")
-	.dwattr $C$DW$10, DW_AT_decl_line(0x2c)
+	.dwattr $C$DW$10, DW_AT_decl_line(0x1e)
 	.dwattr $C$DW$10, DW_AT_decl_column(0x13)
-;	/usr/bin/optpru /tmp/TI2gwo77I5H /tmp/TI2gwoPj51f 
-;	/usr/bin/acpiapru -@/tmp/TI2gwcS9z9E 
+;	/usr/bin/optpru /tmp/TI4NbKFeMtw /tmp/TI4NbGeRzNS 
+;	/usr/bin/acpiapru -@/tmp/TI4Nb5cd7QD 
 	.sect	".text:main"
 	.clink
 	.global	||main||
@@ -105,13 +105,13 @@ $C$DW$11	.dwtag  DW_TAG_subprogram, DW_AT_name("main")
 	.dwattr $C$DW$11, DW_AT_TI_symbol_name("main")
 	.dwattr $C$DW$11, DW_AT_external
 	.dwattr $C$DW$11, DW_AT_TI_begin_file("pru_fw.c")
-	.dwattr $C$DW$11, DW_AT_TI_begin_line(0x33)
+	.dwattr $C$DW$11, DW_AT_TI_begin_line(0x25)
 	.dwattr $C$DW$11, DW_AT_TI_begin_column(0x06)
 	.dwattr $C$DW$11, DW_AT_decl_file("pru_fw.c")
-	.dwattr $C$DW$11, DW_AT_decl_line(0x33)
+	.dwattr $C$DW$11, DW_AT_decl_line(0x25)
 	.dwattr $C$DW$11, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$11, DW_AT_TI_max_frame_size(0x140c)
-	.dwpsn	file "pru_fw.c",line 52,column 1,is_stmt,address ||main||,isa 0
+	.dwpsn	file "pru_fw.c",line 38,column 1,is_stmt,address ||main||,isa 0
 
 	.dwfde $C$DW$CIE, ||main||
 
@@ -133,7 +133,7 @@ $C$DW$11	.dwtag  DW_TAG_subprogram, DW_AT_name("main")
 ;* r0_0  assigned to $O$C5
 ;* r14_0 assigned to $O$Q1
 ;* r4_0  assigned to $O$K87
-;* r0_0  assigned to $O$U137
+;* r0_0  assigned to $O$U139
 ;* r6_0  assigned to $O$L1
 ;* r16_0 assigned to $O$L2
 ;* r1_0  assigned to writeReg
@@ -144,11 +144,11 @@ $C$DW$12	.dwtag  DW_TAG_variable, DW_AT_name("writeReg")
 ;* r5_0  assigned to base
 $C$DW$13	.dwtag  DW_TAG_variable, DW_AT_name("base")
 	.dwattr $C$DW$13, DW_AT_TI_symbol_name("base")
-	.dwattr $C$DW$13, DW_AT_type(*$C$DW$T$291)
+	.dwattr $C$DW$13, DW_AT_type(*$C$DW$T$289)
 	.dwattr $C$DW$13, DW_AT_location[DW_OP_reg20]
 $C$DW$14	.dwtag  DW_TAG_variable, DW_AT_name("temp")
 	.dwattr $C$DW$14, DW_AT_TI_symbol_name("temp")
-	.dwattr $C$DW$14, DW_AT_type(*$C$DW$T$292)
+	.dwattr $C$DW$14, DW_AT_type(*$C$DW$T$291)
 	.dwattr $C$DW$14, DW_AT_location[DW_OP_breg8 0]
 	.dwcfi	cfa_offset, 0
         SUB       r2, r2, 0xff          ; [ALU_PRU] 
@@ -169,210 +169,319 @@ $C$DW$14	.dwtag  DW_TAG_variable, DW_AT_name("temp")
 	.dwcfi	save_reg_to_mem, 25, -1
         RSB       r2, r0.w0, r2         ; [ALU_PRU] 
 	.dwcfi	cfa_offset, 5132
-	.dwpsn	file "pru_fw.c",line 56,column 3,is_stmt,isa 0
-        LDI32     r0, ||CT_CFG||        ; [ALU_PRU] |56| $O$C5,CT_CFG
-        LBBO      &r1, r0, 4, 4         ; [ALU_PRU] |56| $O$C5
-        CLR       r1, r1, 0x00000004    ; [ALU_PRU] |56| 
-        SBBO      &r1, r0, 4, 4         ; [ALU_PRU] |56| $O$C5
-	.dwpsn	file "pru_fw.c",line 63,column 3,is_stmt,isa 0
-        LDI32     r1, 0xfffffffc        ; [ALU_PRU] |63| 
-        LBBO      &r14, r0, 8, 4        ; [ALU_PRU] |63| $O$C5
-        AND       r1, r14, r1           ; [ALU_PRU] |63| 
-        SBBO      &r1, r0, 8, 4         ; [ALU_PRU] |63| $O$C5
+	.dwpsn	file "pru_fw.c",line 42,column 3,is_stmt,isa 0
+        LDI32     r0, ||CT_CFG||        ; [ALU_PRU] |42| $O$C5,CT_CFG
+        LBBO      &r1, r0, 4, 4         ; [ALU_PRU] |42| $O$C5
+        CLR       r1, r1, 0x00000004    ; [ALU_PRU] |42| 
+        SBBO      &r1, r0, 4, 4         ; [ALU_PRU] |42| $O$C5
+	.dwpsn	file "pru_fw.c",line 49,column 3,is_stmt,isa 0
+        LDI32     r1, 0xfffffffc        ; [ALU_PRU] |49| 
+        LBBO      &r14, r0, 8, 4        ; [ALU_PRU] |49| $O$C5
+        AND       r1, r14, r1           ; [ALU_PRU] |49| 
+        SBBO      &r1, r0, 8, 4         ; [ALU_PRU] |49| $O$C5
+	.dwpsn	file "pru_fw.c",line 57,column 3,is_stmt,isa 0
+        LDI       r1, 0x0d00            ; [ALU_PRU] |57| 
+        LDI32     r0, ||CT_INTC||       ; [ALU_PRU] |57| $O$C1,CT_INTC
+        ADD       r14, r0, r1           ; [ALU_PRU] |57| $O$Q1,$O$C1
+        LBBO      &r1, r14, 0, 4        ; [ALU_PRU] |57| $O$Q1
+        LDI32     r1, 0x01ff0000        ; [ALU_PRU] |57| $O$C2
+        SBBO      &r1, r14, 0, 4        ; [ALU_PRU] |57| $O$Q1,$O$C2
+	.dwpsn	file "pru_fw.c",line 58,column 3,is_stmt,isa 0
+        LDI       r14, 0x0d80           ; [ALU_PRU] |58| 
+        LBBO      &r15, r14, r0, 4      ; [ALU_PRU] |58| $O$C1
+        LDI       r15, 0x0000           ; [ALU_PRU] |58| 
+        SBBO      &r15, r14, r0, 4      ; [ALU_PRU] |58| $O$C1
+	.dwpsn	file "pru_fw.c",line 69,column 3,is_stmt,isa 0
+        LDI32     r15, 0xfffffff0       ; [ALU_PRU] |69| 
+        LDI       r14, 0x0410           ; [ALU_PRU] |69| 
+        ADD       r14, r0, r14          ; [ALU_PRU] |69| $O$C4,$O$C1
+        LBBO      &r16, r14, 0, 4       ; [ALU_PRU] |69| $O$C4
+        AND       r15, r16, r15         ; [ALU_PRU] |69| 
+        SET       r15, r15, 0x00000001  ; [ALU_PRU] |69| 
+        SBBO      &r15, r14, 0, 4       ; [ALU_PRU] |69| $O$C4
+	.dwpsn	file "pru_fw.c",line 70,column 3,is_stmt,isa 0
+        LDI32     r15, 0xfffff3ff       ; [ALU_PRU] |70| 
+        LBBO      &r16, r14, 0, 4       ; [ALU_PRU] |70| $O$C4
+        AND       r16, r16, r15         ; [ALU_PRU] |70| 
+        LDI       r15, 0x0300           ; [ALU_PRU] |70| 
+        OR        r15, r16, r15         ; [ALU_PRU] |70| 
+        SBBO      &r15, r14, 0, 4       ; [ALU_PRU] |70| $O$C4
 	.dwpsn	file "pru_fw.c",line 71,column 3,is_stmt,isa 0
-        LDI       r1, 0x0d00            ; [ALU_PRU] |71| 
-        LDI32     r0, ||CT_INTC||       ; [ALU_PRU] |71| $O$C1,CT_INTC
-        ADD       r14, r0, r1           ; [ALU_PRU] |71| $O$Q1,$O$C1
-        LBBO      &r1, r14, 0, 4        ; [ALU_PRU] |71| $O$Q1
-        LDI32     r1, 0x01ff0000        ; [ALU_PRU] |71| $O$C2
-        SBBO      &r1, r14, 0, 4        ; [ALU_PRU] |71| $O$Q1,$O$C2
+        LDI32     r15, 0xfff0ffff       ; [ALU_PRU] |71| 
+        LBBO      &r16, r14, 0, 4       ; [ALU_PRU] |71| $O$C4
+        AND       r15, r16, r15         ; [ALU_PRU] |71| 
+        SET       r15, r15, 0x00000012  ; [ALU_PRU] |71| 
+        SBBO      &r15, r14, 0, 4       ; [ALU_PRU] |71| $O$C4
 	.dwpsn	file "pru_fw.c",line 72,column 3,is_stmt,isa 0
-        LDI       r14, 0x0d80           ; [ALU_PRU] |72| 
-        LBBO      &r15, r14, r0, 4      ; [ALU_PRU] |72| $O$C1
-        LDI       r15, 0x0000           ; [ALU_PRU] |72| 
-        SBBO      &r15, r14, r0, 4      ; [ALU_PRU] |72| $O$C1
+        LDI32     r15, 0xf1ffffff       ; [ALU_PRU] |72| 
+        LBBO      &r16, r14, 0, 4       ; [ALU_PRU] |72| $O$C4
+        AND       r16, r16, r15         ; [ALU_PRU] |72| 
+        LDI32     r15, 0x05000000       ; [ALU_PRU] |72| 
+        OR        r15, r16, r15         ; [ALU_PRU] |72| 
+        SBBO      &r15, r14, 0, 4       ; [ALU_PRU] |72| $O$C4
+	.dwpsn	file "pru_fw.c",line 73,column 3,is_stmt,isa 0
+        LDI32     r15, 0xfffffff0       ; [ALU_PRU] |73| 
+        LBBO      &r16, r14, 4, 4       ; [ALU_PRU] |73| $O$C4
+        AND       r15, r16, r15         ; [ALU_PRU] |73| 
+        OR        r15, r15, 0x06        ; [ALU_PRU] |73| 
+        SBBO      &r15, r14, 4, 4       ; [ALU_PRU] |73| $O$C4
+	.dwpsn	file "pru_fw.c",line 74,column 3,is_stmt,isa 0
+        LDI       r15, 0x0700           ; [ALU_PRU] |74| 
+        LBBO      &r16, r14, 4, 4       ; [ALU_PRU] |74| $O$C4
+        CLR       r16, r16, 0x0000000b  ; [ALU_PRU] |74| 
+        OR        r15, r16, r15         ; [ALU_PRU] |74| 
+        SBBO      &r15, r14, 4, 4       ; [ALU_PRU] |74| $O$C4
+	.dwpsn	file "pru_fw.c",line 75,column 3,is_stmt,isa 0
+        LDI32     r15, 0xfff8ffff       ; [ALU_PRU] |75| 
+        LBBO      &r16, r14, 4, 4       ; [ALU_PRU] |75| $O$C4
+        AND       r15, r16, r15         ; [ALU_PRU] |75| 
+        SET       r15, r15, 0x00000013  ; [ALU_PRU] |75| 
+        SBBO      &r15, r14, 4, 4       ; [ALU_PRU] |75| $O$C4
+	.dwpsn	file "pru_fw.c",line 76,column 3,is_stmt,isa 0
+        LDI32     r15, 0xf9ffffff       ; [ALU_PRU] |76| 
+        LBBO      &r16, r14, 4, 4       ; [ALU_PRU] |76| $O$C4
+        AND       r16, r16, r15         ; [ALU_PRU] |76| 
+        LDI32     r15, 0x09000000       ; [ALU_PRU] |76| 
+        OR        r15, r16, r15         ; [ALU_PRU] |76| 
+        SBBO      &r15, r14, 4, 4       ; [ALU_PRU] |76| $O$C4
+	.dwpsn	file "pru_fw.c",line 77,column 3,is_stmt,isa 0
+        LDI32     r15, 0xfffffff0       ; [ALU_PRU] |77| 
+        LBBO      &r16, r14, 8, 4       ; [ALU_PRU] |77| $O$C4
+        AND       r15, r16, r15         ; [ALU_PRU] |77| 
+        SET       r15, r15, 0x00000000  ; [ALU_PRU] |77| 
+        SBBO      &r15, r14, 8, 4       ; [ALU_PRU] |77| $O$C4
+	.dwpsn	file "pru_fw.c",line 80,column 3,is_stmt,isa 0
+        LDI32     r15, 0xfffff1ff       ; [ALU_PRU] |80| 
+        LDI       r14, 0x0800           ; [ALU_PRU] |80| 
+        ADD       r14, r0, r14          ; [ALU_PRU] |80| $O$C3,$O$C1
+        LBBO      &r16, r14, 0, 4       ; [ALU_PRU] |80| $O$C3
+        AND       r15, r16, r15         ; [ALU_PRU] |80| 
+        SET       r15, r15, 0x00000008  ; [ALU_PRU] |80| 
+        SBBO      &r15, r14, 0, 4       ; [ALU_PRU] |80| $O$C3
+	.dwpsn	file "pru_fw.c",line 81,column 3,is_stmt,isa 0
+        LDI32     r15, 0xfff0ffff       ; [ALU_PRU] |81| 
+        LBBO      &r16, r14, 0, 4       ; [ALU_PRU] |81| $O$C3
+        AND       r15, r16, r15         ; [ALU_PRU] |81| 
+        SET       r15, r15, 0x00000011  ; [ALU_PRU] |81| 
+        SBBO      &r15, r14, 0, 4       ; [ALU_PRU] |81| $O$C3
+	.dwpsn	file "pru_fw.c",line 82,column 3,is_stmt,isa 0
+        LDI32     r15, 0xf3ffffff       ; [ALU_PRU] |82| 
+        LBBO      &r16, r14, 0, 4       ; [ALU_PRU] |82| $O$C3
+        AND       r16, r16, r15         ; [ALU_PRU] |82| 
+        LDI32     r15, 0x03000000       ; [ALU_PRU] |82| 
+        OR        r15, r16, r15         ; [ALU_PRU] |82| 
+        SBBO      &r15, r14, 0, 4       ; [ALU_PRU] |82| $O$C3
 	.dwpsn	file "pru_fw.c",line 83,column 3,is_stmt,isa 0
         LDI32     r15, 0xfffffff0       ; [ALU_PRU] |83| 
-        LDI       r14, 0x0410           ; [ALU_PRU] |83| 
-        ADD       r14, r0, r14          ; [ALU_PRU] |83| $O$C4,$O$C1
-        LBBO      &r16, r14, 0, 4       ; [ALU_PRU] |83| $O$C4
+        LBBO      &r16, r14, 4, 4       ; [ALU_PRU] |83| $O$C3
         AND       r15, r16, r15         ; [ALU_PRU] |83| 
-        SET       r15, r15, 0x00000001  ; [ALU_PRU] |83| 
-        SBBO      &r15, r14, 0, 4       ; [ALU_PRU] |83| $O$C4
+        SET       r15, r15, 0x00000002  ; [ALU_PRU] |83| 
+        SBBO      &r15, r14, 4, 4       ; [ALU_PRU] |83| $O$C3
 	.dwpsn	file "pru_fw.c",line 84,column 3,is_stmt,isa 0
-        LDI32     r15, 0xfffff3ff       ; [ALU_PRU] |84| 
-        LBBO      &r16, r14, 0, 4       ; [ALU_PRU] |84| $O$C4
+        LDI32     r15, 0xfffff1ff       ; [ALU_PRU] |84| 
+        LBBO      &r16, r14, 4, 4       ; [ALU_PRU] |84| $O$C3
         AND       r16, r16, r15         ; [ALU_PRU] |84| 
-        LDI       r15, 0x0300           ; [ALU_PRU] |84| 
+        LDI       r15, 0x0500           ; [ALU_PRU] |84| 
         OR        r15, r16, r15         ; [ALU_PRU] |84| 
-        SBBO      &r15, r14, 0, 4       ; [ALU_PRU] |84| $O$C4
+        SBBO      &r15, r14, 4, 4       ; [ALU_PRU] |84| $O$C3
 	.dwpsn	file "pru_fw.c",line 85,column 3,is_stmt,isa 0
         LDI32     r15, 0xfff0ffff       ; [ALU_PRU] |85| 
-        LBBO      &r16, r14, 0, 4       ; [ALU_PRU] |85| $O$C4
-        AND       r15, r16, r15         ; [ALU_PRU] |85| 
-        SET       r15, r15, 0x00000012  ; [ALU_PRU] |85| 
-        SBBO      &r15, r14, 0, 4       ; [ALU_PRU] |85| $O$C4
+        LBBO      &r16, r14, 4, 4       ; [ALU_PRU] |85| $O$C3
+        AND       r16, r16, r15         ; [ALU_PRU] |85| 
+        LDI32     r15, 0x00060000       ; [ALU_PRU] |85| 
+        OR        r15, r16, r15         ; [ALU_PRU] |85| 
+        SBBO      &r15, r14, 4, 4       ; [ALU_PRU] |85| $O$C3
 	.dwpsn	file "pru_fw.c",line 86,column 3,is_stmt,isa 0
-        LDI32     r15, 0xf1ffffff       ; [ALU_PRU] |86| 
-        LBBO      &r16, r14, 0, 4       ; [ALU_PRU] |86| $O$C4
-        AND       r16, r16, r15         ; [ALU_PRU] |86| 
-        LDI32     r15, 0x05000000       ; [ALU_PRU] |86| 
+        LDI32     r15, 0x07000000       ; [ALU_PRU] |86| 
+        LBBO      &r16, r14, 4, 4       ; [ALU_PRU] |86| $O$C3
+        CLR       r16, r16, 0x0000001b  ; [ALU_PRU] |86| 
         OR        r15, r16, r15         ; [ALU_PRU] |86| 
-        SBBO      &r15, r14, 0, 4       ; [ALU_PRU] |86| $O$C4
+        SBBO      &r15, r14, 4, 4       ; [ALU_PRU] |86| $O$C3
 	.dwpsn	file "pru_fw.c",line 87,column 3,is_stmt,isa 0
-        LDI32     r15, 0xfffffff0       ; [ALU_PRU] |87| 
-        LBBO      &r16, r14, 4, 4       ; [ALU_PRU] |87| $O$C4
+        LDI32     r15, 0xfffffff8       ; [ALU_PRU] |87| 
+        LBBO      &r16, r14, 8, 4       ; [ALU_PRU] |87| $O$C3
         AND       r15, r16, r15         ; [ALU_PRU] |87| 
-        OR        r15, r15, 0x06        ; [ALU_PRU] |87| 
-        SBBO      &r15, r14, 4, 4       ; [ALU_PRU] |87| $O$C4
+        SET       r15, r15, 0x00000003  ; [ALU_PRU] |87| 
+        SBBO      &r15, r14, 8, 4       ; [ALU_PRU] |87| $O$C3
 	.dwpsn	file "pru_fw.c",line 88,column 3,is_stmt,isa 0
-        LDI       r15, 0x0700           ; [ALU_PRU] |88| 
-        LBBO      &r16, r14, 4, 4       ; [ALU_PRU] |88| $O$C4
-        CLR       r16, r16, 0x0000000b  ; [ALU_PRU] |88| 
-        OR        r15, r16, r15         ; [ALU_PRU] |88| 
-        SBBO      &r15, r14, 4, 4       ; [ALU_PRU] |88| $O$C4
-	.dwpsn	file "pru_fw.c",line 89,column 3,is_stmt,isa 0
-        LDI32     r15, 0xfff8ffff       ; [ALU_PRU] |89| 
-        LBBO      &r16, r14, 4, 4       ; [ALU_PRU] |89| $O$C4
-        AND       r15, r16, r15         ; [ALU_PRU] |89| 
-        SET       r15, r15, 0x00000013  ; [ALU_PRU] |89| 
-        SBBO      &r15, r14, 4, 4       ; [ALU_PRU] |89| $O$C4
-	.dwpsn	file "pru_fw.c",line 90,column 3,is_stmt,isa 0
-        LDI32     r15, 0xf9ffffff       ; [ALU_PRU] |90| 
-        LBBO      &r16, r14, 4, 4       ; [ALU_PRU] |90| $O$C4
-        AND       r16, r16, r15         ; [ALU_PRU] |90| 
-        LDI32     r15, 0x09000000       ; [ALU_PRU] |90| 
-        OR        r15, r16, r15         ; [ALU_PRU] |90| 
-        SBBO      &r15, r14, 4, 4       ; [ALU_PRU] |90| $O$C4
+        LDI32     r15, 0xfffff9ff       ; [ALU_PRU] |88| 
+        LBBO      &r14, r14, 8, 4       ; [ALU_PRU] |88| $O$C3
+        AND       r15, r14, r15         ; [ALU_PRU] |88| 
+        LDI       r14, 0x0900           ; [ALU_PRU] |88| 
+        OR        r14, r15, r14         ; [ALU_PRU] |88| 
+        LDI       r15.w0, 0x0808        ; [ALU_PRU] |88| 
+        SBBO      &r14, r0, r15.w0, 4   ; [ALU_PRU] |88| $O$C1
 	.dwpsn	file "pru_fw.c",line 91,column 3,is_stmt,isa 0
-        LDI32     r15, 0xfffffff0       ; [ALU_PRU] |91| 
-        LBBO      &r16, r14, 8, 4       ; [ALU_PRU] |91| $O$C4
-        AND       r15, r16, r15         ; [ALU_PRU] |91| 
-        SET       r15, r15, 0x00000000  ; [ALU_PRU] |91| 
-        SBBO      &r15, r14, 8, 4       ; [ALU_PRU] |91| $O$C4
-	.dwpsn	file "pru_fw.c",line 94,column 3,is_stmt,isa 0
-        LDI32     r15, 0xfffff1ff       ; [ALU_PRU] |94| 
-        LDI       r14, 0x0800           ; [ALU_PRU] |94| 
-        ADD       r14, r0, r14          ; [ALU_PRU] |94| $O$C3,$O$C1
-        LBBO      &r16, r14, 0, 4       ; [ALU_PRU] |94| $O$C3
-        AND       r15, r16, r15         ; [ALU_PRU] |94| 
-        SET       r15, r15, 0x00000008  ; [ALU_PRU] |94| 
-        SBBO      &r15, r14, 0, 4       ; [ALU_PRU] |94| $O$C3
-	.dwpsn	file "pru_fw.c",line 95,column 3,is_stmt,isa 0
-        LDI32     r15, 0xfff0ffff       ; [ALU_PRU] |95| 
-        LBBO      &r16, r14, 0, 4       ; [ALU_PRU] |95| $O$C3
-        AND       r15, r16, r15         ; [ALU_PRU] |95| 
-        SET       r15, r15, 0x00000011  ; [ALU_PRU] |95| 
-        SBBO      &r15, r14, 0, 4       ; [ALU_PRU] |95| $O$C3
-	.dwpsn	file "pru_fw.c",line 96,column 3,is_stmt,isa 0
-        LDI32     r15, 0xf3ffffff       ; [ALU_PRU] |96| 
-        LBBO      &r16, r14, 0, 4       ; [ALU_PRU] |96| $O$C3
-        AND       r16, r16, r15         ; [ALU_PRU] |96| 
-        LDI32     r15, 0x03000000       ; [ALU_PRU] |96| 
-        OR        r15, r16, r15         ; [ALU_PRU] |96| 
-        SBBO      &r15, r14, 0, 4       ; [ALU_PRU] |96| $O$C3
-	.dwpsn	file "pru_fw.c",line 97,column 3,is_stmt,isa 0
-        LDI32     r15, 0xfffffff0       ; [ALU_PRU] |97| 
-        LBBO      &r16, r14, 4, 4       ; [ALU_PRU] |97| $O$C3
-        AND       r15, r16, r15         ; [ALU_PRU] |97| 
-        SET       r15, r15, 0x00000002  ; [ALU_PRU] |97| 
-        SBBO      &r15, r14, 4, 4       ; [ALU_PRU] |97| $O$C3
+        LDI       r14, 0x0280           ; [ALU_PRU] |91| 
+        ADD       r4, r0, r14           ; [ALU_PRU] |91| $O$K87,$O$C1
+        FILL      &r14, 4               ; [ALU_PRU] |91| 
+        LBBO      &r15, r4, 0, 4        ; [ALU_PRU] |91| $O$K87
+        OR        r14, r15, r14         ; [ALU_PRU] |91| 
+        SBBO      &r14, r4, 0, 4        ; [ALU_PRU] |91| $O$K87
+	.dwpsn	file "pru_fw.c",line 92,column 3,is_stmt,isa 0
+        FILL      &r14, 4               ; [ALU_PRU] |92| 
+        LBBO      &r15, r4, 4, 4        ; [ALU_PRU] |92| $O$K87
+        OR        r14, r15, r14         ; [ALU_PRU] |92| 
+        SBBO      &r14, r4, 4, 4        ; [ALU_PRU] |92| $O$K87
 	.dwpsn	file "pru_fw.c",line 98,column 3,is_stmt,isa 0
-        LDI32     r15, 0xfffff1ff       ; [ALU_PRU] |98| 
-        LBBO      &r16, r14, 4, 4       ; [ALU_PRU] |98| $O$C3
-        AND       r16, r16, r15         ; [ALU_PRU] |98| 
-        LDI       r15, 0x0500           ; [ALU_PRU] |98| 
-        OR        r15, r16, r15         ; [ALU_PRU] |98| 
-        SBBO      &r15, r14, 4, 4       ; [ALU_PRU] |98| $O$C3
-	.dwpsn	file "pru_fw.c",line 99,column 3,is_stmt,isa 0
-        LDI32     r15, 0xfff0ffff       ; [ALU_PRU] |99| 
-        LBBO      &r16, r14, 4, 4       ; [ALU_PRU] |99| $O$C3
-        AND       r16, r16, r15         ; [ALU_PRU] |99| 
-        LDI32     r15, 0x00060000       ; [ALU_PRU] |99| 
-        OR        r15, r16, r15         ; [ALU_PRU] |99| 
-        SBBO      &r15, r14, 4, 4       ; [ALU_PRU] |99| $O$C3
-	.dwpsn	file "pru_fw.c",line 100,column 3,is_stmt,isa 0
-        LDI32     r15, 0x07000000       ; [ALU_PRU] |100| 
-        LBBO      &r16, r14, 4, 4       ; [ALU_PRU] |100| $O$C3
-        CLR       r16, r16, 0x0000001b  ; [ALU_PRU] |100| 
-        OR        r15, r16, r15         ; [ALU_PRU] |100| 
-        SBBO      &r15, r14, 4, 4       ; [ALU_PRU] |100| $O$C3
+        LDI       r14.w0, 0x1500        ; [ALU_PRU] |98| 
+        LBBO      &r14, r0, r14.w0, 4   ; [ALU_PRU] |98| $O$C1
+        CLR       r15, r14, 0x00000000  ; [ALU_PRU] |98| 
+        LDI       r14, 0x03fe           ; [ALU_PRU] |98| 
+        OR        r14, r15, r14         ; [ALU_PRU] |98| 
+        LDI       r15.w0, 0x1500        ; [ALU_PRU] |98| 
+        SBBO      &r14, r0, r15.w0, 4   ; [ALU_PRU] |98| $O$C1
 	.dwpsn	file "pru_fw.c",line 101,column 3,is_stmt,isa 0
-        LDI32     r15, 0xfffffff8       ; [ALU_PRU] |101| 
-        LBBO      &r16, r14, 8, 4       ; [ALU_PRU] |101| $O$C3
-        AND       r15, r16, r15         ; [ALU_PRU] |101| 
-        SET       r15, r15, 0x00000003  ; [ALU_PRU] |101| 
-        SBBO      &r15, r14, 8, 4       ; [ALU_PRU] |101| $O$C3
-	.dwpsn	file "pru_fw.c",line 102,column 3,is_stmt,isa 0
-        LDI32     r15, 0xfffff9ff       ; [ALU_PRU] |102| 
-        LBBO      &r14, r14, 8, 4       ; [ALU_PRU] |102| $O$C3
-        AND       r15, r14, r15         ; [ALU_PRU] |102| 
-        LDI       r14, 0x0900           ; [ALU_PRU] |102| 
-        OR        r14, r15, r14         ; [ALU_PRU] |102| 
-        LDI       r15.w0, 0x0808        ; [ALU_PRU] |102| 
-        SBBO      &r14, r0, r15.w0, 4   ; [ALU_PRU] |102| $O$C1
-	.dwpsn	file "pru_fw.c",line 105,column 3,is_stmt,isa 0
-        LDI       r14, 0x0280           ; [ALU_PRU] |105| 
-        ADD       r4, r0, r14           ; [ALU_PRU] |105| $O$K87,$O$C1
-        FILL      &r14, 4               ; [ALU_PRU] |105| 
-        LBBO      &r15, r4, 0, 4        ; [ALU_PRU] |105| $O$K87
-        OR        r14, r15, r14         ; [ALU_PRU] |105| 
-        SBBO      &r14, r4, 0, 4        ; [ALU_PRU] |105| $O$K87
-	.dwpsn	file "pru_fw.c",line 106,column 3,is_stmt,isa 0
-        FILL      &r14, 4               ; [ALU_PRU] |106| 
-        LBBO      &r15, r4, 4, 4        ; [ALU_PRU] |106| $O$K87
-        OR        r14, r15, r14         ; [ALU_PRU] |106| 
-        SBBO      &r14, r4, 4, 4        ; [ALU_PRU] |106| $O$K87
-	.dwpsn	file "pru_fw.c",line 112,column 3,is_stmt,isa 0
-        LDI       r14.w0, 0x1500        ; [ALU_PRU] |112| 
-        LBBO      &r14, r0, r14.w0, 4   ; [ALU_PRU] |112| $O$C1
-        CLR       r15, r14, 0x00000000  ; [ALU_PRU] |112| 
-        LDI       r14, 0x03fe           ; [ALU_PRU] |112| 
-        OR        r14, r15, r14         ; [ALU_PRU] |112| 
-        LDI       r15.w0, 0x1500        ; [ALU_PRU] |112| 
-        SBBO      &r14, r0, r15.w0, 4   ; [ALU_PRU] |112| $O$C1
-	.dwpsn	file "pru_fw.c",line 118,column 3,is_stmt,isa 0
-        LBBO      &r14, r4, 128, 4      ; [ALU_PRU] |118| $O$K87
-        SBBO      &r1, r4, 128, 4       ; [ALU_PRU] |118| $O$K87,$O$C2
-	.dwpsn	file "pru_fw.c",line 121,column 3,is_stmt,isa 0
-        LBBO      &r1, r0, 16, 4        ; [ALU_PRU] |121| $O$C1
-        SET       r1, r1, 0x00000000    ; [ALU_PRU] |121| 
-        SBBO      &r1, r0, 16, 4        ; [ALU_PRU] |121| $O$C1
-	.dwpsn	file "pru_fw.c",line 160,column 5,is_stmt,isa 0
-        JMP       ||$C$L2||             ; [ALU_PRU] |160| 
+        LBBO      &r14, r4, 128, 4      ; [ALU_PRU] |101| $O$K87
+        SBBO      &r1, r4, 128, 4       ; [ALU_PRU] |101| $O$K87,$O$C2
+	.dwpsn	file "pru_fw.c",line 104,column 3,is_stmt,isa 0
+        LBBO      &r1, r0, 16, 4        ; [ALU_PRU] |104| $O$C1
+        SET       r1, r1, 0x00000000    ; [ALU_PRU] |104| 
+        SBBO      &r1, r0, 16, 4        ; [ALU_PRU] |104| $O$C1
+	.dwpsn	file "pru_fw.c",line 136,column 5,is_stmt,isa 0
+        JMP       ||$C$L2||             ; [ALU_PRU] |136| 
 ;* --------------------------------------------------------------------------*
 ||$C$L1||:    
-	.dwpsn	file "pru_fw.c",line 161,column 7,is_stmt,isa 0
-        NOP       ; [ALU_PRU] |161| 
+	.dwpsn	file "pru_fw.c",line 137,column 7,is_stmt,isa 0
+        NOP       ; [ALU_PRU] |137| 
 ;* --------------------------------------------------------------------------*
 ;*   BEGIN LOOP ||$C$L2||
 ;* --------------------------------------------------------------------------*
 ||$C$L2||:    
-	.dwpsn	file "pru_fw.c",line 160,column 11,is_stmt,isa 0
-        QBBC      ||$C$L1||, r31, 0x1f  ; [ALU_PRU] |160| 
+	.dwpsn	file "pru_fw.c",line 136,column 11,is_stmt,isa 0
+        QBBC      ||$C$L1||, r31, 0x1f  ; [ALU_PRU] |136| 
 ;* --------------------------------------------------------------------------*
-	.dwpsn	file "pru_fw.c",line 164,column 5,is_stmt,isa 0
-        FILL      &r0, 4                ; [ALU_PRU] |164| 
-        LBBO      &r1, r4, 0, 4         ; [ALU_PRU] |164| $O$K87
-        OR        r0, r1, r0            ; [ALU_PRU] |164| 
-        SBBO      &r0, r4, 0, 4         ; [ALU_PRU] |164| $O$K87
-	.dwpsn	file "pru_fw.c",line 170,column 5,is_stmt,isa 0
-        LDI32     r0, 0x00010000        ; [ALU_PRU] |170| 
-        LBBO      &r5, r0, 0, 4         ; [ALU_PRU] |170| base
+	.dwpsn	file "pru_fw.c",line 140,column 5,is_stmt,isa 0
+        FILL      &r0, 4                ; [ALU_PRU] |140| 
+        LBBO      &r1, r4, 0, 4         ; [ALU_PRU] |140| $O$K87
+        OR        r0, r1, r0            ; [ALU_PRU] |140| 
+        SBBO      &r0, r4, 0, 4         ; [ALU_PRU] |140| $O$K87
+	.dwpsn	file "pru_fw.c",line 147,column 5,is_stmt,isa 0
+        LDI32     r0, 0x00010000        ; [ALU_PRU] |147| 
+        LBBO      &r5, r0, 0, 4         ; [ALU_PRU] |147| base
 ;* --------------------------------------------------------------------------*
 ;*   BEGIN LOOP ||$C$L3||
 ;*
-;*   Loop source line                : 173
-;*   Loop closing brace source line  : 173
+;*   Loop source line                : 150
+;*   Loop closing brace source line  : 150
 ;*   Known Minimum Trip Count        : 1
 ;*   Known Maximum Trip Count        : 4294967295
 ;*   Known Max Trip Count Factor     : 1
 ;* --------------------------------------------------------------------------*
 ||$C$L3||:    
-	.dwpsn	file "pru_fw.c",line 173,column 11,is_stmt,isa 0
-        QBBS      ||$C$L3||, r31, 0x0f  ; [ALU_PRU] |173| 
+	.dwpsn	file "pru_fw.c",line 150,column 11,is_stmt,isa 0
+        QBBS      ||$C$L3||, r31, 0x0f  ; [ALU_PRU] |150| 
 ;* --------------------------------------------------------------------------*
 ;*   BEGIN LOOP ||$C$L4||
+;*
+;*   Loop source line                : 152
+;*   Loop closing brace source line  : 152
+;*   Known Minimum Trip Count        : 1
+;*   Known Maximum Trip Count        : 4294967295
+;*   Known Max Trip Count Factor     : 1
+;* --------------------------------------------------------------------------*
+||$C$L4||:    
+	.dwpsn	file "pru_fw.c",line 152,column 11,is_stmt,isa 0
+        QBBC      ||$C$L4||, r31, 0x0f  ; [ALU_PRU] |152| 
+;* --------------------------------------------------------------------------*
+	.dwpsn	file "pru_fw.c",line 156,column 21,is_stmt,isa 0
+        LDI       r6.w0, 0x03c0         ; [ALU_PRU] |156| $O$L1
+;* --------------------------------------------------------------------------*
+;*   BEGIN LOOP ||$C$L5||
+;*
+;*   Loop source line                : 156
+;*   Loop closing brace source line  : 189
+;*   Known Minimum Trip Count        : 960
+;*   Known Maximum Trip Count        : 960
+;*   Known Max Trip Count Factor     : 960
+;* --------------------------------------------------------------------------*
+||$C$L5||:    
+        ADD       r0, r2, 0             ; [ALU_PRU] temp,temp
+	.dwpsn	file "pru_fw.c",line 161,column 22,is_stmt,isa 0
+        LDI       r16.w0, 0x0140        ; [ALU_PRU] |161| $O$L2
+;* --------------------------------------------------------------------------*
+;*   BEGIN LOOP ||$C$L6||
+;*
+;*   Loop source line                : 165
+;*   Loop closing brace source line  : 165
+;*   Known Minimum Trip Count        : 1
+;*   Known Maximum Trip Count        : 4294967295
+;*   Known Max Trip Count Factor     : 1
+;* --------------------------------------------------------------------------*
+||$C$L6||:    
+	.dwpsn	file "pru_fw.c",line 165,column 15,is_stmt,isa 0
+        QBBC      ||$C$L6||, r31, 0x0e  ; [ALU_PRU] |165| 
+;* --------------------------------------------------------------------------*
+;*   BEGIN LOOP ||$C$L7||
+;*
+;*   Loop source line                : 168
+;*   Loop closing brace source line  : 168
+;*   Known Minimum Trip Count        : 1
+;*   Known Maximum Trip Count        : 4294967295
+;*   Known Max Trip Count Factor     : 1
+;* --------------------------------------------------------------------------*
+||$C$L7||:    
+	.dwpsn	file "pru_fw.c",line 168,column 9,is_stmt,isa 0
+        QBBS      ||$C$L7||, r31, 0x10  ; [ALU_PRU] |168| 
+;* --------------------------------------------------------------------------*
+;*   BEGIN LOOP ||$C$L8||
+;*
+;*   Loop source line                : 169
+;*   Loop closing brace source line  : 169
+;*   Known Minimum Trip Count        : 1
+;*   Known Maximum Trip Count        : 4294967295
+;*   Known Max Trip Count Factor     : 1
+;* --------------------------------------------------------------------------*
+||$C$L8||:    
+	.dwpsn	file "pru_fw.c",line 169,column 15,is_stmt,isa 0
+        QBBC      ||$C$L8||, r31, 0x10  ; [ALU_PRU] |169| 
+;* --------------------------------------------------------------------------*
+	.dwpsn	file "pru_fw.c",line 170,column 9,is_stmt,isa 0
+        AND       r1, r31, 0xff         ; [ALU_PRU] |170| writeReg
+;* --------------------------------------------------------------------------*
+;*   BEGIN LOOP ||$C$L9||
+;*
+;*   Loop source line                : 171
+;*   Loop closing brace source line  : 171
+;*   Known Minimum Trip Count        : 1
+;*   Known Maximum Trip Count        : 4294967295
+;*   Known Max Trip Count Factor     : 1
+;* --------------------------------------------------------------------------*
+||$C$L9||:    
+	.dwpsn	file "pru_fw.c",line 171,column 9,is_stmt,isa 0
+        QBBS      ||$C$L9||, r31, 0x10  ; [ALU_PRU] |171| 
+;* --------------------------------------------------------------------------*
+;*   BEGIN LOOP ||$C$L10||
+;*
+;*   Loop source line                : 172
+;*   Loop closing brace source line  : 172
+;*   Known Minimum Trip Count        : 1
+;*   Known Maximum Trip Count        : 4294967295
+;*   Known Max Trip Count Factor     : 1
+;* --------------------------------------------------------------------------*
+||$C$L10||:    
+	.dwpsn	file "pru_fw.c",line 172,column 15,is_stmt,isa 0
+        QBBC      ||$C$L10||, r31, 0x10 ; [ALU_PRU] |172| 
+;* --------------------------------------------------------------------------*
+	.dwpsn	file "pru_fw.c",line 173,column 9,is_stmt,isa 0
+        LDI       r14, 0xff00           ; [ALU_PRU] |173| 
+        LSL       r15, r31, 0x08        ; [ALU_PRU] |173| 
+        AND       r14, r15, r14         ; [ALU_PRU] |173| 
+        OR        r1, r1, r14           ; [ALU_PRU] |173| writeReg,writeReg
+;* --------------------------------------------------------------------------*
+;*   BEGIN LOOP ||$C$L11||
+;*
+;*   Loop source line                : 174
+;*   Loop closing brace source line  : 174
+;*   Known Minimum Trip Count        : 1
+;*   Known Maximum Trip Count        : 4294967295
+;*   Known Max Trip Count Factor     : 1
+;* --------------------------------------------------------------------------*
+||$C$L11||:    
+	.dwpsn	file "pru_fw.c",line 174,column 9,is_stmt,isa 0
+        QBBS      ||$C$L11||, r31, 0x10 ; [ALU_PRU] |174| 
+;* --------------------------------------------------------------------------*
+;*   BEGIN LOOP ||$C$L12||
 ;*
 ;*   Loop source line                : 175
 ;*   Loop closing brace source line  : 175
@@ -380,184 +489,75 @@ $C$DW$14	.dwtag  DW_TAG_variable, DW_AT_name("temp")
 ;*   Known Maximum Trip Count        : 4294967295
 ;*   Known Max Trip Count Factor     : 1
 ;* --------------------------------------------------------------------------*
-||$C$L4||:    
-	.dwpsn	file "pru_fw.c",line 175,column 11,is_stmt,isa 0
-        QBBC      ||$C$L4||, r31, 0x0f  ; [ALU_PRU] |175| 
-;* --------------------------------------------------------------------------*
-	.dwpsn	file "pru_fw.c",line 179,column 21,is_stmt,isa 0
-        LDI       r6.w0, 0x03c0         ; [ALU_PRU] |179| $O$L1
-;* --------------------------------------------------------------------------*
-;*   BEGIN LOOP ||$C$L5||
-;*
-;*   Loop source line                : 179
-;*   Loop closing brace source line  : 211
-;*   Known Minimum Trip Count        : 960
-;*   Known Maximum Trip Count        : 960
-;*   Known Max Trip Count Factor     : 960
-;* --------------------------------------------------------------------------*
-||$C$L5||:    
-        ADD       r0, r2, 0             ; [ALU_PRU] temp,temp
-	.dwpsn	file "pru_fw.c",line 184,column 22,is_stmt,isa 0
-        LDI       r16.w0, 0x0140        ; [ALU_PRU] |184| $O$L2
-;* --------------------------------------------------------------------------*
-;*   BEGIN LOOP ||$C$L6||
-;*
-;*   Loop source line                : 188
-;*   Loop closing brace source line  : 188
-;*   Known Minimum Trip Count        : 1
-;*   Known Maximum Trip Count        : 4294967295
-;*   Known Max Trip Count Factor     : 1
-;* --------------------------------------------------------------------------*
-||$C$L6||:    
-	.dwpsn	file "pru_fw.c",line 188,column 15,is_stmt,isa 0
-        QBBC      ||$C$L6||, r31, 0x0e  ; [ALU_PRU] |188| 
-;* --------------------------------------------------------------------------*
-;*   BEGIN LOOP ||$C$L7||
-;*
-;*   Loop source line                : 190
-;*   Loop closing brace source line  : 190
-;*   Known Minimum Trip Count        : 1
-;*   Known Maximum Trip Count        : 4294967295
-;*   Known Max Trip Count Factor     : 1
-;* --------------------------------------------------------------------------*
-||$C$L7||:    
-	.dwpsn	file "pru_fw.c",line 190,column 9,is_stmt,isa 0
-        QBBS      ||$C$L7||, r31, 0x10  ; [ALU_PRU] |190| 
-;* --------------------------------------------------------------------------*
-;*   BEGIN LOOP ||$C$L8||
-;*
-;*   Loop source line                : 191
-;*   Loop closing brace source line  : 191
-;*   Known Minimum Trip Count        : 1
-;*   Known Maximum Trip Count        : 4294967295
-;*   Known Max Trip Count Factor     : 1
-;* --------------------------------------------------------------------------*
-||$C$L8||:    
-	.dwpsn	file "pru_fw.c",line 191,column 15,is_stmt,isa 0
-        QBBC      ||$C$L8||, r31, 0x10  ; [ALU_PRU] |191| 
-;* --------------------------------------------------------------------------*
-	.dwpsn	file "pru_fw.c",line 192,column 9,is_stmt,isa 0
-        LSL       r1, r31, 0x18         ; [ALU_PRU] |192| writeReg
-;* --------------------------------------------------------------------------*
-;*   BEGIN LOOP ||$C$L9||
-;*
-;*   Loop source line                : 193
-;*   Loop closing brace source line  : 193
-;*   Known Minimum Trip Count        : 1
-;*   Known Maximum Trip Count        : 4294967295
-;*   Known Max Trip Count Factor     : 1
-;* --------------------------------------------------------------------------*
-||$C$L9||:    
-	.dwpsn	file "pru_fw.c",line 193,column 9,is_stmt,isa 0
-        QBBS      ||$C$L9||, r31, 0x10  ; [ALU_PRU] |193| 
-;* --------------------------------------------------------------------------*
-;*   BEGIN LOOP ||$C$L10||
-;*
-;*   Loop source line                : 194
-;*   Loop closing brace source line  : 194
-;*   Known Minimum Trip Count        : 1
-;*   Known Maximum Trip Count        : 4294967295
-;*   Known Max Trip Count Factor     : 1
-;* --------------------------------------------------------------------------*
-||$C$L10||:    
-	.dwpsn	file "pru_fw.c",line 194,column 15,is_stmt,isa 0
-        QBBC      ||$C$L10||, r31, 0x10 ; [ALU_PRU] |194| 
-;* --------------------------------------------------------------------------*
-	.dwpsn	file "pru_fw.c",line 195,column 9,is_stmt,isa 0
-        LDI32     r14, 0x00ff0000       ; [ALU_PRU] |195| 
-        LSL       r15, r31, 0x10        ; [ALU_PRU] |195| 
-        AND       r14, r15, r14         ; [ALU_PRU] |195| 
-        OR        r1, r1, r14           ; [ALU_PRU] |195| writeReg,writeReg
-;* --------------------------------------------------------------------------*
-;*   BEGIN LOOP ||$C$L11||
-;*
-;*   Loop source line                : 196
-;*   Loop closing brace source line  : 196
-;*   Known Minimum Trip Count        : 1
-;*   Known Maximum Trip Count        : 4294967295
-;*   Known Max Trip Count Factor     : 1
-;* --------------------------------------------------------------------------*
-||$C$L11||:    
-	.dwpsn	file "pru_fw.c",line 196,column 9,is_stmt,isa 0
-        QBBS      ||$C$L11||, r31, 0x10 ; [ALU_PRU] |196| 
-;* --------------------------------------------------------------------------*
-;*   BEGIN LOOP ||$C$L12||
-;*
-;*   Loop source line                : 197
-;*   Loop closing brace source line  : 197
-;*   Known Minimum Trip Count        : 1
-;*   Known Maximum Trip Count        : 4294967295
-;*   Known Max Trip Count Factor     : 1
-;* --------------------------------------------------------------------------*
 ||$C$L12||:    
-	.dwpsn	file "pru_fw.c",line 197,column 15,is_stmt,isa 0
-        QBBC      ||$C$L12||, r31, 0x10 ; [ALU_PRU] |197| 
+	.dwpsn	file "pru_fw.c",line 175,column 15,is_stmt,isa 0
+        QBBC      ||$C$L12||, r31, 0x10 ; [ALU_PRU] |175| 
 ;* --------------------------------------------------------------------------*
-	.dwpsn	file "pru_fw.c",line 198,column 9,is_stmt,isa 0
-        LDI       r14, 0xff00           ; [ALU_PRU] |198| 
-        LSL       r15, r31, 0x08        ; [ALU_PRU] |198| 
-        AND       r14, r15, r14         ; [ALU_PRU] |198| 
-        OR        r1, r1, r14           ; [ALU_PRU] |198| writeReg,writeReg
+	.dwpsn	file "pru_fw.c",line 176,column 9,is_stmt,isa 0
+        LDI32     r14, 0x00ff0000       ; [ALU_PRU] |176| 
+        LSL       r15, r31, 0x10        ; [ALU_PRU] |176| 
+        AND       r14, r15, r14         ; [ALU_PRU] |176| 
+        OR        r1, r1, r14           ; [ALU_PRU] |176| writeReg,writeReg
 ;* --------------------------------------------------------------------------*
 ;*   BEGIN LOOP ||$C$L13||
 ;*
-;*   Loop source line                : 199
-;*   Loop closing brace source line  : 199
+;*   Loop source line                : 177
+;*   Loop closing brace source line  : 177
 ;*   Known Minimum Trip Count        : 1
 ;*   Known Maximum Trip Count        : 4294967295
 ;*   Known Max Trip Count Factor     : 1
 ;* --------------------------------------------------------------------------*
 ||$C$L13||:    
-	.dwpsn	file "pru_fw.c",line 199,column 9,is_stmt,isa 0
-        QBBS      ||$C$L13||, r31, 0x10 ; [ALU_PRU] |199| 
+	.dwpsn	file "pru_fw.c",line 177,column 9,is_stmt,isa 0
+        QBBS      ||$C$L13||, r31, 0x10 ; [ALU_PRU] |177| 
 ;* --------------------------------------------------------------------------*
 ;*   BEGIN LOOP ||$C$L14||
 ;*
-;*   Loop source line                : 200
-;*   Loop closing brace source line  : 200
+;*   Loop source line                : 178
+;*   Loop closing brace source line  : 178
 ;*   Known Minimum Trip Count        : 1
 ;*   Known Maximum Trip Count        : 4294967295
 ;*   Known Max Trip Count Factor     : 1
 ;* --------------------------------------------------------------------------*
 ||$C$L14||:    
-	.dwpsn	file "pru_fw.c",line 200,column 15,is_stmt,isa 0
-        QBBC      ||$C$L14||, r31, 0x10 ; [ALU_PRU] |200| 
+	.dwpsn	file "pru_fw.c",line 178,column 15,is_stmt,isa 0
+        QBBC      ||$C$L14||, r31, 0x10 ; [ALU_PRU] |178| 
 ;* --------------------------------------------------------------------------*
-	.dwpsn	file "pru_fw.c",line 201,column 9,is_stmt,isa 0
-        AND       r14, r31, 0xff        ; [ALU_PRU] |201| 
-	.dwpsn	file "pru_fw.c",line 184,column 22,is_stmt,isa 0
-        SUB       r16.w0, r16.w0, 0x01  ; [ALU_PRU] |184| $O$L2,$O$L2
-	.dwpsn	file "pru_fw.c",line 201,column 9,is_stmt,isa 0
-        OR        r1, r1, r14           ; [ALU_PRU] |201| writeReg,writeReg
-	.dwpsn	file "pru_fw.c",line 203,column 9,is_stmt,isa 0
-        SBBO      &r1, r0, 0, 4         ; [ALU_PRU] |203| $O$U137,writeReg
-        ADD       r0, r0, 0x04          ; [ALU_PRU] |203| $O$U137,$O$U137
-	.dwpsn	file "pru_fw.c",line 184,column 22,is_stmt,isa 0
-        QBNE      ||$C$L6||, r16.w0, 0x00 ; [ALU_PRU] |184| $O$L2
+	.dwpsn	file "pru_fw.c",line 179,column 9,is_stmt,isa 0
+        LSL       r14, r31, 0x18        ; [ALU_PRU] |179| 
+	.dwpsn	file "pru_fw.c",line 161,column 22,is_stmt,isa 0
+        SUB       r16.w0, r16.w0, 0x01  ; [ALU_PRU] |161| $O$L2,$O$L2
+	.dwpsn	file "pru_fw.c",line 179,column 9,is_stmt,isa 0
+        OR        r1, r1, r14           ; [ALU_PRU] |179| writeReg,writeReg
+	.dwpsn	file "pru_fw.c",line 181,column 9,is_stmt,isa 0
+        SBBO      &r1, r0, 0, 4         ; [ALU_PRU] |181| $O$U139,writeReg
+        ADD       r0, r0, 0x04          ; [ALU_PRU] |181| $O$U139,$O$U139
+	.dwpsn	file "pru_fw.c",line 161,column 22,is_stmt,isa 0
+        QBNE      ||$C$L6||, r16.w0, 0x00 ; [ALU_PRU] |161| $O$L2
 ;* --------------------------------------------------------------------------*
-	.dwpsn	file "pru_fw.c",line 206,column 7,is_stmt,isa 0
-        MOV       r14, r5               ; [ALU_PRU] |206| base
-        ADD       r15, r2, 0            ; [ALU_PRU] |206| temp,temp
-        LDI       r16, 0x0500           ; [ALU_PRU] |206| 
+	.dwpsn	file "pru_fw.c",line 184,column 7,is_stmt,isa 0
+        MOV       r14, r5               ; [ALU_PRU] |184| base
+        ADD       r15, r2, 0            ; [ALU_PRU] |184| temp,temp
+        LDI       r16, 0x0500           ; [ALU_PRU] |184| 
 $C$DW$15	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$15, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$15, DW_AT_name("memcpy")
 	.dwattr $C$DW$15, DW_AT_TI_call
-        JAL       r3.w2, ||memcpy||     ; [ALU_PRU] |206| memcpy
-	.dwpsn	file "pru_fw.c",line 179,column 21,is_stmt,isa 0
-        SUB       r6.w0, r6.w0, 0x01    ; [ALU_PRU] |179| $O$L1,$O$L1
-	.dwpsn	file "pru_fw.c",line 209,column 7,is_stmt,isa 0
-        LDI       r0, 0x0500            ; [ALU_PRU] |209| 
-        ADD       r5, r5, r0            ; [ALU_PRU] |209| base,base
-	.dwpsn	file "pru_fw.c",line 179,column 21,is_stmt,isa 0
-        QBNE      ||$C$L5||, r6.w0, 0x00 ; [ALU_PRU] |179| $O$L1
+        JAL       r3.w2, ||memcpy||     ; [ALU_PRU] |184| memcpy
+	.dwpsn	file "pru_fw.c",line 156,column 21,is_stmt,isa 0
+        SUB       r6.w0, r6.w0, 0x01    ; [ALU_PRU] |156| $O$L1,$O$L1
+	.dwpsn	file "pru_fw.c",line 187,column 7,is_stmt,isa 0
+        LDI       r0, 0x0500            ; [ALU_PRU] |187| 
+        ADD       r5, r5, r0            ; [ALU_PRU] |187| base,base
+	.dwpsn	file "pru_fw.c",line 156,column 21,is_stmt,isa 0
+        QBNE      ||$C$L5||, r6.w0, 0x00 ; [ALU_PRU] |156| $O$L1
 ;* --------------------------------------------------------------------------*
-	.dwpsn	file "pru_fw.c",line 215,column 5,is_stmt,isa 0
-        LDI       r31, 0x0024           ; [ALU_PRU] |215| 
-	.dwpsn	file "pru_fw.c",line 157,column 9,is_stmt,isa 0
-        JMP       ||$C$L2||             ; [ALU_PRU] |157| 
+	.dwpsn	file "pru_fw.c",line 193,column 5,is_stmt,isa 0
+        LDI       r31, 0x0024           ; [ALU_PRU] |193| 
+	.dwpsn	file "pru_fw.c",line 133,column 9,is_stmt,isa 0
+        JMP       ||$C$L2||             ; [ALU_PRU] |133| 
 	.dwattr $C$DW$11, DW_AT_TI_end_file("pru_fw.c")
-	.dwattr $C$DW$11, DW_AT_TI_end_line(0xd9)
+	.dwattr $C$DW$11, DW_AT_TI_end_line(0xc3)
 	.dwattr $C$DW$11, DW_AT_TI_end_column(0x01)
 	.dwendentry
 	.dwendtag $C$DW$11
@@ -572,13 +572,13 @@ $C$DW$16	.dwtag  DW_TAG_subprogram, DW_AT_name("flash")
 	.dwattr $C$DW$16, DW_AT_TI_symbol_name("flash")
 	.dwattr $C$DW$16, DW_AT_external
 	.dwattr $C$DW$16, DW_AT_TI_begin_file("pru_fw.c")
-	.dwattr $C$DW$16, DW_AT_TI_begin_line(0xe4)
+	.dwattr $C$DW$16, DW_AT_TI_begin_line(0xce)
 	.dwattr $C$DW$16, DW_AT_TI_begin_column(0x06)
 	.dwattr $C$DW$16, DW_AT_decl_file("pru_fw.c")
-	.dwattr $C$DW$16, DW_AT_decl_line(0xe4)
+	.dwattr $C$DW$16, DW_AT_decl_line(0xce)
 	.dwattr $C$DW$16, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$16, DW_AT_TI_max_frame_size(0x00)
-	.dwpsn	file "pru_fw.c",line 229,column 1,is_stmt,address ||flash||,isa 0
+	.dwpsn	file "pru_fw.c",line 207,column 1,is_stmt,address ||flash||,isa 0
 
 	.dwfde $C$DW$CIE, ||flash||
 $C$DW$17	.dwtag  DW_TAG_formal_parameter, DW_AT_name("led")
@@ -605,55 +605,55 @@ $C$DW$18	.dwtag  DW_TAG_variable, DW_AT_name("led")
 ;* r16_0 assigned to $O$L1
 ;* r0_0  assigned to $O$U9
 	.dwcfi	cfa_offset, 0
-	.dwpsn	file "pru_fw.c",line 230,column 3,is_stmt,isa 0
-        QBGT      ||$C$L15||, r14.b0, 0x04 ; [ALU_PRU] |230| led
+	.dwpsn	file "pru_fw.c",line 208,column 3,is_stmt,isa 0
+        QBGT      ||$C$L15||, r14.b0, 0x04 ; [ALU_PRU] |208| led
 ;* --------------------------------------------------------------------------*
-	.dwpsn	file "pru_fw.c",line 231,column 5,is_stmt,isa 0
-        LDI       r14.b0, 0x03          ; [ALU_PRU] |231| led
+	.dwpsn	file "pru_fw.c",line 209,column 5,is_stmt,isa 0
+        LDI       r14.b0, 0x03          ; [ALU_PRU] |209| led
 ;* --------------------------------------------------------------------------*
 ||$C$L15||:    
         LDI       r0, ||LED||           ; [ALU_PRU] LED
         LSL       r1, r14.b0, 0x02      ; [ALU_PRU] led
-	.dwpsn	file "pru_fw.c",line 233,column 9,is_stmt,isa 0
-        LDI       r16.b0, 0x04          ; [ALU_PRU] |233| $O$L1
+	.dwpsn	file "pru_fw.c",line 211,column 9,is_stmt,isa 0
+        LDI       r16.b0, 0x04          ; [ALU_PRU] |211| $O$L1
         ADD       r0, r1, r0            ; [ALU_PRU] $O$U9
 ;* --------------------------------------------------------------------------*
 ;*   BEGIN LOOP ||$C$L16||
 ;*
-;*   Loop source line                : 233
-;*   Loop closing brace source line  : 239
+;*   Loop source line                : 211
+;*   Loop closing brace source line  : 217
 ;*   Known Minimum Trip Count        : 4
 ;*   Known Maximum Trip Count        : 4
 ;*   Known Max Trip Count Factor     : 4
 ;* --------------------------------------------------------------------------*
 ||$C$L16||:    
-	.dwpsn	file "pru_fw.c",line 235,column 5,is_stmt,isa 0
-        LBBO      &r15, r0, 0, 4        ; [ALU_PRU] |235| $O$U9
-        OR        r30, r30, r15         ; [ALU_PRU] |235| 
-	.dwpsn	file "pru_fw.c",line 236,column 5,is_stmt,isa 0
+	.dwpsn	file "pru_fw.c",line 213,column 5,is_stmt,isa 0
+        LBBO      &r15, r0, 0, 4        ; [ALU_PRU] |213| $O$U9
+        OR        r30, r30, r15         ; [ALU_PRU] |213| 
+	.dwpsn	file "pru_fw.c",line 214,column 5,is_stmt,isa 0
         .newblock
         LDI32    r14, 999999
 $1:     SUB      r14, r14, 1
-        QBNE     $1, r14, 0            ; [ALU_PRU] |236| 
-	.dwpsn	file "pru_fw.c",line 237,column 5,is_stmt,isa 0
-        LBBO      &r14, r0, 0, 4        ; [ALU_PRU] |237| $O$U9
-        NOT       r14, r14              ; [ALU_PRU] |237| 
-        AND       r30, r30, r14         ; [ALU_PRU] |237| 
-	.dwpsn	file "pru_fw.c",line 238,column 5,is_stmt,isa 0
+        QBNE     $1, r14, 0            ; [ALU_PRU] |214| 
+	.dwpsn	file "pru_fw.c",line 215,column 5,is_stmt,isa 0
+        LBBO      &r14, r0, 0, 4        ; [ALU_PRU] |215| $O$U9
+        NOT       r14, r14              ; [ALU_PRU] |215| 
+        AND       r30, r30, r14         ; [ALU_PRU] |215| 
+	.dwpsn	file "pru_fw.c",line 216,column 5,is_stmt,isa 0
         .newblock
         LDI32    r1, 999999
 $1:     SUB      r1, r1, 1
-        QBNE     $1, r1, 0             ; [ALU_PRU] |238| 
-	.dwpsn	file "pru_fw.c",line 233,column 9,is_stmt,isa 0
-        SUB       r16.b0, r16.b0, 0x01  ; [ALU_PRU] |233| $O$L1,$O$L1
-        QBNE      ||$C$L16||, r16.b0, 0x00 ; [ALU_PRU] |233| $O$L1
+        QBNE     $1, r1, 0             ; [ALU_PRU] |216| 
+	.dwpsn	file "pru_fw.c",line 211,column 9,is_stmt,isa 0
+        SUB       r16.b0, r16.b0, 0x01  ; [ALU_PRU] |211| $O$L1,$O$L1
+        QBNE      ||$C$L16||, r16.b0, 0x00 ; [ALU_PRU] |211| $O$L1
 ;* --------------------------------------------------------------------------*
 $C$DW$19	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$19, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$19, DW_AT_TI_return
         JMP       r3.w2                 ; [ALU_PRU] 
 	.dwattr $C$DW$16, DW_AT_TI_end_file("pru_fw.c")
-	.dwattr $C$DW$16, DW_AT_TI_end_line(0xf0)
+	.dwattr $C$DW$16, DW_AT_TI_end_line(0xda)
 	.dwattr $C$DW$16, DW_AT_TI_end_column(0x01)
 	.dwendentry
 	.dwendtag $C$DW$16
@@ -668,13 +668,13 @@ $C$DW$20	.dwtag  DW_TAG_subprogram, DW_AT_name("dance")
 	.dwattr $C$DW$20, DW_AT_TI_symbol_name("dance")
 	.dwattr $C$DW$20, DW_AT_external
 	.dwattr $C$DW$20, DW_AT_TI_begin_file("pru_fw.c")
-	.dwattr $C$DW$20, DW_AT_TI_begin_line(0xf3)
+	.dwattr $C$DW$20, DW_AT_TI_begin_line(0xdd)
 	.dwattr $C$DW$20, DW_AT_TI_begin_column(0x06)
 	.dwattr $C$DW$20, DW_AT_decl_file("pru_fw.c")
-	.dwattr $C$DW$20, DW_AT_decl_line(0xf3)
+	.dwattr $C$DW$20, DW_AT_decl_line(0xdd)
 	.dwattr $C$DW$20, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$20, DW_AT_TI_max_frame_size(0x00)
-	.dwpsn	file "pru_fw.c",line 244,column 1,is_stmt,address ||dance||,isa 0
+	.dwpsn	file "pru_fw.c",line 222,column 1,is_stmt,address ||dance||,isa 0
 
 	.dwfde $C$DW$CIE, ||dance||
 
@@ -693,40 +693,40 @@ $C$DW$20	.dwtag  DW_TAG_subprogram, DW_AT_name("dance")
         MOV       r3.w0, r3.w2          ; [ALU_PRU] 
 	.dwcfi	save_reg_to_reg, 14, 12
 	.dwcfi	save_reg_to_reg, 15, 13
-	.dwpsn	file "pru_fw.c",line 245,column 3,is_stmt,isa 0
-        LDI       r14.b0, 0x00          ; [ALU_PRU] |245| 
+	.dwpsn	file "pru_fw.c",line 223,column 3,is_stmt,isa 0
+        LDI       r14.b0, 0x00          ; [ALU_PRU] |223| 
 $C$DW$21	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$21, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$21, DW_AT_name("flash")
 	.dwattr $C$DW$21, DW_AT_TI_call
-        JAL       r3.w2, ||flash||      ; [ALU_PRU] |245| flash
-	.dwpsn	file "pru_fw.c",line 246,column 3,is_stmt,isa 0
-        LDI       r14.b0, 0x01          ; [ALU_PRU] |246| 
+        JAL       r3.w2, ||flash||      ; [ALU_PRU] |223| flash
+	.dwpsn	file "pru_fw.c",line 224,column 3,is_stmt,isa 0
+        LDI       r14.b0, 0x01          ; [ALU_PRU] |224| 
 $C$DW$22	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$22, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$22, DW_AT_name("flash")
 	.dwattr $C$DW$22, DW_AT_TI_call
-        JAL       r3.w2, ||flash||      ; [ALU_PRU] |246| flash
-	.dwpsn	file "pru_fw.c",line 247,column 3,is_stmt,isa 0
-        LDI       r14.b0, 0x02          ; [ALU_PRU] |247| 
+        JAL       r3.w2, ||flash||      ; [ALU_PRU] |224| flash
+	.dwpsn	file "pru_fw.c",line 225,column 3,is_stmt,isa 0
+        LDI       r14.b0, 0x02          ; [ALU_PRU] |225| 
 $C$DW$23	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$23, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$23, DW_AT_name("flash")
 	.dwattr $C$DW$23, DW_AT_TI_call
-        JAL       r3.w2, ||flash||      ; [ALU_PRU] |247| flash
-	.dwpsn	file "pru_fw.c",line 248,column 3,is_stmt,isa 0
-        LDI       r14.b0, 0x03          ; [ALU_PRU] |248| 
+        JAL       r3.w2, ||flash||      ; [ALU_PRU] |225| flash
+	.dwpsn	file "pru_fw.c",line 226,column 3,is_stmt,isa 0
+        LDI       r14.b0, 0x03          ; [ALU_PRU] |226| 
 $C$DW$24	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$24, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$24, DW_AT_name("flash")
 	.dwattr $C$DW$24, DW_AT_TI_call
-        JAL       r3.w2, ||flash||      ; [ALU_PRU] |248| flash
+        JAL       r3.w2, ||flash||      ; [ALU_PRU] |226| flash
 $C$DW$25	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$25, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$25, DW_AT_TI_return
         JMP       r3.w0                 ; [ALU_PRU] 
 	.dwattr $C$DW$20, DW_AT_TI_end_file("pru_fw.c")
-	.dwattr $C$DW$20, DW_AT_TI_end_line(0xf9)
+	.dwattr $C$DW$20, DW_AT_TI_end_line(0xe3)
 	.dwattr $C$DW$20, DW_AT_TI_end_column(0x01)
 	.dwendentry
 	.dwendtag $C$DW$20
@@ -741,13 +741,13 @@ $C$DW$26	.dwtag  DW_TAG_subprogram, DW_AT_name("clear")
 	.dwattr $C$DW$26, DW_AT_TI_symbol_name("clear")
 	.dwattr $C$DW$26, DW_AT_external
 	.dwattr $C$DW$26, DW_AT_TI_begin_file("pru_fw.c")
-	.dwattr $C$DW$26, DW_AT_TI_begin_line(0xdc)
+	.dwattr $C$DW$26, DW_AT_TI_begin_line(0xc6)
 	.dwattr $C$DW$26, DW_AT_TI_begin_column(0x06)
 	.dwattr $C$DW$26, DW_AT_decl_file("pru_fw.c")
-	.dwattr $C$DW$26, DW_AT_decl_line(0xdc)
+	.dwattr $C$DW$26, DW_AT_decl_line(0xc6)
 	.dwattr $C$DW$26, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$26, DW_AT_TI_max_frame_size(0x00)
-	.dwpsn	file "pru_fw.c",line 221,column 1,is_stmt,address ||clear||,isa 0
+	.dwpsn	file "pru_fw.c",line 199,column 1,is_stmt,address ||clear||,isa 0
 
 	.dwfde $C$DW$CIE, ||clear||
 
@@ -769,20 +769,20 @@ $C$DW$26	.dwtag  DW_TAG_subprogram, DW_AT_name("clear")
 ;* --------------------------------------------------------------------------*
 ;*   BEGIN LOOP ||$C$L17||
 ;*
-;*   Loop source line                : 223
-;*   Loop closing brace source line  : 224
+;*   Loop source line                : 201
+;*   Loop closing brace source line  : 202
 ;*   Known Minimum Trip Count        : 4
 ;*   Known Maximum Trip Count        : 4
 ;*   Known Max Trip Count Factor     : 4
 ;* --------------------------------------------------------------------------*
 ||$C$L17||:    
-	.dwpsn	file "pru_fw.c",line 224,column 5,is_stmt,isa 0
-        LBBO      &r1, r0, 0, 4         ; [ALU_PRU] |224| $O$U5
-        NOT       r1, r1                ; [ALU_PRU] |224| 
-        AND       r30, r30, r1          ; [ALU_PRU] |224| 
-	.dwpsn	file "pru_fw.c",line 223,column 9,is_stmt,isa 0
-        ADD       r0, r0, 0x04          ; [ALU_PRU] |223| $O$U5,$O$U5
-        ; END LOOP ; [] |223| 
+	.dwpsn	file "pru_fw.c",line 202,column 5,is_stmt,isa 0
+        LBBO      &r1, r0, 0, 4         ; [ALU_PRU] |202| $O$U5
+        NOT       r1, r1                ; [ALU_PRU] |202| 
+        AND       r30, r30, r1          ; [ALU_PRU] |202| 
+	.dwpsn	file "pru_fw.c",line 201,column 9,is_stmt,isa 0
+        ADD       r0, r0, 0x04          ; [ALU_PRU] |201| $O$U5,$O$U5
+        ; END LOOP ; [] |201| 
 ;* --------------------------------------------------------------------------*
 ||$C$L18||:    
 $C$DW$27	.dwtag  DW_TAG_TI_branch
@@ -790,7 +790,7 @@ $C$DW$27	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$27, DW_AT_TI_return
         JMP       r3.w2                 ; [ALU_PRU] 
 	.dwattr $C$DW$26, DW_AT_TI_end_file("pru_fw.c")
-	.dwattr $C$DW$26, DW_AT_TI_end_line(0xe1)
+	.dwattr $C$DW$26, DW_AT_TI_end_line(0xcb)
 	.dwattr $C$DW$26, DW_AT_TI_end_column(0x01)
 	.dwendentry
 	.dwendtag $C$DW$26
@@ -7755,17 +7755,17 @@ $C$DW$T$10	.dwtag  DW_TAG_base_type
 	.dwattr $C$DW$T$10, DW_AT_encoding(DW_ATE_signed)
 	.dwattr $C$DW$T$10, DW_AT_name("int")
 	.dwattr $C$DW$T$10, DW_AT_byte_size(0x04)
-$C$DW$T$291	.dwtag  DW_TAG_pointer_type
-	.dwattr $C$DW$T$291, DW_AT_type(*$C$DW$T$10)
-	.dwattr $C$DW$T$291, DW_AT_address_class(0x20)
+$C$DW$T$289	.dwtag  DW_TAG_pointer_type
+	.dwattr $C$DW$T$289, DW_AT_type(*$C$DW$T$10)
+	.dwattr $C$DW$T$289, DW_AT_address_class(0x20)
 
-$C$DW$T$292	.dwtag  DW_TAG_array_type
-	.dwattr $C$DW$T$292, DW_AT_type(*$C$DW$T$10)
-	.dwattr $C$DW$T$292, DW_AT_language(DW_LANG_C)
-	.dwattr $C$DW$T$292, DW_AT_byte_size(0x1400)
+$C$DW$T$291	.dwtag  DW_TAG_array_type
+	.dwattr $C$DW$T$291, DW_AT_type(*$C$DW$T$10)
+	.dwattr $C$DW$T$291, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$291, DW_AT_byte_size(0x1400)
 $C$DW$604	.dwtag  DW_TAG_subrange_type
 	.dwattr $C$DW$604, DW_AT_upper_bound(0x4ff)
-	.dwendtag $C$DW$T$292
+	.dwendtag $C$DW$T$291
 
 $C$DW$T$11	.dwtag  DW_TAG_base_type
 	.dwattr $C$DW$T$11, DW_AT_encoding(DW_ATE_unsigned)
@@ -7861,13 +7861,13 @@ $C$DW$613	.dwtag  DW_TAG_subrange_type
 $C$DW$T$107	.dwtag  DW_TAG_volatile_type
 	.dwattr $C$DW$T$107, DW_AT_type(*$C$DW$T$32)
 
-$C$DW$T$296	.dwtag  DW_TAG_array_type
-	.dwattr $C$DW$T$296, DW_AT_type(*$C$DW$T$107)
-	.dwattr $C$DW$T$296, DW_AT_language(DW_LANG_C)
-	.dwattr $C$DW$T$296, DW_AT_byte_size(0x10)
+$C$DW$T$295	.dwtag  DW_TAG_array_type
+	.dwattr $C$DW$T$295, DW_AT_type(*$C$DW$T$107)
+	.dwattr $C$DW$T$295, DW_AT_language(DW_LANG_C)
+	.dwattr $C$DW$T$295, DW_AT_byte_size(0x10)
 $C$DW$614	.dwtag  DW_TAG_subrange_type
 	.dwattr $C$DW$614, DW_AT_upper_bound(0x03)
-	.dwendtag $C$DW$T$296
+	.dwendtag $C$DW$T$295
 
 $C$DW$T$12	.dwtag  DW_TAG_base_type
 	.dwattr $C$DW$T$12, DW_AT_encoding(DW_ATE_signed)

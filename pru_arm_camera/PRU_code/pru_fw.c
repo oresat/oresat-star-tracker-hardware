@@ -6,22 +6,8 @@
 #include "resource_table_empty.h"
 #include <pru_ctrl.h>
 #define DELAY 100000000
-#define MASK_16_23 0xFF0000
 #define MASK_16_24 0x1FF0000
-
-//#define MEMLOC 0xa0000000
-#define SHARED 0x00010000
-#define SIZE 1000
-#define ARM_2_PRU 0x00000001
-#define PRU_2_ARM 0x00000002
-#define END	  0x08
-#define BUF 0x00000004
-#define PRU_BASE_ADDR 0x9c800000
-#define STATUS 0x1000
-#define STATUS_MEM (PRU_BASE_ADDR + STATUS)
-#define BUF0  (PRU_BASE_ADDR + 0x00002000)
-#define BUF1  (PRU_BASE_ADDR + 0x00003000)
-
+#define SHARED 0x00010000 //offset of PRU shared mem
 #define ROWS 960  //rows per image
 #define COLS 1280 //pixels per row
 #define CELLS COLS/4 //a cell is a 32 bit word hold 4 byte sized pixels //320
@@ -111,9 +97,6 @@ void main(void)
   //enable host interrupts 1-9
   CT_INTC.HIER_bit.EN_HINT = 0x3FE;
 
-  //enable system events 16-23
-  //CT_INTC.ESR0_bit.EN_SET_31_0 = MASK_16_23;
-
   //enable system events 16-24
   CT_INTC.ESR0_bit.EN_SET_31_0 = MASK_16_24;
 
@@ -121,17 +104,12 @@ void main(void)
   CT_INTC.GER_bit.EN_HINT_ANY = 0x01; 
 
   //====END PRU INTC CONFIG====
-
   /*
      __R31 = 0x24; //trigger INTC 20
      __R31 = 0x25; //trigger INTC 21
      __R31 = 0x26; //trigger INTC 22
      __R31 = 0x27; //trigger INTC 23
      */
-
-  //approx 1 second delay
-  //volatile int i;
-  //for(i = 0 ; i < 10000000 ; i++);
 
   /*
    * Basic handshake with kernel driver. Kernel driver allocated memory region.
@@ -141,13 +119,11 @@ void main(void)
    * key again, and finally writes it back to the next memory location. After
    * this last step the PRU exits this loop.
    */
-  volatile int* shared; //location of PRU shared memory
-  shared = (volatile int*)SHARED;   
-  int* base; //base address for the actual image transfer
 
   //manually trigger r31:31 set bit 24 in PRU SRSR0 to trigger event 24
   //CT_INTC.SRSR0_bit.RAW_STS_31_0 = 0x1000000; 
 
+  int* base; //base address for the actual image transfer
   int addr;
   int writeReg = 0x00;
   int line;
@@ -157,17 +133,18 @@ void main(void)
   while(1)
   {
     //wait for signal from ARM, R31 bit 31 will go high
-    while((__R31 & 0x80000000) < 1 )
-      __delay_cycles(1); //delay is needed between checking memory??? TODO dont think I need this
-
+    while((__R31 & 0x80000000) < 1 ) {
+      __delay_cycles(1); //delay is needed between checking memory??? TODO I get all zeros when this is removed??
+    }
     //clear all system events
     CT_INTC.SECR0_bit.ENA_STS_31_0 = 0xFFFFFFFF;
 
-    //TEMPORARY!!
-    //__R31 = 0x24; //trigger INTC 20
-
-    //read from shared memory location
-    base = *shared; //read value in shared memory //
+    /*
+     * The kernel will write the address of the allocated memory location into
+     * a known shared memory location. Here we read that address from that
+     * location.
+     */
+    base = *(int**)SHARED; 
 
     //__R30 |= 0x8000; //set gpio 15
     while((__R31 & VSYNC) > 0); //wait for VSYNC to go low
@@ -187,18 +164,19 @@ void main(void)
         //not using for loop here for speed!
         while((__R31 & HSYNC) == 0); //wait for HSYNC to go high
 
+        //package then into a little endian integer
         while(__R31 & 0x00010000); //wait for R31[16] to go low 
         while((__R31 & 0x00010000) == 0); //wait for R31[16] to go high
-        writeReg = (__R31 & 0x000000ff) << 24; //I am assigning here instead of ORing in order to clear writeReg
-        while(__R31 & 0x00010000); 
-        while((__R31 & 0x00010000) == 0); 
-        writeReg |= (__R31 & 0x000000ff) << 16; 
+        writeReg = (__R31 & 0x000000ff); //I am assigning here instead of ORing in order to clear writeReg
         while(__R31 & 0x00010000); 
         while((__R31 & 0x00010000) == 0); 
         writeReg |= (__R31 & 0x000000ff) << 8; 
         while(__R31 & 0x00010000); 
         while((__R31 & 0x00010000) == 0); 
-        writeReg |= (__R31 & 0x000000ff); 
+        writeReg |= (__R31 & 0x000000ff) << 16; 
+        while(__R31 & 0x00010000); //wait for R31[16] to go low 
+        while((__R31 & 0x00010000) == 0); 
+        writeReg |= (__R31 & 0x000000ff) << 24; 
 
         temp[pos++] = writeReg;
       }

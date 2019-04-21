@@ -1,13 +1,3 @@
-/**
- * @file   testebbchar.c
- * @author Derek Molloy
- * @date   7 April 2015
- * @version 0.1
- * @brief  A Linux user space program that communicates with the ebbchar.c LKM. It passes a
- * string to the LKM and reads the response from the LKM. For this example to work the device
- * must be called /dev/ebbchar.
- * @see http://www.derekmolloy.ie/ for a full description and follow-up descriptions.
- */
 #include <stdio.h>
 #include <stdlib.h>
 #include <errno.h>
@@ -16,59 +6,84 @@
 #include <unistd.h>
 #include "camera-i2c.h"
 #include "regs.h"
+#include <sys/time.h>
 
-#define BUFFER_LENGTH 256               ///< The buffer length (crude but fine)
-static char receive[BUFFER_LENGTH];     ///< The receive buffer from the LKM
+#define ROWS 960
+#define COLS 1280
+#define PIXELS ROWS * COLS
+#define IMGFILE "capture.pgm"
+
 int initCamera(void);
 
 int main(){
   int ret, fd;
 
+  //program camera via i2c
   ret = initCamera();
   if(ret < 1) {
     printf("error programming camera, exiting...\n");
     return ret;
   }
 
-  char stringToSend[BUFFER_LENGTH];
+  struct timeval before, after;
+
   printf("Starting device test code example...\n");
   fd = open("/dev/ebbchar", O_RDWR);             // Open the device with read/write access
   if (fd < 0){
     perror("Failed to open the device...");
     return errno;
   }
-  /*
-     printf("Type in a short string to send to the kernel module:\n");
-     scanf("%[^\n]%*c", stringToSend);                // Read in a string (with spaces)
-     printf("Writing message to the device [%s].\n", stringToSend);
-     ret = write(fd, stringToSend, strlen(stringToSend)); // Send the string to the LKM
-     if (ret < 0){
-     perror("Failed to write the message to the device.");
-     return errno;
-     }
-
-     printf("Press ENTER to read back from the device...\n");
-     getchar();
-     */
 
 
-#define SIZE 1<<21
-  char ptr_str[SIZE];
+  char buf[PIXELS];
+
+  gettimeofday(&before , NULL);
+
   printf("Reading from the device...\n");
-  ret = read(fd, ptr_str, SIZE);        // Read the response from the LKM
+  ret = read(fd, buf, PIXELS);        // Read the response from the LKM
   if (ret < 0){
     perror("Failed to read the message from the device.");
     return errno;
   }
+  gettimeofday(&after , NULL);
+  long uSecs = after.tv_usec - before.tv_usec;
+
+  if(uSecs < 0) //occaisionally this number is 1000000 off??
+    uSecs += 1000000;
 
 
-     for(int i = 0 ; i < SIZE ; i += 1<<11) {
-     printf("[%d] = %d\n", i, ptr_str[i]);
-     }
-     
+  /*
+  for(int i = 0 ; i < PIXELS ; i += 1<<11) {
+    printf("[%d] = %d\n", i, buf[i]);
+  }*/
+
+  printf("Elapsed time: %ld uSec\n", uSecs);
 
 
-  printf("End of the program\n");
+  printf("Capture complete\n");
+
+  printf("Writing to '%s'\n", IMGFILE);
+  FILE* pgmimg; 
+  pgmimg = fopen(IMGFILE, "wb"); 
+
+  // Write Magic Number to the File 
+  fprintf(pgmimg, "P2\n");  
+
+  // Write Width and Height 
+  fprintf(pgmimg, "%d %d\n", COLS, ROWS);  
+
+  // Writing the maximum gray value 
+  fprintf(pgmimg, "255\n");  
+  for (int i = 0; i < ROWS; i++) { 
+    for (int j = 0; j < COLS; j++) { 
+      // Write the gray values in the 2D array to the file 
+      fprintf(pgmimg, "%d ", (uint8_t)(buf[(i*COLS)+j])); 
+      //fprintf(pgmimg, "%d", (uint8_t)i); 
+    }
+    fprintf(pgmimg, "\n"); 
+  }   
+  fclose(pgmimg); 
+
   return 0;
 }
 
