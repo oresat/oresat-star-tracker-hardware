@@ -8,8 +8,8 @@
 #include <linux/dma-mapping.h>
 #include <linux/interrupt.h>
 #include <linux/platform_device.h>
-#define DEVICE_NAME "ebbchar"    ///< The device will appear at /dev/ebbchar using this value
-#define CLASS_NAME  "ebb"        ///< The device class -- this is a character device driver
+#define DEVICE_NAME "prucam"    ///< The device will appear at /dev/prucam using this value
+#define CLASS_NAME  "pru"        ///< The device class -- this is a character device driver
 #define ROWS 960
 #define COLS 1280
 #define SIZE ROWS*COLS
@@ -26,8 +26,8 @@ MODULE_DESCRIPTION("write this");  ///< The description -- see modinfo
 MODULE_VERSION("0.1");            ///< A version number to inform users
 
 static int    majorNumber;                  ///< Stores the device number -- determined automatically
-static struct class*  ebbcharClass  = NULL; ///< The device-driver class struct pointer
-static struct device* ebbcharDevice = NULL; ///< The device-driver device struct pointer
+static struct class*  prucamClass  = NULL; ///< The device-driver class struct pointer
+static struct device* prucamDevice = NULL; ///< The device-driver device struct pointer
 
 // The prototype functions for the character driver -- must come before the struct definition
 static int     dev_open(struct inode *, struct file *);
@@ -96,18 +96,18 @@ struct irq_info irqs[8] = {
 
 int pru_probe(struct platform_device* dev)
 {
-  printk(KERN_INFO "EBBChar: probing %s\n", dev->name);
+  printk(KERN_INFO "prucam: probing %s\n", dev->name);
 
   for(int i = 0 ; i < NUM_IRQS ; i++)
   {
     int irq = platform_get_irq_byname(dev, irqs[i].name);
-    printk(KERN_INFO "EBBChar: platform_get_irq(%s) returned: %d\n", irqs[i].name, irq);
+    printk(KERN_INFO "prucam: platform_get_irq(%s) returned: %d\n", irqs[i].name, irq);
     //if not zero, return errno
     if(irq < 0)
       return irq;
 
     int ret = request_irq(irq, (irq_handler_t)irqhandler, IRQF_TRIGGER_RISING, "prudev", NULL);
-    printk(KERN_INFO "EBBChar: request_irq(%d) returned: %d\n", irq, ret);
+    printk(KERN_INFO "prucam: request_irq(%d) returned: %d\n", irq, ret);
     if(ret < 0)
       return ret;
 
@@ -129,25 +129,25 @@ int pru_rm(struct platform_device* dev)
  *  time and that it can be discarded and its memory freed up after that point.
  *  @return returns 0 if successful
  */
-static int __init ebbchar_init(void){
-  printk(KERN_INFO "EBBChar: Initializing the EBBChar v1\n");
+static int __init prucam_init(void){
+  printk(KERN_INFO "prucam: Initializing the prucam v1\n");
 
   // Try to dynamically allocate a major number for the device -- more difficult but worth it
   majorNumber = register_chrdev(0, DEVICE_NAME, &fops);
   if (majorNumber<0){
-    printk(KERN_ALERT "EBBChar failed to register a major number\n");
+    printk(KERN_ALERT "prucam failed to register a major number\n");
     return majorNumber;
   }
-  printk(KERN_INFO "EBBChar: registered correctly with major number %d\n", majorNumber);
+  printk(KERN_INFO "prucam: registered correctly with major number %d\n", majorNumber);
 
   // Register the device class
-  ebbcharClass = class_create(THIS_MODULE, CLASS_NAME);
-  if (IS_ERR(ebbcharClass)){                // Check for error and clean up if there is
+  prucamClass = class_create(THIS_MODULE, CLASS_NAME);
+  if (IS_ERR(prucamClass)){                // Check for error and clean up if there is
     unregister_chrdev(majorNumber, DEVICE_NAME);
     printk(KERN_ALERT "Failed to register device class\n");
-    return PTR_ERR(ebbcharClass);          // Correct way to return an error on a pointer
+    return PTR_ERR(prucamClass);          // Correct way to return an error on a pointer
   }
-  printk(KERN_INFO "EBBChar: device class registered correctly\n");
+  printk(KERN_INFO "prucam: device class registered correctly\n");
 
   /* Register the platform driver. This causes the system the scan the platform
    * bus for devices that match this driver. As defined in the device-tree,
@@ -156,35 +156,35 @@ static int __init ebbchar_init(void){
    * request the interrupt line associated with that device
    */
   int regDrvr = platform_driver_register(&prudrvr);
-  printk(KERN_INFO "EBBChar: platform driver register returned: %d\n", regDrvr);
+  printk(KERN_INFO "prucam: platform driver register returned: %d\n", regDrvr);
 
   //set interrupt to not triggered yet
   int_triggered = 0;
 
   // Register the device driver
-  ebbcharDevice = device_create(ebbcharClass, NULL, MKDEV(majorNumber, 0), NULL, DEVICE_NAME);
-  if (IS_ERR(ebbcharDevice)){               // Clean up if there is an error
-    class_destroy(ebbcharClass);           // Repeated code but the alternative is goto statements
+  prucamDevice = device_create(prucamClass, NULL, MKDEV(majorNumber, 0), NULL, DEVICE_NAME);
+  if (IS_ERR(prucamDevice)){               // Clean up if there is an error
+    class_destroy(prucamClass);           // Repeated code but the alternative is goto statements
     unregister_chrdev(majorNumber, DEVICE_NAME);
     printk(KERN_ALERT "Failed to create the device\n");
-    return PTR_ERR(ebbcharDevice);
+    return PTR_ERR(prucamDevice);
   }
-  printk(KERN_INFO "EBBChar: device class created correctly\n"); // Made it! device was initialized
+  printk(KERN_INFO "prucam: device class created correctly\n"); // Made it! device was initialized
   return 0;
 }
 
-static void __exit ebbchar_exit(void){
+static void __exit prucam_exit(void){
   //unregister platform driver
   platform_driver_unregister(&prudrvr);
 
   //free irqs
   free_irqs();
 
-  device_destroy(ebbcharClass, MKDEV(majorNumber, 0));     // remove the device
-  class_unregister(ebbcharClass);                          // unregister the device class
-  class_destroy(ebbcharClass);                             // remove the device class
+  device_destroy(prucamClass, MKDEV(majorNumber, 0));     // remove the device
+  class_unregister(prucamClass);                          // unregister the device class
+  class_destroy(prucamClass);                             // remove the device class
   unregister_chrdev(majorNumber, DEVICE_NAME);             // unregister the major number
-  printk(KERN_INFO "EBBChar: Goodbye from the LKM!\n");
+  printk(KERN_INFO "prucam: Goodbye from the LKM!\n");
 }
 
 static void free_irqs(void){
@@ -196,7 +196,7 @@ static void free_irqs(void){
 static int dev_open(struct inode *inodep, struct file *filep){
   int ret = 0; //return value
   //set DMA mask
-  ret = dma_set_coherent_mask(ebbcharDevice, 0xffffffff);
+  ret = dma_set_coherent_mask(prucamDevice, 0xffffffff);
   if(ret != 0)
   {
     printk(KERN_INFO "Failed to set DMA mask : error %d\n", ret);
@@ -208,17 +208,17 @@ static int dev_open(struct inode *inodep, struct file *filep){
    * I am unsure what the ideal flags for this are, but GFP_KERNEL seems to
    * work
    */
-  cpu_addr = dma_alloc_coherent(ebbcharDevice, SIZE, &dma_handle, GFP_KERNEL);
+  cpu_addr = dma_alloc_coherent(prucamDevice, SIZE, &dma_handle, GFP_KERNEL);
   if(cpu_addr == NULL)
   {
     printk(KERN_INFO "Failed to allocate memory\n");
     return -1;
   }
 
-  printk(KERN_INFO "Virtual Address: %x\n", (int)cpu_addr);
+  printk(KERN_INFO "prucam: virtual Address: %x\n", (int)cpu_addr);
 
   physAddr = (int*)dma_handle;
-  printk(KERN_INFO "Physical Address: %x\n", (int)physAddr);
+  printk(KERN_INFO "prucam: physical Address: %x\n", (int)physAddr);
   int_triggered = 0;
 
   return 0;
@@ -281,7 +281,7 @@ static ssize_t dev_read(struct file *filep, char *buffer, size_t len, loff_t *of
 
   int_triggered = 0;
 
-  printk(KERN_INFO "Interrupt Triggered!\n");
+  printk(KERN_INFO "prucam: Interrupt Triggered!\n");
 
   char* physBase;
   physBase = (char*)cpu_addr;
@@ -297,7 +297,7 @@ static ssize_t dev_read(struct file *filep, char *buffer, size_t len, loff_t *of
 
 static irq_handler_t irqhandler(unsigned int irqN, void *dev_id, struct pt_regs *regs)
 {
-  printk(KERN_INFO "IRQ_HANDLER: %d\n", irqN); //TODO get rid of this
+  printk(KERN_INFO "prucam: IRQ_HANDLER: %d\n", irqN); //TODO get rid of this
 
   //signal that interrupt has been triggered
   int_triggered = 1;
@@ -311,10 +311,10 @@ static irq_handler_t irqhandler(unsigned int irqN, void *dev_id, struct pt_regs 
  *  @param filep A pointer to a file object (defined in linux/fs.h)
  */
 static int dev_release(struct inode *inodep, struct file *filep){
-  dma_free_coherent(ebbcharDevice, SIZE, cpu_addr, dma_handle);
-  printk(KERN_INFO "Freed %d bytes\n", SIZE); 
+  dma_free_coherent(prucamDevice, SIZE, cpu_addr, dma_handle);
+  printk(KERN_INFO "prucam: Freed %d bytes\n", SIZE); 
 
-  printk(KERN_INFO "EBBChar: Device successfully closed\n");
+  printk(KERN_INFO "prucam: Device successfully closed\n");
   return 0;
 }
 
@@ -322,5 +322,5 @@ static int dev_release(struct inode *inodep, struct file *filep){
  *  identify the initialization function at insertion time and the cleanup function (as
  *  listed above)
  */
-module_init(ebbchar_init);
-module_exit(ebbchar_exit);
+module_init(prucam_init);
+module_exit(prucam_exit);

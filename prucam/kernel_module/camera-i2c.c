@@ -1,4 +1,8 @@
 #include "camera-i2c.h"
+#include <errno.h>
+#include <string.h>
+int file_i2c;
+extern int errno;
 
 //char *filename = (char *)"/dev/i2c-2";
 //int file_i2c;
@@ -23,6 +27,13 @@ int writeRegs(camReg *regs, int size)
     return 1;
   }
 
+  if ((file_i2c = open(FILENAME, O_RDWR)) < 0)
+  {
+    //ERROR HANDLING: you can check errno to see what went wrong
+    printf("Failed to open the i2c bus");
+    return 1;
+  }
+
   //get length of array TODO I wish there was a better way to do this
   int len = size / sizeof(regs[0]);
 
@@ -32,12 +43,21 @@ int writeRegs(camReg *regs, int size)
   for(int i = 0 ; i < len ; i++)
   {
     int err = i2cWrite(regs[i].reg, regs[i].val);
-    if (err > 0)
+    if (err < 0)
     {
       printf("ERROR: i2cWrite() returned error code: %d\n", err);
       printf("reg = 0x%04x, val = 0x%04x\n", regs[i].reg, regs[i].val);
-      ret = err;
+
+      //programming the reset reg(0x301A) returns NAK, so ignore that
+      //sometimes programming sequencer RAM(0x3086) returns NAK, but the sensor
+      //is still OK. TODO Ignore this for now, but come back to it.
+      if(regs[i].reg != 0x3086 && regs[i].reg != 0x301a)
+        return err;
     }
+  }
+
+  if(close(file_i2c)){
+    printf("file close error: %d\n");
   }
 
   return ret;
@@ -105,7 +125,6 @@ int i2cDump()
 //TODO Write header, handle errors
 int i2cWrite(uint16_t reg, uint16_t val)
 {
-  int file_i2c;
   //reg == 0 means delay
   if(reg == 0)
   {
@@ -113,22 +132,8 @@ int i2cWrite(uint16_t reg, uint16_t val)
     sleep(.001*val);
     return 0;
   }
-  if ((file_i2c = open(FILENAME, O_RDWR)) < 0)
-  {
-    //ERROR HANDLING: you can check errno to see what went wrong
-    printf("Failed to open the i2c bus");
-    return 1;
-  }
 
-  //acquire i2c bus
   int addr = 0x10; //<<<<<The I2C address of the slave
-  if (ioctl(file_i2c, I2C_SLAVE, addr) < 0)
-  {
-    printf("Failed to acquire bus access and/or talk to slave.\n");
-    //ERROR HANDLING; you can check errno to see what went wrong
-    return 1;
-  }
-
   struct i2c_rdwr_ioctl_data msgset;
   struct i2c_msg iomsg[2];
   uint8_t r[4];
@@ -149,14 +154,22 @@ int i2cWrite(uint16_t reg, uint16_t val)
   msgset.msgs = iomsg;
   msgset.nmsgs = 1;
 
+  //acquire i2c bus
+  rc = ioctl(file_i2c, I2C_SLAVE, addr);
+  if (rc < 0)
+  {
+    printf("Failed to acquire bus access and/or talk to slave. Error code: %d\n", rc);
+    //ERROR HANDLING; you can check errno to see what went wrong
+    return rc;
+  }
+
   rc = ioctl(file_i2c, I2C_RDWR, &msgset);
   if (rc < 0)
   {
-    printf("ioctl error return code %d \n", rc);
-    return 1;
+    printf("ioctl error return code %d: %s \n", rc, strerror(errno));
+    return rc;
   }
 
-  //printf("Finished Write\n");
   return 0;
 }
 

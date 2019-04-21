@@ -12,8 +12,11 @@
 #define COLS 1280 //pixels per row
 #define CELLS COLS/4 //a cell is a 32 bit word hold 4 byte sized pixels //320
 
+//PRU R31 bit masks
+#define CLK 0x00010000
 #define VSYNC 0x00008000
 #define HSYNC 0x00004000
+#define BIT31 0x80000000
 
 /*
  * TODO
@@ -45,8 +48,11 @@ void main(void)
   int col;
 
   //WTF this should only have to be COLS, but when I make it that size, parts
-  //get overwritten by something else.
-  char buf[COLS * 2];
+  //get overwritten by something else. However, if I malloc that same amount it
+  //works fine. TODO when I figure out how to exit this loop, free this memory
+  //char buf[COLS*2];
+  char* buf; 
+  buf = malloc(COLS);
 
   while(1)
   {
@@ -55,7 +61,7 @@ void main(void)
     __delay_cycles(1);
 
     //wait for signal from ARM, R31 bit 31 will go high
-    while((__R31 & 0x80000000) == 0 );
+    while((__R31 & BIT31) == 0 );
 
     //clear all system events
     CT_INTC.SECR0_bit.ENA_STS_31_0 = 0xFFFFFFFF;
@@ -65,7 +71,7 @@ void main(void)
     // location.
     base = *(volatile int**)SHARED; 
 
-    while((__R31 & VSYNC) > 0); //wait for VSYNC to go low
+    while(__R31 & VSYNC); //wait for VSYNC to go low
     while((__R31 & VSYNC) == 0); //wait for VSYNC to go high
 
     for(line = 0 ; line < ROWS ; line++)
@@ -73,14 +79,16 @@ void main(void)
       while((__R31 & HSYNC) == 0); //wait for HSYNC to go high
 
       //loop through every pixel in row
-      for(col = 0 ; col < COLS ; ++col)
+      for(col = 0 ; col < COLS ; col++)
       {
-        while(__R31 & 0x00010000); //wait for R31[16] to go low 
-        while((__R31 & 0x00010000) == 0); //wait for R31[16] to go high
+        while((__R31 & CLK) == 0); //wait for R31[16] to go high
 
-        //write value from GPIO(R31) to buf
-        buf[col] = (__R31 & 0x000000ff); 
+        //write LSB value from GPIO(R31) to buf
+        buf[col] = __R31;
+
+        while(__R31 & CLK); //wait for R31[16] to go low 
       }
+
       //transfer line to memory
       memcpy(base, buf, COLS);
 
