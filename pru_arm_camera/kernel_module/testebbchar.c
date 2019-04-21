@@ -25,7 +25,6 @@ int main(){
     return ret;
   }
 
-
   struct timeval before, after;
 
   printf("Starting device test code example...\n");
@@ -34,7 +33,6 @@ int main(){
     perror("Failed to open the device...");
     return errno;
   }
-
 
   char buf[PIXELS];
 
@@ -52,16 +50,7 @@ int main(){
   if(uSecs < 0) //occaisionally this number is 1000000 off??
     uSecs += 1000000;
 
-
-  /*
-     for(int i = 0 ; i < PIXELS ; i += 1<<11) {
-     printf("[%d] = %d\n", i, buf[i]);
-     }*/
-
   printf("Elapsed time: %ld uSec\n", uSecs);
-
-
-  printf("Capture complete\n");
 
   printf("Writing to '%s'\n", IMGFILE);
   FILE* pgmimg; 
@@ -77,9 +66,7 @@ int main(){
   fprintf(pgmimg, "255\n");  
   for (int i = 0; i < ROWS; i++) { 
     for (int j = 0; j < COLS; j++) { 
-      // Write the gray values in the 2D array to the file 
       fprintf(pgmimg, "%d ", (uint8_t)(buf[(i*COLS)+j])); 
-      //fprintf(pgmimg, "%d", (uint8_t)i); 
     }
     fprintf(pgmimg, "\n"); 
   }   

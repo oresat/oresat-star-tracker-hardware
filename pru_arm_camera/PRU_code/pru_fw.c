@@ -20,22 +20,80 @@
  * - other PRU does data transfer AND acts as watchdog for other?
  */
 
-void flash(char led);
-void dance();
-void clear();
-
 volatile register uint32_t __R30;
 volatile register uint32_t __R31;
-
-volatile uint32_t LED[] = {
-  0x0001, //D1 Blue
-  0x0002, //D2 Green
-  0x0004, //D3 Orange
-  0x0008  //D4 Red
-};
+void initPRU();
 
 void main(void)
 {
+  //init PRU registers
+  initPRU();
+
+  /* To capture an image, the kernel allocates a hunk of memory, writes the
+   * physicial address of this allocation to a known location in the PRU shared
+   * RAM, and then manually triggers a PRU system event. The PRU detects this
+   * event, reads the memory location, reads in the image data and writes it to
+   * the memory location, and finally triggers an interrupt which tells the
+   * kernel driver that it is done 
+   */
+
+  //manually trigger r31:31 set bit 24 in PRU SRSR0 to trigger event 24
+  //CT_INTC.SRSR0_bit.RAW_STS_31_0 = 0x1000000; 
+
+  volatile int* base; //base address for the actual image transfer
+  int line;
+  int col;
+
+  //WTF this should only have to be COLS, but when I make it that size, parts
+  //get overwritten by something else.
+  char buf[COLS * 2];
+
+  while(1)
+  {
+    //without this delay somewhere in this section, blacks frames are often
+    //returned! I don't know why this is.
+    __delay_cycles(1);
+
+    //wait for signal from ARM, R31 bit 31 will go high
+    while((__R31 & 0x80000000) == 0 );
+
+    //clear all system events
+    CT_INTC.SECR0_bit.ENA_STS_31_0 = 0xFFFFFFFF;
+
+    // The kernel will write the address of the allocated memory location into
+    // a known shared memory location. Here we read that address from that
+    // location.
+    base = *(volatile int**)SHARED; 
+
+    while((__R31 & VSYNC) > 0); //wait for VSYNC to go low
+    while((__R31 & VSYNC) == 0); //wait for VSYNC to go high
+
+    for(line = 0 ; line < ROWS ; line++)
+    {
+      while((__R31 & HSYNC) == 0); //wait for HSYNC to go high
+
+      //loop through every pixel in row
+      for(col = 0 ; col < COLS ; ++col)
+      {
+        while(__R31 & 0x00010000); //wait for R31[16] to go low 
+        while((__R31 & 0x00010000) == 0); //wait for R31[16] to go high
+
+        //write value from GPIO(R31) to buf
+        buf[col] = (__R31 & 0x000000ff); 
+      }
+      //transfer line to memory
+      memcpy(base, buf, COLS);
+
+      //offset base address
+      base += CELLS;
+    }
+
+    //trigger interrupt to tell kernel transfer is complete
+    __R31 = 0x24; //trigger INTC 20
+  }
+}
+
+void initPRU() {
   // Clear SYSCFG[STANDBY_INIT] to enable OCP master port
   // This is supposed to allow us to write to the global memory space?
   // it works without this, sooo....
@@ -111,83 +169,4 @@ void main(void)
      __R31 = 0x27; //trigger INTC 23
      */
 
-  /*
-   * Basic handshake with kernel driver. Kernel driver allocated memory region.
-   * It writes the address to a shared location known to both the PRU and the
-   * kernel. The PRU reads that location, adds a shared key, and writes it back
-   * to the next memory location. The kernel then reads this value, adds the
-   * key again, and finally writes it back to the next memory location. After
-   * this last step the PRU exits this loop.
-   */
-
-  //manually trigger r31:31 set bit 24 in PRU SRSR0 to trigger event 24
-  //CT_INTC.SRSR0_bit.RAW_STS_31_0 = 0x1000000; 
-
-  volatile int* base; //base address for the actual image transfer
-  int writeReg = 0x00;
-  int line;
-
-  int temp[COLS]; //TODO feel like this only needs to be CELLS ?
-  int pos = 0;
-  while(1)
-  {
-    //wait for signal from ARM, R31 bit 31 will go high
-    while((__R31 & 0x80000000) == 0 );
-
-    //without this delay somewhere in this section, blacks frames are often
-    //returned! I don't know why this is.
-    __delay_cycles(1);
-
-    //clear all system events
-    CT_INTC.SECR0_bit.ENA_STS_31_0 = 0xFFFFFFFF;
-    
-    /*
-     * The kernel will write the address of the allocated memory location into
-     * a known shared memory location. Here we read that address from that
-     * location.
-     */
-    base = *(volatile int**)SHARED; 
-
-    while((__R31 & VSYNC) > 0); //wait for VSYNC to go low
-    while((__R31 & VSYNC) == 0); //while VSYNC is high //used to contain below within this loop, not sure which is better. TODO test!
-
-    //TODO should I loop through the number of lines here?
-    for(line = 0 ; line < ROWS ; line++)
-      //while((__R31 & VSYNC) > 0) //wait for VSYNC to go low
-    {
-      pos = 0;
-      //loop through every word in buffer
-      int i;
-      for(i = 0 ; i < CELLS ; ++i)
-      {
-        //TODO use macro when waiting for clock
-        //not using for loop here for speed!
-        while((__R31 & HSYNC) == 0); //wait for HSYNC to go high
-
-        //package then into a little endian integer
-        while(__R31 & 0x00010000); //wait for R31[16] to go low 
-        while((__R31 & 0x00010000) == 0); //wait for R31[16] to go high
-        writeReg = (__R31 & 0x000000ff); //I am assigning here instead of ORing in order to clear writeReg
-        while(__R31 & 0x00010000); 
-        while((__R31 & 0x00010000) == 0); 
-        writeReg |= (__R31 & 0x000000ff) << 8; 
-        while(__R31 & 0x00010000); 
-        while((__R31 & 0x00010000) == 0); 
-        writeReg |= (__R31 & 0x000000ff) << 16; 
-        while(__R31 & 0x00010000); 
-        while((__R31 & 0x00010000) == 0); 
-        writeReg |= (__R31 & 0x000000ff) << 24; 
-
-        temp[pos++] = writeReg;
-      }
-      //transfer line to memory
-      memcpy(base, temp, COLS);
-
-      //offset base address
-      base += CELLS;
-    }
-
-    //signal done
-    __R31 = 0x24; //trigger INTC 20
-  }
 }

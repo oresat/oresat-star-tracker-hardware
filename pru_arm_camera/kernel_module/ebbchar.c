@@ -8,12 +8,17 @@
 #include <linux/dma-mapping.h>
 #include <linux/interrupt.h>
 #include <linux/platform_device.h>
-#define  DEVICE_NAME "ebbchar"    ///< The device will appear at /dev/ebbchar using this value
-#define  CLASS_NAME  "ebb"        ///< The device class -- this is a character device driver
-#define SIZE 1<<21 //2 MiB is enough for one image
+#define DEVICE_NAME "ebbchar"    ///< The device will appear at /dev/ebbchar using this value
+#define CLASS_NAME  "ebb"        ///< The device class -- this is a character device driver
 #define ROWS 960
 #define COLS 1280
+#define SIZE ROWS*COLS
 #define PIXELS ROWS * COLS
+#define PRUBASE 0x4a300000
+#define PRUSHAREDRAM PRUBASE + 0x10000
+#define PRUINTC_OFFSET 0x20000
+#define SRSR0_OFFSET 0x200
+#define NUM_IRQS 8
 
 MODULE_LICENSE("GPL");            ///< The license type -- this affects available functionality
 MODULE_AUTHOR("Oliver Rew");    ///< The author -- visible when you use modinfo
@@ -21,8 +26,6 @@ MODULE_DESCRIPTION("write this");  ///< The description -- see modinfo
 MODULE_VERSION("0.1");            ///< A version number to inform users
 
 static int    majorNumber;                  ///< Stores the device number -- determined automatically
-static char   message[256] = {0};           ///< Memory for the string that is passed from userspace
-static short  size_of_message;              ///< Used to remember the size of the string stored
 static struct class*  ebbcharClass  = NULL; ///< The device-driver class struct pointer
 static struct device* ebbcharDevice = NULL; ///< The device-driver device struct pointer
 
@@ -30,7 +33,6 @@ static struct device* ebbcharDevice = NULL; ///< The device-driver device struct
 static int     dev_open(struct inode *, struct file *);
 static int     dev_release(struct inode *, struct file *);
 static ssize_t dev_read(struct file *, char *, size_t, loff_t *);
-static ssize_t dev_write(struct file *, const char *, size_t, loff_t *);
 static int pru_handshake(int physAddr);
 static irq_handler_t irqhandler(unsigned int irq, void *dev_id, struct pt_regs *regs);
 int pru_probe(struct platform_device*);
@@ -43,10 +45,6 @@ static void free_irqs(void);
  *   other opperations
  */
 
-/** @brief Devices are represented as file structure in the kernel. The file_operations structure from
- *  /linux/fs.h lists the callback functions that you wish to associated with your file operations
- *  using a C99 syntax structure. char devices usually implement open, read, write and release calls
- */
 static struct file_operations fops =
 {
   .open = dev_open,
@@ -54,7 +52,7 @@ static struct file_operations fops =
   .release = dev_release,
 };
 
-//Memory pointers: TODO is there anything wrong with these being global?
+//Memory pointers
 dma_addr_t dma_handle = NULL;
 int *cpu_addr = NULL;
 int* physAddr = NULL;
@@ -80,7 +78,6 @@ static struct irq_info {
   int   num;
 };
 
-#define NUM_IRQS 8
 /*
  * mapping of an irq name(from the platfor device in the device device-tree)
  * to it's assigned linux irq number(in /proc/interrupt). When the irq is 
@@ -176,10 +173,6 @@ static int __init ebbchar_init(void){
   return 0;
 }
 
-/** @brief The LKM cleanup function
- *  Similar to the initialization function, it is static. The __exit macro notifies that if this
- *  code is used for a built-in driver (not a LKM) that this function is not required.
- */
 static void __exit ebbchar_exit(void){
   //unregister platform driver
   platform_driver_unregister(&prudrvr);
@@ -203,10 +196,10 @@ static void free_irqs(void){
 static int dev_open(struct inode *inodep, struct file *filep){
   int ret = 0; //return value
   //set DMA mask
-  int retMask = dma_set_coherent_mask(ebbcharDevice, 0xffffffff);
-  if(retMask != 0)
+  ret = dma_set_coherent_mask(ebbcharDevice, 0xffffffff);
+  if(ret != 0)
   {
-    printk(KERN_INFO "Failed to set DMA mask : error %d\n", retMask);
+    printk(KERN_INFO "Failed to set DMA mask : error %d\n", ret);
     return 0;
   }
 
@@ -228,10 +221,8 @@ static int dev_open(struct inode *inodep, struct file *filep){
   printk(KERN_INFO "Physical Address: %x\n", (int)physAddr);
   int_triggered = 0;
 
-  return ret;
+  return 0;
 }
-
-//TODO do I need to check for some sort of error on readl() and writel()
 
 /* 
  * pru_handshake() writes directly to the the PRU SRSR0 register that manually
@@ -244,11 +235,6 @@ static int dev_open(struct inode *inodep, struct file *filep){
  */
 static int pru_handshake(int physAddr )
 {
-  //TODO move these above or to header
-#define PRUBASE 0x4a300000
-#define PRUSHAREDRAM PRUBASE + 0x10000
-#define PRUINTC_OFFSET 0x20000
-#define SRSR0_OFFSET 0x200
 
   //ioremap physical locations in the PRU shared ram 
   void __iomem *pru_shared_ram;
@@ -274,7 +260,7 @@ static int pru_handshake(int physAddr )
 }
 
 static ssize_t dev_read(struct file *filep, char *buffer, size_t len, loff_t *offset){
-  //TODO address to known location with checksum to other location  this can replace the handshake
+  //TODO address to known location with checksum to other location this can replace the handshake
 
   //signal PRU and tell it where to write the data
   int handshake = pru_handshake((int)physAddr);
@@ -301,19 +287,17 @@ static ssize_t dev_read(struct file *filep, char *buffer, size_t len, loff_t *of
   physBase = (char*)cpu_addr;
 
   int err = 0;
-  // copy_to_user has the format ( * to, *from, size) and returns 0 on success
   err = copy_to_user(buffer, physBase, PIXELS); //TODO use __copy_to_user
-
   if(err != 0) {
     return -EFAULT;
   }
+
+  return 0;
 }
 
 static irq_handler_t irqhandler(unsigned int irqN, void *dev_id, struct pt_regs *regs)
 {
-  //  if(irqN != irq)
-  // return (irq_handler_t) IRQ_NONE; 
-  printk(KERN_INFO "IRQ_HANDLER: %d\n", irqN);
+  printk(KERN_INFO "IRQ_HANDLER: %d\n", irqN); //TODO get rid of this
 
   //signal that interrupt has been triggered
   int_triggered = 1;
