@@ -66,6 +66,7 @@ clean:
 	@echo 'Cleaning project: $(PROJ_NAME)'
 	@echo 'Removing files in the "$(GEN_DIR)" directory'
 	@rm -rf $(GEN_DIR)
+	@rm -f pru_fw.asm
 	@echo 'Finished cleaning project: $(PROJ_NAME)'
 
 # Includes the dependencies that the compiler creates (-ppd and -ppa flags)

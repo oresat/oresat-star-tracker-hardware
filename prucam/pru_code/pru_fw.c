@@ -18,6 +18,7 @@
 #define HSYNC 0x00004000
 #define BIT31 0x80000000
 
+
 /*
  * TODO
  * - other PRU does data transfer AND acts as watchdog for other?
@@ -51,7 +52,7 @@ void main(void)
   //get overwritten by something else. However, if I malloc that same amount it
   //works fine. TODO when I figure out how to exit this loop, free this memory
   //char buf[COLS*2];
-  char* buf; 
+  char* buf;
   buf = malloc(COLS);
 
   while(1)
@@ -81,12 +82,11 @@ void main(void)
       //loop through every pixel in row
       for(col = 0 ; col < COLS ; col++)
       {
+        while(__R31 & CLK); //wait for R31[16] to go low 
         while((__R31 & CLK) == 0); //wait for R31[16] to go high
 
         //write LSB value from GPIO(R31) to buf
-        buf[col] = __R31;
-
-        while(__R31 & CLK); //wait for R31[16] to go low 
+        buf[col] = __R31; //TODO should increment here instead
       }
 
       //transfer line to memory
@@ -109,10 +109,10 @@ void initPRU() {
 
   //Apparently there is no difference when parallel capture is used!?!?!
   //Parallel Capture Settings
-  //CT_CFG.GPCFG0_bit.PRU0_GPI_MODE = 0x01; //enable parallel capture
-  //CT_CFG.GPCFG0_bit.PRU0_GPI_CLK_MODE = 0x01; //capture on positive edge
+  CT_CFG.GPCFG0_bit.PRU0_GPI_MODE = 0x01; //enable parallel capture
+  CT_CFG.GPCFG0_bit.PRU0_GPI_CLK_MODE = 0x01; //capture on positive edge
 
-  CT_CFG.GPCFG0_bit.PRU0_GPI_MODE = 0x00; //GPIO direct mode(default)
+  //CT_CFG.GPCFG0_bit.PRU0_GPI_MODE = 0x00; //GPIO direct mode(default)
 
 
   //====PRU INTC SETUP====

@@ -2,11 +2,12 @@ obj-m+=prucam.o
 mod_name=prucam.ko
 ccflags-y := -std=gnu99 -Wno-declaration-after-statement #this disables the C90 warnings
 dto=prudev-00A0
+testsrc=testprucam.c camera-i2c.c #qdbmp.c
 
 all: tester module
 
 tester:
-	$(CC) testprucam.c camera-i2c.c -o test_dev
+	$(CC) $(testsrc) -o test_dev
 
 module:
 	make -C /lib/modules/$(shell uname -r)/build/ M=$(PWD) modules $(ccflag-y) 

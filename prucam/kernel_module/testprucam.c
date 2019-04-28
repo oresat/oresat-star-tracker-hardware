@@ -7,6 +7,7 @@
 #include "camera-i2c.h"
 #include "regs.h"
 #include <sys/time.h>
+#include "qdbmp.h"
 
 #define ROWS 960
 #define COLS 1280
@@ -14,7 +15,7 @@
 #define IMGFILE "capture.pgm"
 
 int initCamera(void);
-void writeImageFile(char* buf);
+void writePgmFile(char* buf);
 
 int main(){
   int ret, fd;
@@ -39,6 +40,7 @@ int main(){
 
   gettimeofday(&before , NULL);
 
+  int imgIndex = 1;
   printf("Reading from the device...\n");
   ret = read(fd, buf, PIXELS);        // Read the response from the LKM
   if (ret < 0){
@@ -53,7 +55,25 @@ int main(){
 
   printf("Elapsed time: %ld uSec\n", uSecs);
 
-  writeImageFile(buf);
+  //writePgmFile(buf);
+  BMP* bmp;
+  bmp = BMP_Create(COLS, ROWS, 8);
+
+  //we have to create an 8 bit color palette in the BMP library
+  for (int i=0; i<256; i++)
+    BMP_SetPaletteColor(bmp, i, i,i,i);
+
+  //write buffer to image
+  for(int i = 0 ; i < ROWS ; i++) 
+    for(int j = 0 ; j < COLS ; j++) 
+      BMP_SetPixelIndex(bmp, j, i, buf[(i*COLS) + j]);
+
+  //save image
+  char name[20];
+  sprintf(name, "capture_%03d.bmp", imgIndex++);
+  BMP_WriteFile(bmp, name);
+  BMP_CHECK_ERROR( stderr, -2 );
+  BMP_Free(bmp);
 
   return 0;
 }
@@ -76,7 +96,7 @@ int initCamera()
 }
 
 //writeImageFile writes the char buffer to a PGM type image
-void writeImageFile(char* buf) {
+void writePgmFile(char* buf) {
   printf("Writing to '%s'\n", IMGFILE);
   FILE* pgmimg; 
   pgmimg = fopen(IMGFILE, "wb"); 

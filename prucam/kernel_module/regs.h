@@ -127,10 +127,10 @@ camReg startupRegs[] = {
 	
 	//Clock settings
 	//these clock settings make xx MHz
-	{.reg = 0x302C, .val = 0x0004}, // VT_SYS_CLK_DIV was 0x0C
-	{.reg = 0x302A, .val = 0x0007}, // VT_PIX_CLK_DIV was 0x0A
-	{.reg = 0x302E, .val = 0x0002}, // PRE_PLL_CLK_DIV
-	{.reg = 0x3030, .val = 0x0032}, // PLL_MULTIPLIER
+	{.reg = 0x302E, .val = 0x0009}, // PRE_PLL_CLK_DIV
+	{.reg = 0x3030, .val = 0x0096}, // PLL_MULTIPLIER
+	{.reg = 0x302C, .val = 0x0009}, // VT_SYS_CLK_DIV was 0x0C
+	{.reg = 0x302A, .val = 0x0004}, // VT_PIX_CLK_DIV was 0x0A
 	{.reg = 0x0000, .val = 1}, // delay
 	
 	{.reg = 0x30B0, .val = 0x1300}, // DIGITAL_TEST
