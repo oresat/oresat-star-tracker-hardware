@@ -2,6 +2,7 @@
 #define BEAST_H
 
 #include "constellations.h"
+#include <stdio.h>
 #include <float.h>
 
 struct  match_result {
@@ -287,9 +288,20 @@ public:
 	* @brief TODO
 	*/
 	void print_ori() {
-		fprintf(stderr,"DEC=%f\n",fmod(360+asin(R31)* 180 / PI,360));
-		fprintf(stderr,"RA=%f\n",fmod(360+atan2(R21,R11)* 180 / PI,360));
-		fprintf(stderr,"ORIENTATION=%f\n",-atan2(R32,R33)* 180 / PI);
+		double dec = fmod(360 + asin(R31) * 180 / PI, 360);
+		double ra = fmod(360 + atan2(R21, R11) * 180 / PI, 360);
+		double ori = -atan2(R32, R33) * 180 / PI;
+
+		fprintf(stderr, "\nDEC=%f\n", dec);
+		fprintf(stderr, "RA=%f\n", ra);
+		fprintf(stderr, "ORIENTATION=%f\n", ori);
+
+		FILE * fp = fopen("./last_results.txt", "w");
+		if (fp == NULL) return;
+		fprintf(fp, "DEC=%f\n", dec);
+		fprintf(fp, "RA=%f\n", ra);
+		fprintf(fp, "ORIENTATION=%f", ori);
+		fclose(fp);
 	}
 };
 

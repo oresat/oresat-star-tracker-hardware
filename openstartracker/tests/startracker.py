@@ -98,13 +98,16 @@ def solve_image(filepath, connection):
 	fov_db = None
 
 	# Start output for iteration
-	connection.send("\n\n" + filepath)
+	connection.send(filepath)
 	
-	# Load and check if the image is worth processing
+	# Load the image
 	img = cv2.imread(filepath)
-	result = check_image(img, connection)
+	if type(img) == type(None):
+		connection.send("\nInvalid filepath\n")
+		return
 
-	# If the image failed testing, skip it
+	# Check the image to see if it is fit for processing
+	result = check_image(img, connection)
 	if result == 0:
 		connection.send("\nTime: " + str(time() - starttime))
 		return
@@ -175,10 +178,10 @@ def solve_image(filepath, connection):
 		# - ORIENTATION - rotation about the camera axis
 
 	else:
-		connection.send("Image could not be processed; no match found")
+		connection.send("\nImage could not be processed; no match found\n")
 
 	# Calculate how long it took to process
-	connection.send("\nTime: " + str(time() - starttime))
+	connection.send("\nTime: " + str(time() - starttime) + "\n")
 
 
 # Put socket in istening mode 
