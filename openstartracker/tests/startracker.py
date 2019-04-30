@@ -101,19 +101,19 @@ def solve_image(filepath, connection):
 	connection.send(filepath)
 	
 	# Load the image
-	img = cv2.imread(filepath)
-	if type(img) == type(None):
+	orig_img = cv2.imread(filepath)
+	if type(orig_img) == type(None):
 		connection.send("\nInvalid filepath\n")
 		return
 
 	# Check the image to see if it is fit for processing
-	result = check_image(img, connection)
+	result = check_image(orig_img, connection)
 	if result == 0:
 		connection.send("\nTime: " + str(time() - starttime))
 		return
 
 	# Process the image for solving
-	img = np.clip(img.astype(np.int16) - MEDIAN_IMAGE, a_min = 0, a_max = 255).astype(np.uint8)
+	img = np.clip(orig_img.astype(np.int16) - MEDIAN_IMAGE, a_min = 0, a_max = 255).astype(np.uint8)
 	img_grey = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
 	
 	# Remove areas of the image that don't meet our brightness threshold and then extract contours
@@ -179,9 +179,25 @@ def solve_image(filepath, connection):
 
 	else:
 		connection.send("\nImage could not be processed; no match found\n")
+		return
 
 	# Calculate how long it took to process
 	connection.send("\nTime: " + str(time() - starttime) + "\n")
+
+	# Grab latest result from file
+	fields = open("last_results.txt").read().splitlines()
+	
+	# Annotate and show image
+	font = cv2.FONT_HERSHEY_SIMPLEX
+	fontScale = 0.75
+	fontColor = (255,255,255)
+	lineType = 2
+	cv2.putText(img, fields[0], (25, 50), font, fontScale, fontColor, lineType)
+	cv2.putText(img, fields[1], (25, 85), font, fontScale, fontColor, lineType)
+	cv2.putText(img, fields[2], (25, 120), font, fontScale, fontColor, lineType)
+	cv2.imshow("Result", img)
+	cv2.waitKey(0)
+	cv2.destroyAllWindows()
 
 
 # Put socket in istening mode 
