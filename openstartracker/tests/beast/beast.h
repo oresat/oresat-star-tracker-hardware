@@ -292,9 +292,9 @@ public:
 		double ra = fmod(360 + atan2(R21, R11) * 180 / PI, 360);
 		double ori = -atan2(R32, R33) * 180 / PI;
 
-		fprintf(stderr, "\nDEC=%f\n", dec);
+		fprintf(stderr, "DEC=%f\n", dec);
 		fprintf(stderr, "RA=%f\n", ra);
-		fprintf(stderr, "ORIENTATION=%f\n", ori);
+		fprintf(stderr, "ORIENTATION=%f\n\n", ori);
 
 		FILE * fp = fopen("./last_results.txt", "w");
 		if (fp == NULL) return;

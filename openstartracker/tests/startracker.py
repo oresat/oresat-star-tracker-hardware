@@ -99,17 +99,18 @@ def solve_image(filepath, connection):
 
 	# Start output for iteration
 	connection.send(filepath)
+	print(filepath)
 	
 	# Load the image
 	orig_img = cv2.imread(filepath)
 	if type(orig_img) == type(None):
-		connection.send("\nInvalid filepath\n")
+		connection.send("\nInvalid filepath\n\n")
 		return
 
 	# Check the image to see if it is fit for processing
 	result = check_image(orig_img, connection)
 	if result == 0:
-		connection.send("\nTime: " + str(time() - starttime))
+		connection.send("\nTime: " + str(time() - starttime) + "\n\n")
 		return
 
 	# Process the image for solving
@@ -182,12 +183,13 @@ def solve_image(filepath, connection):
 		return
 
 	# Calculate how long it took to process
-	connection.send("\nTime: " + str(time() - starttime) + "\n")
+	connection.send("\nTime: " + str(time() - starttime) + "\n\n")
 
 	# Grab latest result from file
 	fields = open("last_results.txt").read().splitlines()
 	
-	# Annotate and show image
+	# Annotate image
+	img = cv2.resize(img, (1280, 960))
 	font = cv2.FONT_HERSHEY_SIMPLEX
 	fontScale = 0.75
 	fontColor = (255,255,255)
@@ -195,8 +197,13 @@ def solve_image(filepath, connection):
 	cv2.putText(img, fields[0], (25, 50), font, fontScale, fontColor, lineType)
 	cv2.putText(img, fields[1], (25, 85), font, fontScale, fontColor, lineType)
 	cv2.putText(img, fields[2], (25, 120), font, fontScale, fontColor, lineType)
-	cv2.imshow("Result", img)
-	cv2.waitKey(0)
+
+	# Show image
+	window_name = "Result - " + filepath
+	cv2.namedWindow(window_name)
+	cv2.moveWindow(window_name, 0, 0)
+	cv2.imshow(window_name, img)
+	cv2.waitKey(3000)
 	cv2.destroyAllWindows()
 
 
