@@ -4,9 +4,11 @@
  * startup register, sleep registers, etc.
  */
 
+
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
+
 
 camReg startupRegs[] = {
 	{.reg = 0x301A, .val = 0x0001}, //RESET
@@ -114,7 +116,7 @@ camReg startupRegs[] = {
 	{.reg = 0x3ED6, .val = 0x00BD}, // DAC_LD_10_11
 	{.reg = 0x30B0, .val = 0x1300}, // DIGITAL_TEST
 	{.reg = 0x30D4, .val = 0xE007}, // COLUMN_CORRECTION
-	{.reg = 0x3012, .val = 0x00E0}, // COARSE_INTEGRATION_TIME
+	{.reg = 0x3012, .val = 0x00a0}, // COARSE_INTEGRATION_TIME
 	{.reg = 0x3032, .val = 0x0000}, // DIGITAL_BINNING
 	{.reg = 0x3002, .val = 0x0002}, // Y_ADDR_START = 2
 	{.reg = 0x3004, .val = 0x0000}, // X_ADDR_START = 0
@@ -129,8 +131,8 @@ camReg startupRegs[] = {
 	//these clock settings make xx MHz
 	{.reg = 0x302E, .val = 0x0009}, // PRE_PLL_CLK_DIV
 	{.reg = 0x3030, .val = 0x0096}, // PLL_MULTIPLIER
-	{.reg = 0x302C, .val = 0x0009}, // VT_SYS_CLK_DIV was 0x0C
-	{.reg = 0x302A, .val = 0x0004}, // VT_PIX_CLK_DIV was 0x0A
+	{.reg = 0x302C, .val = 0x0006}, // VT_SYS_CLK_DIV was 0x0C
+	{.reg = 0x302A, .val = 0x0003}, // VT_PIX_CLK_DIV was 0x0A
 	{.reg = 0x0000, .val = 1}, // delay
 	
 	{.reg = 0x30B0, .val = 0x1300}, // DIGITAL_TEST
@@ -143,6 +145,7 @@ camReg startupRegs[] = {
 	{.reg = 0x301A, .val = 0x10DC},  //Disable Serial, Enable Parallel, Drive Outputs(no hi-z), lock reg, streaming mode(not low power)
 	{.reg = 0x0000, .val = 100}, // delay 100 ms
 	
-	{.reg = 0x3070, .val = 0x0000}, //walking 1s test pattern
+	//{.reg = 0x3070, .val = 0x0000}, //walking 1s test pattern
+	{.reg = 0x3070, .val = 0x00100}, //walking 1s test pattern
 };
 
