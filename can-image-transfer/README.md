@@ -1,6 +1,6 @@
 ### Dependencies
 
-Make sure you have `python-can` installed before proceeding (e.g. `pip install python-can`).
+Make sure you have `python-can` installed before proceeding (e.g. `pip install python-can`), as well as the [FLIF](https://github.com/FLIF-hub/FLIF) encoder/decoder tool.
 
 ---
 

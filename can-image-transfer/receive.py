@@ -1,5 +1,6 @@
 # Imports
 import can
+import os
 
 # Set up the CAN bus
 bus = can.interface.Bus(bustype = "socketcan", channel = "can0", bitrate = 1000000)
@@ -27,6 +28,10 @@ while num_msgs > 0:
 print(len(image))
 
 # Save the image
-image_file = open("received.pgm", "wb")
+image_file = open("received.flif", "wb")
 image_file.write(image)
 image_file.close()
+
+# Uncompress the image and delete the compressed version
+os.system("flif received.flif received.pgm")
+os.system("rm received.flif")

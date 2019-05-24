@@ -2,12 +2,16 @@
 import can
 import math
 import time
+import os
 
 # Set up the CAN bus
 bus = can.interface.Bus(bustype = "socketcan", channel = "can1", bitrate = 1000000)
 
+# Compress the image
+os.system("flif to_send.pgm compressed.flif")
+
 # Get the image as an array of bytes
-with open("to_send.pgm", "rb") as image_raw:
+with open("compressed.flif", "rb") as image_raw:
     f = image_raw.read()
     image = bytearray(f)
 
@@ -21,9 +25,9 @@ num_blank = num_frames // 2048
 remainder = num_frames % 2048
 
 final_data = []
-while remainder > 256:
-    final_data.append(256)
-    remainder -= 256
+while remainder > 255:
+    final_data.append(255)
+    remainder -= 255
 final_data.append(remainder)
 
 for i in range(num_blank):
@@ -31,7 +35,7 @@ for i in range(num_blank):
 bus.send(can.Message(arbitration_id = 0x01, data = final_data))
 time.sleep(0.1)
 
-print("Sent image size...")
+print("Sent image size (" + str(bytes_left) + ")...")
 
 # Send the image
 while bytes_left > 0:
@@ -50,3 +54,6 @@ while bytes_left > 0:
         bytes_left -= 8
 
 print("Image sent...")
+
+# Delete the compressed version
+os.system("rm compressed.flif")
