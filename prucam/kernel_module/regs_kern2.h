@@ -40,7 +40,7 @@ camReg startupRegs[] = {
   {.reg = 0x302E, .val = 0x0009}, //pre_pll_clk_div
   {.reg = 0x3030, .val = 0x0096}, //pll_mulitplier
   {.reg = 0x302C, .val = 0x0009}, //vt_sys_clk_div
-  {.reg = 0x302A, .val = 0x0008}, //vt_pix_clk_div
+  {.reg = 0x302A, .val = 0x0004}, //vt_pix_clk_div
 
   {.reg = 0x3032, .val = 0x0000}, //digital binning: no binning DEFAULT
   {.reg = 0x30B0, .val = 0x0080}, //digital test: context A, monochrome mode DEFAULT
@@ -56,7 +56,7 @@ camReg startupRegs[] = {
   //coarse_integration_time: integration(exposure) time specifed in multiples
   //of 'line_length_pck'. This means the coarse exposure time is the pixel
   //clock period * line_length_pck. 
-  {.reg = 0x3012, .val = 0x0014}, 
+  {.reg = 0x3012, .val = 0x000f}, 
 
   //fine_integration_time: additional integration time added to coarse
   //integration time measured in single pixel clock times

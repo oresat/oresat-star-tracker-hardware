@@ -161,6 +161,7 @@ int write_cam_reg(uint16_t reg, uint16_t val){
 int pru_probe(struct platform_device* dev)
 {
     printk(KERN_INFO "prucam: probing %s\n", dev->name);
+    int ret = 0; //return value
 
     for(int i = 0 ; i < NUM_IRQS ; i++)
     {
@@ -178,6 +179,37 @@ int pru_probe(struct platform_device* dev)
         irqs[i].num = irq;
     }
 
+    if(prucamDevice == NULL){
+      printk(KERN_ERR "prucamDevice NULL!\n");
+      return -1;
+    }
+
+    //set DMA mask
+    ret = dma_set_coherent_mask(prucamDevice, 0xffffffff);
+    if(ret != 0)
+    {
+        printk(KERN_INFO "Failed to set DMA mask : error %d\n", ret);
+        return 0;
+    }
+
+    /*
+     * I initial used GFP_DMA flag below, but I could not allocate >1 MiB
+     * I am unsure what the ideal flags for this are, but GFP_KERNEL seems to
+     * work
+     */
+    cpu_addr = dma_alloc_coherent(prucamDevice, SIZE, &dma_handle, GFP_KERNEL);
+    if(cpu_addr == NULL)
+    {
+        printk(KERN_INFO "Failed to allocate memory\n");
+        return -1;
+    }
+
+    printk(KERN_INFO "prucam: virtual Address: %x\n", (int)cpu_addr);
+
+    physAddr = (int*)dma_handle;
+    printk(KERN_INFO "prucam: physical Address: %x\n", (int)physAddr);
+    int_triggered = 0;
+
     return 0;
 }
 
@@ -185,6 +217,10 @@ int pru_rm(struct platform_device* dev)
 {
     //free irqs alloc'd in the probe
     free_irqs();
+
+    dma_free_coherent(prucamDevice, SIZE, cpu_addr, dma_handle);
+    printk(KERN_INFO "prucam: Freed %d bytes\n", SIZE); 
+
     return 0;
 }
 
@@ -214,15 +250,6 @@ static int __init prucam_init(void){
     }
     printk(KERN_INFO "prucam: device class registered correctly\n");
 
-    /* Register the platform driver. This causes the system the scan the platform
-     * bus for devices that match this driver. As defined in the device-tree,
-     * there should be a platform device that is found, at which point the
-     * drivers probe function is called on the device and the driver can read and
-     * request the interrupt line associated with that device
-     */
-    int regDrvr = platform_driver_register(&prudrvr);
-    printk(KERN_INFO "prucam: platform driver register returned: %d\n", regDrvr);
-
     //set interrupt to not triggered yet
     int_triggered = 0;
 
@@ -235,6 +262,15 @@ static int __init prucam_init(void){
         return PTR_ERR(prucamDevice);
     }
     printk(KERN_INFO "prucam: device class created correctly\n"); // Made it! device was initialized
+
+    /* Register the platform driver. This causes the system the scan the platform
+     * bus for devices that match this driver. As defined in the device-tree,
+     * there should be a platform device that is found, at which point the
+     * drivers probe function is called on the device and the driver can read and
+     * request the interrupt line associated with that device
+     */
+    int regDrvr = platform_driver_register(&prudrvr);
+    printk(KERN_INFO "prucam: platform driver register returned: %d\n", regDrvr);
 
 
     i2c_adap = i2c_get_adapter(2);
@@ -270,32 +306,6 @@ static void free_irqs(void){
 }
 
 static int dev_open(struct inode *inodep, struct file *filep){
-    int ret = 0; //return value
-    //set DMA mask
-    ret = dma_set_coherent_mask(prucamDevice, 0xffffffff);
-    if(ret != 0)
-    {
-        printk(KERN_INFO "Failed to set DMA mask : error %d\n", ret);
-        return 0;
-    }
-
-    /*
-     * I initial used GFP_DMA flag below, but I could not allocate >1 MiB
-     * I am unsure what the ideal flags for this are, but GFP_KERNEL seems to
-     * work
-     */
-    cpu_addr = dma_alloc_coherent(prucamDevice, SIZE, &dma_handle, GFP_KERNEL);
-    if(cpu_addr == NULL)
-    {
-        printk(KERN_INFO "Failed to allocate memory\n");
-        return -1;
-    }
-
-    printk(KERN_INFO "prucam: virtual Address: %x\n", (int)cpu_addr);
-
-    physAddr = (int*)dma_handle;
-    printk(KERN_INFO "prucam: physical Address: %x\n", (int)physAddr);
-    int_triggered = 0;
 
     return 0;
 }
@@ -387,9 +397,6 @@ static irq_handler_t irqhandler(unsigned int irqN, void *dev_id, struct pt_regs 
  *  @param filep A pointer to a file object (defined in linux/fs.h)
  */
 static int dev_release(struct inode *inodep, struct file *filep){
-    dma_free_coherent(prucamDevice, SIZE, cpu_addr, dma_handle);
-    printk(KERN_INFO "prucam: Freed %d bytes\n", SIZE); 
-
     printk(KERN_INFO "prucam: Device successfully closed\n");
     return 0;
 }
