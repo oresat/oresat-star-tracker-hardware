@@ -1,13 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 #include <errno.h>
 #include <fcntl.h>
 #include <string.h>
 #include <unistd.h>
-#include "camera-i2c.h"
-#include "regs.h"
 #include <sys/time.h>
 #include "qdbmp.h"
+#include "camera-i2c.h"
+#include "regs.h"
 
 #define ROWS 960
 #define COLS 1280
@@ -20,13 +21,20 @@ void writePgmFile(char* buf);
 int main(){
   int ret, fd;
 
+  
+ /* 
   //program camera via i2c
   ret = initCamera();
   if(ret < 0) {
-    printf("error programming camera, error code: %d\n", ret);
-    return ret;
+  printf("error programming camera, error code: %d\n", ret);
+  return ret;
   }
+  
 
+  return;
+  */
+
+  //for(int i = 0 ; i < 9999999 ; i++) {
   struct timeval before, after;
 
   printf("Starting device test code example...\n");
@@ -38,9 +46,9 @@ int main(){
 
   char buf[PIXELS];
 
+
   gettimeofday(&before , NULL);
 
-  int imgIndex = 1;
   printf("Reading from the device...\n");
   ret = read(fd, buf, PIXELS);        // Read the response from the LKM
   if (ret < 0){
@@ -70,30 +78,39 @@ int main(){
 
   //save image
   char name[20];
-  sprintf(name, "capture_%03d.bmp", imgIndex++);
+  sprintf(name, "capture_%03d.bmp", 1);
   BMP_WriteFile(bmp, name);
   BMP_CHECK_ERROR( stderr, -2 );
   BMP_Free(bmp);
 
+  ret = close(fd);
+  if(ret != 0) {
+    perror("error closing device");
+    return ret;
+  }
+  //}
+
   return 0;
 }
+
 
 //initCamera programs the camera via i2c
 int initCamera()
 {
-  printf("Programming Image Sensor...\n");
+printf("Programming Image Sensor...\n");
 
-  int err = writeRegs(startupRegs, sizeof(startupRegs));
+int err = writeRegs(startupRegs, sizeof(startupRegs));
 
-  sleep(0.25); //wait for regs to take effect, may not be necessary
+sleep(0.25); //wait for regs to take effect, may not be necessary
 
-  if(err > 0)
-  {
-    printf("ERROR writeRegs returned error code: %d\n", err);
-    return err;
-  }
-  return 0;
+if(err > 0)
+{
+printf("ERROR writeRegs returned error code: %d\n", err);
+return err;
 }
+return 0;
+}
+
 
 //writeImageFile writes the char buffer to a PGM type image
 void writePgmFile(char* buf) {

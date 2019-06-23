@@ -25,7 +25,8 @@ func fileServe(res http.ResponseWriter, req *http.Request) {
     if out != nil {
       fmt.Printf("error output: %s\n", out)
     }
-    log.Fatalf("Exec error: %s\n", err.Error())
+    fmt.Printf("Exec error: %s\n", err.Error())
+    return
   }
 
   fmt.Printf("out: %s\n", out)
