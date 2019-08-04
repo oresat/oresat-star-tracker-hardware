@@ -3,7 +3,7 @@
 <eagle version="9.4.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.25" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.0625" altunitdist="mm" altunit="mm"/>
@@ -3749,13 +3749,13 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <contactref element="U1" pad="8"/>
 <contactref element="J1" pad="30"/>
 <wire x1="10.15" y1="11.5" x2="10.15" y2="11.9" width="0.127" layer="1"/>
-<wire x1="10.15" y1="11.9" x2="10.3455" y2="12.0955" width="0.127" layer="1"/>
+<wire x1="10.15" y1="11.9" x2="10.408" y2="12.158" width="0.127" layer="1"/>
 <wire x1="13.3427" y1="11.6573" x2="13.3427" y2="11.5" width="0.127" layer="1"/>
 <via x="13.3427" y="11.5" extent="1-16" drill="0.254"/>
 <wire x1="13.5" y1="12.7" x2="13.5" y2="11.6573" width="0.127" layer="16"/>
 <wire x1="13.5" y1="11.6573" x2="13.3427" y2="11.5" width="0.127" layer="16"/>
-<wire x1="10.3455" y1="12.0955" x2="12.9045" y2="12.0955" width="0.127" layer="1"/>
-<wire x1="12.9045" y1="12.0955" x2="13.3427" y2="11.6573" width="0.127" layer="1"/>
+<wire x1="10.408" y1="12.158" x2="12.842" y2="12.158" width="0.127" layer="1"/>
+<wire x1="12.842" y1="12.158" x2="13.3427" y2="11.6573" width="0.127" layer="1"/>
 </signal>
 <signal name="D9">
 <contactref element="U1" pad="9"/>
@@ -3764,11 +3764,11 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <via x="13.9269" y="11.5" extent="1-16" drill="0.254"/>
 <wire x1="13.7618" y1="11.6651" x2="13.7618" y2="11.6736" width="0.127" layer="1"/>
 <wire x1="13.7618" y1="11.6651" x2="13.9269" y2="11.5" width="0.127" layer="1"/>
-<wire x1="9.8495" y1="12.3495" x2="9.45" y2="11.95" width="0.127" layer="1"/>
+<wire x1="9.912" y1="12.412" x2="9.45" y2="11.95" width="0.127" layer="1"/>
 <wire x1="14" y1="10.3" x2="13.9269" y2="10.3731" width="0.127" layer="16"/>
 <wire x1="13.9269" y1="11.5" x2="13.9269" y2="10.3731" width="0.127" layer="16"/>
-<wire x1="13.7618" y1="11.6736" x2="13.0859" y2="12.3495" width="0.127" layer="1"/>
-<wire x1="13.0859" y1="12.3495" x2="9.8495" y2="12.3495" width="0.127" layer="1"/>
+<wire x1="13.7618" y1="11.6736" x2="13.0234" y2="12.412" width="0.127" layer="1"/>
+<wire x1="13.0234" y1="12.412" x2="9.912" y2="12.412" width="0.127" layer="1"/>
 </signal>
 <signal name="D10">
 <contactref element="U1" pad="10"/>
@@ -3777,11 +3777,11 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <via x="14.5111" y="11.5" extent="1-16" drill="0.254"/>
 <wire x1="14.346" y1="11.6736" x2="14.346" y2="11.6651" width="0.127" layer="1"/>
 <wire x1="14.346" y1="11.6651" x2="14.5111" y2="11.5" width="0.127" layer="1"/>
-<wire x1="8.75" y1="12" x2="9.3535" y2="12.6035" width="0.127" layer="1"/>
+<wire x1="8.75" y1="12" x2="9.416" y2="12.666" width="0.127" layer="1"/>
 <wire x1="14.5" y1="12.7" x2="14.5111" y2="12.6889" width="0.127" layer="16"/>
 <wire x1="14.5111" y1="12.6889" x2="14.5111" y2="11.5" width="0.127" layer="16"/>
-<wire x1="9.3535" y1="12.6035" x2="13.4161" y2="12.6035" width="0.127" layer="1"/>
-<wire x1="13.4161" y1="12.6035" x2="14.346" y2="11.6736" width="0.127" layer="1"/>
+<wire x1="9.416" y1="12.666" x2="13.3536" y2="12.666" width="0.127" layer="1"/>
+<wire x1="13.3536" y1="12.666" x2="14.346" y2="11.6736" width="0.127" layer="1"/>
 </signal>
 <signal name="D11">
 <contactref element="U1" pad="11"/>
@@ -3790,11 +3790,11 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <via x="15.0953" y="11.5" extent="1-16" drill="0.254"/>
 <wire x1="14.9302" y1="11.6651" x2="14.9302" y2="11.6736" width="0.127" layer="1"/>
 <wire x1="14.9302" y1="11.6651" x2="15.0953" y2="11.5" width="0.127" layer="1"/>
-<wire x1="8.8575" y1="12.8575" x2="8.05" y2="12.05" width="0.127" layer="1"/>
+<wire x1="8.92" y1="12.92" x2="8.05" y2="12.05" width="0.127" layer="1"/>
 <wire x1="15" y1="10.3" x2="15" y2="11.4047" width="0.127" layer="16"/>
 <wire x1="15" y1="11.4047" x2="15.0953" y2="11.5" width="0.127" layer="16"/>
-<wire x1="14.9302" y1="11.6736" x2="13.7463" y2="12.8575" width="0.127" layer="1"/>
-<wire x1="13.7463" y1="12.8575" x2="8.8575" y2="12.8575" width="0.127" layer="1"/>
+<wire x1="14.9302" y1="11.6736" x2="13.6838" y2="12.92" width="0.127" layer="1"/>
+<wire x1="13.6838" y1="12.92" x2="8.92" y2="12.92" width="0.127" layer="1"/>
 </signal>
 <signal name="HSYNC">
 <contactref element="U1" pad="29"/>
