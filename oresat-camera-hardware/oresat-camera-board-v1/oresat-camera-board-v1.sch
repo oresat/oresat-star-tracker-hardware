@@ -7999,43 +7999,43 @@ This package is identical to 0402-A, but has its tPlace silkscreen layer removed
 <wire x1="-7.62" y1="53.34" x2="5.08" y2="53.34" width="0.254" layer="94"/>
 <wire x1="-7.62" y1="-43.18" x2="5.08" y2="-43.18" width="0.254" layer="94"/>
 <wire x1="5.08" y1="53.34" x2="5.08" y2="-43.18" width="0.254" layer="94"/>
-<pin name="1" x="-10.16" y="50.8" length="short" direction="pas"/>
-<pin name="2" x="-10.16" y="48.26" length="short" direction="pas"/>
-<pin name="3" x="-10.16" y="45.72" length="short" direction="pas"/>
-<pin name="4" x="-10.16" y="43.18" length="short" direction="pas"/>
-<pin name="5" x="-10.16" y="40.64" length="short" direction="pas"/>
-<pin name="6" x="-10.16" y="38.1" length="short" direction="pas"/>
-<pin name="7" x="-10.16" y="35.56" length="short" direction="pas"/>
-<pin name="8" x="-10.16" y="33.02" length="short" direction="pas"/>
-<pin name="9" x="-10.16" y="30.48" length="short" direction="pas"/>
-<pin name="10" x="-10.16" y="27.94" length="short" direction="pas"/>
-<pin name="11" x="-10.16" y="25.4" length="short" direction="pas"/>
-<pin name="12" x="-10.16" y="22.86" length="short" direction="pas"/>
-<pin name="13" x="-10.16" y="20.32" length="short" direction="pas"/>
-<pin name="14" x="-10.16" y="17.78" length="short" direction="pas"/>
-<pin name="15" x="-10.16" y="15.24" length="short" direction="pas"/>
-<pin name="16" x="-10.16" y="12.7" length="short" direction="pas"/>
-<pin name="17" x="-10.16" y="10.16" length="short" direction="pas"/>
-<pin name="18" x="-10.16" y="7.62" length="short" direction="pas"/>
-<pin name="19" x="-10.16" y="5.08" length="short" direction="pas"/>
-<pin name="20" x="-10.16" y="2.54" length="short" direction="pas"/>
-<pin name="21" x="-10.16" y="0" length="short" direction="pas"/>
-<pin name="22" x="-10.16" y="-2.54" length="short" direction="pas"/>
-<pin name="23" x="-10.16" y="-5.08" length="short" direction="pas"/>
-<pin name="24" x="-10.16" y="-7.62" length="short" direction="pas"/>
-<pin name="25" x="-10.16" y="-10.16" length="short" direction="pas"/>
-<pin name="26" x="-10.16" y="-12.7" length="short" direction="pas"/>
-<pin name="27" x="-10.16" y="-15.24" length="short" direction="pas"/>
-<pin name="28" x="-10.16" y="-17.78" length="short" direction="pas"/>
-<pin name="29" x="-10.16" y="-20.32" length="short" direction="pas"/>
-<pin name="30" x="-10.16" y="-22.86" length="short" direction="pas"/>
-<pin name="31" x="-10.16" y="-25.4" length="short" direction="pas"/>
-<pin name="32" x="-10.16" y="-27.94" length="short" direction="pas"/>
-<pin name="33" x="-10.16" y="-30.48" length="short" direction="pas"/>
-<pin name="34" x="-10.16" y="-33.02" length="short" direction="pas"/>
-<pin name="35" x="-10.16" y="-35.56" length="short" direction="pas"/>
-<pin name="36" x="-10.16" y="-38.1" length="short" direction="pas"/>
-<pin name="SHIELD" x="-10.16" y="-40.64" length="short" direction="pas"/>
+<pin name="1" x="-10.16" y="50.8" length="short" direction="pas" swaplevel="1"/>
+<pin name="2" x="-10.16" y="48.26" length="short" direction="pas" swaplevel="1"/>
+<pin name="3" x="-10.16" y="45.72" length="short" direction="pas" swaplevel="1"/>
+<pin name="4" x="-10.16" y="43.18" length="short" direction="pas" swaplevel="1"/>
+<pin name="5" x="-10.16" y="40.64" length="short" direction="pas" swaplevel="1"/>
+<pin name="6" x="-10.16" y="38.1" length="short" direction="pas" swaplevel="1"/>
+<pin name="7" x="-10.16" y="35.56" length="short" direction="pas" swaplevel="1"/>
+<pin name="8" x="-10.16" y="33.02" length="short" direction="pas" swaplevel="1"/>
+<pin name="9" x="-10.16" y="30.48" length="short" direction="pas" swaplevel="1"/>
+<pin name="10" x="-10.16" y="27.94" length="short" direction="pas" swaplevel="1"/>
+<pin name="11" x="-10.16" y="25.4" length="short" direction="pas" swaplevel="1"/>
+<pin name="12" x="-10.16" y="22.86" length="short" direction="pas" swaplevel="1"/>
+<pin name="13" x="-10.16" y="20.32" length="short" direction="pas" swaplevel="1"/>
+<pin name="14" x="-10.16" y="17.78" length="short" direction="pas" swaplevel="1"/>
+<pin name="15" x="-10.16" y="15.24" length="short" direction="pas" swaplevel="1"/>
+<pin name="16" x="-10.16" y="12.7" length="short" direction="pas" swaplevel="1"/>
+<pin name="17" x="-10.16" y="10.16" length="short" direction="pas" swaplevel="1"/>
+<pin name="18" x="-10.16" y="7.62" length="short" direction="pas" swaplevel="1"/>
+<pin name="19" x="-10.16" y="5.08" length="short" direction="pas" swaplevel="1"/>
+<pin name="20" x="-10.16" y="2.54" length="short" direction="pas" swaplevel="1"/>
+<pin name="21" x="-10.16" y="0" length="short" direction="pas" swaplevel="1"/>
+<pin name="22" x="-10.16" y="-2.54" length="short" direction="pas" swaplevel="1"/>
+<pin name="23" x="-10.16" y="-5.08" length="short" direction="pas" swaplevel="1"/>
+<pin name="24" x="-10.16" y="-7.62" length="short" direction="pas" swaplevel="1"/>
+<pin name="25" x="-10.16" y="-10.16" length="short" direction="pas" swaplevel="1"/>
+<pin name="26" x="-10.16" y="-12.7" length="short" direction="pas" swaplevel="1"/>
+<pin name="27" x="-10.16" y="-15.24" length="short" direction="pas" swaplevel="1"/>
+<pin name="28" x="-10.16" y="-17.78" length="short" direction="pas" swaplevel="1"/>
+<pin name="29" x="-10.16" y="-20.32" length="short" direction="pas" swaplevel="1"/>
+<pin name="30" x="-10.16" y="-22.86" length="short" direction="pas" swaplevel="1"/>
+<pin name="31" x="-10.16" y="-25.4" length="short" direction="pas" swaplevel="1"/>
+<pin name="32" x="-10.16" y="-27.94" length="short" direction="pas" swaplevel="1"/>
+<pin name="33" x="-10.16" y="-30.48" length="short" direction="pas" swaplevel="1"/>
+<pin name="34" x="-10.16" y="-33.02" length="short" direction="pas" swaplevel="1"/>
+<pin name="35" x="-10.16" y="-35.56" length="short" direction="pas" swaplevel="1"/>
+<pin name="36" x="-10.16" y="-38.1" length="short" direction="pas" swaplevel="1"/>
+<pin name="SHIELD" x="-10.16" y="-40.64" length="short" direction="pas" swaplevel="1"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -10543,9 +10543,9 @@ VAA_PIX   = 2.8V</text>
 <pinref part="U1" gate="G$1" pin="DOUT7"/>
 </segment>
 <segment>
-<pinref part="J1" gate="G$1" pin="27"/>
-<wire x1="109.22" y1="111.76" x2="109.22" y2="99.06" width="0.1524" layer="91"/>
-<label x="109.22" y="111.76" size="1.27" layer="95" rot="R90" xref="yes"/>
+<pinref part="J1" gate="G$1" pin="31"/>
+<wire x1="99.06" y1="111.76" x2="99.06" y2="99.06" width="0.1524" layer="91"/>
+<label x="99.06" y="111.76" size="1.27" layer="95" rot="R90" xref="yes"/>
 </segment>
 </net>
 <net name="D8" class="0">
@@ -10556,9 +10556,9 @@ VAA_PIX   = 2.8V</text>
 <pinref part="U1" gate="G$1" pin="DOUT8"/>
 </segment>
 <segment>
-<pinref part="J1" gate="G$1" pin="28"/>
-<wire x1="106.68" y1="111.76" x2="106.68" y2="99.06" width="0.1524" layer="91"/>
-<label x="106.68" y="111.76" size="1.27" layer="95" rot="R90" xref="yes"/>
+<pinref part="J1" gate="G$1" pin="30"/>
+<wire x1="101.6" y1="111.76" x2="101.6" y2="99.06" width="0.1524" layer="91"/>
+<label x="101.6" y="111.76" size="1.27" layer="95" rot="R90" xref="yes"/>
 </segment>
 </net>
 <net name="D9" class="0">
@@ -10582,9 +10582,9 @@ VAA_PIX   = 2.8V</text>
 <pinref part="U1" gate="G$1" pin="DOUT10"/>
 </segment>
 <segment>
-<pinref part="J1" gate="G$1" pin="30"/>
-<wire x1="101.6" y1="111.76" x2="101.6" y2="99.06" width="0.1524" layer="91"/>
-<label x="101.6" y="111.76" size="1.27" layer="95" rot="R90" xref="yes"/>
+<pinref part="J1" gate="G$1" pin="28"/>
+<wire x1="106.68" y1="111.76" x2="106.68" y2="99.06" width="0.1524" layer="91"/>
+<label x="106.68" y="111.76" size="1.27" layer="95" rot="R90" xref="yes"/>
 </segment>
 </net>
 <net name="D11" class="0">
@@ -10595,9 +10595,9 @@ VAA_PIX   = 2.8V</text>
 <pinref part="U1" gate="G$1" pin="DOUT11"/>
 </segment>
 <segment>
-<pinref part="J1" gate="G$1" pin="31"/>
-<wire x1="99.06" y1="111.76" x2="99.06" y2="99.06" width="0.1524" layer="91"/>
-<label x="99.06" y="111.76" size="1.27" layer="95" rot="R90" xref="yes"/>
+<pinref part="J1" gate="G$1" pin="27"/>
+<wire x1="109.22" y1="111.76" x2="109.22" y2="99.06" width="0.1524" layer="91"/>
+<label x="109.22" y="111.76" size="1.27" layer="95" rot="R90" xref="yes"/>
 </segment>
 </net>
 <net name="PIXCLK" class="0">
