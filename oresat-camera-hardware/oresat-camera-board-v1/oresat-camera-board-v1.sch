@@ -9559,7 +9559,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="J1" library="J-TEConnectivity-4-1734742-0" deviceset="4-1734742-0" device=""/>
 <part name="U1" library="U-ONSemi-AR0134" deviceset="AR0134CSSM00SPCA0" device=""/>
 <part name="GND6" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="R3" library="oresat-rcl" deviceset="R-US_" device="0402-B" value="10k"/>
+<part name="R3" library="oresat-rcl" deviceset="R-US_" device="0402-B" value="DNP"/>
 <part name="SUPPLY3" library="SparkFun-PowerSymbols" deviceset="2.8V" device="" value="2.8V_1"/>
 <part name="R4" library="oresat-rcl" deviceset="R-US_" device="0402-B" value="10k"/>
 <part name="GND4" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
