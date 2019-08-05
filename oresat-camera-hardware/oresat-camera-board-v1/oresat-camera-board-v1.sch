@@ -7813,14 +7813,14 @@ This package is identical to 0402-A, but has its tPlace silkscreen layer removed
 <library name="X-KYOCERA-KC2520B27">
 <packages>
 <package name="OSC_KYOCERA_KC2520B">
-<smd name="4" x="-0.8001" y="0.925" dx="1.2192" dy="0.8128" layer="1"/>
-<smd name="1" x="-0.8001" y="-0.925" dx="1.2192" dy="0.8128" layer="1"/>
-<smd name="2" x="0.8001" y="-0.925" dx="1.2192" dy="0.8128" layer="1"/>
-<smd name="3" x="0.8001" y="0.925" dx="1.2192" dy="0.8128" layer="1"/>
-<wire x1="-1.016" y1="0.1778" x2="-1.016" y2="-0.1778" width="0.1524" layer="21"/>
-<wire x1="1.016" y1="0.1778" x2="1.016" y2="-0.1778" width="0.1524" layer="21"/>
+<smd name="4" x="-0.925" y="0.725" dx="1.05" dy="0.95" layer="1"/>
+<smd name="1" x="-0.925" y="-0.725" dx="1.05" dy="0.95" layer="1"/>
+<smd name="2" x="0.925" y="-0.725" dx="1.05" dy="0.95" layer="1"/>
+<smd name="3" x="0.925" y="0.725" dx="1.05" dy="0.95" layer="1"/>
+<wire x1="-1.016" y1="0.15" x2="-1.016" y2="-0.15" width="0.1524" layer="21"/>
+<wire x1="1.016" y1="0.15" x2="1.016" y2="-0.15" width="0.1524" layer="21"/>
 <text x="-1.2446" y="1.778" size="0.508" layer="25" font="vector" ratio="15" rot="SR0">&gt;Name</text>
-<circle x="-1.651" y="-1.524" radius="0.0762" width="0.254" layer="21"/>
+<circle x="-1.68275" y="-1.450975" radius="0.0762" width="0.2" layer="21"/>
 </package>
 </packages>
 <symbols>
