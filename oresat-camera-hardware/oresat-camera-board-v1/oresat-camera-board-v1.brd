@@ -3121,7 +3121,6 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="9.5555" y1="4.0555" x2="8.253" y2="2.753" width="0.127" layer="16"/>
 <wire x1="17.0822375" y1="3.4605" x2="12.0395" y2="3.4605" width="0.127" layer="16"/>
 <wire x1="12.0395" y1="3.4605" x2="10.8934" y2="4.6066" width="0.127" layer="16"/>
-<wire x1="1.25" y1="1.875" x2="1.25" y2="1.725" width="0.127" layer="16"/>
 <wire x1="1.25" y1="1.725" x2="1.275" y2="1.7" width="0.15" layer="16"/>
 <wire x1="3.5498" y1="2.0095" x2="3.4095" y2="2.1498" width="0.127" layer="16"/>
 <wire x1="3.4095" y1="2.3405" x2="3.4095" y2="2.1498" width="0.127" layer="16"/>
