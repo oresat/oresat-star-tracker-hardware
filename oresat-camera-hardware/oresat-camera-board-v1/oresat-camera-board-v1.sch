@@ -9568,6 +9568,10 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="SUPPLY23" library="SparkFun-PowerSymbols" deviceset="VCC" device="" value="2.8V_2"/>
 <part name="SUPPLY27" library="SparkFun-PowerSymbols" deviceset="VCC_1" device="" value="2.8V_3"/>
 <part name="SUPPLY30" library="SparkFun-PowerSymbols" deviceset="VCC_2" device="" value="2.8V_4"/>
+<part name="R7" library="oresat-rcl" deviceset="R-US_" device="0402-B" value="4.7k"/>
+<part name="SUPPLY34" library="SparkFun-PowerSymbols" deviceset="2.8V" device="" value="2.8V_1"/>
+<part name="R8" library="oresat-rcl" deviceset="R-US_" device="0402-B" value="4.7k"/>
+<part name="SUPPLY35" library="SparkFun-PowerSymbols" deviceset="2.8V" device="" value="2.8V_1"/>
 </parts>
 <sheets>
 <sheet>
@@ -9865,6 +9869,16 @@ VAA_PIX   = 2.8V</text>
 <instance part="SUPPLY23" gate="G$1" x="317.5" y="248.92" smashed="yes"/>
 <instance part="SUPPLY27" gate="G$2" x="327.66" y="248.92" smashed="yes"/>
 <instance part="SUPPLY30" gate="G$1" x="337.82" y="248.92" smashed="yes"/>
+<instance part="R7" gate="R" x="124.46" y="172.72" smashed="yes" rot="R90">
+<attribute name="NAME" x="122.9614" y="168.91" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="127.762" y="168.91" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="SUPPLY34" gate="G$1" x="124.46" y="180.34" smashed="yes"/>
+<instance part="R8" gate="R" x="114.3" y="172.72" smashed="yes" rot="R90">
+<attribute name="NAME" x="112.8014" y="168.91" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="117.602" y="168.91" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="SUPPLY35" gate="G$1" x="114.3" y="180.34" smashed="yes"/>
 </instances>
 <busses>
 <bus name="D[0..11],HSYNC,PIXCLK,VSYNC">
@@ -10247,6 +10261,18 @@ VAA_PIX   = 2.8V</text>
 <junction x="91.44" y="241.3"/>
 <label x="112.268" y="247.142" size="1.27" layer="95" rot="R90"/>
 </segment>
+<segment>
+<pinref part="SUPPLY34" gate="G$1" pin="2.8V"/>
+<pinref part="R7" gate="R" pin="2"/>
+<wire x1="124.46" y1="180.34" x2="124.46" y2="177.8" width="0.1524" layer="91"/>
+<label x="124.46" y="182.88" size="1.778" layer="95" rot="R90"/>
+</segment>
+<segment>
+<pinref part="SUPPLY35" gate="G$1" pin="2.8V"/>
+<pinref part="R8" gate="R" pin="2"/>
+<wire x1="114.3" y1="180.34" x2="114.3" y2="177.8" width="0.1524" layer="91"/>
+<label x="114.3" y="182.88" size="1.778" layer="95" rot="R90"/>
+</segment>
 </net>
 <net name="VAA" class="0">
 <segment>
@@ -10392,7 +10418,12 @@ VAA_PIX   = 2.8V</text>
 <pinref part="U1" gate="G$1" pin="SDATA"/>
 <pinref part="J1" gate="G$1" pin="9"/>
 <wire x1="190.5" y1="193.04" x2="154.94" y2="193.04" width="0.1524" layer="91"/>
-<wire x1="154.94" y1="193.04" x2="154.94" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="193.04" x2="154.94" y2="162.56" width="0.1524" layer="91"/>
+<pinref part="R8" gate="R" pin="1"/>
+<wire x1="154.94" y1="162.56" x2="154.94" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="162.56" x2="114.3" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="162.56" x2="114.3" y2="167.64" width="0.1524" layer="91"/>
+<junction x="154.94" y="162.56"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -10400,7 +10431,12 @@ VAA_PIX   = 2.8V</text>
 <pinref part="U1" gate="G$1" pin="SCLK"/>
 <pinref part="J1" gate="G$1" pin="10"/>
 <wire x1="190.5" y1="195.58" x2="152.4" y2="195.58" width="0.1524" layer="91"/>
-<wire x1="152.4" y1="195.58" x2="152.4" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="195.58" x2="152.4" y2="165.1" width="0.1524" layer="91"/>
+<pinref part="R7" gate="R" pin="1"/>
+<wire x1="152.4" y1="165.1" x2="152.4" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="167.64" x2="124.46" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="165.1" x2="152.4" y2="165.1" width="0.1524" layer="91"/>
+<junction x="152.4" y="165.1"/>
 </segment>
 </net>
 <net name="N$6" class="0">
@@ -10438,10 +10474,10 @@ VAA_PIX   = 2.8V</text>
 <net name="N$10" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="FLASH"/>
-<wire x1="251.46" y1="177.8" x2="251.46" y2="139.7" width="0.1524" layer="91"/>
-<wire x1="251.46" y1="139.7" x2="139.7" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="251.46" y1="177.8" x2="251.46" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="251.46" y1="132.08" x2="139.7" y2="132.08" width="0.1524" layer="91"/>
 <pinref part="J1" gate="G$1" pin="15"/>
-<wire x1="139.7" y1="139.7" x2="139.7" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="132.08" x2="139.7" y2="99.06" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="D0" class="0">
@@ -10642,6 +10678,96 @@ VAA_PIX   = 2.8V</text>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="102,1,350.52,248.92,1.8V,VDD,,,,"/>
+<approved hash="102,1,360.68,248.92,2.8V,VDD_IO,,,,"/>
+<approved hash="102,1,370.84,248.92,VCC,VDD_PLL,,,,"/>
+<approved hash="102,1,381,248.92,VCC_1,VAA,,,,"/>
+<approved hash="102,1,391.16,248.92,VCC_2,VAA_PIX,,,,"/>
+<approved hash="102,1,210.82,243.84,1.8V,VDD,,,,"/>
+<approved hash="102,1,215.9,243.84,2.8V,VDD_IO,,,,"/>
+<approved hash="102,1,226.06,243.84,VCC,VAA,,,,"/>
+<approved hash="102,1,220.98,243.84,VCC_1,VDD_PLL,,,,"/>
+<approved hash="102,1,231.14,243.84,VCC_2,VAA_PIX,,,,"/>
+<approved hash="102,1,370.84,109.22,2.8V,VAA_PIX,,,,"/>
+<approved hash="102,1,381,109.22,VCC,VAA,,,,"/>
+<approved hash="102,1,391.16,109.22,VCC_1,VDD_PLL,,,,"/>
+<approved hash="102,1,401.32,109.22,VCC_2,VDD_IO,,,,"/>
+<approved hash="102,1,342.9,121.92,VCC_1,VDD_PLL,,,,"/>
+<approved hash="102,1,345.44,116.84,2.8V,VDD_IO,,,,"/>
+<approved hash="102,1,342.9,78.74,VCC_2,VAA,,,,"/>
+<approved hash="102,1,345.44,73.66,VCC,VAA_PIX,,,,"/>
+<approved hash="102,1,342.9,162.56,1.8V,VDD,,,,"/>
+<approved hash="102,1,411.48,109.22,1.8V,VDD,,,,"/>
+<approved hash="102,1,111.76,243.84,2.8V,VDD_IO,,,,"/>
+<approved hash="102,1,167.64,175.26,2.8V,VDD_IO,,,,"/>
+<approved hash="102,1,297.18,248.92,1.8V,VDD,,,,"/>
+<approved hash="102,1,307.34,248.92,2.8V,VDD_IO,,,,"/>
+<approved hash="102,1,317.5,248.92,VCC,VDD_PLL,,,,"/>
+<approved hash="102,1,327.66,248.92,VCC_1,VAA,,,,"/>
+<approved hash="102,1,337.82,248.92,VCC_2,VAA_PIX,,,,"/>
+<approved hash="102,1,124.46,180.34,2.8V,VDD_IO,,,,"/>
+<approved hash="102,1,114.3,180.34,2.8V,VDD_IO,,,,"/>
+<approved hash="201,1,114.3,180.34,2.8V,VDD_IO\, VAA_PIX,,,,"/>
+<approved hash="201,1,124.46,180.34,2.8V,VDD_IO\, VAA_PIX,,,,"/>
+<approved hash="201,1,307.34,248.92,2.8V,VDD_IO\, VAA_PIX,,,,"/>
+<approved hash="201,1,167.64,175.26,2.8V,VDD_IO\, VAA_PIX,,,,"/>
+<approved hash="201,1,111.76,243.84,2.8V,VDD_IO\, VAA_PIX,,,,"/>
+<approved hash="201,1,345.44,116.84,2.8V,VDD_IO\, VAA_PIX,,,,"/>
+<approved hash="201,1,370.84,109.22,2.8V,VDD_IO\, VAA_PIX,,,,"/>
+<approved hash="201,1,215.9,243.84,2.8V,VDD_IO\, VAA_PIX,,,,"/>
+<approved hash="201,1,360.68,248.92,2.8V,VDD_IO\, VAA_PIX,,,,"/>
+<approved hash="201,1,317.5,248.92,VCC,VDD_PLL\, VAA\, VAA_PIX,,,,"/>
+<approved hash="201,1,345.44,73.66,VCC,VDD_PLL\, VAA\, VAA_PIX,,,,"/>
+<approved hash="201,1,381,109.22,VCC,VDD_PLL\, VAA\, VAA_PIX,,,,"/>
+<approved hash="201,1,226.06,243.84,VCC,VDD_PLL\, VAA\, VAA_PIX,,,,"/>
+<approved hash="201,1,370.84,248.92,VCC,VDD_PLL\, VAA\, VAA_PIX,,,,"/>
+<approved hash="201,1,327.66,248.92,VCC_1,VAA\, VDD_PLL,,,,"/>
+<approved hash="201,1,342.9,121.92,VCC_1,VAA\, VDD_PLL,,,,"/>
+<approved hash="201,1,391.16,109.22,VCC_1,VAA\, VDD_PLL,,,,"/>
+<approved hash="201,1,220.98,243.84,VCC_1,VAA\, VDD_PLL,,,,"/>
+<approved hash="201,1,381,248.92,VCC_1,VAA\, VDD_PLL,,,,"/>
+<approved hash="201,1,337.82,248.92,VCC_2,VAA_PIX\, VDD_IO\, VAA,,,,"/>
+<approved hash="201,1,342.9,78.74,VCC_2,VAA_PIX\, VDD_IO\, VAA,,,,"/>
+<approved hash="201,1,401.32,109.22,VCC_2,VAA_PIX\, VDD_IO\, VAA,,,,"/>
+<approved hash="201,1,231.14,243.84,VCC_2,VAA_PIX\, VDD_IO\, VAA,,,,"/>
+<approved hash="201,1,391.16,248.92,VCC_2,VAA_PIX\, VDD_IO\, VAA,,,,"/>
+<approved hash="104,1,111.76,241.3,X1,VCC,VDD_IO,,,"/>
+<approved hash="208,1,226.06,243.84,VAA,sup,,,,"/>
+<approved hash="208,1,342.9,78.74,VAA,sup,,,,"/>
+<approved hash="208,1,332.74,78.74,VAA,out,,,,"/>
+<approved hash="208,1,381,109.22,VAA,sup,,,,"/>
+<approved hash="208,1,381,248.92,VAA,sup,,,,"/>
+<approved hash="208,1,327.66,248.92,VAA,sup,,,,"/>
+<approved hash="208,1,231.14,243.84,VAA_PIX,sup,,,,"/>
+<approved hash="208,1,332.74,73.66,VAA_PIX,out,,,,"/>
+<approved hash="208,1,345.44,73.66,VAA_PIX,sup,,,,"/>
+<approved hash="208,1,370.84,109.22,VAA_PIX,sup,,,,"/>
+<approved hash="208,1,391.16,248.92,VAA_PIX,sup,,,,"/>
+<approved hash="208,1,337.82,248.92,VAA_PIX,sup,,,,"/>
+<approved hash="208,1,332.74,162.56,VDD,out,,,,"/>
+<approved hash="208,1,342.9,162.56,VDD,sup,,,,"/>
+<approved hash="208,1,210.82,243.84,VDD,sup,,,,"/>
+<approved hash="208,1,411.48,109.22,VDD,sup,,,,"/>
+<approved hash="208,1,350.52,248.92,VDD,sup,,,,"/>
+<approved hash="208,1,297.18,248.92,VDD,sup,,,,"/>
+<approved hash="208,1,332.74,116.84,VDD_IO,out,,,,"/>
+<approved hash="208,1,345.44,116.84,VDD_IO,sup,,,,"/>
+<approved hash="208,1,215.9,243.84,VDD_IO,sup,,,,"/>
+<approved hash="208,1,401.32,109.22,VDD_IO,sup,,,,"/>
+<approved hash="208,1,167.64,175.26,VDD_IO,sup,,,,"/>
+<approved hash="208,1,360.68,248.92,VDD_IO,sup,,,,"/>
+<approved hash="208,1,307.34,248.92,VDD_IO,sup,,,,"/>
+<approved hash="208,1,111.76,243.84,VDD_IO,sup,,,,"/>
+<approved hash="208,1,124.46,180.34,VDD_IO,sup,,,,"/>
+<approved hash="208,1,114.3,180.34,VDD_IO,sup,,,,"/>
+<approved hash="208,1,220.98,243.84,VDD_PLL,sup,,,,"/>
+<approved hash="208,1,332.74,121.92,VDD_PLL,out,,,,"/>
+<approved hash="208,1,342.9,121.92,VDD_PLL,sup,,,,"/>
+<approved hash="208,1,391.16,109.22,VDD_PLL,sup,,,,"/>
+<approved hash="208,1,370.84,248.92,VDD_PLL,sup,,,,"/>
+<approved hash="208,1,317.5,248.92,VDD_PLL,sup,,,,"/>
+</errors>
 </schematic>
 </drawing>
 <compatibility>
