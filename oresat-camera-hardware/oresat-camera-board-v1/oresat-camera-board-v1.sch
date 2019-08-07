@@ -8,34 +8,34 @@
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
-<layer number="2" name="Route2" color="15" fill="1" visible="no" active="no"/>
-<layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
-<layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
-<layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
-<layer number="6" name="Route6" color="1" fill="8" visible="no" active="no"/>
-<layer number="7" name="Route7" color="4" fill="8" visible="no" active="no"/>
-<layer number="8" name="Route8" color="1" fill="2" visible="no" active="no"/>
-<layer number="9" name="Route9" color="4" fill="2" visible="no" active="no"/>
-<layer number="10" name="Route10" color="1" fill="7" visible="no" active="no"/>
-<layer number="11" name="Route11" color="4" fill="7" visible="no" active="no"/>
-<layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
-<layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
-<layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
-<layer number="15" name="Route15" color="61" fill="1" visible="no" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
-<layer number="20" name="Dimension" color="24" fill="1" visible="no" active="no"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
+<layer number="2" name="Route2" color="15" fill="1" visible="yes" active="no"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="yes" active="no"/>
+<layer number="4" name="Route4" color="1" fill="4" visible="yes" active="no"/>
+<layer number="5" name="Route5" color="4" fill="4" visible="yes" active="no"/>
+<layer number="6" name="Route6" color="1" fill="8" visible="yes" active="no"/>
+<layer number="7" name="Route7" color="4" fill="8" visible="yes" active="no"/>
+<layer number="8" name="Route8" color="1" fill="2" visible="yes" active="no"/>
+<layer number="9" name="Route9" color="4" fill="2" visible="yes" active="no"/>
+<layer number="10" name="Route10" color="1" fill="7" visible="yes" active="no"/>
+<layer number="11" name="Route11" color="4" fill="7" visible="yes" active="no"/>
+<layer number="12" name="Route12" color="1" fill="5" visible="yes" active="no"/>
+<layer number="13" name="Route13" color="4" fill="5" visible="yes" active="no"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="yes" active="no"/>
+<layer number="15" name="Route15" color="61" fill="1" visible="yes" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
+<layer number="20" name="Dimension" color="24" fill="1" visible="yes" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="no"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -44,8 +44,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -53,19 +53,19 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
-<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
-<layer number="53" name="tGND_GNDA" color="7" fill="1" visible="no" active="no"/>
-<layer number="54" name="bGND_GNDA" color="7" fill="1" visible="no" active="no"/>
-<layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
-<layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
-<layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
-<layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
+<layer number="50" name="dxf" color="7" fill="1" visible="yes" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
+<layer number="53" name="tGND_GNDA" color="7" fill="1" visible="yes" active="no"/>
+<layer number="54" name="bGND_GNDA" color="7" fill="1" visible="yes" active="no"/>
+<layer number="56" name="wert" color="7" fill="1" visible="yes" active="no"/>
+<layer number="57" name="tCAD" color="7" fill="1" visible="yes" active="no"/>
+<layer number="59" name="tCarbon" color="7" fill="1" visible="yes" active="no"/>
+<layer number="60" name="bCarbon" color="7" fill="1" visible="yes" active="no"/>
 <layer number="88" name="SimResults" color="9" fill="1" visible="no" active="yes"/>
 <layer number="89" name="SimProbes" color="9" fill="1" visible="no" active="yes"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="no" active="yes"/>
@@ -236,46 +236,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
 <text x="0" y="-0.254" size="1.778" layer="96" align="top-center">&gt;VALUE</text>
 </symbol>
-<symbol name="1.8V">
-<description>&lt;h3&gt;1.8V Voltage Supply&lt;/h3&gt;</description>
-<wire x1="0.762" y1="1.27" x2="0" y2="2.54" width="0.254" layer="94"/>
-<wire x1="0" y1="2.54" x2="-0.762" y2="1.27" width="0.254" layer="94"/>
-<pin name="1.8V" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
-<text x="0" y="2.794" size="1.778" layer="96" align="bottom-center">&gt;VALUE</text>
-</symbol>
-<symbol name="2.8V">
-<description>&lt;h3&gt;2.8V Voltage Supply&lt;/h3&gt;</description>
-<wire x1="0.762" y1="1.27" x2="0" y2="2.54" width="0.254" layer="94"/>
-<wire x1="0" y1="2.54" x2="-0.762" y2="1.27" width="0.254" layer="94"/>
-<pin name="2.8V" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
-<text x="0" y="2.794" size="1.778" layer="96" align="bottom-center">&gt;VALUE</text>
-</symbol>
 <symbol name="3.3V">
 <description>&lt;h3&gt;3.3V Voltage Supply&lt;/h3&gt;</description>
 <wire x1="0.762" y1="1.27" x2="0" y2="2.54" width="0.254" layer="94"/>
 <wire x1="0" y1="2.54" x2="-0.762" y2="1.27" width="0.254" layer="94"/>
 <pin name="3.3V" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
-<text x="0" y="2.794" size="1.778" layer="96" align="bottom-center">&gt;VALUE</text>
-</symbol>
-<symbol name="VCC">
-<description>&lt;h3&gt;VCC Voltage Supply&lt;/h3&gt;</description>
-<wire x1="0.762" y1="1.27" x2="0" y2="2.54" width="0.254" layer="94"/>
-<wire x1="0" y1="2.54" x2="-0.762" y2="1.27" width="0.254" layer="94"/>
-<pin name="VCC" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
-<text x="0" y="2.794" size="1.778" layer="96" align="bottom-center">&gt;VALUE</text>
-</symbol>
-<symbol name="VCC_1">
-<description>&lt;h3&gt;VCC1 Voltage Supply&lt;/h3&gt;</description>
-<wire x1="0.762" y1="1.27" x2="0" y2="2.54" width="0.254" layer="94"/>
-<wire x1="0" y1="2.54" x2="-0.762" y2="1.27" width="0.254" layer="94"/>
-<pin name="VCC_1" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
-<text x="0" y="2.794" size="1.778" layer="96" align="bottom-center">&gt;VALUE</text>
-</symbol>
-<symbol name="VCC_2">
-<description>&lt;h3&gt;VCC2 Voltage Supply&lt;/h3&gt;</description>
-<wire x1="0.762" y1="1.27" x2="0" y2="2.54" width="0.254" layer="94"/>
-<wire x1="0" y1="2.54" x2="-0.762" y2="1.27" width="0.254" layer="94"/>
-<pin name="VCC_2" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
 <text x="0" y="2.794" size="1.778" layer="96" align="bottom-center">&gt;VALUE</text>
 </symbol>
 </symbols>
@@ -294,81 +259,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </device>
 </devices>
 </deviceset>
-<deviceset name="1.8V" prefix="SUPPLY">
-<description>&lt;h3&gt;1.8V Supply Symbol&lt;/h3&gt;
-&lt;p&gt;Power supply symbol for a specifically-stated 1.8V source.&lt;/p&gt;</description>
-<gates>
-<gate name="G$1" symbol="1.8V" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="2.8V" prefix="SUPPLY">
-<description>&lt;h3&gt;2.8V Supply Symbol&lt;/h3&gt;
-&lt;p&gt;Power supply symbol for a specifically-stated 2.8V source.&lt;/p&gt;</description>
-<gates>
-<gate name="G$1" symbol="2.8V" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="3.3V" prefix="SUPPLY">
 <description>&lt;h3&gt;3.3V Supply Symbol&lt;/h3&gt;
 &lt;p&gt;Power supply symbol for a specifically-stated 3.3V source.&lt;/p&gt;</description>
 <gates>
 <gate name="G$1" symbol="3.3V" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="VCC" prefix="SUPPLY">
-<description>&lt;h3&gt;VCC Voltage Supply&lt;/h3&gt;
-&lt;p&gt;Positive voltage supply (traditionally for a BJT device, C=collector).&lt;/p&gt;</description>
-<gates>
-<gate name="G$1" symbol="VCC" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="VCC_1" prefix="SUPPLY">
-<description>&lt;h3&gt;VCC1 Voltage Supply&lt;/h3&gt;
-&lt;p&gt;Primary VCC voltage supply - Useful for a system with multiple VCC supplies.&lt;/p&gt;</description>
-<gates>
-<gate name="G$2" symbol="VCC_1" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="VCC_2" prefix="SUPPLY">
-<description>&lt;h3&gt;VCC2 Voltage Supply&lt;/h3&gt;
-&lt;p&gt;Secondary VCC voltage supply - Useful for a system with multiple VCC supplies.&lt;/p&gt;</description>
-<gates>
-<gate name="G$1" symbol="VCC_2" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -7411,9 +7306,9 @@ This package is identical to 0402-A, but has its tPlace silkscreen layer removed
 </packages>
 <symbols>
 <symbol name="TPS71928-28_DRV_6">
-<pin name="OUT1" x="15.24" y="2.54" length="short" direction="out" rot="R180"/>
-<pin name="VIN" x="0" y="10.16" length="short" direction="in" rot="R270"/>
-<pin name="OUT2" x="15.24" y="-2.54" length="short" direction="out" rot="R180"/>
+<pin name="OUT1" x="15.24" y="2.54" length="short" direction="pwr" rot="R180"/>
+<pin name="VIN" x="0" y="10.16" length="short" direction="pwr" rot="R270"/>
+<pin name="OUT2" x="15.24" y="-2.54" length="short" direction="pwr" rot="R180"/>
 <pin name="EN2" x="-15.24" y="-2.54" length="short" direction="pas"/>
 <pin name="GND" x="0" y="-10.16" length="short" direction="pwr" rot="R90"/>
 <pin name="EN1" x="-15.24" y="2.54" length="short" direction="pas"/>
@@ -7774,7 +7669,7 @@ This package is identical to 0402-A, but has its tPlace silkscreen layer removed
 </packages>
 <symbols>
 <symbol name="TPS71928-28_DRV_6">
-<pin name="OUT1" x="15.24" y="0" length="short" direction="out" rot="R180"/>
+<pin name="OUT1" x="15.24" y="0" length="short" direction="pas" rot="R180"/>
 <pin name="VIN" x="0" y="10.16" length="short" direction="in" rot="R270"/>
 <pin name="GND" x="0" y="-10.16" length="short" direction="pwr" rot="R90"/>
 <pin name="EN1" x="-15.24" y="0" length="short" direction="pas"/>
@@ -8334,11 +8229,11 @@ PACKAGE CENTER</text>
 </packages>
 <symbols>
 <symbol name="AR0130">
-<pin name="VDD_PLL" x="0" y="30.48" length="short" rot="R270"/>
-<pin name="VDD" x="-5.08" y="30.48" length="short" rot="R270"/>
-<pin name="DGND" x="-2.54" y="-33.02" length="short" rot="R90"/>
-<pin name="AGND" x="0" y="-33.02" length="short" rot="R90"/>
-<pin name="VAA" x="2.54" y="30.48" length="short" rot="R270"/>
+<pin name="VDD_PLL" x="0" y="30.48" length="short" direction="pwr" rot="R270"/>
+<pin name="VDD" x="-5.08" y="30.48" length="short" direction="pwr" rot="R270"/>
+<pin name="DGND" x="-2.54" y="-33.02" length="short" direction="pwr" rot="R90"/>
+<pin name="AGND" x="0" y="-33.02" length="short" direction="pwr" rot="R90"/>
+<pin name="VAA" x="2.54" y="30.48" length="short" direction="pwr" rot="R270"/>
 <pin name="FLASH" x="30.48" y="-25.4" length="short" rot="R180"/>
 <pin name="SDATA" x="-30.48" y="-10.16" length="short"/>
 <pin name="FRAME_VALID" x="30.48" y="-15.24" length="short" rot="R180"/>
@@ -8349,7 +8244,7 @@ PACKAGE CENTER</text>
 <pin name="EXTCLK" x="-30.48" y="15.24" length="short" function="clk"/>
 <pin name="SADDR" x="-30.48" y="-12.7" length="short"/>
 <pin name="SCLK" x="-30.48" y="-7.62" length="short"/>
-<pin name="VDD_IO" x="-2.54" y="30.48" length="short" rot="R270"/>
+<pin name="VDD_IO" x="-2.54" y="30.48" length="short" direction="pwr" rot="R270"/>
 <pin name="DOUT3" x="30.48" y="10.16" length="short" rot="R180"/>
 <pin name="DOUT2" x="30.48" y="12.7" length="short" rot="R180"/>
 <pin name="DOUT1" x="30.48" y="15.24" length="short" rot="R180"/>
@@ -8362,7 +8257,7 @@ PACKAGE CENTER</text>
 <pin name="DOUT7" x="30.48" y="0" length="short" rot="R180"/>
 <pin name="DOUT8" x="30.48" y="-2.54" length="short" rot="R180"/>
 <pin name="DOUT9" x="30.48" y="-5.08" length="short" rot="R180"/>
-<pin name="VAA_PIX" x="5.08" y="30.48" length="short" rot="R270"/>
+<pin name="VAA_PIX" x="5.08" y="30.48" length="short" direction="pwr" rot="R270"/>
 <pin name="TRIGGER" x="-30.48" y="10.16" length="short"/>
 <pin name="!OE" x="-30.48" y="7.62" length="short"/>
 <wire x1="27.94" y1="27.94" x2="27.94" y2="-30.48" width="0.254" layer="94"/>
@@ -9469,6 +9364,113 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </deviceset>
 </devicesets>
 </library>
+<library name="oresat-supplies">
+<packages>
+</packages>
+<symbols>
+<symbol name="VDD">
+<description>VBUS supply</description>
+<wire x1="0.762" y1="-1.27" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="-0.762" y2="-1.27" width="0.254" layer="94"/>
+<text x="0" y="0.254" size="1.778" layer="96" align="bottom-center">&gt;VALUE</text>
+<pin name="VDD" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
+</symbol>
+<symbol name="VDD_IO">
+<description>VBUS supply</description>
+<wire x1="0.762" y1="-1.27" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="-0.762" y2="-1.27" width="0.254" layer="94"/>
+<text x="0" y="0.254" size="1.778" layer="96" align="bottom-center">&gt;VALUE</text>
+<pin name="VDD_IO" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
+</symbol>
+<symbol name="VDD_PLL">
+<description>VBUS supply</description>
+<wire x1="0.762" y1="-1.27" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="-0.762" y2="-1.27" width="0.254" layer="94"/>
+<text x="0" y="0.254" size="1.778" layer="96" align="bottom-center">&gt;VALUE</text>
+<pin name="VDD_PLL" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
+</symbol>
+<symbol name="VAA">
+<description>VBUS supply</description>
+<wire x1="0.762" y1="-1.27" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="-0.762" y2="-1.27" width="0.254" layer="94"/>
+<text x="0" y="0.254" size="1.778" layer="96" align="bottom-center">&gt;VALUE</text>
+<pin name="VAA" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
+</symbol>
+<symbol name="VAA_PIX">
+<description>VBUS supply</description>
+<wire x1="0.762" y1="-1.27" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="-0.762" y2="-1.27" width="0.254" layer="94"/>
+<text x="0" y="0.254" size="1.778" layer="96" align="bottom-center">&gt;VALUE</text>
+<pin name="VAA_PIX" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="VDD" prefix="VBUS">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<gates>
+<gate name="G$1" symbol="VDD" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="VDD_IO" prefix="VBUS">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<gates>
+<gate name="G$1" symbol="VDD_IO" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="VDD_PLL" prefix="VBUS">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<gates>
+<gate name="G$1" symbol="VDD_PLL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="VAA">
+<gates>
+<gate name="G$1" symbol="VAA" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="VAA_PIX" prefix="VBUS">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<gates>
+<gate name="G$1" symbol="VAA_PIX" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -9494,21 +9496,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="C17" library="oresat-rcl" deviceset="C-EU" device="0402-B-NOSILK" value="0.1uF"/>
 <part name="C1" library="oresat-rcl" deviceset="C-EU" device="0402-A-NOSILK" value="10nF"/>
 <part name="GND12" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="SUPPLY19" library="SparkFun-PowerSymbols" deviceset="1.8V" device=""/>
-<part name="SUPPLY21" library="SparkFun-PowerSymbols" deviceset="2.8V" device="" value="2.8V_1"/>
-<part name="SUPPLY24" library="SparkFun-PowerSymbols" deviceset="VCC" device="" value="2.8V_2"/>
-<part name="SUPPLY28" library="SparkFun-PowerSymbols" deviceset="VCC_1" device="" value="2.8V_3"/>
-<part name="SUPPLY31" library="SparkFun-PowerSymbols" deviceset="VCC_2" device="" value="2.8V_4"/>
-<part name="SUPPLY4" library="SparkFun-PowerSymbols" deviceset="1.8V" device=""/>
-<part name="SUPPLY5" library="SparkFun-PowerSymbols" deviceset="2.8V" device="" value="2.8V_1"/>
-<part name="SUPPLY7" library="SparkFun-PowerSymbols" deviceset="VCC" device="" value="2.8V_2"/>
-<part name="SUPPLY6" library="SparkFun-PowerSymbols" deviceset="VCC_1" device="" value="2.8V_3"/>
-<part name="SUPPLY8" library="SparkFun-PowerSymbols" deviceset="VCC_2" device="" value="2.8V_4"/>
 <part name="GND11" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="SUPPLY22" library="SparkFun-PowerSymbols" deviceset="2.8V" device="" value="2.8V_1"/>
-<part name="SUPPLY26" library="SparkFun-PowerSymbols" deviceset="VCC" device="" value="2.8V_2"/>
-<part name="SUPPLY29" library="SparkFun-PowerSymbols" deviceset="VCC_1" device="" value="2.8V_3"/>
-<part name="SUPPLY32" library="SparkFun-PowerSymbols" deviceset="VCC_2" device="" value="2.8V_4"/>
 <part name="GND14" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="SUPPLY25" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 <part name="GND13" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
@@ -9516,13 +9504,9 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="U3" library="U-TI-TPS71928-28-VoltageReg" deviceset="TPS71928-28DRVT" device=""/>
 <part name="SUPPLY11" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 <part name="GND9" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="SUPPLY14" library="SparkFun-PowerSymbols" deviceset="VCC_1" device="" value="2.8V_3"/>
-<part name="SUPPLY16" library="SparkFun-PowerSymbols" deviceset="2.8V" device="" value="2.8V_1"/>
 <part name="U4" library="U-TI-TPS71928-28-VoltageReg" deviceset="TPS71928-28DRVT" device=""/>
 <part name="SUPPLY12" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 <part name="GND10" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="SUPPLY15" library="SparkFun-PowerSymbols" deviceset="VCC_2" device="" value="2.8V_4"/>
-<part name="SUPPLY17" library="SparkFun-PowerSymbols" deviceset="VCC" device="" value="2.8V_2"/>
 <part name="TP7" library="J-TestPoint-Small" deviceset="TP" device="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1"/>
 <part name="TP8" library="J-TestPoint-Small" deviceset="TP" device="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1"/>
 <part name="TP9" library="J-TestPoint-Small" deviceset="TP" device="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1"/>
@@ -9534,11 +9518,9 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="U2" library="U-TI-TPS70618-VoltageReg" deviceset="TPS70618DRVR" device=""/>
 <part name="SUPPLY10" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 <part name="GND8" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="SUPPLY13" library="SparkFun-PowerSymbols" deviceset="1.8V" device=""/>
 <part name="TP1" library="J-TestPoint-Small" deviceset="TP" device="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1"/>
 <part name="C19" library="oresat-rcl" deviceset="C-EU" device="0603-C-NOSILK" value="2.2uF"/>
 <part name="TP6" library="J-TestPoint-Small" deviceset="TP" device="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1"/>
-<part name="SUPPLY33" library="SparkFun-PowerSymbols" deviceset="1.8V" device=""/>
 <part name="C18" library="oresat-rcl" deviceset="C-EU" device="0603-C-NOSILK" value="2.2uF"/>
 <part name="C15" library="oresat-rcl" deviceset="C-EU" device="0603-C-NOSILK" value="2.2uF"/>
 <part name="C11" library="oresat-rcl" deviceset="C-EU" device="0603-C-NOSILK" value="2.2uF"/>
@@ -9549,7 +9531,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="GND7" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="R6" library="oresat-rcl" deviceset="R-US_" device="0402-B" value="DNP"/>
 <part name="X1" library="X-KYOCERA-KC2520B27" deviceset="KC2520B27.0000C10E00" device=""/>
-<part name="SUPPLY1" library="SparkFun-PowerSymbols" deviceset="2.8V" device="" value="2.8V_1"/>
 <part name="GND2" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="R1" library="oresat-rcl" deviceset="R-US_" device="0402-B" value="10k"/>
 <part name="GND1" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
@@ -9560,18 +9541,38 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="U1" library="U-ONSemi-AR0134" deviceset="AR0134CSSM00SPCA0" device=""/>
 <part name="GND6" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="R3" library="oresat-rcl" deviceset="R-US_" device="0402-B" value="DNP"/>
-<part name="SUPPLY3" library="SparkFun-PowerSymbols" deviceset="2.8V" device="" value="2.8V_1"/>
 <part name="R4" library="oresat-rcl" deviceset="R-US_" device="0402-B" value="10k"/>
 <part name="GND4" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="SUPPLY18" library="SparkFun-PowerSymbols" deviceset="1.8V" device=""/>
-<part name="SUPPLY20" library="SparkFun-PowerSymbols" deviceset="2.8V" device="" value="2.8V_1"/>
-<part name="SUPPLY23" library="SparkFun-PowerSymbols" deviceset="VCC" device="" value="2.8V_2"/>
-<part name="SUPPLY27" library="SparkFun-PowerSymbols" deviceset="VCC_1" device="" value="2.8V_3"/>
-<part name="SUPPLY30" library="SparkFun-PowerSymbols" deviceset="VCC_2" device="" value="2.8V_4"/>
 <part name="R7" library="oresat-rcl" deviceset="R-US_" device="0402-B" value="4.7k"/>
-<part name="SUPPLY34" library="SparkFun-PowerSymbols" deviceset="2.8V" device="" value="2.8V_1"/>
 <part name="R8" library="oresat-rcl" deviceset="R-US_" device="0402-B" value="4.7k"/>
-<part name="SUPPLY35" library="SparkFun-PowerSymbols" deviceset="2.8V" device="" value="2.8V_1"/>
+<part name="VBUS3" library="oresat-supplies" deviceset="VDD" device=""/>
+<part name="VBUS4" library="oresat-supplies" deviceset="VDD_IO" device=""/>
+<part name="VBUS2" library="oresat-supplies" deviceset="VDD_PLL" device=""/>
+<part name="U$1" library="oresat-supplies" deviceset="VAA" device=""/>
+<part name="VBUS5" library="oresat-supplies" deviceset="VAA_PIX" device=""/>
+<part name="VBUS6" library="oresat-supplies" deviceset="VDD" device=""/>
+<part name="VBUS7" library="oresat-supplies" deviceset="VDD_IO" device=""/>
+<part name="VBUS8" library="oresat-supplies" deviceset="VDD_PLL" device=""/>
+<part name="U$2" library="oresat-supplies" deviceset="VAA" device=""/>
+<part name="VBUS9" library="oresat-supplies" deviceset="VAA_PIX" device=""/>
+<part name="VBUS10" library="oresat-supplies" deviceset="VDD" device=""/>
+<part name="VBUS11" library="oresat-supplies" deviceset="VDD_IO" device=""/>
+<part name="VBUS12" library="oresat-supplies" deviceset="VDD_PLL" device=""/>
+<part name="U$3" library="oresat-supplies" deviceset="VAA" device=""/>
+<part name="VBUS13" library="oresat-supplies" deviceset="VAA_PIX" device=""/>
+<part name="VBUS14" library="oresat-supplies" deviceset="VDD" device=""/>
+<part name="VBUS15" library="oresat-supplies" deviceset="VDD_PLL" device=""/>
+<part name="VBUS16" library="oresat-supplies" deviceset="VDD_IO" device=""/>
+<part name="U$4" library="oresat-supplies" deviceset="VAA" device=""/>
+<part name="VBUS17" library="oresat-supplies" deviceset="VAA_PIX" device=""/>
+<part name="VBUS1" library="oresat-supplies" deviceset="VAA_PIX" device=""/>
+<part name="U$5" library="oresat-supplies" deviceset="VAA" device=""/>
+<part name="VBUS18" library="oresat-supplies" deviceset="VDD_PLL" device=""/>
+<part name="VBUS19" library="oresat-supplies" deviceset="VDD_IO" device=""/>
+<part name="VBUS20" library="oresat-supplies" deviceset="VDD" device=""/>
+<part name="VBUS21" library="oresat-supplies" deviceset="VDD_IO" device=""/>
+<part name="VBUS22" library="oresat-supplies" deviceset="VDD_IO" device=""/>
+<part name="VBUS23" library="oresat-supplies" deviceset="VDD_IO" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -9636,13 +9637,13 @@ VAA_PIX   = 2.8V</text>
 <attribute name="NAME" x="339.344" y="244.221" size="1.778" layer="95"/>
 <attribute name="VALUE" x="339.344" y="239.141" size="1.778" layer="96"/>
 </instance>
-<instance part="C6" gate="CE" x="381" y="144.78" smashed="yes">
-<attribute name="NAME" x="382.524" y="145.161" size="1.778" layer="95"/>
-<attribute name="VALUE" x="382.524" y="140.081" size="1.778" layer="96"/>
+<instance part="C6" gate="CE" x="391.16" y="157.48" smashed="yes">
+<attribute name="NAME" x="392.684" y="157.861" size="1.778" layer="95"/>
+<attribute name="VALUE" x="392.684" y="152.781" size="1.778" layer="96"/>
 </instance>
-<instance part="C10" gate="CE" x="391.16" y="144.78" smashed="yes">
-<attribute name="NAME" x="392.684" y="145.161" size="1.778" layer="95"/>
-<attribute name="VALUE" x="392.684" y="140.081" size="1.778" layer="96"/>
+<instance part="C10" gate="CE" x="401.32" y="157.48" smashed="yes">
+<attribute name="NAME" x="402.844" y="157.861" size="1.778" layer="95"/>
+<attribute name="VALUE" x="402.844" y="152.781" size="1.778" layer="96"/>
 </instance>
 <instance part="C3" gate="CE" x="350.52" y="243.84" smashed="yes">
 <attribute name="NAME" x="352.044" y="244.221" size="1.778" layer="95"/>
@@ -9671,31 +9672,17 @@ VAA_PIX   = 2.8V</text>
 <instance part="GND12" gate="1" x="370.84" y="233.68" smashed="yes">
 <attribute name="VALUE" x="370.84" y="233.426" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="SUPPLY19" gate="G$1" x="350.52" y="248.92" smashed="yes"/>
-<instance part="SUPPLY21" gate="G$1" x="360.68" y="248.92" smashed="yes"/>
-<instance part="SUPPLY24" gate="G$1" x="370.84" y="248.92" smashed="yes"/>
-<instance part="SUPPLY28" gate="G$2" x="381" y="248.92" smashed="yes"/>
-<instance part="SUPPLY31" gate="G$1" x="391.16" y="248.92" smashed="yes"/>
-<instance part="SUPPLY4" gate="G$1" x="210.82" y="243.84" smashed="yes"/>
-<instance part="SUPPLY5" gate="G$1" x="215.9" y="243.84" smashed="yes"/>
-<instance part="SUPPLY7" gate="G$1" x="226.06" y="243.84" smashed="yes"/>
-<instance part="SUPPLY6" gate="G$2" x="220.98" y="243.84" smashed="yes"/>
-<instance part="SUPPLY8" gate="G$1" x="231.14" y="243.84" smashed="yes"/>
 <instance part="GND11" gate="1" x="317.5" y="233.68" smashed="yes">
 <attribute name="VALUE" x="317.5" y="233.426" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="SUPPLY22" gate="G$1" x="370.84" y="109.22" smashed="yes"/>
-<instance part="SUPPLY26" gate="G$1" x="381" y="109.22" smashed="yes"/>
-<instance part="SUPPLY29" gate="G$2" x="391.16" y="109.22" smashed="yes"/>
-<instance part="SUPPLY32" gate="G$1" x="401.32" y="109.22" smashed="yes"/>
 <instance part="GND14" gate="1" x="391.16" y="88.9" smashed="yes">
 <attribute name="VALUE" x="391.16" y="88.646" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="SUPPLY25" gate="G$1" x="391.16" y="152.4" smashed="yes">
-<attribute name="VALUE" x="391.16" y="155.194" size="1.778" layer="96" align="bottom-center"/>
+<instance part="SUPPLY25" gate="G$1" x="401.32" y="165.1" smashed="yes">
+<attribute name="VALUE" x="401.32" y="167.894" size="1.778" layer="96" align="bottom-center"/>
 </instance>
-<instance part="GND13" gate="1" x="391.16" y="132.08" smashed="yes">
-<attribute name="VALUE" x="391.16" y="131.826" size="1.778" layer="96" align="top-center"/>
+<instance part="GND13" gate="1" x="401.32" y="144.78" smashed="yes">
+<attribute name="VALUE" x="401.32" y="144.526" size="1.778" layer="96" align="top-center"/>
 </instance>
 <instance part="FRAME1" gate="G$1" x="2.54" y="1.27" smashed="yes"/>
 <instance part="FRAME1" gate="G$2" x="327.66" y="1.27" smashed="yes">
@@ -9713,8 +9700,6 @@ VAA_PIX   = 2.8V</text>
 <instance part="GND9" gate="1" x="317.5" y="104.14" smashed="yes">
 <attribute name="VALUE" x="316.484" y="101.6" size="1.27" layer="96" rot="R90" align="top-center"/>
 </instance>
-<instance part="SUPPLY14" gate="G$2" x="342.9" y="121.92" smashed="yes"/>
-<instance part="SUPPLY16" gate="G$1" x="345.44" y="116.84" smashed="yes"/>
 <instance part="U4" gate="A" x="317.5" y="76.2" smashed="yes">
 <attribute name="NAME" x="325.12" y="87.884" size="2.0828" layer="95" ratio="6" rot="SR0"/>
 <attribute name="VALUE" x="325.12" y="85.344" size="2.0828" layer="96" ratio="6" rot="SR0"/>
@@ -9725,8 +9710,6 @@ VAA_PIX   = 2.8V</text>
 <instance part="GND10" gate="1" x="317.5" y="60.96" smashed="yes">
 <attribute name="VALUE" x="316.484" y="58.42" size="1.27" layer="96" rot="R90" align="top-center"/>
 </instance>
-<instance part="SUPPLY15" gate="G$1" x="342.9" y="78.74" smashed="yes"/>
-<instance part="SUPPLY17" gate="G$1" x="345.44" y="73.66" smashed="yes"/>
 <instance part="TP7" gate="G$1" x="335.28" y="124.46" smashed="yes">
 <attribute name="NAME" x="336.55" y="123.19" size="1.27" layer="95"/>
 <attribute name="TP_SIGNAL_NAME" x="336.55" y="123.19" size="1.778" layer="97"/>
@@ -9769,7 +9752,6 @@ VAA_PIX   = 2.8V</text>
 <instance part="GND8" gate="1" x="317.5" y="147.32" smashed="yes">
 <attribute name="VALUE" x="316.484" y="144.78" size="1.27" layer="96" rot="R90" align="top-center"/>
 </instance>
-<instance part="SUPPLY13" gate="G$1" x="342.9" y="162.56" smashed="yes"/>
 <instance part="TP1" gate="G$1" x="299.72" y="165.1" smashed="yes">
 <attribute name="NAME" x="300.228" y="165.1" size="1.27" layer="95"/>
 <attribute name="TP_SIGNAL_NAME" x="300.99" y="163.83" size="1.778" layer="97"/>
@@ -9782,7 +9764,6 @@ VAA_PIX   = 2.8V</text>
 <attribute name="NAME" x="336.55" y="163.83" size="1.27" layer="95"/>
 <attribute name="TP_SIGNAL_NAME" x="336.55" y="163.83" size="1.778" layer="97"/>
 </instance>
-<instance part="SUPPLY33" gate="G$1" x="411.48" y="109.22" smashed="yes"/>
 <instance part="C18" gate="CE" x="401.32" y="101.6" smashed="yes">
 <attribute name="NAME" x="402.844" y="101.981" size="1.778" layer="95"/>
 <attribute name="VALUE" x="402.844" y="96.901" size="1.778" layer="96"/>
@@ -9799,9 +9780,9 @@ VAA_PIX   = 2.8V</text>
 <attribute name="NAME" x="372.364" y="101.981" size="1.778" layer="95"/>
 <attribute name="VALUE" x="372.364" y="96.901" size="1.778" layer="96"/>
 </instance>
-<instance part="C14" gate="CE" x="401.32" y="144.78" smashed="yes">
-<attribute name="NAME" x="402.844" y="145.161" size="1.778" layer="95"/>
-<attribute name="VALUE" x="402.844" y="140.081" size="1.778" layer="96"/>
+<instance part="C14" gate="CE" x="411.48" y="157.48" smashed="yes">
+<attribute name="NAME" x="413.004" y="157.861" size="1.778" layer="95"/>
+<attribute name="VALUE" x="413.004" y="152.781" size="1.778" layer="96"/>
 </instance>
 <instance part="R5" gate="R" x="289.56" y="170.18" smashed="yes" rot="R270">
 <attribute name="NAME" x="291.0586" y="173.99" size="1.778" layer="95" rot="R270"/>
@@ -9821,7 +9802,6 @@ VAA_PIX   = 2.8V</text>
 <attribute name="NAME" x="119.38" y="243.84" size="2.0828" layer="95" ratio="6" rot="SR0"/>
 <attribute name="VALUE" x="119.38" y="241.3" size="2.0828" layer="96" ratio="6" rot="SR0"/>
 </instance>
-<instance part="SUPPLY1" gate="G$1" x="111.76" y="243.84" smashed="yes"/>
 <instance part="GND2" gate="1" x="111.76" y="210.82" smashed="yes">
 <attribute name="VALUE" x="111.0615" y="208.28" size="1.27" layer="96" rot="R90" align="top-center"/>
 </instance>
@@ -9856,7 +9836,6 @@ VAA_PIX   = 2.8V</text>
 <attribute name="NAME" x="166.1414" y="163.83" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="170.942" y="163.83" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="SUPPLY3" gate="G$1" x="167.64" y="175.26" smashed="yes"/>
 <instance part="R4" gate="R" x="167.64" y="154.94" smashed="yes" rot="R90">
 <attribute name="NAME" x="166.1414" y="151.13" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="170.942" y="151.13" size="1.778" layer="96" rot="R90"/>
@@ -9864,21 +9843,98 @@ VAA_PIX   = 2.8V</text>
 <instance part="GND4" gate="1" x="167.64" y="144.78" smashed="yes">
 <attribute name="VALUE" x="167.64" y="144.526" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="SUPPLY18" gate="G$1" x="297.18" y="248.92" smashed="yes"/>
-<instance part="SUPPLY20" gate="G$1" x="307.34" y="248.92" smashed="yes"/>
-<instance part="SUPPLY23" gate="G$1" x="317.5" y="248.92" smashed="yes"/>
-<instance part="SUPPLY27" gate="G$2" x="327.66" y="248.92" smashed="yes"/>
-<instance part="SUPPLY30" gate="G$1" x="337.82" y="248.92" smashed="yes"/>
 <instance part="R7" gate="R" x="124.46" y="172.72" smashed="yes" rot="R90">
 <attribute name="NAME" x="122.9614" y="168.91" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="127.762" y="168.91" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="SUPPLY34" gate="G$1" x="124.46" y="180.34" smashed="yes"/>
 <instance part="R8" gate="R" x="114.3" y="172.72" smashed="yes" rot="R90">
 <attribute name="NAME" x="112.8014" y="168.91" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="117.602" y="168.91" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="SUPPLY35" gate="G$1" x="114.3" y="180.34" smashed="yes"/>
+<instance part="VBUS3" gate="G$1" x="210.82" y="246.38" smashed="yes">
+<attribute name="VALUE" x="210.566" y="248.92" size="1.778" layer="96" rot="R90" align="bottom-center"/>
+</instance>
+<instance part="VBUS4" gate="G$1" x="215.9" y="246.38" smashed="yes">
+<attribute name="VALUE" x="215.646" y="251.46" size="1.778" layer="96" rot="R90" align="bottom-center"/>
+</instance>
+<instance part="VBUS2" gate="G$1" x="220.98" y="246.38" smashed="yes">
+<attribute name="VALUE" x="220.726" y="251.46" size="1.778" layer="96" rot="R90" align="bottom-center"/>
+</instance>
+<instance part="U$1" gate="G$1" x="226.06" y="246.38" smashed="yes">
+<attribute name="VALUE" x="225.806" y="248.92" size="1.778" layer="96" rot="R90" align="bottom-center"/>
+</instance>
+<instance part="VBUS5" gate="G$1" x="231.14" y="246.38" smashed="yes">
+<attribute name="VALUE" x="230.886" y="251.46" size="1.778" layer="96" rot="R90" align="bottom-center"/>
+</instance>
+<instance part="VBUS6" gate="G$1" x="297.18" y="251.46" smashed="yes">
+<attribute name="VALUE" x="297.18" y="251.714" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="VBUS7" gate="G$1" x="307.34" y="251.46" smashed="yes">
+<attribute name="VALUE" x="307.34" y="251.714" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="VBUS8" gate="G$1" x="317.5" y="251.46" smashed="yes">
+<attribute name="VALUE" x="317.5" y="251.714" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="U$2" gate="G$1" x="327.66" y="251.46" smashed="yes">
+<attribute name="VALUE" x="327.66" y="251.714" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="VBUS9" gate="G$1" x="337.82" y="251.46" smashed="yes">
+<attribute name="VALUE" x="337.82" y="251.714" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="VBUS10" gate="G$1" x="350.52" y="251.46" smashed="yes">
+<attribute name="VALUE" x="350.52" y="251.714" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="VBUS11" gate="G$1" x="360.68" y="251.46" smashed="yes">
+<attribute name="VALUE" x="360.68" y="251.714" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="VBUS12" gate="G$1" x="370.84" y="251.46" smashed="yes">
+<attribute name="VALUE" x="370.84" y="251.714" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="U$3" gate="G$1" x="381" y="251.46" smashed="yes">
+<attribute name="VALUE" x="381" y="251.714" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="VBUS13" gate="G$1" x="391.16" y="251.46" smashed="yes">
+<attribute name="VALUE" x="391.16" y="251.714" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="VBUS14" gate="G$1" x="342.9" y="165.1" smashed="yes">
+<attribute name="VALUE" x="347.98" y="162.814" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="VBUS15" gate="G$1" x="342.9" y="124.46" smashed="yes">
+<attribute name="VALUE" x="350.52" y="122.174" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="VBUS16" gate="G$1" x="345.44" y="119.38" smashed="yes">
+<attribute name="VALUE" x="353.06" y="117.094" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="U$4" gate="G$1" x="342.9" y="81.28" smashed="yes">
+<attribute name="VALUE" x="347.98" y="78.994" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="VBUS17" gate="G$1" x="345.44" y="76.2" smashed="yes">
+<attribute name="VALUE" x="353.06" y="73.914" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="VBUS1" gate="G$1" x="370.84" y="111.76" smashed="yes">
+<attribute name="VALUE" x="370.586" y="116.84" size="1.778" layer="96" rot="R90" align="bottom-center"/>
+</instance>
+<instance part="U$5" gate="G$1" x="381" y="111.76" smashed="yes">
+<attribute name="VALUE" x="380.746" y="114.3" size="1.778" layer="96" rot="R90" align="bottom-center"/>
+</instance>
+<instance part="VBUS18" gate="G$1" x="391.16" y="111.76" smashed="yes">
+<attribute name="VALUE" x="390.906" y="116.84" size="1.778" layer="96" rot="R90" align="bottom-center"/>
+</instance>
+<instance part="VBUS19" gate="G$1" x="401.32" y="111.76" smashed="yes">
+<attribute name="VALUE" x="401.066" y="116.84" size="1.778" layer="96" rot="R90" align="bottom-center"/>
+</instance>
+<instance part="VBUS20" gate="G$1" x="411.48" y="111.76" smashed="yes">
+<attribute name="VALUE" x="411.226" y="114.3" size="1.778" layer="96" rot="R90" align="bottom-center"/>
+</instance>
+<instance part="VBUS21" gate="G$1" x="167.64" y="177.8" smashed="yes">
+<attribute name="VALUE" x="167.64" y="178.054" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="VBUS22" gate="G$1" x="119.38" y="185.42" smashed="yes">
+<attribute name="VALUE" x="119.38" y="185.674" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="VBUS23" gate="G$1" x="111.76" y="246.38" smashed="yes">
+<attribute name="VALUE" x="111.76" y="246.634" size="1.778" layer="96" align="bottom-center"/>
+</instance>
 </instances>
 <busses>
 <bus name="D[0..11],HSYNC,PIXCLK,VSYNC">
@@ -10019,16 +10075,16 @@ VAA_PIX   = 2.8V</text>
 </segment>
 <segment>
 <pinref part="C6" gate="CE" pin="2"/>
-<wire x1="381" y1="139.7" x2="381" y2="137.16" width="0.1524" layer="91"/>
-<wire x1="381" y1="137.16" x2="391.16" y2="137.16" width="0.1524" layer="91"/>
-<wire x1="391.16" y1="137.16" x2="401.32" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="391.16" y1="152.4" x2="391.16" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="391.16" y1="149.86" x2="401.32" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="401.32" y1="149.86" x2="411.48" y2="149.86" width="0.1524" layer="91"/>
 <pinref part="C10" gate="CE" pin="2"/>
-<wire x1="391.16" y1="139.7" x2="391.16" y2="137.16" width="0.1524" layer="91"/>
-<junction x="391.16" y="137.16"/>
+<wire x1="401.32" y1="152.4" x2="401.32" y2="149.86" width="0.1524" layer="91"/>
+<junction x="401.32" y="149.86"/>
 <pinref part="GND13" gate="1" pin="GND"/>
-<wire x1="391.16" y1="137.16" x2="391.16" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="401.32" y1="149.86" x2="401.32" y2="147.32" width="0.1524" layer="91"/>
 <pinref part="C14" gate="CE" pin="2"/>
-<wire x1="401.32" y1="139.7" x2="401.32" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="411.48" y1="152.4" x2="411.48" y2="149.86" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R6" gate="R" pin="2"/>
@@ -10125,16 +10181,16 @@ VAA_PIX   = 2.8V</text>
 </segment>
 <segment>
 <pinref part="C6" gate="CE" pin="1"/>
-<wire x1="381" y1="147.32" x2="381" y2="149.86" width="0.1524" layer="91"/>
-<wire x1="381" y1="149.86" x2="391.16" y2="149.86" width="0.1524" layer="91"/>
-<wire x1="391.16" y1="149.86" x2="401.32" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="391.16" y1="160.02" x2="391.16" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="391.16" y1="162.56" x2="401.32" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="401.32" y1="162.56" x2="411.48" y2="162.56" width="0.1524" layer="91"/>
 <pinref part="C10" gate="CE" pin="1"/>
-<wire x1="391.16" y1="147.32" x2="391.16" y2="149.86" width="0.1524" layer="91"/>
-<junction x="391.16" y="149.86"/>
+<wire x1="401.32" y1="160.02" x2="401.32" y2="162.56" width="0.1524" layer="91"/>
+<junction x="401.32" y="162.56"/>
 <pinref part="SUPPLY25" gate="G$1" pin="3.3V"/>
-<wire x1="391.16" y1="149.86" x2="391.16" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="401.32" y1="162.56" x2="401.32" y2="165.1" width="0.1524" layer="91"/>
 <pinref part="C14" gate="CE" pin="1"/>
-<wire x1="401.32" y1="147.32" x2="401.32" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="411.48" y1="160.02" x2="411.48" y2="162.56" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R5" gate="R" pin="1"/>
@@ -10171,85 +10227,73 @@ VAA_PIX   = 2.8V</text>
 <net name="VDD" class="0">
 <segment>
 <pinref part="U2" gate="A" pin="OUT1"/>
-<pinref part="SUPPLY13" gate="G$1" pin="1.8V"/>
 <wire x1="332.74" y1="162.56" x2="335.28" y2="162.56" width="0.1524" layer="91"/>
 <pinref part="TP6" gate="G$1" pin="TP"/>
 <wire x1="335.28" y1="162.56" x2="342.9" y2="162.56" width="0.1524" layer="91"/>
 <junction x="335.28" y="162.56"/>
-<label x="345.44" y="162.56" size="1.778" layer="95"/>
+<pinref part="VBUS14" gate="G$1" pin="VDD"/>
 </segment>
 <segment>
 <wire x1="215.9" y1="233.68" x2="215.9" y2="236.22" width="0.1524" layer="91"/>
 <wire x1="215.9" y1="236.22" x2="210.82" y2="236.22" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="236.22" x2="210.82" y2="243.84" width="0.1524" layer="91"/>
-<pinref part="SUPPLY4" gate="G$1" pin="1.8V"/>
-<label x="211.582" y="246.888" size="1.778" layer="95" rot="R90"/>
 <pinref part="U1" gate="G$1" pin="VDD"/>
+<pinref part="VBUS3" gate="G$1" pin="VDD"/>
 </segment>
 <segment>
 <pinref part="C19" gate="CE" pin="1"/>
-<pinref part="SUPPLY33" gate="G$1" pin="1.8V"/>
 <wire x1="411.48" y1="104.14" x2="411.48" y2="109.22" width="0.1524" layer="91"/>
-<label x="411.48" y="111.76" size="1.778" layer="95" rot="R90"/>
+<pinref part="VBUS20" gate="G$1" pin="VDD"/>
 </segment>
 <segment>
 <pinref part="C3" gate="CE" pin="1"/>
 <wire x1="350.52" y1="246.38" x2="350.52" y2="248.92" width="0.1524" layer="91"/>
-<pinref part="SUPPLY19" gate="G$1" pin="1.8V"/>
-<label x="350.52" y="251.46" size="1.27" layer="95" rot="R90"/>
+<pinref part="VBUS10" gate="G$1" pin="VDD"/>
 </segment>
 <segment>
 <wire x1="297.18" y1="246.38" x2="297.18" y2="248.92" width="0.1524" layer="91"/>
-<pinref part="SUPPLY18" gate="G$1" pin="1.8V"/>
 <pinref part="C2" gate="CE" pin="1"/>
-<label x="297.18" y="251.46" size="1.27" layer="95" rot="R90"/>
+<pinref part="VBUS6" gate="G$1" pin="VDD"/>
 </segment>
 </net>
 <net name="VDD_IO" class="0">
 <segment>
 <pinref part="U3" gate="A" pin="OUT2"/>
-<pinref part="SUPPLY16" gate="G$1" pin="2.8V"/>
 <wire x1="332.74" y1="116.84" x2="335.28" y2="116.84" width="0.1524" layer="91"/>
 <pinref part="TP8" gate="G$1" pin="TP"/>
 <wire x1="335.28" y1="116.84" x2="345.44" y2="116.84" width="0.1524" layer="91"/>
 <junction x="335.28" y="116.84"/>
-<label x="347.98" y="116.84" size="1.778" layer="95"/>
+<pinref part="VBUS16" gate="G$1" pin="VDD_IO"/>
 </segment>
 <segment>
 <wire x1="218.44" y1="233.68" x2="218.44" y2="238.76" width="0.1524" layer="91"/>
 <wire x1="218.44" y1="238.76" x2="215.9" y2="238.76" width="0.1524" layer="91"/>
 <wire x1="215.9" y1="238.76" x2="215.9" y2="243.84" width="0.1524" layer="91"/>
-<pinref part="SUPPLY5" gate="G$1" pin="2.8V"/>
-<label x="216.408" y="246.888" size="1.778" layer="95" rot="R90"/>
 <pinref part="U1" gate="G$1" pin="VDD_IO"/>
+<pinref part="VBUS4" gate="G$1" pin="VDD_IO"/>
 </segment>
 <segment>
-<pinref part="SUPPLY32" gate="G$1" pin="VCC_2"/>
 <pinref part="C18" gate="CE" pin="1"/>
 <wire x1="401.32" y1="109.22" x2="401.32" y2="104.14" width="0.1524" layer="91"/>
-<label x="401.32" y="111.76" size="1.778" layer="95" rot="R90"/>
+<pinref part="VBUS19" gate="G$1" pin="VDD_IO"/>
 </segment>
 <segment>
-<pinref part="SUPPLY3" gate="G$1" pin="2.8V"/>
 <pinref part="R3" gate="R" pin="2"/>
 <wire x1="167.64" y1="175.26" x2="167.64" y2="172.72" width="0.1524" layer="91"/>
-<label x="167.64" y="177.8" size="1.778" layer="95" rot="R90"/>
+<pinref part="VBUS21" gate="G$1" pin="VDD_IO"/>
 </segment>
 <segment>
 <pinref part="C5" gate="CE" pin="1"/>
 <wire x1="360.68" y1="246.38" x2="360.68" y2="248.92" width="0.1524" layer="91"/>
-<pinref part="SUPPLY21" gate="G$1" pin="2.8V"/>
-<label x="360.68" y="251.46" size="1.27" layer="95" rot="R90"/>
+<pinref part="VBUS11" gate="G$1" pin="VDD_IO"/>
 </segment>
 <segment>
 <wire x1="307.34" y1="246.38" x2="307.34" y2="248.92" width="0.1524" layer="91"/>
-<pinref part="SUPPLY20" gate="G$1" pin="2.8V"/>
 <pinref part="C4" gate="CE" pin="1"/>
-<label x="307.34" y="251.46" size="1.27" layer="95" rot="R90"/>
+<pinref part="VBUS7" gate="G$1" pin="VDD_IO"/>
 </segment>
 <segment>
 <pinref part="X1" gate="A" pin="VCC"/>
-<pinref part="SUPPLY1" gate="G$1" pin="2.8V"/>
 <wire x1="111.76" y1="241.3" x2="111.76" y2="243.84" width="0.1524" layer="91"/>
 <junction x="111.76" y="241.3"/>
 <pinref part="C1" gate="CE" pin="2"/>
@@ -10259,19 +10303,18 @@ VAA_PIX   = 2.8V</text>
 <pinref part="R1" gate="R" pin="2"/>
 <wire x1="91.44" y1="238.76" x2="91.44" y2="241.3" width="0.1524" layer="91"/>
 <junction x="91.44" y="241.3"/>
-<label x="112.268" y="247.142" size="1.27" layer="95" rot="R90"/>
+<pinref part="VBUS23" gate="G$1" pin="VDD_IO"/>
 </segment>
 <segment>
-<pinref part="SUPPLY34" gate="G$1" pin="2.8V"/>
 <pinref part="R7" gate="R" pin="2"/>
 <wire x1="124.46" y1="180.34" x2="124.46" y2="177.8" width="0.1524" layer="91"/>
-<label x="124.46" y="182.88" size="1.778" layer="95" rot="R90"/>
-</segment>
-<segment>
-<pinref part="SUPPLY35" gate="G$1" pin="2.8V"/>
 <pinref part="R8" gate="R" pin="2"/>
-<wire x1="114.3" y1="180.34" x2="114.3" y2="177.8" width="0.1524" layer="91"/>
-<label x="114.3" y="182.88" size="1.778" layer="95" rot="R90"/>
+<pinref part="VBUS22" gate="G$1" pin="VDD_IO"/>
+<wire x1="119.38" y1="182.88" x2="114.3" y2="182.88" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="182.88" x2="114.3" y2="177.8" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="182.88" x2="124.46" y2="182.88" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="182.88" x2="124.46" y2="180.34" width="0.1524" layer="91"/>
+<junction x="119.38" y="182.88"/>
 </segment>
 </net>
 <net name="VAA" class="0">
@@ -10279,71 +10322,61 @@ VAA_PIX   = 2.8V</text>
 <wire x1="223.52" y1="233.68" x2="223.52" y2="238.76" width="0.1524" layer="91"/>
 <wire x1="223.52" y1="238.76" x2="226.06" y2="238.76" width="0.1524" layer="91"/>
 <wire x1="226.06" y1="238.76" x2="226.06" y2="243.84" width="0.1524" layer="91"/>
-<pinref part="SUPPLY7" gate="G$1" pin="VCC"/>
-<label x="226.822" y="247.142" size="1.778" layer="95" rot="R90"/>
 <pinref part="U1" gate="G$1" pin="VAA"/>
+<pinref part="U$1" gate="G$1" pin="VAA"/>
 </segment>
 <segment>
-<pinref part="SUPPLY15" gate="G$1" pin="VCC_2"/>
 <pinref part="U4" gate="A" pin="OUT1"/>
 <wire x1="342.9" y1="78.74" x2="335.28" y2="78.74" width="0.1524" layer="91"/>
 <pinref part="TP9" gate="G$1" pin="TP"/>
 <wire x1="335.28" y1="78.74" x2="332.74" y2="78.74" width="0.1524" layer="91"/>
 <junction x="335.28" y="78.74"/>
-<label x="345.44" y="78.74" size="1.778" layer="95"/>
+<pinref part="U$4" gate="G$1" pin="VAA"/>
 </segment>
 <segment>
-<pinref part="SUPPLY26" gate="G$1" pin="VCC"/>
 <pinref part="C11" gate="CE" pin="1"/>
 <wire x1="381" y1="109.22" x2="381" y2="104.14" width="0.1524" layer="91"/>
-<label x="381" y="111.76" size="1.778" layer="95" rot="R90"/>
+<pinref part="U$5" gate="G$1" pin="VAA"/>
 </segment>
 <segment>
 <pinref part="C13" gate="CE" pin="1"/>
 <wire x1="381" y1="246.38" x2="381" y2="248.92" width="0.1524" layer="91"/>
-<pinref part="SUPPLY28" gate="G$2" pin="VCC_1"/>
-<label x="381" y="251.46" size="1.27" layer="95" rot="R90"/>
+<pinref part="U$3" gate="G$1" pin="VAA"/>
 </segment>
 <segment>
 <wire x1="327.66" y1="246.38" x2="327.66" y2="248.92" width="0.1524" layer="91"/>
-<pinref part="SUPPLY27" gate="G$2" pin="VCC_1"/>
 <pinref part="C12" gate="CE" pin="1"/>
-<label x="327.66" y="251.46" size="1.27" layer="95" rot="R90"/>
+<pinref part="U$2" gate="G$1" pin="VAA"/>
 </segment>
 </net>
 <net name="VDD_PLL" class="0">
 <segment>
 <wire x1="220.98" y1="233.68" x2="220.98" y2="243.84" width="0.1524" layer="91"/>
-<pinref part="SUPPLY6" gate="G$2" pin="VCC_1"/>
-<label x="221.742" y="247.142" size="1.778" layer="95" rot="R90"/>
 <pinref part="U1" gate="G$1" pin="VDD_PLL"/>
+<pinref part="VBUS2" gate="G$1" pin="VDD_PLL"/>
 </segment>
 <segment>
 <pinref part="U3" gate="A" pin="OUT1"/>
-<pinref part="SUPPLY14" gate="G$2" pin="VCC_1"/>
 <wire x1="332.74" y1="121.92" x2="335.28" y2="121.92" width="0.1524" layer="91"/>
 <pinref part="TP7" gate="G$1" pin="TP"/>
 <wire x1="335.28" y1="121.92" x2="342.9" y2="121.92" width="0.1524" layer="91"/>
 <junction x="335.28" y="121.92"/>
-<label x="345.44" y="121.92" size="1.778" layer="95"/>
+<pinref part="VBUS15" gate="G$1" pin="VDD_PLL"/>
 </segment>
 <segment>
 <pinref part="C15" gate="CE" pin="1"/>
-<pinref part="SUPPLY29" gate="G$2" pin="VCC_1"/>
 <wire x1="391.16" y1="104.14" x2="391.16" y2="109.22" width="0.1524" layer="91"/>
-<label x="391.16" y="111.76" size="1.778" layer="95" rot="R90"/>
+<pinref part="VBUS18" gate="G$1" pin="VDD_PLL"/>
 </segment>
 <segment>
 <pinref part="C9" gate="CE" pin="1"/>
 <wire x1="370.84" y1="246.38" x2="370.84" y2="248.92" width="0.1524" layer="91"/>
-<pinref part="SUPPLY24" gate="G$1" pin="VCC"/>
-<label x="370.84" y="251.46" size="1.27" layer="95" rot="R90"/>
+<pinref part="VBUS12" gate="G$1" pin="VDD_PLL"/>
 </segment>
 <segment>
 <wire x1="317.5" y1="246.38" x2="317.5" y2="248.92" width="0.1524" layer="91"/>
-<pinref part="SUPPLY23" gate="G$1" pin="VCC"/>
 <pinref part="C8" gate="CE" pin="1"/>
-<label x="317.5" y="251.46" size="1.27" layer="95" rot="R90"/>
+<pinref part="VBUS8" gate="G$1" pin="VDD_PLL"/>
 </segment>
 </net>
 <net name="VAA_PIX" class="0">
@@ -10351,36 +10384,31 @@ VAA_PIX   = 2.8V</text>
 <wire x1="226.06" y1="233.68" x2="226.06" y2="236.22" width="0.1524" layer="91"/>
 <wire x1="226.06" y1="236.22" x2="231.14" y2="236.22" width="0.1524" layer="91"/>
 <wire x1="231.14" y1="236.22" x2="231.14" y2="243.84" width="0.1524" layer="91"/>
-<pinref part="SUPPLY8" gate="G$1" pin="VCC_2"/>
-<label x="231.902" y="246.888" size="1.778" layer="95" rot="R90"/>
 <pinref part="U1" gate="G$1" pin="VAA_PIX"/>
+<pinref part="VBUS5" gate="G$1" pin="VAA_PIX"/>
 </segment>
 <segment>
 <pinref part="U4" gate="A" pin="OUT2"/>
-<pinref part="SUPPLY17" gate="G$1" pin="VCC"/>
 <wire x1="332.74" y1="73.66" x2="335.28" y2="73.66" width="0.1524" layer="91"/>
 <pinref part="TP10" gate="G$1" pin="TP"/>
 <wire x1="335.28" y1="73.66" x2="345.44" y2="73.66" width="0.1524" layer="91"/>
 <junction x="335.28" y="73.66"/>
-<label x="347.98" y="73.66" size="1.778" layer="95"/>
+<pinref part="VBUS17" gate="G$1" pin="VAA_PIX"/>
 </segment>
 <segment>
 <pinref part="C7" gate="CE" pin="1"/>
-<pinref part="SUPPLY22" gate="G$1" pin="2.8V"/>
 <wire x1="370.84" y1="104.14" x2="370.84" y2="109.22" width="0.1524" layer="91"/>
-<label x="370.84" y="111.76" size="1.778" layer="95" rot="R90"/>
+<pinref part="VBUS1" gate="G$1" pin="VAA_PIX"/>
 </segment>
 <segment>
 <pinref part="C17" gate="CE" pin="1"/>
 <wire x1="391.16" y1="246.38" x2="391.16" y2="248.92" width="0.1524" layer="91"/>
-<pinref part="SUPPLY31" gate="G$1" pin="VCC_2"/>
-<label x="391.16" y="251.46" size="1.27" layer="95" rot="R90"/>
+<pinref part="VBUS13" gate="G$1" pin="VAA_PIX"/>
 </segment>
 <segment>
 <wire x1="337.82" y1="246.38" x2="337.82" y2="248.92" width="0.1524" layer="91"/>
-<pinref part="SUPPLY30" gate="G$1" pin="VCC_2"/>
 <pinref part="C16" gate="CE" pin="1"/>
-<label x="337.82" y="251.46" size="1.27" layer="95" rot="R90"/>
+<pinref part="VBUS9" gate="G$1" pin="VAA_PIX"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -10678,96 +10706,6 @@ VAA_PIX   = 2.8V</text>
 </nets>
 </sheet>
 </sheets>
-<errors>
-<approved hash="102,1,350.52,248.92,1.8V,VDD,,,,"/>
-<approved hash="102,1,360.68,248.92,2.8V,VDD_IO,,,,"/>
-<approved hash="102,1,370.84,248.92,VCC,VDD_PLL,,,,"/>
-<approved hash="102,1,381,248.92,VCC_1,VAA,,,,"/>
-<approved hash="102,1,391.16,248.92,VCC_2,VAA_PIX,,,,"/>
-<approved hash="102,1,210.82,243.84,1.8V,VDD,,,,"/>
-<approved hash="102,1,215.9,243.84,2.8V,VDD_IO,,,,"/>
-<approved hash="102,1,226.06,243.84,VCC,VAA,,,,"/>
-<approved hash="102,1,220.98,243.84,VCC_1,VDD_PLL,,,,"/>
-<approved hash="102,1,231.14,243.84,VCC_2,VAA_PIX,,,,"/>
-<approved hash="102,1,370.84,109.22,2.8V,VAA_PIX,,,,"/>
-<approved hash="102,1,381,109.22,VCC,VAA,,,,"/>
-<approved hash="102,1,391.16,109.22,VCC_1,VDD_PLL,,,,"/>
-<approved hash="102,1,401.32,109.22,VCC_2,VDD_IO,,,,"/>
-<approved hash="102,1,342.9,121.92,VCC_1,VDD_PLL,,,,"/>
-<approved hash="102,1,345.44,116.84,2.8V,VDD_IO,,,,"/>
-<approved hash="102,1,342.9,78.74,VCC_2,VAA,,,,"/>
-<approved hash="102,1,345.44,73.66,VCC,VAA_PIX,,,,"/>
-<approved hash="102,1,342.9,162.56,1.8V,VDD,,,,"/>
-<approved hash="102,1,411.48,109.22,1.8V,VDD,,,,"/>
-<approved hash="102,1,111.76,243.84,2.8V,VDD_IO,,,,"/>
-<approved hash="102,1,167.64,175.26,2.8V,VDD_IO,,,,"/>
-<approved hash="102,1,297.18,248.92,1.8V,VDD,,,,"/>
-<approved hash="102,1,307.34,248.92,2.8V,VDD_IO,,,,"/>
-<approved hash="102,1,317.5,248.92,VCC,VDD_PLL,,,,"/>
-<approved hash="102,1,327.66,248.92,VCC_1,VAA,,,,"/>
-<approved hash="102,1,337.82,248.92,VCC_2,VAA_PIX,,,,"/>
-<approved hash="102,1,124.46,180.34,2.8V,VDD_IO,,,,"/>
-<approved hash="102,1,114.3,180.34,2.8V,VDD_IO,,,,"/>
-<approved hash="201,1,114.3,180.34,2.8V,VDD_IO\, VAA_PIX,,,,"/>
-<approved hash="201,1,124.46,180.34,2.8V,VDD_IO\, VAA_PIX,,,,"/>
-<approved hash="201,1,307.34,248.92,2.8V,VDD_IO\, VAA_PIX,,,,"/>
-<approved hash="201,1,167.64,175.26,2.8V,VDD_IO\, VAA_PIX,,,,"/>
-<approved hash="201,1,111.76,243.84,2.8V,VDD_IO\, VAA_PIX,,,,"/>
-<approved hash="201,1,345.44,116.84,2.8V,VDD_IO\, VAA_PIX,,,,"/>
-<approved hash="201,1,370.84,109.22,2.8V,VDD_IO\, VAA_PIX,,,,"/>
-<approved hash="201,1,215.9,243.84,2.8V,VDD_IO\, VAA_PIX,,,,"/>
-<approved hash="201,1,360.68,248.92,2.8V,VDD_IO\, VAA_PIX,,,,"/>
-<approved hash="201,1,317.5,248.92,VCC,VDD_PLL\, VAA\, VAA_PIX,,,,"/>
-<approved hash="201,1,345.44,73.66,VCC,VDD_PLL\, VAA\, VAA_PIX,,,,"/>
-<approved hash="201,1,381,109.22,VCC,VDD_PLL\, VAA\, VAA_PIX,,,,"/>
-<approved hash="201,1,226.06,243.84,VCC,VDD_PLL\, VAA\, VAA_PIX,,,,"/>
-<approved hash="201,1,370.84,248.92,VCC,VDD_PLL\, VAA\, VAA_PIX,,,,"/>
-<approved hash="201,1,327.66,248.92,VCC_1,VAA\, VDD_PLL,,,,"/>
-<approved hash="201,1,342.9,121.92,VCC_1,VAA\, VDD_PLL,,,,"/>
-<approved hash="201,1,391.16,109.22,VCC_1,VAA\, VDD_PLL,,,,"/>
-<approved hash="201,1,220.98,243.84,VCC_1,VAA\, VDD_PLL,,,,"/>
-<approved hash="201,1,381,248.92,VCC_1,VAA\, VDD_PLL,,,,"/>
-<approved hash="201,1,337.82,248.92,VCC_2,VAA_PIX\, VDD_IO\, VAA,,,,"/>
-<approved hash="201,1,342.9,78.74,VCC_2,VAA_PIX\, VDD_IO\, VAA,,,,"/>
-<approved hash="201,1,401.32,109.22,VCC_2,VAA_PIX\, VDD_IO\, VAA,,,,"/>
-<approved hash="201,1,231.14,243.84,VCC_2,VAA_PIX\, VDD_IO\, VAA,,,,"/>
-<approved hash="201,1,391.16,248.92,VCC_2,VAA_PIX\, VDD_IO\, VAA,,,,"/>
-<approved hash="104,1,111.76,241.3,X1,VCC,VDD_IO,,,"/>
-<approved hash="208,1,226.06,243.84,VAA,sup,,,,"/>
-<approved hash="208,1,342.9,78.74,VAA,sup,,,,"/>
-<approved hash="208,1,332.74,78.74,VAA,out,,,,"/>
-<approved hash="208,1,381,109.22,VAA,sup,,,,"/>
-<approved hash="208,1,381,248.92,VAA,sup,,,,"/>
-<approved hash="208,1,327.66,248.92,VAA,sup,,,,"/>
-<approved hash="208,1,231.14,243.84,VAA_PIX,sup,,,,"/>
-<approved hash="208,1,332.74,73.66,VAA_PIX,out,,,,"/>
-<approved hash="208,1,345.44,73.66,VAA_PIX,sup,,,,"/>
-<approved hash="208,1,370.84,109.22,VAA_PIX,sup,,,,"/>
-<approved hash="208,1,391.16,248.92,VAA_PIX,sup,,,,"/>
-<approved hash="208,1,337.82,248.92,VAA_PIX,sup,,,,"/>
-<approved hash="208,1,332.74,162.56,VDD,out,,,,"/>
-<approved hash="208,1,342.9,162.56,VDD,sup,,,,"/>
-<approved hash="208,1,210.82,243.84,VDD,sup,,,,"/>
-<approved hash="208,1,411.48,109.22,VDD,sup,,,,"/>
-<approved hash="208,1,350.52,248.92,VDD,sup,,,,"/>
-<approved hash="208,1,297.18,248.92,VDD,sup,,,,"/>
-<approved hash="208,1,332.74,116.84,VDD_IO,out,,,,"/>
-<approved hash="208,1,345.44,116.84,VDD_IO,sup,,,,"/>
-<approved hash="208,1,215.9,243.84,VDD_IO,sup,,,,"/>
-<approved hash="208,1,401.32,109.22,VDD_IO,sup,,,,"/>
-<approved hash="208,1,167.64,175.26,VDD_IO,sup,,,,"/>
-<approved hash="208,1,360.68,248.92,VDD_IO,sup,,,,"/>
-<approved hash="208,1,307.34,248.92,VDD_IO,sup,,,,"/>
-<approved hash="208,1,111.76,243.84,VDD_IO,sup,,,,"/>
-<approved hash="208,1,124.46,180.34,VDD_IO,sup,,,,"/>
-<approved hash="208,1,114.3,180.34,VDD_IO,sup,,,,"/>
-<approved hash="208,1,220.98,243.84,VDD_PLL,sup,,,,"/>
-<approved hash="208,1,332.74,121.92,VDD_PLL,out,,,,"/>
-<approved hash="208,1,342.9,121.92,VDD_PLL,sup,,,,"/>
-<approved hash="208,1,391.16,109.22,VDD_PLL,sup,,,,"/>
-<approved hash="208,1,370.84,248.92,VDD_PLL,sup,,,,"/>
-<approved hash="208,1,317.5,248.92,VDD_PLL,sup,,,,"/>
-</errors>
 </schematic>
 </drawing>
 <compatibility>
