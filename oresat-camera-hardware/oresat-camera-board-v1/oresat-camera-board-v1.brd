@@ -3,7 +3,7 @@
 <eagle version="9.4.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="no"/>
+<setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.25" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.0625" altunitdist="mm" altunit="mm"/>
@@ -2587,7 +2587,7 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 </autorouter>
 <elements>
 <element name="R2" library="oresat-rcl" package=".0402-B" value="100" x="3" y="5.25" smashed="yes" rot="MR90">
-<attribute name="NAME" x="3.7375" y="4.45" size="0.5" layer="26" font="vector" ratio="15" rot="MR90"/>
+<attribute name="NAME" x="3.8" y="4.3875" size="0.5" layer="26" font="vector" ratio="15" rot="MR90"/>
 <attribute name="NAME" x="3" y="5.25" size="0.2" layer="34" ratio="15" rot="MR90" align="center"/>
 <attribute name="VALUE" x="1.4" y="4.45" size="0.8" layer="28" font="vector" ratio="15" rot="MR90"/>
 </element>
@@ -2763,7 +2763,7 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 </element>
 <element name="X1" library="X-KYOCERA-KC2520B27" package="OSC_KYOCERA_KC2520B" value="KC2520B27.0000C10E00" x="2" y="2.625" smashed="yes" rot="MR90">
 <attribute name="MANUFACTURER_PART_NUMBER" value="KC2520B27.0000C10E00" x="2" y="2.625" size="1" layer="28" rot="MR90" display="off"/>
-<attribute name="NAME" x="1.875" y="4.0625" size="0.508" layer="26" font="vector" ratio="15" rot="SMR90"/>
+<attribute name="NAME" x="2.5" y="0.25" size="0.508" layer="26" font="vector" ratio="15" rot="SMR90"/>
 <attribute name="VENDOR" value="Kyocera" x="2" y="2.625" size="1" layer="28" rot="MR90" display="off"/>
 </element>
 <element name="R1" library="oresat-rcl" package=".0402-B" value="10k" x="1.75" y="5.25" smashed="yes" rot="MR90">
@@ -2795,12 +2795,12 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <attribute name="VALUE" x="4.1" y="10.8" size="0.8" layer="28" font="vector" ratio="15" rot="MR270"/>
 </element>
 <element name="R7" library="oresat-rcl" package=".0402-B" value="4.7k" x="22.5" y="7.75" smashed="yes" rot="MR270">
-<attribute name="NAME" x="19.25" y="7.25" size="0.5" layer="26" font="vector" ratio="15" rot="MR90"/>
+<attribute name="NAME" x="19.9375" y="6.9375" size="0.5" layer="26" font="vector" ratio="15" rot="MR90"/>
 <attribute name="NAME" x="22.5" y="7.75" size="0.2" layer="34" ratio="15" rot="MR270" align="center"/>
 <attribute name="VALUE" x="24.1" y="8.55" size="0.8" layer="28" font="vector" ratio="15" rot="MR270"/>
 </element>
 <element name="R8" library="oresat-rcl" package=".0402-B" value="4.7k" x="21.25" y="7.75" smashed="yes" rot="MR270">
-<attribute name="NAME" x="18.95" y="8.05" size="0.5" layer="26" font="vector" ratio="15" rot="MR270"/>
+<attribute name="NAME" x="19.3" y="6.95" size="0.5" layer="26" font="vector" ratio="15" rot="MR90"/>
 <attribute name="NAME" x="21.25" y="7.75" size="0.2" layer="34" ratio="15" rot="MR270" align="center"/>
 <attribute name="VALUE" x="22.85" y="8.55" size="0.8" layer="28" font="vector" ratio="15" rot="MR270"/>
 </element>
