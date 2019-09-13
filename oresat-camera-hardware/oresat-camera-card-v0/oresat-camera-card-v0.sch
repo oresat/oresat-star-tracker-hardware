@@ -32085,7 +32085,7 @@ will probably be used from the oresat power
 circuit, so we need to prepare for this case.
 Likewise, right now the only component using 
 5V is the USB host circuit</text>
-<text x="83.566" y="245.618" size="1.778" layer="97">SYS_VDD1_3P3V is where system 
+<text x="88.646" y="243.078" size="1.778" layer="97">SYS_VDD1_3P3V is where system 
 3.3V power originates, 500mA max,</text>
 <text x="-157.48" y="287.02" size="1.778" layer="97">TODO MISC
 GND test points
@@ -32237,7 +32237,7 @@ seemed logical</text>
 <wire x1="515.62" y1="213.36" x2="515.62" y2="223.52" width="0.1524" layer="97"/>
 <wire x1="515.62" y1="223.52" x2="454.66" y2="223.52" width="0.1524" layer="97"/>
 <wire x1="454.66" y1="223.52" x2="454.66" y2="213.36" width="0.1524" layer="97"/>
-<text x="129.54" y="185.42" size="1.778" layer="150">This is a clamping circuit between the SYS_RTC_1P8V 
+<text x="132.08" y="185.42" size="1.778" layer="150">This is a clamping circuit between the SYS_RTC_1P8V 
 and SYS_VDD3_3P3V outputs of the TPS65217
 power management IC inside the OSD335x-SM.  The
 clamping circuit is related to power down issues 
@@ -32246,14 +32246,14 @@ for more information). This may not be needed in
 your application if the power down conditions do 
 not apply to your application.
 NOTE: Taken verbatim from RED board</text>
-<wire x1="88.9" y1="215.9" x2="190.5" y2="215.9" width="0.1524" layer="97"/>
-<wire x1="190.5" y1="215.9" x2="190.5" y2="162.56" width="0.1524" layer="97"/>
-<wire x1="190.5" y1="162.56" x2="88.9" y2="162.56" width="0.1524" layer="97"/>
+<wire x1="88.9" y1="215.9" x2="195.58" y2="215.9" width="0.1524" layer="97"/>
+<wire x1="195.58" y1="215.9" x2="195.58" y2="162.56" width="0.1524" layer="97"/>
+<wire x1="195.58" y1="162.56" x2="88.9" y2="162.56" width="0.1524" layer="97"/>
 <wire x1="88.9" y1="162.56" x2="88.9" y2="215.9" width="0.1524" layer="97"/>
-<wire x1="81.28" y1="251.46" x2="124.46" y2="251.46" width="0.1524" layer="97"/>
-<wire x1="124.46" y1="251.46" x2="124.46" y2="243.84" width="0.1524" layer="97"/>
-<wire x1="124.46" y1="243.84" x2="81.28" y2="243.84" width="0.1524" layer="97"/>
-<wire x1="81.28" y1="243.84" x2="81.28" y2="251.46" width="0.1524" layer="97"/>
+<wire x1="86.36" y1="248.92" x2="129.54" y2="248.92" width="0.1524" layer="97"/>
+<wire x1="129.54" y1="248.92" x2="129.54" y2="241.3" width="0.1524" layer="97"/>
+<wire x1="129.54" y1="241.3" x2="86.36" y2="241.3" width="0.1524" layer="97"/>
+<wire x1="86.36" y1="241.3" x2="86.36" y2="248.92" width="0.1524" layer="97"/>
 <wire x1="83.82" y1="297.18" x2="83.82" y2="269.24" width="0.1524" layer="97"/>
 <wire x1="83.82" y1="269.24" x2="139.7" y2="269.24" width="0.1524" layer="97"/>
 <wire x1="139.7" y1="269.24" x2="139.7" y2="297.18" width="0.1524" layer="97"/>
