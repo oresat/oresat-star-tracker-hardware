@@ -7,7 +7,6 @@
 - USB A female port(s)
 - UART broken out
 - bus termination resistors
-- ERM8-013-01-L-D-EM2-TR
 - CAUTION!!! I2C0 has internal pulp resistors, per Table 11, footnote 1 https://octavosystems.com/app_notes/osd335x-schematic-checklist-am335x/
 - need to program EEPROM with board ID for u-boot: https://octavosystems.com/app_notes/osd335x-design-tutorial/osd335x-lesson-2-minimal-linux-boot/osd335x-lesson-2-linux-bring-up/
 - U-boot will not boot without a valid board ID. What if that EEPROM get’s corrupted in space?
