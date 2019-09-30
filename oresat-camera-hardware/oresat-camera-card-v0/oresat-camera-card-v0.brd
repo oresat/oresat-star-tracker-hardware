@@ -24,20 +24,20 @@
 <layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
 <layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
 <layer number="15" name="Route15" color="14" fill="1" visible="yes" active="yes"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
 <layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
@@ -59,8 +59,8 @@
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="61" fill="1" visible="no" active="yes"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="yes"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
 <layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
@@ -5577,20 +5577,20 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <attribute name="NAME" x="76.26125" y="64.417" size="0.635" layer="25" font="vector" ratio="20"/>
 <attribute name="VALUE" x="79.405" y="63.77" size="0.635" layer="27" font="vector" ratio="20" rot="R270"/>
 </element>
-<element name="R73" library="oresat-rcl" package=".0603-A" value="10.0K" x="74" y="63" smashed="yes" rot="R270">
-<attribute name="NAME" x="72.8625" y="61.94375" size="0.635" layer="25" font="vector" ratio="20" rot="R90"/>
-<attribute name="NAME" x="74" y="63" size="0.3" layer="33" ratio="15" rot="R270" align="center"/>
-<attribute name="VALUE" x="72.25" y="64.4" size="0.8" layer="27" font="vector" ratio="15" rot="R270"/>
+<element name="R73" library="oresat-rcl" package=".0603-A" value="10.0K" x="74" y="62.375" smashed="yes" rot="R270">
+<attribute name="NAME" x="72.8625" y="61.31875" size="0.635" layer="25" font="vector" ratio="20" rot="R90"/>
+<attribute name="NAME" x="74" y="62.375" size="0.3" layer="33" ratio="15" rot="R270" align="center"/>
+<attribute name="VALUE" x="72.25" y="63.775" size="0.8" layer="27" font="vector" ratio="15" rot="R270"/>
 </element>
 <element name="R72" library="oresat-rcl" package=".0603-A" value="40.2K" x="81" y="63" smashed="yes" rot="R90">
 <attribute name="NAME" x="82.7375" y="62.225" size="0.635" layer="25" font="vector" ratio="20" rot="R90"/>
 <attribute name="NAME" x="81" y="63" size="0.3" layer="33" ratio="15" rot="R90" align="center"/>
 <attribute name="VALUE" x="82.75" y="61.6" size="0.8" layer="27" font="vector" ratio="15" rot="R90"/>
 </element>
-<element name="R71" library="oresat-rcl" package=".0603-A" value="499" x="74" y="59" smashed="yes" rot="R270">
-<attribute name="NAME" x="72.89375" y="58.2875" size="0.635" layer="25" font="vector" ratio="20" rot="R90"/>
-<attribute name="NAME" x="74" y="59" size="0.3" layer="33" ratio="15" rot="R270" align="center"/>
-<attribute name="VALUE" x="72.25" y="60.4" size="0.8" layer="27" font="vector" ratio="15" rot="R270"/>
+<element name="R71" library="oresat-rcl" package=".0603-A" value="499" x="74" y="58.75" smashed="yes" rot="R270">
+<attribute name="NAME" x="72.89375" y="58.0375" size="0.635" layer="25" font="vector" ratio="20" rot="R90"/>
+<attribute name="NAME" x="74" y="58.75" size="0.3" layer="33" ratio="15" rot="R270" align="center"/>
+<attribute name="VALUE" x="72.25" y="60.15" size="0.8" layer="27" font="vector" ratio="15" rot="R270"/>
 </element>
 <element name="J9" library="SparkFun-Connectors" package="1X04_LONGPADS" value="" x="70.0625" y="73.5" smashed="yes" rot="R270">
 <attribute name="NAME" x="72.282" y="74.0825" size="0.635" layer="25" font="vector" ratio="20" rot="R270"/>
@@ -10834,17 +10834,17 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="76.4" y1="63.45" x2="78.95" y2="63.45" width="0.508" layer="1"/>
 <wire x1="79.4" y1="63.9" x2="81" y2="63.9" width="0.508" layer="1"/>
 <wire x1="78.95" y1="63.45" x2="79.4" y2="63.9" width="0.508" layer="1"/>
-<wire x1="76.4" y1="63.45" x2="75.39375" y2="63.45" width="0.508" layer="1"/>
-<wire x1="74.94375" y1="63.9" x2="74" y2="63.9" width="0.508" layer="1"/>
-<wire x1="75.39375" y1="63.45" x2="74.94375" y2="63.9" width="0.508" layer="1"/>
+<wire x1="74" y1="63.275" x2="74.175" y2="63.45" width="0.508" layer="1"/>
+<wire x1="76.4" y1="63.45" x2="74.175" y2="63.45" width="0.508" layer="1"/>
 </signal>
 <signal name="N$23">
 <contactref element="Q9" pad="B"/>
 <contactref element="U14" pad="2"/>
 <contactref element="R71" pad="1"/>
 <wire x1="76.4" y1="61.55" x2="76.4" y2="59.95" width="0.508" layer="1"/>
-<wire x1="76.4" y1="59.95" x2="74.05" y2="59.95" width="0.508" layer="1"/>
-<wire x1="74.05" y1="59.95" x2="74" y2="59.9" width="0.508" layer="1"/>
+<wire x1="76.4" y1="59.95" x2="75.2375" y2="59.95" width="0.508" layer="1"/>
+<wire x1="75.2375" y1="59.95" x2="74.9375" y2="59.65" width="0.508" layer="1"/>
+<wire x1="74.9375" y1="59.65" x2="74" y2="59.65" width="0.508" layer="1"/>
 </signal>
 <signal name="N$26">
 <contactref element="TP131" pad="P$1"/>
@@ -11670,13 +11670,13 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <contactref element="R71" pad="2"/>
 <contactref element="Q9" pad="E"/>
 <contactref element="JP6" pad="2"/>
-<wire x1="74" y1="58.1" x2="76.35" y2="58.1" width="0.508" layer="1"/>
-<wire x1="76.35" y1="58.1" x2="76.4" y2="58.05" width="0.508" layer="1"/>
-<wire x1="74" y1="62.1" x2="73.1625" y2="62.1" width="0.508" layer="1"/>
-<wire x1="73.1625" y1="62.1" x2="72.9375" y2="61.875" width="0.508" layer="1"/>
-<wire x1="72.9375" y1="61.875" x2="72.9375" y2="58.28125" width="0.508" layer="1"/>
-<wire x1="73.11875" y1="58.1" x2="74" y2="58.1" width="0.508" layer="1"/>
-<wire x1="72.9375" y1="58.28125" x2="73.11875" y2="58.1" width="0.508" layer="1"/>
+<wire x1="76.4" y1="58.05" x2="76.2" y2="57.85" width="0.508" layer="1"/>
+<wire x1="76.2" y1="57.85" x2="74" y2="57.85" width="0.508" layer="1"/>
+<wire x1="74" y1="61.475" x2="73.2875" y2="61.475" width="0.508" layer="1"/>
+<wire x1="73.2875" y1="61.475" x2="72.9375" y2="61.125" width="0.508" layer="1"/>
+<wire x1="72.9375" y1="61.125" x2="72.9375" y2="58.28125" width="0.508" layer="1"/>
+<wire x1="73.36875" y1="57.85" x2="74" y2="57.85" width="0.508" layer="1"/>
+<wire x1="72.9375" y1="58.28125" x2="73.36875" y2="57.85" width="0.508" layer="1"/>
 <wire x1="76.875" y1="55.97675" x2="76.875" y2="56.65625" width="0.3048" layer="16"/>
 <via x="76.875" y="56.65625" extent="1-16" drill="0.254"/>
 <wire x1="76.875" y1="56.65625" x2="76.875" y2="57.575" width="0.3048" layer="1"/>
