@@ -1,13 +1,8 @@
-- boot pin jumpers
-- USB gadget
-- select between onboard power supply, pin header supply, and USB supply(from gadget?)
-- SD card and eMMC
-- status(heart beat) LEDs?
-- Hmmmmm, camera I2C address translation?
-- USB A female port(s)
-- UART broken out
 - bus termination resistors
 - CAUTION!!! I2C0 has internal pulp resistors, per Table 11, footnote 1 https://octavosystems.com/app_notes/osd335x-schematic-checklist-am335x/
 - need to program EEPROM with board ID for u-boot: https://octavosystems.com/app_notes/osd335x-design-tutorial/osd335x-lesson-2-minimal-linux-boot/osd335x-lesson-2-linux-bring-up/
 - U-boot will not boot without a valid board ID. What if that EEPROM get’s corrupted in space?
 - any pru inputs to measure exposure time?
+
+After checklist:
+- really need ~50uF on VDD?

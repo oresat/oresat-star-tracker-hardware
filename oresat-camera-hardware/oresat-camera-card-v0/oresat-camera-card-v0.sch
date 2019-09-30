@@ -21036,6 +21036,10 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="TP149" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP150" library="Tova" deviceset="TEST-POINT" device=""/>
 <part name="TP151" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP152" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="C40" library="oresat-rcl" deviceset="C-EU" device="C1210" value="22uF"/>
+<part name="GND75" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
+<part name="C41" library="oresat-rcl" deviceset="C-EU" device="C1210" value="22uF"/>
 </parts>
 <sheets>
 <sheet>
@@ -26713,7 +26717,7 @@ will probably be used from the oresat power
 circuit, so we need to prepare for this case.
 Likewise, right now the only component using 
 5V is the USB host circuit</text>
-<text x="-33.274" y="161.798" size="1.778" layer="97">SYS_VDD1_3P3V is where system 
+<text x="-12.954" y="156.718" size="1.778" layer="97">SYS_VDD1_3P3V is where system 
 3.3V power originates, 500mA max,</text>
 <text x="-30.48" y="154.94" size="1.778" layer="97">PWR LED</text>
 <text x="-53.34" y="-5.08" size="1.778" layer="97">PMIC_PGOOD drives PWRONRSTN and
@@ -26736,10 +26740,10 @@ NOTE: Taken verbatim from RED board</text>
 <wire x1="81.28" y1="129.54" x2="81.28" y2="76.2" width="0.1524" layer="97"/>
 <wire x1="81.28" y1="76.2" x2="-33.02" y2="76.2" width="0.1524" layer="97"/>
 <wire x1="-33.02" y1="76.2" x2="-33.02" y2="129.54" width="0.1524" layer="97"/>
-<wire x1="-35.56" y1="167.64" x2="7.62" y2="167.64" width="0.1524" layer="97"/>
-<wire x1="7.62" y1="167.64" x2="7.62" y2="160.02" width="0.1524" layer="97"/>
-<wire x1="7.62" y1="160.02" x2="-35.56" y2="160.02" width="0.1524" layer="97"/>
-<wire x1="-35.56" y1="160.02" x2="-35.56" y2="167.64" width="0.1524" layer="97"/>
+<wire x1="-15.24" y1="162.56" x2="27.94" y2="162.56" width="0.1524" layer="97"/>
+<wire x1="27.94" y1="162.56" x2="27.94" y2="154.94" width="0.1524" layer="97"/>
+<wire x1="27.94" y1="154.94" x2="-15.24" y2="154.94" width="0.1524" layer="97"/>
+<wire x1="-15.24" y1="154.94" x2="-15.24" y2="162.56" width="0.1524" layer="97"/>
 <wire x1="-38.1" y1="210.82" x2="-38.1" y2="182.88" width="0.1524" layer="97"/>
 <wire x1="-38.1" y1="182.88" x2="17.78" y2="182.88" width="0.1524" layer="97"/>
 <wire x1="17.78" y1="182.88" x2="17.78" y2="210.82" width="0.1524" layer="97"/>
@@ -26975,6 +26979,20 @@ need to be connected to VDD_CORE.</text>
 <instance part="JP5" gate="G$1" x="-25.4" y="124.46" smashed="yes">
 <attribute name="NAME" x="-27.94" y="127" size="1.778" layer="95" font="vector"/>
 </instance>
+<instance part="TP152" gate="G$1" x="-48.26" y="157.48" smashed="yes" rot="R90">
+<attribute name="NAME" x="-44.45" y="158.75" size="1.778" layer="95" font="vector" rot="R90"/>
+</instance>
+<instance part="C40" gate="CE" x="-38.1" y="172.72" smashed="yes">
+<attribute name="NAME" x="-34.544" y="173.101" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-34.544" y="169.799" size="1.778" layer="96"/>
+</instance>
+<instance part="GND75" gate="1" x="-38.1" y="162.56" smashed="yes">
+<attribute name="VALUE" x="-38.1" y="162.306" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="C41" gate="CE" x="-25.4" y="172.72" smashed="yes">
+<attribute name="NAME" x="-21.844" y="173.101" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-21.844" y="169.799" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -27169,6 +27187,14 @@ need to be connected to VDD_CORE.</text>
 <pinref part="GND71" gate="1" pin="GND"/>
 <wire x1="-15.24" y1="149.86" x2="-12.7" y2="149.86" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="C40" gate="CE" pin="2"/>
+<pinref part="GND75" gate="1" pin="GND"/>
+<wire x1="-38.1" y1="167.64" x2="-38.1" y2="165.1" width="0.1524" layer="91"/>
+<pinref part="C41" gate="CE" pin="2"/>
+<wire x1="-38.1" y1="167.64" x2="-25.4" y2="167.64" width="0.1524" layer="91"/>
+<junction x="-38.1" y="167.64"/>
+</segment>
 </net>
 <net name="VIN_USB" class="0">
 <segment>
@@ -27204,13 +27230,14 @@ need to be connected to VDD_CORE.</text>
 <pinref part="TP126" gate="G$1" pin="1"/>
 <wire x1="-127" y1="139.7" x2="-129.54" y2="139.7" width="0.1524" layer="91"/>
 <junction x="-127" y="139.7"/>
-</segment>
-</net>
-<net name="N$403" class="0">
-<segment>
+<wire x1="-129.54" y1="139.7" x2="-137.16" y2="139.7" width="0.1524" layer="91"/>
+<junction x="-129.54" y="139.7"/>
 <pinref part="TP118" gate="G$1" pin="1"/>
 <pinref part="U6" gate="A" pin="PMIC_BAT_SENSE"/>
-<wire x1="-149.86" y1="134.62" x2="-124.46" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="-149.86" y1="134.62" x2="-137.16" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="-137.16" y1="134.62" x2="-124.46" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="-137.16" y1="139.7" x2="-137.16" y2="134.62" width="0.1524" layer="91"/>
+<junction x="-137.16" y="134.62"/>
 </segment>
 </net>
 <net name="N$404" class="0">
@@ -27236,7 +27263,8 @@ need to be connected to VDD_CORE.</text>
 <segment>
 <pinref part="U6" gate="A" pin="SYS_VDD1_3P3V@1"/>
 <pinref part="3V-28" gate="A" pin="3.3V"/>
-<wire x1="-53.34" y1="157.48" x2="-43.18" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="-53.34" y1="157.48" x2="-48.26" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="-48.26" y1="157.48" x2="-43.18" y2="157.48" width="0.1524" layer="91"/>
 <wire x1="-43.18" y1="157.48" x2="-43.18" y2="160.02" width="0.1524" layer="91"/>
 <pinref part="U6" gate="A" pin="SYS_VDD1_3P3V@4"/>
 <wire x1="-43.18" y1="154.94" x2="-43.18" y2="152.4" width="0.1524" layer="91"/>
@@ -27253,6 +27281,8 @@ need to be connected to VDD_CORE.</text>
 <pinref part="R70" gate="R" pin="1"/>
 <wire x1="-43.18" y1="149.86" x2="-38.1" y2="149.86" width="0.1524" layer="91"/>
 <junction x="-43.18" y="149.86"/>
+<pinref part="TP152" gate="G$1" pin="1"/>
+<junction x="-48.26" y="157.48"/>
 </segment>
 </net>
 <net name="N$405" class="0">
@@ -27584,6 +27614,12 @@ need to be connected to VDD_CORE.</text>
 <pinref part="SUPPLY3" gate="VDD" pin="VDD"/>
 <pinref part="TP128" gate="G$1" pin="1"/>
 <junction x="-48.26" y="175.26"/>
+<pinref part="C40" gate="CE" pin="1"/>
+<wire x1="-38.1" y1="175.26" x2="-43.18" y2="175.26" width="0.1524" layer="91"/>
+<junction x="-43.18" y="175.26"/>
+<pinref part="C41" gate="CE" pin="1"/>
+<wire x1="-25.4" y1="175.26" x2="-38.1" y2="175.26" width="0.1524" layer="91"/>
+<junction x="-38.1" y="175.26"/>
 </segment>
 </net>
 <net name="N$57" class="0">
