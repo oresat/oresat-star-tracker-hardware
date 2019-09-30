@@ -7,7 +7,7 @@
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="15" fill="1" visible="no" active="no"/>
@@ -21029,6 +21029,11 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="TP144" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="GND60" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="JP7" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_3_1-NC_TRACE" device="_SILK"/>
+<part name="TP145" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP146" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP147" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP148" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP149" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 </parts>
 <sheets>
 <sheet>
@@ -21038,17 +21043,24 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <text x="416.56" y="6.35" size="3.81" layer="94">3.1</text>
 <text x="11.43" y="5.08" size="1.778" layer="97">All resistors 0402 +/- 1% unless marked</text>
 <text x="11.43" y="2.54" size="1.778" layer="97">All caps are 0402 ceramic 10% X5R Vw&gt;=16V unless marked</text>
-<wire x1="210.82" y1="228.6" x2="279.4" y2="228.6" width="0.1524" layer="97"/>
-<wire x1="279.4" y1="228.6" x2="279.4" y2="114.3" width="0.1524" layer="97"/>
-<wire x1="279.4" y1="114.3" x2="210.82" y2="114.3" width="0.1524" layer="97"/>
-<wire x1="210.82" y1="114.3" x2="210.82" y2="228.6" width="0.1524" layer="97"/>
-<text x="236.22" y="223.52" size="3.81" layer="97">Breakouts</text>
+<wire x1="99.06" y1="236.22" x2="205.74" y2="236.22" width="0.1524" layer="97"/>
+<wire x1="205.74" y1="236.22" x2="205.74" y2="114.3" width="0.1524" layer="97"/>
+<wire x1="205.74" y1="114.3" x2="99.06" y2="114.3" width="0.1524" layer="97"/>
+<wire x1="99.06" y1="114.3" x2="99.06" y2="236.22" width="0.1524" layer="97"/>
+<text x="139.7" y="228.6" size="3.81" layer="97">Main Connector</text>
 <text x="109.22" y="152.4" size="2.54" layer="97" rot="R90">Main OreSat Card Connector</text>
 <wire x1="165.1" y1="199.39" x2="167.64" y2="199.39" width="0.1524" layer="97"/>
 <wire x1="167.64" y1="199.39" x2="167.64" y2="181.61" width="0.1524" layer="97"/>
 <wire x1="167.64" y1="181.61" x2="165.1" y2="181.61" width="0.1524" layer="97"/>
 <text x="170.18" y="187.96" size="1.778" layer="97">OreSat Power Domain signals
 (See power sheet)</text>
+<text x="151.638" y="73.66" size="2.54" layer="97">USB Client</text>
+<text x="149.86" y="50.8" size="2.54" layer="97">USB Host</text>
+<wire x1="104.14" y1="101.6" x2="104.14" y2="30.48" width="0.1524" layer="97"/>
+<wire x1="104.14" y1="30.48" x2="175.26" y2="30.48" width="0.1524" layer="97"/>
+<wire x1="175.26" y1="30.48" x2="175.26" y2="101.6" width="0.1524" layer="97"/>
+<wire x1="175.26" y1="101.6" x2="104.14" y2="101.6" width="0.1524" layer="97"/>
+<text x="116.84" y="96.52" size="3.81" layer="97">USB FFC Connector</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0" smashed="yes"/>
@@ -21071,6 +21083,36 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 </instance>
 <instance part="TP144" gate="G$1" x="137.16" y="134.62" smashed="yes">
 <attribute name="NAME" x="141.732" y="133.858" size="1.778" layer="95" font="vector"/>
+</instance>
+<instance part="GND53" gate="1" x="129.54" y="63.5" smashed="yes">
+<attribute name="VALUE" x="133.096" y="66.04" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="GND54" gate="1" x="129.54" y="38.1" smashed="yes" rot="MR0">
+<attribute name="VALUE" x="129.54" y="37.846" size="1.778" layer="96" rot="MR0" align="top-center"/>
+</instance>
+<instance part="J8" gate="G$1" x="114.3" y="88.9" smashed="yes" rot="R180">
+<attribute name="NAME" x="115.9764" y="37.3634" size="2.0828" layer="95" ratio="6" rot="SR180"/>
+</instance>
+<instance part="GND55" gate="1" x="132.08" y="88.9" smashed="yes">
+<attribute name="VALUE" x="132.08" y="88.646" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="GND52" gate="1" x="129.54" y="78.74" smashed="yes">
+<attribute name="VALUE" x="132.842" y="81.28" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="TP145" gate="G$1" x="137.16" y="220.98" smashed="yes">
+<attribute name="NAME" x="141.732" y="220.218" size="1.778" layer="95" font="vector"/>
+</instance>
+<instance part="TP146" gate="G$1" x="137.16" y="215.9" smashed="yes">
+<attribute name="NAME" x="141.732" y="215.138" size="1.778" layer="95" font="vector"/>
+</instance>
+<instance part="TP147" gate="G$1" x="137.16" y="210.82" smashed="yes">
+<attribute name="NAME" x="141.732" y="210.058" size="1.778" layer="95" font="vector"/>
+</instance>
+<instance part="TP148" gate="G$1" x="137.16" y="205.74" smashed="yes">
+<attribute name="NAME" x="141.732" y="204.978" size="1.778" layer="95" font="vector"/>
+</instance>
+<instance part="TP149" gate="G$1" x="137.16" y="200.66" smashed="yes">
+<attribute name="NAME" x="141.732" y="199.898" size="1.778" layer="95" font="vector"/>
 </instance>
 </instances>
 <busses>
@@ -21113,6 +21155,60 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <pinref part="J1" gate="G$1" pin="37"/>
 <pinref part="J1" gate="G$1" pin="38"/>
 <pinref part="GND1" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="GND55" gate="1" pin="GND"/>
+<pinref part="J8" gate="G$1" pin="PAD"/>
+<wire x1="132.08" y1="91.44" x2="124.46" y2="91.44" width="0.1524" layer="91"/>
+<pinref part="J8" gate="G$1" pin="19"/>
+<wire x1="124.46" y1="91.44" x2="121.92" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="86.36" x2="124.46" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="86.36" x2="124.46" y2="88.9" width="0.1524" layer="91"/>
+<junction x="124.46" y="91.44"/>
+<pinref part="J8" gate="G$1" pin="20"/>
+<wire x1="124.46" y1="88.9" x2="124.46" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="88.9" x2="124.46" y2="88.9" width="0.1524" layer="91"/>
+<junction x="124.46" y="88.9"/>
+</segment>
+<segment>
+<pinref part="J8" gate="G$1" pin="16"/>
+<wire x1="121.92" y1="78.74" x2="124.46" y2="78.74" width="0.1524" layer="91"/>
+<pinref part="GND52" gate="1" pin="GND"/>
+<wire x1="124.46" y1="78.74" x2="127" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="129.54" y1="81.28" x2="127" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="127" y1="81.28" x2="127" y2="78.74" width="0.1524" layer="91"/>
+<pinref part="J8" gate="G$1" pin="13"/>
+<wire x1="121.92" y1="71.12" x2="124.46" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="71.12" x2="124.46" y2="78.74" width="0.1524" layer="91"/>
+<junction x="124.46" y="78.74"/>
+</segment>
+<segment>
+<pinref part="J8" gate="G$1" pin="11"/>
+<pinref part="GND53" gate="1" pin="GND"/>
+<wire x1="121.92" y1="66.04" x2="124.46" y2="66.04" width="0.1524" layer="91"/>
+<pinref part="J8" gate="G$1" pin="10"/>
+<wire x1="124.46" y1="66.04" x2="129.54" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="63.5" x2="124.46" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="63.5" x2="124.46" y2="66.04" width="0.1524" layer="91"/>
+<junction x="124.46" y="66.04"/>
+</segment>
+<segment>
+<pinref part="J8" gate="G$1" pin="7"/>
+<wire x1="121.92" y1="55.88" x2="124.46" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="45.72" x2="124.46" y2="55.88" width="0.1524" layer="91"/>
+<pinref part="J8" gate="G$1" pin="1"/>
+<pinref part="GND54" gate="1" pin="GND"/>
+<wire x1="121.92" y1="40.64" x2="124.46" y2="40.64" width="0.1524" layer="91"/>
+<pinref part="J8" gate="G$1" pin="2"/>
+<wire x1="124.46" y1="40.64" x2="129.54" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="43.18" x2="124.46" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="43.18" x2="124.46" y2="40.64" width="0.1524" layer="91"/>
+<junction x="124.46" y="40.64"/>
+<pinref part="J8" gate="G$1" pin="3"/>
+<wire x1="121.92" y1="45.72" x2="124.46" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="45.72" x2="124.46" y2="43.18" width="0.1524" layer="91"/>
+<junction x="124.46" y="43.18"/>
+<junction x="124.46" y="45.72"/>
 </segment>
 </net>
 <net name="OPD_SDA" class="0">
@@ -21179,46 +21275,41 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 </net>
 <net name="SPARE1" class="0">
 <segment>
-<wire x1="120.65" y1="200.66" x2="114.3" y2="200.66" width="0.1524" layer="91"/>
-<wire x1="120.65" y1="198.12" x2="120.65" y2="200.66" width="0.1524" layer="91"/>
-<wire x1="114.3" y1="198.12" x2="120.65" y2="198.12" width="0.1524" layer="91"/>
-<label x="123.19" y="200.66" size="2.54" layer="95"/>
-<junction x="120.65" y="200.66"/>
+<wire x1="121.92" y1="200.66" x2="114.3" y2="200.66" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="198.12" x2="121.92" y2="200.66" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="198.12" x2="121.92" y2="198.12" width="0.1524" layer="91"/>
+<label x="123.19" y="202.184" size="2.54" layer="95"/>
+<junction x="121.92" y="200.66"/>
 <pinref part="J1" gate="G$1" pin="9"/>
 <pinref part="J1" gate="G$1" pin="10"/>
+<pinref part="TP149" gate="G$1" pin="1"/>
+<wire x1="137.16" y1="200.66" x2="121.92" y2="200.66" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SPARE4" class="0">
 <segment>
-<wire x1="120.65" y1="215.9" x2="114.3" y2="215.9" width="0.1524" layer="91"/>
-<wire x1="120.65" y1="213.36" x2="120.65" y2="215.9" width="0.1524" layer="91"/>
-<wire x1="114.3" y1="213.36" x2="120.65" y2="213.36" width="0.1524" layer="91"/>
-<label x="123.19" y="215.9" size="2.54" layer="95"/>
-<junction x="120.65" y="215.9"/>
+<wire x1="121.92" y1="215.9" x2="114.3" y2="215.9" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="213.36" x2="121.92" y2="215.9" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="213.36" x2="121.92" y2="213.36" width="0.1524" layer="91"/>
+<label x="123.19" y="217.424" size="2.54" layer="95"/>
+<junction x="121.92" y="215.9"/>
 <pinref part="J1" gate="G$1" pin="3"/>
 <pinref part="J1" gate="G$1" pin="4"/>
+<pinref part="TP146" gate="G$1" pin="1"/>
+<wire x1="137.16" y1="215.9" x2="121.92" y2="215.9" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SPARE3" class="0">
 <segment>
-<wire x1="120.65" y1="210.82" x2="114.3" y2="210.82" width="0.1524" layer="91"/>
-<wire x1="120.65" y1="208.28" x2="120.65" y2="210.82" width="0.1524" layer="91"/>
-<wire x1="114.3" y1="208.28" x2="120.65" y2="208.28" width="0.1524" layer="91"/>
-<label x="123.19" y="210.82" size="2.54" layer="95"/>
-<junction x="120.65" y="210.82"/>
+<wire x1="121.92" y1="210.82" x2="114.3" y2="210.82" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="208.28" x2="121.92" y2="210.82" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="208.28" x2="121.92" y2="208.28" width="0.1524" layer="91"/>
+<label x="123.19" y="212.344" size="2.54" layer="95"/>
+<junction x="121.92" y="210.82"/>
 <pinref part="J1" gate="G$1" pin="5"/>
 <pinref part="J1" gate="G$1" pin="6"/>
-</segment>
-</net>
-<net name="SPARE5" class="0">
-<segment>
-<wire x1="120.65" y1="220.98" x2="114.3" y2="220.98" width="0.1524" layer="91"/>
-<wire x1="120.65" y1="218.44" x2="120.65" y2="220.98" width="0.1524" layer="91"/>
-<wire x1="114.3" y1="218.44" x2="120.65" y2="218.44" width="0.1524" layer="91"/>
-<label x="123.19" y="220.98" size="2.54" layer="95"/>
-<junction x="120.65" y="220.98"/>
-<pinref part="J1" gate="G$1" pin="1"/>
-<pinref part="J1" gate="G$1" pin="2"/>
+<pinref part="TP147" gate="G$1" pin="1"/>
+<wire x1="137.16" y1="210.82" x2="121.92" y2="210.82" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="!SD" class="0">
@@ -21282,13 +21373,94 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 </net>
 <net name="SPARE2" class="0">
 <segment>
-<wire x1="120.65" y1="205.74" x2="114.3" y2="205.74" width="0.1524" layer="91"/>
-<wire x1="120.65" y1="203.2" x2="120.65" y2="205.74" width="0.1524" layer="91"/>
-<wire x1="114.3" y1="203.2" x2="120.65" y2="203.2" width="0.1524" layer="91"/>
-<label x="123.19" y="205.74" size="2.54" layer="95"/>
-<junction x="120.65" y="205.74"/>
+<wire x1="121.92" y1="205.74" x2="114.3" y2="205.74" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="203.2" x2="121.92" y2="205.74" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="203.2" x2="121.92" y2="203.2" width="0.1524" layer="91"/>
+<label x="123.19" y="207.264" size="2.54" layer="95"/>
+<junction x="121.92" y="205.74"/>
 <pinref part="J1" gate="G$1" pin="7"/>
 <pinref part="J1" gate="G$1" pin="8"/>
+<pinref part="TP148" gate="G$1" pin="1"/>
+<wire x1="137.16" y1="205.74" x2="121.92" y2="205.74" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="USB_CLI_N" class="0">
+<segment>
+<wire x1="121.92" y1="76.2" x2="134.62" y2="76.2" width="0.1524" layer="91"/>
+<label x="134.62" y="76.2" size="1.4224" layer="95" xref="yes"/>
+<pinref part="J8" gate="G$1" pin="15"/>
+</segment>
+</net>
+<net name="USB_CLI_P" class="0">
+<segment>
+<wire x1="121.92" y1="73.66" x2="134.62" y2="73.66" width="0.1524" layer="91"/>
+<label x="134.62" y="73.66" size="1.4224" layer="95" xref="yes"/>
+<pinref part="J8" gate="G$1" pin="14"/>
+</segment>
+</net>
+<net name="USB_CLI_ID" class="0">
+<segment>
+<wire x1="121.92" y1="68.58" x2="134.62" y2="68.58" width="0.1524" layer="91"/>
+<label x="134.62" y="68.58" size="1.4224" layer="95" xref="yes"/>
+<pinref part="J8" gate="G$1" pin="12"/>
+</segment>
+</net>
+<net name="USB_CLI_VBUS" class="0">
+<segment>
+<wire x1="134.62" y1="83.82" x2="124.46" y2="83.82" width="0.1524" layer="91"/>
+<label x="134.62" y="83.82" size="1.4224" layer="95" xref="yes"/>
+<pinref part="J8" gate="G$1" pin="18"/>
+<pinref part="J8" gate="G$1" pin="17"/>
+<wire x1="124.46" y1="83.82" x2="121.92" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="81.28" x2="124.46" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="81.28" x2="124.46" y2="83.82" width="0.1524" layer="91"/>
+<junction x="124.46" y="83.82"/>
+</segment>
+</net>
+<net name="USB_HO_VBUS" class="0">
+<segment>
+<wire x1="121.92" y1="60.96" x2="124.46" y2="60.96" width="0.1524" layer="91"/>
+<label x="134.62" y="60.96" size="1.4224" layer="95" xref="yes"/>
+<pinref part="J8" gate="G$1" pin="9"/>
+<pinref part="J8" gate="G$1" pin="8"/>
+<wire x1="124.46" y1="60.96" x2="134.62" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="58.42" x2="124.46" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="58.42" x2="124.46" y2="60.96" width="0.1524" layer="91"/>
+<junction x="124.46" y="60.96"/>
+</segment>
+</net>
+<net name="USB_HO_N" class="0">
+<segment>
+<wire x1="121.92" y1="53.34" x2="134.62" y2="53.34" width="0.1524" layer="91"/>
+<label x="134.62" y="53.34" size="1.4224" layer="95" xref="yes"/>
+<pinref part="J8" gate="G$1" pin="6"/>
+</segment>
+</net>
+<net name="USB_HO_P" class="0">
+<segment>
+<wire x1="121.92" y1="50.8" x2="134.62" y2="50.8" width="0.1524" layer="91"/>
+<label x="134.62" y="50.8" size="1.4224" layer="95" xref="yes"/>
+<pinref part="J8" gate="G$1" pin="5"/>
+</segment>
+</net>
+<net name="USB_HO_ID" class="0">
+<segment>
+<pinref part="J8" gate="G$1" pin="4"/>
+<wire x1="121.92" y1="48.26" x2="134.62" y2="48.26" width="0.1524" layer="91"/>
+<label x="134.62" y="48.26" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="N$103" class="0">
+<segment>
+<pinref part="TP145" gate="G$1" pin="1"/>
+<wire x1="137.16" y1="220.98" x2="121.92" y2="220.98" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="220.98" x2="114.3" y2="220.98" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="218.44" x2="121.92" y2="220.98" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="218.44" x2="121.92" y2="218.44" width="0.1524" layer="91"/>
+<label x="123.19" y="222.504" size="2.54" layer="95"/>
+<junction x="121.92" y="220.98"/>
+<pinref part="J1" gate="G$1" pin="1"/>
+<pinref part="J1" gate="G$1" pin="2"/>
 </segment>
 </net>
 </nets>
@@ -22583,6 +22755,7 @@ slow I2C</text>
 <wire x1="177.8" y1="162.56" x2="177.8" y2="165.1" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="IO1"/>
 <pinref part="R23" gate="R" pin="2"/>
+<junction x="166.37" y="162.56"/>
 </segment>
 </net>
 <net name="BOOT0" class="0">
@@ -25725,14 +25898,6 @@ PMIC voltages, but I am not sure this is necessary?</text>
 <text x="154.94" y="243.84" size="1.778" layer="97">XTALIN</text>
 <text x="154.94" y="228.6" size="1.778" layer="97">XTALOUT</text>
 <text x="154.94" y="223.52" size="1.778" layer="97">VSS_OSC</text>
-<text x="62.738" y="60.96" size="2.54" layer="97">USB Client</text>
-<text x="60.96" y="38.1" size="2.54" layer="97">USB Host</text>
-<wire x1="15.24" y1="83.82" x2="15.24" y2="17.78" width="0.1524" layer="97"/>
-<wire x1="15.24" y1="17.78" x2="86.36" y2="17.78" width="0.1524" layer="97"/>
-<wire x1="86.36" y1="17.78" x2="86.36" y2="83.82" width="0.1524" layer="97"/>
-<wire x1="86.36" y1="83.82" x2="15.24" y2="83.82" width="0.1524" layer="97"/>
-<text x="16.51" y="93.98" size="2.54" layer="97">TODO cap between client shield and ground
-on breakout board</text>
 </plain>
 <instances>
 <instance part="U6" gate="B" x="200.66" y="200.66" smashed="yes">
@@ -25944,21 +26109,6 @@ on breakout board</text>
 <instance part="TP111" gate="G$1" x="233.68" y="147.32" smashed="yes">
 <attribute name="NAME" x="238.252" y="146.558" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="GND53" gate="1" x="40.64" y="50.8" smashed="yes">
-<attribute name="VALUE" x="44.196" y="53.34" size="1.778" layer="96" align="top-center"/>
-</instance>
-<instance part="GND54" gate="1" x="40.64" y="25.4" smashed="yes" rot="MR0">
-<attribute name="VALUE" x="40.64" y="25.146" size="1.778" layer="96" rot="MR0" align="top-center"/>
-</instance>
-<instance part="J8" gate="G$1" x="25.4" y="76.2" smashed="yes" rot="R180">
-<attribute name="NAME" x="27.0764" y="24.6634" size="2.0828" layer="95" ratio="6" rot="SR180"/>
-</instance>
-<instance part="GND55" gate="1" x="43.18" y="76.2" smashed="yes">
-<attribute name="VALUE" x="43.18" y="75.946" size="1.778" layer="96" align="top-center"/>
-</instance>
-<instance part="GND52" gate="1" x="40.64" y="66.04" smashed="yes">
-<attribute name="VALUE" x="43.942" y="68.58" size="1.778" layer="96" align="top-center"/>
-</instance>
 <instance part="GND60" gate="1" x="294.64" y="134.62" smashed="yes" rot="MR0">
 <attribute name="VALUE" x="294.64" y="134.366" size="1.778" layer="96" rot="MR0" align="top-center"/>
 </instance>
@@ -26033,60 +26183,6 @@ on breakout board</text>
 <pinref part="R66" gate="R" pin="1"/>
 <wire x1="287.02" y1="154.94" x2="287.02" y2="152.4" width="0.1524" layer="91"/>
 <pinref part="GND62" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="GND55" gate="1" pin="GND"/>
-<pinref part="J8" gate="G$1" pin="PAD"/>
-<wire x1="43.18" y1="78.74" x2="35.56" y2="78.74" width="0.1524" layer="91"/>
-<pinref part="J8" gate="G$1" pin="19"/>
-<wire x1="35.56" y1="78.74" x2="33.02" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="73.66" x2="35.56" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="73.66" x2="35.56" y2="76.2" width="0.1524" layer="91"/>
-<junction x="35.56" y="78.74"/>
-<pinref part="J8" gate="G$1" pin="20"/>
-<wire x1="35.56" y1="76.2" x2="35.56" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="76.2" x2="35.56" y2="76.2" width="0.1524" layer="91"/>
-<junction x="35.56" y="76.2"/>
-</segment>
-<segment>
-<pinref part="J8" gate="G$1" pin="16"/>
-<wire x1="33.02" y1="66.04" x2="35.56" y2="66.04" width="0.1524" layer="91"/>
-<pinref part="GND52" gate="1" pin="GND"/>
-<wire x1="35.56" y1="66.04" x2="38.1" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="68.58" x2="38.1" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="38.1" y1="68.58" x2="38.1" y2="66.04" width="0.1524" layer="91"/>
-<pinref part="J8" gate="G$1" pin="13"/>
-<wire x1="33.02" y1="58.42" x2="35.56" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="58.42" x2="35.56" y2="66.04" width="0.1524" layer="91"/>
-<junction x="35.56" y="66.04"/>
-</segment>
-<segment>
-<pinref part="J8" gate="G$1" pin="11"/>
-<pinref part="GND53" gate="1" pin="GND"/>
-<wire x1="33.02" y1="53.34" x2="35.56" y2="53.34" width="0.1524" layer="91"/>
-<pinref part="J8" gate="G$1" pin="10"/>
-<wire x1="35.56" y1="53.34" x2="40.64" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="50.8" x2="35.56" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="50.8" x2="35.56" y2="53.34" width="0.1524" layer="91"/>
-<junction x="35.56" y="53.34"/>
-</segment>
-<segment>
-<pinref part="J8" gate="G$1" pin="7"/>
-<wire x1="33.02" y1="43.18" x2="35.56" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="33.02" x2="35.56" y2="43.18" width="0.1524" layer="91"/>
-<pinref part="J8" gate="G$1" pin="1"/>
-<pinref part="GND54" gate="1" pin="GND"/>
-<wire x1="33.02" y1="27.94" x2="35.56" y2="27.94" width="0.1524" layer="91"/>
-<pinref part="J8" gate="G$1" pin="2"/>
-<wire x1="35.56" y1="27.94" x2="40.64" y2="27.94" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="30.48" x2="35.56" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="30.48" x2="35.56" y2="27.94" width="0.1524" layer="91"/>
-<junction x="35.56" y="27.94"/>
-<pinref part="J8" gate="G$1" pin="3"/>
-<wire x1="33.02" y1="33.02" x2="35.56" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="33.02" x2="35.56" y2="30.48" width="0.1524" layer="91"/>
-<junction x="35.56" y="30.48"/>
-<junction x="35.56" y="33.02"/>
 </segment>
 <segment>
 <pinref part="JP7" gate="G$1" pin="3"/>
@@ -26168,11 +26264,7 @@ on breakout board</text>
 <pinref part="TP96" gate="G$1" pin="1"/>
 <wire x1="162.56" y1="83.82" x2="149.86" y2="83.82" width="0.1524" layer="91"/>
 <pinref part="U11" gate="G$1" pin="I3"/>
-</segment>
-<segment>
-<wire x1="33.02" y1="63.5" x2="45.72" y2="63.5" width="0.1524" layer="91"/>
-<label x="45.72" y="63.5" size="1.4224" layer="95" xref="yes"/>
-<pinref part="J8" gate="G$1" pin="15"/>
+<junction x="162.56" y="83.82"/>
 </segment>
 </net>
 <net name="USB_CLI_P" class="0">
@@ -26188,11 +26280,7 @@ on breakout board</text>
 <pinref part="TP95" gate="G$1" pin="1"/>
 <wire x1="160.02" y1="86.36" x2="152.4" y2="86.36" width="0.1524" layer="91"/>
 <pinref part="U11" gate="G$1" pin="I2"/>
-</segment>
-<segment>
-<wire x1="33.02" y1="60.96" x2="45.72" y2="60.96" width="0.1524" layer="91"/>
-<label x="45.72" y="60.96" size="1.4224" layer="95" xref="yes"/>
-<pinref part="J8" gate="G$1" pin="14"/>
+<junction x="160.02" y="86.36"/>
 </segment>
 </net>
 <net name="USB_CLI_ID" class="0">
@@ -26208,11 +26296,7 @@ on breakout board</text>
 <pinref part="TP94" gate="G$1" pin="1"/>
 <wire x1="157.48" y1="88.9" x2="154.94" y2="88.9" width="0.1524" layer="91"/>
 <pinref part="U11" gate="G$1" pin="I1"/>
-</segment>
-<segment>
-<wire x1="33.02" y1="55.88" x2="45.72" y2="55.88" width="0.1524" layer="91"/>
-<label x="45.72" y="55.88" size="1.4224" layer="95" xref="yes"/>
-<pinref part="J8" gate="G$1" pin="12"/>
+<junction x="157.48" y="88.9"/>
 </segment>
 </net>
 <net name="USB_CLI_VBUS" class="0">
@@ -26221,32 +26305,12 @@ on breakout board</text>
 <wire x1="134.62" y1="78.74" x2="116.84" y2="78.74" width="0.1524" layer="91"/>
 <label x="116.84" y="78.74" size="1.4224" layer="95" rot="R180" xref="yes"/>
 </segment>
-<segment>
-<wire x1="45.72" y1="71.12" x2="35.56" y2="71.12" width="0.1524" layer="91"/>
-<label x="45.72" y="71.12" size="1.4224" layer="95" xref="yes"/>
-<pinref part="J8" gate="G$1" pin="18"/>
-<pinref part="J8" gate="G$1" pin="17"/>
-<wire x1="35.56" y1="71.12" x2="33.02" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="68.58" x2="35.56" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="68.58" x2="35.56" y2="71.12" width="0.1524" layer="91"/>
-<junction x="35.56" y="71.12"/>
-</segment>
 </net>
 <net name="USB_HO_VBUS" class="0">
 <segment>
 <pinref part="FB2" gate="G$1" pin="2"/>
 <wire x1="302.26" y1="68.58" x2="320.04" y2="68.58" width="0.1524" layer="91"/>
 <label x="320.04" y="68.58" size="1.4224" layer="95" xref="yes"/>
-</segment>
-<segment>
-<wire x1="33.02" y1="48.26" x2="35.56" y2="48.26" width="0.1524" layer="91"/>
-<label x="45.72" y="48.26" size="1.4224" layer="95" xref="yes"/>
-<pinref part="J8" gate="G$1" pin="9"/>
-<pinref part="J8" gate="G$1" pin="8"/>
-<wire x1="35.56" y1="48.26" x2="45.72" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="45.72" x2="35.56" y2="45.72" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="45.72" x2="35.56" y2="48.26" width="0.1524" layer="91"/>
-<junction x="35.56" y="48.26"/>
 </segment>
 </net>
 <net name="N$619" class="0">
@@ -26563,11 +26627,7 @@ on breakout board</text>
 <pinref part="TP114" gate="G$1" pin="1"/>
 <wire x1="266.7" y1="63.5" x2="264.16" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="U12" gate="G$1" pin="I4"/>
-</segment>
-<segment>
-<wire x1="33.02" y1="40.64" x2="45.72" y2="40.64" width="0.1524" layer="91"/>
-<label x="45.72" y="40.64" size="1.4224" layer="95" xref="yes"/>
-<pinref part="J8" gate="G$1" pin="6"/>
+<junction x="266.7" y="63.5"/>
 </segment>
 </net>
 <net name="USB_HO_P" class="0">
@@ -26583,11 +26643,7 @@ on breakout board</text>
 <pinref part="TP113" gate="G$1" pin="1"/>
 <wire x1="266.7" y1="71.12" x2="264.16" y2="71.12" width="0.1524" layer="91"/>
 <pinref part="U12" gate="G$1" pin="I1"/>
-</segment>
-<segment>
-<wire x1="33.02" y1="38.1" x2="45.72" y2="38.1" width="0.1524" layer="91"/>
-<label x="45.72" y="38.1" size="1.4224" layer="95" xref="yes"/>
-<pinref part="J8" gate="G$1" pin="5"/>
+<junction x="266.7" y="71.12"/>
 </segment>
 </net>
 <net name="N$89" class="0">
@@ -26619,11 +26675,6 @@ on breakout board</text>
 </segment>
 </net>
 <net name="USB_HO_ID" class="0">
-<segment>
-<pinref part="J8" gate="G$1" pin="4"/>
-<wire x1="33.02" y1="35.56" x2="45.72" y2="35.56" width="0.1524" layer="91"/>
-<label x="45.72" y="35.56" size="1.27" layer="95" xref="yes"/>
-</segment>
 <segment>
 <wire x1="294.64" y1="152.4" x2="302.26" y2="152.4" width="0.1524" layer="91"/>
 <label x="302.26" y="152.4" size="1.778" layer="95" xref="yes"/>
@@ -27633,78 +27684,78 @@ TODO does OPD need this?</text>
 </sheet>
 </sheets>
 <errors>
-<approved hash="104,2,127,149.86,U3,V+,VPD,,,"/>
-<approved hash="104,2,269.24,185.42,U4,VCC,MAX4211-3V3,,,"/>
-<approved hash="104,2,226.06,73.66,U5,VIN,VBUSP,,,"/>
-<approved hash="104,3,-2.54,261.62,U1A,VIN_AC,5V_IN,,,"/>
-<approved hash="104,3,-2.54,259.08,U1A,VIN_AC,5V_IN,,,"/>
-<approved hash="104,3,-2.54,231.14,U1A,VIN_BAT,N$401,,,"/>
-<approved hash="104,3,-2.54,228.6,U1A,VIN_BAT,N$401,,,"/>
-<approved hash="104,3,68.58,226.06,U1A,SYS_VDD2_3P3V,N$405,,,"/>
-<approved hash="104,3,68.58,144.78,U1A,SYS_VDD_1P8V,N$499,,,"/>
-<approved hash="104,3,68.58,142.24,U1A,SYS_VDD_1P8V,N$499,,,"/>
-<approved hash="104,3,68.58,243.84,U1A,SYS_VDD1_3P3V,3.3V,,,"/>
-<approved hash="104,3,68.58,241.3,U1A,SYS_VDD1_3P3V,3.3V,,,"/>
-<approved hash="104,3,68.58,139.7,U1A,SYS_VDD_1P8V,N$499,,,"/>
-<approved hash="104,3,68.58,137.16,U1A,SYS_VDD_1P8V,N$499,,,"/>
-<approved hash="104,3,-2.54,256.54,U1A,VIN_AC,5V_IN,,,"/>
-<approved hash="104,3,-2.54,226.06,U1A,VIN_BAT,N$401,,,"/>
-<approved hash="104,3,68.58,157.48,U1A,VDDSHV5,N$26,,,"/>
-<approved hash="104,3,68.58,167.64,U1A,VDDSHV1,N$26,,,"/>
-<approved hash="104,3,68.58,165.1,U1A,VDDSHV2,N$26,,,"/>
-<approved hash="104,3,68.58,162.56,U1A,VDDSHV3,N$26,,,"/>
-<approved hash="104,3,68.58,160.02,U1A,VDDSHV4,N$26,,,"/>
-<approved hash="104,3,68.58,154.94,U1A,VDDSHV6,N$26,,,"/>
-<approved hash="104,3,68.58,238.76,U1A,SYS_VDD1_3P3V,3.3V,,,"/>
-<approved hash="104,3,68.58,236.22,U1A,SYS_VDD1_3P3V,3.3V,,,"/>
-<approved hash="104,3,68.58,223.52,U1A,SYS_VDD2_3P3V,N$405,,,"/>
-<approved hash="104,3,68.58,134.62,U1A,SYS_VDD_1P8V,N$499,,,"/>
-<approved hash="104,3,68.58,132.08,U1A,SYS_VDD_1P8V,N$499,,,"/>
-<approved hash="104,3,68.58,195.58,U1A,SYS_VDD3_3P3V,N$26,,,"/>
-<approved hash="104,3,68.58,129.54,U1A,SYS_VDD_1P8V,N$499,,,"/>
-<approved hash="104,3,68.58,213.36,U1A,SYS_RTC_1P8V,N$407,,,"/>
-<approved hash="104,3,68.58,210.82,U1A,SYS_RTC_1P8V,N$407,,,"/>
-<approved hash="104,3,68.58,127,U1A,SYS_VDD_1P8V,N$499,,,"/>
-<approved hash="104,3,68.58,193.04,U1A,SYS_VDD3_3P3V,N$26,,,"/>
-<approved hash="104,3,68.58,190.5,U1A,SYS_VDD3_3P3V,N$26,,,"/>
-<approved hash="104,3,68.58,187.96,U1A,SYS_VDD3_3P3V,N$26,,,"/>
-<approved hash="104,3,68.58,185.42,U1A,SYS_VDD3_3P3V,N$26,,,"/>
-<approved hash="104,3,68.58,182.88,U1A,SYS_VDD3_3P3V,N$26,,,"/>
-<approved hash="104,3,68.58,180.34,U1A,SYS_VDD3_3P3V,N$26,,,"/>
-<approved hash="104,3,68.58,177.8,U1A,SYS_VDD3_3P3V,N$26,,,"/>
-<approved hash="104,3,292.1,96.52,J9,VBUS,N$614,,,"/>
-<approved hash="104,3,337.82,114.3,RCLAMP0504FB,VCC,VIN_USB,,,"/>
-<approved hash="104,3,416.56,96.52,RCLAMP0504FB1,VCC,VOUT_USB,,,"/>
-<approved hash="104,3,990.6,175.26,U10,VDDQ,3.3V,,,"/>
-<approved hash="104,3,988.06,175.26,U10,VDDIO,3.3V,,,"/>
-<approved hash="104,3,990.6,137.16,U10,VSSIO,GND,,,"/>
-<approved hash="104,3,993.14,137.16,U10,VSSQ,GND,,,"/>
-<approved hash="104,3,993.14,175.26,U10,VDDI,N$640,,,"/>
-<approved hash="104,3,767.08,317.5,U2,VCC,3.3V,,,"/>
-<approved hash="104,3,861.06,15.24,U6,VCCB,2.8V,,,"/>
-<approved hash="104,3,855.98,15.24,U6,VCCA,3.3V,,,"/>
-<approved hash="104,3,1082.04,30.48,U$2,IN,3.3V,,,"/>
-<approved hash="104,3,1092.2,17.78,U$2,OUT,2.8V,,,"/>
-<approved hash="104,3,944.88,-10.16,U12,VCCA,3.3V,,,"/>
-<approved hash="104,3,949.96,-10.16,U12,VCCB,2.8V,,,"/>
-<approved hash="104,3,1079.5,-30.48,U11,VCCA,2.8V,,,"/>
-<approved hash="104,3,1084.58,-30.48,U11,VCCB,3.3V,,,"/>
-<approved hash="104,3,480.06,86.36,J7,VBUS,N$615,,,"/>
-<approved hash="108,2,332.74,172.72,N$596,,,,,"/>
+<approved hash="104,2,231.14,86.36,U2,VIN,VBUSP,,,"/>
+<approved hash="104,5,-124.46,175.26,U6A,VIN_AC,5V_IN,,,"/>
+<approved hash="104,5,-124.46,172.72,U6A,VIN_AC,5V_IN,,,"/>
+<approved hash="104,5,-124.46,144.78,U6A,VIN_BAT,N$401,,,"/>
+<approved hash="104,5,-124.46,142.24,U6A,VIN_BAT,N$401,,,"/>
+<approved hash="104,5,-53.34,139.7,U6A,SYS_VDD2_3P3V,N$405,,,"/>
+<approved hash="104,5,-53.34,58.42,U6A,SYS_VDD_1P8V,N$499,,,"/>
+<approved hash="104,5,-53.34,55.88,U6A,SYS_VDD_1P8V,N$499,,,"/>
+<approved hash="104,5,-53.34,175.26,U6A,SYS_VOUT,VDD,,,"/>
+<approved hash="104,5,-53.34,172.72,U6A,SYS_VOUT,VDD,,,"/>
+<approved hash="104,5,-53.34,157.48,U6A,SYS_VDD1_3P3V,3.3V,,,"/>
+<approved hash="104,5,-53.34,154.94,U6A,SYS_VDD1_3P3V,3.3V,,,"/>
+<approved hash="104,5,-53.34,53.34,U6A,SYS_VDD_1P8V,N$499,,,"/>
+<approved hash="104,5,-53.34,50.8,U6A,SYS_VDD_1P8V,N$499,,,"/>
+<approved hash="104,5,-124.46,170.18,U6A,VIN_AC,5V_IN,,,"/>
+<approved hash="104,5,-124.46,139.7,U6A,VIN_BAT,N$401,,,"/>
+<approved hash="104,5,-53.34,71.12,U6A,VDDSHV5,N$26,,,"/>
+<approved hash="104,5,-53.34,81.28,U6A,VDDSHV1,N$26,,,"/>
+<approved hash="104,5,-53.34,78.74,U6A,VDDSHV2,N$26,,,"/>
+<approved hash="104,5,-53.34,76.2,U6A,VDDSHV3,N$26,,,"/>
+<approved hash="104,5,-53.34,73.66,U6A,VDDSHV4,N$26,,,"/>
+<approved hash="104,5,-53.34,68.58,U6A,VDDSHV6,N$26,,,"/>
+<approved hash="104,5,-53.34,170.18,U6A,SYS_VOUT,VDD,,,"/>
+<approved hash="104,5,-53.34,167.64,U6A,SYS_VOUT,VDD,,,"/>
+<approved hash="104,5,-53.34,152.4,U6A,SYS_VDD1_3P3V,3.3V,,,"/>
+<approved hash="104,5,-53.34,149.86,U6A,SYS_VDD1_3P3V,3.3V,,,"/>
+<approved hash="104,5,-53.34,137.16,U6A,SYS_VDD2_3P3V,N$405,,,"/>
+<approved hash="104,5,-53.34,48.26,U6A,SYS_VDD_1P8V,N$499,,,"/>
+<approved hash="104,5,-53.34,45.72,U6A,SYS_VDD_1P8V,N$499,,,"/>
+<approved hash="104,5,-53.34,109.22,U6A,SYS_VDD3_3P3V,N$26,,,"/>
+<approved hash="104,5,-53.34,43.18,U6A,SYS_VDD_1P8V,N$499,,,"/>
+<approved hash="104,5,-53.34,127,U6A,SYS_RTC_1P8V,N$32,,,"/>
+<approved hash="104,5,-53.34,124.46,U6A,SYS_RTC_1P8V,N$32,,,"/>
+<approved hash="104,5,-53.34,40.64,U6A,SYS_VDD_1P8V,N$499,,,"/>
+<approved hash="104,5,-53.34,106.68,U6A,SYS_VDD3_3P3V,N$26,,,"/>
+<approved hash="104,5,-53.34,104.14,U6A,SYS_VDD3_3P3V,N$26,,,"/>
+<approved hash="104,5,-53.34,101.6,U6A,SYS_VDD3_3P3V,N$26,,,"/>
+<approved hash="104,5,-53.34,99.06,U6A,SYS_VDD3_3P3V,N$26,,,"/>
+<approved hash="104,5,-53.34,96.52,U6A,SYS_VDD3_3P3V,N$26,,,"/>
+<approved hash="104,5,-53.34,93.98,U6A,SYS_VDD3_3P3V,N$26,,,"/>
+<approved hash="104,5,-53.34,91.44,U6A,SYS_VDD3_3P3V,N$26,,,"/>
+<approved hash="104,3,449.58,350.52,U8,VDDQ,3.3V,,,"/>
+<approved hash="104,3,447.04,350.52,U8,VDDIO,3.3V,,,"/>
+<approved hash="104,3,449.58,312.42,U8,VSSIO,GND,,,"/>
+<approved hash="104,3,452.12,312.42,U8,VSSQ,GND,,,"/>
+<approved hash="104,3,452.12,350.52,U8,VDDI,N$640,,,"/>
+<approved hash="104,3,226.06,492.76,U4,VCC,3.3V,,,"/>
+<approved hash="104,3,320.04,190.5,U5,VCCB,2.8V,,,"/>
+<approved hash="104,3,314.96,190.5,U5,VCCA,3.3V,,,"/>
+<approved hash="104,3,398.78,165.1,U7,VCCA,3.3V,,,"/>
+<approved hash="104,3,403.86,165.1,U7,VCCB,2.8V,,,"/>
+<approved hash="104,3,538.48,144.78,U10,VCCA,2.8V,,,"/>
+<approved hash="104,3,543.56,144.78,U10,VCCB,3.3V,,,"/>
+<approved hash="104,3,541.02,205.74,U9,IN,3.3V,,,"/>
+<approved hash="104,3,551.18,193.04,U9,OUT,2.8V,,,"/>
+<approved hash="104,4,254,78.74,U12,VCC,VOUT_USB,,,"/>
+<approved hash="104,4,175.26,96.52,U11,VCC,VIN_USB,,,"/>
+<approved hash="104,2,132.08,170.18,U1,V+,VPD,,,"/>
+<approved hash="104,2,284.48,205.74,U3,VCC,MAX4211-3V3,,,"/>
 <approved hash="113,1,215.796,139.596,FRAME1,,,,,"/>
-<approved hash="113,1,223.757,78.9661,JP9,,,,,"/>
-<approved hash="113,1,223.478,128.496,JP10,,,,,"/>
-<approved hash="113,1,245.11,204.696,JP11,,,,,"/>
-<approved hash="113,2,215.796,139.596,FRAME3,,,,,"/>
-<approved hash="113,3,292.704,88.4767,J9,,,,,"/>
-<approved hash="113,3,1247.82,206.942,J10,,,,,"/>
-<approved hash="113,3,1247.82,232.342,J11,,,,,"/>
-<approved hash="113,3,1247.82,181.542,J12,,,,,"/>
-<approved hash="113,3,987.235,156.21,U10,,,,,"/>
-<approved hash="113,3,479.456,78.3167,J7,,,,,"/>
-<approved hash="113,3,-48.1923,267.377,J13,,,,,"/>
-<approved hash="113,3,836.998,272.457,J14,,,,,"/>
-<approved hash="113,3,-25.3323,112.437,J15,,,,,"/>
+<approved hash="113,2,215.796,139.596,FRAME2,,,,,"/>
+<approved hash="113,3,706.797,382.202,J6,,,,,"/>
+<approved hash="113,3,706.797,407.602,J5,,,,,"/>
+<approved hash="113,3,706.797,356.802,J7,,,,,"/>
+<approved hash="113,3,446.215,331.47,U8,,,,,"/>
+<approved hash="113,5,-170.112,181.017,J9,,,,,"/>
+<approved hash="113,3,295.978,447.717,J3,,,,,"/>
+<approved hash="113,5,-147.252,26.0773,J11,,,,,"/>
+<approved hash="113,3,431.8,279.296,FRAME3,,,,,"/>
+<approved hash="113,4,215.796,139.596,FRAME4,,,,,"/>
+<approved hash="113,5,-12.804,106.576,FRAME5,,,,,"/>
+<approved hash="113,5,-154.872,94.6573,J10,,,,,"/>
 </errors>
 </schematic>
 </drawing>
