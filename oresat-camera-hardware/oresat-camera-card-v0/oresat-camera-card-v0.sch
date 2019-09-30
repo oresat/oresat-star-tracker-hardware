@@ -7621,7 +7621,7 @@ This package is identical to 0603-C, but has its tPlace silkscreen layer removed
 <wire x1="2" y1="2" x2="1.5" y2="2" width="0.2" layer="21"/>
 <wire x1="-1.5" y1="2" x2="-2" y2="1.5" width="0.2" layer="21"/>
 <wire x1="-1.5" y1="2" x2="-2" y2="1.5" width="0.2" layer="51"/>
-<circle x="-2.2" y="2.2" radius="0.14141875" width="0.127" layer="21"/>
+<circle x="-2.2" y="2.2" radius="0.127" width="0.254" layer="21"/>
 <text x="1.6" y="-3" size="0.635" layer="25" font="vector" ratio="20">&gt;NAME</text>
 </package>
 </packages>
@@ -12682,7 +12682,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="-0.254" y1="0" x2="0.254" y2="0" width="0.1524" layer="23"/>
 <wire x1="0" y1="-0.254" x2="0" y2="0.254" width="0.1524" layer="23"/>
 <text x="-1.1176" y="2.54" size="0.5" layer="25" font="vector" ratio="15" rot="SR0">&gt;Name</text>
-<circle x="-1.778" y="2.159" radius="0.127" width="0.508" layer="21"/>
+<circle x="-1.778" y="1.905" radius="0.127" width="0.508" layer="21"/>
 </package>
 <package name="DBV5-M">
 <smd name="1" x="-1.1684" y="0.95" dx="1.778" dy="0.6096" layer="1"/>
@@ -21035,6 +21035,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="TP148" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP149" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP150" library="Tova" deviceset="TEST-POINT" device=""/>
+<part name="TP151" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 </parts>
 <sheets>
 <sheet>
@@ -22959,10 +22960,6 @@ slow I2C</text>
 <sheet>
 <description>OSD3358 SD, eMMC, Camera, etc : SIP C, D</description>
 <plain>
-<text x="111.76" y="523.24" size="1.778" layer="97">TODO
-GND test points
-
-</text>
 <text x="718.82" y="383.54" size="1.778" layer="97">SYSBOOT Jumper to config boot order
 must use very light pullups because 
 boot config is latched at boot and then
@@ -25886,8 +25883,6 @@ battery circuit</text>
 <wire x1="63.5" y1="127" x2="111.76" y2="127" width="0.1524" layer="97"/>
 <text x="71.12" y="177.8" size="2.54" layer="97">JTAG connector</text>
 <text x="99.06" y="104.14" size="2.54" layer="97">USB Client Circuit</text>
-<text x="106.68" y="48.26" size="1.778" layer="101">TODO this connector has a crappy footprint
-get a new one</text>
 <text x="293.624" y="197.358" size="1.778" layer="97">Analog section taken straight from RED board
 schematic, something about ADC monitoring 
 PMIC voltages, but I am not sure this is necessary?</text>
@@ -25902,7 +25897,7 @@ PMIC voltages, but I am not sure this is necessary?</text>
 <wire x1="93.98" y1="238.76" x2="71.12" y2="238.76" width="0.1524" layer="97"/>
 <text x="101.6" y="66.04" size="1.778" layer="97">See Connectors Sheet</text>
 <text x="322.58" y="71.12" size="1.778" layer="97">See Connectors Sheet</text>
-<text x="81.28" y="251.46" size="1.778" layer="97">TODO add optional resistors from AM335X datasheet</text>
+<text x="99.06" y="254" size="1.778" layer="97">TODO add optional resistors from AM335X datasheet?</text>
 <text x="154.94" y="243.84" size="1.778" layer="97">XTALIN</text>
 <text x="154.94" y="228.6" size="1.778" layer="97">XTALOUT</text>
 <text x="154.94" y="223.52" size="1.778" layer="97">VSS_OSC</text>
@@ -26102,8 +26097,8 @@ PMIC voltages, but I am not sure this is necessary?</text>
 <instance part="3V-25" gate="A" x="287.02" y="187.96" smashed="yes">
 <attribute name="VALUE" x="286.385" y="188.595" size="1.27" layer="96"/>
 </instance>
-<instance part="TP112" gate="G$1" x="254" y="167.64" smashed="yes" rot="R90">
-<attribute name="NAME" x="254.762" y="172.212" size="1.778" layer="95" font="vector" rot="R90"/>
+<instance part="TP112" gate="G$1" x="264.16" y="167.64" smashed="yes" rot="R90">
+<attribute name="NAME" x="264.922" y="172.212" size="1.778" layer="95" font="vector" rot="R90"/>
 </instance>
 <instance part="TP101" gate="G$1" x="167.64" y="193.04" smashed="yes" rot="R180">
 <attribute name="NAME" x="163.068" y="194.056" size="1.778" layer="95" font="vector" rot="R180"/>
@@ -26122,6 +26117,9 @@ PMIC voltages, but I am not sure this is necessary?</text>
 </instance>
 <instance part="JP7" gate="G$1" x="294.64" y="144.78" smashed="yes">
 <attribute name="NAME" x="297.18" y="145.161" size="1.778" layer="95" font="vector"/>
+</instance>
+<instance part="TP151" gate="G$1" x="243.84" y="177.8" smashed="yes">
+<attribute name="NAME" x="248.412" y="177.038" size="1.778" layer="95" font="vector"/>
 </instance>
 </instances>
 <busses>
@@ -26521,16 +26519,16 @@ PMIC voltages, but I am not sure this is necessary?</text>
 </net>
 <net name="PMIC_MUX_IN" class="0">
 <segment>
-<wire x1="231.14" y1="167.64" x2="254" y2="167.64" width="0.1524" layer="91"/>
+<wire x1="231.14" y1="167.64" x2="264.16" y2="167.64" width="0.1524" layer="91"/>
 <pinref part="R66" gate="R" pin="2"/>
-<wire x1="254" y1="167.64" x2="287.02" y2="167.64" width="0.1524" layer="91"/>
+<wire x1="264.16" y1="167.64" x2="287.02" y2="167.64" width="0.1524" layer="91"/>
 <wire x1="287.02" y1="165.1" x2="287.02" y2="167.64" width="0.1524" layer="91"/>
 <pinref part="R65" gate="R" pin="1"/>
 <wire x1="287.02" y1="167.64" x2="287.02" y2="170.18" width="0.1524" layer="91"/>
 <junction x="287.02" y="167.64"/>
 <pinref part="U6" gate="B" pin="PMIC_MUX_IN"/>
 <pinref part="TP112" gate="G$1" pin="1"/>
-<junction x="254" y="167.64"/>
+<junction x="264.16" y="167.64"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -26540,6 +26538,8 @@ PMIC voltages, but I am not sure this is necessary?</text>
 <pinref part="U6" gate="B" pin="AIN7"/>
 <wire x1="243.84" y1="172.72" x2="243.84" y2="177.8" width="0.1524" layer="91"/>
 <wire x1="243.84" y1="177.8" x2="231.14" y2="177.8" width="0.1524" layer="91"/>
+<pinref part="TP151" gate="G$1" pin="1"/>
+<junction x="243.84" y="177.8"/>
 </segment>
 </net>
 <net name="N$66" class="0">
@@ -26720,7 +26720,7 @@ Likewise, right now the only component using
 WARMRSTN when the power supplies are
 ready. Because of different voltage levels,
 an open-drain buffer is required.</text>
-<text x="-203.2" y="157.48" size="1.778" layer="97">PWR from USB client circuit</text>
+<text x="-208.28" y="157.48" size="1.778" layer="97">PWR from USB client circuit</text>
 <text x="-182.88" y="193.04" size="1.778" layer="97">Jumper to disconnect 
 octavo from OPD power</text>
 <text x="17.78" y="99.06" size="1.778" layer="150">This is a clamping circuit between the SYS_RTC_1P8V 
@@ -26744,10 +26744,10 @@ NOTE: Taken verbatim from RED board</text>
 <wire x1="-38.1" y1="182.88" x2="17.78" y2="182.88" width="0.1524" layer="97"/>
 <wire x1="17.78" y1="182.88" x2="17.78" y2="210.82" width="0.1524" layer="97"/>
 <wire x1="17.78" y1="210.82" x2="-38.1" y2="210.82" width="0.1524" layer="97"/>
-<wire x1="-170.18" y1="162.56" x2="-205.74" y2="162.56" width="0.1524" layer="97"/>
-<wire x1="-205.74" y1="162.56" x2="-205.74" y2="154.94" width="0.1524" layer="97"/>
-<wire x1="-205.74" y1="154.94" x2="-170.18" y2="154.94" width="0.1524" layer="97"/>
-<wire x1="-170.18" y1="154.94" x2="-170.18" y2="162.56" width="0.1524" layer="97"/>
+<wire x1="-175.26" y1="162.56" x2="-210.82" y2="162.56" width="0.1524" layer="97"/>
+<wire x1="-210.82" y1="162.56" x2="-210.82" y2="154.94" width="0.1524" layer="97"/>
+<wire x1="-210.82" y1="154.94" x2="-175.26" y2="154.94" width="0.1524" layer="97"/>
+<wire x1="-175.26" y1="154.94" x2="-175.26" y2="162.56" width="0.1524" layer="97"/>
 <text x="-175.26" y="-7.62" size="1.778" layer="150">RTC_KALDO_ENN is grounded thru a 10K ohm resistor so that 
 the internal RTC LDO is enabled and CAP_VDD_RTC does not 
 need to be connected to VDD_CORE.</text>
@@ -26768,9 +26768,7 @@ need to be connected to VDD_CORE.</text>
 <wire x1="-185.42" y1="190.5" x2="-154.94" y2="190.5" width="0.1524" layer="97"/>
 <wire x1="-154.94" y1="190.5" x2="-154.94" y2="200.66" width="0.1524" layer="97"/>
 <wire x1="-154.94" y1="200.66" x2="-185.42" y2="200.66" width="0.1524" layer="97"/>
-<text x="-194.564" y="94.996" size="1.778" layer="97">Power Button
-TODO Label in silk
-TODO does OPD need this?</text>
+<text x="-194.564" y="94.996" size="1.778" layer="97"></text>
 </plain>
 <instances>
 <instance part="U6" gate="A" x="-88.9" y="96.52" smashed="yes">
