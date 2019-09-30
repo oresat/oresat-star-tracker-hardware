@@ -20483,9 +20483,9 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="TP98" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="Y1" library="X-ECS-240-12-30BQ-AEN-TR" deviceset="ECS-240-12-30BQ-AEN-TR" device="" value="24MHz"/>
 <part name="GND56" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="C34" library="oresat-rcl" deviceset="C-EU" device="0603-A-NOSILK" value="0.1uF"/>
-<part name="C31" library="oresat-rcl" deviceset="C-EU" device="0603-A-NOSILK" value="1nF"/>
-<part name="C33" library="oresat-rcl" deviceset="C-EU" device="0603-A-NOSILK" value="0.1uF"/>
+<part name="C34" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="0.1uF"/>
+<part name="C31" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="1nF"/>
+<part name="C33" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="0.1uF"/>
 <part name="R63" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="0"/>
 <part name="AGND1" library="SparkFun-PowerSymbols" deviceset="AGND" device=""/>
 <part name="R64" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="0"/>
