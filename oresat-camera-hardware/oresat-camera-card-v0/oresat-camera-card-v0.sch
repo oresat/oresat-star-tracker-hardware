@@ -7,7 +7,7 @@
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.05" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="15" fill="1" visible="no" active="no"/>
@@ -21034,6 +21034,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="TP147" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP148" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP149" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP150" library="Tova" deviceset="TEST-POINT" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -22131,6 +22132,9 @@ slow I2C</text>
 <attribute name="VALUE" x="97.79" y="50.038" size="1.778" layer="96"/>
 <attribute name="NAME" x="97.79" y="52.578" size="1.778" layer="95"/>
 </instance>
+<instance part="TP150" gate="G$1" x="153.67" y="135.89" smashed="yes" rot="R90">
+<attribute name="NAME" x="149.86" y="132.08" size="1.778" layer="95" font="vector"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -22760,9 +22764,11 @@ slow I2C</text>
 </net>
 <net name="BOOT0" class="0">
 <segment>
-<label x="152.4" y="152.4" size="1.27" layer="95" xref="yes"/>
-<wire x1="147.32" y1="152.4" x2="152.4" y2="152.4" width="0.1524" layer="91"/>
+<label x="152.4" y="135.89" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="147.32" y1="152.4" x2="153.67" y2="152.4" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="IO5"/>
+<wire x1="153.67" y1="152.4" x2="153.67" y2="135.89" width="0.1524" layer="91"/>
+<pinref part="TP150" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$575" class="0">
