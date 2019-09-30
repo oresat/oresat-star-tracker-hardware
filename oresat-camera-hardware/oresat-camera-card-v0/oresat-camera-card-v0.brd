@@ -6499,9 +6499,7 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="51.8375" y1="13.3375" x2="51.8375" y2="13.8125" width="0.1524" layer="1"/>
 <polygon width="0.127" layer="15" thermals="no">
 <vertex x="54" y="57.5"/>
-<vertex x="50.5" y="61"/>
-<vertex x="50" y="61"/>
-<vertex x="47" y="64"/>
+<vertex x="47.5" y="64"/>
 <vertex x="10" y="64"/>
 <vertex x="8" y="62"/>
 <vertex x="8" y="32"/>
@@ -7080,7 +7078,7 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <via x="74" y="70" extent="1-16" drill="0.254"/>
 <via x="63.96875" y="66.9375" extent="1-16" drill="0.254"/>
 <via x="59.90625" y="66.78125" extent="1-16" drill="0.254"/>
-<via x="38" y="64" extent="1-16" drill="0.254"/>
+<via x="38.5" y="64.5" extent="1-16" drill="0.254"/>
 <via x="30" y="64" extent="1-16" drill="0.254"/>
 <via x="18" y="64" extent="1-16" drill="0.254"/>
 <via x="36.9375" y="84.84375" extent="1-16" drill="0.254"/>
@@ -11505,13 +11503,11 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <polygon width="0.127" layer="15">
 <vertex x="69.90625" y="36"/>
 <vertex x="81" y="36"/>
-<vertex x="83" y="34"/>
 <vertex x="85.5" y="31.5"/>
 <vertex x="85.5" y="16"/>
 <vertex x="82" y="16"/>
-<vertex x="82" y="17.5"/>
-<vertex x="82" y="29.5"/>
-<vertex x="80" y="31.5"/>
+<vertex x="82" y="27"/>
+<vertex x="77.5" y="31.5"/>
 <vertex x="69.90625" y="31.5"/>
 </polygon>
 <via x="84.09375" y="17.75" extent="1-16" drill="0.254"/>
