@@ -20347,7 +20347,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <attribute name="PROD_ID" value=""/>
 </part>
 <part name="GND24" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R33" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="2.7k">
+<part name="R33" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="2.7k">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
@@ -20362,7 +20362,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="TP13" library="Tova" deviceset="TEST-POINT" device=""/>
 <part name="TP12" library="Tova" deviceset="TEST-POINT" device=""/>
 <part name="C4" library="oresat-rcl" deviceset="C-EU" device="0805-B-NOSILK" value="10u"/>
-<part name="C5" library="oresat-rcl" deviceset="C-EU" device="0603-A-NOSILK" value="1u">
+<part name="C5" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="1u">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-1001-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
@@ -20373,13 +20373,13 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="GND22" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="C8" library="oresat-rcl" deviceset="C-EU" device="0805-B-NOSILK" value="22u"/>
 <part name="TP15" library="Tova" deviceset="TEST-POINT" device=""/>
-<part name="R28" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="10k">
+<part name="R28" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="10k">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
 <attribute name="MPN" value="RC1005F6653CS"/>
 </part>
-<part name="R29" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="NP">
+<part name="R29" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="NP">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
@@ -20418,12 +20418,12 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="GND71" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="TP119" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="U15" library="U-TI-SN74LVC1G07DCK-Buffer" deviceset="SN74LVC1G07DCK" device="" value="SN74LVC1G07DCK"/>
-<part name="C39" library="oresat-rcl" deviceset="C-EU" device="0603-A-NOSILK" value="0.1uF, 6.3V"/>
+<part name="C39" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="0.1uF, 6.3V"/>
 <part name="TP133" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="GND70" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="GND72" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="C29" library="oresat-rcl" deviceset="C-EU" device="0603-A-NOSILK" value="18pF, 50V"/>
-<part name="C28" library="oresat-rcl" deviceset="C-EU" device="0603-A-NOSILK" value="18pF, 50V"/>
+<part name="C29" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="18pF, 50V"/>
+<part name="C28" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="18pF, 50V"/>
 <part name="R62" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="1M, 1%"/>
 <part name="CM1" library="J-Samtec-FTSH-105-XXX-DV-K-ARM-SWD" deviceset="FTSH-105-XX-X-DV-K" device=""/>
 <part name="3V-24" library="oresat-supplies" deviceset="3.3V" device=""/>
@@ -20443,16 +20443,16 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="R69" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k"/>
 <part name="GND69" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="GND59" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="C30" library="oresat-rcl" deviceset="C-EU" device="0603-A-NOSILK" value="0.1uF"/>
+<part name="C30" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="0.1uF"/>
 <part name="FB1" library="SparkFun-Coils" deviceset="FERRITE_BEAD" device="-0603" value="30Ω/1.8A"/>
 <part name="GND61" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="C32" library="oresat-rcl" deviceset="C-EU" device="0603-A-NOSILK" value="0.1uF"/>
+<part name="C32" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="0.1uF"/>
 <part name="U13" library="U-TI-TPS2051C" deviceset="TPS2051CDBVR" device=""/>
 <part name="GND64" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="SUPPLY1" library="SparkFun-PowerSymbols" deviceset="VDD" device=""/>
 <part name="GND63" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="C35" library="oresat-rcl" deviceset="C-EU" device="0603-A-NOSILK" value="10uF"/>
-<part name="C36" library="oresat-rcl" deviceset="C-EU" device="0603-A-NOSILK" value="10uF"/>
+<part name="C35" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="10uF"/>
+<part name="C36" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="10uF"/>
 <part name="FB2" library="SparkFun-Coils" deviceset="FERRITE_BEAD" device="-0603" value="30Ω/1.8A"/>
 <part name="R67" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k"/>
 <part name="R68" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k"/>
@@ -20462,8 +20462,8 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="3V-3" library="oresat-supplies" deviceset="3.3V" device=""/>
 <part name="GND30" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="3V-4" library="oresat-supplies" deviceset="3.3V" device=""/>
-<part name="C10" library="oresat-rcl" deviceset="C-EU" device="0603-A-NOSILK" value="0.1uF"/>
-<part name="C9" library="oresat-rcl" deviceset="C-EU" device="0603-A-NOSILK" value="10uF"/>
+<part name="C10" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="0.1uF"/>
+<part name="C9" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="10uF"/>
 <part name="3V-23" library="oresat-supplies" deviceset="3.3V" device=""/>
 <part name="GND51" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="R42" library="R-Panasonic-EXB_A10PXXXJ" deviceset="EXB-A10P391J" device="C_ARRAY_EXBA-M" value="10K"/>
@@ -20473,12 +20473,12 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="U8" library="U-Generic-eMMC-153pin" deviceset="EMMC+RESET" device="-BA"/>
 <part name="3V-17" library="oresat-supplies" deviceset="3.3V" device=""/>
 <part name="GND44" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="C18" library="oresat-rcl" deviceset="C-EU" device="0603-A-NOSILK" value="2.2uF"/>
-<part name="C19" library="oresat-rcl" deviceset="C-EU" device="0603-A-NOSILK" value="1uF"/>
-<part name="C20" library="oresat-rcl" deviceset="C-EU" device="0603-A-NOSILK" value="1uF"/>
-<part name="C21" library="oresat-rcl" deviceset="C-EU" device="0603-A-NOSILK" value="1uF"/>
-<part name="C22" library="oresat-rcl" deviceset="C-EU" device="0603-A-NOSILK" value="1uF"/>
-<part name="C23" library="oresat-rcl" deviceset="C-EU" device="0603-A-NOSILK" value="10uF"/>
+<part name="C18" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="2.2uF"/>
+<part name="C19" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="1uF"/>
+<part name="C20" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="1uF"/>
+<part name="C21" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="1uF"/>
+<part name="C22" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="1uF"/>
+<part name="C23" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="10uF"/>
 <part name="TP97" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP98" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="Y1" library="X-ECS-240-12-30BQ-AEN-TR" deviceset="ECS-240-12-30BQ-AEN-TR" device="" value="24MHz"/>
@@ -20486,15 +20486,15 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="C34" library="oresat-rcl" deviceset="C-EU" device="0603-A-NOSILK" value="0.1uF"/>
 <part name="C31" library="oresat-rcl" deviceset="C-EU" device="0603-A-NOSILK" value="1nF"/>
 <part name="C33" library="oresat-rcl" deviceset="C-EU" device="0603-A-NOSILK" value="0.1uF"/>
-<part name="R63" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="0"/>
+<part name="R63" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="0"/>
 <part name="AGND1" library="SparkFun-PowerSymbols" deviceset="AGND" device=""/>
-<part name="R64" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="0"/>
+<part name="R64" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="0"/>
 <part name="TP116" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="R66" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="4.75K"/>
-<part name="R65" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="4.75K"/>
+<part name="R66" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="4.75K"/>
+<part name="R65" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="4.75K"/>
 <part name="GND62" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="J2" library="J-Hirose-DM3BT-DSF-PEJS" deviceset="DM3BT-DSF-PEJS" device=""/>
-<part name="C11" library="oresat-rcl" deviceset="C-EU" device="0603-A-NOSILK" value="0.1uF">
+<part name="C11" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="0.1uF">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-1001-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
@@ -20524,48 +20524,48 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="JP1" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_3_1-NC_TRACE" device="_SILK"/>
 <part name="U7" library="U-TI-TCA9509DGKR-I2C_repeater" deviceset="TCA9509DGKR" device="DGK8-M"/>
 <part name="GND36" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="C25" library="oresat-rcl" deviceset="C-EU" device="0603-A-NOSILK" value="1uF"/>
+<part name="C25" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="1uF"/>
 <part name="GND48" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="3V-20" library="oresat-supplies" deviceset="3.3V" device=""/>
-<part name="C26" library="oresat-rcl" deviceset="C-EU" device="0603-A-NOSILK" value="1uF"/>
+<part name="C26" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="1uF"/>
 <part name="3V-22" library="oresat-supplies" deviceset="2.8V" device=""/>
 <part name="3V-9" library="oresat-supplies" deviceset="2.8V" device=""/>
 <part name="3V-8" library="oresat-supplies" deviceset="3.3V" device=""/>
-<part name="R46" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="10k"/>
+<part name="R46" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k"/>
 <part name="GND33" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="C13" library="oresat-rcl" deviceset="C-EU" device="0603-A-NOSILK" value="0.1uF"/>
-<part name="C12" library="oresat-rcl" deviceset="C-EU" device="0603-A-NOSILK" value="0.1uF"/>
-<part name="C14" library="oresat-rcl" deviceset="C-EU" device="0603-A-NOSILK" value="0.1uF"/>
-<part name="C15" library="oresat-rcl" deviceset="C-EU" device="0603-A-NOSILK" value="0.1uF"/>
+<part name="C13" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="0.1uF"/>
+<part name="C12" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="0.1uF"/>
+<part name="C14" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="0.1uF"/>
+<part name="C15" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="0.1uF"/>
 <part name="GND34" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="GND37" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="C24" library="oresat-rcl" deviceset="C-EU" device="0603-A-NOSILK" value="0.1uF"/>
-<part name="C27" library="oresat-rcl" deviceset="C-EU" device="0603-A-NOSILK" value="0.1uF"/>
-<part name="R45" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="10k"/>
+<part name="C24" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="0.1uF"/>
+<part name="C27" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="0.1uF"/>
+<part name="R45" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k"/>
 <part name="3V-7" library="oresat-supplies" deviceset="3.3V" device=""/>
-<part name="R55" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="4.7k"/>
-<part name="R54" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="4.7k"/>
-<part name="R43" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="4.7k"/>
-<part name="R44" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="4.7k"/>
+<part name="R55" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="4.7k"/>
+<part name="R54" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="4.7k"/>
+<part name="R43" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="4.7k"/>
+<part name="R44" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="4.7k"/>
 <part name="3V-6" library="oresat-supplies" deviceset="3.3V" device=""/>
 <part name="3V-12" library="oresat-supplies" deviceset="3.3V" device=""/>
 <part name="3V-14" library="oresat-supplies" deviceset="2.8V" device=""/>
-<part name="C17" library="oresat-rcl" deviceset="C-EU" device="0603-A-NOSILK" value="0.1uF"/>
-<part name="C16" library="oresat-rcl" deviceset="C-EU" device="0603-A-NOSILK" value="0.1uF"/>
+<part name="C17" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="0.1uF"/>
+<part name="C16" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="0.1uF"/>
 <part name="3V-16" library="oresat-supplies" deviceset="2.8V" device=""/>
 <part name="GND38" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="GND42" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="GND40" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="R47" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="10k"/>
+<part name="R47" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k"/>
 <part name="3V-10" library="oresat-supplies" deviceset="3.3V" device=""/>
 <part name="U10" library="U-TI-SN74LVC8T245MPWREP-8bit-TRX" deviceset="SN74LVC8T245MPWREP" device="PW24-M"/>
 <part name="3V-19" library="oresat-supplies" deviceset="2.8V" device=""/>
 <part name="3V-21" library="oresat-supplies" deviceset="3.3V" device=""/>
 <part name="GND50" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="GND47" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="R56" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="10k"/>
+<part name="R56" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k"/>
 <part name="3V-18" library="oresat-supplies" deviceset="3.3V" device=""/>
-<part name="R57" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="10k"/>
+<part name="R57" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k"/>
 <part name="GND46" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="GND49" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="Q9" library="Q-Diodesinc-MMBT2907-PNP" deviceset="MMBT2907*" device="SMD" value="MMBT2907"/>
@@ -20705,7 +20705,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <attribute name="PROD_ID" value=""/>
 </part>
 <part name="GND29" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R41" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="2.7k">
+<part name="R41" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="2.7k">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
@@ -20721,14 +20721,14 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <attribute name="MPN" value="MAX7310ATE"/>
 </part>
 <part name="GND9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="C3" library="oresat-rcl" deviceset="C-EU" device="0603-A-NOSILK" value="100n">
+<part name="C3" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="100n">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-1001-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
 <attribute name="MPN" value="CL05B104KO5NNNC"/>
 </part>
 <part name="GND12" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R1" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="100">
+<part name="R1" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="100">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
@@ -20739,102 +20739,102 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <attribute name="MPN" value="MAX4211CETE"/>
 </part>
 <part name="GND23" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R15" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="NP">
+<part name="R15" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="NP">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
 <attribute name="MPN" value="RC1005F6653CS"/>
 </part>
-<part name="R14" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="NP">
+<part name="R14" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="NP">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
 <attribute name="MPN" value="RC1005F6653CS"/>
 </part>
-<part name="R17" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="NP">
+<part name="R17" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="NP">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
 <attribute name="MPN" value="RC1005F6653CS"/>
 </part>
-<part name="R16" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="NP">
+<part name="R16" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="NP">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
 <attribute name="MPN" value="RC1005F6653CS"/>
 </part>
 <part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R9" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="NP">
+<part name="R9" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="NP">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
 <attribute name="MPN" value="RC1005F6653CS"/>
 </part>
-<part name="R8" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="NP">
+<part name="R8" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="NP">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
 <attribute name="MPN" value="RC1005F6653CS"/>
 </part>
-<part name="R11" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="NP">
+<part name="R11" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="NP">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
 <attribute name="MPN" value="RC1005F6653CS"/>
 </part>
-<part name="R10" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="NP">
+<part name="R10" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="NP">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
 <attribute name="MPN" value="RC1005F6653CS"/>
 </part>
 <part name="GND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R3" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="NP">
+<part name="R3" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="NP">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
 <attribute name="MPN" value="RC1005F6653CS"/>
 </part>
-<part name="R2" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="NP">
+<part name="R2" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="NP">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
 <attribute name="MPN" value="RC1005F6653CS"/>
 </part>
-<part name="R5" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="NP">
+<part name="R5" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="NP">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
 <attribute name="MPN" value="RC1005F6653CS"/>
 </part>
-<part name="R4" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="NP">
+<part name="R4" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="NP">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
 <attribute name="MPN" value="RC1005F6653CS"/>
 </part>
 <part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R7" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="100">
+<part name="R7" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="100">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
 <attribute name="MPN" value="RC1005F6653CS"/>
 </part>
-<part name="R18" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="10k">
+<part name="R18" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
 <attribute name="MPN" value="RC1005F6653CS"/>
 </part>
 <part name="VBUS1" library="oresat-supplies" deviceset="VBUS" device=""/>
-<part name="R27" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="10k">
+<part name="R27" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
 <attribute name="MPN" value="RC1005F6653CS"/>
 </part>
 <part name="GND16" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R25" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="10k">
+<part name="R25" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
@@ -20842,32 +20842,32 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 </part>
 <part name="GND15" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R32" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R1206" package3d_urn="urn:adsk.eagle:package:23540/2" value="100m"/>
-<part name="R34" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="10k">
+<part name="R34" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
 <attribute name="MPN" value="RC1005F6653CS"/>
 </part>
 <part name="GND25" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R36" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="0">
+<part name="R36" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="0">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
 <attribute name="MPN" value="RC1005F6653CS"/>
 </part>
-<part name="R38" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="NP">
+<part name="R38" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="NP">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
 <attribute name="MPN" value="RC1005F6653CS"/>
 </part>
-<part name="R35" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="0">
+<part name="R35" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="0">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
 <attribute name="MPN" value="RC1005F6653CS"/>
 </part>
-<part name="R37" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="NP">
+<part name="R37" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="NP">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
@@ -20880,33 +20880,33 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="TP19" library="Tova" deviceset="TEST-POINT" device=""/>
 <part name="TP11" library="Tova" deviceset="TEST-POINT" device=""/>
 <part name="TP18" library="Tova" deviceset="TEST-POINT" device=""/>
-<part name="R39" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="10k">
+<part name="R39" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
 <attribute name="MPN" value="RC1005F6653CS"/>
 </part>
-<part name="R30" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="NP">
+<part name="R30" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="NP">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
 <attribute name="MPN" value="RC1005F6653CS"/>
 </part>
-<part name="R31" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="NP">
+<part name="R31" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="NP">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
 <attribute name="MPN" value="RC1005F6653CS"/>
 </part>
 <part name="GND21" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="C7" library="oresat-rcl" deviceset="C-EU" device="0603-A-NOSILK" value="NP">
+<part name="C7" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="NP">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-1001-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
 <attribute name="MPN" value="CL05B104KO5NNNC"/>
 </part>
 <part name="GND28" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R40" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="10k">
+<part name="R40" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
@@ -20924,7 +20924,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 </part>
 <part name="Q5" library="Tova" deviceset="PMV45EN" device=""/>
 <part name="Q8" library="Tova" deviceset="PMV45EN" device=""/>
-<part name="C6" library="oresat-rcl" deviceset="C-EU" device="0603-A-NOSILK" value="1u">
+<part name="C6" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="1u">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-1001-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
@@ -20943,26 +20943,26 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <attribute name="PROD_ID" value=""/>
 </part>
 <part name="GND18" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R26" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="2.7k">
+<part name="R26" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="2.7k">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
 <attribute name="MPN" value="RC1005F6653CS"/>
 </part>
-<part name="R13" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="10k">
+<part name="R13" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
 <attribute name="MPN" value="RC1005F6653CS"/>
 </part>
 <part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R23" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="47k">
+<part name="R23" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="47k">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
 <attribute name="MPN" value="RC1005F6653CS"/>
 </part>
-<part name="R24" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="47k">
+<part name="R24" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="47k">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
@@ -20970,13 +20970,13 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 </part>
 <part name="TP14" library="Tova" deviceset="TEST-POINT" device=""/>
 <part name="TP9" library="Tova" deviceset="TEST-POINT" device=""/>
-<part name="R20" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="TBD">
+<part name="R20" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="TBD">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
 <attribute name="MPN" value="RC1005F6653CS"/>
 </part>
-<part name="R22" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="TBD">
+<part name="R22" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="TBD">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
@@ -20988,7 +20988,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="GND8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="TP5" library="Tova" deviceset="TEST-POINT" device=""/>
 <part name="TP8" library="Tova" deviceset="TEST-POINT" device=""/>
-<part name="R6" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="100">
+<part name="R6" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="100">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
@@ -20998,20 +20998,20 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <attribute name="MFR" value="Diodes Inc"/>
 <attribute name="MPN" value="DMP2240UDM"/>
 </part>
-<part name="R12" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="10k">
+<part name="R12" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
 <attribute name="MPN" value="RC1005F6653CS"/>
 </part>
 <part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R19" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="TBD">
+<part name="R19" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="TBD">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
 <attribute name="MPN" value="RC1005F6653CS"/>
 </part>
-<part name="R21" library="oresat-rcl" deviceset="R-US_" device="0603-A-NOSILK" value="TBD">
+<part name="R21" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="TBD">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
@@ -21572,7 +21572,7 @@ slow I2C</text>
 <instance part="TP15" gate="G$1" x="281.94" y="88.9" smashed="yes">
 <attribute name="NAME" x="284.48" y="87.63" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="R28" gate="R" x="218.44" y="78.74" smashed="yes" rot="R90">
+<instance part="R28" gate="CE" x="218.44" y="78.74" smashed="yes" rot="R90">
 <attribute name="DIS" x="218.44" y="78.74" size="1.778" layer="96" rot="R90" display="off"/>
 <attribute name="DPN" x="218.44" y="78.74" size="1.778" layer="96" rot="R90" display="off"/>
 <attribute name="MFR" x="218.44" y="78.74" size="1.778" layer="96" rot="R90" display="off"/>
@@ -22316,9 +22316,9 @@ slow I2C</text>
 <wire x1="226.06" y1="76.2" x2="226.06" y2="71.12" width="0.1524" layer="91"/>
 <junction x="226.06" y="76.2"/>
 <pinref part="R29" gate="R" pin="2"/>
-<pinref part="R28" gate="R" pin="1"/>
+<pinref part="R28" gate="CE" pin="1"/>
 <wire x1="218.44" y1="68.58" x2="218.44" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="218.44" y1="71.12" x2="218.44" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="218.44" y1="71.12" x2="215.9" y2="78.74" width="0.1524" layer="91"/>
 <wire x1="226.06" y1="71.12" x2="218.44" y2="71.12" width="0.1524" layer="91"/>
 <junction x="218.44" y="71.12"/>
 </segment>
@@ -22333,8 +22333,8 @@ slow I2C</text>
 <wire x1="228.6" y1="81.28" x2="228.6" y2="86.36" width="0.1524" layer="91"/>
 <junction x="228.6" y="86.36"/>
 <wire x1="228.6" y1="86.36" x2="218.44" y2="86.36" width="0.1524" layer="91"/>
-<pinref part="R28" gate="R" pin="2"/>
-<wire x1="218.44" y1="83.82" x2="218.44" y2="86.36" width="0.1524" layer="91"/>
+<pinref part="R28" gate="CE" pin="2"/>
+<wire x1="223.52" y1="78.74" x2="218.44" y2="86.36" width="0.1524" layer="91"/>
 <junction x="218.44" y="86.36"/>
 <wire x1="218.44" y1="86.36" x2="208.28" y2="86.36" width="0.1524" layer="91"/>
 <pinref part="C5" gate="CE" pin="1"/>
@@ -25289,9 +25289,9 @@ seemed logical</text>
 </net>
 <net name="CLK_EN_E" class="0">
 <segment>
-<wire x1="416.56" y1="119.38" x2="525.78" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="421.64" y1="119.38" x2="525.78" y2="119.38" width="0.1524" layer="91"/>
 <pinref part="J4" gate="A" pin="23"/>
-<wire x1="421.64" y1="66.04" x2="416.56" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="421.64" y1="66.04" x2="421.64" y2="119.38" width="0.1524" layer="91"/>
 <label x="421.386" y="68.58" size="1.27" layer="95" rot="R90"/>
 <pinref part="U10" gate="A" pin="A2"/>
 <label x="510.54" y="119.38" size="1.4224" layer="95"/>
