@@ -6,3 +6,11 @@
 
 After checklist:
 - really need ~50uF on VDD?
+- read power budget app note:
+https://octavosystems.com/app_notes/osd335x-sm-power-application-note/
+- and skim app note section:
+3.3.1
+- OSC tuning caps?
+- skim oscillator app notes
+- table 10 eMMC series termination resistors? RED board didn't have them
+- JTAG EMU pull-ups? Table 11, but that might just be for TI debuggers

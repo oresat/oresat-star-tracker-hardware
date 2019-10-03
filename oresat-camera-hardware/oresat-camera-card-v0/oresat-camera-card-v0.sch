@@ -13757,8 +13757,10 @@ Eventually consolidate parts from other libraries here.</description>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="EMMC+RESET" prefix="U" uservalue="yes">
-<description>eMMC (embedded multi-media card) memory with optional Reset function</description>
+<deviceset name="EMMC+RESET+5.1-COMPATIBLE" prefix="U" uservalue="yes">
+<description>eMMC (embedded multi-media card) memory with optional Reset function
+
+NOTE: The only way this differs from the other package is that J5 is connected to VSS, per JEDEC eMMC 5.1 spec</description>
 <gates>
 <gate name="U" symbol="EMMC+RESET" x="0" y="0" addlevel="always" swaplevel="1"/>
 </gates>
@@ -13779,7 +13781,7 @@ Eventually consolidate parts from other libraries here.</description>
 <connect gate="U" pin="VDDI" pad="C2"/>
 <connect gate="U" pin="VDDIO" pad="E6 F5 J10 K9"/>
 <connect gate="U" pin="VDDQ" pad="C6 M4 N4 P3 P5"/>
-<connect gate="U" pin="VSSIO" pad="E7 G5 H10 K8"/>
+<connect gate="U" pin="VSSIO" pad="E7 G5 H10 J5 K8" route="any"/>
 <connect gate="U" pin="VSSQ" pad="C4 N2 N5 P4 P6"/>
 </connects>
 <technologies>
@@ -14971,6 +14973,8 @@ LOW: B--&gt;A</text>
 <smd name="36" x="8.75" y="0" dx="1.1" dy="0.3" layer="1" rot="R90"/>
 <smd name="S1" x="10.42" y="1.7" dx="2.3" dy="3.1" layer="1" rot="R180"/>
 <smd name="S2" x="-10.42" y="1.7" dx="2.3" dy="3.1" layer="1" rot="R180"/>
+<wire x1="10.5" y1="1.2" x2="-10.5" y2="1.2" width="0.127" layer="51" style="shortdash"/>
+<text x="-5.5" y="1.5" size="0.75" layer="51" font="vector" ratio="20">APPROX CABLE DEPTH</text>
 </package>
 <package name="TE_2-1734592-0">
 <wire x1="6.5" y1="0.2" x2="-6.5" y2="0.2" width="0.127" layer="51"/>
@@ -20373,7 +20377,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="GND22" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="C8" library="oresat-rcl" deviceset="C-EU" device="0805-B-NOSILK" value="22u"/>
 <part name="TP15" library="Tova" deviceset="TEST-POINT" device=""/>
-<part name="R28" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="10k">
+<part name="R28" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
@@ -20470,7 +20474,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="R59" library="R-Panasonic-EXB_A10PXXXJ" deviceset="EXB-A10P391J" device="C_ARRAY_EXBA-M" value="100K"/>
 <part name="R58" library="R-Panasonic-EXB_A10PXXXJ" deviceset="EXB-A10P391J" device="C_ARRAY_EXBA-M" value="100K"/>
 <part name="R60" library="R-Panasonic-EXB_A10PXXXJ" deviceset="EXB-A10P391J" device="C_ARRAY_EXBA-M" value="100K"/>
-<part name="U8" library="U-Generic-eMMC-153pin" deviceset="EMMC+RESET" device="-BA"/>
+<part name="U8" library="U-Generic-eMMC-153pin" deviceset="EMMC+RESET+5.1-COMPATIBLE" device="-BA"/>
 <part name="3V-17" library="oresat-supplies" deviceset="3.3V" device=""/>
 <part name="GND44" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="C18" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="2.2uF"/>
@@ -21577,7 +21581,7 @@ slow I2C</text>
 <instance part="TP15" gate="G$1" x="281.94" y="88.9" smashed="yes">
 <attribute name="NAME" x="284.48" y="87.63" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="R28" gate="CE" x="218.44" y="78.74" smashed="yes" rot="R90">
+<instance part="R28" gate="R" x="218.44" y="78.74" smashed="yes" rot="R90">
 <attribute name="DIS" x="218.44" y="78.74" size="1.778" layer="96" rot="R90" display="off"/>
 <attribute name="DPN" x="218.44" y="78.74" size="1.778" layer="96" rot="R90" display="off"/>
 <attribute name="MFR" x="218.44" y="78.74" size="1.778" layer="96" rot="R90" display="off"/>
@@ -22321,9 +22325,9 @@ slow I2C</text>
 <wire x1="226.06" y1="76.2" x2="226.06" y2="71.12" width="0.1524" layer="91"/>
 <junction x="226.06" y="76.2"/>
 <pinref part="R29" gate="R" pin="2"/>
-<pinref part="R28" gate="CE" pin="1"/>
+<pinref part="R28" gate="R" pin="1"/>
 <wire x1="218.44" y1="68.58" x2="218.44" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="218.44" y1="71.12" x2="215.9" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="218.44" y1="71.12" x2="218.44" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="226.06" y1="71.12" x2="218.44" y2="71.12" width="0.1524" layer="91"/>
 <junction x="218.44" y="71.12"/>
 </segment>
@@ -22338,8 +22342,8 @@ slow I2C</text>
 <wire x1="228.6" y1="81.28" x2="228.6" y2="86.36" width="0.1524" layer="91"/>
 <junction x="228.6" y="86.36"/>
 <wire x1="228.6" y1="86.36" x2="218.44" y2="86.36" width="0.1524" layer="91"/>
-<pinref part="R28" gate="CE" pin="2"/>
-<wire x1="223.52" y1="78.74" x2="218.44" y2="86.36" width="0.1524" layer="91"/>
+<pinref part="R28" gate="R" pin="2"/>
+<wire x1="218.44" y1="83.82" x2="218.44" y2="86.36" width="0.1524" layer="91"/>
 <junction x="218.44" y="86.36"/>
 <wire x1="218.44" y1="86.36" x2="208.28" y2="86.36" width="0.1524" layer="91"/>
 <pinref part="C5" gate="CE" pin="1"/>
@@ -22947,7 +22951,7 @@ slow I2C</text>
 <pinref part="C2" gate="CE" pin="1"/>
 </segment>
 </net>
-<net name="N$101" class="0">
+<net name="N$25" class="0">
 <segment>
 <pinref part="Q3" gate="G$1" pin="CIN"/>
 <wire x1="129.54" y1="99.06" x2="127" y2="99.06" width="0.1524" layer="91"/>
