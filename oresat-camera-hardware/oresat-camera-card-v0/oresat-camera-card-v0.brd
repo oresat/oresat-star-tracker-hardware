@@ -9,8 +9,8 @@
 </settings>
 <grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.03125" altunitdist="mm" altunit="mm"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="no" active="yes"/>
-<layer number="2" name="Route2" color="15" fill="1" visible="no" active="yes"/>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="2" name="Route2" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
 <layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
 <layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
@@ -23,17 +23,17 @@
 <layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
 <layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
 <layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
-<layer number="15" name="Route15" color="14" fill="1" visible="no" active="yes"/>
+<layer number="15" name="Route15" color="14" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
@@ -47,19 +47,19 @@
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
 <layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
-<layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
-<layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
 <layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
-<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="61" fill="1" visible="no" active="yes"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
@@ -313,18 +313,18 @@ Molex 0151660381
 <wire x1="17.65" y1="47.5" x2="17.65" y2="29.5" width="0.1524" layer="22" style="shortdash"/>
 <text x="16.5625" y="45.6875" size="0.75" layer="22" font="vector" ratio="15" rot="SR270">Camera Lens Center Line</text>
 <hole x="46" y="7" drill="2"/>
-<hole x="46" y="12.5" drill="2"/>
+<hole x="46" y="18.6" drill="2"/>
 <polygon width="0.127" layer="41">
-<vertex x="43" y="15.5"/>
-<vertex x="49" y="15.5"/>
+<vertex x="43" y="21.1"/>
+<vertex x="49" y="21.1"/>
 <vertex x="49" y="4.5"/>
 <vertex x="43" y="4.5"/>
 </polygon>
 <polygon width="0.127" layer="42">
-<vertex x="43" y="15.5"/>
+<vertex x="43" y="21.1"/>
 <vertex x="43" y="4.5"/>
 <vertex x="49" y="4.5"/>
-<vertex x="49" y="15.5"/>
+<vertex x="49" y="21.1"/>
 </polygon>
 <dimension x1="46" y1="7" x2="46" y2="0" x3="41.5" y3="3.5" textsize="1" textratio="10" layer="49"/>
 <dimension x1="46" y1="12.5" x2="46" y2="0" x3="38" y3="6.25" textsize="1" textratio="10" layer="49"/>
@@ -5774,27 +5774,27 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <attribute name="VALUE" x="53.4" y="12.4" size="0.8" layer="27" font="vector" ratio="15"/>
 </element>
 <element name="C18" library="oresat-rcl" package=".0603-A" value="2.2uF" x="50.9375" y="23" smashed="yes" rot="R180">
-<attribute name="NAME" x="48.625" y="23.5" size="0.635" layer="25" font="vector" ratio="20" rot="R180"/>
+<attribute name="NAME" x="48.625" y="28.5" size="0.635" layer="25" font="vector" ratio="20" rot="R180"/>
 <attribute name="VALUE" x="51.8265" y="25.032" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="C19" library="oresat-rcl" package=".0603-A" value="1uF" x="50.9375" y="21.15625" smashed="yes" rot="R180">
-<attribute name="NAME" x="48.625" y="22.5" size="0.635" layer="25" font="vector" ratio="20" rot="R180"/>
+<attribute name="NAME" x="48.625" y="27.5" size="0.635" layer="25" font="vector" ratio="20" rot="R180"/>
 <attribute name="VALUE" x="51.8265" y="23.18825" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="C20" library="oresat-rcl" package=".0603-A" value="1uF" x="50.9375" y="19.3125" smashed="yes" rot="R180">
-<attribute name="NAME" x="48.625" y="21.5" size="0.635" layer="25" font="vector" ratio="20" rot="R180"/>
+<attribute name="NAME" x="48.625" y="26.5" size="0.635" layer="25" font="vector" ratio="20" rot="R180"/>
 <attribute name="VALUE" x="51.8265" y="21.3445" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="C21" library="oresat-rcl" package=".0603-A" value="1uF" x="50.9375" y="17.5" smashed="yes" rot="R180">
-<attribute name="NAME" x="48.625" y="20.5" size="0.635" layer="25" font="vector" ratio="20" rot="R180"/>
+<attribute name="NAME" x="48.625" y="25.5" size="0.635" layer="25" font="vector" ratio="20" rot="R180"/>
 <attribute name="VALUE" x="51.8265" y="19.532" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="C22" library="oresat-rcl" package=".0603-A" value="1uF" x="50.9375" y="15.65625" smashed="yes" rot="R180">
-<attribute name="NAME" x="48.625" y="19.5" size="0.635" layer="25" font="vector" ratio="20" rot="R180"/>
+<attribute name="NAME" x="48.625" y="24.5" size="0.635" layer="25" font="vector" ratio="20" rot="R180"/>
 <attribute name="VALUE" x="51.8265" y="17.68825" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="C23" library="oresat-rcl" package=".0603-A" value="10uF" x="50.9375" y="13.8125" smashed="yes" rot="R180">
-<attribute name="NAME" x="48.625" y="18.5" size="0.635" layer="25" font="vector" ratio="20" rot="R180"/>
+<attribute name="NAME" x="48.625" y="23.5" size="0.635" layer="25" font="vector" ratio="20" rot="R180"/>
 <attribute name="VALUE" x="51.8265" y="15.8445" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="TP97" library="SparkFun-Connectors" package="PAD.03X.04" value="TEST-POINT3X4" x="46.15625" y="50.8125" smashed="yes" rot="R90"/>
@@ -6920,7 +6920,6 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <vertex x="20.875" y="36.71875"/>
 <vertex x="16.875" y="36.71875"/>
 </polygon>
-<wire x1="51.8375" y1="13.4625" x2="51.8375" y2="13.8125" width="0.1524" layer="1"/>
 <polygon width="0.127" layer="15" thermals="no">
 <vertex x="54" y="57.5"/>
 <vertex x="47.5" y="64"/>
@@ -7225,9 +7224,9 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <via x="23.5" y="56.5" extent="1-16" drill="0.254"/>
 <via x="50.9375" y="13.8125" extent="1-16" drill="0.254"/>
 <via x="50.9375" y="15.65625" extent="1-16" drill="0.254"/>
-<via x="49.125" y="17.5" extent="1-16" drill="0.254"/>
-<via x="49.125" y="19.3125" extent="1-16" drill="0.254"/>
-<via x="49.125" y="21.15625" extent="1-16" drill="0.254"/>
+<via x="50.9375" y="17.5" extent="1-16" drill="0.254"/>
+<via x="50.9375" y="19.3125" extent="1-16" drill="0.254"/>
+<via x="49.125" y="21.65625" extent="1-16" drill="0.254"/>
 <via x="49.125" y="23" extent="1-16" drill="0.254"/>
 <via x="56.6875" y="53.4375" extent="1-16" drill="0.254"/>
 <via x="59.25" y="53.4375" extent="1-16" drill="0.254"/>
@@ -7503,8 +7502,8 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <via x="95.375" y="9.3125" extent="1-16" drill="0.254"/>
 <via x="45" y="3.5" extent="1-16" drill="0.254"/>
 <via x="50" y="10.53125" extent="1-16" drill="0.254"/>
-<via x="44.96875" y="16.4375" extent="1-16" drill="0.254"/>
-<via x="45" y="19.5" extent="1-16" drill="0.254"/>
+<via x="49.96875" y="6.9375" extent="1-16" drill="0.254"/>
+<via x="45" y="21.5" extent="1-16" drill="0.254"/>
 <via x="45" y="24" extent="1-16" drill="0.254"/>
 <via x="45" y="28.5" extent="1-16" drill="0.254"/>
 <via x="6" y="30" extent="1-16" drill="0.254"/>
