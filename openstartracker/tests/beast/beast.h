@@ -8,11 +8,15 @@
 struct  match_result {
 //TODO: private:
 	constellation_pair match;
-	
+	float P11,P12,P13;
+	float P21,P22,P23;
+	float P31,P32,P33;
 	//eci to body (body=R*eci)
 	float R11,R12,R13;
 	float R21,R22,R23;
 	float R31,R32,R33;
+	float q0,q1,q2,q3;
+	float loss;
 private:
 	star_fov *img_mask;
 	int *map; /* Usage: map[imgstar]=dbstar */
@@ -146,7 +150,204 @@ public:
 		}
 		return s;
 	}
+	/**
+	* @brief fast quaternion results
+	* see Fundamentals of Spacecraft Attitude Determination and Control 
+	* and doi: 10.2514/2.4897
+	* 
+	* this is technically suboptimal, it's fairly trivial to upgrade to the optimal version
+	* but this is a marginal improvement that is less computationally efficient
+	*/
+	void fast_quaternion() {
+		star *db_s1=db->stars->get_star(match.db_s1);
+		star *db_s2=db->stars->get_star(match.db_s2);
+		star *img_s1=img->stars->get_star(match.img_s1);
+		star *img_s2=img->stars->get_star(match.img_s2);
+		
+		/* b=A*r */
+		float ra1=db_s1->x,ra2=db_s1->y,ra3=db_s1->z;
+		float rb1=db_s2->x,rb2=db_s2->y,rb3=db_s2->z;
+		float ba1=img_s1->x,ba2=img_s1->y,ba3=img_s1->z;
+		float bb1=img_s2->x,bb2=img_s2->y,bb3=img_s2->z;
 
+		float prod1=ba1*ra1;
+		float prod2=ba2*ra2;
+		float prod3=ba3*ra3;
+		float dot=prod1+prod2+prod3;
+
+		int rotate=0;
+		if((dot<prod1) && (dot<prod2) && (dot<prod2)) {
+			//float axis;
+			float ek1,ek2,ek3;
+			rotate=1
+			if(prod1<prod2) {
+				if(prod2<prod3) {
+					//axis=3;
+					ra1*=-1;
+					ra2*=-1;
+					rb1*=-1;
+					rb2*=-1;
+					ek1=0;
+					ek2=0;
+					ek3=1;
+				} else {
+					//axis=2;
+					ra1*=-1;
+					ra3*=-1;
+					rb1*=-1;
+					rb3*=-1;
+					ek1=0;
+					ek2=1;
+					ek3=0;
+				}
+			} else if(prod1<prod3) {
+				//axis=3;
+				ra1*=-1;
+				ra2*=-1;
+				rb1*=-1;
+				rb2*=-1;
+				ek1=0;
+				ek2=0;
+				ek3=1;
+			} else {
+				//axis=1;
+				ra3*=-1;
+				ra2*=-1;
+				rb3*=-1;
+				rb2*=-1;
+				ek1=1;
+				ek2=0;
+				ek3=0;
+			}
+			float E11,E12,E13,E14;
+			float E21,E22,E23,E24;
+			float E31,E32,E33,E34;
+			float E41,E42,E43,E44;
+			E11=0;
+			E12=-ek3;
+			E13=ek2;
+			E14=ek1;
+			E21=ek3;
+			E22=0;
+			E23=-ek1;
+			E24=ek2;
+			E31=-ek2;
+			E32=ek1;
+			E33=0;
+			E34=ek3;
+			E41=-ek1;
+			E42=-ek2;
+			E43=-ek3;
+			E44=0;
+			dot=ba1*ra1+ba2*ra2+ba3*ra3;
+		}
+
+		float bc1=ba2*bb3 - ba3*bb2;
+		float bc2=ba3*bb1 - ba1*bb3;
+		float bc3=ba1*bb2 - ba2*bb1;
+
+		float rc1=ra2*rb3 - ra3*rb2;
+		float rc2=ra3*rb1 - ra1*rb3;
+		float rc3=ra1*rb2 - ra2*rb1;
+
+		dot+=1
+		float mu=dot*(bc1*rc1+bc2*rc2+bc3*rc3);
+		mu -= (ba1*rc1+ba2*rc2+ba3*rc3)*(bc1*ra1+bc2*ra2+bc3*ra3);
+
+		float t1=bc2*rc3 - bc3*rc2;
+		float t2=bc3*rc1 - bc1*rc3;
+		float t3=bc1*rc2 - bc2*rc1;
+
+		float sum1=ba1+ra1;
+		float sum2=ba2+ra2;
+		float sum3=ba3+ra3;
+
+		float nu=sum1*t1 + sum2*t2 + sum3*t3;
+		float rho=sqrt(mu*mu + nu*nu);
+		float bot, comb;
+
+		float cross1=ba2*ra3 - ba3*ra2;
+		float cross2=ba3*ra1 - ba1*ra3;
+		float cross3=ba1*ra2 - ba2*ra1;
+
+		if(mu>=0) {
+			comb=rho+mu;
+			q0=comb*dot;
+			q1=comb*cross1 + nu*sum1;
+			q2=comb*cross2 + nu*sum2;
+			q3=comb*cross3 + nu*sum3;
+		} else {
+			comb=rho-mu;
+			q0=nu*dot;
+			q1=nu*cross1 + comb*sum1;
+			q2=nu*cross2 + comb*sum2;
+			q3=nu*cross3 + comb*sum3;
+		}
+
+		bot=2*sqrt(rho*comb*dot);
+		q0/=bot;
+		q1/=bot;
+		q2/=bot;
+		q3/=bot;
+
+		if(rotate==1) {
+			float k0,k1,k2,k3;
+			k0=q0;
+			k1=q1;
+			k2=q2;
+			k3=q3;
+			q0=E11*k0 + E12*k1 + E13*k2 + E14*k3;
+			q1=E21*k0 + E22*k1 + E23*k2 + E24*k3;
+			q2=E31*k0 + E32*k1 + E33*k2 + E34*k3;
+			q3=E41*k0 + E42*k1 + E43*k2 + E44*k3;
+		}
+
+		float sig1=db_s1->sigma_sq+img_s1->sigma_sq;
+		float sig2=db_s2->sigma_sq+img_s2->sigma_sq;
+		float c=1.0;
+		float a2= c / sig2;
+
+		loss=a2*(1-(ba1*bb1+ba2*bb2+ba3*bb3)*(ra1*rb1+ra2*rb2+ra3*rb3)-(rho/dot));
+
+		float bcnorm=sqrt(bc1*bc1+bc2*bc2+bc3*bc3);
+		float bs11, bs12, bs13;
+		float bs21, bs22, bs23;
+		float bs31, bs32, bs33;
+		float bottom=bcnorm*bcnorm;
+		bs11=(sig2*ba1*ba1 + sig1*bb1*bb1)/bottom;
+		bs12=(sig2*ba1*ba2 + sig1*bb1*bb2)/bottom;
+		bs13=(sig2*ba1*ba3 + sig1*bb1*bb3)/bottom;
+		bs21=(sig2*ba2*ba1 + sig1*bb2*bb1)/bottom;
+		bs22=(sig2*ba2*ba2 + sig1*bb2*bb2)/bottom;
+		bs23=(sig2*ba2*ba3 + sig1*bb2*bb3)/bottom;
+		bs31=(sig2*ba3*ba1 + sig1*bb3*bb1)/bottom;
+		bs32=(sig2*ba3*ba2 + sig1*bb3*bb2)/bottom;
+		bs33=(sig2*ba3*ba3 + sig1*bb3*bb3)/bottom;
+		
+		float bx11, bx12, bx13;
+		float bx21, bx22, bx23;
+		float bx31, bx32, bx33;
+		float sigs=(sig1*sig2)/(sig1+sig2);
+		bx11=sigs*bc1*bc1;
+		bx12=sigs*bc1*bc2;
+		bx13=sigs*bc1*bc3;
+		bx21=sigs*bc2*bc1;
+		bx22=sigs*bc2*bc2;
+		bx23=sigs*bc2*bc3;
+		bx31=sigs*bc3*bc1;
+		bx32=sigs*bc3*bc2;
+		bx33=sigs*bc3*bc3;
+
+		P11=bs11+bx11;
+		P12=bs12+bx12;
+		P13=bs13+bx13;
+		P21=bs21+bx21;
+		P22=bs22+bx22;
+		P23=bs23+bx23;
+		P31=bs31+bx31;
+		P32=bs32+bx32;
+		P33=bs33+bx33;
+	}
 	/**
 	* @brief weighted_triad results
 	* see https://en.wikipedia.org/wiki/Triad_method 
@@ -182,7 +383,7 @@ public:
 		vc1/=vcnorm;
 		vc2/=vcnorm;
 		vc3/=vcnorm;
-		
+
 		float vaXvc1=va2*vc3 - va3*vc2;
 		float vaXvc2=va3*vc1 - va1*vc3;
 		float vaXvc3=va1*vc2 - va2*vc1;
@@ -230,8 +431,10 @@ public:
 		
 		/* use weights based on magnitude */
 		/* weighted triad */
-		float weightA=1.0/(db_s1->sigma_sq+img_s1->sigma_sq);
-		float weightB=1.0/(db_s2->sigma_sq+img_s2->sigma_sq);
+		float sig1=db_s1->sigma_sq+img_s1->sigma_sq;
+		float sig2=db_s2->sigma_sq+img_s2->sigma_sq;
+		float weightA=1.0/sig1;
+		float weightB=1.0/sig2;
 
 		float sumAB=weightA+weightB;
 		weightA/=sumAB;
@@ -270,6 +473,44 @@ public:
 		R13=-sy;
 		R23=cy*sx;
 		R33=cx*cy;
+		
+		float bs11, bs12, bs13;
+		float bs21, bs22, bs23;
+		float bs31, bs32, bs33;
+		float bottom=vcnorm*vcnorm;
+		bs11=(sig2*va1*va1 + sig1*vb1*vb1)/bottom;
+		bs12=(sig2*va1*va2 + sig1*vb1*vb2)/bottom;
+		bs13=(sig2*va1*va3 + sig1*vb1*vb3)/bottom;
+		bs21=(sig2*va2*va1 + sig1*vb2*vb1)/bottom;
+		bs22=(sig2*va2*va2 + sig1*vb2*vb2)/bottom;
+		bs23=(sig2*va2*va3 + sig1*vb2*vb3)/bottom;
+		bs31=(sig2*va3*va1 + sig1*vb3*vb1)/bottom;
+		bs32=(sig2*va3*va2 + sig1*vb3*vb2)/bottom;
+		bs33=(sig2*va3*va3 + sig1*vb3*vb3)/bottom;
+		
+		float bx11, bx12, bx13;
+		float bx21, bx22, bx23;
+		float bx31, bx32, bx33;
+		float sigs=(sig1*sig2)/(sig1+sig2);
+		bx11=sigs*vc1*vc1;
+		bx12=sigs*vc1*vc2;
+		bx13=sigs*vc1*vc3;
+		bx21=sigs*vc2*vc1;
+		bx22=sigs*vc2*vc2;
+		bx23=sigs*vc2*vc3;
+		bx31=sigs*vc3*vc1;
+		bx32=sigs*vc3*vc2;
+		bx33=sigs*vc3*vc3;
+
+		P11=bs11+bx11;
+		P12=bs12+bx12;
+		P13=bs13+bx13;
+		P21=bs21+bx21;
+		P22=bs22+bx22;
+		P23=bs23+bx23;
+		P31=bs31+bx31;
+		P32=bs32+bx32;
+		P33=bs33+bx33;
 	}
 	void DBG_(const char *s) {
 		DBG_PRINT("%s\n",s);
