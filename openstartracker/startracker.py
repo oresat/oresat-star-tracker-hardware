@@ -24,28 +24,28 @@ data = ""
 b_conf = [time(), beast.cvar.PIXSCALE, beast.cvar.BASE_FLUX]
 
 # Prepare socket
-s = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)    
+s = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
 print "Socket created"
-  
-# Bind to the port 
-s.bind(SOCKET_ADDR)         
+
+# Bind to the port
+s.bind(SOCKET_ADDR)
 print "Socket bound to %s" %(SOCKET_ADDR)
 
 # Prepare star tracker
-print "\nLoading config" 
+print "\nLoading config"
 beast.load_config(CONFIGFILE)
 
-print "Loading hip_main.dat" 
+print "Loading hip_main.dat"
 S_DB = beast.star_db()
 S_DB.load_catalog("hip_main.dat", YEAR)
 
-print "Filtering stars" 
+print "Filtering stars"
 SQ_RESULTS = beast.star_query(S_DB)
 SQ_RESULTS.kdmask_filter_catalog()
 SQ_RESULTS.kdmask_uniform_density(beast.cvar.REQUIRED_STARS)
 S_FILTERED = SQ_RESULTS.from_kdmask()
 
-print "Generating DB" 
+print "Generating DB"
 C_DB = beast.constellation_db(S_FILTERED, 2 + beast.cvar.DB_REDUNDANCY, 0)
 
 print "Ready"
@@ -100,7 +100,7 @@ def solve_image(filepath, connection):
 	# Start output for iteration
 	connection.send(filepath)
 	print(filepath)
-	
+
 	# Load the image
 	orig_img = cv2.imread(filepath)
 	if type(orig_img) == type(None):
@@ -116,7 +116,7 @@ def solve_image(filepath, connection):
 	# Process the image for solving
 	img = np.clip(orig_img.astype(np.int16) - MEDIAN_IMAGE, a_min = 0, a_max = 255).astype(np.uint8)
 	img_grey = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
-	
+
 	# Remove areas of the image that don't meet our brightness threshold and then extract contours
 	ret, thresh = cv2.threshold(img_grey, beast.cvar.THRESH_FACTOR * beast.cvar.IMAGE_VARIANCE, 255, cv2.THRESH_BINARY)
 	thresh_contours, contours, hierarchy = cv2.findContours(thresh, 1, 2);
@@ -154,14 +154,14 @@ def solve_image(filepath, connection):
 		r = beast.cvar.MAXFOV / 2
 
 		SQ_RESULTS.kdsearch(x, y, z, r, beast.cvar.THRESH_FACTOR * beast.cvar.IMAGE_VARIANCE)
-		
+
 		# estimate density for constellation generation
 		C_DB.results.kdsearch(x, y, z, r,beast.cvar.THRESH_FACTOR * beast.cvar.IMAGE_VARIANCE)
 		fov_stars = SQ_RESULTS.from_kdresults()
 		fov_db = beast.constellation_db(fov_stars, C_DB.results.r_size(), 1)
 		C_DB.results.clear_kdresults()
 		SQ_RESULTS.clear_kdresults()
-		
+
 		img_const = beast.constellation_db(img_stars, beast.cvar.MAX_FALSE_STARS + 2, 1)
 		near = beast.db_match(fov_db, img_const)
 
@@ -187,7 +187,7 @@ def solve_image(filepath, connection):
 
 	# Grab latest result from file
 	fields = open("last_results.txt").read().splitlines()
-	
+
 	# Annotate image
 	img = cv2.resize(img, (1280, 960))
 	font = cv2.FONT_HERSHEY_SIMPLEX
@@ -207,16 +207,16 @@ def solve_image(filepath, connection):
 	cv2.destroyAllWindows()
 
 
-# Put socket in istening mode 
-s.listen(5)      
-print "\nSocket is listening"   
+# Put socket in istening mode
+s.listen(5)
+print "\nSocket is listening"
 
 # Listen for connections until broken
-while True: 
-	
-	# Establish connection with client. 
+while True:
+
+	# Establish connection with client.
 	c, addr = s.accept()
-	c.send("Received connection\n")  
+	c.send("Received connection\n")
 
 	# Receive data w/ CYA policy
 	try:
@@ -234,7 +234,11 @@ while True:
 		break
 	else:
 		solve_image(data, c)
-	
+
 	c.close()
+
+# Cleanup
+if os.path.exists("ost_sock"):
+    os.remove("ost_sock")
 
 print "\n"
