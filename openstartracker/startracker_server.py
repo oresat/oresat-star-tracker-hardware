@@ -1,58 +1,125 @@
-# startracker.py - main front-end for the star tracker
+# startracker_server.py - main front-end for the star tracker
 # by Umair Khan, from the Portland State Aerospace Society
 # based on OpenStarTracker from Andrew Tennenbaum at the University of Buffalo
-
+# openstartracker.org
 
 # Imports
 from time import time
 import sys
 import os
 import cv2
-import socket
+from pydbus.generic import signal
+from pydbus import SystemBus
+from gi.repository import GLib
 import numpy as np
 import beast
 
+
+
+# --------------------------------
+#       STAR TRACKER SETUP
+# --------------------------------
 
 # Prepare constants and get system arguments
 P_MATCH_THRESH = 0.99
 CONFIGFILE = sys.argv[1]
 YEAR = float(sys.argv[2])
 MEDIAN_IMAGE = cv2.imread(sys.argv[3])
-SOCKET_ADDR = "./ost_sock"
-BUFFER_SIZE = 1024
-data = ""
 b_conf = [time(), beast.cvar.PIXSCALE, beast.cvar.BASE_FLUX]
 
-# Prepare socket
-s = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
-print "Socket created"
-
-# Bind to the port
-s.bind(SOCKET_ADDR)
-print "Socket bound to %s" %(SOCKET_ADDR)
-
 # Prepare star tracker
-print "\nLoading config"
+print("\nLoading config")
 beast.load_config(CONFIGFILE)
 
-print "Loading hip_main.dat"
+print("Loading hip_main.dat")
 S_DB = beast.star_db()
 S_DB.load_catalog("hip_main.dat", YEAR)
 
-print "Filtering stars"
+print("Filtering stars")
 SQ_RESULTS = beast.star_query(S_DB)
 SQ_RESULTS.kdmask_filter_catalog()
 SQ_RESULTS.kdmask_uniform_density(beast.cvar.REQUIRED_STARS)
 S_FILTERED = SQ_RESULTS.from_kdmask()
 
-print "Generating DB"
+print("Generating DB")
 C_DB = beast.constellation_db(S_FILTERED, 2 + beast.cvar.DB_REDUNDANCY, 0)
 
-print "Ready"
+print("Ready")
 
 
-# Utility function to see if an image is worth solving
-def check_image(img, connection):
+
+# --------------------------------
+#           D-BUS SETUP
+# --------------------------------
+
+# Set up interface
+INTERFACE_NAME = "org.example.project.oresat"
+bus = SystemBus()
+loop = GLib.MainLoop()
+
+# Define XML for server 
+class Server_XML(object):
+
+    # XML definition
+    dbus = """
+    <node>
+        <interface name='org.example.project.oresat'>
+            <method name='solve_image'>
+                <arg type='s' name='filepath' direction='in' />
+                <arg type='d' name='dec' direction='out' />
+                <arg type='d' name='ra' direction='out' />
+                <arg type='d' name='ori' direction='out' />
+            </method>
+            <signal name='file_error'>
+                <arg type='s' />
+            </signal>
+            <signal name='image_error'>
+                <arg type='s' />
+            </signal>
+            <signal name="solve_error">
+                <arg type='s' />
+            </signal>
+            <method name='Quit'/>
+        </interface>
+    </node>
+    """
+
+    # D-Bus method to solve image
+    def solve_image(self, filepath):
+        dec, ra, ori = solve(filepath)
+        return dec, ra, ori
+
+    # Method to quit
+    def Quit(self):
+        loop.quit()
+
+
+# Create object
+emit = Server_XML()
+
+# Function to send filepath error
+def send_file_error(error):
+    emit.file_error(error)
+    print("Sent filepath error: {}".format(error))
+
+# Function to send image error
+def send_image_error(error):
+    emit.image_error(error)
+    print("Sent image error: {}".format(error))
+
+# Function to send solution error
+def send_solve_error(error):
+    emit.solve_error(error)
+    print("Sent solution error: {}".format(error))
+
+
+
+# --------------------------------
+#          STAR TRACKER
+# --------------------------------
+
+# See if an image is worth attempting to solve
+def check_image(img):
 
 	# Generate test parameters
 	height, width, channels = img.shape
@@ -69,25 +136,21 @@ def check_image(img, connection):
 
 	# Check the test values and return appropriate value
 	if threshold_black > blur_check:
-
 		blur = cv2.Laplacian(img, cv2.CV_64F).var()
-
 		if blur != 0 and blur < 5:
-			connection.send("Image too blurry")
+			send_image_error("too blurry")
 		else:
-			connection.send("Too few stars in image")
-
+			send_image_error("too few stars")
 		return 0
-
 	elif threshold_black < too_many_check:
-		connection.send("Image has too many stars or is not a pure star field")
+		send_image_error("unsuitable image")
 		return 0
 
 	return 1
 
 
 # Solution function
-def solve_image(filepath, connection):
+def solve(filepath):
 
 	# Keep track of solution time
 	starttime = time()
@@ -97,21 +160,17 @@ def solve_image(filepath, connection):
 	match = None
 	fov_db = None
 
-	# Start output for iteration
-	connection.send(filepath)
-	print(filepath)
-
 	# Load the image
 	orig_img = cv2.imread(filepath)
 	if type(orig_img) == type(None):
-		connection.send("\nInvalid filepath\n\n")
-		return
+		send_file_error(filepath)
+		return 0, 0, 0
 
 	# Check the image to see if it is fit for processing
 	result = check_image(orig_img, connection)
 	if result == 0:
-		connection.send("\nTime: " + str(time() - starttime) + "\n\n")
-		return
+		print("\nTime: {}\n\n".format(time() - starttime))
+		return 0, 0, 0
 
 	# Process the image for solving
 	img = np.clip(orig_img.astype(np.int16) - MEDIAN_IMAGE, a_min = 0, a_max = 255).astype(np.uint8)
@@ -126,11 +185,11 @@ def solve_image(filepath, connection):
 
 		M = cv2.moments(c)
 
-		if M['m00'] > 0:
+		if M["m00"] > 0:
 
 			# this is how the x and y position are defined by cv2
-			cx = M['m10'] / M['m00']
-			cy = M['m01'] / M['m00']
+			cx = M["m10"] / M["m00"]
+			cy = M["m01"] / M["m00"]
 
 			# see https://alyssaq.github.io/2015/computing-the-axes-or-orientation-of-a-blob/ for how to convert these into eigenvectors/values
 			u20 = M["m20"] / M["m00"] - cx ** 2
@@ -138,9 +197,9 @@ def solve_image(filepath, connection):
 			u11 = M["m11"] / M["m00"] - cx * cy
 
 			# The center pixel is used as the approximation of the brightest pixel
-			img_stars += beast.star(cx - beast.cvar.IMG_X / 2.0, (cy - beast.cvar.IMG_Y / 2.0), float(cv2.getRectSubPix(img_grey, (1,1), (cx,cy))[0,0]), -1)
+			img_stars += beast.star(cx - beast.cvar.IMG_X / 2.0, cy - beast.cvar.IMG_Y / 2.0, float(cv2.getRectSubPix(img_grey, (1,1), (cx,cy))[0,0]), -1)
 
-	# For the first pass, we only want to use the brightest MAX_FALSE_STARS + REQUIRED_STARS
+	# We only want to use the brightest MAX_FALSE_STARS + REQUIRED_STARS
 	img_stars_n_brightest = img_stars.copy_n_brightest(beast.cvar.MAX_FALSE_STARS + beast.cvar.REQUIRED_STARS)
 	img_const_n_brightest = beast.constellation_db(img_stars_n_brightest, beast.cvar.MAX_FALSE_STARS + 2, 1)
 	lis = beast.db_match(C_DB, img_const_n_brightest)
@@ -155,7 +214,7 @@ def solve_image(filepath, connection):
 
 		SQ_RESULTS.kdsearch(x, y, z, r, beast.cvar.THRESH_FACTOR * beast.cvar.IMAGE_VARIANCE)
 
-		# estimate density for constellation generation
+		# Estimate density for constellation generation
 		C_DB.results.kdsearch(x, y, z, r,beast.cvar.THRESH_FACTOR * beast.cvar.IMAGE_VARIANCE)
 		fov_stars = SQ_RESULTS.from_kdresults()
 		fov_db = beast.constellation_db(fov_stars, C_DB.results.r_size(), 1)
@@ -171,74 +230,39 @@ def solve_image(filepath, connection):
 	# Print solution
 	if match is not None:
 
-		match.winner.print_ori()
+		match.winner.calc_ori()
+		dec = match.winner.get_dec()
+		ra = match.winner.get_ra()
+		ori = match.winner.get_ori()
 
 		# For reference:
-		# - DEC         - rotation about the y-axis
-		# - RA          - rotation about the z-axis
-		# - ORIENTATION - rotation about the camera axis
+		# - dec         - rotation about the y-axis
+		# - ra          - rotation about the z-axis
+		# - ori         - rotation about the camera axis
 
 	else:
-		connection.send("\nImage could not be processed; no match found\n")
-		return
-
+		send_solve_error("no match found")
+		print("\nTime: {}\n\n".format(time() - starttime))
+		return 0, 0, 0
+		
 	# Calculate how long it took to process
-	connection.send("\nTime: " + str(time() - starttime) + "\n\n")
+	# print("\nTime: {}\n\n".format(time() - starttime))
 
-	# Grab latest result from file
-	fields = open("last_results.txt").read().splitlines()
-
-	# Annotate image
-	img = cv2.resize(img, (1280, 960))
-	font = cv2.FONT_HERSHEY_SIMPLEX
-	fontScale = 0.75
-	fontColor = (255,255,255)
-	lineType = 2
-	cv2.putText(img, fields[0], (25, 50), font, fontScale, fontColor, lineType)
-	cv2.putText(img, fields[1], (25, 85), font, fontScale, fontColor, lineType)
-	cv2.putText(img, fields[2], (25, 120), font, fontScale, fontColor, lineType)
-
-	# Show image
-	window_name = "Result - " + filepath
-	cv2.namedWindow(window_name)
-	cv2.moveWindow(window_name, 0, 0)
-	cv2.imshow(window_name, img)
-	cv2.waitKey(3000)
-	cv2.destroyAllWindows()
+    # Return solution
+	return dec, ra, ori
 
 
-# Put socket in istening mode
-s.listen(5)
-print "\nSocket is listening"
 
-# Listen for connections until broken
-while True:
+# --------------------------------
+#          D-BUS SERVER
+# --------------------------------
 
-	# Establish connection with client.
-	c, addr = s.accept()
-	c.send("Received connection\n")
+# Set up server based on XML
+bus.publish(INTERFACE_NAME, emit)
 
-	# Receive data w/ CYA policy
-	try:
-		data = c.recv(BUFFER_SIZE)
-	except:
-		c.send("An error occurred, closing link\n")
-
-	# Remove stray whitespace
-	data = data.strip()
-
-	# Execute appropriate action
-	if data == "quit":
-		c.send("Shutting down OpenStarTracker, closing link...\n")
-		c.close()
-		break
-	else:
-		solve_image(data, c)
-
-	c.close()
-
-# Cleanup
-if os.path.exists("ost_sock"):
-    os.remove("ost_sock")
-
-print "\n"
+# Run loop with graceful exiting
+try:
+	loop.run()
+except KeyboardInterrupt as e:
+	loop.quit()
+	print("\nExit by Ctrl-C")

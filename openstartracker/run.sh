@@ -49,7 +49,7 @@ if [[ $CALIBRATE == 1 ]]; then
 fi
 
 if [[ $IMG_TEST == 1 ]]; then
-	python2.7 startracker.py $TESTDIR/calibration.txt 1991.25 $TESTDIR/median_image.png
+	python3 startracker_v2.py $TESTDIR/calibration.txt 1991.25 $TESTDIR/median_image.png
 fi
 
 if [ "$KILLPID" != "" ] ; then 
