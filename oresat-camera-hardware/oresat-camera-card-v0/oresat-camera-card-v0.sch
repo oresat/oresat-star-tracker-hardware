@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.0">
+<eagle version="9.5.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -12194,12 +12194,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pin name="VDD" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
 <text x="0" y="2.794" size="1.778" layer="96" align="bottom-center">&gt;VALUE</text>
 </symbol>
-<symbol name="AGND">
-<description>&lt;h3&gt;Analog Ground Supply&lt;/h3&gt;</description>
-<wire x1="-1.905" y1="0" x2="1.905" y2="0" width="0.254" layer="94"/>
-<text x="0" y="-0.254" size="1.778" layer="96" align="top-center">&gt;VALUE</text>
-<pin name="AGND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
-</symbol>
 </symbols>
 <devicesets>
 <deviceset name="GND" prefix="GND">
@@ -12221,20 +12215,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 &lt;p&gt;Positive voltage supply (traditionally for a CMOS device, D=drain).&lt;/p&gt;</description>
 <gates>
 <gate name="VDD" symbol="VDD" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="AGND" prefix="AGND">
-<description>&lt;b&gt;Analog Ground Symbol&lt;/b&gt;
-&lt;p&gt;Generic symbol for a analog ground supply.&lt;/p&gt;</description>
-<gates>
-<gate name="G$1" symbol="AGND" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -20333,6 +20313,53 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 </deviceset>
 </devicesets>
 </library>
+<library name="OSD3358-SM-RED Platform">
+<packages>
+<package name="CRYSTAL_3.2X1.5">
+<wire x1="-0.53125" y1="-0.796875" x2="-0.53125" y2="0.796875" width="0.127" layer="21"/>
+<wire x1="-0.53125" y1="0.796875" x2="0.53125" y2="0.796875" width="0.127" layer="21"/>
+<wire x1="0.53125" y1="0.796875" x2="0.53125" y2="-0.796875" width="0.127" layer="21"/>
+<wire x1="0.53125" y1="-0.796875" x2="-0.53125" y2="-0.796875" width="0.127" layer="21"/>
+<smd name="P$1" x="-1.25" y="0" dx="1.1" dy="1.9" layer="1"/>
+<smd name="P$2" x="1.25" y="0" dx="1.1" dy="1.9" layer="1"/>
+<text x="-2.246875" y="1.115625" size="1.016" layer="25" ratio="12">&gt;NAME</text>
+<text x="-2.48125" y="-2.125" size="1.016" layer="27" ratio="12">&gt;VALUE</text>
+</package>
+</packages>
+<symbols>
+<symbol name="CRYSTAL.2PAD">
+<wire x1="2.54" y1="1.27" x2="2.54" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="1.27" x2="-2.54" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="1.27" x2="-1.27" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="-1.27" x2="1.27" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="1.27" y1="-1.27" x2="1.27" y2="1.27" width="0.254" layer="94"/>
+<wire x1="1.27" y1="1.27" x2="-1.27" y2="1.27" width="0.254" layer="94"/>
+<pin name="P$1" x="-5.08" y="0" visible="off" length="short" direction="pas"/>
+<pin name="P$2" x="5.08" y="0" visible="off" length="short" direction="pas" rot="R180"/>
+<text x="-2.54" y="2.54" size="1.27" layer="95">&gt;NAME</text>
+<text x="-2.54" y="-3.81" size="1.27" layer="96">&gt;VALUE</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="ABS07-32.768KHZ-T" prefix="Y">
+<description>32kHz crystal</description>
+<gates>
+<gate name="G$1" symbol="CRYSTAL.2PAD" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="CRYSTAL_3.2X1.5">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+<connect gate="G$1" pin="P$2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -20483,20 +20510,8 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="C21" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="1uF"/>
 <part name="C22" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="1uF"/>
 <part name="C23" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="10uF"/>
-<part name="TP97" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP98" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="Y1" library="X-ECS-240-12-30BQ-AEN-TR" deviceset="ECS-240-12-30BQ-AEN-TR" device="" value="24MHz"/>
 <part name="GND56" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="C34" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="0.1uF"/>
-<part name="C31" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="1nF"/>
-<part name="C33" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="0.1uF"/>
-<part name="R63" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="0"/>
-<part name="AGND1" library="SparkFun-PowerSymbols" deviceset="AGND" device=""/>
-<part name="R64" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="0"/>
-<part name="TP116" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="R66" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="4.75K"/>
-<part name="R65" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="4.75K"/>
-<part name="GND62" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="J2" library="J-Hirose-DM3BT-DSF-PEJS" deviceset="DM3BT-DSF-PEJS" device=""/>
 <part name="C11" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="0.1uF">
 <attribute name="DIS" value="Digi-Key"/>
@@ -20691,11 +20706,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="TP115" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="JP6" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NC_TRACE" device="_SILK"/>
 <part name="JP5" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NC_TRACE" device="_SILK"/>
-<part name="3V-25" library="oresat-supplies" deviceset="3.3V" device=""/>
 <part name="TP112" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP101" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP100" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP99" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP111" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP69" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP68" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
@@ -21044,6 +21055,14 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="C40" library="oresat-rcl" deviceset="C-EU" device="C1210" value="22uF"/>
 <part name="GND75" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="C41" library="oresat-rcl" deviceset="C-EU" device="C1210" value="22uF"/>
+<part name="R75" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="1M, DNI"/>
+<part name="C44" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="18pF"/>
+<part name="C45" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="18pF"/>
+<part name="Y3" library="OSD3358-SM-RED Platform" deviceset="ABS07-32.768KHZ-T" device=""/>
+<part name="TP99" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="R63" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k"/>
+<part name="R64" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k"/>
+<part name="3V-25" library="oresat-supplies" deviceset="3.3V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -25885,19 +25904,12 @@ battery circuit</text>
 <wire x1="355.6" y1="132.08" x2="355.6" y2="43.18" width="0.1524" layer="97"/>
 <wire x1="355.6" y1="43.18" x2="228.6" y2="43.18" width="0.1524" layer="97"/>
 <text x="302.895" y="106.045" size="1.778" layer="97">USB Power Switch</text>
-<wire x1="111.76" y1="127" x2="111.76" y2="182.88" width="0.1524" layer="97"/>
-<wire x1="111.76" y1="182.88" x2="63.5" y2="182.88" width="0.1524" layer="97"/>
-<wire x1="63.5" y1="182.88" x2="63.5" y2="127" width="0.1524" layer="97"/>
-<wire x1="63.5" y1="127" x2="111.76" y2="127" width="0.1524" layer="97"/>
-<text x="71.12" y="177.8" size="2.54" layer="97">JTAG connector</text>
+<wire x1="91.44" y1="127" x2="91.44" y2="182.88" width="0.1524" layer="97"/>
+<wire x1="91.44" y1="182.88" x2="43.18" y2="182.88" width="0.1524" layer="97"/>
+<wire x1="43.18" y1="182.88" x2="43.18" y2="127" width="0.1524" layer="97"/>
+<wire x1="43.18" y1="127" x2="91.44" y2="127" width="0.1524" layer="97"/>
+<text x="50.8" y="177.8" size="2.54" layer="97">JTAG connector</text>
 <text x="99.06" y="104.14" size="2.54" layer="97">USB Client Circuit</text>
-<text x="293.624" y="197.358" size="1.778" layer="97">Analog section taken straight from RED board
-schematic, something about ADC monitoring 
-PMIC voltages, but I am not sure this is necessary?</text>
-<wire x1="292.1" y1="195.58" x2="353.06" y2="195.58" width="0.1524" layer="97"/>
-<wire x1="353.06" y1="195.58" x2="353.06" y2="205.74" width="0.1524" layer="97"/>
-<wire x1="353.06" y1="205.74" x2="292.1" y2="205.74" width="0.1524" layer="97"/>
-<wire x1="292.1" y1="205.74" x2="292.1" y2="195.58" width="0.1524" layer="97"/>
 <text x="73.914" y="233.934" size="1.778" layer="97">24MHz RTC XO</text>
 <wire x1="71.12" y1="238.76" x2="71.12" y2="231.14" width="0.1524" layer="97"/>
 <wire x1="71.12" y1="231.14" x2="93.98" y2="231.14" width="0.1524" layer="97"/>
@@ -25927,14 +25939,14 @@ PMIC voltages, but I am not sure this is necessary?</text>
 <attribute name="NAME" x="139.192" y="239.014" size="1.27" layer="95" rot="R90"/>
 <attribute name="VALUE" x="140.208" y="239.014" size="1.27" layer="96" rot="MR90"/>
 </instance>
-<instance part="CM1" gate="A" x="88.9" y="162.56" smashed="yes" rot="R180">
-<attribute name="NAME" x="95.25" y="144.145" size="1.778" layer="95" rot="R180"/>
+<instance part="CM1" gate="A" x="68.58" y="162.56" smashed="yes" rot="R180">
+<attribute name="NAME" x="74.93" y="144.145" size="1.778" layer="95" rot="R180"/>
 </instance>
-<instance part="3V-24" gate="A" x="86.36" y="139.7" smashed="yes">
-<attribute name="VALUE" x="85.725" y="140.335" size="1.27" layer="96"/>
+<instance part="3V-24" gate="A" x="66.04" y="139.7" smashed="yes">
+<attribute name="VALUE" x="65.405" y="140.335" size="1.27" layer="96"/>
 </instance>
-<instance part="GND57" gate="1" x="104.14" y="134.62" smashed="yes">
-<attribute name="VALUE" x="104.14" y="134.366" size="1.778" layer="96" align="top-center"/>
+<instance part="GND57" gate="1" x="83.82" y="134.62" smashed="yes">
+<attribute name="VALUE" x="83.82" y="134.366" size="1.778" layer="96" align="top-center"/>
 </instance>
 <instance part="GND59" gate="1" x="175.26" y="68.58" smashed="yes">
 <attribute name="VALUE" x="175.26" y="68.326" size="1.778" layer="96" align="top-center"/>
@@ -25988,18 +26000,12 @@ PMIC voltages, but I am not sure this is necessary?</text>
 <instance part="SUPPLY2" gate="VDD" x="330.2" y="114.3" smashed="yes">
 <attribute name="VALUE" x="330.2" y="117.094" size="1.778" layer="96" align="bottom-center"/>
 </instance>
-<instance part="R61" gate="R" x="132.08" y="162.56" smashed="yes" rot="R90">
-<attribute name="NAME" x="130.5814" y="158.75" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="135.382" y="158.75" size="1.778" layer="96" rot="R90"/>
+<instance part="R61" gate="R" x="111.76" y="162.56" smashed="yes" rot="R90">
+<attribute name="NAME" x="110.2614" y="158.75" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="115.062" y="158.75" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="GND58" gate="1" x="132.08" y="152.4" smashed="yes">
-<attribute name="VALUE" x="132.08" y="152.146" size="1.778" layer="96" align="top-center"/>
-</instance>
-<instance part="TP97" gate="G$1" x="165.1" y="170.18" smashed="yes" rot="R180">
-<attribute name="NAME" x="160.528" y="171.196" size="1.778" layer="95" font="vector" rot="R180"/>
-</instance>
-<instance part="TP98" gate="G$1" x="165.1" y="167.64" smashed="yes" rot="R180">
-<attribute name="NAME" x="160.528" y="168.402" size="1.778" layer="95" font="vector" rot="R180"/>
+<instance part="GND58" gate="1" x="111.76" y="152.4" smashed="yes">
+<attribute name="VALUE" x="111.76" y="152.146" size="1.778" layer="96" align="top-center"/>
 </instance>
 <instance part="Y1" gate="G$1" x="124.46" y="236.22" smashed="yes" rot="R270">
 <attribute name="NAME" x="134.112" y="236.22" size="1.778" layer="95" font="vector" rot="R270" align="bottom-center"/>
@@ -26007,43 +26013,6 @@ PMIC voltages, but I am not sure this is necessary?</text>
 </instance>
 <instance part="GND56" gate="1" x="101.6" y="231.14" smashed="yes">
 <attribute name="VALUE" x="101.6" y="230.886" size="1.778" layer="96" align="top-center"/>
-</instance>
-<instance part="C34" gate="CE" x="287.02" y="228.6" smashed="yes" rot="MR0">
-<attribute name="NAME" x="289.56" y="226.06" size="1.778" layer="95"/>
-<attribute name="VALUE" x="289.56" y="223.52" size="1.778" layer="96"/>
-</instance>
-<instance part="C31" gate="CE" x="236.22" y="228.6" smashed="yes" rot="MR0">
-<attribute name="NAME" x="238.76" y="226.06" size="1.778" layer="95"/>
-<attribute name="VALUE" x="238.76" y="223.52" size="1.778" layer="96"/>
-</instance>
-<instance part="C33" gate="CE" x="261.62" y="228.6" smashed="yes" rot="MR0">
-<attribute name="NAME" x="264.16" y="226.06" size="1.778" layer="95"/>
-<attribute name="VALUE" x="264.16" y="223.52" size="1.778" layer="96"/>
-</instance>
-<instance part="R63" gate="R" x="276.86" y="236.22" smashed="yes" rot="MR180">
-<attribute name="NAME" x="269.24" y="236.22" size="1.778" layer="95"/>
-<attribute name="VALUE" x="269.24" y="233.68" size="1.778" layer="96"/>
-</instance>
-<instance part="AGND1" gate="G$1" x="287.02" y="200.66" smashed="yes" rot="MR0">
-<attribute name="VALUE" x="287.02" y="197.104" size="1.778" layer="96" rot="MR0" align="center"/>
-</instance>
-<instance part="R64" gate="R" x="276.86" y="205.74" smashed="yes" rot="MR180">
-<attribute name="NAME" x="269.24" y="205.74" size="1.778" layer="95"/>
-<attribute name="VALUE" x="269.24" y="203.2" size="1.778" layer="96"/>
-</instance>
-<instance part="TP116" gate="G$1" x="287.02" y="248.92" smashed="yes" rot="R90">
-<attribute name="NAME" x="287.782" y="253.492" size="1.778" layer="95" font="vector" rot="R90"/>
-</instance>
-<instance part="R66" gate="R" x="287.02" y="160.02" smashed="yes" rot="R90">
-<attribute name="NAME" x="285.5214" y="153.67" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="290.322" y="153.67" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="R65" gate="R" x="287.02" y="175.26" smashed="yes" rot="R90">
-<attribute name="NAME" x="285.5214" y="170.18" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="290.322" y="170.18" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="GND62" gate="1" x="287.02" y="149.86" smashed="yes" rot="MR0">
-<attribute name="VALUE" x="287.02" y="149.606" size="1.778" layer="96" rot="MR0" align="top-center"/>
 </instance>
 <instance part="TP104" gate="G$1" x="233.68" y="195.58" smashed="yes">
 <attribute name="NAME" x="238.252" y="194.818" size="1.778" layer="95" font="vector"/>
@@ -26102,20 +26071,8 @@ PMIC voltages, but I am not sure this is necessary?</text>
 <instance part="TP115" gate="G$1" x="284.48" y="68.58" smashed="yes" rot="R90">
 <attribute name="NAME" x="281.94" y="70.485" size="1.778" layer="95" font="vector" rot="R90"/>
 </instance>
-<instance part="3V-25" gate="A" x="287.02" y="187.96" smashed="yes">
-<attribute name="VALUE" x="286.385" y="188.595" size="1.27" layer="96"/>
-</instance>
-<instance part="TP112" gate="G$1" x="264.16" y="167.64" smashed="yes" rot="R90">
-<attribute name="NAME" x="264.922" y="172.212" size="1.778" layer="95" font="vector" rot="R90"/>
-</instance>
-<instance part="TP101" gate="G$1" x="167.64" y="193.04" smashed="yes" rot="R180">
-<attribute name="NAME" x="163.068" y="194.056" size="1.778" layer="95" font="vector" rot="R180"/>
-</instance>
-<instance part="TP100" gate="G$1" x="167.64" y="198.12" smashed="yes" rot="R180">
-<attribute name="NAME" x="163.068" y="199.136" size="1.778" layer="95" font="vector" rot="R180"/>
-</instance>
-<instance part="TP99" gate="G$1" x="167.64" y="213.36" smashed="yes" rot="R180">
-<attribute name="NAME" x="163.068" y="214.376" size="1.778" layer="95" font="vector" rot="R180"/>
+<instance part="TP112" gate="G$1" x="233.68" y="167.64" smashed="yes">
+<attribute name="NAME" x="238.252" y="166.878" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="TP111" gate="G$1" x="233.68" y="147.32" smashed="yes">
 <attribute name="NAME" x="238.252" y="146.558" size="1.778" layer="95" font="vector"/>
@@ -26126,8 +26083,38 @@ PMIC voltages, but I am not sure this is necessary?</text>
 <instance part="JP7" gate="G$1" x="294.64" y="144.78" smashed="yes">
 <attribute name="NAME" x="297.18" y="145.161" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="TP151" gate="G$1" x="243.84" y="177.8" smashed="yes">
-<attribute name="NAME" x="248.412" y="177.038" size="1.778" layer="95" font="vector"/>
+<instance part="TP151" gate="G$1" x="233.68" y="177.8" smashed="yes">
+<attribute name="NAME" x="238.252" y="177.038" size="1.778" layer="95" font="vector"/>
+</instance>
+<instance part="R75" gate="R" x="144.78" y="205.74" smashed="yes" rot="R90">
+<attribute name="NAME" x="147.32" y="205.74" size="1.778" layer="95"/>
+<attribute name="VALUE" x="147.32" y="203.2" size="1.778" layer="96"/>
+</instance>
+<instance part="C44" gate="CE" x="121.92" y="213.36" smashed="yes" rot="R270">
+<attribute name="NAME" x="114.3" y="210.82" size="1.778" layer="95"/>
+<attribute name="VALUE" x="114.3" y="208.28" size="1.778" layer="96"/>
+</instance>
+<instance part="C45" gate="CE" x="121.92" y="198.12" smashed="yes" rot="R270">
+<attribute name="NAME" x="114.3" y="195.58" size="1.778" layer="95"/>
+<attribute name="VALUE" x="114.3" y="193.04" size="1.778" layer="96"/>
+</instance>
+<instance part="Y3" gate="G$1" x="134.62" y="205.74" smashed="yes" rot="R90">
+<attribute name="NAME" x="137.16" y="205.74" size="1.778" layer="95"/>
+<attribute name="VALUE" x="127" y="215.9" size="1.778" layer="96"/>
+</instance>
+<instance part="TP99" gate="G$1" x="233.68" y="172.72" smashed="yes">
+<attribute name="NAME" x="238.252" y="171.958" size="1.778" layer="95" font="vector"/>
+</instance>
+<instance part="R63" gate="R" x="124.46" y="160.02" smashed="yes" rot="R90">
+<attribute name="NAME" x="122.7074" y="155.702" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="122.682" y="161.29" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="R64" gate="R" x="129.54" y="160.02" smashed="yes" rot="R90">
+<attribute name="NAME" x="133.3754" y="155.194" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="133.35" y="160.528" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="3V-25" gate="A" x="127" y="170.18" smashed="yes">
+<attribute name="VALUE" x="126.365" y="170.815" size="1.27" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -26136,16 +26123,16 @@ PMIC voltages, but I am not sure this is necessary?</text>
 <net name="GND" class="0">
 <segment>
 <pinref part="CM1" gate="A" pin="GNDDET"/>
-<wire x1="96.52" y1="167.64" x2="104.14" y2="167.64" width="0.1524" layer="91"/>
-<wire x1="104.14" y1="167.64" x2="104.14" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="167.64" x2="83.82" y2="167.64" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="167.64" x2="83.82" y2="157.48" width="0.1524" layer="91"/>
 <pinref part="CM1" gate="A" pin="GND@2"/>
-<wire x1="104.14" y1="157.48" x2="104.14" y2="152.4" width="0.1524" layer="91"/>
-<wire x1="104.14" y1="152.4" x2="104.14" y2="137.16" width="0.1524" layer="91"/>
-<wire x1="96.52" y1="157.48" x2="104.14" y2="157.48" width="0.1524" layer="91"/>
-<junction x="104.14" y="157.48"/>
+<wire x1="83.82" y1="157.48" x2="83.82" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="152.4" x2="83.82" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="157.48" x2="83.82" y2="157.48" width="0.1524" layer="91"/>
+<junction x="83.82" y="157.48"/>
 <pinref part="CM1" gate="A" pin="GND"/>
-<wire x1="96.52" y1="152.4" x2="104.14" y2="152.4" width="0.1524" layer="91"/>
-<junction x="104.14" y="152.4"/>
+<wire x1="76.2" y1="152.4" x2="83.82" y2="152.4" width="0.1524" layer="91"/>
+<junction x="83.82" y="152.4"/>
 <pinref part="GND57" gate="1" pin="GND"/>
 </segment>
 <segment>
@@ -26185,18 +26172,13 @@ PMIC voltages, but I am not sure this is necessary?</text>
 <segment>
 <pinref part="GND58" gate="1" pin="GND"/>
 <pinref part="R61" gate="R" pin="1"/>
-<wire x1="132.08" y1="154.94" x2="132.08" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="154.94" x2="111.76" y2="157.48" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="Y1" gate="G$1" pin="GND"/>
 <pinref part="GND56" gate="1" pin="GND"/>
 <wire x1="116.84" y1="236.22" x2="101.6" y2="236.22" width="0.1524" layer="91"/>
 <wire x1="101.6" y1="236.22" x2="101.6" y2="233.68" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="R66" gate="R" pin="1"/>
-<wire x1="287.02" y1="154.94" x2="287.02" y2="152.4" width="0.1524" layer="91"/>
-<pinref part="GND62" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="JP7" gate="G$1" pin="3"/>
@@ -26227,42 +26209,47 @@ PMIC voltages, but I am not sure this is necessary?</text>
 <net name="3.3V" class="0">
 <segment>
 <pinref part="CM1" gate="A" pin="VTREF"/>
-<wire x1="96.52" y1="147.32" x2="99.06" y2="147.32" width="0.1524" layer="91"/>
-<wire x1="99.06" y1="147.32" x2="99.06" y2="137.16" width="0.1524" layer="91"/>
-<wire x1="99.06" y1="137.16" x2="86.36" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="147.32" x2="78.74" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="147.32" x2="78.74" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="137.16" x2="66.04" y2="137.16" width="0.1524" layer="91"/>
 <pinref part="3V-24" gate="A" pin="3.3V"/>
 </segment>
 <segment>
-<pinref part="R65" gate="R" pin="2"/>
-<wire x1="287.02" y1="180.34" x2="287.02" y2="185.42" width="0.1524" layer="91"/>
+<pinref part="R63" gate="R" pin="2"/>
 <pinref part="3V-25" gate="A" pin="3.3V"/>
+<wire x1="124.46" y1="165.1" x2="124.46" y2="167.64" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="167.64" x2="127" y2="167.64" width="0.1524" layer="91"/>
+<pinref part="R64" gate="R" pin="2"/>
+<wire x1="129.54" y1="165.1" x2="129.54" y2="167.64" width="0.1524" layer="91"/>
+<wire x1="129.54" y1="167.64" x2="127" y2="167.64" width="0.1524" layer="91"/>
+<junction x="127" y="167.64"/>
 </segment>
 </net>
 <net name="N$530" class="0">
 <segment>
 <pinref part="CM1" gate="A" pin="SWO/TDO"/>
-<wire x1="119.38" y1="160.02" x2="96.52" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="99.06" y1="160.02" x2="76.2" y2="160.02" width="0.1524" layer="91"/>
 <pinref part="U6" gate="B" pin="TDO"/>
-<wire x1="119.38" y1="160.02" x2="119.38" y2="180.34" width="0.1524" layer="91"/>
-<wire x1="119.38" y1="180.34" x2="170.18" y2="180.34" width="0.1524" layer="91"/>
+<wire x1="99.06" y1="160.02" x2="99.06" y2="180.34" width="0.1524" layer="91"/>
+<wire x1="99.06" y1="180.34" x2="170.18" y2="180.34" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$533" class="0">
 <segment>
 <pinref part="CM1" gate="A" pin="SWDCLK/TCK"/>
-<wire x1="96.52" y1="154.94" x2="121.92" y2="154.94" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="154.94" x2="101.6" y2="154.94" width="0.1524" layer="91"/>
 <pinref part="U6" gate="B" pin="TCK"/>
-<wire x1="121.92" y1="154.94" x2="121.92" y2="177.8" width="0.1524" layer="91"/>
-<wire x1="121.92" y1="177.8" x2="170.18" y2="177.8" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="154.94" x2="101.6" y2="177.8" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="177.8" x2="170.18" y2="177.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$534" class="0">
 <segment>
 <pinref part="CM1" gate="A" pin="SWDIO/TMS"/>
-<wire x1="96.52" y1="149.86" x2="124.46" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="149.86" x2="104.14" y2="149.86" width="0.1524" layer="91"/>
 <pinref part="U6" gate="B" pin="TMS"/>
-<wire x1="124.46" y1="149.86" x2="124.46" y2="175.26" width="0.1524" layer="91"/>
-<wire x1="124.46" y1="175.26" x2="170.18" y2="175.26" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="149.86" x2="104.14" y2="175.26" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="175.26" x2="170.18" y2="175.26" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="USB_CLI_N" class="0">
@@ -26352,37 +26339,23 @@ PMIC voltages, but I am not sure this is necessary?</text>
 <net name="N$621" class="0">
 <segment>
 <pinref part="CM1" gate="A" pin="NC/TDI"/>
-<wire x1="96.52" y1="165.1" x2="116.84" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="165.1" x2="96.52" y2="165.1" width="0.1524" layer="91"/>
 <pinref part="U6" gate="B" pin="TDI"/>
-<wire x1="116.84" y1="165.1" x2="116.84" y2="182.88" width="0.1524" layer="91"/>
-<wire x1="116.84" y1="182.88" x2="170.18" y2="182.88" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="165.1" x2="96.52" y2="182.88" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="182.88" x2="170.18" y2="182.88" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$657" class="0">
 <segment>
 <pinref part="CM1" gate="A" pin="!RESET"/>
-<wire x1="106.68" y1="170.18" x2="96.52" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="170.18" x2="76.2" y2="170.18" width="0.1524" layer="91"/>
 <pinref part="U6" gate="B" pin="TRSTN"/>
-<wire x1="170.18" y1="172.72" x2="132.08" y2="172.72" width="0.1524" layer="91"/>
-<wire x1="132.08" y1="172.72" x2="106.68" y2="172.72" width="0.1524" layer="91"/>
-<wire x1="106.68" y1="172.72" x2="106.68" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="170.18" y1="172.72" x2="111.76" y2="172.72" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="172.72" x2="86.36" y2="172.72" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="172.72" x2="86.36" y2="170.18" width="0.1524" layer="91"/>
 <pinref part="R61" gate="R" pin="2"/>
-<wire x1="132.08" y1="172.72" x2="132.08" y2="167.64" width="0.1524" layer="91"/>
-<junction x="132.08" y="172.72"/>
-</segment>
-</net>
-<net name="N$658" class="0">
-<segment>
-<pinref part="TP98" gate="G$1" pin="1"/>
-<pinref part="U6" gate="B" pin="EMU1"/>
-<wire x1="165.1" y1="167.64" x2="170.18" y2="167.64" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$659" class="0">
-<segment>
-<pinref part="TP97" gate="G$1" pin="1"/>
-<pinref part="U6" gate="B" pin="EMU0"/>
-<wire x1="165.1" y1="170.18" x2="170.18" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="172.72" x2="111.76" y2="167.64" width="0.1524" layer="91"/>
+<junction x="111.76" y="172.72"/>
 </segment>
 </net>
 <net name="OSC0_IN" class="0">
@@ -26461,93 +26434,18 @@ PMIC voltages, but I am not sure this is necessary?</text>
 <junction x="284.48" y="68.58"/>
 </segment>
 </net>
-<net name="AGND" class="0">
-<segment>
-<pinref part="AGND1" gate="G$1" pin="AGND"/>
-<pinref part="C34" gate="CE" pin="2"/>
-<wire x1="287.02" y1="203.2" x2="287.02" y2="205.74" width="0.1524" layer="91"/>
-<wire x1="287.02" y1="205.74" x2="287.02" y2="215.9" width="0.1524" layer="91"/>
-<wire x1="287.02" y1="215.9" x2="287.02" y2="223.52" width="0.1524" layer="91"/>
-<wire x1="231.14" y1="215.9" x2="236.22" y2="215.9" width="0.1524" layer="91"/>
-<wire x1="236.22" y1="215.9" x2="261.62" y2="215.9" width="0.1524" layer="91"/>
-<wire x1="261.62" y1="215.9" x2="287.02" y2="215.9" width="0.1524" layer="91"/>
-<pinref part="C33" gate="CE" pin="2"/>
-<wire x1="261.62" y1="223.52" x2="261.62" y2="215.9" width="0.1524" layer="91"/>
-<pinref part="R64" gate="R" pin="2"/>
-<wire x1="281.94" y1="205.74" x2="287.02" y2="205.74" width="0.1524" layer="91"/>
-<junction x="261.62" y="215.9"/>
-<junction x="287.02" y="205.74"/>
-<junction x="287.02" y="215.9"/>
-<label x="238.76" y="215.9" size="1.778" layer="95"/>
-<pinref part="C31" gate="CE" pin="2"/>
-<wire x1="236.22" y1="223.52" x2="236.22" y2="215.9" width="0.1524" layer="91"/>
-<junction x="236.22" y="215.9"/>
-<pinref part="U6" gate="B" pin="AGND_ADC"/>
-</segment>
-</net>
-<net name="VREFP" class="0">
-<segment>
-<pinref part="R63" gate="R" pin="1"/>
-<wire x1="236.22" y1="236.22" x2="261.62" y2="236.22" width="0.1524" layer="91"/>
-<wire x1="261.62" y1="236.22" x2="271.78" y2="236.22" width="0.1524" layer="91"/>
-<pinref part="C33" gate="CE" pin="1"/>
-<wire x1="261.62" y1="231.14" x2="261.62" y2="236.22" width="0.1524" layer="91"/>
-<junction x="261.62" y="236.22"/>
-<label x="238.76" y="236.22" size="1.778" layer="95"/>
-<pinref part="C31" gate="CE" pin="1"/>
-<wire x1="236.22" y1="231.14" x2="236.22" y2="236.22" width="0.1524" layer="91"/>
-<wire x1="231.14" y1="236.22" x2="236.22" y2="236.22" width="0.1524" layer="91"/>
-<junction x="236.22" y="236.22"/>
-<pinref part="U6" gate="B" pin="VREFP"/>
-</segment>
-</net>
-<net name="VREFN" class="0">
-<segment>
-<pinref part="R64" gate="R" pin="1"/>
-<wire x1="231.14" y1="205.74" x2="271.78" y2="205.74" width="0.1524" layer="91"/>
-<label x="238.76" y="205.74" size="1.778" layer="95"/>
-<pinref part="U6" gate="B" pin="VREFN"/>
-</segment>
-</net>
-<net name="N$1" class="0">
-<segment>
-<pinref part="R63" gate="R" pin="2"/>
-<wire x1="281.94" y1="236.22" x2="287.02" y2="236.22" width="0.1524" layer="91"/>
-<wire x1="287.02" y1="236.22" x2="287.02" y2="246.38" width="0.1524" layer="91"/>
-<wire x1="287.02" y1="246.38" x2="287.02" y2="248.92" width="0.1524" layer="91"/>
-<wire x1="287.02" y1="231.14" x2="287.02" y2="236.22" width="0.1524" layer="91"/>
-<pinref part="C34" gate="CE" pin="1"/>
-<label x="238.76" y="246.38" size="1.778" layer="95"/>
-<wire x1="231.14" y1="246.38" x2="287.02" y2="246.38" width="0.1524" layer="91"/>
-<junction x="287.02" y="246.38"/>
-<junction x="287.02" y="236.22"/>
-<pinref part="U6" gate="B" pin="SYS_ADC_1P8V"/>
-<pinref part="TP116" gate="G$1" pin="1"/>
-</segment>
-</net>
 <net name="PMIC_MUX_IN" class="0">
 <segment>
-<wire x1="231.14" y1="167.64" x2="264.16" y2="167.64" width="0.1524" layer="91"/>
-<pinref part="R66" gate="R" pin="2"/>
-<wire x1="264.16" y1="167.64" x2="287.02" y2="167.64" width="0.1524" layer="91"/>
-<wire x1="287.02" y1="165.1" x2="287.02" y2="167.64" width="0.1524" layer="91"/>
-<pinref part="R65" gate="R" pin="1"/>
-<wire x1="287.02" y1="167.64" x2="287.02" y2="170.18" width="0.1524" layer="91"/>
-<junction x="287.02" y="167.64"/>
+<wire x1="231.14" y1="167.64" x2="233.68" y2="167.64" width="0.1524" layer="91"/>
 <pinref part="U6" gate="B" pin="PMIC_MUX_IN"/>
 <pinref part="TP112" gate="G$1" pin="1"/>
-<junction x="264.16" y="167.64"/>
 </segment>
 </net>
 <net name="N$3" class="0">
 <segment>
-<pinref part="U6" gate="B" pin="PMIC_MUX_OUT"/>
-<wire x1="231.14" y1="172.72" x2="243.84" y2="172.72" width="0.1524" layer="91"/>
 <pinref part="U6" gate="B" pin="AIN7"/>
-<wire x1="243.84" y1="172.72" x2="243.84" y2="177.8" width="0.1524" layer="91"/>
-<wire x1="243.84" y1="177.8" x2="231.14" y2="177.8" width="0.1524" layer="91"/>
+<wire x1="233.68" y1="177.8" x2="231.14" y2="177.8" width="0.1524" layer="91"/>
 <pinref part="TP151" gate="G$1" pin="1"/>
-<junction x="243.84" y="177.8"/>
 </segment>
 </net>
 <net name="N$66" class="0">
@@ -26662,27 +26560,6 @@ PMIC voltages, but I am not sure this is necessary?</text>
 <junction x="266.7" y="71.12"/>
 </segment>
 </net>
-<net name="N$89" class="0">
-<segment>
-<pinref part="TP99" gate="G$1" pin="1"/>
-<pinref part="U6" gate="B" pin="OSC1_IN"/>
-<wire x1="167.64" y1="213.36" x2="170.18" y2="213.36" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$90" class="0">
-<segment>
-<pinref part="U6" gate="B" pin="OSC1_OUT"/>
-<pinref part="TP100" gate="G$1" pin="1"/>
-<wire x1="170.18" y1="198.12" x2="167.64" y2="198.12" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$91" class="0">
-<segment>
-<pinref part="TP101" gate="G$1" pin="1"/>
-<pinref part="U6" gate="B" pin="OSC1_GND"/>
-<wire x1="167.64" y1="193.04" x2="170.18" y2="193.04" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$92" class="0">
 <segment>
 <pinref part="U6" gate="B" pin="USB1_CE"/>
@@ -26705,6 +26582,86 @@ PMIC voltages, but I am not sure this is necessary?</text>
 <wire x1="279.4" y1="144.78" x2="279.4" y2="149.86" width="0.1524" layer="91"/>
 <pinref part="U6" gate="B" pin="USB1_ID"/>
 <wire x1="279.4" y1="149.86" x2="231.14" y2="149.86" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="OSC1_IN1" class="0">
+<segment>
+<pinref part="C44" gate="CE" pin="1"/>
+<wire x1="144.78" y1="213.36" x2="134.62" y2="213.36" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="213.36" x2="124.46" y2="213.36" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="210.82" x2="134.62" y2="213.36" width="0.1524" layer="91"/>
+<junction x="134.62" y="213.36"/>
+<pinref part="R75" gate="R" pin="2"/>
+<wire x1="144.78" y1="210.82" x2="144.78" y2="213.36" width="0.1524" layer="91"/>
+<pinref part="Y3" gate="G$1" pin="P$2"/>
+<wire x1="170.18" y1="213.36" x2="144.78" y2="213.36" width="0.1524" layer="91"/>
+<junction x="144.78" y="213.36"/>
+<pinref part="U6" gate="B" pin="OSC1_IN"/>
+</segment>
+</net>
+<net name="OSC1_OUT1" class="0">
+<segment>
+<pinref part="R75" gate="R" pin="1"/>
+<wire x1="144.78" y1="200.66" x2="144.78" y2="198.12" width="0.1524" layer="91"/>
+<pinref part="C45" gate="CE" pin="1"/>
+<wire x1="134.62" y1="198.12" x2="124.46" y2="198.12" width="0.1524" layer="91"/>
+<junction x="134.62" y="198.12"/>
+<pinref part="Y3" gate="G$1" pin="P$1"/>
+<wire x1="134.62" y1="198.12" x2="134.62" y2="200.66" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="198.12" x2="144.78" y2="198.12" width="0.1524" layer="91"/>
+<wire x1="170.18" y1="198.12" x2="144.78" y2="198.12" width="0.1524" layer="91"/>
+<junction x="144.78" y="198.12"/>
+<pinref part="U6" gate="B" pin="OSC1_OUT"/>
+</segment>
+</net>
+<net name="OSC1_GND1" class="0">
+<segment>
+<pinref part="C45" gate="CE" pin="2"/>
+<wire x1="116.84" y1="198.12" x2="106.68" y2="198.12" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="198.12" x2="106.68" y2="193.04" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="193.04" x2="170.18" y2="193.04" width="0.1524" layer="91"/>
+<pinref part="C44" gate="CE" pin="2"/>
+<wire x1="116.84" y1="213.36" x2="106.68" y2="213.36" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="213.36" x2="106.68" y2="198.12" width="0.1524" layer="91"/>
+<junction x="106.68" y="198.12"/>
+<pinref part="U6" gate="B" pin="OSC1_GND"/>
+</segment>
+</net>
+<net name="N$90" class="0">
+<segment>
+<pinref part="U6" gate="B" pin="PMIC_MUX_OUT"/>
+<pinref part="TP99" gate="G$1" pin="1"/>
+<wire x1="231.14" y1="172.72" x2="233.68" y2="172.72" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$91" class="0">
+<segment>
+<pinref part="U6" gate="B" pin="EMU1"/>
+<wire x1="170.18" y1="167.64" x2="144.78" y2="167.64" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="167.64" x2="144.78" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="147.32" x2="124.46" y2="147.32" width="0.1524" layer="91"/>
+<pinref part="R63" gate="R" pin="1"/>
+<wire x1="124.46" y1="147.32" x2="124.46" y2="154.94" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$101" class="0">
+<segment>
+<pinref part="R64" gate="R" pin="1"/>
+<wire x1="129.54" y1="154.94" x2="129.54" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="129.54" y1="149.86" x2="142.24" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="142.24" y1="149.86" x2="142.24" y2="170.18" width="0.1524" layer="91"/>
+<pinref part="U6" gate="B" pin="EMU0"/>
+<wire x1="142.24" y1="170.18" x2="170.18" y2="170.18" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="U6" gate="B" pin="VREFN"/>
+<pinref part="U6" gate="B" pin="AGND_ADC"/>
+<wire x1="231.14" y1="205.74" x2="231.14" y2="215.9" width="0.1524" layer="91"/>
+<pinref part="U6" gate="B" pin="VREFP"/>
+<wire x1="231.14" y1="215.9" x2="231.14" y2="236.22" width="0.1524" layer="91"/>
+<junction x="231.14" y="215.9"/>
 </segment>
 </net>
 </nets>
@@ -26777,6 +26734,8 @@ need to be connected to VDD_CORE.</text>
 <wire x1="-154.94" y1="190.5" x2="-154.94" y2="200.66" width="0.1524" layer="97"/>
 <wire x1="-154.94" y1="200.66" x2="-185.42" y2="200.66" width="0.1524" layer="97"/>
 <text x="-194.564" y="94.996" size="1.778" layer="97"></text>
+<text x="-20.32" y="38.1" size="1.778" layer="150">Power Management Buffer powered
+from SYS_RTC_1P8V</text>
 </plain>
 <instances>
 <instance part="U6" gate="A" x="-88.9" y="96.52" smashed="yes">
@@ -27437,17 +27396,6 @@ need to be connected to VDD_CORE.</text>
 <wire x1="-132.08" y1="101.6" x2="-124.46" y2="101.6" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="VDD_RTC" class="0">
-<segment>
-<pinref part="U15" gate="G$1" pin="VCC"/>
-<wire x1="-30.48" y1="35.56" x2="-30.48" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="-30.48" y1="33.02" x2="-30.48" y2="27.94" width="0.1524" layer="91"/>
-<wire x1="-10.16" y1="33.02" x2="-30.48" y2="33.02" width="0.1524" layer="91"/>
-<junction x="-30.48" y="33.02"/>
-<pinref part="C39" gate="CE" pin="1"/>
-<pinref part="TP133" gate="G$1" pin="1"/>
-</segment>
-</net>
 <net name="PMIC_PGOOD" class="0">
 <segment>
 <label x="-50.8" y="27.94" size="1.778" layer="95"/>
@@ -27715,8 +27663,20 @@ need to be connected to VDD_CORE.</text>
 <pinref part="U6" gate="A" pin="SYS_RTC_1P8V@2"/>
 <wire x1="-53.34" y1="124.46" x2="-48.26" y2="124.46" width="0.1524" layer="91"/>
 <pinref part="JP5" gate="G$1" pin="1"/>
-<wire x1="-30.48" y1="124.46" x2="-43.18" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="-30.48" y1="124.46" x2="-35.56" y2="124.46" width="0.1524" layer="91"/>
 <junction x="-43.18" y="124.46"/>
+<pinref part="U15" gate="G$1" pin="VCC"/>
+<wire x1="-35.56" y1="124.46" x2="-43.18" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="-30.48" y1="35.56" x2="-30.48" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="-30.48" y1="33.02" x2="-30.48" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="-10.16" y1="33.02" x2="-30.48" y2="33.02" width="0.1524" layer="91"/>
+<junction x="-30.48" y="33.02"/>
+<pinref part="C39" gate="CE" pin="1"/>
+<pinref part="TP133" gate="G$1" pin="1"/>
+<label x="-20.32" y="33.02" size="1.778" layer="95"/>
+<wire x1="-35.56" y1="124.46" x2="-35.56" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="-35.56" y1="33.02" x2="-30.48" y2="33.02" width="0.1524" layer="91"/>
+<junction x="-35.56" y="124.46"/>
 </segment>
 </net>
 <net name="N$88" class="0">
