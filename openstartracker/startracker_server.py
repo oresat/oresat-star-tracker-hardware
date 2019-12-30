@@ -57,7 +57,7 @@ INTERFACE_NAME = "org.example.project.oresat"
 bus = SystemBus()
 loop = GLib.MainLoop()
 
-# Define XML for server 
+# Define XML for server
 class Server_XML(object):
 
     # XML definition
@@ -66,9 +66,7 @@ class Server_XML(object):
         <interface name='org.example.project.oresat'>
             <method name='solve_image'>
                 <arg type='s' name='filepath' direction='in' />
-                <arg type='d' name='dec' direction='out' />
-                <arg type='d' name='ra' direction='out' />
-                <arg type='d' name='ori' direction='out' />
+                <arg type='b' name='status' direction='out' />
             </method>
             <signal name='file_error'>
                 <arg type='s' />
@@ -76,18 +74,51 @@ class Server_XML(object):
             <signal name='image_error'>
                 <arg type='s' />
             </signal>
-            <signal name="solve_error">
+            <signal name='solve_error'>
                 <arg type='s' />
             </signal>
+            <property name='DEC' type='d' access='read' />
+            <property name='RA' type='d' access='read' />
+            <property name='ORI' type='d' access='read' />
             <method name='Quit'/>
         </interface>
     </node>
     """
 
+    # Initialize properties
+    def __init__(self):
+        self.dec = 0.0
+        self.ra = 0.0
+        self.ori = 0.0
+
     # D-Bus method to solve image
     def solve_image(self, filepath):
-        dec, ra, ori = solve(filepath)
-        return dec, ra, ori
+        print("\nSolving {}".format(filepath))
+        self.dec, self.ra, self.ori = solve(filepath)
+        print("DEC: {}".format(self.dec))
+        print("RA: {}".format(self.ra))
+        print("ORI: {}".format(self.ori))
+        return True
+
+    # Signals
+    file_error = signal()
+    image_error = signal()
+    solve_error = signal()
+
+    # Declination
+    @property
+    def DEC(self):
+        return self.dec
+
+    # Right ascension
+    @property
+    def RA(self):
+        return self.ra
+
+    # Orientation
+    @property
+    def ORI(self):
+        return self.ori
 
     # Method to quit
     def Quit(self):
@@ -121,135 +152,136 @@ def send_solve_error(error):
 # See if an image is worth attempting to solve
 def check_image(img):
 
-	# Generate test parameters
-	height, width, channels = img.shape
-	total_pixels = height * width
-	blur_check = int(total_pixels * 0.99996744)
-	too_many_check = int(total_pixels * 0.99918619)
+    # Generate test parameters
+    height, width, channels = img.shape
+    total_pixels = height * width
+    blur_check = int(total_pixels * 0.99996744)
+    too_many_check = int(total_pixels * 0.99918619)
 
-	# Convert and threshold the image
-	img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
-	ret, threshold = cv2.threshold(img, 80, 255, cv2.THRESH_BINARY)
+    # Convert and threshold the image
+    img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
+    ret, threshold = cv2.threshold(img, 80, 255, cv2.THRESH_BINARY)
 
-	# Count the number of black pixels in the thresholded image
-	threshold_black = total_pixels - cv2.countNonZero(threshold)
+    # Count the number of black pixels in the thresholded image
+    threshold_black = total_pixels - cv2.countNonZero(threshold)
 
-	# Check the test values and return appropriate value
-	if threshold_black > blur_check:
-		blur = cv2.Laplacian(img, cv2.CV_64F).var()
-		if blur != 0 and blur < 5:
-			send_image_error("too blurry")
-		else:
-			send_image_error("too few stars")
-		return 0
-	elif threshold_black < too_many_check:
-		send_image_error("unsuitable image")
-		return 0
+    # Check the test values and return appropriate value
+    if threshold_black > blur_check:
+        blur = cv2.Laplacian(img, cv2.CV_64F).var()
+        if blur != 0 and blur < 5:
+            send_image_error("too blurry")
+        else:
+            send_image_error("too few stars")
+        return 0
+    elif threshold_black < too_many_check:
+        send_image_error("unsuitable image")
+        return 0
 
-	return 1
+    return 1
 
 
 # Solution function
 def solve(filepath):
 
-	# Keep track of solution time
-	starttime = time()
+    # Keep track of solution time
+    starttime = time()
 
-	# Create and initialize variables
-	img_stars = beast.star_db()
-	match = None
-	fov_db = None
+    # Create and initialize variables
+    img_stars = beast.star_db()
+    match = None
+    fov_db = None
 
-	# Load the image
-	orig_img = cv2.imread(filepath)
-	if type(orig_img) == type(None):
-		send_file_error(filepath)
-		return 0, 0, 0
+    # Load the image
+    orig_img = cv2.imread(filepath)
+    if type(orig_img) == type(None):
+        send_file_error(filepath)
+        return 0, 0, 0
 
-	# Check the image to see if it is fit for processing
-	result = check_image(orig_img, connection)
-	if result == 0:
-		print("\nTime: {}\n\n".format(time() - starttime))
-		return 0, 0, 0
+    # Check the image to see if it is fit for processing
+    result = check_image(orig_img)
+    if result == 0:
+        print("Image unfit for processing")
+        print("Time: {}".format(time() - starttime))
+        return 0, 0, 0
 
-	# Process the image for solving
-	img = np.clip(orig_img.astype(np.int16) - MEDIAN_IMAGE, a_min = 0, a_max = 255).astype(np.uint8)
-	img_grey = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
+    # Process the image for solving
+    img = np.clip(orig_img.astype(np.int16) - MEDIAN_IMAGE, a_min = 0, a_max = 255).astype(np.uint8)
+    img_grey = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
 
-	# Remove areas of the image that don't meet our brightness threshold and then extract contours
-	ret, thresh = cv2.threshold(img_grey, beast.cvar.THRESH_FACTOR * beast.cvar.IMAGE_VARIANCE, 255, cv2.THRESH_BINARY)
-	thresh_contours, contours, hierarchy = cv2.findContours(thresh, 1, 2);
+    # Remove areas of the image that don't meet our brightness threshold and then extract contours
+    ret, thresh = cv2.threshold(img_grey, beast.cvar.THRESH_FACTOR * beast.cvar.IMAGE_VARIANCE, 255, cv2.THRESH_BINARY)
+    thresh_contours, contours, hierarchy = cv2.findContours(thresh, 1, 2);
 
-	# Process the contours
-	for c in contours:
+    # Process the contours
+    for c in contours:
 
-		M = cv2.moments(c)
+        M = cv2.moments(c)
 
-		if M["m00"] > 0:
+        if M["m00"] > 0:
 
-			# this is how the x and y position are defined by cv2
-			cx = M["m10"] / M["m00"]
-			cy = M["m01"] / M["m00"]
+            # this is how the x and y position are defined by cv2
+            cx = M["m10"] / M["m00"]
+            cy = M["m01"] / M["m00"]
 
-			# see https://alyssaq.github.io/2015/computing-the-axes-or-orientation-of-a-blob/ for how to convert these into eigenvectors/values
-			u20 = M["m20"] / M["m00"] - cx ** 2
-			u02 = M["m02"] / M["m00"] - cy ** 2
-			u11 = M["m11"] / M["m00"] - cx * cy
+            # see https://alyssaq.github.io/2015/computing-the-axes-or-orientation-of-a-blob/ for how to convert these into eigenvectors/values
+            u20 = M["m20"] / M["m00"] - cx ** 2
+            u02 = M["m02"] / M["m00"] - cy ** 2
+            u11 = M["m11"] / M["m00"] - cx * cy
 
-			# The center pixel is used as the approximation of the brightest pixel
-			img_stars += beast.star(cx - beast.cvar.IMG_X / 2.0, cy - beast.cvar.IMG_Y / 2.0, float(cv2.getRectSubPix(img_grey, (1,1), (cx,cy))[0,0]), -1)
+            # The center pixel is used as the approximation of the brightest pixel
+            img_stars += beast.star(cx - beast.cvar.IMG_X / 2.0, cy - beast.cvar.IMG_Y / 2.0, float(cv2.getRectSubPix(img_grey, (1,1), (cx,cy))[0,0]), -1)
 
-	# We only want to use the brightest MAX_FALSE_STARS + REQUIRED_STARS
-	img_stars_n_brightest = img_stars.copy_n_brightest(beast.cvar.MAX_FALSE_STARS + beast.cvar.REQUIRED_STARS)
-	img_const_n_brightest = beast.constellation_db(img_stars_n_brightest, beast.cvar.MAX_FALSE_STARS + 2, 1)
-	lis = beast.db_match(C_DB, img_const_n_brightest)
+    # We only want to use the brightest MAX_FALSE_STARS + REQUIRED_STARS
+    img_stars_n_brightest = img_stars.copy_n_brightest(beast.cvar.MAX_FALSE_STARS + beast.cvar.REQUIRED_STARS)
+    img_const_n_brightest = beast.constellation_db(img_stars_n_brightest, beast.cvar.MAX_FALSE_STARS + 2, 1)
+    lis = beast.db_match(C_DB, img_const_n_brightest)
 
-	# Generate the match
-	if lis.p_match > P_MATCH_THRESH and lis.winner.size() >= beast.cvar.REQUIRED_STARS:
+    # Generate the match
+    if lis.p_match > P_MATCH_THRESH and lis.winner.size() >= beast.cvar.REQUIRED_STARS:
 
-		x = lis.winner.R11
-		y = lis.winner.R21
-		z = lis.winner.R31
-		r = beast.cvar.MAXFOV / 2
+        x = lis.winner.R11
+        y = lis.winner.R21
+        z = lis.winner.R31
+        r = beast.cvar.MAXFOV / 2
 
-		SQ_RESULTS.kdsearch(x, y, z, r, beast.cvar.THRESH_FACTOR * beast.cvar.IMAGE_VARIANCE)
+        SQ_RESULTS.kdsearch(x, y, z, r, beast.cvar.THRESH_FACTOR * beast.cvar.IMAGE_VARIANCE)
 
-		# Estimate density for constellation generation
-		C_DB.results.kdsearch(x, y, z, r,beast.cvar.THRESH_FACTOR * beast.cvar.IMAGE_VARIANCE)
-		fov_stars = SQ_RESULTS.from_kdresults()
-		fov_db = beast.constellation_db(fov_stars, C_DB.results.r_size(), 1)
-		C_DB.results.clear_kdresults()
-		SQ_RESULTS.clear_kdresults()
+        # Estimate density for constellation generation
+        C_DB.results.kdsearch(x, y, z, r,beast.cvar.THRESH_FACTOR * beast.cvar.IMAGE_VARIANCE)
+        fov_stars = SQ_RESULTS.from_kdresults()
+        fov_db = beast.constellation_db(fov_stars, C_DB.results.r_size(), 1)
+        C_DB.results.clear_kdresults()
+        SQ_RESULTS.clear_kdresults()
 
-		img_const = beast.constellation_db(img_stars, beast.cvar.MAX_FALSE_STARS + 2, 1)
-		near = beast.db_match(fov_db, img_const)
+        img_const = beast.constellation_db(img_stars, beast.cvar.MAX_FALSE_STARS + 2, 1)
+        near = beast.db_match(fov_db, img_const)
 
-		if near.p_match > P_MATCH_THRESH:
-			match = near
+        if near.p_match > P_MATCH_THRESH:
+            match = near
 
-	# Print solution
-	if match is not None:
+    # Print solution
+    if match is not None:
 
-		match.winner.calc_ori()
-		dec = match.winner.get_dec()
-		ra = match.winner.get_ra()
-		ori = match.winner.get_ori()
+        match.winner.calc_ori()
+        dec = match.winner.get_dec()
+        ra = match.winner.get_ra()
+        ori = match.winner.get_ori()
 
-		# For reference:
-		# - dec         - rotation about the y-axis
-		# - ra          - rotation about the z-axis
-		# - ori         - rotation about the camera axis
+        # For reference:
+        # - dec         - rotation about the y-axis
+        # - ra          - rotation about the z-axis
+        # - ori         - rotation about the camera axis
 
-	else:
-		send_solve_error("no match found")
-		print("\nTime: {}\n\n".format(time() - starttime))
-		return 0, 0, 0
-		
-	# Calculate how long it took to process
-	# print("\nTime: {}\n\n".format(time() - starttime))
+    else:
+        send_solve_error("no match found")
+        print("Time: {}".format(time() - starttime))
+        return 0, 0, 0
+
+    # Calculate how long it took to process
+    print("Time: {}".format(time() - starttime))
 
     # Return solution
-	return dec, ra, ori
+    return dec, ra, ori
 
 
 
@@ -262,7 +294,8 @@ bus.publish(INTERFACE_NAME, emit)
 
 # Run loop with graceful exiting
 try:
-	loop.run()
+    print("\nStarting D-Bus loop...")
+    loop.run()
 except KeyboardInterrupt as e:
-	loop.quit()
-	print("\nExit by Ctrl-C")
+    loop.quit()
+    print("\nExit by Ctrl-C\n")

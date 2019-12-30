@@ -18,7 +18,7 @@ startracker = bus.get(INTERFACE_NAME)
 
 print("Attempting to solve tests/downsample/samples/1.bmp...")
 reply = startracker.solve_image("tests/downsample/samples/1.bmp")
-print("Returned: {}\n".format(reply)))
+print("Returned: {}\n".format(reply))
 
 print("Calling quit method...")
 startracker.Quit()

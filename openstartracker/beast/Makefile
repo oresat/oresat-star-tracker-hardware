@@ -6,4 +6,4 @@ all: $(OBJ)
 	$(CC) -g -shared -fPIC beast_wrap.o -o _beast.so
 	
 clean:
-	rm beast.so beast.o	beast.py beast.pyc beast_wrap.cxx beast_wrap.o
+	rm beast_wrap.cxx beast_wrap.o _beast.so beast.py
