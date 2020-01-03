@@ -1,32 +1,24 @@
-The following is the original README from the original OpenStarTracker respository.
+### Introduction
 
-------------
+This is a modified version of [OpenStarTracker](https://openstartracker.org), originally developed by Andrew Tennenbaum at the University at Buffalo. Some of the information below comes from the original README file in the [OpenStarTracker repository](https://github.com/UBNanosatLab/openstartracker).
 
-# openstartracker
-A fast, robust, open source startracker based on a new class of baysian startracker algorithms
+### Dependencies
 
-Features:
+- [Python 3](https://www.python.org/)
+    - [NumPy](https://numpy.org/)
+    - [SciPy](https://www.scipy.org/)
+    - [pydbus](https://github.com/LEW21/pydbus)
+    - [Astropy](https://www.astropy.org/)
+- [OpenCV](https://opencv.org/) (with Python wrappers)
+- [SWIG](http://swig.org/) (version 4.0.1 or greater)
+- [astrometry.net](http://astrometry.net/)
 
-* Fast lost in space identification
-* Image to image matching
-* Collect and store size, shape and color information of unknown objects
-* Tracks unknown objects between images
-* Programable python frontend / reusable C++ backend (BEAST-2) with no external dependencies 
-* Uses astrometry.net for calibration (check if your camera is good enough by uploading your star images to nova.astrometry.net)
+These should be readily available from your OS package repositories, or via `pip` in the case of the Python packages.
 
-### Basic setup:
+Once you have installed astrometry.net, you must also grab the corresponding FITS files and place them in the appropriate directory. For example:
 
-##### From a fresh xubuntu 16.04 linux install
 ```
-sudo apt-get install python-scipy libopencv-dev python-opencv swig python-systemd
-```
-Additional packages needed for calibration and unit testing:
-~~~~
-sudo apt-get install git astrometry.net python-astropy
-
 cd /usr/share/astrometry
-
-Download fits files corresponding to your camera fov size (see astrometry.net for details
 sudo wget http://data.astrometry.net/4100/index-4112.fits
 sudo wget http://data.astrometry.net/4100/index-4113.fits
 sudo wget http://data.astrometry.net/4100/index-4114.fits
@@ -35,23 +27,49 @@ sudo wget http://data.astrometry.net/4100/index-4116.fits
 sudo wget http://data.astrometry.net/4100/index-4117.fits
 sudo wget http://data.astrometry.net/4100/index-4118.fits
 sudo wget http://data.astrometry.net/4100/index-4119.fits
+```
 
-git clone https://github.com/UBNanosatLab/openstartracker.git
+Technically, you should only need the FITS files which correspond to your camera's FOV, but it doesn't hurt to just get them all.
 
-cd openstartracker/tests
-./unit_test.sh -crei xmas
-~~~~
-##### To calibrate a new camera:
-~~~~
-cd openstartracker/
+### Setting up cameras
+
+Each "camera" is represented by a subdirectory in the `datasets` directory. To set up a fresh dataset:
+
+```
+cd datasets
 mkdir yourcamera
 mkdir yourcamera/samples
 mkdir yourcamera/calibration_data
-~~~~
-add 3-10 star images of different parts of the sky taken with your camera to yourcamera/samples
+```
 
-edit APERTURE and EXPOSURE_TIME in calibrate.py (you want to take images with the lowest exposure time that consistently solves)
+Then, add 3-10 star images of different parts of the sky taken with your camera to `yourcamera/samples`.
 
-run ./unit_test.sh -crei yourcamera to recalibrate and test
+### Running the star tracker
 
-The ESA test should have a score of >70. If its worse than this, play around with exposure time (50ms is a good starting point)
+Things are mainly coordinated via two Bash scripts: `run.sh` and `server.sh`. Both scripts take one positional argument, the name of the camera directory to work with (e.g. `yourcamera`). `run.sh` uses flags in addition.
+
+The very first thing you should do is compile the backend using the `-r` flag in `run.sh`
+
+```
+./run.sh -r yourcamera
+```
+
+Assuming you are setting up a fresh camera or dataset, you will also need to run the calibration script:
+
+```
+./run.sh -c yourcamera
+```
+
+The final step is to launch the star tracker. Currently, there is a star tracker "server" and "client", which use D-Bus to communicate. The server must be started before the client. (The default client simply solves all the images in `yourcamera/samples`).
+
+```
+./server.sh yourcamera
+(in a separate shell)
+./run.sh -i yourcamera
+```
+
+Obviously, flags can be combined when using `run.sh`. For example, to recompile the backend and run the client:
+
+```
+./run.sh -ri yourcamera
+```
