@@ -1,0 +1,3 @@
+- use 0805 for 10uF on image sensor
+- use same 0402 and 0603 footprints for all
+- TPS71928-28DRVT discontinued, use something else. Actually just found it, but slightly differnt number

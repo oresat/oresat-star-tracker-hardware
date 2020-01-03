@@ -1,0 +1,10 @@
+- C8 0805 22uF should be 1210 
+- see power plane on balls H10 and H11
+- C4 0805 10uF should be 0603 like all others on board, unless there is a compelling reason why not
+- re-number refers, though this might make the second rev confusing
+- it'd be nice if C18, instead of 2.2uF, could be 1uF, or use 2 1uF, 
+- rename JTAG header CM1 to Jx
+- all parts should have correct MPN as attribute
+- D1 should user amber LED part, not green
+- 10uF 0603 should be 0805
+- in attributes, note part numbers for different temperature grades for ICs, like CLVCH16T245MDGGREP vs 74LVCH16T245DGGRE4

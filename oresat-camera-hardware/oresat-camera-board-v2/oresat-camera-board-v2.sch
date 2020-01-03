@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.4.2">
+<eagle version="9.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -9526,7 +9526,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="C11" library="oresat-rcl" deviceset="C-EU" device="0603-C-NOSILK" value="2.2uF"/>
 <part name="C7" library="oresat-rcl" deviceset="C-EU" device="0603-C-NOSILK" value="2.2uF"/>
 <part name="C14" library="oresat-rcl" deviceset="C-EU" device="0603-C-NOSILK" value="1.0uF"/>
-<part name="R5" library="oresat-rcl" deviceset="R-US_" device="0402-B-NOSILK" value="10K"/>
+<part name="R5" library="oresat-rcl" deviceset="R-US_" device="0402-B-NOSILK" value="10k"/>
 <part name="SUPPLY9" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 <part name="GND7" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="R6" library="oresat-rcl" deviceset="R-US_" device="0402-B-NOSILK" value="DNP"/>

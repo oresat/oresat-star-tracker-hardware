@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.4.2">
+<eagle version="9.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -5446,7 +5446,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <sheets>
 <sheet>
 <plain>
-<text x="91.44" y="-17.78" size="1.778" layer="97">TODO shield cap</text>
 </plain>
 <instances>
 <instance part="J1" gate="G$1" x="104.14" y="-2.54" smashed="yes">

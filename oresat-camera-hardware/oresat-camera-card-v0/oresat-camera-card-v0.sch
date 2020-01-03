@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.1">
+<eagle version="9.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -9,34 +9,34 @@
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
-<layer number="2" name="Route2" color="15" fill="1" visible="no" active="no"/>
-<layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
-<layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
-<layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
-<layer number="6" name="Route6" color="1" fill="8" visible="no" active="no"/>
-<layer number="7" name="Route7" color="4" fill="8" visible="no" active="no"/>
-<layer number="8" name="Route8" color="1" fill="2" visible="no" active="no"/>
-<layer number="9" name="Route9" color="4" fill="2" visible="no" active="no"/>
-<layer number="10" name="Route10" color="1" fill="7" visible="no" active="no"/>
-<layer number="11" name="Route11" color="4" fill="7" visible="no" active="no"/>
-<layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
-<layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
-<layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
-<layer number="15" name="Route15" color="14" fill="1" visible="no" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
-<layer number="20" name="Dimension" color="15" fill="1" visible="no" active="no"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
+<layer number="2" name="Route2" color="15" fill="1" visible="yes" active="no"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="yes" active="no"/>
+<layer number="4" name="Route4" color="1" fill="4" visible="yes" active="no"/>
+<layer number="5" name="Route5" color="4" fill="4" visible="yes" active="no"/>
+<layer number="6" name="Route6" color="1" fill="8" visible="yes" active="no"/>
+<layer number="7" name="Route7" color="4" fill="8" visible="yes" active="no"/>
+<layer number="8" name="Route8" color="1" fill="2" visible="yes" active="no"/>
+<layer number="9" name="Route9" color="4" fill="2" visible="yes" active="no"/>
+<layer number="10" name="Route10" color="1" fill="7" visible="yes" active="no"/>
+<layer number="11" name="Route11" color="4" fill="7" visible="yes" active="no"/>
+<layer number="12" name="Route12" color="1" fill="5" visible="yes" active="no"/>
+<layer number="13" name="Route13" color="4" fill="5" visible="yes" active="no"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="yes" active="no"/>
+<layer number="15" name="Route15" color="14" fill="1" visible="yes" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="no"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -45,8 +45,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -54,21 +54,21 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
-<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
-<layer number="53" name="tGND_GNDA" color="7" fill="1" visible="no" active="no"/>
-<layer number="54" name="bGND_GNDA" color="7" fill="1" visible="no" active="no"/>
-<layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
-<layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
-<layer number="58" name="b3D" color="7" fill="1" visible="no" active="no"/>
-<layer number="59" name="Invisible" color="7" fill="1" visible="no" active="no"/>
-<layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
-<layer number="61" name="stand" color="7" fill="1" visible="no" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
+<layer number="50" name="dxf" color="61" fill="1" visible="yes" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
+<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="yes" active="no"/>
+<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="yes" active="no"/>
+<layer number="56" name="wert" color="7" fill="1" visible="yes" active="no"/>
+<layer number="57" name="tCAD" color="7" fill="1" visible="yes" active="no"/>
+<layer number="58" name="b3D" color="7" fill="1" visible="yes" active="no"/>
+<layer number="59" name="Invisible" color="7" fill="1" visible="yes" active="no"/>
+<layer number="60" name="bCarbon" color="7" fill="1" visible="yes" active="no"/>
+<layer number="61" name="stand" color="7" fill="1" visible="yes" active="no"/>
 <layer number="88" name="SimResults" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="89" name="SimProbes" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
@@ -12842,7 +12842,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </connects>
 <technologies>
 <technology name="">
-<attribute name="MANUFACTURER_PART_NUMBER" value="TPS2051CDBVR" constant="no"/>
+<attribute name="MPN" value="TPS2051CDBVR" constant="no"/>
 <attribute name="VENDOR" value="Texas Instruments" constant="no"/>
 </technology>
 </technologies>
@@ -14714,7 +14714,9 @@ LOW: B--&gt;A</text>
 <connect gate="G$1" pin="VCC" pad="5"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="MPN" value="RCLAMP0504FBTCT" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -20374,7 +20376,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 </classes>
 <parts>
 <part name="FRAME1" library="frames" deviceset="FRAME_B_L" device=""/>
-<part name="D2" library="SparkFun-LED" library_urn="urn:adsk.eagle:library:529" deviceset="LED-GREEN" device="0603" package3d_urn="urn:adsk.eagle:package:39354/1" value="GREEN">
+<part name="D2" library="SparkFun-LED" deviceset="LED-GREEN" device="0603" value="GREEN">
 <attribute name="PROD_ID" value=""/>
 </part>
 <part name="GND24" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -20392,8 +20394,8 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="GND19" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="TP13" library="Tova" deviceset="TEST-POINT" device=""/>
 <part name="TP12" library="Tova" deviceset="TEST-POINT" device=""/>
-<part name="C4" library="oresat-rcl" deviceset="C-EU" device="0805-B-NOSILK" value="10u"/>
-<part name="C5" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="1u">
+<part name="C4" library="oresat-rcl" deviceset="C-EU" device="0805-B-NOSILK" value="10uF"/>
+<part name="C5" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="1uF">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-1001-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
@@ -20402,7 +20404,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="GND14" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND13" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND22" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="C8" library="oresat-rcl" deviceset="C-EU" device="0805-B-NOSILK" value="22u"/>
+<part name="C8" library="oresat-rcl" deviceset="C-EU" device="0805-B-NOSILK" value="22uF"/>
 <part name="TP15" library="Tova" deviceset="TEST-POINT" device=""/>
 <part name="R28" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k">
 <attribute name="DIS" value="Digi-Key"/>
@@ -20475,7 +20477,9 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="GND69" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="GND59" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="C30" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="0.1uF"/>
-<part name="FB1" library="SparkFun-Coils" deviceset="FERRITE_BEAD" device="-0603" value="30Ω/1.8A"/>
+<part name="FB1" library="SparkFun-Coils" deviceset="FERRITE_BEAD" device="-0603" value="30Ω/1.8A">
+<attribute name="MPN" value="BLM18KG300JH1D"/>
+</part>
 <part name="GND61" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="C32" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="0.1uF"/>
 <part name="U13" library="U-TI-TPS2051C" deviceset="TPS2051CDBVR" device=""/>
@@ -20484,7 +20488,9 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="GND63" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="C35" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="10uF"/>
 <part name="C36" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="10uF"/>
-<part name="FB2" library="SparkFun-Coils" deviceset="FERRITE_BEAD" device="-0603" value="30Ω/1.8A"/>
+<part name="FB2" library="SparkFun-Coils" deviceset="FERRITE_BEAD" device="-0603" value="30Ω/1.8A">
+<attribute name="MPN" value="BLM18KG300JH1D"/>
+</part>
 <part name="R67" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k"/>
 <part name="R68" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k"/>
 <part name="SUPPLY2" library="SparkFun-PowerSymbols" deviceset="VDD" device=""/>
@@ -20510,7 +20516,9 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="C21" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="1uF"/>
 <part name="C22" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="1uF"/>
 <part name="C23" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="10uF"/>
-<part name="Y1" library="X-ECS-240-12-30BQ-AEN-TR" deviceset="ECS-240-12-30BQ-AEN-TR" device="" value="24MHz"/>
+<part name="Y1" library="X-ECS-240-12-30BQ-AEN-TR" deviceset="ECS-240-12-30BQ-AEN-TR" device="" value="24MHz">
+<attribute name="MPN" value="ECS-240-12-30BQ-AEN-TR"/>
+</part>
 <part name="GND56" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="J2" library="J-Hirose-DM3BT-DSF-PEJS" deviceset="DM3BT-DSF-PEJS" device=""/>
 <part name="C11" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="0.1uF">
@@ -20716,7 +20724,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="J8" library="J-TEConnectivity-X-1734592-X" deviceset="2-1734592-0" device=""/>
 <part name="GND55" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="GND52" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="D3" library="SparkFun-LED" library_urn="urn:adsk.eagle:library:529" deviceset="LED-GREEN" device="0603" package3d_urn="urn:adsk.eagle:package:39354/1" value="GREEN">
+<part name="D3" library="SparkFun-LED" deviceset="LED-GREEN" device="0603" value="GREEN">
 <attribute name="PROD_ID" value=""/>
 </part>
 <part name="GND29" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -20726,7 +20734,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <attribute name="MFR" value="Samsung"/>
 <attribute name="MPN" value="RC1005F6653CS"/>
 </part>
-<part name="J1" library="J-Samtec-TFM-120-X1-XXX-D-RA" deviceset="J-SAMTEC-TFM-120-X1-XXX-D-RA" device="">
+<part name="J1" library="J-Samtec-TFM-120-X1-XXX-D-RA" deviceset="J-SAMTEC-TFM-120-X1-XXX-D-RA" device="" value="TFM-120-01-L-D-RA">
 <attribute name="MFR" value="Samtec"/>
 <attribute name="MPN" value="TFM-120-01-L-D-RA"/>
 </part>
@@ -20736,7 +20744,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <attribute name="MPN" value="MAX7310ATE"/>
 </part>
 <part name="GND9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="C3" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="100n">
+<part name="C3" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="0.1uF">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-1001-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
@@ -20749,9 +20757,9 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <attribute name="MFR" value="Samsung"/>
 <attribute name="MPN" value="RC1005F6653CS"/>
 </part>
-<part name="U3" library="U-Maxim-MAX4211-power-monitor" deviceset="MAX4211" device="" package3d_urn="urn:adsk.eagle:package:8018497/1" value="MAX4211CETE">
+<part name="U3" library="U-Maxim-MAX4211-power-monitor" deviceset="MAX4211" device="" package3d_urn="urn:adsk.eagle:package:8018497/1" value="MAX4211FETE">
 <attribute name="MFR" value="Maxim"/>
-<attribute name="MPN" value="MAX4211CETE"/>
+<attribute name="MPN" value="MAX4211FETE"/>
 </part>
 <part name="GND23" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R15" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="NP">
@@ -20939,7 +20947,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 </part>
 <part name="Q5" library="Tova" deviceset="PMV45EN" device=""/>
 <part name="Q8" library="Tova" deviceset="PMV45EN" device=""/>
-<part name="C6" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="1u">
+<part name="C6" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="1uF">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-1001-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
@@ -20985,13 +20993,13 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 </part>
 <part name="TP14" library="Tova" deviceset="TEST-POINT" device=""/>
 <part name="TP9" library="Tova" deviceset="TEST-POINT" device=""/>
-<part name="R20" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="TBD">
+<part name="R20" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="330k">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
 <attribute name="MPN" value="RC1005F6653CS"/>
 </part>
-<part name="R22" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="TBD">
+<part name="R22" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="1M">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
@@ -21013,20 +21021,14 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <attribute name="MFR" value="Diodes Inc"/>
 <attribute name="MPN" value="DMP2240UDM"/>
 </part>
-<part name="R12" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k">
-<attribute name="DIS" value="Digi-Key"/>
-<attribute name="DPN" value="1276-4275-1-ND"/>
-<attribute name="MFR" value="Samsung"/>
-<attribute name="MPN" value="RC1005F6653CS"/>
-</part>
 <part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R19" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="TBD">
+<part name="R19" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="330k">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
 <attribute name="MPN" value="RC1005F6653CS"/>
 </part>
-<part name="R21" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="TBD">
+<part name="R21" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="1M">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
@@ -21056,9 +21058,11 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="GND75" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="C41" library="oresat-rcl" deviceset="C-EU" device="C1210" value="22uF"/>
 <part name="R75" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="1M, DNI"/>
-<part name="C44" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="18pF"/>
-<part name="C45" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="18pF"/>
-<part name="Y3" library="OSD3358-SM-RED Platform" deviceset="ABS07-32.768KHZ-T" device=""/>
+<part name="C44" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="18pF, 50V"/>
+<part name="C45" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="18pF, 50V"/>
+<part name="Y3" library="OSD3358-SM-RED Platform" deviceset="ABS07-32.768KHZ-T" device="">
+<attribute name="MPN" value="ABS07-32.768KHZ-T"/>
+</part>
 <part name="TP99" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="R63" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k"/>
 <part name="R64" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k"/>
@@ -22104,14 +22108,6 @@ slow I2C</text>
 <attribute name="MFR" x="99.06" y="96.52" size="1.778" layer="96" rot="R90" display="off"/>
 <attribute name="MPN" x="99.06" y="96.52" size="1.778" layer="96" rot="R90" display="off"/>
 </instance>
-<instance part="R12" gate="R" x="96.52" y="76.2" smashed="yes" rot="R90">
-<attribute name="DIS" x="96.52" y="76.2" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="DPN" x="96.52" y="76.2" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="MFR" x="96.52" y="76.2" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="MPN" x="96.52" y="76.2" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="NAME" x="95.25" y="72.39" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="95.25" y="78.74" size="1.778" layer="96" rot="R90"/>
-</instance>
 <instance part="GND4" gate="1" x="96.52" y="66.04" smashed="yes" rot="MR0">
 <attribute name="VALUE" x="99.06" y="63.5" size="1.778" layer="96" rot="MR0"/>
 </instance>
@@ -22277,7 +22273,6 @@ slow I2C</text>
 </segment>
 <segment>
 <wire x1="96.52" y1="68.58" x2="96.52" y2="71.12" width="0.1524" layer="91"/>
-<pinref part="R12" gate="R" pin="1"/>
 <pinref part="GND4" gate="1" pin="GND"/>
 </segment>
 <segment>
@@ -22855,10 +22850,8 @@ slow I2C</text>
 <wire x1="154.94" y1="99.06" x2="160.02" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="160.02" y1="99.06" x2="160.02" y2="81.28" width="0.1524" layer="91"/>
 <wire x1="160.02" y1="81.28" x2="96.52" y2="81.28" width="0.1524" layer="91"/>
-<junction x="96.52" y="81.28"/>
 <junction x="160.02" y="81.28"/>
 <pinref part="Q1" gate=".1" pin="G"/>
-<pinref part="R12" gate="R" pin="2"/>
 <pinref part="TP7" gate="G$1" pin="1"/>
 <pinref part="Q3" gate="G$1" pin="COUT"/>
 </segment>
@@ -25957,6 +25950,7 @@ battery circuit</text>
 </instance>
 <instance part="FB1" gate="G$1" x="139.7" y="78.74" smashed="yes" rot="R90">
 <attribute name="NAME" x="137.795" y="81.28" size="1.778" layer="95" font="vector"/>
+<attribute name="MPN" x="139.7" y="78.74" size="1.778" layer="96" rot="R90" display="off"/>
 </instance>
 <instance part="GND61" gate="1" x="254" y="50.8" smashed="yes" rot="MR0">
 <attribute name="VALUE" x="254" y="50.546" size="1.778" layer="96" rot="MR0" align="top-center"/>
@@ -25988,6 +25982,7 @@ battery circuit</text>
 </instance>
 <instance part="FB2" gate="G$1" x="297.18" y="68.58" smashed="yes" rot="R90">
 <attribute name="NAME" x="295.275" y="71.12" size="1.778" layer="95" font="vector"/>
+<attribute name="MPN" x="297.18" y="68.58" size="1.778" layer="96" rot="R90" display="off"/>
 </instance>
 <instance part="R67" gate="R" x="299.72" y="88.9" smashed="yes" rot="R90">
 <attribute name="NAME" x="298.2214" y="85.09" size="1.778" layer="95" rot="R90"/>
@@ -26063,7 +26058,7 @@ battery circuit</text>
 <attribute name="NAME" x="158.242" y="93.472" size="1.778" layer="95" font="vector" rot="R90"/>
 </instance>
 <instance part="U12" gate="G$1" x="254" y="68.58" smashed="yes" rot="MR0">
-<attribute name="NAME" x="264.16" y="78.74" size="1.27" layer="95" rot="MR0"/>
+<attribute name="NAME" x="259.08" y="78.74" size="1.27" layer="95" rot="MR0"/>
 </instance>
 <instance part="U11" gate="G$1" x="175.26" y="86.36" smashed="yes">
 <attribute name="NAME" x="165.1" y="96.52" size="1.27" layer="95"/>

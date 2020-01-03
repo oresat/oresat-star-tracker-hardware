@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.4.2">
+<eagle version="9.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -2753,7 +2753,7 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <attribute name="NAME" x="19.1875" y="12.375" size="0.3" layer="34" ratio="15" rot="MR270" align="center"/>
 <attribute name="VALUE" x="20.7375" y="13.375" size="0.8" layer="28" font="vector" ratio="15" rot="MR270"/>
 </element>
-<element name="R5" library="oresat-rcl" package=".0402-B-NOSILK" value="10K" x="24" y="6.5" smashed="yes" rot="MR90">
+<element name="R5" library="oresat-rcl" package=".0402-B-NOSILK" value="10k" x="24" y="6.5" smashed="yes" rot="MR90">
 <attribute name="NAME" x="23.8" y="7.5125" size="0.5" layer="26" font="vector" ratio="15" rot="MR90"/>
 <attribute name="NAME" x="24" y="6.5" size="0.2" layer="34" ratio="15" rot="MR90" align="center"/>
 <attribute name="VALUE" x="22.4" y="5.7" size="0.8" layer="28" font="vector" ratio="15" rot="MR90"/>
