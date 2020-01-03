@@ -1,45 +1,49 @@
-from os import listdir, system, environ
-from os.path import isfile, join
+# calibrate.py - main front-end for the star tracker
+# by Umair Khan, from the Portland State Aerospace Society
+# based on OpenStarTracker from Andrew Tennenbaum at the University of Buffalo
+# openstartracker.org
+
+# Imports
+import os
 import cv2
 import numpy as np
 import sys
 from astropy.io import fits
 from scipy import spatial
-import cPickle as pickle
 
 # Exposure time
-try: EXPOSURE_TIME = float(environ['EXPOSURE_TIME'])
+try: EXPOSURE_TIME = float(os.environ['EXPOSURE_TIME'])
 except KeyError: EXPOSURE_TIME = 0.03 # s
 
 # Aperture
-try: APERTURE = float(environ['APERTURE'])
+try: APERTURE = float(os.environ['APERTURE'])
 except KeyError: APERTURE = 60.7 # mm
 
 # Pixels of separation needed to distinguish stars from each other
-try: DOUBLE_STAR_PX = float(environ['DOUBLE_STAR_PX'])
+try: DOUBLE_STAR_PX = float(os.environ['DOUBLE_STAR_PX'])
 except KeyError: DOUBLE_STAR_PX = 3.5
 
 # Check all constellations which fall inside these bounds
 # (increasing this can reduce the probability of finding a match, since the true match has to stand out against a larger crowd)
-try: POS_ERR_SIGMA = float(environ['POS_ERR_SIGMA'])
+try: POS_ERR_SIGMA = float(os.environ['POS_ERR_SIGMA'])
 except KeyError: POS_ERR_SIGMA = 2
 
 # Maximum number of objects that can be brighter than the two brightest stars
 # (multiplies runtime by (N+2)^2)
-try: MAX_FALSE_STARS = int(environ['MAX_FALSE_STARS'])
-except KeyError: MAX_FALSE_STARS = 2 
+try: MAX_FALSE_STARS = int(os.environ['MAX_FALSE_STARS'])
+except KeyError: MAX_FALSE_STARS = 2
 
 # Of the brightest DB_REDUNDANCY + 2 stars, we need at least 2
 # (multiplies runtime by (N+2)^2)
-try: DB_REDUNDANCY = int(environ['DB_REDUNDANCY'])
+try: DB_REDUNDANCY = int(os.environ['DB_REDUNDANCY'])
 except KeyError: DB_REDUNDANCY = 1
 
 # How many stars should be tried to match
 # (multiplies runtime by (N+2)^2)
 # (for ultrawide fov this may be set to 3 for faster matching)
 # (for ultranarrow fov, it may be necessary to set this to 5)
-try: REQUIRED_STARS = int(environ['REQUIRED_STARS'])
-except KeyError: REQUIRED_STARS = 5 
+try: REQUIRED_STARS = int(os.environ['REQUIRED_STARS'])
+except KeyError: REQUIRED_STARS = 5
 
 
 # Utility function
@@ -80,7 +84,7 @@ def getstardb(year = 1991.25, filename = "hip_main.dat"):
 		if (int(fields[29]) == 0 or int(fields[29]) == 1) and f6 != 3:
 			UNRELIABLE = 0
 		else:
-			UNRELIABLE=1
+			UNRELIABLE = 1
 
 		stardb[HIP_ID] = [HIP_ID, MAG, DEC, RA, X, Y, Z, UNRELIABLE]
 
@@ -95,13 +99,19 @@ def basename(filename):
 # only do this part if we were run as a python script
 if __name__ == '__main__':
 
+	# Remove old calibration data
+	print("\nClearing old calibration data:")
+	os.system("rm -rfv datasets/" + sys.argv[1] + "/calibration.txt")
+	os.system("rm -rfv datasets/" + sys.argv[1] + "/median_image.png")
+	os.system("rm -rfv datasets/" + sys.argv[1] + "/calibration_data/*")
+
 	# Get images and generate median image
-	samplepath = sys.argv[1] + "/samples"
-	image_names = [ f for f in listdir(samplepath) if isfile(join(samplepath, f)) ]
+	samplepath = "datasets/" + sys.argv[1] + "/samples"
+	image_names = [ f for f in os.listdir(samplepath) if os.path.isfile(os.path.join(samplepath, f)) ]
 	num_images = len(image_names)
-	images = np.asarray([cv2.imread( join(samplepath,image_names[n]) ).astype(float) for n in range(0, num_images)])
-	median_image = np.median(images, axis=0)
-	cv2.imwrite(sys.argv[1] + "/median_image.png", median_image)
+	images = np.asarray([cv2.imread( os.path.join(samplepath,image_names[n]) ).astype(float) for n in range(0, num_images)])
+	median_image = np.median(images, axis = 0)
+	cv2.imwrite("datasets/" + sys.argv[1] + "/median_image.png", median_image)
 
 	# Determine if downsampling is required
 	append = ""
@@ -110,53 +120,41 @@ if __name__ == '__main__':
 	else:
 		append = " --sigma 3"
 
-
-	# Remove old calibration data
-	print "\nClearing old calibration data:"
-	system("rm -rfv " + sys.argv[1] + "/calibration_data/* ")
-		
-	# Load or create the star database
+	# Load the star database
 	stardb = {}
-
-	if isfile("stardb.p"):
-		print "\nLoading database from pickle"
-		stardb = pickle.load(open("stardb.p", "rb"))
-	else:
-		print "\nGenerating database"
-		stardb = getstardb()
-		pickle.dump(stardb, open("stardb.p", "wb"))
-	
+	print("\nLoading database...")
+	stardb = getstardb()
 	astrometry_results = {}
 
 	# filter the background image for astrometry - more important for starfield generator
 	for n in range(0, num_images):
 
 		images[n] -= median_image
-		image_name = sys.argv[1] + "/calibration_data/" + basename(image_names[n]) + ".png"
+		image_name = "datasets/" + sys.argv[1] + "/calibration_data/" + basename(image_names[n]) + ".png"
 		img = np.clip(images[n], a_min = 0, a_max = 255).astype(np.uint8)
 		cv2.imwrite(image_name, img)
 
 		solve_cmd = "solve-field --skip-solved --no-plots" + append + " --cpulimit 60 " + image_name
-		print solve_cmd
-		system(solve_cmd)
+		print(solve_cmd)
+		os.system(solve_cmd)
 
-		if isfile(basename(image_name)+'.wcs'):
-			print 'wcsinfo ' + basename(image_name) + '.wcs  | tr [:lower:] [:upper:] | tr " " "=" | grep "=[0-9.-]*$" > ' + basename(image_name) + '.solved'
-			system('wcsinfo ' + basename(image_name) + '.wcs  | tr [:lower:] [:upper:] | tr " " "=" | grep "=[0-9.-]*$" > ' + basename(image_name) + '.solved')
+		if os.path.isfile(basename(image_name)+'.wcs'):
+			print('wcsinfo ' + basename(image_name) + '.wcs  | tr [:lower:] [:upper:] | tr " " "=" | grep "=[0-9.-]*$" > ' + basename(image_name) + '.solved')
+			os.system('wcsinfo ' + basename(image_name) + '.wcs  | tr [:lower:] [:upper:] | tr " " "=" | grep "=[0-9.-]*$" > ' + basename(image_name) + '.solved')
 			hdulist = fits.open(basename(image_name) + ".corr")
 			astrometry_results[image_names[n]] = np.array([[i['flux'], i['field_x'], i['field_y'], i['index_x'], i['index_y']] + angles2xyz(i['index_ra'], i['index_dec']) for i in hdulist[1].data])
-		
-	
-	# Use only values below the median for variance calculation. 
+
+
+	# Use only values below the median for variance calculation.
 	# (This is equivalent to calculating variance after having filtered out stars and background light.)
 	THRESH_FACTOR = 5
 	IMAGE_VARIANCE = np.ma.average(images ** 2, weights = images < 0)
-	
+
 	bestimage = ""
 	maxstars = 0
 
 	# for stars over 5 * IMAGE_VARIANCE, find the corresponding star in the db
-	sd = np.array(stardb.values(), dtype = object)
+	sd = np.array(list(stardb.values()), dtype = object)
 	star_kd = spatial.cKDTree(sd[:,4:7])
 
 	for i in astrometry_results:
@@ -168,7 +166,7 @@ if __name__ == '__main__':
 			bestimage = i
 			maxstars = len(astrometry_results[i])
 
-	astrometry_results_all = np.vstack(np.array(astrometry_results.values()))
+	astrometry_results_all = np.vstack(list(astrometry_results.values()))
 	astrometry_results_all = astrometry_results_all.astype('float')
 	
 	# find the dimmest star
@@ -181,11 +179,12 @@ if __name__ == '__main__':
 	
 	POS_VARIANCE = np.mean(db_img_dist)
 	
-	execfile(sys.argv[1] + "/calibration_data/" + basename(bestimage) + ".solved")
+	filename = "datasets/" + sys.argv[1] + "/calibration_data/" + basename(bestimage) + ".solved"
+	exec(compile(open(filename, "rb").read(), filename, 'exec'))
 	
-	f_calib = open(sys.argv[1] + "/calibration.txt", 'w')
+	f_calib = open("datasets/" + sys.argv[1] + "/calibration.txt", 'w')
 	f_calib.write("IMG_X=" + str(IMAGEW) + "\n")
-	f_calib.write("IMG_Y= " + str(IMAGEH) + "\n")
+	f_calib.write("IMG_Y=" + str(IMAGEH) + "\n")
 	f_calib.write("PIXSCALE=" + str(PIXSCALE) + "\n")
 	f_calib.write("DB_REDUNDANCY=" + str(DB_REDUNDANCY) + "\n")
 	f_calib.write("DOUBLE_STAR_PX=" + str(DOUBLE_STAR_PX) + "\n")
@@ -200,6 +199,5 @@ if __name__ == '__main__':
 	f_calib.write("EXPOSURE_TIME=" + str(EXPOSURE_TIME) + "\n")
 	f_calib.close()
 	
-	print "Calibration finished"
-	print "calibration.txt and median_image.png are in " + sys.argv[1] + "\n"
-	system("cat " + sys.argv[1] + "/calibration.txt")
+	print("Calibration finished, calibration.txt and median_image.png are in datasets/" + sys.argv[1] + "\n")
+	os.system("cat datasets/" + sys.argv[1] + "/calibration.txt")
