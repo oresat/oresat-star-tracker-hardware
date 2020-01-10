@@ -4,14 +4,15 @@
 # openstartracker.org
 
 # Imports
-from time import time
 import sys
 import os
+import time
+import threading
+import numpy as np
 import cv2
 from pydbus.generic import signal
 from pydbus import SystemBus
 from gi.repository import GLib
-import numpy as np
 import beast
 
 
@@ -25,7 +26,7 @@ P_MATCH_THRESH = 0.99
 CONFIGFILE = sys.argv[1]
 YEAR = float(sys.argv[2])
 MEDIAN_IMAGE = cv2.imread(sys.argv[3])
-b_conf = [time(), beast.cvar.PIXSCALE, beast.cvar.BASE_FLUX]
+b_conf = [time.time(), beast.cvar.PIXSCALE, beast.cvar.BASE_FLUX]
 
 # Prepare star tracker
 print("\nLoading config")
@@ -68,13 +69,7 @@ class Server_XML(object):
                 <arg type='s' name='filepath' direction='in' />
                 <arg type='b' name='status' direction='out' />
             </method>
-            <signal name='file_error'>
-                <arg type='s' />
-            </signal>
-            <signal name='image_error'>
-                <arg type='s' />
-            </signal>
-            <signal name='solve_error'>
+            <signal name='error'>
                 <arg type='s' />
             </signal>
             <property name='DEC' type='d' access='read' />
@@ -85,63 +80,88 @@ class Server_XML(object):
     </node>
     """
 
-    # Initialize properties
+    # Initialize properties and worker thread
     def __init__(self):
+
+        # Properties
         self.dec = 0.0
         self.ra = 0.0
         self.ori = 0.0
+        self.solve_file = ""
+
+        # Set up worker thread
+        self.lock = threading.Lock()
+        self.running = True
+        self.worker = threading.Thread(target = self.worker_thread)
+
+        # Start worker thread
+        self.worker.start()
+
 
     # D-Bus method to solve image
     def solve_image(self, filepath):
-        print("\nSolving {}".format(filepath))
-        self.dec, self.ra, self.ori = solve(filepath)
-        print("DEC: {}".format(self.dec))
-        print("RA: {}".format(self.ra))
-        print("ORI: {}".format(self.ori))
+        self.lock.acquire()
+        self.solve_file = filepath
+        self.lock.release()
         return True
 
-    # Signals
-    file_error = signal()
-    image_error = signal()
-    solve_error = signal()
+    # Worker thread
+    def worker_thread(self):
+        while(self.running):
+            if self.solve_file != "":
+                self.lock.acquire()
+                print("\nSolving {}".format(self.solve_file))
+                self.dec, self.ra, self.ori = solve(self.solve_file)
+                print("DEC: {}".format(self.dec))
+                print("RA: {}".format(self.ra))
+                print("ORI: {}".format(self.ori))
+                self.solve_file = ""
+                self.lock.release()
 
-    # Declination
-    @property
-    def DEC(self):
-        return self.dec
-
-    # Right ascension
-    @property
-    def RA(self):
-        return self.ra
-
-    # Orientation
-    @property
-    def ORI(self):
-        return self.ori
+    # Stop threads in preparation to exit
+    def end(self):
+        self.running = False
+        if self.worker.is_alive():
+            self.worker.join()
 
     # Method to quit
     def Quit(self):
         loop.quit()
+        self.end()
+
+    # Signals
+    error = signal()
+
+    # Declination
+    @property
+    def DEC(self):
+        self.lock.acquire()
+        return self.dec
+        self.lock.release()
+
+    # Right ascension
+    @property
+    def RA(self):
+        self.lock.acquire()
+        return self.ra
+        self.lock.release()
+
+    # Orientation
+    @property
+    def ORI(self):
+        self.lock.acquire()
+        return self.ori
+        self.lock.release()
 
 
 # Create object
 emit = Server_XML()
+bus.publish(INTERFACE_NAME, emit)
 
-# Function to send filepath error
-def send_file_error(error):
-    emit.file_error(error)
-    print("Sent filepath error: {}".format(error))
-
-# Function to send image error
-def send_image_error(error):
-    emit.image_error(error)
-    print("Sent image error: {}".format(error))
-
-# Function to send solution error
-def send_solve_error(error):
-    emit.solve_error(error)
-    print("Sent solution error: {}".format(error))
+# Function to send error
+def send_error(error):
+    emit.error(error)
+    print("Sent error: {}".format(error))
 
 
 
@@ -169,12 +189,12 @@ def check_image(img):
     if threshold_black > blur_check:
         blur = cv2.Laplacian(img, cv2.CV_64F).var()
         if blur != 0 and blur < 5:
-            send_image_error("too blurry")
+            send_error("image too blurry")
         else:
-            send_image_error("too few stars")
+            send_error("image contains too few stars")
         return 0
     elif threshold_black < too_many_check:
-        send_image_error("unsuitable image")
+        send_error("unsuitable image")
         return 0
 
     return 1
@@ -184,7 +204,7 @@ def check_image(img):
 def solve(filepath):
 
     # Keep track of solution time
-    starttime = time()
+    starttime = time.time()
 
     # Create and initialize variables
     img_stars = beast.star_db()
@@ -194,14 +214,14 @@ def solve(filepath):
     # Load the image
     orig_img = cv2.imread(filepath)
     if type(orig_img) == type(None):
-        send_file_error(filepath)
+        send_error("could not open image at {}".format("filepath"))
         return 0, 0, 0
 
     # Check the image to see if it is fit for processing
     result = check_image(orig_img)
     if result == 0:
         print("Image unfit for processing")
-        print("Time: {}".format(time() - starttime))
+        print("Time: {}".format(time.time() - starttime))
         return 0, 0, 0
 
     # Process the image for solving
@@ -273,12 +293,12 @@ def solve(filepath):
         # - ori         - rotation about the camera axis
 
     else:
-        send_solve_error("no match found")
-        print("Time: {}".format(time() - starttime))
+        send_error("no match found")
+        print("Time: {}".format(time.time() - starttime))
         return 0, 0, 0
 
     # Calculate how long it took to process
-    print("Time: {}".format(time() - starttime))
+    print("Time: {}".format(time.time() - starttime))
 
     # Return solution
     return dec, ra, ori
@@ -289,13 +309,11 @@ def solve(filepath):
 #          D-BUS SERVER
 # --------------------------------
 
-# Set up server based on XML
-bus.publish(INTERFACE_NAME, emit)
-
 # Run loop with graceful exiting
 try:
     print("\nStarting D-Bus loop...")
     loop.run()
 except KeyboardInterrupt as e:
     loop.quit()
+    emit.end()
     print("\nExit by Ctrl-C\n")
