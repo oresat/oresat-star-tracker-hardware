@@ -101,13 +101,14 @@ class Server_XML(object):
     # D-Bus method to solve image
     def solve_image(self, filepath):
         self.lock.acquire()
+        print("\nReceived request for {}".format(filepath))
         self.solve_file = filepath
         self.lock.release()
         return True
 
     # Worker thread
     def worker_thread(self):
-        while(self.running):
+        while (self.running):
             if self.solve_file != "":
                 self.lock.acquire()
                 print("\nSolving {}".format(self.solve_file))
