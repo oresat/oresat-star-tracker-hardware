@@ -1,0 +1,71 @@
+#######################
+#### Enabling eMMC ####
+#######################
+
+# build the needed eMMC device tree file
+$ cd/opt/source/bb.org-overlays
+$ make
+...
+
+# copy the device tree file to /lib/firmware
+$ cp /src/arm/BB-BONE-eMMC1-01-00A0.dtbo /lib/firmware
+
+# add the below line to your /boot/uEnv.txt file
+uboot_overlay_addr4=/lib/firmware/BB-BONE-eMMC1-01-00A0.dtbo
+
+# reboot and you should see mmcblk1 in /dev
+
+#######################
+#### Flashing eMMC ####
+#######################
+
+# grow the sd card partition so we have room to download the image
+$ cd /opt/scripts/tools
+$ sudo ./grow_partition.sh
+$ sudo reboot
+
+# download the latest image, this might take a while
+$ curl -O https://debian.beagleboard.org/images/bone-debian-9.9-iot-armhf-2019-08-03-4gb.img.xz
+
+# if you don't have internet on the board, download it 
+# to your computer and scp it onto the board
+
+# be root
+$ sudo su
+
+# dd the image onto the eMMC. This could take 
+# a while, it took me 5~10 minutes
+$ sudo xzcat bone-debian-9.9-iot-armhf-2019-08-03-4gb.img.xz | dd of=/dev/mmcblk1 bs=1M
+
+############################
+#### Make eMMC Bootable ####
+############################
+
+# the eMMC is now flashed, but we still have a few steps before it will boot Debian.
+# recall before when we have to add the dtbo to /lib/firmware and modify the uEnv.txt
+# file in order to enable the eMMC. Well, if we tried to boot the eMMC right now, it 
+# would boot into uBoot, but would not boot Debian because uBoot would not enable the
+# eMMC for linux and thus there would be not roots. So, we need to add that device tree
+# to the system on the eMMC and tell it to use it.
+
+# mount the eMMC
+$ sudo mount /dev/mmcblk1p1 /mnt
+
+# copy the dtbo onto the eMMC system
+$ cp /lib/firmware/BB-BONE-eMMC1-01-00A0.dtbo /mnt/lib/firmware/BB-BONE-eMMC1-01-00A0.dtbo
+
+# add the below line to the eMMC system uEnv.txt file (/mnt/boot/uEnv.txt)
+uboot_overlay_addr4=/lib/firmware/BB-BONE-eMMC1-01-00A0.dtbo
+
+# unmount the eMMC
+$ sudo umount /mnt
+
+# shutdown
+$ sudo shutdown -h now
+
+# unplug the micro SD card
+# switch the sys boot jumpers to boot from the eMMC(mmc1)
+# to boot from the SD card, the should be sysboot[4:0] == 0b11000
+# to boot from the eMMC, they should be sysboot[4:0] == 0b11100
+
+# cycle power and it should boot into Debian on the eMMC

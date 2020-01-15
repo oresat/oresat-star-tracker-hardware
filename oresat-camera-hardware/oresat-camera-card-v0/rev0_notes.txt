@@ -8,3 +8,7 @@
 - D1 should user amber LED part, not green
 - 10uF 0603 should be 0805
 - in attributes, note part numbers for different temperature grades for ICs, like CLVCH16T245MDGGREP vs 74LVCH16T245DGGRE4
+- swap tx and rx on UART header
+- fix resistor on MIC842
+- separate C38 and C37
+- fake label text bigger
