@@ -5,6 +5,7 @@
 #include <linux/kernel.h>         // Contains types, macros, functions for the kernel
 #include <linux/fs.h>             // Header for the Linux file system support
 #include <linux/uaccess.h>          // Required for the copy to user function
+#include <linux/gpio.h>           // required for GPIO access
 #include <linux/dma-mapping.h>
 #include <linux/interrupt.h>
 #include <linux/platform_device.h>
@@ -280,6 +281,19 @@ static int __init prucam_init(void){
     }
 
     init_camera_regs();
+
+    //GPIO stuff
+    printk(KERN_INFO "GPIO START\n");
+#define GPIO 23
+    int ret; 
+    ret = gpio_request(GPIO, "cam GPIO"); //request P2_03
+    printk(KERN_INFO "request: %d\n", ret);
+
+    ret = gpio_direction_output(GPIO, 0);
+    printk(KERN_INFO "dir: %d\n", ret);
+
+    gpio_set_value(GPIO, 0);
+    printk(KERN_INFO "GPIO DONE\n");
 
     return 0;
 }

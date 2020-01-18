@@ -9,8 +9,19 @@ Linux beaglebone 4.14.71-ti-r80 #1 SMP PREEMPT Fri Oct 5 23:50:11 UTC 2018 armv7
 - build and deploy device-tree overlay
 ```
 $ cd kernel_module
-$ make overlay
-$ make deploy_overlay
+
+# copy the device tree overlay to /opt/source/bb.org-overlays/src/arm/
+$ cp prudev-00A0.dts /opt/source/bb.org-overlays/src/arm/
+
+# build the overlay with the other over default overlays
+# the only reason we have to do this is that their Makefile
+# already has the right build environment setup with the
+# libraries we need. 
+$ cd /opt/source/bb.org-overlays/
+$ make # this might take a few minutes
+
+# deploy the overlay
+cp /opt/source/bb.org-overlays/src/arm/prudev-00A0.dtbo /lib/firmware
 ```
 
 - add this line to you /boot/uEnv.txt file
