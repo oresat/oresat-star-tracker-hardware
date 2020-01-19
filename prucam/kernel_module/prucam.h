@@ -10,7 +10,8 @@
 #include <linux/platform_device.h>
 #include <linux/i2c.h>
 #include <linux/delay.h>
-#include "regs_kern2.h" //TODO change name
+//#include "regs_kern3.h"
+#include "ar0130_ctrl_regs.h"
 
 #define DEVICE_NAME "prucam"    ///< The device will appear at /dev/prucam using this value
 #define CLASS_NAME  "pru"        ///< The device class -- this is a character device driver
@@ -115,4 +116,4 @@ gpio gpio_vreg_en = {
   .label = "vreg_en"
 };
 
-  
+
