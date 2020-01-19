@@ -45,7 +45,7 @@
         compatible = "gpio-of-helper";
         status = "okay";
         pinctrl-names = "default";
-        pinctrl-0 = <>;
+        pinctrl-0 = <&camera_pins>; /* this must point to pinmux name below */
 
         custom1 {
           gpio-name = "custom_pin1";

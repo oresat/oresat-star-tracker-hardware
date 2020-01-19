@@ -284,15 +284,15 @@ static int __init prucam_init(void){
 
     //GPIO stuff
     printk(KERN_INFO "GPIO START\n");
-#define GPIO 23
+#define GPIO 106 // GPIO3_10
     int ret; 
-    ret = gpio_request(GPIO, "cam GPIO"); //request P2_03
+    ret = gpio_request(GPIO, "cam GPIO"); 
     printk(KERN_INFO "request: %d\n", ret);
 
-    ret = gpio_direction_output(GPIO, 0);
+    ret = gpio_direction_output(GPIO, 1);
     printk(KERN_INFO "dir: %d\n", ret);
 
-    gpio_set_value(GPIO, 0);
+    gpio_set_value(GPIO, 1);
     printk(KERN_INFO "GPIO DONE\n");
 
     return 0;
