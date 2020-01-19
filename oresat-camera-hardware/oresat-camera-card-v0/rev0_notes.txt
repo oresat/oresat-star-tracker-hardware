@@ -12,3 +12,7 @@
 - fix resistor on MIC842
 - separate C38 and C37
 - fake label text bigger
+- RC circuit on camera reset, see AR0130 datasheet, pg. 14
+- perhaps optional pullups on camera control lines
+- usb lines too close to C37
+- this USB ribbon cable is giving me issues, maybe use other type of connector
