@@ -47,9 +47,63 @@
         pinctrl-names = "default";
         pinctrl-0 = <&camera_pins>; /* this must point to pinmux name below */
 
-        custom1 {
-          gpio-name = "custom_pin1";
-          gpio = <&gpio3 10 0>;
+        flash {
+          gpio-name = "flash"; 
+          gpio = <&gpio0 16 0>; /* mii1_txd3 */
+          input;
+          dir-changeable;
+        };
+        bus_oe {
+          gpio-name = "bus_oe";
+          gpio = <&gpio3 1 0>; /* mii1_crs */
+          input;
+          dir-changeable;
+        };
+        cam_oe {
+          gpio-name = "cam_oe";
+          gpio = <&gpio3 0 0>; /* mii1_col */
+          input;
+          dir-changeable;
+        };
+        clk_en {
+          gpio-name = "clk_en"; 
+          gpio = <&gpio3 10 0>; /* mii1_rx_clk */
+          input;
+          dir-changeable;
+        };
+        input_en {
+          gpio-name = "input_en";
+          gpio = <&gpio2 21 0>; /* mii1_rxd0 */
+          input;
+          dir-changeable;
+        };
+        reset {
+          gpio-name = "reset";
+          gpio = <&gpio2 20 0>; /* mii1_rxd1 */
+          input;
+          dir-changeable;
+        };
+        saddr {
+          gpio-name = "saddr";
+          gpio = <&gpio2 19 0>; /* mii1_rxd2 */
+          input;
+          dir-changeable;
+        };
+        standby {
+          gpio-name = "standby";
+          gpio = <&gpio2 18 0>; /* mii1_rxd3 */
+          input;
+          dir-changeable;
+        };
+        trigger {
+          gpio-name = "trigger";
+          gpio = <&gpio3 2 0>; /* mii1_rx_er */
+          input;
+          dir-changeable;
+        };
+        vreg_en {
+          gpio-name = "vreg_en";
+          gpio = <&gpio3 4 0>; /* mii1_rx_dv */
           input;
           dir-changeable;
         };
@@ -58,12 +112,23 @@
   };
   // overlay to enable camera GPIO pinmux.
   // TODO we should combine this with above
+  // TODO not sure I need INPUT_EN, but it works with it?
   fragment@2 {
     target = <&am33xx_pinmux>;
     __overlay__ {
 
-camera_pins: camera_pins { pinctrl-single,pins = <
-                     AM33XX_IOPAD(AM335X_PIN_MII1_RX_CLK, PIN_OUTPUT_PULLDOWN | INPUT_EN | MUX_MODE7) >; }; /* mii1_rx_clk */
+      camera_pins: camera_pins { pinctrl-single,pins = <
+                     AM33XX_IOPAD(AM335X_PIN_MII1_TXD3, PIN_OUTPUT_PULLDOWN | INPUT_EN | MUX_MODE7)  /* mii1_txd3 == flash */
+                     AM33XX_IOPAD(AM335X_PIN_MII1_CRS, PIN_OUTPUT_PULLDOWN | INPUT_EN | MUX_MODE7)  /* mii1_crs == bus_oe */
+                     AM33XX_IOPAD(AM335X_PIN_MII1_COL, PIN_OUTPUT_PULLDOWN | INPUT_EN | MUX_MODE7)  /* mii1_col == cam_oe */
+                     AM33XX_IOPAD(AM335X_PIN_MII1_RX_CLK, PIN_OUTPUT_PULLDOWN | INPUT_EN | MUX_MODE7)  /* mii1_rx_clk == clk_en */
+                     AM33XX_IOPAD(AM335X_PIN_MII1_RXD0, PIN_OUTPUT_PULLDOWN | INPUT_EN | MUX_MODE7)  /* mii1_rxd0 == input_en */
+                     AM33XX_IOPAD(AM335X_PIN_MII1_RXD1, PIN_OUTPUT_PULLDOWN | INPUT_EN | MUX_MODE7)  /* mii1_rxd1 == reset */
+                     AM33XX_IOPAD(AM335X_PIN_MII1_RXD2, PIN_OUTPUT_PULLDOWN | INPUT_EN | MUX_MODE7)  /* mii1_rxd2 == saddr */
+                     AM33XX_IOPAD(AM335X_PIN_MII1_RXD3, PIN_OUTPUT_PULLDOWN | INPUT_EN | MUX_MODE7)  /* mii1_rxd3 == standby */
+                     AM33XX_IOPAD(AM335X_PIN_MII1_RX_ER, PIN_OUTPUT_PULLDOWN | INPUT_EN | MUX_MODE7)  /* mii1_rx_er == trigger */
+                     AM33XX_IOPAD(AM335X_PIN_MII1_RX_DV, PIN_OUTPUT_PULLDOWN | INPUT_EN | MUX_MODE7)  /* mii1_rx_dv == vreg_en */
+      >; };
     };
   };
 };
