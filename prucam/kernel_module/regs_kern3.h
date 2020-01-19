@@ -3,6 +3,11 @@
  * Define all sets of constant register sets here i.e.
  * startup register, sleep registers, etc.
  */
+typedef struct
+{
+  uint16_t reg;
+  uint16_t val;
+}camReg;
 
 camReg startupRegs[] = {
   {.reg = 0x301A, .val = 0x0001}, //RESET
