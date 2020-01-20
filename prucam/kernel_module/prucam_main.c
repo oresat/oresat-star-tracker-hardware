@@ -279,7 +279,8 @@ static void __exit prucam_exit(void){
 
   i2c_unregister_device(client);
 
-  // TODO disable camera
+  // put camera GPIO in good state and free the lines
+  free_cam_gpio();
 
   printk(KERN_INFO "prucam: module exit\n");
 }

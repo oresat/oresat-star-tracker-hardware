@@ -1,6 +1,7 @@
 #include <linux/module.h> // needed for LKM macros and such
 #include <linux/kernel.h>         // Contains types, macros, functions for the kernel
 #include <linux/gpio.h>   
+#include <linux/delay.h>
 
 // Module license, without this many funcs can't be used
 MODULE_LICENSE("GPL");
@@ -19,6 +20,7 @@ MODULE_LICENSE("GPL");
 
 int init_cam_gpio(void);
 void camera_enable(void); 
+int free_cam_gpio(void);
 
 typedef struct {
   uint8_t num;

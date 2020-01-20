@@ -139,7 +139,7 @@ camReg startupRegs[] = {
 
   // TODO pick up here, ini file line 449, looks like there is some reset stuff
 
-  {.reg = 0x3012, .val = 0x0060}, // COARSE_INTEGRATION_TIME
+  {.reg = 0x3012, .val = 0x00c0}, // COARSE_INTEGRATION_TIME
   {.reg = 0x3032, .val = 0x0000}, // DIGITAL_BINNING
   {.reg = 0x3002, .val = 0x0002}, // Y_ADDR_START = 2
   {.reg = 0x3004, .val = 0x0000}, // X_ADDR_START = 0
@@ -152,10 +152,10 @@ camReg startupRegs[] = {
 
   //Clock settings
   //these clock settings make 12.5MHz
-  {.reg = 0x3030, .val = 0x0048}, // PLL_MULTIPLIER
+  {.reg = 0x3030, .val = 0x0096}, // PLL_MULTIPLIER
   {.reg = 0x302E, .val = 0x0009}, // PRE_PLL_CLK_DIV
-  {.reg = 0x302C, .val = 0x000A}, // VT_SYS_CLK_DIV was 0x0C
-  {.reg = 0x302A, .val = 0x0006}, // VT_PIX_CLK_DIV was 0x0A
+  {.reg = 0x302C, .val = 0x0006}, // VT_SYS_CLK_DIV was 0x0C
+  {.reg = 0x302A, .val = 0x0004}, // VT_PIX_CLK_DIV was 0x0A
   {.reg = 0x0000, .val = 1}, // delay
 
   {.reg = 0x30B0, .val = 0x1300}, // DIGITAL_TEST
