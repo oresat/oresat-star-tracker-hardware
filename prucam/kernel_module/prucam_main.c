@@ -1,9 +1,5 @@
-#include "prucam.h"
+#include "prucam_main.h"
 
-MODULE_LICENSE("GPL");            ///< The license type -- this affects available functionality
-MODULE_AUTHOR("Oliver Rew");    ///< The author -- visible when you use modinfo
-MODULE_DESCRIPTION("write this");  ///< The description -- see modinfo
-MODULE_VERSION("0.1");            ///< A version number to inform users
 
 static int    majorNumber;                  ///< Stores the device number -- determined automatically
 static struct class*  prucamClass  = NULL; ///< The device-driver class struct pointer
@@ -86,71 +82,6 @@ irq_info irqs[8] = {
   {"27", -1}
 };
 
-int init_gpio(void){
-  int r, num; 
-  bool init;
-  char* label;
-  printk(KERN_INFO "GPIO START\n");
-
-  // create array with all the outputs we need to initialize
-  gpio* cam_ctrl_gpio[] = {
-    &gpio_bus_oe,
-    &gpio_cam_oe,
-    &gpio_clk_en,
-    &gpio_input_en,
-    &gpio_reset,
-    &gpio_saddr,
-    &gpio_standby,
-    &gpio_trigger,
-    &gpio_vreg_en,
-    NULL // terminate array will null 
-  };
-
-  // loop through and initialize each gpio
-  for(int i = 0 ;; i++) {
-
-    // stop when entry is NULL
-    if(cam_ctrl_gpio[i] == (gpio*)NULL)
-      return 0;
-
-    // get vals from current gpio
-    num = cam_ctrl_gpio[i]->num;
-    label = cam_ctrl_gpio[i]->label;
-    init = cam_ctrl_gpio[i]->init;
-
-    // request gpio
-    if((r = gpio_request(num, label))) {
-      printk(KERN_ERR "error requesting gpio %d '%s'\n", num, label);
-      return r ;
-    }
-
-    // set gpio tp output with initial value
-    if((r = gpio_direction_output(num, init))) {
-      printk(KERN_ERR "error setting gpio %d '%s' as output\n", num, label);
-      return r; 
-    }
-  }
-
-  return 0;
-
-/*
-     gpio_set_value(GPIO, 1);
-     printk(KERN_INFO "GPIO DONE\n");
-     */
-}
-
-void camera_enable(void) {
-  gpio_set_value(gpio_vreg_en.num, gpio_vreg_en.enable);
-  // TODO should maybe delay here
-  gpio_set_value(gpio_reset.num, !gpio_reset.enable); // disable reset
-  gpio_set_value(gpio_standby.num, !gpio_standby.enable); // disable standby
-  gpio_set_value(gpio_clk_en.num, gpio_clk_en.enable);
-
-  gpio_set_value(gpio_input_en.num, gpio_input_en.enable);
-  gpio_set_value(gpio_cam_oe.num, gpio_cam_oe.enable);
-  gpio_set_value(gpio_bus_oe.num, gpio_bus_oe.enable);
-}
-
 int init_camera_regs(void){
   for(int i = 0 ; ; i++){
     camReg reg = startupRegs[i];
@@ -160,7 +91,6 @@ int init_camera_regs(void){
       break;
     }
 
-
     //if reg == 0, then we delay val milliseconds
     if(reg.reg == 0) {
       //delay is more wasteful than sleep, but the resultant traffic is
@@ -169,7 +99,6 @@ int init_camera_regs(void){
       //msleep(reg.val);
       continue;
     }
-
 
     int ret = write_cam_reg(reg.reg, reg.val);
     if(ret < 0) {
@@ -323,7 +252,7 @@ static int __init prucam_init(void){
   }
 
   // init the camera control GPIO
-  if((r = init_gpio())) 
+  if((r = init_cam_gpio())) 
     return r;
 
   camera_enable();
@@ -343,13 +272,14 @@ static void __exit prucam_exit(void){
   //unregister platform driver
   platform_driver_unregister(&prudrvr);
 
-
   device_destroy(prucamClass, MKDEV(majorNumber, 0));     // remove the device
   class_unregister(prucamClass);                          // unregister the device class
   class_destroy(prucamClass);                             // remove the device class
   unregister_chrdev(majorNumber, DEVICE_NAME);            // unregister the major number
 
   i2c_unregister_device(client);
+
+  // TODO disable camera
 
   printk(KERN_INFO "prucam: module exit\n");
 }

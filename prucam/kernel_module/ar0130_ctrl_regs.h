@@ -139,7 +139,7 @@ camReg startupRegs[] = {
 
   // TODO pick up here, ini file line 449, looks like there is some reset stuff
 
-  {.reg = 0x3012, .val = 0x00a0}, // COARSE_INTEGRATION_TIME
+  {.reg = 0x3012, .val = 0x0060}, // COARSE_INTEGRATION_TIME
   {.reg = 0x3032, .val = 0x0000}, // DIGITAL_BINNING
   {.reg = 0x3002, .val = 0x0002}, // Y_ADDR_START = 2
   {.reg = 0x3004, .val = 0x0000}, // X_ADDR_START = 0
