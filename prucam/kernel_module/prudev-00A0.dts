@@ -118,16 +118,16 @@
     __overlay__ {
 
       camera_pins: camera_pins { pinctrl-single,pins = <
-                     AM33XX_IOPAD(AM335X_PIN_MII1_TXD3, PIN_OUTPUT_PULLDOWN | INPUT_EN | MUX_MODE7)  /* mii1_txd3 == flash */
-                     AM33XX_IOPAD(AM335X_PIN_MII1_CRS, PIN_OUTPUT_PULLDOWN | INPUT_EN | MUX_MODE7)  /* mii1_crs == bus_oe */
-                     AM33XX_IOPAD(AM335X_PIN_MII1_COL, PIN_OUTPUT_PULLDOWN | INPUT_EN | MUX_MODE7)  /* mii1_col == cam_oe */
-                     AM33XX_IOPAD(AM335X_PIN_MII1_RX_CLK, PIN_OUTPUT_PULLDOWN | INPUT_EN | MUX_MODE7)  /* mii1_rx_clk == clk_en */
-                     AM33XX_IOPAD(AM335X_PIN_MII1_RXD0, PIN_OUTPUT_PULLDOWN | INPUT_EN | MUX_MODE7)  /* mii1_rxd0 == input_en */
-                     AM33XX_IOPAD(AM335X_PIN_MII1_RXD1, PIN_OUTPUT_PULLDOWN | INPUT_EN | MUX_MODE7)  /* mii1_rxd1 == reset */
-                     AM33XX_IOPAD(AM335X_PIN_MII1_RXD2, PIN_OUTPUT_PULLDOWN | INPUT_EN | MUX_MODE7)  /* mii1_rxd2 == saddr */
-                     AM33XX_IOPAD(AM335X_PIN_MII1_RXD3, PIN_OUTPUT_PULLDOWN | INPUT_EN | MUX_MODE7)  /* mii1_rxd3 == standby */
-                     AM33XX_IOPAD(AM335X_PIN_MII1_RX_ER, PIN_OUTPUT_PULLDOWN | INPUT_EN | MUX_MODE7)  /* mii1_rx_er == trigger */
-                     AM33XX_IOPAD(AM335X_PIN_MII1_RX_DV, PIN_OUTPUT_PULLDOWN | INPUT_EN | MUX_MODE7)  /* mii1_rx_dv == vreg_en */
+                     AM33XX_IOPAD(AM335X_PIN_MII1_TXD3, PIN_OUTPUT | INPUT_EN | MUX_MODE7)  /* mii1_txd3 == flash */
+                     AM33XX_IOPAD(AM335X_PIN_MII1_CRS, PIN_OUTPUT | INPUT_EN | MUX_MODE7)  /* mii1_crs == bus_oe */
+                     AM33XX_IOPAD(AM335X_PIN_MII1_COL, PIN_OUTPUT | INPUT_EN | MUX_MODE7)  /* mii1_col == cam_oe */
+                     AM33XX_IOPAD(AM335X_PIN_MII1_RX_CLK, PIN_OUTPUT | INPUT_EN | MUX_MODE7)  /* mii1_rx_clk == clk_en */
+                     AM33XX_IOPAD(AM335X_PIN_MII1_RXD0, PIN_OUTPUT | INPUT_EN | MUX_MODE7)  /* mii1_rxd0 == input_en */
+                     AM33XX_IOPAD(AM335X_PIN_MII1_RXD1, PIN_OUTPUT | INPUT_EN | MUX_MODE7)  /* mii1_rxd1 == reset */
+                     AM33XX_IOPAD(AM335X_PIN_MII1_RXD2, PIN_OUTPUT | INPUT_EN | MUX_MODE7)  /* mii1_rxd2 == saddr */
+                     AM33XX_IOPAD(AM335X_PIN_MII1_RXD3, PIN_OUTPUT | INPUT_EN | MUX_MODE7)  /* mii1_rxd3 == standby */
+                     AM33XX_IOPAD(AM335X_PIN_MII1_RX_ER, PIN_OUTPUT | INPUT_EN | MUX_MODE7)  /* mii1_rx_er == trigger */
+                     AM33XX_IOPAD(AM335X_PIN_MII1_RX_DV, PIN_OUTPUT | INPUT_EN | MUX_MODE7)  /* mii1_rx_dv == vreg_en */
       >; };
     };
   };

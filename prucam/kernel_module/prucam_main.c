@@ -17,6 +17,33 @@ static void free_irqs(void);
 int init_camera_regs(void);
 int write_cam_reg(uint16_t reg, uint16_t val);
 
+
+int param = 0x1f;
+
+int param_set(const char *val, const struct kernel_param *kp) {
+  int* pval = kp->arg; // get the val
+  printk(KERN_INFO "param* set: %x\n", pval);
+  printk(KERN_INFO "param set: %d\n", *pval);
+  printk(KERN_INFO "val*: %x\n", val);
+  if(val != NULL)
+    printk(KERN_INFO "val: %s\n", *val);
+
+}
+
+int param_get(char *buffer, const struct kernel_param *kp) {
+  int* pval = kp->arg;
+  printk(KERN_INFO "param get: %d\n", pval);
+}
+
+const struct kernel_param_ops param_ops = 
+{
+  .set = &param_set,  // Use our setter ...
+  .get = &param_get,     // .. and standard getter
+};
+
+
+module_param_cb(param, &param_ops, &param, S_IRUGO | S_IWUSR);
+
 /*
  * TODO
  * - dedicated error interrupt line from PRU that triggers handler to shut down

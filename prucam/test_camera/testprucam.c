@@ -18,7 +18,8 @@ int main(){
   struct timeval before, after;
 
   printf("Starting device test code example...\n");
-  fd = open("/dev/prucam", O_RDWR);             // Open the device with read/write access
+  fd = open("/dev/prucam", O_RDONLY|O_LARGEFILE|O_CLOEXEC);             // Open the device with read/write access
+  //fd = open("/dev/prucam", O_RDWR);             // Open the device with read/write access
   if (fd < 0){
     perror("Failed to open the device...");
     return errno;
@@ -34,7 +35,9 @@ int main(){
     perror("Failed to read the message from the device.");
     return errno;
   }
+
   gettimeofday(&after , NULL);
+
   long uSecs = after.tv_usec - before.tv_usec;
 
   if(uSecs < 0) //occaisionally this number is 1000000 off??

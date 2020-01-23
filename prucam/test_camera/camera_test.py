@@ -1,11 +1,21 @@
+#!/usr/bin/python3
+
 import os
+import io
+from PIL import Image 
 
-dev = os.open("/dev/prucam", os.O_RDWR)
-img = os.read(dev, 1280*960)
-print(len(img))
+path="/dev/prucam"
+pixels=1280*960
 
-os.close(dev)
+fd = os.open(path, os.O_RDWR)
 
-fd = os.open("img.file", os.O_RDWR) 
-num = os.write(fd, img)
-print("wrote: ", num)
+fio = io.FileIO(fd, closefd = False)
+
+img = bytearray(pixels)
+
+fio.readinto(img)
+
+# write it back to file
+#f = os.open("img.file", os.O_RDWR) 
+#num = os.write(f, img)
+#print("wrote: ", num)

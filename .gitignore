@@ -48,3 +48,21 @@ eagle.epf
 
 # pycache
 __pycache__/
+
+# LKM build files
+*.ko
+*.cmd
+.tmp_versions
+Module.symvers
+modules.order
+prucam.mod.c
+
+# BMP images
+*.bmp
+
+# vim swap files
+*.swp
+
+# pru build files
+pru_fw.asm
+*/pru_code/gen
