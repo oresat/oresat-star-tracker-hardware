@@ -131,5 +131,5 @@ const char*		BMP_GetErrorDescription		();
 	}
 
 
-#include"qdbmp.c"
+//#include"qdbmp.c" // Why was this here like this? -Oliver
 #endif

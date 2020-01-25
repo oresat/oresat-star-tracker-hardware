@@ -7,34 +7,14 @@
 #include <unistd.h>
 #include <sys/time.h>
 #include "qdbmp.h"
-#include "camera-i2c.h"
-#include "regs.h"
 
 #define ROWS 960
 #define COLS 1280
 #define PIXELS ROWS * COLS
-#define IMGFILE "capture.pgm"
-
-int initCamera(void);
-void writePgmFile(char* buf);
 
 int main(){
   int ret, fd;
 
-  
- /* 
-  //program camera via i2c
-  ret = initCamera();
-  if(ret < 0) {
-  printf("error programming camera, error code: %d\n", ret);
-  return ret;
-  }
-  
-
-  return;
-  */
-
-  //for(int i = 0 ; i < 9999999 ; i++) {
   struct timeval before, after;
 
   printf("Starting device test code example...\n");
@@ -45,7 +25,6 @@ int main(){
   }
 
   char buf[PIXELS];
-
 
   gettimeofday(&before , NULL);
 
@@ -63,7 +42,6 @@ int main(){
 
   printf("Elapsed time: %ld uSec\n", uSecs);
 
-  //writePgmFile(buf);
   BMP* bmp;
   bmp = BMP_Create(COLS, ROWS, 8);
 
@@ -88,50 +66,7 @@ int main(){
     perror("error closing device");
     return ret;
   }
-  //}
 
   return 0;
 }
 
-
-//initCamera programs the camera via i2c
-int initCamera()
-{
-printf("Programming Image Sensor...\n");
-
-int err = writeRegs(startupRegs, sizeof(startupRegs));
-
-sleep(0.25); //wait for regs to take effect, may not be necessary
-
-if(err > 0)
-{
-printf("ERROR writeRegs returned error code: %d\n", err);
-return err;
-}
-return 0;
-}
-
-
-//writeImageFile writes the char buffer to a PGM type image
-void writePgmFile(char* buf) {
-  printf("Writing to '%s'\n", IMGFILE);
-  FILE* pgmimg; 
-  pgmimg = fopen(IMGFILE, "wb"); 
-
-  // Write Magic Number to the File 
-  fprintf(pgmimg, "P2\n");  
-
-  // Write Width and Height 
-  fprintf(pgmimg, "%d %d\n", COLS, ROWS);  
-
-  // Writing the maximum gray value 
-  fprintf(pgmimg, "255\n");  
-  for (int i = 0; i < ROWS; i++) { 
-    for (int j = 0; j < COLS; j++) { 
-      fprintf(pgmimg, "%d ", (uint8_t)(buf[(i*COLS)+j])); 
-    }
-    fprintf(pgmimg, "\n"); 
-  }   
-
-  fclose(pgmimg); 
-}
