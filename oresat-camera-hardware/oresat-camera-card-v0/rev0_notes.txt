@@ -16,3 +16,12 @@
 - perhaps optional pullups on camera control lines
 - usb lines too close to C37
 - this USB ribbon cable is giving me issues, maybe use other type of connector
+- R12 was accidentally deleted(no cream)R39 label on silk
+- c17 label on silk
+- breakout I2C0 !!
+- TPs on reset circuit
+- make font bigger(use minimum oshpark size)
+- labeled TPs would be nice
+- would be nice if SD was closer to edge
+- breakout I2C2 (maybe I2C1 as well)
+- pullups/downs on all camera lines, with control buffer disabled, so that comes up and stays in good state until initialized
