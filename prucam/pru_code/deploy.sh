@@ -39,53 +39,51 @@ echo "-Placing the firmware"
 	cp gen/*.out /lib/firmware/am335x-pru$PRU_CORE-fw
 
 echo "-Configuring pinmux"
-
 	KERNEL_VERSION=`uname -r`
 
-	if [ KERNEL_VERSION = "4.14.108-ti-r124"* ]; then
-	config-pin -a $PRU0_0 pruin
-	config-pin -q $PRU0_0
-	config-pin -a $PRU0_1 pruin
-	config-pin -q $PRU0_1
-	config-pin -a $PRU0_2 pruin
-	config-pin -q $PRU0_2
-	config-pin -a $PRU0_3 pruin
-	config-pin -q $PRU0_3
-	config-pin -a $PRU0_4 pruin
-	config-pin -q $PRU0_4
-	config-pin -a $PRU0_5 pruin
-	config-pin -q $PRU0_5
-	config-pin -a $PRU0_6 pruin
-	config-pin -q $PRU0_6
-	config-pin -a $PRU0_7 pruin
-	config-pin -q $PRU0_7
-	config-pin -a $PRU0_14 pruin
-	config-pin -q $PRU0_14
-	config-pin -a $PRU0_15 pruin
-	config-pin -q $PRU0_15
-	config-pin -a $PRU0_16 pruin
-	config-pin -q $PRU0_16
-	config-pin -a $PRU0_15O pruout
-	config-pin -q $PRU0_15O
-
-	elif [ KERNEL_VERSION = "4.19.82-ti-r33"* ]; then
-	config-pin $PRU0_0 pruin
-	config-pin $PRU0_1 pruin
-	config-pin $PRU0_2 pruin
-	config-pin $PRU0_3 pruin
-	config-pin $PRU0_4 pruin
-	config-pin $PRU0_5 pruin
-	config-pin $PRU0_6 pruin
-	config-pin $PRU0_7 pruin
-	config-pin $PRU0_14 pruin
-	config-pin $PRU0_15 pruin
-	config-pin $PRU0_16 pruin
-	config-pin $PRU0_15O pruout
-
+	if [[ $KERNEL_VERSION =~ "4.14." ]]
+	then
+		config-pin -a $PRU0_0 pruin
+		config-pin -q $PRU0_0
+		config-pin -a $PRU0_1 pruin
+		config-pin -q $PRU0_1
+		config-pin -a $PRU0_2 pruin
+		config-pin -q $PRU0_2
+		config-pin -a $PRU0_3 pruin
+		config-pin -q $PRU0_3
+		config-pin -a $PRU0_4 pruin
+		config-pin -q $PRU0_4
+		config-pin -a $PRU0_5 pruin
+		config-pin -q $PRU0_5
+		config-pin -a $PRU0_6 pruin
+		config-pin -q $PRU0_6
+		config-pin -a $PRU0_7 pruin
+		config-pin -q $PRU0_7
+		config-pin -a $PRU0_14 pruin
+		config-pin -q $PRU0_14
+		config-pin -a $PRU0_15 pruin
+		config-pin -q $PRU0_15
+		config-pin -a $PRU0_16 pruin
+		config-pin -q $PRU0_16
+		config-pin -a $PRU0_15O pruout
+		config-pin -q $PRU0_15O
+	elif [[ $KERNEL_VERSION =~ "4.19." ]] 
+	then
+		config-pin $PRU0_0 pruin
+		config-pin $PRU0_1 pruin
+		config-pin $PRU0_2 pruin
+		config-pin $PRU0_3 pruin
+		config-pin $PRU0_4 pruin
+		config-pin $PRU0_5 pruin
+		config-pin $PRU0_6 pruin
+		config-pin $PRU0_7 pruin
+		config-pin $PRU0_14 pruin
+		config-pin $PRU0_15 pruin
+		config-pin $PRU0_16 pruin
+		config-pin $PRU0_15O pruout
 	else
-	echo 'unkown kernel\n'
-	exit 1
-
+		echo 'ERROR: Unkown kernel.'
+		exit 1
 	fi
 
 echo "-Rebooting"
