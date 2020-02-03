@@ -19,7 +19,7 @@ clean:
 	rm -f prudev-00A0.dtbo
 
 deploy:
-	cp prucam.ko /lib/modules/4.14.71-ti-r80/kernel/drivers/remoteproc
+	cp prucam.ko /lib/modules/$(shell uname -r)/kernel/drivers/remoteproc
 	depmod
 
 # Compile and install device tree

@@ -40,7 +40,9 @@ echo "-Placing the firmware"
 
 echo "-Configuring pinmux"
 
-	#Setup Inputs
+	KERNEL_VERSION=`uname -r`
+
+	if [ KERNEL_VERSION = "4.14.108-ti-r124"* ]; then
 	config-pin -a $PRU0_0 pruin
 	config-pin -q $PRU0_0
 	config-pin -a $PRU0_1 pruin
@@ -65,6 +67,26 @@ echo "-Configuring pinmux"
 	config-pin -q $PRU0_16
 	config-pin -a $PRU0_15O pruout
 	config-pin -q $PRU0_15O
+
+	elif [ KERNEL_VERSION = "4.19.82-ti-r33"* ]; then
+	config-pin $PRU0_0 pruin
+	config-pin $PRU0_1 pruin
+	config-pin $PRU0_2 pruin
+	config-pin $PRU0_3 pruin
+	config-pin $PRU0_4 pruin
+	config-pin $PRU0_5 pruin
+	config-pin $PRU0_6 pruin
+	config-pin $PRU0_7 pruin
+	config-pin $PRU0_14 pruin
+	config-pin $PRU0_15 pruin
+	config-pin $PRU0_16 pruin
+	config-pin $PRU0_15O pruout
+
+	else
+	echo 'unkown kernel\n'
+	exit 1
+
+	fi
 
 echo "-Rebooting"
 	if [ $PRU_CORE -eq 0 ]
