@@ -13,10 +13,11 @@ import startracker
 # Class definition
 class StarTrackerDaemon:
 
-    # Initialize with PID file
+    # Initialize PID file and directories
     def __init__(self, pidfile):
         self.pidfile = pidfile
-        self.directory = None
+        self.db_root = None
+        self.data_root = None
 
     # Daemonize the class by forking
     def daemonize(self):
@@ -66,10 +67,11 @@ class StarTrackerDaemon:
         os.remove(self.pidfile)
 
     # Start the daemon
-    def start(self, directory):
+    def start(self, db_root, data_root):
 
         # Set the working directory
-        self.directory = directory
+        self.db_root = db_root
+        self.data_root = data_root
 
         # Check for a pidfile to see if the daemon is already running
         try:
@@ -117,28 +119,27 @@ class StarTrackerDaemon:
                 sys.exit(1)
 
     # Restart the daemon
-    def restart(self, directory):
+    def restart(self, db_root, data_root):
         self.stop()
-        self.directory = directory
-        self.start()
+        self.start(db_root, data_root)
 
     # Run the star tracker
     def run(self):
-        st = startracker.StarTracker(self.directory)
-        st.start()
+        sts = startracker.StarTrackerServer()
+        sts.start(self.data_root + "median_image.png", self.data_root + "calibration.txt", self.db_root + "hip_main.dat", sample_dir = self.data_root + "samples/")
 
 # Run script
 if __name__ == "__main__":
-    assert len(sys.argv) > 1, "usage:\t{0} start directory\n\t\t\t{0} stop\n\t\t\t{0} restart directory".format(sys.argv[0])
+    assert len(sys.argv) > 1, "usage:\t{0} start\n\t\t\t{0} stop\n\t\t\t{0} restart".format(sys.argv[0])
     daemon = StarTrackerDaemon('/run/oresat-star-tracker.pid')
+    db_root = "/home/ukhan/github/oresat-star-tracker/openstartracker/"
+    data_root = "/home/ukhan/github/oresat-star-tracker/openstartracker/datasets/downsample/"
     if 'start' == sys.argv[1]:
-        assert len(sys.argv) == 3, "must specify directory!"
-        daemon.start(sys.argv[2])
+        daemon.start(db_root, data_root)
     elif 'stop' == sys.argv[1]:
         daemon.stop()
     elif 'restart' == sys.argv[1]:
-        assert len(sys.argv) == 3, "must specify directory!"
-        daemon.restart(sys.argv[2])
+        daemon.restart(db_root, data_root)
     else:
         print("Unknown command")
         sys.exit(2)

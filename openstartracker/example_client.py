@@ -3,7 +3,6 @@ import sys
 import signal
 import os
 import time
-# from pydbus.generic import signal
 from pydbus import SystemBus
 from gi.repository import GLib
 
@@ -26,6 +25,6 @@ except:
 
 # Read properties until exited
 while True:
-    dec, ra, ori, path = startracker.coor
-    print("\nSolved: {}\nDEC: {}\nRA: {}\nORI: {}".format(path, dec, ra, ori))
+    dec, ra, ori, timestamp, path = startracker.coor
+    print("\nSolved: {}\nDEC: {}\nRA: {}\nORI: {}\nTimestamp: {}".format(path, dec, ra, ori, timestamp))
     time.sleep(0.5)

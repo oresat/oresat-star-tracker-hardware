@@ -1,159 +1,71 @@
-# startracker.py - main back-end for the star tracker
+# startracker.py
 # by Umair Khan, from the Portland State Aerospace Society
 # based on OpenStarTracker from Andrew Tennenbaum at the University of Buffalo
 # openstartracker.org
 
-# Imports
+# Imports - built-ins
 import sys
-import os
 import time
 import threading
 import glob
+import random
+
+# Imports - external
 import numpy as np
 import cv2
 from pydbus.generic import signal
 from pydbus import SystemBus
 from gi.repository import GLib
+
+# Imports - back-end
 import beast
 
-# --------------------------------
-#           D-BUS SETUP
-# --------------------------------
-
-# Define XML for server
-class StarTrackerServer:
-
-    # XML definition
-    dbus = """
-    <node>
-        <interface name='org.example.project.oresat'>
-            <method name='solve_image'>
-                <arg type='s' name='filepath' direction='in' />
-                <arg type='b' name='status' direction='out' />
-            </method>
-            <signal name='error'>
-                <arg type='s' />
-            </signal>
-            <property name='coor' type='(ddds)' access='read' />
-        </interface>
-    </node>
-    """
-
-    # Initialize properties and worker thread
-    def __init__(self, directory, st):
-
-        # Properties
-        self.dec = 0.0
-        self.ra = 0.0
-        self.ori = 0.0
-        self.solve_path = ""
-        self.solve_dir = "/home/ukhan/github/oresat-star-tracker/openstartracker/datasets/" + directory
-
-        # Star tracker object
-        self.st = st
-
-        # Set up worker thread
-        self.lock = threading.Lock()
-        self.running = True
-        self.worker = threading.Thread(target = self.worker_thread)
-
-        # Start worker thread
-        self.worker.start()
-
-    # D-Bus method to solve image
-    def solve_image(self, filepath):
-        self.lock.acquire()
-        print("\nReceived request for {}".format(filepath))
-        self.solve_path = filepath
-        self.lock.release()
-        return True
-
-    # Worker thread
-    def worker_thread(self):
-        filepaths = [path for path in glob.glob(self.solve_dir + "/samples/*")]
-        i = 0
-        while (self.running):
-            self.lock.acquire()
-            print("\nSolving {}".format(filepaths[i]))
-            dec, ra, ori = self.st.solve(filepaths[i])
-            print("DEC: {}".format(self.dec))
-            print("RA: {}".format(self.ra))
-            print("ORI: {}".format(self.ori))
-            self.dec, self.ra, self.ori, self.solve_path = dec, ra, ori, filepaths[i]
-            self.lock.release()
-            i = (i + 1) % len(filepaths)
-            time.sleep(0.5)
-
-    # Stop threads in preparation to exit
-    def end(self):
-        self.running = False
-        if self.worker.is_alive():
-            self.worker.join()
-
-    # Signals
-    error = signal()
-
-    # Coordinates
-    @property
-    def coor(self):
-        return (self.dec, self.ra, self.ori, self.solve_path)
-
-# --------------------------------
-#          STAR TRACKER
-# --------------------------------
-
-# Overall class definition
+# Solver
 class StarTracker:
 
-    # Initialize properties and set up database
-    def __init__(self, directory):
+    # Initialize everything
+    def __init__(self):
 
         # Prepare constants
-        self.INTERFACE_NAME = "org.example.project.oresat"
         self.P_MATCH_THRESH = 0.99
-        self.CONFIGFILE = "/home/ukhan/github/oresat-star-tracker/openstartracker/datasets/" + directory + "/calibration.txt"
         self.YEAR = 1991.25
-        self.MEDIAN_IMAGE = cv2.imread("/home/ukhan/github/oresat-star-tracker/openstartracker/datasets/" + directory + "/median_image.png")
+        self.SAMPLE_DIR = None
+        self.MEDIAN_IMAGE = None
+        self.S_DB = None
+        self.SQ_RESULTS = None
+        self.S_FILTERED = None
+        self.C_DB = None
+
+    # Startup sequence
+    def startup(self, median_path, config_path, db_path, sample_dir = None):
+
+        # Set the sample directory
+        self.SAMPLE_DIR = sample_dir
 
         # Prepare star tracker
-        print("\nLoading config")
-        beast.load_config(self.CONFIGFILE)
-        print("Loading hip_main.dat")
+        self.MEDIAN_IMAGE = cv2.imread(median_path)
+        beast.load_config(config_path)
         self.S_DB = beast.star_db()
-        self.S_DB.load_catalog("/home/ukhan/github/oresat-star-tracker/openstartracker/hip_main.dat", self.YEAR)
-        print("Filtering stars")
+        self.S_DB.load_catalog(db_path, self.YEAR)
         self.SQ_RESULTS = beast.star_query(self.S_DB)
         self.SQ_RESULTS.kdmask_filter_catalog()
         self.SQ_RESULTS.kdmask_uniform_density(beast.cvar.REQUIRED_STARS)
         self.S_FILTERED = self.SQ_RESULTS.from_kdmask()
-        print("Generating DB")
         self.C_DB = beast.constellation_db(self.S_FILTERED, 2 + beast.cvar.DB_REDUNDANCY, 0)
-        print("Star tracker ready")
 
-        # Prepare D-Bus
-        self.EMIT = StarTrackerServer(directory, self)
-        bus = SystemBus()
-        self.LOOP = GLib.MainLoop()
-        bus.publish(self.INTERFACE_NAME, self.EMIT)
-        print("D-Bus ready")
+    # Capture an image, or pull one from the sample directory
+    def capture(self):
 
-    # Start D-Bus server
-    def start(self):
-        try:
-            print("\nStarting D-Bus loop...")
-            self.LOOP.run()
-        except KeyboardInterrupt as e:
-            self.LOOP.quit()
-            self.EMIT.end()
-            print("\nExit by Ctrl-C\n")
+        # Pull from sample directory
+        if self.SAMPLE_DIR != None:
+            path = random.choice(glob.glob(self.SAMPLE_DIR + "*"))
+            return path, cv2.imread(path)
 
-    # Function to send error
-    def send_error(self, error):
-        self.EMIT.error(error)
-        print("Sent error: {}".format(error))
+        # Capture an image
+        return None, None
 
     # See if an image is worth attempting to solve
-    def check_image(self, img):
+    def preprocess(self, img):
 
         # Generate test parameters
         height, width, channels = img.shape
@@ -172,18 +84,17 @@ class StarTracker:
         if threshold_black > blur_check:
             blur = cv2.Laplacian(img, cv2.CV_64F).var()
             if blur != 0 and blur < 5:
-                self.send_error("image too blurry")
+                return "image too blurry"
             else:
-                self.end_error("image contains too few stars")
-            return 0
+                return "image contains too few stars"
+            return 1
         elif threshold_black < too_many_check:
-            self.send_error("unsuitable image")
-            return 0
+            return "unsuitable image"
 
-        return 1
+        return "good"
 
     # Solution function
-    def solve(self, filepath):
+    def solve(self, orig_img):
 
         # Keep track of solution time
         starttime = time.time()
@@ -192,19 +103,6 @@ class StarTracker:
         img_stars = beast.star_db()
         match = None
         fov_db = None
-
-        # Load the image
-        orig_img = cv2.imread(filepath)
-        if type(orig_img) == type(None):
-            self.send_error("could not open image at {}".format("filepath"))
-            return 0, 0, 0
-
-        # Check the image to see if it is fit for processing
-        result = self.check_image(orig_img)
-        if result == 0:
-            print("Image unfit for processing")
-            print("Time: {}".format(time.time() - starttime))
-            return 0, 0, 0
 
         # Process the image for solving
         img = np.clip(orig_img.astype(np.int16) - self.MEDIAN_IMAGE, a_min = 0, a_max = 255).astype(np.uint8)
@@ -245,7 +143,6 @@ class StarTracker:
             y = lis.winner.R21
             z = lis.winner.R31
             r = beast.cvar.MAXFOV / 2
-
             self.SQ_RESULTS.kdsearch(x, y, z, r, beast.cvar.THRESH_FACTOR * beast.cvar.IMAGE_VARIANCE)
 
             # Estimate density for constellation generation
@@ -261,34 +158,144 @@ class StarTracker:
             if near.p_match > self.P_MATCH_THRESH:
                 match = near
 
-        # Print solution
+        # Get solution -- for reference:
+        #  - dec - rotation about the y-axis
+        #  - ra  - rotation about the z-axis
+        #  - ori - rotation about the camera axis
         if match is not None:
-
             match.winner.calc_ori()
             dec = match.winner.get_dec()
             ra = match.winner.get_ra()
             ori = match.winner.get_ori()
-
-            # For reference:
-            # - dec         - rotation about the y-axis
-            # - ra          - rotation about the z-axis
-            # - ori         - rotation about the camera axis
-
         else:
-            self.send_error("no match found")
-            print("Time: {}".format(time.time() - starttime))
-            return 0, 0, 0
+            dec, ra, ori = 0.0, 0.0, 0.0
 
         # Calculate how long it took to process
-        print("Time: {}".format(time.time() - starttime))
+        runtime = time.time() - starttime
 
         # Return solution
-        return dec, ra, ori
+        return dec, ra, ori, time
 
-# --------------------------------
-#         DIRECT STARTUP
-# --------------------------------
+    # Camera control
+    def modify(self, mod_string):
+        return 0
 
+    # Error processing
+    def error(self, err_string):
+
+        # Handle what we can handle, everything else will be ignored
+        if err_string == "image too blurry":
+            self.modify("more sharp")
+        elif err_string == "image contains too few stars":
+            self.modify("increase gain")
+
+        # We always handle successfully
+        return 0
+
+# Server
+class StarTrackerServer:
+
+    # XML definition
+    dbus = """
+    <node>
+        <interface name='org.example.project.oresat'>
+            <signal name='error'>
+                <arg type='s' />
+            </signal>
+            <property name='coor' type='(dddds)' access='read' />
+        </interface>
+    </node>
+    """
+
+    # Error signal
+    error = signal()
+
+    # Initialize properties and worker thread
+    def __init__(self):
+
+        # Properties
+        self.dec = 0.0
+        self.ra = 0.0
+        self.ori = 0.0
+        self.l_solve = 0.0
+        self.t_solve = 0.0
+        self.p_solve = ""
+        self.interface_name = "org.example.project.oresat"
+
+        # Set up star tracker solver
+        self.st = StarTracker()
+        self.st_thread = threading.Thread(target = self.star_tracker)
+        self.st_lock = threading.Lock()
+        self.st_running = True
+
+    # Star tracker thread
+    def star_tracker(self):
+
+        # Keep going while we're running
+        while (self.st_running):
+
+            # Capture an image
+            self.st_lock.acquire()
+            self.p_solve, img = self.st.capture()
+
+            # Check the image
+            check = self.st.preprocess(img)
+            if check != "good":
+                self.st.error(check)
+                error(check)
+                time.sleep(0.5)
+                continue
+
+            # Solve the image
+            self.dec, self.ra, self.ori, self.l_solve = self.st.solve(img)
+            if self.dec == self.ra == self.ori == 0.0:
+                self.st.error("bad solve")
+                error("bad solve")
+                time.sleep(0.5)
+                continue
+
+            # Update the solution timestamp
+            self.t_solve = time.time()
+            self.st_lock.release()
+            time.sleep(0.5)
+
+    # Start up solver and server
+    def start(self, median_path, config_path, db_path, sample_dir = None):
+
+        # Start up star tracker
+        self.st.startup(median_path, config_path, db_path, sample_dir = sample_dir)
+        time.sleep(5)
+        self.st_thread.start()
+
+        # Start up D-Bus server
+        bus = SystemBus()
+        loop = GLib.MainLoop()
+        bus.publish(self.interface_name, self)
+        try:
+            loop.run()
+        except KeyboardInterrupt as e:
+            loop.quit()
+            self.end()
+
+    # Stop threads in preparation to exit
+    def end(self):
+        self.st_running = False
+        if self.st_thread.is_alive():
+            self.st_thread.join()
+
+    # Coordinates
+    @property
+    def coor(self):
+        self.st_lock.acquire()
+        dec, ra, ori, t_solve, p_solve = self.dec, self.ra, self.ori, self.t_solve, self.p_solve
+        self.st_lock.release()
+        return (dec, ra, ori, t_solve, p_solve)
+
+##########
+
+# Test if run independently
 if __name__ == "__main__":
-    st = StarTracker(sys.argv[1])
-    st.start()
+    server = StarTrackerServer()
+    db_root = "/home/ukhan/github/oresat-star-tracker/openstartracker/"
+    data_root = "/home/ukhan/github/oresat-star-tracker/openstartracker/datasets/downsample/"
+    server.start(data_root + "median_image.png", data_root + "calibration.txt", db_root + "hip_main.dat", sample_dir = data_root + "samples/")
