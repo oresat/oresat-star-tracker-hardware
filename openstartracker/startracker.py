@@ -264,7 +264,7 @@ class StarTrackerServer:
 
         # Start up star tracker
         self.st.startup(median_path, config_path, db_path, sample_dir = sample_dir)
-        time.sleep(5)
+        time.sleep(20)
         self.st_thread.start()
 
         # Start up D-Bus server
@@ -296,6 +296,6 @@ class StarTrackerServer:
 # Test if run independently
 if __name__ == "__main__":
     server = StarTrackerServer()
-    db_root = "/home/ukhan/github/oresat-star-tracker/openstartracker/"
-    data_root = "/home/ukhan/github/oresat-star-tracker/openstartracker/datasets/downsample/"
+    db_root = "/home/debian/oresat-star-tracker/openstartracker/"
+    data_root = "/home/debian/oresat-star-tracker/openstartracker/datasets/downsample/"
     server.start(data_root + "median_image.png", data_root + "calibration.txt", db_root + "hip_main.dat", sample_dir = data_root + "samples/")
