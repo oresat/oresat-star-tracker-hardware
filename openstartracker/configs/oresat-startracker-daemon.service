@@ -1,0 +1,12 @@
+[Unit]
+Description=Daemon for Oresat's star tracker software.
+
+[Service]
+Type=forking
+Restart=always
+PIDFile=/run/oresat-star-tracker.pid
+ExecStart=/usr/bin/python3 /opt/daemon-example.py start
+ExecStop=/usr/bin/python3 /opt/daemon-example.py stop
+
+[Install]
+WantedBy=multi-user.target
