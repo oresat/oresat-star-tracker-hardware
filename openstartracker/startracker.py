@@ -9,6 +9,7 @@ import time
 import threading
 import glob
 import random
+import logging
 
 # Imports - external
 import numpy as np
@@ -16,9 +17,18 @@ import cv2
 from pydbus.generic import signal
 from pydbus import SystemBus
 from gi.repository import GLib
+from systemd.journal import JournaldLogHandler
 
 # Imports - back-end
 import beast
+
+# Set up systemd logger
+# modified from https://medium.com/@trstringer/logging-to-systemd-in-python-45150662440a
+logger = logging.getLogger("org.oresat.startracker")
+journald_handler = JournaldLogHandler()
+journald_handler.setFormatter(logging.Formatter('[%(levelname)s] %(message)s'))
+logger.addHandler(journald_handler)
+logger.setLevel(logging.DEBUG)
 
 # Solver
 class StarTracker:
@@ -40,18 +50,24 @@ class StarTracker:
     def startup(self, median_path, config_path, db_path, sample_dir = None):
 
         # Set the sample directory
+        logger.info("Beginning startup sequence...")
         self.SAMPLE_DIR = sample_dir
 
         # Prepare star tracker
         self.MEDIAN_IMAGE = cv2.imread(median_path)
+        logger.info("Loaded median image from {}".format(median_path))
         beast.load_config(config_path)
+        logger.info("Loaded configuration from {}".format(config_path))
         self.S_DB = beast.star_db()
         self.S_DB.load_catalog(db_path, self.YEAR)
+        logger.info("Loaded star database from {}".format(db_path))
         self.SQ_RESULTS = beast.star_query(self.S_DB)
         self.SQ_RESULTS.kdmask_filter_catalog()
         self.SQ_RESULTS.kdmask_uniform_density(beast.cvar.REQUIRED_STARS)
         self.S_FILTERED = self.SQ_RESULTS.from_kdmask()
+        logger.info("Filtered stars")
         self.C_DB = beast.constellation_db(self.S_FILTERED, 2 + beast.cvar.DB_REDUNDANCY, 0)
+        logger.info("Startup sequence complete!")
 
     # Capture an image, or pull one from the sample directory
     def capture(self):
@@ -198,7 +214,7 @@ class StarTrackerServer:
     # XML definition
     dbus = """
     <node>
-        <interface name='org.example.project.oresat'>
+        <interface name='org.oresat.startracker'>
             <signal name='error'>
                 <arg type='s' />
             </signal>
@@ -220,7 +236,7 @@ class StarTrackerServer:
         self.l_solve = 0.0
         self.t_solve = 0.0
         self.p_solve = ""
-        self.interface_name = "org.example.project.oresat"
+        self.interface_name = "org.oresat.startracker"
 
         # Set up star tracker solver
         self.st = StarTracker()
@@ -242,6 +258,7 @@ class StarTrackerServer:
             check = self.st.preprocess(img)
             if check != "good":
                 self.st.error(check)
+                logger.warning(check + "(for {})".format(p_solve))
                 error(check)
                 time.sleep(0.5)
                 continue
@@ -250,6 +267,7 @@ class StarTrackerServer:
             self.dec, self.ra, self.ori, self.l_solve = self.st.solve(img)
             if self.dec == self.ra == self.ori == 0.0:
                 self.st.error("bad solve")
+                logger.error("bad solve (for {})".format(p_solve))
                 error("bad solve")
                 time.sleep(0.5)
                 continue
@@ -266,15 +284,18 @@ class StarTrackerServer:
         self.st.startup(median_path, config_path, db_path, sample_dir = sample_dir)
         time.sleep(20)
         self.st_thread.start()
+        logger.info("Started worker thread")
 
         # Start up D-Bus server
         bus = SystemBus()
         loop = GLib.MainLoop()
         bus.publish(self.interface_name, self)
         try:
+            logger.info("Starting D-Bus loop...")
             loop.run()
         except KeyboardInterrupt as e:
             loop.quit()
+            logger.info("Ended D-Bus loop")
             self.end()
 
     # Stop threads in preparation to exit
