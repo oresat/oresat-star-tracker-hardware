@@ -17,15 +17,15 @@ import cv2
 from pydbus.generic import signal
 from pydbus import SystemBus
 from gi.repository import GLib
-from systemd.journal import JournaldLogHandler
+from systemd import journal
 
 # Imports - back-end
 import beast
 
 # Set up systemd logger
 # modified from https://medium.com/@trstringer/logging-to-systemd-in-python-45150662440a
-logger = logging.getLogger("org.oresat.startracker")
-journald_handler = JournaldLogHandler()
+logger = logging.getLogger("org.OreSat.StarTracker")
+journald_handler = journal.JournalHandler()
 journald_handler.setFormatter(logging.Formatter('[%(levelname)s] %(message)s'))
 logger.addHandler(journald_handler)
 logger.setLevel(logging.DEBUG)
@@ -214,7 +214,7 @@ class StarTrackerServer:
     # XML definition
     dbus = """
     <node>
-        <interface name='org.oresat.startracker'>
+        <interface name='org.OreSat.StarTracker'>
             <signal name='error'>
                 <arg type='s' />
             </signal>
@@ -236,7 +236,7 @@ class StarTrackerServer:
         self.l_solve = 0.0
         self.t_solve = 0.0
         self.p_solve = ""
-        self.interface_name = "org.oresat.startracker"
+        self.interface_name = "org.OreSat.StarTracker"
 
         # Set up star tracker solver
         self.st = StarTracker()

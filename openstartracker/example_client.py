@@ -7,7 +7,7 @@ from pydbus import SystemBus
 from gi.repository import GLib
 
 # Set up interface
-INTERFACE_NAME = "org.example.project.oresat"
+INTERFACE_NAME = "org.OreSat.StarTracker"
 bus = SystemBus()
 loop = GLib.MainLoop()
 
