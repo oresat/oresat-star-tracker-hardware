@@ -6,11 +6,10 @@ This is the repository for all things related to the star tracker system for Ore
 
 Our hardware is all custom hardware for the open source "OreSat bus" that we're developing. The star tracker is one of our [Octavo OSD3358-1G-ISM](https://octavosystems.com/octavo_products/osd335x-sm/) "Linux box on a Chip" cards, with a custom camera setup based on the [On Semiconductor AR1030](https://www.onsemi.com/pub/Collateral/AR0130CS-D.PDF).
 
-Our software is based on the open source [OpenStarTracker, from the University of Buffalo](http://openstartracker.org "OpenStarTracker, from the University of Buffalo").
+*Looking for what's running on this? Our star tracker software, based on [OpenStarTracker](https://openstartracker.org) from the University at Buffalo, was migrated to the [oresat-star-tracker-software](https://github.com/oresat/oresat-star-tracker-software) repository on 2/21/2020.*
 
 Where to find things:
 
-- openstartracker - star tracker software, based on OpenStarTracker from Univ. of Buffalo
 - oresat-camera-hardware - directories related to hardware for OreSat camera system
 - Old stuff
    - STM32F4-camera-system - OreSat camera system based on the STM32F4 MCU
