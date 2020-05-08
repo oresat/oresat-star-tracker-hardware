@@ -25,3 +25,4 @@
 - would be nice if SD was closer to edge
 - breakout I2C2 (maybe I2C1 as well)
 - pullups/downs on all camera lines, with control buffer disabled, so that comes up and stays in good state until initialized
+- fix MIC842 footprint
