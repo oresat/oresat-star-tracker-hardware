@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.0">
+<eagle version="9.3.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -9532,7 +9532,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="R6" library="oresat-rcl" deviceset="R-US_" device="0402-B-NOSILK" value="DNP"/>
 <part name="X1" library="X-KYOCERA-KC2520B27" deviceset="KC2520B27.0000C10E00" device=""/>
 <part name="GND2" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="R1" library="oresat-rcl" deviceset="R-US_" device="0402-B" value="10k"/>
 <part name="GND1" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="GND3" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="SUPPLY2" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
@@ -9573,6 +9572,12 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="VBUS21" library="oresat-supplies" deviceset="VDD_IO" device=""/>
 <part name="VBUS22" library="oresat-supplies" deviceset="VDD_IO" device=""/>
 <part name="VBUS23" library="oresat-supplies" deviceset="VDD_IO" device=""/>
+<part name="R9" library="oresat-rcl" deviceset="R-US_" device="0402-B" value="10k"/>
+<part name="GND15" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
+<part name="R10" library="oresat-rcl" deviceset="R-US_" device="0402-B" value="10k"/>
+<part name="VBUS24" library="oresat-supplies" deviceset="VDD_IO" device=""/>
+<part name="R11" library="oresat-rcl" deviceset="R-US_" device="0402-B" value="10k"/>
+<part name="R12" library="oresat-rcl" deviceset="R-US_" device="0402-B" value="10k"/>
 </parts>
 <sheets>
 <sheet>
@@ -9580,7 +9585,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <text x="295.362" y="193.166" size="3.81" layer="97">Voltage Regulators</text>
 <text x="208.41" y="260.96" size="3.81" layer="97">Image Sensor</text>
 <text x="101.6" y="259.08" size="3.81" layer="97">27MHz XO</text>
-<text x="20.32" y="45.72" size="3.81" layer="97">SIGNALS:
+<text x="12.7" y="30.48" size="3.81" layer="97">SIGNALS:
 D0 - D11
 HSYNC
 VSYNC
@@ -9611,6 +9616,15 @@ VAA         = 2.8V
 VAA_PIX   = 2.8V</text>
 <text x="321.948" y="263.246" size="3.81" layer="97">Image Sensor Caps</text>
 <text x="111.76" y="76.2" size="3.81" layer="97">36 Pin connector</text>
+<text x="48.26" y="142.24" size="2.54" layer="97">Default State:
+!Reset: Low; In reset
+Standby: High; In Standby
+!OE: High; Output Disabled
+CLK_EN: Low; Clock disabled</text>
+<wire x1="119.38" y1="170.18" x2="45.72" y2="170.18" width="0.1524" layer="97"/>
+<wire x1="45.72" y1="170.18" x2="45.72" y2="129.54" width="0.1524" layer="97"/>
+<wire x1="45.72" y1="129.54" x2="119.38" y2="129.54" width="0.1524" layer="97"/>
+<wire x1="119.38" y1="129.54" x2="119.38" y2="170.18" width="0.1524" layer="97"/>
 </plain>
 <instances>
 <instance part="R2" gate="R" x="134.62" y="228.6" smashed="yes">
@@ -9805,10 +9819,6 @@ VAA_PIX   = 2.8V</text>
 <instance part="GND2" gate="1" x="111.76" y="210.82" smashed="yes">
 <attribute name="VALUE" x="111.0615" y="208.28" size="1.27" layer="96" rot="R90" align="top-center"/>
 </instance>
-<instance part="R1" gate="R" x="91.44" y="233.68" smashed="yes" rot="R90">
-<attribute name="NAME" x="89.9414" y="229.87" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="94.742" y="229.87" size="1.778" layer="96" rot="R90"/>
-</instance>
 <instance part="GND1" gate="1" x="83.82" y="109.22" smashed="yes">
 <attribute name="VALUE" x="83.1215" y="106.68" size="1.27" layer="96" rot="R90" align="top-center"/>
 </instance>
@@ -9843,13 +9853,13 @@ VAA_PIX   = 2.8V</text>
 <instance part="GND4" gate="1" x="167.64" y="144.78" smashed="yes">
 <attribute name="VALUE" x="167.64" y="144.526" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="R7" gate="R" x="124.46" y="172.72" smashed="yes" rot="R90">
-<attribute name="NAME" x="122.9614" y="168.91" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="127.762" y="168.91" size="1.778" layer="96" rot="R90"/>
+<instance part="R7" gate="R" x="124.46" y="187.96" smashed="yes" rot="R90">
+<attribute name="NAME" x="122.9614" y="184.15" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="127.762" y="184.15" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="R8" gate="R" x="114.3" y="172.72" smashed="yes" rot="R90">
-<attribute name="NAME" x="112.8014" y="168.91" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="117.602" y="168.91" size="1.778" layer="96" rot="R90"/>
+<instance part="R8" gate="R" x="114.3" y="187.96" smashed="yes" rot="R90">
+<attribute name="NAME" x="112.8014" y="184.15" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="117.602" y="184.15" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="VBUS3" gate="G$1" x="210.82" y="246.38" smashed="yes">
 <attribute name="VALUE" x="210.566" y="248.92" size="1.778" layer="96" rot="R90" align="bottom-center"/>
@@ -9929,11 +9939,33 @@ VAA_PIX   = 2.8V</text>
 <instance part="VBUS21" gate="G$1" x="167.64" y="177.8" smashed="yes">
 <attribute name="VALUE" x="167.64" y="178.054" size="1.778" layer="96" align="bottom-center"/>
 </instance>
-<instance part="VBUS22" gate="G$1" x="119.38" y="185.42" smashed="yes">
-<attribute name="VALUE" x="119.38" y="185.674" size="1.778" layer="96" align="bottom-center"/>
+<instance part="VBUS22" gate="G$1" x="119.38" y="195.58" smashed="yes">
+<attribute name="VALUE" x="119.38" y="195.834" size="1.778" layer="96" align="bottom-center"/>
 </instance>
 <instance part="VBUS23" gate="G$1" x="111.76" y="246.38" smashed="yes">
 <attribute name="VALUE" x="111.76" y="246.634" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="R9" gate="R" x="101.6" y="142.24" smashed="yes" rot="R90">
+<attribute name="NAME" x="100.1014" y="138.43" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="104.902" y="138.43" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="GND15" gate="1" x="101.6" y="132.08" smashed="yes">
+<attribute name="VALUE" x="101.6" y="131.826" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="R10" gate="R" x="101.6" y="154.94" smashed="yes" rot="R90">
+<attribute name="NAME" x="100.1014" y="151.13" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="104.902" y="151.13" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="VBUS24" gate="G$1" x="106.68" y="167.64" smashed="yes">
+<attribute name="VALUE" x="106.68" y="167.894" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="R11" gate="R" x="111.76" y="157.48" smashed="yes" rot="R90">
+<attribute name="NAME" x="110.2614" y="153.67" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="115.062" y="153.67" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="R12" gate="R" x="111.76" y="139.7" smashed="yes" rot="R90">
+<attribute name="NAME" x="110.2614" y="135.89" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="115.062" y="135.89" size="1.778" layer="96" rot="R90"/>
 </instance>
 </instances>
 <busses>
@@ -10163,6 +10195,14 @@ VAA_PIX   = 2.8V</text>
 <wire x1="88.9" y1="114.3" x2="83.82" y2="114.3" width="0.1524" layer="91"/>
 <wire x1="83.82" y1="114.3" x2="83.82" y2="111.76" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="GND15" gate="1" pin="GND"/>
+<pinref part="R9" gate="R" pin="1"/>
+<wire x1="101.6" y1="134.62" x2="101.6" y2="137.16" width="0.1524" layer="91"/>
+<pinref part="R12" gate="R" pin="1"/>
+<wire x1="101.6" y1="134.62" x2="111.76" y2="134.62" width="0.1524" layer="91"/>
+<junction x="101.6" y="134.62"/>
+</segment>
 </net>
 <net name="3.3V" class="0">
 <segment>
@@ -10216,14 +10256,16 @@ VAA_PIX   = 2.8V</text>
 <segment>
 <pinref part="J1" gate="G$1" pin="14"/>
 <wire x1="91.44" y1="200.66" x2="142.24" y2="200.66" width="0.1524" layer="91"/>
-<wire x1="142.24" y1="200.66" x2="142.24" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="142.24" y1="200.66" x2="142.24" y2="144.78" width="0.1524" layer="91"/>
 <label x="124.46" y="200.66" size="1.778" layer="95"/>
 <pinref part="X1" gate="A" pin="EN"/>
-<pinref part="R1" gate="R" pin="1"/>
+<wire x1="142.24" y1="144.78" x2="142.24" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="99.06" y1="228.6" x2="91.44" y2="228.6" width="0.1524" layer="91"/>
 <wire x1="91.44" y1="228.6" x2="91.44" y2="200.66" width="0.1524" layer="91"/>
-<junction x="91.44" y="228.6"/>
 <label x="142.24" y="111.76" size="1.778" layer="95" rot="R90"/>
+<pinref part="R12" gate="R" pin="2"/>
+<wire x1="111.76" y1="144.78" x2="142.24" y2="144.78" width="0.1524" layer="91"/>
+<junction x="142.24" y="144.78"/>
 </segment>
 </net>
 <net name="VDD" class="0">
@@ -10299,24 +10341,27 @@ VAA_PIX   = 2.8V</text>
 <wire x1="111.76" y1="241.3" x2="111.76" y2="243.84" width="0.1524" layer="91"/>
 <junction x="111.76" y="241.3"/>
 <pinref part="C1" gate="CE" pin="2"/>
-<wire x1="111.76" y1="241.3" x2="91.44" y2="241.3" width="0.1524" layer="91"/>
-<wire x1="91.44" y1="241.3" x2="81.28" y2="241.3" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="241.3" x2="81.28" y2="241.3" width="0.1524" layer="91"/>
 <wire x1="81.28" y1="241.3" x2="81.28" y2="231.14" width="0.1524" layer="91"/>
-<pinref part="R1" gate="R" pin="2"/>
-<wire x1="91.44" y1="238.76" x2="91.44" y2="241.3" width="0.1524" layer="91"/>
-<junction x="91.44" y="241.3"/>
 <pinref part="VBUS23" gate="G$1" pin="VDD_IO"/>
 </segment>
 <segment>
 <pinref part="R7" gate="R" pin="2"/>
-<wire x1="124.46" y1="180.34" x2="124.46" y2="177.8" width="0.1524" layer="91"/>
 <pinref part="R8" gate="R" pin="2"/>
 <pinref part="VBUS22" gate="G$1" pin="VDD_IO"/>
-<wire x1="119.38" y1="182.88" x2="114.3" y2="182.88" width="0.1524" layer="91"/>
-<wire x1="114.3" y1="182.88" x2="114.3" y2="177.8" width="0.1524" layer="91"/>
-<wire x1="119.38" y1="182.88" x2="124.46" y2="182.88" width="0.1524" layer="91"/>
-<wire x1="124.46" y1="182.88" x2="124.46" y2="180.34" width="0.1524" layer="91"/>
-<junction x="119.38" y="182.88"/>
+<wire x1="119.38" y1="193.04" x2="114.3" y2="193.04" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="193.04" x2="124.46" y2="193.04" width="0.1524" layer="91"/>
+<junction x="119.38" y="193.04"/>
+</segment>
+<segment>
+<pinref part="VBUS24" gate="G$1" pin="VDD_IO"/>
+<pinref part="R11" gate="R" pin="2"/>
+<wire x1="106.68" y1="165.1" x2="111.76" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="165.1" x2="111.76" y2="162.56" width="0.1524" layer="91"/>
+<pinref part="R10" gate="R" pin="2"/>
+<wire x1="106.68" y1="165.1" x2="101.6" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="165.1" x2="101.6" y2="160.02" width="0.1524" layer="91"/>
+<junction x="106.68" y="165.1"/>
 </segment>
 </net>
 <net name="VAA" class="0">
@@ -10449,12 +10494,12 @@ VAA_PIX   = 2.8V</text>
 <pinref part="U1" gate="G$1" pin="SDATA"/>
 <pinref part="J1" gate="G$1" pin="15"/>
 <wire x1="190.5" y1="193.04" x2="139.7" y2="193.04" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="193.04" x2="139.7" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="193.04" x2="139.7" y2="177.8" width="0.1524" layer="91"/>
 <pinref part="R8" gate="R" pin="1"/>
-<wire x1="139.7" y1="162.56" x2="139.7" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="162.56" x2="114.3" y2="162.56" width="0.1524" layer="91"/>
-<wire x1="114.3" y1="162.56" x2="114.3" y2="167.64" width="0.1524" layer="91"/>
-<junction x="139.7" y="162.56"/>
+<wire x1="139.7" y1="177.8" x2="139.7" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="177.8" x2="114.3" y2="177.8" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="177.8" x2="114.3" y2="182.88" width="0.1524" layer="91"/>
+<junction x="139.7" y="177.8"/>
 <label x="139.7" y="111.76" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
@@ -10463,12 +10508,12 @@ VAA_PIX   = 2.8V</text>
 <pinref part="U1" gate="G$1" pin="SCLK"/>
 <pinref part="J1" gate="G$1" pin="16"/>
 <wire x1="190.5" y1="195.58" x2="137.16" y2="195.58" width="0.1524" layer="91"/>
-<wire x1="137.16" y1="195.58" x2="137.16" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="195.58" x2="137.16" y2="180.34" width="0.1524" layer="91"/>
 <pinref part="R7" gate="R" pin="1"/>
-<wire x1="137.16" y1="165.1" x2="137.16" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="124.46" y1="167.64" x2="124.46" y2="165.1" width="0.1524" layer="91"/>
-<wire x1="124.46" y1="165.1" x2="137.16" y2="165.1" width="0.1524" layer="91"/>
-<junction x="137.16" y="165.1"/>
+<wire x1="137.16" y1="180.34" x2="137.16" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="182.88" x2="124.46" y2="180.34" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="180.34" x2="137.16" y2="180.34" width="0.1524" layer="91"/>
+<junction x="137.16" y="180.34"/>
 <label x="137.16" y="111.76" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
@@ -10477,8 +10522,12 @@ VAA_PIX   = 2.8V</text>
 <pinref part="U1" gate="G$1" pin="!RESET"/>
 <pinref part="J1" gate="G$1" pin="13"/>
 <wire x1="190.5" y1="208.28" x2="144.78" y2="208.28" width="0.1524" layer="91"/>
-<wire x1="144.78" y1="208.28" x2="144.78" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="208.28" x2="144.78" y2="147.32" width="0.1524" layer="91"/>
 <label x="144.78" y="111.76" size="1.778" layer="95" rot="R90"/>
+<pinref part="R9" gate="R" pin="2"/>
+<wire x1="144.78" y1="147.32" x2="144.78" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="147.32" x2="144.78" y2="147.32" width="0.1524" layer="91"/>
+<junction x="144.78" y="147.32"/>
 </segment>
 </net>
 <net name="!OE" class="0">
@@ -10486,8 +10535,12 @@ VAA_PIX   = 2.8V</text>
 <pinref part="U1" gate="G$1" pin="!OE"/>
 <pinref part="J1" gate="G$1" pin="11"/>
 <wire x1="190.5" y1="210.82" x2="149.86" y2="210.82" width="0.1524" layer="91"/>
-<wire x1="149.86" y1="210.82" x2="149.86" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="210.82" x2="149.86" y2="152.4" width="0.1524" layer="91"/>
 <label x="149.86" y="111.76" size="1.778" layer="95" rot="R90"/>
+<pinref part="R11" gate="R" pin="1"/>
+<wire x1="149.86" y1="152.4" x2="149.86" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="152.4" x2="149.86" y2="152.4" width="0.1524" layer="91"/>
+<junction x="149.86" y="152.4"/>
 </segment>
 </net>
 <net name="TRIGGER" class="0">
@@ -10504,8 +10557,12 @@ VAA_PIX   = 2.8V</text>
 <pinref part="U1" gate="G$1" pin="STANDBY"/>
 <pinref part="J1" gate="G$1" pin="12"/>
 <wire x1="190.5" y1="215.9" x2="147.32" y2="215.9" width="0.1524" layer="91"/>
-<wire x1="147.32" y1="215.9" x2="147.32" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="147.32" y1="215.9" x2="147.32" y2="149.86" width="0.1524" layer="91"/>
 <label x="147.32" y="111.76" size="1.778" layer="95" rot="R90"/>
+<pinref part="R10" gate="R" pin="1"/>
+<wire x1="147.32" y1="149.86" x2="147.32" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="149.86" x2="147.32" y2="149.86" width="0.1524" layer="91"/>
+<junction x="147.32" y="149.86"/>
 </segment>
 </net>
 <net name="FLASH" class="0">

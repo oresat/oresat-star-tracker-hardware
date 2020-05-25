@@ -1,28 +1,32 @@
-- C8 0805 22uF should be 1210 
-- see power plane on balls H10 and H11
-- C4 0805 10uF should be 0603 like all others on board, unless there is a compelling reason why not
+SCN == STENCIL CHANGE NEEDED
+
+DONE - C8 0805 22uF should be 1210 
+DONE - see power plane on balls H10 and H11
+DONE - C4 0805 10uF should be 0603 like all others on board, unless there is a compelling reason why not
 - re-number refers, though this might make the second rev confusing
-- it'd be nice if C18, instead of 2.2uF, could be 1uF, or use 2 1uF, 
-- rename JTAG header CM1 to Jx
-- all parts should have correct MPN as attribute
-- D1 should user amber LED part, not green
-- 10uF 0603 should be 0805
+DONE - it'd be nice if C18, instead of 2.2uF, could be 1uF, or use 2 1uF, 
+DONE - rename JTAG header CM1 to Jx
+BOM - all parts should have correct MPN as attribute
+BOM - D1 should user amber LED part, not green
+DONE - 10uF 0603 should be 0805
 - in attributes, note part numbers for different temperature grades for ICs, like CLVCH16T245MDGGREP vs 74LVCH16T245DGGRE4
-- swap tx and rx on UART header
-- fix resistor on MIC842
-- separate C38 and C37
-- fake label text bigger
-- RC circuit on camera reset, see AR0130 datasheet, pg. 14
-- perhaps optional pullups on camera control lines
-- usb lines too close to C37
+IRRELEVANT - swap tx and rx on UART header
+WHAT? - fix resistor on MIC842
+DONE - separate C38 and C37
+WAHT? - fake label text bigger
+SKIP - RC circuit on camera reset, see AR0130 datasheet, pg. 14
+DONE ON CAMERA - perhaps optional pullups on camera control lines
+DONE - usb lines too close to C37
 - this USB ribbon cable is giving me issues, maybe use other type of connector
-- R12 was accidentally deleted(no cream)R39 label on silk
-- c17 label on silk
-- breakout I2C0 !!
-- TPs on reset circuit
-- make font bigger(use minimum oshpark size)
-- labeled TPs would be nice
-- would be nice if SD was closer to edge
-- breakout I2C2 (maybe I2C1 as well)
+DONE - R12 was accidentally deleted(no cream)
+DONE - R39 label on silk
+DONE - c17 label on silk
+DONE - breakout I2C0 !!
+DONE - TPs on reset circuit
+UGH - make font bigger(use minimum oshpark size)
+UGH - labeled TPs would be nice
+CANT? - would be nice if SD was closer to edge
+DONE(TPS) - breakout I2C2 (maybe I2C1 as well)
 - pullups/downs on all camera lines, with control buffer disabled, so that comes up and stays in good state until initialized
-- fix MIC842 footprint
+DONE - fix MIC842 footprint
+add debug board
