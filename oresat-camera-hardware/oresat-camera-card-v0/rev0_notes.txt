@@ -3,7 +3,7 @@ SCN == STENCIL CHANGE NEEDED
 DONE - C8 0805 22uF should be 1210 
 DONE - see power plane on balls H10 and H11
 DONE - C4 0805 10uF should be 0603 like all others on board, unless there is a compelling reason why not
-- re-number refers, though this might make the second rev confusing
+DONE - re-number refers, though this might make the second rev confusing
 DONE - it'd be nice if C18, instead of 2.2uF, could be 1uF, or use 2 1uF, 
 DONE - rename JTAG header CM1 to Jx
 BOM - all parts should have correct MPN as attribute
@@ -13,20 +13,19 @@ DONE - 10uF 0603 should be 0805
 IRRELEVANT - swap tx and rx on UART header
 WHAT? - fix resistor on MIC842
 DONE - separate C38 and C37
-WAHT? - fake label text bigger
 SKIP - RC circuit on camera reset, see AR0130 datasheet, pg. 14
 DONE ON CAMERA - perhaps optional pullups on camera control lines
 DONE - usb lines too close to C37
-- this USB ribbon cable is giving me issues, maybe use other type of connector
+DONE- this USB ribbon cable is giving me issues, maybe use other type of connector
 DONE - R12 was accidentally deleted(no cream)
 DONE - R39 label on silk
 DONE - c17 label on silk
 DONE - breakout I2C0 !!
 DONE - TPs on reset circuit
-UGH - make font bigger(use minimum oshpark size)
+DONE - make font bigger(use minimum oshpark size)
 UGH - labeled TPs would be nice
 CANT? - would be nice if SD was closer to edge
 DONE(TPS) - breakout I2C2 (maybe I2C1 as well)
-- pullups/downs on all camera lines, with control buffer disabled, so that comes up and stays in good state until initialized
+DONE ON CAMERA- pullups/downs on all camera lines, with control buffer disabled, so that comes up and stays in good state until initialized
 DONE - fix MIC842 footprint
-add debug board
+DONE add debug board

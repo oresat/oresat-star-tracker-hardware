@@ -19184,23 +19184,23 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="U7" library="U-OSD3358-512M-BSM" deviceset="OSD3358-512M-BSM" device=""/>
 <part name="TP2" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP4" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP132" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP131" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP130" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP129" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="SUPPLY3" library="SparkFun-PowerSymbols" deviceset="VDD" device=""/>
 <part name="3V-28" library="oresat-supplies" deviceset="3.3V" device=""/>
 <part name="TP3" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP163" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP165" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP161" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP164" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP162" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP165" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP163" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="GND73" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="GND74" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="TP151" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP155" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP166" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP139" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP130" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP119" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP167" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP140" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP132" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP121" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="D1" library="SparkFun-LED" deviceset="LED-GREEN" device="0603" value="GREEN"/>
 <part name="R1" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="1k"/>
 <part name="GND71" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
@@ -19250,17 +19250,17 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="GND30" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="3V-4" library="oresat-supplies" deviceset="3.3V" device=""/>
 <part name="C11" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="0.1uF"/>
-<part name="C9" library="oresat-rcl" deviceset="C-EU" device="0805-B" value="10uF"/>
+<part name="C8" library="oresat-rcl" deviceset="C-EU" device="0805-B" value="10uF"/>
 <part name="3V-23" library="oresat-supplies" deviceset="3.3V" device=""/>
 <part name="GND51" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="R8" library="R-Panasonic-EXB_A10PXXXJ" deviceset="EXB-A10P391J" device="C_ARRAY_EXBA-M" value="10K"/>
-<part name="R23" library="R-Panasonic-EXB_A10PXXXJ" deviceset="EXB-A10P391J" device="C_ARRAY_EXBA-M" value="100K"/>
-<part name="R25" library="R-Panasonic-EXB_A10PXXXJ" deviceset="EXB-A10P391J" device="C_ARRAY_EXBA-M" value="100K"/>
 <part name="R24" library="R-Panasonic-EXB_A10PXXXJ" deviceset="EXB-A10P391J" device="C_ARRAY_EXBA-M" value="100K"/>
+<part name="R26" library="R-Panasonic-EXB_A10PXXXJ" deviceset="EXB-A10P391J" device="C_ARRAY_EXBA-M" value="100K"/>
+<part name="R25" library="R-Panasonic-EXB_A10PXXXJ" deviceset="EXB-A10P391J" device="C_ARRAY_EXBA-M" value="100K"/>
 <part name="U3" library="U-Generic-eMMC-153pin" deviceset="EMMC+RESET+5.1-COMPATIBLE" device="-BA"/>
 <part name="3V-17" library="oresat-supplies" deviceset="3.3V" device=""/>
 <part name="GND44" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="C8" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="1uF"/>
+<part name="C9" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="1uF"/>
 <part name="C6" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="1uF"/>
 <part name="C5" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="1uF"/>
 <part name="C3" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="1uF"/>
@@ -19283,8 +19283,8 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <attribute name="MPN" value="TCAN330GDCNT"/>
 </part>
 <part name="3V-5" library="oresat-supplies" deviceset="3.3V" device=""/>
-<part name="TP33" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP39" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP35" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP40" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="C14" library="oresat-rcl" deviceset="C-EU" device="C1210" value="22uF"/>
 <part name="GND66" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="C13" library="oresat-rcl" deviceset="C-EU" device="C1210" value="22uF"/>
@@ -19296,8 +19296,8 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="U6" library="U-TI-CLVCH16T245MDGxREP-16bit-TRX" deviceset="CLVCH16T245MDGGREP" device=""/>
 <part name="JP111" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_3_1-NC_TRACE" device="_SILK"/>
 <part name="JP110" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_3_1-NC_TRACE" device="_SILK"/>
+<part name="JP103" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_3_1-NC_TRACE" device="_SILK"/>
 <part name="JP102" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_3_1-NC_TRACE" device="_SILK"/>
-<part name="JP101" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_3_1-NC_TRACE" device="_SILK"/>
 <part name="U9" library="U-TI-TCA9509DGKR-I2C_repeater" deviceset="TCA9509DGKR" device="DGK8-M"/>
 <part name="GND36" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="C27" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="1uF"/>
@@ -19348,63 +19348,63 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="U10" library="U-TI-TLVH431-Shunt-Regulator" deviceset="TLVH431" device="" value="TLVH431"/>
 <part name="R28" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10.0K"/>
 <part name="R31" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="40.2K"/>
-<part name="R26" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="499"/>
+<part name="R23" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="499"/>
 <part name="3V-1" library="oresat-supplies" deviceset="5V" device=""/>
 <part name="3V-2" library="oresat-supplies" deviceset="5V" device=""/>
 <part name="3V-27" library="oresat-supplies" deviceset="5V_IN" device=""/>
 <part name="3V-26" library="oresat-supplies" deviceset="5V" device=""/>
 <part name="TP22" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP35" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP34" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP32" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP31" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP34" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP33" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP30" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP177" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP100" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP180" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP104" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP123" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP116" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP101" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP115" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP105" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP124" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP118" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP120" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP125" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP114" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP112" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP180" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP181" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP161" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP111" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP177" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP178" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP162" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP153" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP152" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP158" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP159" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP143" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP175" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP160" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP146" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP138" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP148" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP135" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP174" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP158" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP147" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP137" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP149" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP134" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP156" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP154" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP159" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP168" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP160" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP166" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP173" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP157" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP172" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP150" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP144" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP40" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP145" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP39" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP38" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP178" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP174" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP181" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP175" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP176" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP171" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP169" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP179" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP141" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP140" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP105" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP139" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP101" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP126" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP120" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP104" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP102" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP118" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP100" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP106" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP113" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP8" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP11" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
@@ -19429,34 +19429,34 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="TP18" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP15" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP16" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP117" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP119" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP28" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP115" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP116" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="FRAME3" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="FRAME_D_L" device=""/>
 <part name="FRAME4" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="FRAME_B_L" device=""/>
 <part name="FRAME5" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="FRAME_B_L" device=""/>
 <part name="GND43" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="U8" library="U-TI-TLV70028QDDCRQ1-VoltageReg" deviceset="TLV70028QDDCRQ1" device=""/>
 <part name="TP122" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP103" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP109" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP121" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP107" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP108" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP117" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP103" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="3V-11" library="oresat-supplies" deviceset="3.3V" device=""/>
 <part name="R9" library="R-Panasonic-EXB_A10PXXXJ" deviceset="EXB-A10P391J" device="C_ARRAY_EXBA-M" value="10K"/>
 <part name="U1" library="U-Semtec-RCLAMP0504FB" deviceset="RCLAMP0504FB" device=""/>
 <part name="3V-15" library="oresat-supplies" deviceset="3.3V" device=""/>
 <part name="R10" library="R-Panasonic-EXB_A10PXXXJ" deviceset="EXB-A10P391J" device="C_ARRAY_EXBA-M" value="10K"/>
 <part name="TP1" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="JP103" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NC_TRACE" device="_SILK"/>
+<part name="JP101" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NC_TRACE" device="_SILK"/>
 <part name="JP104" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NC_TRACE" device="_SILK"/>
 <part name="TP133" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP145" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP127" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP144" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP128" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP129" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP134" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP147" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP127" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP131" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP135" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP148" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="D7" library="SparkFun-LED" deviceset="LED-GREEN" device="0603" value="GREEN">
 <attribute name="PROD_ID" value=""/>
 </part>
@@ -19783,7 +19783,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="TP59" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP58" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP51" library="Tova" deviceset="TEST-POINT" device=""/>
-<part name="TP169" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP170" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP25" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="C15" library="oresat-rcl" deviceset="C-EU" device="C1210" value="22uF"/>
 <part name="GND75" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
@@ -19793,7 +19793,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="Y2" library="OSD3358-SM-RED Platform" deviceset="ABS07-32.768KHZ-T" device="">
 <attribute name="MPN" value="ABS07-32.768KHZ-T"/>
 </part>
-<part name="TP167" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP168" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="R20" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k"/>
 <part name="R22" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k"/>
 <part name="3V-25" library="oresat-supplies" deviceset="3.3V" device=""/>
@@ -19803,27 +19803,27 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <attribute name="MFR" value="Samsung"/>
 <attribute name="MPN" value="RC1005F6653CS"/>
 </part>
-<part name="TP111" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP108" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP110" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP109" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="J1" library="oresat-debug-connector" deviceset="ORESAT-DEBUG-CONNECTOR" device="-CARD"/>
 <part name="GND76" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="C12" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="1uF"/>
 <part name="C10" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="1uF"/>
-<part name="TP106" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP110" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP102" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP112" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP182" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP170" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP137" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP171" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP138" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="JP100" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NC_TRACE" device="_SILK"/>
 <part name="GND35" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="J3" library="SparkFun-Connectors" deviceset="CONN_03" device="LONGPADS"/>
-<part name="JP109" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_3_1-NC_TRACE" device="_SILK"/>
-<part name="JP108" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_3_1-NC_TRACE" device="_SILK"/>
-<part name="JP106" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_3_1-NC_TRACE" device="_SILK"/>
-<part name="JP107" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_3_NO" device="_NO_SILK"/>
 <part name="JP105" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_3_1-NC_TRACE" device="_SILK"/>
+<part name="JP106" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_3_1-NC_TRACE" device="_SILK"/>
+<part name="JP108" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_3_1-NC_TRACE" device="_SILK"/>
+<part name="JP107" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_3_NO" device="_NO_SILK"/>
+<part name="JP109" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_3_1-NC_TRACE" device="_SILK"/>
 <part name="TP142" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP149" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP146" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="J2" library="SparkFun-Connectors" deviceset="CONN_02" device="PTH3"/>
 </parts>
 <sheets>
@@ -21877,7 +21877,7 @@ SYSBOOT[2] LOW == SD Card</text>
 <attribute name="NAME" x="117.856" y="396.875" size="1.778" layer="95"/>
 <attribute name="VALUE" x="117.856" y="392.049" size="1.778" layer="96"/>
 </instance>
-<instance part="C9" gate="CE" x="106.68" y="396.24" smashed="yes">
+<instance part="C8" gate="CE" x="106.68" y="396.24" smashed="yes">
 <attribute name="NAME" x="107.696" y="396.875" size="1.778" layer="95"/>
 <attribute name="VALUE" x="107.696" y="392.049" size="1.778" layer="96"/>
 </instance>
@@ -21891,15 +21891,15 @@ SYSBOOT[2] LOW == SD Card</text>
 <attribute name="VALUE" x="165.2016" y="429.3108" size="1.778" layer="96" font="vector" ratio="10" rot="SR0"/>
 <attribute name="NAME" x="165.0492" y="431.8508" size="1.778" layer="95" font="vector" ratio="10" rot="SR0"/>
 </instance>
-<instance part="R23" gate="A" x="711.2" y="429.26" smashed="yes" rot="R90">
+<instance part="R24" gate="A" x="711.2" y="429.26" smashed="yes" rot="R90">
 <attribute name="VALUE" x="711.3016" y="431.8508" size="1.778" layer="96" font="vector" ratio="10" rot="SR0"/>
 <attribute name="NAME" x="711.1492" y="434.3908" size="1.778" layer="95" font="vector" ratio="10" rot="SR0"/>
 </instance>
-<instance part="R25" gate="A" x="673.1" y="332.74" smashed="yes" rot="R270">
+<instance part="R26" gate="A" x="673.1" y="332.74" smashed="yes" rot="R270">
 <attribute name="VALUE" x="655.4216" y="327.7108" size="1.778" layer="96" font="vector" ratio="10" rot="SR0"/>
 <attribute name="NAME" x="655.2692" y="330.2508" size="1.778" layer="95" font="vector" ratio="10" rot="SR0"/>
 </instance>
-<instance part="R24" gate="A" x="698.5" y="332.74" smashed="yes" rot="R270">
+<instance part="R25" gate="A" x="698.5" y="332.74" smashed="yes" rot="R270">
 <attribute name="VALUE" x="698.6016" y="327.7108" size="1.778" layer="96" font="vector" ratio="10" rot="SR0"/>
 <attribute name="NAME" x="698.4492" y="330.2508" size="1.778" layer="95" font="vector" ratio="10" rot="SR0"/>
 </instance>
@@ -21913,7 +21913,7 @@ SYSBOOT[2] LOW == SD Card</text>
 <instance part="GND44" gate="1" x="449.58" y="307.34" smashed="yes">
 <attribute name="VALUE" x="449.58" y="307.086" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="C8" gate="CE" x="480.06" y="332.74" smashed="yes">
+<instance part="C9" gate="CE" x="480.06" y="332.74" smashed="yes">
 <attribute name="NAME" x="481.076" y="333.375" size="1.778" layer="95"/>
 <attribute name="VALUE" x="481.076" y="328.549" size="1.778" layer="96"/>
 </instance>
@@ -21959,10 +21959,10 @@ SYSBOOT[2] LOW == SD Card</text>
 <instance part="3V-5" gate="G$1" x="226.06" y="500.38" smashed="yes" rot="MR0">
 <attribute name="VALUE" x="226.695" y="501.015" size="1.27" layer="96" rot="MR0"/>
 </instance>
-<instance part="TP33" gate="G$1" x="243.84" y="480.06" smashed="yes">
+<instance part="TP35" gate="G$1" x="243.84" y="480.06" smashed="yes">
 <attribute name="NAME" x="248.412" y="479.298" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="TP39" gate="G$1" x="243.84" y="485.14" smashed="yes">
+<instance part="TP40" gate="G$1" x="243.84" y="485.14" smashed="yes">
 <attribute name="NAME" x="248.412" y="484.378" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="J101" gate="A" x="429.26" y="58.42" smashed="yes" rot="R270">
@@ -21986,10 +21986,10 @@ SYSBOOT[2] LOW == SD Card</text>
 <instance part="JP110" gate="G$1" x="223.52" y="345.44" smashed="yes" rot="R180">
 <attribute name="NAME" x="220.98" y="345.059" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
-<instance part="JP102" gate="G$1" x="215.9" y="337.82" smashed="yes" rot="R180">
+<instance part="JP103" gate="G$1" x="215.9" y="337.82" smashed="yes" rot="R180">
 <attribute name="NAME" x="213.36" y="337.439" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
-<instance part="JP101" gate="G$1" x="208.28" y="330.2" smashed="yes" rot="R180">
+<instance part="JP102" gate="G$1" x="208.28" y="330.2" smashed="yes" rot="R180">
 <attribute name="NAME" x="205.74" y="329.819" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
 <instance part="U9" gate="A" x="401.32" y="157.48" smashed="yes">
@@ -22152,7 +22152,7 @@ SYSBOOT[2] LOW == SD Card</text>
 <instance part="TP22" gate="G$1" x="256.54" y="365.76" smashed="yes" rot="R90">
 <attribute name="NAME" x="257.302" y="370.332" size="1.778" layer="95" font="vector" rot="R90"/>
 </instance>
-<instance part="TP35" gate="G$1" x="287.02" y="368.3" smashed="yes" rot="R180">
+<instance part="TP34" gate="G$1" x="287.02" y="368.3" smashed="yes" rot="R180">
 <attribute name="NAME" x="282.448" y="369.062" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
 <instance part="TP32" gate="G$1" x="287.02" y="370.84" smashed="yes" rot="R180">
@@ -22161,31 +22161,31 @@ SYSBOOT[2] LOW == SD Card</text>
 <instance part="TP31" gate="G$1" x="287.02" y="373.38" smashed="yes" rot="R180">
 <attribute name="NAME" x="282.448" y="374.142" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
-<instance part="TP34" gate="G$1" x="287.02" y="375.92" smashed="yes" rot="R180">
+<instance part="TP33" gate="G$1" x="287.02" y="375.92" smashed="yes" rot="R180">
 <attribute name="NAME" x="282.448" y="376.682" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
 <instance part="TP30" gate="G$1" x="287.02" y="312.42" smashed="yes" rot="R90">
 <attribute name="NAME" x="287.782" y="316.992" size="1.778" layer="95" font="vector" rot="R90"/>
 </instance>
-<instance part="TP177" gate="G$1" x="287.02" y="307.34" smashed="yes" rot="R270">
+<instance part="TP180" gate="G$1" x="287.02" y="307.34" smashed="yes" rot="R270">
 <attribute name="NAME" x="286.258" y="302.768" size="1.778" layer="95" font="vector" rot="R270"/>
 </instance>
-<instance part="TP100" gate="G$1" x="353.06" y="322.58" smashed="yes">
+<instance part="TP104" gate="G$1" x="353.06" y="322.58" smashed="yes">
 <attribute name="NAME" x="357.632" y="321.818" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="TP123" gate="G$1" x="353.06" y="320.04" smashed="yes">
 <attribute name="NAME" x="357.632" y="319.278" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="TP116" gate="G$1" x="353.06" y="317.5" smashed="yes">
+<instance part="TP115" gate="G$1" x="353.06" y="317.5" smashed="yes">
 <attribute name="NAME" x="357.632" y="316.738" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="TP101" gate="G$1" x="353.06" y="314.96" smashed="yes">
+<instance part="TP105" gate="G$1" x="353.06" y="314.96" smashed="yes">
 <attribute name="NAME" x="357.632" y="314.198" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="TP124" gate="G$1" x="353.06" y="312.42" smashed="yes">
 <attribute name="NAME" x="357.632" y="311.658" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="TP118" gate="G$1" x="353.06" y="309.88" smashed="yes">
+<instance part="TP120" gate="G$1" x="353.06" y="309.88" smashed="yes">
 <attribute name="NAME" x="357.632" y="309.118" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="TP125" gate="G$1" x="353.06" y="368.3" smashed="yes">
@@ -22194,16 +22194,16 @@ SYSBOOT[2] LOW == SD Card</text>
 <instance part="TP114" gate="G$1" x="353.06" y="365.76" smashed="yes">
 <attribute name="NAME" x="357.632" y="364.998" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="TP112" gate="G$1" x="353.06" y="363.22" smashed="yes">
+<instance part="TP111" gate="G$1" x="353.06" y="363.22" smashed="yes">
 <attribute name="NAME" x="357.632" y="362.458" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="TP180" gate="G$1" x="287.02" y="401.32" smashed="yes" rot="R180">
+<instance part="TP177" gate="G$1" x="287.02" y="401.32" smashed="yes" rot="R180">
 <attribute name="NAME" x="282.448" y="402.082" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
-<instance part="TP181" gate="G$1" x="287.02" y="398.78" smashed="yes" rot="R180">
+<instance part="TP178" gate="G$1" x="287.02" y="398.78" smashed="yes" rot="R180">
 <attribute name="NAME" x="282.448" y="399.542" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
-<instance part="TP161" gate="G$1" x="637.54" y="345.44" smashed="yes">
+<instance part="TP162" gate="G$1" x="637.54" y="345.44" smashed="yes">
 <attribute name="NAME" x="642.112" y="344.678" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="TP153" gate="G$1" x="637.54" y="342.9" smashed="yes">
@@ -22212,43 +22212,43 @@ SYSBOOT[2] LOW == SD Card</text>
 <instance part="TP152" gate="G$1" x="637.54" y="340.36" smashed="yes">
 <attribute name="NAME" x="642.112" y="339.598" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="TP158" gate="G$1" x="637.54" y="337.82" smashed="yes">
+<instance part="TP159" gate="G$1" x="637.54" y="337.82" smashed="yes">
 <attribute name="NAME" x="642.112" y="337.058" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="TP143" gate="G$1" x="571.5" y="345.44" smashed="yes" rot="R180">
 <attribute name="NAME" x="566.928" y="346.202" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
-<instance part="TP175" gate="G$1" x="571.5" y="342.9" smashed="yes" rot="R180">
+<instance part="TP174" gate="G$1" x="571.5" y="342.9" smashed="yes" rot="R180">
 <attribute name="NAME" x="566.928" y="343.662" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
-<instance part="TP160" gate="G$1" x="571.5" y="340.36" smashed="yes" rot="R180">
+<instance part="TP158" gate="G$1" x="571.5" y="340.36" smashed="yes" rot="R180">
 <attribute name="NAME" x="566.928" y="341.122" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
-<instance part="TP146" gate="G$1" x="571.5" y="388.62" smashed="yes" rot="R180">
+<instance part="TP147" gate="G$1" x="571.5" y="388.62" smashed="yes" rot="R180">
 <attribute name="NAME" x="566.928" y="389.382" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
-<instance part="TP138" gate="G$1" x="571.5" y="386.08" smashed="yes" rot="R180">
+<instance part="TP137" gate="G$1" x="571.5" y="386.08" smashed="yes" rot="R180">
 <attribute name="NAME" x="566.928" y="386.842" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
-<instance part="TP148" gate="G$1" x="571.5" y="383.54" smashed="yes" rot="R180">
+<instance part="TP149" gate="G$1" x="571.5" y="383.54" smashed="yes" rot="R180">
 <attribute name="NAME" x="566.928" y="384.302" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
-<instance part="TP135" gate="G$1" x="571.5" y="381" smashed="yes" rot="R180">
+<instance part="TP134" gate="G$1" x="571.5" y="381" smashed="yes" rot="R180">
 <attribute name="NAME" x="566.928" y="381.762" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
-<instance part="TP105" gate="G$1" x="353.06" y="393.7" smashed="yes">
+<instance part="TP101" gate="G$1" x="353.06" y="393.7" smashed="yes">
 <attribute name="NAME" x="357.632" y="392.938" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="TP126" gate="G$1" x="353.06" y="396.24" smashed="yes">
 <attribute name="NAME" x="357.632" y="395.478" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="TP120" gate="G$1" x="353.06" y="398.78" smashed="yes">
+<instance part="TP118" gate="G$1" x="353.06" y="398.78" smashed="yes">
 <attribute name="NAME" x="357.632" y="398.018" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="TP104" gate="G$1" x="353.06" y="401.32" smashed="yes">
+<instance part="TP100" gate="G$1" x="353.06" y="401.32" smashed="yes">
 <attribute name="NAME" x="357.632" y="400.558" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="TP102" gate="G$1" x="353.06" y="406.4" smashed="yes">
+<instance part="TP106" gate="G$1" x="353.06" y="406.4" smashed="yes">
 <attribute name="NAME" x="357.632" y="405.638" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="TP113" gate="G$1" x="599.44" y="190.5" smashed="yes">
@@ -22323,13 +22323,13 @@ SYSBOOT[2] LOW == SD Card</text>
 <instance part="TP16" gate="G$1" x="294.64" y="220.98" smashed="yes">
 <attribute name="NAME" x="299.212" y="220.218" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="TP117" gate="G$1" x="294.64" y="218.44" smashed="yes">
+<instance part="TP119" gate="G$1" x="294.64" y="218.44" smashed="yes">
 <attribute name="NAME" x="299.212" y="217.678" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="TP28" gate="G$1" x="294.64" y="215.9" smashed="yes">
 <attribute name="NAME" x="299.212" y="215.138" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="TP115" gate="G$1" x="294.64" y="213.36" smashed="yes">
+<instance part="TP116" gate="G$1" x="294.64" y="213.36" smashed="yes">
 <attribute name="NAME" x="299.212" y="212.598" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="FRAME3" gate="G$1" x="431.8" y="0" smashed="yes"/>
@@ -22345,16 +22345,16 @@ SYSBOOT[2] LOW == SD Card</text>
 <instance part="TP122" gate="G$1" x="353.06" y="358.14" smashed="yes">
 <attribute name="NAME" x="357.632" y="357.378" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="TP103" gate="G$1" x="353.06" y="350.52" smashed="yes">
+<instance part="TP107" gate="G$1" x="353.06" y="350.52" smashed="yes">
 <attribute name="NAME" x="357.632" y="349.758" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="TP109" gate="G$1" x="353.06" y="378.46" smashed="yes">
+<instance part="TP108" gate="G$1" x="353.06" y="378.46" smashed="yes">
 <attribute name="NAME" x="357.632" y="377.698" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="TP121" gate="G$1" x="353.06" y="375.92" smashed="yes">
+<instance part="TP117" gate="G$1" x="353.06" y="375.92" smashed="yes">
 <attribute name="NAME" x="357.632" y="375.158" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="TP107" gate="G$1" x="353.06" y="373.38" smashed="yes">
+<instance part="TP103" gate="G$1" x="353.06" y="373.38" smashed="yes">
 <attribute name="NAME" x="357.632" y="372.618" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="3V-11" gate="G$1" x="396.24" y="373.38" smashed="yes">
@@ -22371,19 +22371,19 @@ SYSBOOT[2] LOW == SD Card</text>
 <attribute name="VALUE" x="403.9616" y="368.3508" size="1.778" layer="96" font="vector" ratio="10" rot="SR0"/>
 <attribute name="NAME" x="403.8092" y="370.8908" size="1.778" layer="95" font="vector" ratio="10" rot="SR0"/>
 </instance>
-<instance part="TP127" gate="G$1" x="353.06" y="292.1" smashed="yes">
+<instance part="TP128" gate="G$1" x="353.06" y="292.1" smashed="yes">
 <attribute name="NAME" x="357.632" y="291.338" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="TP128" gate="G$1" x="353.06" y="294.64" smashed="yes">
+<instance part="TP127" gate="G$1" x="353.06" y="294.64" smashed="yes">
 <attribute name="NAME" x="357.632" y="293.878" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="TP129" gate="G$1" x="353.06" y="297.18" smashed="yes">
+<instance part="TP131" gate="G$1" x="353.06" y="297.18" smashed="yes">
 <attribute name="NAME" x="357.632" y="296.418" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="TP134" gate="G$1" x="353.06" y="299.72" smashed="yes">
+<instance part="TP135" gate="G$1" x="353.06" y="299.72" smashed="yes">
 <attribute name="NAME" x="357.632" y="298.958" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="TP147" gate="G$1" x="571.5" y="375.92" smashed="yes" rot="R180">
+<instance part="TP148" gate="G$1" x="571.5" y="375.92" smashed="yes" rot="R180">
 <attribute name="NAME" x="566.928" y="376.682" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
 <instance part="C12" gate="CE" x="464.82" y="332.74" smashed="yes">
@@ -22398,25 +22398,25 @@ SYSBOOT[2] LOW == SD Card</text>
 <attribute name="VALUE" x="731.52" y="370.586" size="1.778" layer="96" font="vector" rot="R180"/>
 <attribute name="NAME" x="731.52" y="357.632" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
-<instance part="JP109" gate="G$1" x="711.2" y="398.78" smashed="yes">
+<instance part="JP105" gate="G$1" x="711.2" y="398.78" smashed="yes">
 <attribute name="NAME" x="713.74" y="399.161" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="JP108" gate="G$1" x="726.44" y="398.78" smashed="yes">
+<instance part="JP106" gate="G$1" x="726.44" y="398.78" smashed="yes">
 <attribute name="NAME" x="728.98" y="399.161" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="JP106" gate="G$1" x="756.92" y="398.78" smashed="yes" rot="MR180">
+<instance part="JP108" gate="G$1" x="756.92" y="398.78" smashed="yes" rot="MR180">
 <attribute name="NAME" x="759.46" y="398.399" size="1.778" layer="95" font="vector" rot="MR180"/>
 </instance>
 <instance part="JP107" gate="G$1" x="741.68" y="398.78" smashed="yes">
 <attribute name="NAME" x="744.22" y="399.161" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="JP105" gate="G$1" x="772.16" y="398.78" smashed="yes" rot="MR180">
+<instance part="JP109" gate="G$1" x="772.16" y="398.78" smashed="yes" rot="MR180">
 <attribute name="NAME" x="774.7" y="398.399" size="1.778" layer="95" font="vector" rot="MR180"/>
 </instance>
 <instance part="TP142" gate="G$1" x="289.56" y="411.48" smashed="yes">
 <attribute name="NAME" x="288.29" y="413.385" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="TP149" gate="G$1" x="287.02" y="411.48" smashed="yes" rot="R180">
+<instance part="TP146" gate="G$1" x="287.02" y="411.48" smashed="yes" rot="R180">
 <attribute name="NAME" x="288.29" y="409.575" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
 </instances>
@@ -22471,7 +22471,7 @@ SYSBOOT[2] LOW == SD Card</text>
 </segment>
 <segment>
 <pinref part="3V-23" gate="G$1" pin="3.3V"/>
-<pinref part="R23" gate="A" pin="55"/>
+<pinref part="R24" gate="A" pin="55"/>
 <wire x1="721.36" y1="434.34" x2="721.36" y2="431.8" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -22481,7 +22481,7 @@ SYSBOOT[2] LOW == SD Card</text>
 <wire x1="449.58" y1="350.52" x2="449.58" y2="353.06" width="0.1524" layer="91"/>
 <wire x1="449.58" y1="353.06" x2="447.04" y2="353.06" width="0.1524" layer="91"/>
 <junction x="447.04" y="353.06"/>
-<pinref part="C8" gate="CE" pin="1"/>
+<pinref part="C9" gate="CE" pin="1"/>
 <wire x1="480.06" y1="335.28" x2="480.06" y2="340.36" width="0.1524" layer="91"/>
 <wire x1="480.06" y1="340.36" x2="480.06" y2="353.06" width="0.1524" layer="91"/>
 <wire x1="480.06" y1="353.06" x2="449.58" y2="353.06" width="0.1524" layer="91"/>
@@ -22510,7 +22510,7 @@ SYSBOOT[2] LOW == SD Card</text>
 <pinref part="3V-3" gate="G$1" pin="3.3V"/>
 <wire x1="160.02" y1="396.24" x2="160.02" y2="414.02" width="0.1524" layer="91"/>
 <wire x1="160.02" y1="414.02" x2="134.62" y2="414.02" width="0.1524" layer="91"/>
-<pinref part="C9" gate="CE" pin="1"/>
+<pinref part="C8" gate="CE" pin="1"/>
 <wire x1="134.62" y1="414.02" x2="116.84" y2="414.02" width="0.1524" layer="91"/>
 <wire x1="116.84" y1="414.02" x2="106.68" y2="414.02" width="0.1524" layer="91"/>
 <wire x1="106.68" y1="414.02" x2="106.68" y2="398.78" width="0.1524" layer="91"/>
@@ -22622,7 +22622,7 @@ SYSBOOT[2] LOW == SD Card</text>
 <segment>
 <pinref part="U7" gate="D" pin="LCD_DATA0"/>
 <wire x1="635" y1="388.62" x2="706.12" y2="388.62" width="0.1524" layer="91"/>
-<pinref part="JP109" gate="G$1" pin="2"/>
+<pinref part="JP105" gate="G$1" pin="2"/>
 <wire x1="706.12" y1="388.62" x2="706.12" y2="398.78" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -22630,7 +22630,7 @@ SYSBOOT[2] LOW == SD Card</text>
 <segment>
 <wire x1="635" y1="386.08" x2="721.36" y2="386.08" width="0.1524" layer="91"/>
 <pinref part="U7" gate="D" pin="LCD_DATA1"/>
-<pinref part="JP108" gate="G$1" pin="2"/>
+<pinref part="JP106" gate="G$1" pin="2"/>
 <wire x1="721.36" y1="386.08" x2="721.36" y2="398.78" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -22651,7 +22651,7 @@ SYSBOOT[2] LOW == SD Card</text>
 <segment>
 <wire x1="635" y1="381" x2="751.84" y2="381" width="0.1524" layer="91"/>
 <pinref part="U7" gate="D" pin="LCD_DATA3"/>
-<pinref part="JP106" gate="G$1" pin="2"/>
+<pinref part="JP108" gate="G$1" pin="2"/>
 <wire x1="751.84" y1="381" x2="751.84" y2="398.78" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -22660,7 +22660,7 @@ SYSBOOT[2] LOW == SD Card</text>
 <wire x1="635" y1="378.46" x2="767.08" y2="378.46" width="0.1524" layer="91"/>
 <pinref part="U7" gate="D" pin="LCD_DATA4"/>
 <wire x1="767.08" y1="378.46" x2="767.08" y2="398.78" width="0.1524" layer="91"/>
-<pinref part="JP105" gate="G$1" pin="2"/>
+<pinref part="JP109" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$585" class="0">
@@ -22668,7 +22668,7 @@ SYSBOOT[2] LOW == SD Card</text>
 <pinref part="U7" gate="D" pin="LCD_DATA5"/>
 <wire x1="635" y1="375.92" x2="683.26" y2="375.92" width="0.1524" layer="91"/>
 <wire x1="683.26" y1="375.92" x2="683.26" y2="345.44" width="0.1524" layer="91"/>
-<pinref part="R24" gate="A" pin="44"/>
+<pinref part="R25" gate="A" pin="44"/>
 </segment>
 </net>
 <net name="N$586" class="0">
@@ -22676,7 +22676,7 @@ SYSBOOT[2] LOW == SD Card</text>
 <pinref part="U7" gate="D" pin="LCD_DATA6"/>
 <wire x1="635" y1="373.38" x2="685.8" y2="373.38" width="0.1524" layer="91"/>
 <wire x1="685.8" y1="373.38" x2="685.8" y2="345.44" width="0.1524" layer="91"/>
-<pinref part="R24" gate="A" pin="77"/>
+<pinref part="R25" gate="A" pin="77"/>
 </segment>
 </net>
 <net name="N$587" class="0">
@@ -22684,7 +22684,7 @@ SYSBOOT[2] LOW == SD Card</text>
 <pinref part="U7" gate="D" pin="LCD_DATA8"/>
 <wire x1="635" y1="368.3" x2="657.86" y2="368.3" width="0.1524" layer="91"/>
 <wire x1="657.86" y1="345.44" x2="657.86" y2="368.3" width="0.1524" layer="91"/>
-<pinref part="R25" gate="A" pin="44"/>
+<pinref part="R26" gate="A" pin="44"/>
 </segment>
 </net>
 <net name="N$588" class="0">
@@ -22692,7 +22692,7 @@ SYSBOOT[2] LOW == SD Card</text>
 <pinref part="U7" gate="D" pin="LCD_DATA9"/>
 <wire x1="635" y1="365.76" x2="660.4" y2="365.76" width="0.1524" layer="91"/>
 <wire x1="660.4" y1="345.44" x2="660.4" y2="365.76" width="0.1524" layer="91"/>
-<pinref part="R25" gate="A" pin="77"/>
+<pinref part="R26" gate="A" pin="77"/>
 </segment>
 </net>
 <net name="N$591" class="0">
@@ -22700,7 +22700,7 @@ SYSBOOT[2] LOW == SD Card</text>
 <pinref part="U7" gate="D" pin="LCD_DATA10"/>
 <wire x1="635" y1="363.22" x2="662.94" y2="363.22" width="0.1524" layer="91"/>
 <wire x1="662.94" y1="345.44" x2="662.94" y2="363.22" width="0.1524" layer="91"/>
-<pinref part="R25" gate="A" pin="33"/>
+<pinref part="R26" gate="A" pin="33"/>
 </segment>
 </net>
 <net name="N$592" class="0">
@@ -22708,7 +22708,7 @@ SYSBOOT[2] LOW == SD Card</text>
 <wire x1="635" y1="360.68" x2="665.48" y2="360.68" width="0.1524" layer="91"/>
 <pinref part="U7" gate="D" pin="LCD_DATA11"/>
 <wire x1="665.48" y1="345.44" x2="665.48" y2="360.68" width="0.1524" layer="91"/>
-<pinref part="R25" gate="A" pin="88"/>
+<pinref part="R26" gate="A" pin="88"/>
 </segment>
 </net>
 <net name="N$594" class="0">
@@ -22716,7 +22716,7 @@ SYSBOOT[2] LOW == SD Card</text>
 <wire x1="635" y1="358.14" x2="668.02" y2="358.14" width="0.1524" layer="91"/>
 <pinref part="U7" gate="D" pin="LCD_DATA12"/>
 <wire x1="668.02" y1="345.44" x2="668.02" y2="358.14" width="0.1524" layer="91"/>
-<pinref part="R25" gate="A" pin="22"/>
+<pinref part="R26" gate="A" pin="22"/>
 </segment>
 </net>
 <net name="N$595" class="0">
@@ -22724,7 +22724,7 @@ SYSBOOT[2] LOW == SD Card</text>
 <wire x1="635" y1="355.6" x2="670.56" y2="355.6" width="0.1524" layer="91"/>
 <pinref part="U7" gate="D" pin="LCD_DATA13"/>
 <wire x1="670.56" y1="345.44" x2="670.56" y2="355.6" width="0.1524" layer="91"/>
-<pinref part="R25" gate="A" pin="99"/>
+<pinref part="R26" gate="A" pin="99"/>
 </segment>
 </net>
 <net name="N$601" class="0">
@@ -22734,7 +22734,7 @@ SYSBOOT[2] LOW == SD Card</text>
 <wire x1="652.78" y1="353.06" x2="652.78" y2="391.16" width="0.1524" layer="91"/>
 <wire x1="652.78" y1="391.16" x2="701.04" y2="391.16" width="0.1524" layer="91"/>
 <wire x1="701.04" y1="391.16" x2="701.04" y2="411.48" width="0.1524" layer="91"/>
-<pinref part="R23" gate="A" pin="44"/>
+<pinref part="R24" gate="A" pin="44"/>
 <wire x1="701.04" y1="411.48" x2="726.44" y2="411.48" width="0.1524" layer="91"/>
 <wire x1="726.44" y1="411.48" x2="726.44" y2="416.56" width="0.1524" layer="91"/>
 </segment>
@@ -22744,7 +22744,7 @@ SYSBOOT[2] LOW == SD Card</text>
 <wire x1="635" y1="350.52" x2="673.1" y2="350.52" width="0.1524" layer="91"/>
 <pinref part="U7" gate="D" pin="LCD_DATA15"/>
 <wire x1="673.1" y1="350.52" x2="673.1" y2="345.44" width="0.1524" layer="91"/>
-<pinref part="R25" gate="A" pin="11"/>
+<pinref part="R26" gate="A" pin="11"/>
 </segment>
 </net>
 <net name="N$629" class="0">
@@ -22752,22 +22752,22 @@ SYSBOOT[2] LOW == SD Card</text>
 <pinref part="U7" gate="D" pin="LCD_DATA7"/>
 <wire x1="655.32" y1="345.44" x2="655.32" y2="370.84" width="0.1524" layer="91"/>
 <wire x1="655.32" y1="370.84" x2="635" y2="370.84" width="0.1524" layer="91"/>
-<pinref part="R25" gate="A" pin="66"/>
+<pinref part="R26" gate="A" pin="66"/>
 </segment>
 </net>
 <net name="N$630" class="0">
 <segment>
-<wire x1="690.88" y1="345.44" x2="690.88" y2="370.84" width="0.1524" layer="91"/>
-<pinref part="R24" gate="A" pin="88"/>
-<wire x1="690.88" y1="370.84" x2="772.16" y2="370.84" width="0.1524" layer="91"/>
+<wire x1="680.72" y1="345.44" x2="680.72" y2="370.84" width="0.1524" layer="91"/>
+<pinref part="R25" gate="A" pin="66"/>
+<wire x1="680.72" y1="370.84" x2="772.16" y2="370.84" width="0.1524" layer="91"/>
 <wire x1="772.16" y1="370.84" x2="772.16" y2="393.7" width="0.1524" layer="91"/>
-<pinref part="JP105" gate="G$1" pin="1"/>
+<pinref part="JP109" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$631" class="0">
 <segment>
 <wire x1="698.5" y1="345.44" x2="698.5" y2="360.68" width="0.1524" layer="91"/>
-<pinref part="R24" gate="A" pin="11"/>
+<pinref part="R25" gate="A" pin="11"/>
 <pinref part="J3" gate="J$1" pin="3"/>
 <wire x1="698.5" y1="360.68" x2="718.82" y2="360.68" width="0.1524" layer="91"/>
 <wire x1="718.82" y1="360.68" x2="721.36" y2="360.68" width="0.1524" layer="91"/>
@@ -22780,30 +22780,30 @@ SYSBOOT[2] LOW == SD Card</text>
 </net>
 <net name="N$632" class="0">
 <segment>
-<pinref part="R24" gate="A" pin="22"/>
-<pinref part="JP106" gate="G$1" pin="1"/>
+<pinref part="R25" gate="A" pin="99"/>
+<pinref part="JP108" gate="G$1" pin="1"/>
 <wire x1="756.92" y1="393.7" x2="756.92" y2="373.38" width="0.1524" layer="91"/>
-<wire x1="756.92" y1="373.38" x2="693.42" y2="373.38" width="0.1524" layer="91"/>
-<wire x1="693.42" y1="373.38" x2="693.42" y2="345.44" width="0.1524" layer="91"/>
+<wire x1="756.92" y1="373.38" x2="695.96" y2="373.38" width="0.1524" layer="91"/>
+<wire x1="695.96" y1="373.38" x2="695.96" y2="345.44" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$633" class="0">
 <segment>
-<pinref part="R24" gate="A" pin="33"/>
-<wire x1="688.34" y1="345.44" x2="688.34" y2="375.92" width="0.1524" layer="91"/>
-<wire x1="688.34" y1="375.92" x2="726.44" y2="375.92" width="0.1524" layer="91"/>
-<pinref part="JP108" gate="G$1" pin="3"/>
+<pinref part="R25" gate="A" pin="22"/>
+<wire x1="693.42" y1="345.44" x2="693.42" y2="375.92" width="0.1524" layer="91"/>
+<wire x1="693.42" y1="375.92" x2="726.44" y2="375.92" width="0.1524" layer="91"/>
+<pinref part="JP106" gate="G$1" pin="3"/>
 <wire x1="726.44" y1="375.92" x2="726.44" y2="393.7" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$634" class="0">
 <segment>
-<pinref part="R24" gate="A" pin="66"/>
-<pinref part="JP109" gate="G$1" pin="3"/>
+<pinref part="R25" gate="A" pin="33"/>
+<pinref part="JP105" gate="G$1" pin="3"/>
 <wire x1="711.2" y1="393.7" x2="708.66" y2="393.7" width="0.1524" layer="91"/>
 <wire x1="708.66" y1="393.7" x2="708.66" y2="363.22" width="0.1524" layer="91"/>
-<wire x1="708.66" y1="363.22" x2="680.72" y2="363.22" width="0.1524" layer="91"/>
-<wire x1="680.72" y1="363.22" x2="680.72" y2="345.44" width="0.1524" layer="91"/>
+<wire x1="708.66" y1="363.22" x2="688.34" y2="363.22" width="0.1524" layer="91"/>
+<wire x1="688.34" y1="363.22" x2="688.34" y2="345.44" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$640" class="0">
@@ -22994,7 +22994,7 @@ SYSBOOT[2] LOW == SD Card</text>
 <pinref part="R8" gate="A" pin="99"/>
 <wire x1="170.18" y1="403.86" x2="170.18" y2="414.02" width="0.1524" layer="91"/>
 <junction x="170.18" y="403.86"/>
-<pinref part="JP102" gate="G$1" pin="3"/>
+<pinref part="JP103" gate="G$1" pin="3"/>
 <wire x1="215.9" y1="342.9" x2="215.9" y2="403.86" width="0.1524" layer="91"/>
 <wire x1="215.9" y1="403.86" x2="170.18" y2="403.86" width="0.1524" layer="91"/>
 </segment>
@@ -23006,7 +23006,7 @@ SYSBOOT[2] LOW == SD Card</text>
 <wire x1="152.4" y1="401.32" x2="172.72" y2="401.32" width="0.1524" layer="91"/>
 <wire x1="172.72" y1="401.32" x2="172.72" y2="414.02" width="0.1524" layer="91"/>
 <junction x="172.72" y="401.32"/>
-<pinref part="JP101" gate="G$1" pin="3"/>
+<pinref part="JP102" gate="G$1" pin="3"/>
 <wire x1="208.28" y1="335.28" x2="208.28" y2="401.32" width="0.1524" layer="91"/>
 <wire x1="208.28" y1="401.32" x2="172.72" y2="401.32" width="0.1524" layer="91"/>
 </segment>
@@ -23098,14 +23098,14 @@ SYSBOOT[2] LOW == SD Card</text>
 <net name="N$13" class="0">
 <segment>
 <pinref part="U11" gate="G$1" pin="S"/>
-<pinref part="TP39" gate="G$1" pin="1"/>
+<pinref part="TP40" gate="G$1" pin="1"/>
 <wire x1="238.76" y1="485.14" x2="243.84" y2="485.14" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$14" class="0">
 <segment>
 <pinref part="U11" gate="G$1" pin="SHDN"/>
-<pinref part="TP33" gate="G$1" pin="1"/>
+<pinref part="TP35" gate="G$1" pin="1"/>
 <wire x1="238.76" y1="480.06" x2="243.84" y2="480.06" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -23169,7 +23169,7 @@ SYSBOOT[2] LOW == SD Card</text>
 <segment>
 <pinref part="U7" gate="C" pin="MMC0_DAT2"/>
 <wire x1="289.56" y1="347.98" x2="243.84" y2="347.98" width="0.1524" layer="91"/>
-<pinref part="JP102" gate="G$1" pin="2"/>
+<pinref part="JP103" gate="G$1" pin="2"/>
 <wire x1="243.84" y1="347.98" x2="243.84" y2="337.82" width="0.1524" layer="91"/>
 <wire x1="243.84" y1="337.82" x2="220.98" y2="337.82" width="0.1524" layer="91"/>
 </segment>
@@ -23178,14 +23178,14 @@ SYSBOOT[2] LOW == SD Card</text>
 <segment>
 <pinref part="U7" gate="C" pin="MMC0_DAT3"/>
 <wire x1="289.56" y1="345.44" x2="246.38" y2="345.44" width="0.1524" layer="91"/>
-<pinref part="JP101" gate="G$1" pin="2"/>
+<pinref part="JP102" gate="G$1" pin="2"/>
 <wire x1="246.38" y1="345.44" x2="246.38" y2="330.2" width="0.1524" layer="91"/>
 <wire x1="246.38" y1="330.2" x2="213.36" y2="330.2" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="D0_I" class="0">
 <segment>
-<pinref part="JP101" gate="G$1" pin="1"/>
+<pinref part="JP102" gate="G$1" pin="1"/>
 <wire x1="241.3" y1="314.96" x2="208.28" y2="314.96" width="0.1524" layer="91"/>
 <wire x1="208.28" y1="314.96" x2="208.28" y2="325.12" width="0.1524" layer="91"/>
 <wire x1="241.3" y1="309.88" x2="241.3" y2="314.96" width="0.1524" layer="91"/>
@@ -23204,7 +23204,7 @@ SYSBOOT[2] LOW == SD Card</text>
 </net>
 <net name="D1_I" class="0">
 <segment>
-<pinref part="JP102" gate="G$1" pin="1"/>
+<pinref part="JP103" gate="G$1" pin="1"/>
 <wire x1="243.84" y1="317.5" x2="215.9" y2="317.5" width="0.1524" layer="91"/>
 <wire x1="215.9" y1="317.5" x2="215.9" y2="332.74" width="0.1524" layer="91"/>
 <wire x1="243.84" y1="309.88" x2="243.84" y2="317.5" width="0.1524" layer="91"/>
@@ -23442,7 +23442,7 @@ SYSBOOT[2] LOW == SD Card</text>
 <wire x1="276.86" y1="215.9" x2="279.4" y2="218.44" width="0.1524" layer="91"/>
 <wire x1="279.4" y1="218.44" x2="294.64" y2="218.44" width="0.1524" layer="91"/>
 <label x="281.94" y="218.44" size="1.778" layer="95"/>
-<pinref part="TP117" gate="G$1" pin="1"/>
+<pinref part="TP119" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="VSYNC_I" class="0">
@@ -23464,7 +23464,7 @@ SYSBOOT[2] LOW == SD Card</text>
 <wire x1="276.86" y1="210.82" x2="279.4" y2="213.36" width="0.1524" layer="91"/>
 <wire x1="279.4" y1="213.36" x2="294.64" y2="213.36" width="0.1524" layer="91"/>
 <label x="281.94" y="213.36" size="1.778" layer="95"/>
-<pinref part="TP115" gate="G$1" pin="1"/>
+<pinref part="TP116" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="D0_E" class="0">
@@ -24057,13 +24057,13 @@ SYSBOOT[2] LOW == SD Card</text>
 <wire x1="287.02" y1="411.48" x2="287.02" y2="403.86" width="0.1524" layer="91"/>
 <wire x1="287.02" y1="403.86" x2="289.56" y2="403.86" width="0.1524" layer="91"/>
 <label x="287.02" y="414.02" size="1.27" layer="95" rot="R90" xref="yes"/>
-<pinref part="TP149" gate="G$1" pin="1"/>
+<pinref part="TP146" gate="G$1" pin="1"/>
 <junction x="287.02" y="411.48"/>
 </segment>
 </net>
 <net name="N$28" class="0">
 <segment>
-<pinref part="TP34" gate="G$1" pin="1"/>
+<pinref part="TP33" gate="G$1" pin="1"/>
 <pinref part="U7" gate="C" pin="SPI0_SCLK"/>
 <wire x1="287.02" y1="375.92" x2="289.56" y2="375.92" width="0.1524" layer="91"/>
 </segment>
@@ -24085,7 +24085,7 @@ SYSBOOT[2] LOW == SD Card</text>
 <net name="N$31" class="0">
 <segment>
 <pinref part="U7" gate="C" pin="SPI0_CS0"/>
-<pinref part="TP35" gate="G$1" pin="1"/>
+<pinref part="TP34" gate="G$1" pin="1"/>
 <wire x1="289.56" y1="368.3" x2="287.02" y2="368.3" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -24098,14 +24098,14 @@ SYSBOOT[2] LOW == SD Card</text>
 </net>
 <net name="N$34" class="0">
 <segment>
-<pinref part="TP177" gate="G$1" pin="1"/>
+<pinref part="TP180" gate="G$1" pin="1"/>
 <pinref part="U7" gate="C" pin="ECAP0_IN_PWM0_OUT"/>
 <wire x1="287.02" y1="307.34" x2="289.56" y2="307.34" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$35" class="0">
 <segment>
-<pinref part="TP100" gate="G$1" pin="1"/>
+<pinref part="TP104" gate="G$1" pin="1"/>
 <pinref part="U7" gate="C" pin="GPMC_AD8"/>
 <wire x1="353.06" y1="322.58" x2="350.52" y2="322.58" width="0.1524" layer="91"/>
 </segment>
@@ -24119,7 +24119,7 @@ SYSBOOT[2] LOW == SD Card</text>
 </net>
 <net name="N$37" class="0">
 <segment>
-<pinref part="TP116" gate="G$1" pin="1"/>
+<pinref part="TP115" gate="G$1" pin="1"/>
 <pinref part="U7" gate="C" pin="GPMC_AD10"/>
 <wire x1="353.06" y1="317.5" x2="350.52" y2="317.5" width="0.1524" layer="91"/>
 </segment>
@@ -24127,7 +24127,7 @@ SYSBOOT[2] LOW == SD Card</text>
 <net name="N$38" class="0">
 <segment>
 <pinref part="U7" gate="C" pin="GPMC_AD11"/>
-<pinref part="TP101" gate="G$1" pin="1"/>
+<pinref part="TP105" gate="G$1" pin="1"/>
 <wire x1="350.52" y1="314.96" x2="353.06" y2="314.96" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -24141,7 +24141,7 @@ SYSBOOT[2] LOW == SD Card</text>
 <net name="N$40" class="0">
 <segment>
 <pinref part="U7" gate="C" pin="GPMC_AD13"/>
-<pinref part="TP118" gate="G$1" pin="1"/>
+<pinref part="TP120" gate="G$1" pin="1"/>
 <wire x1="350.52" y1="309.88" x2="353.06" y2="309.88" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -24162,28 +24162,28 @@ SYSBOOT[2] LOW == SD Card</text>
 <net name="N$43" class="0">
 <segment>
 <pinref part="U7" gate="C" pin="GPMC_WPN"/>
-<pinref part="TP112" gate="G$1" pin="1"/>
+<pinref part="TP111" gate="G$1" pin="1"/>
 <wire x1="350.52" y1="363.22" x2="353.06" y2="363.22" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$44" class="0">
 <segment>
 <pinref part="U7" gate="C" pin="UART0_CTSN"/>
-<pinref part="TP180" gate="G$1" pin="1"/>
+<pinref part="TP177" gate="G$1" pin="1"/>
 <wire x1="289.56" y1="401.32" x2="287.02" y2="401.32" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$45" class="0">
 <segment>
 <pinref part="U7" gate="C" pin="UART0_RTSN"/>
-<pinref part="TP181" gate="G$1" pin="1"/>
+<pinref part="TP178" gate="G$1" pin="1"/>
 <wire x1="289.56" y1="398.78" x2="287.02" y2="398.78" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$46" class="0">
 <segment>
 <pinref part="U7" gate="D" pin="LCD_PCLK"/>
-<pinref part="TP161" gate="G$1" pin="1"/>
+<pinref part="TP162" gate="G$1" pin="1"/>
 <wire x1="635" y1="345.44" x2="637.54" y2="345.44" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -24204,7 +24204,7 @@ SYSBOOT[2] LOW == SD Card</text>
 <net name="N$49" class="0">
 <segment>
 <pinref part="U7" gate="D" pin="LCD_AC_BIAS_EN"/>
-<pinref part="TP158" gate="G$1" pin="1"/>
+<pinref part="TP159" gate="G$1" pin="1"/>
 <wire x1="635" y1="337.82" x2="637.54" y2="337.82" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -24217,21 +24217,21 @@ SYSBOOT[2] LOW == SD Card</text>
 </net>
 <net name="N$51" class="0">
 <segment>
-<pinref part="TP175" gate="G$1" pin="1"/>
+<pinref part="TP174" gate="G$1" pin="1"/>
 <pinref part="U7" gate="D" pin="MDC"/>
 <wire x1="571.5" y1="342.9" x2="574.04" y2="342.9" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$52" class="0">
 <segment>
-<pinref part="TP160" gate="G$1" pin="1"/>
+<pinref part="TP158" gate="G$1" pin="1"/>
 <pinref part="U7" gate="D" pin="MDIO"/>
 <wire x1="571.5" y1="340.36" x2="574.04" y2="340.36" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$53" class="0">
 <segment>
-<pinref part="TP146" gate="G$1" pin="1"/>
+<pinref part="TP147" gate="G$1" pin="1"/>
 <pinref part="U7" gate="D" pin="MII1_TX_CLK"/>
 <wire x1="571.5" y1="388.62" x2="574.04" y2="388.62" width="0.1524" layer="91"/>
 </segment>
@@ -24239,13 +24239,13 @@ SYSBOOT[2] LOW == SD Card</text>
 <net name="N$54" class="0">
 <segment>
 <pinref part="U7" gate="D" pin="MII1_TXD0"/>
-<pinref part="TP138" gate="G$1" pin="1"/>
+<pinref part="TP137" gate="G$1" pin="1"/>
 <wire x1="574.04" y1="386.08" x2="571.5" y2="386.08" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$55" class="0">
 <segment>
-<pinref part="TP148" gate="G$1" pin="1"/>
+<pinref part="TP149" gate="G$1" pin="1"/>
 <pinref part="U7" gate="D" pin="MII1_TXD1"/>
 <wire x1="571.5" y1="383.54" x2="574.04" y2="383.54" width="0.1524" layer="91"/>
 </segment>
@@ -24253,20 +24253,20 @@ SYSBOOT[2] LOW == SD Card</text>
 <net name="N$56" class="0">
 <segment>
 <pinref part="U7" gate="D" pin="MII1_TXD2"/>
-<pinref part="TP135" gate="G$1" pin="1"/>
+<pinref part="TP134" gate="G$1" pin="1"/>
 <wire x1="574.04" y1="381" x2="571.5" y2="381" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$75" class="0">
 <segment>
 <pinref part="U7" gate="C" pin="GPMC_CLK"/>
-<pinref part="TP102" gate="G$1" pin="1"/>
+<pinref part="TP106" gate="G$1" pin="1"/>
 <wire x1="350.52" y1="406.4" x2="353.06" y2="406.4" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$76" class="0">
 <segment>
-<pinref part="TP104" gate="G$1" pin="1"/>
+<pinref part="TP100" gate="G$1" pin="1"/>
 <pinref part="U7" gate="C" pin="GPMC_A0"/>
 <wire x1="353.06" y1="401.32" x2="350.52" y2="401.32" width="0.1524" layer="91"/>
 </segment>
@@ -24274,7 +24274,7 @@ SYSBOOT[2] LOW == SD Card</text>
 <net name="N$77" class="0">
 <segment>
 <pinref part="U7" gate="C" pin="GPMC_A1"/>
-<pinref part="TP120" gate="G$1" pin="1"/>
+<pinref part="TP118" gate="G$1" pin="1"/>
 <wire x1="350.52" y1="398.78" x2="353.06" y2="398.78" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -24288,28 +24288,28 @@ SYSBOOT[2] LOW == SD Card</text>
 <net name="N$79" class="0">
 <segment>
 <pinref part="U7" gate="C" pin="GPMC_A3"/>
-<pinref part="TP105" gate="G$1" pin="1"/>
+<pinref part="TP101" gate="G$1" pin="1"/>
 <wire x1="350.52" y1="393.7" x2="353.06" y2="393.7" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$82" class="0">
 <segment>
 <pinref part="U7" gate="C" pin="GPMC_A9"/>
-<pinref part="TP109" gate="G$1" pin="1"/>
+<pinref part="TP108" gate="G$1" pin="1"/>
 <wire x1="350.52" y1="378.46" x2="353.06" y2="378.46" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$83" class="0">
 <segment>
 <pinref part="U7" gate="C" pin="GPMC_A10"/>
-<pinref part="TP121" gate="G$1" pin="1"/>
+<pinref part="TP117" gate="G$1" pin="1"/>
 <wire x1="350.52" y1="375.92" x2="353.06" y2="375.92" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$84" class="0">
 <segment>
 <pinref part="U7" gate="C" pin="GPMC_A11"/>
-<pinref part="TP107" gate="G$1" pin="1"/>
+<pinref part="TP103" gate="G$1" pin="1"/>
 <wire x1="350.52" y1="373.38" x2="353.06" y2="373.38" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -24323,7 +24323,7 @@ SYSBOOT[2] LOW == SD Card</text>
 <net name="N$86" class="0">
 <segment>
 <pinref part="U7" gate="C" pin="GPMC_CSN3"/>
-<pinref part="TP103" gate="G$1" pin="1"/>
+<pinref part="TP107" gate="G$1" pin="1"/>
 <wire x1="350.52" y1="350.52" x2="353.06" y2="350.52" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -24358,72 +24358,70 @@ SYSBOOT[2] LOW == SD Card</text>
 <net name="N$93" class="0">
 <segment>
 <pinref part="U7" gate="C" pin="GPMC_ADVN_ALE"/>
-<pinref part="TP134" gate="G$1" pin="1"/>
+<pinref part="TP135" gate="G$1" pin="1"/>
 <wire x1="350.52" y1="299.72" x2="353.06" y2="299.72" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$94" class="0">
 <segment>
 <pinref part="U7" gate="C" pin="GPMC_BEN0_CLE"/>
-<pinref part="TP129" gate="G$1" pin="1"/>
+<pinref part="TP131" gate="G$1" pin="1"/>
 <wire x1="350.52" y1="297.18" x2="353.06" y2="297.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$95" class="0">
 <segment>
 <pinref part="U7" gate="C" pin="GPMC_WEN"/>
-<pinref part="TP128" gate="G$1" pin="1"/>
+<pinref part="TP127" gate="G$1" pin="1"/>
 <wire x1="350.52" y1="294.64" x2="353.06" y2="294.64" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$96" class="0">
 <segment>
 <pinref part="U7" gate="C" pin="GPMC_OEN_REN"/>
-<pinref part="TP127" gate="G$1" pin="1"/>
+<pinref part="TP128" gate="G$1" pin="1"/>
 <wire x1="350.52" y1="292.1" x2="353.06" y2="292.1" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$97" class="0">
 <segment>
-<pinref part="TP147" gate="G$1" pin="1"/>
+<pinref part="TP148" gate="G$1" pin="1"/>
 <pinref part="U7" gate="D" pin="MII1_TX_EN"/>
 <wire x1="571.5" y1="375.92" x2="574.04" y2="375.92" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$105" class="0">
 <segment>
-<pinref part="JP109" gate="G$1" pin="1"/>
-<pinref part="R23" gate="A" pin="66"/>
-<wire x1="711.2" y1="403.86" x2="708.66" y2="403.86" width="0.1524" layer="91"/>
-<wire x1="708.66" y1="403.86" x2="708.66" y2="414.02" width="0.1524" layer="91"/>
-<wire x1="708.66" y1="414.02" x2="728.98" y2="414.02" width="0.1524" layer="91"/>
-<wire x1="728.98" y1="414.02" x2="728.98" y2="416.56" width="0.1524" layer="91"/>
+<pinref part="JP105" gate="G$1" pin="1"/>
+<pinref part="R24" gate="A" pin="99"/>
+<wire x1="711.2" y1="403.86" x2="713.74" y2="403.86" width="0.1524" layer="91"/>
+<wire x1="713.74" y1="403.86" x2="713.74" y2="416.56" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$106" class="0">
 <segment>
-<pinref part="JP108" gate="G$1" pin="1"/>
-<pinref part="R23" gate="A" pin="77"/>
-<wire x1="726.44" y1="403.86" x2="723.9" y2="403.86" width="0.1524" layer="91"/>
-<wire x1="723.9" y1="403.86" x2="723.9" y2="416.56" width="0.1524" layer="91"/>
+<pinref part="JP106" gate="G$1" pin="1"/>
+<pinref part="R24" gate="A" pin="22"/>
+<wire x1="726.44" y1="403.86" x2="716.28" y2="403.86" width="0.1524" layer="91"/>
+<wire x1="716.28" y1="403.86" x2="716.28" y2="416.56" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$107" class="0">
 <segment>
-<pinref part="JP106" gate="G$1" pin="3"/>
+<pinref part="JP108" gate="G$1" pin="3"/>
 <wire x1="756.92" y1="403.86" x2="756.92" y2="406.4" width="0.1524" layer="91"/>
-<pinref part="R23" gate="A" pin="11"/>
-<wire x1="756.92" y1="406.4" x2="711.2" y2="406.4" width="0.1524" layer="91"/>
-<wire x1="711.2" y1="406.4" x2="711.2" y2="416.56" width="0.1524" layer="91"/>
+<pinref part="R24" gate="A" pin="33"/>
+<wire x1="756.92" y1="406.4" x2="721.36" y2="406.4" width="0.1524" layer="91"/>
+<wire x1="721.36" y1="406.4" x2="721.36" y2="416.56" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$108" class="0">
 <segment>
 <wire x1="772.16" y1="403.86" x2="772.16" y2="408.94" width="0.1524" layer="91"/>
-<pinref part="R23" gate="A" pin="99"/>
-<wire x1="772.16" y1="408.94" x2="713.74" y2="408.94" width="0.1524" layer="91"/>
-<wire x1="713.74" y1="408.94" x2="713.74" y2="416.56" width="0.1524" layer="91"/>
-<pinref part="JP105" gate="G$1" pin="3"/>
+<pinref part="R24" gate="A" pin="66"/>
+<wire x1="772.16" y1="408.94" x2="728.98" y2="408.94" width="0.1524" layer="91"/>
+<wire x1="728.98" y1="408.94" x2="728.98" y2="416.56" width="0.1524" layer="91"/>
+<pinref part="JP109" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="N$109" class="0">
@@ -24431,7 +24429,7 @@ SYSBOOT[2] LOW == SD Card</text>
 <pinref part="J3" gate="J$1" pin="1"/>
 <wire x1="721.36" y1="365.76" x2="718.82" y2="365.76" width="0.1524" layer="91"/>
 <wire x1="718.82" y1="365.76" x2="718.82" y2="368.3" width="0.1524" layer="91"/>
-<pinref part="R23" gate="A" pin="88"/>
+<pinref part="R24" gate="A" pin="88"/>
 <wire x1="718.82" y1="368.3" x2="718.82" y2="416.56" width="0.1524" layer="91"/>
 <wire x1="718.82" y1="368.3" x2="734.06" y2="368.3" width="0.1524" layer="91"/>
 <wire x1="734.06" y1="368.3" x2="734.06" y2="403.86" width="0.1524" layer="91"/>
@@ -24442,7 +24440,7 @@ SYSBOOT[2] LOW == SD Card</text>
 </net>
 <net name="GND" class="0">
 <segment>
-<pinref part="C9" gate="CE" pin="2"/>
+<pinref part="C8" gate="CE" pin="2"/>
 <pinref part="GND30" gate="1" pin="GND"/>
 <wire x1="106.68" y1="391.16" x2="106.68" y2="373.38" width="0.1524" layer="91"/>
 <wire x1="106.68" y1="373.38" x2="116.84" y2="373.38" width="0.1524" layer="91"/>
@@ -24484,8 +24482,8 @@ SYSBOOT[2] LOW == SD Card</text>
 <pinref part="GND51" gate="1" pin="GND"/>
 <wire x1="675.64" y1="322.58" x2="675.64" y2="327.66" width="0.1524" layer="91"/>
 <junction x="675.64" y="327.66"/>
+<pinref part="R26" gate="A" pin="55"/>
 <pinref part="R25" gate="A" pin="55"/>
-<pinref part="R24" gate="A" pin="55"/>
 </segment>
 <segment>
 <pinref part="U3" gate="U" pin="VSSQ"/>
@@ -24503,7 +24501,7 @@ SYSBOOT[2] LOW == SD Card</text>
 <wire x1="510.54" y1="327.66" x2="510.54" y2="322.58" width="0.1524" layer="91"/>
 <wire x1="510.54" y1="322.58" x2="502.92" y2="322.58" width="0.1524" layer="91"/>
 <junction x="464.82" y="322.58"/>
-<pinref part="C8" gate="CE" pin="2"/>
+<pinref part="C9" gate="CE" pin="2"/>
 <wire x1="502.92" y1="322.58" x2="495.3" y2="322.58" width="0.1524" layer="91"/>
 <wire x1="495.3" y1="322.58" x2="487.68" y2="322.58" width="0.1524" layer="91"/>
 <wire x1="487.68" y1="322.58" x2="480.06" y2="322.58" width="0.1524" layer="91"/>
@@ -24784,22 +24782,22 @@ battery circuit</text>
 <instance part="GND56" gate="1" x="101.6" y="231.14" smashed="yes">
 <attribute name="VALUE" x="101.6" y="230.886" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="TP40" gate="G$1" x="233.68" y="195.58" smashed="yes">
+<instance part="TP39" gate="G$1" x="233.68" y="195.58" smashed="yes">
 <attribute name="NAME" x="238.252" y="194.818" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="TP38" gate="G$1" x="233.68" y="193.04" smashed="yes">
 <attribute name="NAME" x="238.252" y="192.278" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="TP178" gate="G$1" x="233.68" y="190.5" smashed="yes">
+<instance part="TP181" gate="G$1" x="233.68" y="190.5" smashed="yes">
 <attribute name="NAME" x="238.252" y="189.738" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="TP174" gate="G$1" x="233.68" y="187.96" smashed="yes">
+<instance part="TP175" gate="G$1" x="233.68" y="187.96" smashed="yes">
 <attribute name="NAME" x="238.252" y="187.198" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="TP176" gate="G$1" x="233.68" y="185.42" smashed="yes">
 <attribute name="NAME" x="238.252" y="184.658" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="TP171" gate="G$1" x="233.68" y="182.88" smashed="yes">
+<instance part="TP169" gate="G$1" x="233.68" y="182.88" smashed="yes">
 <attribute name="NAME" x="238.252" y="182.118" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="TP179" gate="G$1" x="233.68" y="180.34" smashed="yes">
@@ -24808,7 +24806,7 @@ battery circuit</text>
 <instance part="TP141" gate="G$1" x="167.64" y="147.32" smashed="yes" rot="R180">
 <attribute name="NAME" x="163.068" y="148.082" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
-<instance part="TP140" gate="G$1" x="167.64" y="144.78" smashed="yes" rot="R180">
+<instance part="TP139" gate="G$1" x="167.64" y="144.78" smashed="yes" rot="R180">
 <attribute name="NAME" x="163.068" y="145.542" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
 <instance part="FRAME4" gate="G$1" x="0" y="0" smashed="yes"/>
@@ -24826,10 +24824,10 @@ battery circuit</text>
 <instance part="TP133" gate="G$1" x="233.68" y="167.64" smashed="yes">
 <attribute name="NAME" x="238.252" y="166.878" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="TP145" gate="G$1" x="233.68" y="147.32" smashed="yes">
+<instance part="TP144" gate="G$1" x="233.68" y="147.32" smashed="yes">
 <attribute name="NAME" x="238.252" y="146.558" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="TP169" gate="G$1" x="233.68" y="177.8" smashed="yes">
+<instance part="TP170" gate="G$1" x="233.68" y="177.8" smashed="yes">
 <attribute name="NAME" x="238.252" y="177.038" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="R27" gate="R" x="144.78" y="205.74" smashed="yes" rot="R90">
@@ -24848,7 +24846,7 @@ battery circuit</text>
 <attribute name="NAME" x="137.16" y="205.74" size="1.778" layer="95"/>
 <attribute name="VALUE" x="127" y="215.9" size="1.778" layer="96"/>
 </instance>
-<instance part="TP167" gate="G$1" x="233.68" y="172.72" smashed="yes">
+<instance part="TP168" gate="G$1" x="233.68" y="172.72" smashed="yes">
 <attribute name="NAME" x="238.252" y="171.958" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="R20" gate="R" x="124.46" y="160.02" smashed="yes" rot="R90">
@@ -24865,10 +24863,10 @@ battery circuit</text>
 <instance part="TP182" gate="G$1" x="233.68" y="246.38" smashed="yes">
 <attribute name="NAME" x="238.252" y="245.618" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="TP170" gate="G$1" x="231.14" y="226.06" smashed="yes">
+<instance part="TP171" gate="G$1" x="231.14" y="226.06" smashed="yes">
 <attribute name="NAME" x="235.712" y="225.298" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="TP137" gate="G$1" x="167.64" y="149.86" smashed="yes" rot="R180">
+<instance part="TP138" gate="G$1" x="167.64" y="149.86" smashed="yes" rot="R180">
 <attribute name="NAME" x="163.068" y="150.622" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
 <instance part="JP100" gate="G$1" x="259.08" y="144.78" smashed="yes" rot="R270">
@@ -25167,7 +25165,7 @@ battery circuit</text>
 <segment>
 <pinref part="U7" gate="B" pin="AIN7"/>
 <wire x1="233.68" y1="177.8" x2="231.14" y2="177.8" width="0.1524" layer="91"/>
-<pinref part="TP169" gate="G$1" pin="1"/>
+<pinref part="TP170" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$66" class="0">
@@ -25179,7 +25177,7 @@ battery circuit</text>
 </net>
 <net name="N$67" class="0">
 <segment>
-<pinref part="TP171" gate="G$1" pin="1"/>
+<pinref part="TP169" gate="G$1" pin="1"/>
 <pinref part="U7" gate="B" pin="AIN5"/>
 <wire x1="233.68" y1="182.88" x2="231.14" y2="182.88" width="0.1524" layer="91"/>
 </segment>
@@ -25193,7 +25191,7 @@ battery circuit</text>
 </net>
 <net name="N$69" class="0">
 <segment>
-<pinref part="TP174" gate="G$1" pin="1"/>
+<pinref part="TP175" gate="G$1" pin="1"/>
 <pinref part="U7" gate="B" pin="AIN3"/>
 <wire x1="233.68" y1="187.96" x2="231.14" y2="187.96" width="0.1524" layer="91"/>
 </segment>
@@ -25201,7 +25199,7 @@ battery circuit</text>
 <net name="N$70" class="0">
 <segment>
 <pinref part="U7" gate="B" pin="AIN2"/>
-<pinref part="TP178" gate="G$1" pin="1"/>
+<pinref part="TP181" gate="G$1" pin="1"/>
 <wire x1="231.14" y1="190.5" x2="233.68" y2="190.5" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -25215,7 +25213,7 @@ battery circuit</text>
 <net name="N$72" class="0">
 <segment>
 <pinref part="U7" gate="B" pin="AIN0"/>
-<pinref part="TP40" gate="G$1" pin="1"/>
+<pinref part="TP39" gate="G$1" pin="1"/>
 <wire x1="231.14" y1="195.58" x2="233.68" y2="195.58" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -25229,7 +25227,7 @@ battery circuit</text>
 <net name="N$74" class="0">
 <segment>
 <pinref part="U7" gate="B" pin="USB0_DRVVBUS"/>
-<pinref part="TP140" gate="G$1" pin="1"/>
+<pinref part="TP139" gate="G$1" pin="1"/>
 <wire x1="170.18" y1="144.78" x2="167.64" y2="144.78" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -25281,7 +25279,7 @@ battery circuit</text>
 <net name="N$92" class="0">
 <segment>
 <pinref part="U7" gate="B" pin="USB1_CE"/>
-<pinref part="TP145" gate="G$1" pin="1"/>
+<pinref part="TP144" gate="G$1" pin="1"/>
 <wire x1="231.14" y1="147.32" x2="233.68" y2="147.32" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -25338,7 +25336,7 @@ battery circuit</text>
 <net name="N$90" class="0">
 <segment>
 <pinref part="U7" gate="B" pin="PMIC_MUX_OUT"/>
-<pinref part="TP167" gate="G$1" pin="1"/>
+<pinref part="TP168" gate="G$1" pin="1"/>
 <wire x1="231.14" y1="172.72" x2="233.68" y2="172.72" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -25370,7 +25368,7 @@ battery circuit</text>
 <pinref part="U7" gate="B" pin="VREFP"/>
 <wire x1="231.14" y1="215.9" x2="231.14" y2="226.06" width="0.1524" layer="91"/>
 <junction x="231.14" y="215.9"/>
-<pinref part="TP170" gate="G$1" pin="1"/>
+<pinref part="TP171" gate="G$1" pin="1"/>
 <wire x1="231.14" y1="226.06" x2="231.14" y2="236.22" width="0.1524" layer="91"/>
 <junction x="231.14" y="226.06"/>
 </segment>
@@ -25386,7 +25384,7 @@ battery circuit</text>
 <segment>
 <pinref part="U7" gate="B" pin="USB0_ID"/>
 <wire x1="167.64" y1="149.86" x2="170.18" y2="149.86" width="0.1524" layer="91"/>
-<pinref part="TP137" gate="G$1" pin="1"/>
+<pinref part="TP138" gate="G$1" pin="1"/>
 </segment>
 </net>
 </nets>
@@ -25473,10 +25471,10 @@ from SYS_RTC_1P8V</text>
 <instance part="TP4" gate="G$1" x="-129.54" y="139.7" smashed="yes" rot="R90">
 <attribute name="NAME" x="-128.778" y="144.018" size="1.778" layer="95" font="vector" rot="R90"/>
 </instance>
-<instance part="TP132" gate="G$1" x="-149.86" y="134.62" smashed="yes" rot="R90">
+<instance part="TP130" gate="G$1" x="-149.86" y="134.62" smashed="yes" rot="R90">
 <attribute name="NAME" x="-149.098" y="138.43" size="1.778" layer="95" font="vector" rot="R90"/>
 </instance>
-<instance part="TP131" gate="G$1" x="-152.4" y="132.08" smashed="yes" rot="R90">
+<instance part="TP129" gate="G$1" x="-152.4" y="132.08" smashed="yes" rot="R90">
 <attribute name="NAME" x="-152.654" y="137.414" size="1.778" layer="95" font="vector" rot="R90"/>
 </instance>
 <instance part="SUPPLY3" gate="VDD" x="-43.18" y="182.88" smashed="yes">
@@ -25488,16 +25486,16 @@ from SYS_RTC_1P8V</text>
 <instance part="TP3" gate="G$1" x="-48.26" y="175.26" smashed="yes" rot="R90">
 <attribute name="NAME" x="-47.625" y="179.07" size="1.778" layer="95" font="vector" rot="R90"/>
 </instance>
-<instance part="TP163" gate="G$1" x="-48.26" y="139.7" smashed="yes" rot="R90">
+<instance part="TP161" gate="G$1" x="-48.26" y="139.7" smashed="yes" rot="R90">
 <attribute name="NAME" x="-44.45" y="140.97" size="1.778" layer="95" font="vector" rot="R90"/>
 </instance>
-<instance part="TP165" gate="G$1" x="-43.18" y="124.46" smashed="yes" rot="R90">
+<instance part="TP164" gate="G$1" x="-43.18" y="124.46" smashed="yes" rot="R90">
 <attribute name="NAME" x="-39.37" y="125.095" size="1.778" layer="95" font="vector" rot="R90"/>
 </instance>
-<instance part="TP164" gate="G$1" x="-43.18" y="109.22" smashed="yes" rot="R90">
+<instance part="TP165" gate="G$1" x="-43.18" y="109.22" smashed="yes" rot="R90">
 <attribute name="NAME" x="-38.735" y="108.585" size="1.778" layer="95" font="vector" rot="R90"/>
 </instance>
-<instance part="TP162" gate="G$1" x="-43.18" y="58.42" smashed="yes" rot="R90">
+<instance part="TP163" gate="G$1" x="-43.18" y="58.42" smashed="yes" rot="R90">
 <attribute name="NAME" x="-38.1" y="58.42" size="1.778" layer="95" font="vector" rot="R90"/>
 </instance>
 <instance part="TP151" gate="G$1" x="-132.08" y="33.02" smashed="yes" rot="R90">
@@ -25506,16 +25504,16 @@ from SYS_RTC_1P8V</text>
 <instance part="TP155" gate="G$1" x="-132.08" y="43.18" smashed="yes" rot="R90">
 <attribute name="NAME" x="-133.985" y="41.91" size="1.778" layer="95" font="vector" rot="R90"/>
 </instance>
-<instance part="TP166" gate="G$1" x="-132.08" y="55.88" smashed="yes" rot="R90">
+<instance part="TP167" gate="G$1" x="-132.08" y="55.88" smashed="yes" rot="R90">
 <attribute name="NAME" x="-133.985" y="54.61" size="1.778" layer="95" font="vector" rot="R90"/>
 </instance>
-<instance part="TP139" gate="G$1" x="-132.08" y="63.5" smashed="yes" rot="R90">
+<instance part="TP140" gate="G$1" x="-132.08" y="63.5" smashed="yes" rot="R90">
 <attribute name="NAME" x="-133.985" y="62.23" size="1.778" layer="95" font="vector" rot="R90"/>
 </instance>
-<instance part="TP130" gate="G$1" x="-132.08" y="71.12" smashed="yes" rot="R90">
+<instance part="TP132" gate="G$1" x="-132.08" y="71.12" smashed="yes" rot="R90">
 <attribute name="NAME" x="-133.985" y="69.85" size="1.778" layer="95" font="vector" rot="R90"/>
 </instance>
-<instance part="TP119" gate="G$1" x="-132.08" y="78.74" smashed="yes" rot="R90">
+<instance part="TP121" gate="G$1" x="-132.08" y="78.74" smashed="yes" rot="R90">
 <attribute name="NAME" x="-133.985" y="77.47" size="1.778" layer="95" font="vector" rot="R90"/>
 </instance>
 <instance part="D1" gate="G$1" x="-20.32" y="149.86" smashed="yes" rot="R90">
@@ -25586,7 +25584,7 @@ from SYS_RTC_1P8V</text>
 <attribute name="NAME" x="10.16" y="121.92" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="10.16" y="119.38" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="R26" gate="R" x="-5.08" y="91.44" smashed="yes" rot="R270">
+<instance part="R23" gate="R" x="-5.08" y="91.44" smashed="yes" rot="R270">
 <attribute name="NAME" x="-7.62" y="91.44" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-7.62" y="88.9" size="1.778" layer="96" rot="R180"/>
 </instance>
@@ -25616,10 +25614,10 @@ from SYS_RTC_1P8V</text>
 <instance part="TP154" gate="G$1" x="106.68" y="93.98" smashed="yes" rot="R180">
 <attribute name="NAME" x="102.108" y="94.742" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
-<instance part="TP159" gate="G$1" x="106.68" y="88.9" smashed="yes" rot="R180">
+<instance part="TP160" gate="G$1" x="106.68" y="88.9" smashed="yes" rot="R180">
 <attribute name="NAME" x="102.108" y="89.662" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
-<instance part="TP168" gate="G$1" x="106.68" y="83.82" smashed="yes" rot="R180">
+<instance part="TP166" gate="G$1" x="106.68" y="83.82" smashed="yes" rot="R180">
 <attribute name="NAME" x="102.108" y="84.582" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
 <instance part="TP173" gate="G$1" x="106.68" y="73.66" smashed="yes" rot="R180">
@@ -25634,7 +25632,7 @@ from SYS_RTC_1P8V</text>
 <instance part="TP150" gate="G$1" x="167.64" y="71.12" smashed="yes">
 <attribute name="NAME" x="172.212" y="70.358" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="TP144" gate="G$1" x="167.64" y="68.58" smashed="yes">
+<instance part="TP145" gate="G$1" x="167.64" y="68.58" smashed="yes">
 <attribute name="NAME" x="172.212" y="67.818" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="FRAME5" gate="G$1" x="-228.6" y="-33.02" smashed="yes"/>
@@ -25643,7 +25641,7 @@ from SYS_RTC_1P8V</text>
 <attribute name="SHEET" x="182.88" y="-31.75" size="2.54" layer="94"/>
 <attribute name="DRAWING_NAME" x="114.3" y="-13.97" size="2.54" layer="94"/>
 </instance>
-<instance part="JP103" gate="G$1" x="-25.4" y="78.74" smashed="yes">
+<instance part="JP101" gate="G$1" x="-25.4" y="78.74" smashed="yes">
 <attribute name="NAME" x="-27.94" y="81.28" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="JP104" gate="G$1" x="-25.4" y="124.46" smashed="yes">
@@ -25659,16 +25657,16 @@ from SYS_RTC_1P8V</text>
 <instance part="GND75" gate="1" x="-38.1" y="162.56" smashed="yes">
 <attribute name="VALUE" x="-38.1" y="162.306" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="TP111" gate="G$1" x="-40.64" y="25.4" smashed="yes" rot="R90">
+<instance part="TP110" gate="G$1" x="-40.64" y="25.4" smashed="yes" rot="R90">
 <attribute name="NAME" x="-43.942" y="22.098" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="TP108" gate="G$1" x="-17.78" y="12.7" smashed="yes" rot="R90">
+<instance part="TP109" gate="G$1" x="-17.78" y="12.7" smashed="yes" rot="R90">
 <attribute name="NAME" x="-21.082" y="9.398" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="TP106" gate="G$1" x="-132.08" y="91.44" smashed="yes" rot="R90">
+<instance part="TP102" gate="G$1" x="-132.08" y="91.44" smashed="yes" rot="R90">
 <attribute name="NAME" x="-133.985" y="90.17" size="1.778" layer="95" font="vector" rot="R90"/>
 </instance>
-<instance part="TP110" gate="G$1" x="-129.54" y="22.86" smashed="yes" rot="R90">
+<instance part="TP112" gate="G$1" x="-129.54" y="22.86" smashed="yes" rot="R90">
 <attribute name="NAME" x="-131.445" y="21.59" size="1.778" layer="95" font="vector" rot="R90"/>
 </instance>
 <instance part="J2" gate="G$1" x="-172.72" y="185.42" smashed="yes" rot="R270">
@@ -25715,7 +25713,7 @@ from SYS_RTC_1P8V</text>
 <junction x="-127" y="139.7"/>
 <wire x1="-129.54" y1="139.7" x2="-137.16" y2="139.7" width="0.1524" layer="91"/>
 <junction x="-129.54" y="139.7"/>
-<pinref part="TP132" gate="G$1" pin="1"/>
+<pinref part="TP130" gate="G$1" pin="1"/>
 <pinref part="U7" gate="A" pin="PMIC_BAT_SENSE"/>
 <wire x1="-149.86" y1="134.62" x2="-137.16" y2="134.62" width="0.1524" layer="91"/>
 <wire x1="-137.16" y1="134.62" x2="-124.46" y2="134.62" width="0.1524" layer="91"/>
@@ -25725,7 +25723,7 @@ from SYS_RTC_1P8V</text>
 </net>
 <net name="N$404" class="0">
 <segment>
-<pinref part="TP131" gate="G$1" pin="1"/>
+<pinref part="TP129" gate="G$1" pin="1"/>
 <pinref part="U7" gate="A" pin="PMIC_TS"/>
 <wire x1="-152.4" y1="132.08" x2="-124.46" y2="132.08" width="0.1524" layer="91"/>
 </segment>
@@ -25766,7 +25764,7 @@ from SYS_RTC_1P8V</text>
 </net>
 <net name="N$405" class="0">
 <segment>
-<pinref part="TP163" gate="G$1" pin="1"/>
+<pinref part="TP161" gate="G$1" pin="1"/>
 <pinref part="U7" gate="A" pin="SYS_VDD2_3P3V@1"/>
 <pinref part="U7" gate="A" pin="SYS_VDD2_3P3V@2"/>
 <wire x1="-48.26" y1="139.7" x2="-53.34" y2="139.7" width="0.1524" layer="91"/>
@@ -25821,7 +25819,7 @@ from SYS_RTC_1P8V</text>
 <pinref part="U7" gate="A" pin="SYS_VDD_1P8V@6"/>
 <pinref part="U7" gate="A" pin="SYS_VDD_1P8V@7"/>
 <pinref part="U7" gate="A" pin="SYS_VDD_1P8V@8"/>
-<pinref part="TP162" gate="G$1" pin="1"/>
+<pinref part="TP163" gate="G$1" pin="1"/>
 <wire x1="-48.26" y1="58.42" x2="-43.18" y2="58.42" width="0.1524" layer="91"/>
 <junction x="-48.26" y="58.42"/>
 </segment>
@@ -25858,7 +25856,7 @@ from SYS_RTC_1P8V</text>
 </net>
 <net name="N$504" class="0">
 <segment>
-<pinref part="TP166" gate="G$1" pin="1"/>
+<pinref part="TP167" gate="G$1" pin="1"/>
 <wire x1="-124.46" y1="55.88" x2="-127" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="-127" y1="55.88" x2="-132.08" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="-124.46" y1="58.42" x2="-127" y2="58.42" width="0.1524" layer="91"/>
@@ -25870,7 +25868,7 @@ from SYS_RTC_1P8V</text>
 </net>
 <net name="N$519" class="0">
 <segment>
-<pinref part="TP139" gate="G$1" pin="1"/>
+<pinref part="TP140" gate="G$1" pin="1"/>
 <wire x1="-124.46" y1="63.5" x2="-127" y2="63.5" width="0.1524" layer="91"/>
 <wire x1="-127" y1="63.5" x2="-132.08" y2="63.5" width="0.1524" layer="91"/>
 <wire x1="-124.46" y1="66.04" x2="-127" y2="66.04" width="0.1524" layer="91"/>
@@ -25882,7 +25880,7 @@ from SYS_RTC_1P8V</text>
 </net>
 <net name="N$520" class="0">
 <segment>
-<pinref part="TP130" gate="G$1" pin="1"/>
+<pinref part="TP132" gate="G$1" pin="1"/>
 <wire x1="-124.46" y1="71.12" x2="-127" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="-127" y1="71.12" x2="-132.08" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="-124.46" y1="73.66" x2="-127" y2="73.66" width="0.1524" layer="91"/>
@@ -25894,7 +25892,7 @@ from SYS_RTC_1P8V</text>
 </net>
 <net name="N$524" class="0">
 <segment>
-<pinref part="TP119" gate="G$1" pin="1"/>
+<pinref part="TP121" gate="G$1" pin="1"/>
 <wire x1="-124.46" y1="78.74" x2="-127" y2="78.74" width="0.1524" layer="91"/>
 <wire x1="-127" y1="78.74" x2="-132.08" y2="78.74" width="0.1524" layer="91"/>
 <wire x1="-124.46" y1="81.28" x2="-127" y2="81.28" width="0.1524" layer="91"/>
@@ -25907,7 +25905,7 @@ from SYS_RTC_1P8V</text>
 <net name="N$525" class="0">
 <segment>
 <pinref part="U7" gate="A" pin="PMIC_PB_IN"/>
-<pinref part="TP106" gate="G$1" pin="1"/>
+<pinref part="TP102" gate="G$1" pin="1"/>
 <wire x1="-132.08" y1="91.44" x2="-124.46" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -25930,7 +25928,7 @@ from SYS_RTC_1P8V</text>
 <junction x="-48.26" y="25.4"/>
 <pinref part="U7" gate="A" pin="PMIC_PGOOD"/>
 <pinref part="U7" gate="A" pin="PWRONRSTN"/>
-<pinref part="TP111" gate="G$1" pin="1"/>
+<pinref part="TP110" gate="G$1" pin="1"/>
 <junction x="-40.64" y="25.4"/>
 </segment>
 </net>
@@ -25942,7 +25940,7 @@ from SYS_RTC_1P8V</text>
 <wire x1="-22.86" y1="12.7" x2="-22.86" y2="25.4" width="0.1524" layer="91"/>
 <wire x1="-22.86" y1="25.4" x2="-25.4" y2="25.4" width="0.1524" layer="91"/>
 <pinref part="U7" gate="A" pin="WARMRSTN"/>
-<pinref part="TP108" gate="G$1" pin="1"/>
+<pinref part="TP109" gate="G$1" pin="1"/>
 <wire x1="-22.86" y1="12.7" x2="-17.78" y2="12.7" width="0.1524" layer="91"/>
 <junction x="-22.86" y="12.7"/>
 </segment>
@@ -25959,7 +25957,7 @@ from SYS_RTC_1P8V</text>
 <pinref part="U7" gate="A" pin="EEPROM_WP"/>
 <wire x1="-124.46" y1="22.86" x2="-129.54" y2="22.86" width="0.1524" layer="91"/>
 <label x="-139.7" y="22.86" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="TP110" gate="G$1" pin="1"/>
+<pinref part="TP112" gate="G$1" pin="1"/>
 <wire x1="-129.54" y1="22.86" x2="-139.7" y2="22.86" width="0.1524" layer="91"/>
 <junction x="-129.54" y="22.86"/>
 </segment>
@@ -25979,7 +25977,7 @@ from SYS_RTC_1P8V</text>
 <segment>
 <pinref part="Q1" gate="G$1" pin="B"/>
 <pinref part="U10" gate="U" pin="CATHODE"/>
-<pinref part="R26" gate="R" pin="1"/>
+<pinref part="R23" gate="R" pin="1"/>
 <wire x1="-5.08" y1="99.06" x2="-15.24" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="-5.08" y1="101.6" x2="-5.08" y2="99.06" width="0.1524" layer="91"/>
 <junction x="-5.08" y="99.06"/>
@@ -26010,7 +26008,7 @@ from SYS_RTC_1P8V</text>
 <pinref part="U7" gate="A" pin="VDDSHV4"/>
 <pinref part="U7" gate="A" pin="VDDSHV6"/>
 <pinref part="U7" gate="A" pin="SYS_VDD3_3P3V@1"/>
-<pinref part="TP164" gate="G$1" pin="1"/>
+<pinref part="TP165" gate="G$1" pin="1"/>
 <wire x1="-53.34" y1="109.22" x2="-48.26" y2="109.22" width="0.1524" layer="91"/>
 <pinref part="U7" gate="A" pin="SYS_VDD3_3P3V@8"/>
 <wire x1="-48.26" y1="109.22" x2="-43.18" y2="109.22" width="0.1524" layer="91"/>
@@ -26044,7 +26042,7 @@ from SYS_RTC_1P8V</text>
 <wire x1="-48.26" y1="81.28" x2="-48.26" y2="91.44" width="0.1524" layer="91"/>
 <junction x="-48.26" y="81.28"/>
 <junction x="-48.26" y="91.44"/>
-<pinref part="JP103" gate="G$1" pin="1"/>
+<pinref part="JP101" gate="G$1" pin="1"/>
 <wire x1="-48.26" y1="78.74" x2="-30.48" y2="78.74" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -26115,7 +26113,7 @@ from SYS_RTC_1P8V</text>
 <net name="N$59" class="0">
 <segment>
 <pinref part="U7" gate="F" pin="NC@3"/>
-<pinref part="TP144" gate="G$1" pin="1"/>
+<pinref part="TP145" gate="G$1" pin="1"/>
 <wire x1="165.1" y1="68.58" x2="167.64" y2="68.58" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -26136,13 +26134,13 @@ from SYS_RTC_1P8V</text>
 <net name="N$62" class="0">
 <segment>
 <pinref part="U7" gate="F" pin="VDDS_PLL"/>
-<pinref part="TP168" gate="G$1" pin="1"/>
+<pinref part="TP166" gate="G$1" pin="1"/>
 <wire x1="109.22" y1="83.82" x2="106.68" y2="83.82" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$63" class="0">
 <segment>
-<pinref part="TP159" gate="G$1" pin="1"/>
+<pinref part="TP160" gate="G$1" pin="1"/>
 <pinref part="U7" gate="F" pin="VDD_MPU"/>
 <wire x1="106.68" y1="88.9" x2="109.22" y2="88.9" width="0.1524" layer="91"/>
 </segment>
@@ -26166,19 +26164,19 @@ from SYS_RTC_1P8V</text>
 <pinref part="Q1" gate="G$1" pin="E"/>
 <pinref part="R28" gate="R" pin="2"/>
 <wire x1="12.7" y1="78.74" x2="12.7" y2="86.36" width="0.1524" layer="91"/>
-<pinref part="R26" gate="R" pin="2"/>
+<pinref part="R23" gate="R" pin="2"/>
 <wire x1="-5.08" y1="86.36" x2="-5.08" y2="78.74" width="0.1524" layer="91"/>
 <wire x1="-5.08" y1="78.74" x2="12.7" y2="78.74" width="0.1524" layer="91"/>
 <junction x="-5.08" y="78.74"/>
 <wire x1="-5.08" y1="78.74" x2="-20.32" y2="78.74" width="0.1524" layer="91"/>
 <wire x1="-20.32" y1="78.74" x2="-20.32" y2="93.98" width="0.1524" layer="91"/>
-<pinref part="JP103" gate="G$1" pin="2"/>
+<pinref part="JP101" gate="G$1" pin="2"/>
 <junction x="-20.32" y="78.74"/>
 </segment>
 </net>
 <net name="N$32" class="0">
 <segment>
-<pinref part="TP165" gate="G$1" pin="1"/>
+<pinref part="TP164" gate="G$1" pin="1"/>
 <pinref part="U7" gate="A" pin="SYS_RTC_1P8V@1"/>
 <wire x1="-48.26" y1="127" x2="-53.34" y2="127" width="0.1524" layer="91"/>
 <wire x1="-48.26" y1="124.46" x2="-48.26" y2="127" width="0.1524" layer="91"/>
