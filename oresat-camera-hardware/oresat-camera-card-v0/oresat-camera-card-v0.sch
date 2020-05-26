@@ -18817,64 +18817,6 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="Q-Microchip-MIC842-Comparator">
-<packages>
-<package name="SC70-5" urn="urn:adsk.eagle:footprint:2365/1" locally_modified="yes">
-<description>&lt;b&gt;SMT SC70-5&lt;/b&gt;&lt;p&gt;
-SOT353 - Philips Semiconductors&lt;br&gt;
-Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_HCT1G66_3.pdf</description>
-<wire x1="1" y1="0.55" x2="-1" y2="0.55" width="0.127" layer="51"/>
-<wire x1="-1" y1="0.55" x2="-1" y2="-0.55" width="0.127" layer="21"/>
-<wire x1="-1" y1="-0.55" x2="1" y2="-0.55" width="0.127" layer="51"/>
-<wire x1="1" y1="-0.55" x2="1" y2="0.55" width="0.127" layer="21"/>
-<smd name="1" x="-0.65" y="-0.85" dx="0.4" dy="0.7" layer="1"/>
-<smd name="2" x="0" y="-0.85" dx="0.4" dy="0.7" layer="1"/>
-<smd name="3" x="0.65" y="-0.85" dx="0.4" dy="0.7" layer="1"/>
-<smd name="4" x="0.65" y="0.85" dx="0.4" dy="0.7" layer="1"/>
-<smd name="5" x="-0.65" y="0.85" dx="0.4" dy="0.7" layer="1"/>
-<text x="-1.27" y="2.54" size="0.625" layer="25" font="vector" ratio="20">&gt;NAME</text>
-<text x="-1.27" y="1.27" size="0.625" layer="27" font="vector" ratio="20">&gt;VALUE</text>
-<rectangle x1="-0.125" y1="-1.05" x2="0.125" y2="-0.6" layer="51"/>
-<rectangle x1="-0.775" y1="-1.05" x2="-0.525" y2="-0.6" layer="51"/>
-<rectangle x1="0.525" y1="-1.05" x2="0.775" y2="-0.6" layer="51"/>
-<rectangle x1="-0.775" y1="0.6" x2="-0.525" y2="1.05" layer="51"/>
-<rectangle x1="0.525" y1="0.6" x2="0.775" y2="1.05" layer="51"/>
-</package>
-</packages>
-<symbols>
-<symbol name="MIC842">
-<wire x1="-10.16" y1="-7.62" x2="10.16" y2="-7.62" width="0.1524" layer="94"/>
-<wire x1="10.16" y1="-7.62" x2="10.16" y2="7.62" width="0.1524" layer="94"/>
-<wire x1="10.16" y1="7.62" x2="-10.16" y2="7.62" width="0.1524" layer="94"/>
-<wire x1="-10.16" y1="7.62" x2="-10.16" y2="-7.62" width="0.1524" layer="94"/>
-<pin name="GND" x="0" y="-10.16" length="short" rot="R90"/>
-<pin name="VCC" x="0" y="10.16" length="short" rot="R270"/>
-<pin name="CIN" x="-12.7" y="0" length="short"/>
-<pin name="COUT" x="12.7" y="0" length="short" rot="R180"/>
-<text x="-10.16" y="12.7" size="1.778" layer="95">&gt;NAME</text>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="MIC842" prefix="Q">
-<gates>
-<gate name="G$1" symbol="MIC842" x="-5.08" y="-2.54"/>
-</gates>
-<devices>
-<device name="" package="SC70-5">
-<connects>
-<connect gate="G$1" pin="CIN" pad="1"/>
-<connect gate="G$1" pin="COUT" pad="4"/>
-<connect gate="G$1" pin="GND" pad="2"/>
-<connect gate="G$1" pin="VCC" pad="5"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="OSD3358-SM-RED Platform">
 <packages>
 <package name="CRYSTAL_3.2X1.5">
@@ -19119,6 +19061,92 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 </deviceset>
 </devicesets>
 </library>
+<library name="U-Microchip-MIC842-Comparator">
+<packages>
+<package name="SC70-5">
+<description>&lt;b&gt;SMT SC70-5&lt;/b&gt;&lt;p&gt;
+SOT353 - Philips Semiconductors&lt;br&gt;
+Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_HCT1G66_3.pdf</description>
+<wire x1="1" y1="0.55" x2="-1" y2="0.55" width="0.127" layer="51"/>
+<wire x1="-1" y1="0.3" x2="-1" y2="-0.3" width="0.127" layer="21"/>
+<wire x1="-1" y1="-0.55" x2="1" y2="-0.55" width="0.127" layer="51"/>
+<wire x1="1" y1="-0.3" x2="1" y2="0.3" width="0.127" layer="21"/>
+<rectangle x1="-0.125" y1="-1.05" x2="0.125" y2="-0.6" layer="51"/>
+<rectangle x1="-0.775" y1="-1.05" x2="-0.525" y2="-0.6" layer="51"/>
+<rectangle x1="0.525" y1="-1.05" x2="0.775" y2="-0.6" layer="51"/>
+<rectangle x1="-0.775" y1="0.6" x2="-0.525" y2="1.05" layer="51"/>
+<rectangle x1="0.525" y1="0.6" x2="0.775" y2="1.05" layer="51"/>
+<smd name="1" x="-0.65" y="-0.85" dx="0.4" dy="0.7" layer="1"/>
+<smd name="2" x="0" y="-0.85" dx="0.4" dy="0.7" layer="1"/>
+<smd name="3" x="0.65" y="-0.85" dx="0.4" dy="0.7" layer="1"/>
+<smd name="4" x="0.65" y="0.85" dx="0.4" dy="0.7" layer="1"/>
+<smd name="5" x="-0.65" y="0.85" dx="0.4" dy="0.7" layer="1"/>
+<text x="1.27" y="-1.27" size="0.635" layer="25" font="vector" ratio="20">&gt;NAME</text>
+<circle x="-1.4" y="-0.9" radius="0.2" width="0.127" layer="21"/>
+<wire x1="-1" y1="0.55" x2="-1" y2="0.3" width="0.127" layer="51"/>
+<wire x1="-1" y1="-0.55" x2="-1" y2="-0.3" width="0.127" layer="51"/>
+<wire x1="1" y1="-0.55" x2="1" y2="-0.3" width="0.127" layer="51"/>
+<wire x1="1" y1="0.55" x2="1" y2="0.3" width="0.127" layer="51"/>
+</package>
+</packages>
+<symbols>
+<symbol name="MIC842L">
+<wire x1="-5.08" y1="-7.62" x2="8.255" y2="0" width="0.254" layer="94"/>
+<wire x1="8.255" y1="0" x2="-5.08" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="7.62" x2="-5.08" y2="-2.54" width="0.254" layer="94"/>
+<pin name="INP" x="-7.62" y="2.54" visible="off" length="short" direction="in"/>
+<pin name="OUT" x="10.795" y="0" visible="off" length="short" direction="out" rot="R180"/>
+<pin name="GND" x="0" y="-7.62" visible="off" length="short" direction="pwr" rot="R90"/>
+<pin name="VDD" x="0" y="7.62" visible="off" length="short" direction="pwr" rot="R270"/>
+<text x="5.715" y="-5.08" size="1.27" layer="95">&gt;NAME</text>
+<wire x1="-5.08" y1="-2.54" x2="-5.08" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-2.54" x2="-8.255" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="-8.255" y1="-2.54" x2="-8.255" y2="-5.08" width="0.1524" layer="94"/>
+<circle x="-8.255" y="-7.62" radius="2.54" width="0.254" layer="94"/>
+<wire x1="-8.255" y1="-10.16" x2="-8.255" y2="-12.7" width="0.1524" layer="94"/>
+<wire x1="-8.255" y1="-12.7" x2="-10.16" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="-8.255" y1="-12.7" x2="-6.35" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="-6.35" y1="-12.7" x2="-8.255" y2="-13.97" width="0.254" layer="94"/>
+<wire x1="-8.255" y1="-13.97" x2="-10.16" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="-8.255" y1="-5.715" x2="-8.255" y2="-6.985" width="0.1524" layer="94"/>
+<wire x1="-8.89" y1="-6.35" x2="-7.62" y2="-6.35" width="0.1524" layer="94"/>
+<wire x1="-8.89" y1="-8.89" x2="-7.62" y2="-8.89" width="0.1524" layer="94"/>
+<text x="-10.16" y="-2.032" size="1.27" layer="94">1.24V</text>
+<wire x1="-1.905" y1="-0.635" x2="-1.27" y2="-0.635" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="-0.635" x2="0" y2="-0.635" width="0.1524" layer="94"/>
+<wire x1="0" y1="-0.635" x2="1.27" y2="0.635" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="0.635" x2="1.905" y2="0.635" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="0.635" x2="0" y2="0.635" width="0.1524" layer="94"/>
+<wire x1="0" y1="0.635" x2="-1.27" y2="-0.635" width="0.1524" layer="94"/>
+<text x="5.715" y="-6.35" size="1.27" layer="96">&gt;VALUE</text>
+<wire x1="-3.81" y1="2.54" x2="-2.54" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="-3.175" y1="3.175" x2="-3.175" y2="1.905" width="0.1524" layer="94"/>
+<wire x1="-3.81" y1="-2.54" x2="-2.54" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="-5.08" x2="0" y2="-4.826" width="0.1524" layer="94"/>
+<wire x1="0" y1="5.08" x2="0" y2="4.826" width="0.1524" layer="94"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="MIC842L" prefix="U">
+<gates>
+<gate name="G$1" symbol="MIC842L" x="-5.08" y="-2.54"/>
+</gates>
+<devices>
+<device name="YC5" package="SC70-5">
+<connects>
+<connect gate="G$1" pin="GND" pad="2"/>
+<connect gate="G$1" pin="INP" pad="1"/>
+<connect gate="G$1" pin="OUT" pad="4"/>
+<connect gate="G$1" pin="VDD" pad="5"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -19144,7 +19172,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <attribute name="MPN" value="RC1005F6653CS"/>
 </part>
 <part name="FRAME2" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="FRAME_B_L" device=""/>
-<part name="U13" library="U-TI-TPS6211x-SPS-buck" deviceset="TPS6211X" device="" value="TPS62112">
+<part name="U15" library="U-TI-TPS6211x-SPS-buck" deviceset="TPS6211X" device="" value="TPS62112">
 <attribute name="MFR" value="TI"/>
 <attribute name="MPN" value="TPS62111RSA"/>
 </part>
@@ -19381,7 +19409,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="TP147" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP137" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP149" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP134" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP135" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP156" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP154" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP160" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
@@ -19455,7 +19483,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="TP128" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP127" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP131" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="TP135" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
+<part name="TP134" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP148" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="D7" library="SparkFun-LED" deviceset="LED-GREEN" device="0603" value="GREEN">
 <attribute name="PROD_ID" value=""/>
@@ -19472,7 +19500,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <attribute name="MPN" value="TFM-120-01-L-D-RA"/>
 </part>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="U14" library="U-Maxim-MAX7310-I2C-GPIO-expander" deviceset="MAX7310" device="" package3d_urn="urn:adsk.eagle:package:8018497/1" value="MAX7310ATE">
+<part name="U16" library="U-Maxim-MAX7310-I2C-GPIO-expander" deviceset="MAX7310" device="" package3d_urn="urn:adsk.eagle:package:8018497/1" value="MAX7310ATE">
 <attribute name="MFR" value="Maxim"/>
 <attribute name="MPN" value="MAX7310ATE"/>
 </part>
@@ -19490,7 +19518,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <attribute name="MFR" value="Samsung"/>
 <attribute name="MPN" value="RC1005F6653CS"/>
 </part>
-<part name="U12" library="U-Maxim-MAX4211-power-monitor" deviceset="MAX4211" device="" package3d_urn="urn:adsk.eagle:package:8018497/1" value="MAX4211FETE">
+<part name="U14" library="U-Maxim-MAX4211-power-monitor" deviceset="MAX4211" device="" package3d_urn="urn:adsk.eagle:package:8018497/1" value="MAX4211FETE">
 <attribute name="MFR" value="Maxim"/>
 <attribute name="MPN" value="MAX4211FETE"/>
 </part>
@@ -19670,16 +19698,16 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 </part>
 <part name="TP45" library="Tova" deviceset="TEST-POINT" device=""/>
 <part name="TP55" library="Tova" deviceset="TEST-POINT" device=""/>
-<part name="Q7" library="Q-MOSFET-PCH-SOT23-6" deviceset="MOSFET-PCH-SOT23-6" device="">
+<part name="Q5" library="Q-MOSFET-PCH-SOT23-6" deviceset="MOSFET-PCH-SOT23-6" device="">
 <attribute name="MFR" value="Diodes Inc"/>
 <attribute name="MPN" value="DMP3050LVT-7"/>
 </part>
-<part name="Q8" library="Q-MOSFET-PCH-SOT23-6" deviceset="MOSFET-PCH-SOT23-6" device="">
+<part name="Q6" library="Q-MOSFET-PCH-SOT23-6" deviceset="MOSFET-PCH-SOT23-6" device="">
 <attribute name="MFR" value="Diodes Inc"/>
 <attribute name="MPN" value="DMP3050LVT-7"/>
 </part>
-<part name="Q6" library="Tova" deviceset="PMV45EN" device=""/>
-<part name="Q3" library="Tova" deviceset="PMV45EN" device=""/>
+<part name="Q4" library="Tova" deviceset="PMV45EN" device=""/>
+<part name="Q2" library="Tova" deviceset="PMV45EN" device=""/>
 <part name="C34" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="1uF">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-1001-1-ND"/>
@@ -19740,7 +19768,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 </part>
 <part name="GND11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="VPD4" library="oresat-supplies" deviceset="VPD" device=""/>
-<part name="C35" library="oresat-rcl" deviceset="C-EU" device="0805-B-NOSILK" value="NP"/>
+<part name="C35" library="oresat-rcl" deviceset="C-EU" device="0805-B-NOSILK" value="1u"/>
 <part name="GND8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="TP41" library="Tova" deviceset="TEST-POINT" device=""/>
 <part name="TP43" library="Tova" deviceset="TEST-POINT" device=""/>
@@ -19750,7 +19778,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <attribute name="MFR" value="Samsung"/>
 <attribute name="MPN" value="RC1005F6653CS"/>
 </part>
-<part name="Q4" library="Q-MOSFET-PCH-dual-SOT23-6" deviceset="MOSFET-PCH-SOT23-6" device="" value="DMP2240UDM">
+<part name="Q3" library="Q-MOSFET-PCH-dual-SOT23-6" deviceset="MOSFET-PCH-SOT23-6" device="" value="DMP2240UDM">
 <attribute name="MFR" value="Diodes Inc"/>
 <attribute name="MPN" value="DMP2240UDM"/>
 </part>
@@ -19769,12 +19797,10 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 </part>
 <part name="GND10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="VPD3" library="oresat-supplies" deviceset="VPD" device=""/>
-<part name="C32" library="oresat-rcl" deviceset="C-EU" device="0805-B-NOSILK" value="NP"/>
+<part name="C32" library="oresat-rcl" deviceset="C-EU" device="0805-B-NOSILK" value="1u"/>
 <part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="TP42" library="Tova" deviceset="TEST-POINT" device=""/>
 <part name="TP44" library="Tova" deviceset="TEST-POINT" device=""/>
-<part name="Q2" library="Q-Microchip-MIC842-Comparator" deviceset="MIC842" device=""/>
-<part name="Q5" library="Q-Microchip-MIC842-Comparator" deviceset="MIC842" device=""/>
 <part name="TP184" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP183" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP62" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
@@ -19825,6 +19851,8 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="TP142" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP146" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="J2" library="SparkFun-Connectors" deviceset="CONN_02" device="PTH3"/>
+<part name="U13" library="U-Microchip-MIC842-Comparator" deviceset="MIC842L" device="YC5"/>
+<part name="U12" library="U-Microchip-MIC842-Comparator" deviceset="MIC842L" device="YC5"/>
 </parts>
 <sheets>
 <sheet>
@@ -20276,7 +20304,7 @@ slow I2C</text>
 <attribute name="NAME" x="298.2214" y="78.74" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="303.022" y="78.74" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="U13" gate="G$1" x="243.84" y="78.74" smashed="yes">
+<instance part="U15" gate="G$1" x="243.84" y="78.74" smashed="yes">
 <attribute name="NAME" x="248.92" y="60.96" size="1.778" layer="95"/>
 <attribute name="VALUE" x="248.92" y="58.42" size="1.778" layer="96"/>
 <attribute name="MFR" x="243.84" y="78.74" size="1.778" layer="96" display="off"/>
@@ -20368,7 +20396,7 @@ slow I2C</text>
 <attribute name="NAME" x="397.51" y="205.74" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="397.51" y="210.82" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="U14" gate="G$1" x="132.08" y="157.48" smashed="yes">
+<instance part="U16" gate="G$1" x="132.08" y="157.48" smashed="yes">
 <attribute name="NAME" x="137.16" y="142.24" size="1.778" layer="95"/>
 <attribute name="VALUE" x="137.16" y="139.7" size="1.778" layer="96"/>
 <attribute name="MPN" x="132.08" y="157.48" size="1.778" layer="96" display="off"/>
@@ -20396,7 +20424,7 @@ slow I2C</text>
 <attribute name="NAME" x="66.04" y="237.49" size="1.778" layer="95"/>
 <attribute name="VALUE" x="72.39" y="237.49" size="1.778" layer="96"/>
 </instance>
-<instance part="U12" gate="G$1" x="299.72" y="195.58" smashed="yes">
+<instance part="U14" gate="G$1" x="299.72" y="195.58" smashed="yes">
 <attribute name="NAME" x="302.26" y="170.18" size="1.778" layer="95"/>
 <attribute name="VALUE" x="302.26" y="167.64" size="1.778" layer="96"/>
 <attribute name="MPN" x="299.72" y="195.58" size="1.778" layer="96" display="off"/>
@@ -20671,23 +20699,23 @@ slow I2C</text>
 <instance part="TP55" gate="G$1" x="398.78" y="218.44" smashed="yes">
 <attribute name="NAME" x="397.51" y="220.98" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="Q7" gate="G$1" x="370.84" y="215.9" smashed="yes" rot="R90">
+<instance part="Q5" gate="G$1" x="370.84" y="215.9" smashed="yes" rot="R90">
 <attribute name="VALUE" x="364.49" y="222.25" size="1.778" layer="96"/>
 <attribute name="NAME" x="364.49" y="224.79" size="1.778" layer="95"/>
 <attribute name="MFR" x="370.84" y="215.9" size="1.778" layer="96" rot="R90" display="off"/>
 <attribute name="MPN" x="370.84" y="215.9" size="1.778" layer="96" rot="R90" display="off"/>
 </instance>
-<instance part="Q8" gate="G$1" x="223.52" y="215.9" smashed="yes" rot="R90">
+<instance part="Q6" gate="G$1" x="223.52" y="215.9" smashed="yes" rot="R90">
 <attribute name="VALUE" x="220.98" y="222.25" size="1.778" layer="96"/>
 <attribute name="NAME" x="220.98" y="224.79" size="1.778" layer="95"/>
 <attribute name="MFR" x="223.52" y="215.9" size="1.778" layer="96" rot="R90" display="off"/>
 <attribute name="MPN" x="223.52" y="215.9" size="1.778" layer="96" rot="R90" display="off"/>
 </instance>
-<instance part="Q6" gate="G$1" x="218.44" y="203.2" smashed="yes">
+<instance part="Q4" gate="G$1" x="218.44" y="203.2" smashed="yes">
 <attribute name="VALUE" x="220.98" y="203.2" size="1.778" layer="96"/>
 <attribute name="NAME" x="220.98" y="205.74" size="1.778" layer="95"/>
 </instance>
-<instance part="Q3" gate="G$1" x="375.92" y="185.42" smashed="yes">
+<instance part="Q2" gate="G$1" x="375.92" y="185.42" smashed="yes">
 <attribute name="VALUE" x="378.46" y="185.42" size="1.778" layer="96"/>
 <attribute name="NAME" x="378.46" y="187.96" size="1.778" layer="95"/>
 </instance>
@@ -20817,7 +20845,7 @@ slow I2C</text>
 <attribute name="NAME" x="76.2" y="100.33" size="1.778" layer="95"/>
 <attribute name="VALUE" x="82.55" y="100.33" size="1.778" layer="96"/>
 </instance>
-<instance part="Q4" gate=".1" x="99.06" y="96.52" smashed="yes" rot="R90">
+<instance part="Q3" gate=".1" x="99.06" y="96.52" smashed="yes" rot="R90">
 <attribute name="VALUE" x="97.79" y="91.44" size="1.778" layer="96"/>
 <attribute name="NAME" x="97.79" y="93.98" size="1.778" layer="95"/>
 <attribute name="MFR" x="99.06" y="96.52" size="1.778" layer="96" rot="R90" display="off"/>
@@ -20861,13 +20889,7 @@ slow I2C</text>
 <instance part="TP44" gate="G$1" x="160.02" y="81.28" smashed="yes" rot="R180">
 <attribute name="NAME" x="162.56" y="85.09" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
-<instance part="Q2" gate="G$1" x="142.24" y="99.06" smashed="yes">
-<attribute name="NAME" x="133.35" y="107.442" size="1.778" layer="95"/>
-</instance>
-<instance part="Q5" gate="G$1" x="142.24" y="58.42" smashed="yes">
-<attribute name="NAME" x="133.096" y="66.802" size="1.778" layer="95"/>
-</instance>
-<instance part="Q4" gate=".2" x="99.06" y="55.88" smashed="yes" rot="R90">
+<instance part="Q3" gate=".2" x="99.06" y="55.88" smashed="yes" rot="R90">
 <attribute name="VALUE" x="97.79" y="50.038" size="1.778" layer="96"/>
 <attribute name="NAME" x="97.79" y="52.578" size="1.778" layer="95"/>
 </instance>
@@ -20882,6 +20904,14 @@ slow I2C</text>
 <attribute name="NAME" x="95.25" y="72.39" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="95.25" y="78.74" size="1.778" layer="96" rot="R90"/>
 </instance>
+<instance part="U13" gate="G$1" x="142.24" y="55.88" smashed="yes">
+<attribute name="NAME" x="147.955" y="50.8" size="1.27" layer="95"/>
+<attribute name="VALUE" x="147.955" y="49.53" size="1.27" layer="96"/>
+</instance>
+<instance part="U12" gate="G$1" x="142.24" y="96.52" smashed="yes">
+<attribute name="NAME" x="147.955" y="91.44" size="1.27" layer="95"/>
+<attribute name="VALUE" x="147.955" y="90.17" size="1.27" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -20893,16 +20923,16 @@ slow I2C</text>
 <wire x1="299.72" y1="67.31" x2="299.72" y2="64.77" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U13" gate="G$1" pin="GND"/>
+<pinref part="U15" gate="G$1" pin="GND"/>
 <pinref part="GND19" gate="1" pin="GND"/>
 <wire x1="243.84" y1="55.88" x2="243.84" y2="58.42" width="0.1524" layer="91"/>
-<pinref part="U13" gate="G$1" pin="LBI"/>
+<pinref part="U15" gate="G$1" pin="LBI"/>
 <wire x1="243.84" y1="58.42" x2="243.84" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="228.6" y1="71.12" x2="231.14" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="228.6" y1="71.12" x2="228.6" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="228.6" y1="58.42" x2="243.84" y2="58.42" width="0.1524" layer="91"/>
 <junction x="243.84" y="58.42"/>
-<pinref part="U13" gate="G$1" pin="LBO"/>
+<pinref part="U15" gate="G$1" pin="LBO"/>
 <wire x1="256.54" y1="71.12" x2="259.08" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="259.08" y1="71.12" x2="259.08" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="259.08" y1="58.42" x2="243.84" y2="58.42" width="0.1524" layer="91"/>
@@ -20934,7 +20964,7 @@ slow I2C</text>
 </segment>
 <segment>
 <wire x1="132.08" y1="139.7" x2="132.08" y2="142.24" width="0.1524" layer="91"/>
-<pinref part="U14" gate="G$1" pin="GND"/>
+<pinref part="U16" gate="G$1" pin="GND"/>
 <pinref part="GND9" gate="1" pin="GND"/>
 </segment>
 <segment>
@@ -20945,13 +20975,13 @@ slow I2C</text>
 </segment>
 <segment>
 <wire x1="299.72" y1="167.64" x2="299.72" y2="170.18" width="0.1524" layer="91"/>
-<pinref part="U12" gate="G$1" pin="GND"/>
+<pinref part="U14" gate="G$1" pin="GND"/>
 <pinref part="GND23" gate="1" pin="GND"/>
 </segment>
 <segment>
 <wire x1="218.44" y1="198.12" x2="218.44" y2="195.58" width="0.1524" layer="91"/>
 <pinref part="GND16" gate="1" pin="GND"/>
-<pinref part="Q6" gate="G$1" pin="S"/>
+<pinref part="Q4" gate="G$1" pin="S"/>
 </segment>
 <segment>
 <wire x1="210.82" y1="187.96" x2="210.82" y2="185.42" width="0.1524" layer="91"/>
@@ -20966,7 +20996,7 @@ slow I2C</text>
 <segment>
 <wire x1="375.92" y1="180.34" x2="375.92" y2="177.8" width="0.1524" layer="91"/>
 <pinref part="GND28" gate="1" pin="GND"/>
-<pinref part="Q3" gate="G$1" pin="S"/>
+<pinref part="Q2" gate="G$1" pin="S"/>
 </segment>
 <segment>
 <wire x1="259.08" y1="193.04" x2="259.08" y2="195.58" width="0.1524" layer="91"/>
@@ -20987,7 +21017,7 @@ slow I2C</text>
 <segment>
 <wire x1="142.24" y1="45.72" x2="142.24" y2="48.26" width="0.1524" layer="91"/>
 <pinref part="GND11" gate="1" pin="GND"/>
-<pinref part="Q5" gate="G$1" pin="GND"/>
+<pinref part="U13" gate="G$1" pin="GND"/>
 </segment>
 <segment>
 <wire x1="116.84" y1="48.26" x2="116.84" y2="50.8" width="0.1524" layer="91"/>
@@ -20997,7 +21027,7 @@ slow I2C</text>
 <segment>
 <wire x1="142.24" y1="86.36" x2="142.24" y2="88.9" width="0.1524" layer="91"/>
 <pinref part="GND10" gate="1" pin="GND"/>
-<pinref part="Q2" gate="G$1" pin="GND"/>
+<pinref part="U12" gate="G$1" pin="GND"/>
 </segment>
 <segment>
 <wire x1="116.84" y1="88.9" x2="116.84" y2="91.44" width="0.1524" layer="91"/>
@@ -21043,14 +21073,14 @@ slow I2C</text>
 </net>
 <net name="TPS62111_SW" class="0">
 <segment>
-<pinref part="U13" gate="G$1" pin="SW"/>
+<pinref part="U15" gate="G$1" pin="SW"/>
 <wire x1="256.54" y1="86.36" x2="261.62" y2="86.36" width="0.1524" layer="91"/>
 <pinref part="L1" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="TPS62111-PG" class="0">
 <segment>
-<pinref part="U13" gate="G$1" pin="PG"/>
+<pinref part="U15" gate="G$1" pin="PG"/>
 <pinref part="TP48" gate="G$1" pin="1"/>
 <wire x1="256.54" y1="76.2" x2="261.62" y2="76.2" width="0.1524" layer="91"/>
 </segment>
@@ -21058,7 +21088,7 @@ slow I2C</text>
 <net name="TPS62111-SYNC" class="0">
 <segment>
 <pinref part="TP46" gate="G$1" pin="1"/>
-<pinref part="U13" gate="G$1" pin="SYNC"/>
+<pinref part="U15" gate="G$1" pin="SYNC"/>
 <wire x1="226.06" y1="76.2" x2="231.14" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="226.06" y1="76.2" x2="226.06" y2="71.12" width="0.1524" layer="91"/>
 <junction x="226.06" y="76.2"/>
@@ -21073,9 +21103,9 @@ slow I2C</text>
 <net name="VBUSP" class="0">
 <segment>
 <pinref part="VBUSP1" gate="G$1" pin="VBUSP"/>
-<pinref part="U13" gate="G$1" pin="VIN"/>
+<pinref part="U15" gate="G$1" pin="VIN"/>
 <wire x1="231.14" y1="86.36" x2="228.6" y2="86.36" width="0.1524" layer="91"/>
-<pinref part="U13" gate="G$1" pin="EN"/>
+<pinref part="U15" gate="G$1" pin="EN"/>
 <wire x1="228.6" y1="81.28" x2="231.14" y2="81.28" width="0.1524" layer="91"/>
 <wire x1="228.6" y1="81.28" x2="228.6" y2="86.36" width="0.1524" layer="91"/>
 <junction x="228.6" y="86.36"/>
@@ -21106,7 +21136,7 @@ slow I2C</text>
 <pinref part="R61" gate="R" pin="2"/>
 <pinref part="C33" gate="CE" pin="2"/>
 <pinref part="TP55" gate="G$1" pin="1"/>
-<pinref part="Q7" gate="G$1" pin="D"/>
+<pinref part="Q5" gate="G$1" pin="D"/>
 <pinref part="VBUSP2" gate="G$1" pin="VBUSP"/>
 </segment>
 </net>
@@ -21114,7 +21144,7 @@ slow I2C</text>
 <segment>
 <pinref part="C36" gate="CE" pin="1"/>
 <wire x1="281.94" y1="83.82" x2="281.94" y2="86.36" width="0.1524" layer="91"/>
-<pinref part="U13" gate="G$1" pin="FB"/>
+<pinref part="U15" gate="G$1" pin="FB"/>
 <wire x1="256.54" y1="81.28" x2="279.4" y2="81.28" width="0.1524" layer="91"/>
 <wire x1="279.4" y1="81.28" x2="279.4" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="279.4" y1="86.36" x2="276.86" y2="86.36" width="0.1524" layer="91"/>
@@ -21155,7 +21185,7 @@ slow I2C</text>
 <junction x="215.9" y="218.44"/>
 <pinref part="VBUS1" gate="1" pin="VBUS"/>
 <pinref part="R52" gate="R" pin="2"/>
-<pinref part="Q8" gate="G$1" pin="S"/>
+<pinref part="Q6" gate="G$1" pin="S"/>
 </segment>
 </net>
 <net name="AD2" class="0">
@@ -21168,7 +21198,7 @@ slow I2C</text>
 <junction x="73.66" y="198.12"/>
 <wire x1="116.84" y1="160.02" x2="73.66" y2="160.02" width="0.1524" layer="91"/>
 <label x="104.14" y="160.02" size="1.778" layer="95"/>
-<pinref part="U14" gate="G$1" pin="AD2"/>
+<pinref part="U16" gate="G$1" pin="AD2"/>
 <pinref part="R53" gate="R" pin="1"/>
 <pinref part="R65" gate="R" pin="2"/>
 <pinref part="R54" gate="R" pin="2"/>
@@ -21192,7 +21222,7 @@ slow I2C</text>
 <wire x1="104.14" y1="165.1" x2="104.14" y2="198.12" width="0.1524" layer="91"/>
 <junction x="104.14" y="198.12"/>
 <label x="104.14" y="165.1" size="1.778" layer="95"/>
-<pinref part="U14" gate="G$1" pin="AD0"/>
+<pinref part="U16" gate="G$1" pin="AD0"/>
 <pinref part="R57" gate="R" pin="1"/>
 <pinref part="R69" gate="R" pin="2"/>
 <pinref part="R58" gate="R" pin="2"/>
@@ -21209,7 +21239,7 @@ slow I2C</text>
 <junction x="88.9" y="198.12"/>
 <wire x1="116.84" y1="162.56" x2="88.9" y2="162.56" width="0.1524" layer="91"/>
 <label x="104.14" y="162.56" size="1.778" layer="95"/>
-<pinref part="U14" gate="G$1" pin="AD1"/>
+<pinref part="U16" gate="G$1" pin="AD1"/>
 <pinref part="R55" gate="R" pin="1"/>
 <pinref part="R67" gate="R" pin="2"/>
 <pinref part="R56" gate="R" pin="2"/>
@@ -21220,7 +21250,7 @@ slow I2C</text>
 <segment>
 <wire x1="116.84" y1="147.32" x2="114.3" y2="147.32" width="0.1524" layer="91"/>
 <wire x1="114.3" y1="167.64" x2="114.3" y2="147.32" width="0.1524" layer="91"/>
-<pinref part="U14" gate="G$1" pin="!RESET"/>
+<pinref part="U16" gate="G$1" pin="!RESET"/>
 <pinref part="R72" gate="R" pin="1"/>
 </segment>
 </net>
@@ -21231,8 +21261,8 @@ slow I2C</text>
 <wire x1="220.98" y1="208.28" x2="220.98" y2="213.36" width="0.1524" layer="91"/>
 <junction x="218.44" y="208.28"/>
 <pinref part="R52" gate="R" pin="1"/>
-<pinref part="Q8" gate="G$1" pin="G"/>
-<pinref part="Q6" gate="G$1" pin="D"/>
+<pinref part="Q6" gate="G$1" pin="G"/>
+<pinref part="Q4" gate="G$1" pin="D"/>
 </segment>
 </net>
 <net name="ON/!OFF" class="0">
@@ -21249,10 +21279,10 @@ slow I2C</text>
 <wire x1="147.32" y1="157.48" x2="205.74" y2="157.48" width="0.1524" layer="91"/>
 <wire x1="207.01" y1="172.72" x2="205.74" y2="172.72" width="0.1524" layer="91"/>
 <junction x="205.74" y="172.72"/>
-<pinref part="U14" gate="G$1" pin="IO3"/>
+<pinref part="U16" gate="G$1" pin="IO3"/>
 <pinref part="R46" gate="R" pin="2"/>
 <pinref part="TP50" gate="G$1" pin="1"/>
-<pinref part="Q6" gate="G$1" pin="G"/>
+<pinref part="Q4" gate="G$1" pin="G"/>
 <pinref part="R49" gate="R" pin="2"/>
 </segment>
 </net>
@@ -21261,9 +21291,9 @@ slow I2C</text>
 <wire x1="294.64" y1="218.44" x2="294.64" y2="215.9" width="0.1524" layer="91"/>
 <junction x="294.64" y="218.44"/>
 <wire x1="228.6" y1="218.44" x2="294.64" y2="218.44" width="0.1524" layer="91"/>
-<pinref part="U12" gate="G$1" pin="RS+"/>
+<pinref part="U14" gate="G$1" pin="RS+"/>
 <pinref part="R63" gate="G$1" pin="1"/>
-<pinref part="Q8" gate="G$1" pin="D"/>
+<pinref part="Q6" gate="G$1" pin="D"/>
 </segment>
 </net>
 <net name="CB-RESET" class="0">
@@ -21277,8 +21307,8 @@ slow I2C</text>
 <wire x1="147.32" y1="154.94" x2="332.74" y2="154.94" width="0.1524" layer="91"/>
 <wire x1="325.12" y1="177.8" x2="314.96" y2="177.8" width="0.1524" layer="91"/>
 <junction x="325.12" y="177.8"/>
-<pinref part="U14" gate="G$1" pin="IO4"/>
-<pinref part="U12" gate="G$1" pin="CIN2-"/>
+<pinref part="U16" gate="G$1" pin="IO4"/>
+<pinref part="U14" gate="G$1" pin="CIN2-"/>
 <pinref part="R39" gate="R" pin="2"/>
 <pinref part="TP54" gate="G$1" pin="1"/>
 </segment>
@@ -21290,7 +21320,7 @@ slow I2C</text>
 <wire x1="347.98" y1="205.74" x2="353.06" y2="205.74" width="0.1524" layer="91"/>
 <wire x1="314.96" y1="193.04" x2="347.98" y2="193.04" width="0.1524" layer="91"/>
 <junction x="347.98" y="193.04"/>
-<pinref part="U12" gate="G$1" pin="CIN1+"/>
+<pinref part="U14" gate="G$1" pin="CIN1+"/>
 <pinref part="R50" gate="R" pin="1"/>
 <pinref part="R51" gate="R" pin="2"/>
 <pinref part="TP57" gate="G$1" pin="1"/>
@@ -21303,7 +21333,7 @@ slow I2C</text>
 <junction x="342.9" y="187.96"/>
 <wire x1="330.2" y1="187.96" x2="314.96" y2="187.96" width="0.1524" layer="91"/>
 <junction x="330.2" y="187.96"/>
-<pinref part="U12" gate="G$1" pin="CIN1-"/>
+<pinref part="U14" gate="G$1" pin="CIN1-"/>
 <pinref part="R47" gate="R" pin="1"/>
 <pinref part="R42" gate="R" pin="2"/>
 <pinref part="TP47" gate="G$1" pin="1"/>
@@ -21312,7 +21342,7 @@ slow I2C</text>
 <net name="IOUT" class="0">
 <segment>
 <wire x1="314.96" y1="205.74" x2="337.82" y2="205.74" width="0.1524" layer="91"/>
-<pinref part="U12" gate="G$1" pin="IOUT"/>
+<pinref part="U14" gate="G$1" pin="IOUT"/>
 <pinref part="R50" gate="R" pin="2"/>
 </segment>
 </net>
@@ -21323,8 +21353,8 @@ slow I2C</text>
 <junction x="320.04" y="198.12"/>
 <wire x1="320.04" y1="182.88" x2="320.04" y2="198.12" width="0.1524" layer="91"/>
 <wire x1="314.96" y1="182.88" x2="320.04" y2="182.88" width="0.1524" layer="91"/>
-<pinref part="U12" gate="G$1" pin="CIN2+"/>
-<pinref part="U12" gate="G$1" pin="REF"/>
+<pinref part="U14" gate="G$1" pin="CIN2+"/>
+<pinref part="U14" gate="G$1" pin="REF"/>
 <pinref part="R47" gate="R" pin="2"/>
 </segment>
 </net>
@@ -21348,19 +21378,19 @@ slow I2C</text>
 <wire x1="370.84" y1="182.88" x2="368.3" y2="182.88" width="0.1524" layer="91"/>
 <junction x="368.3" y="182.88"/>
 <junction x="281.94" y="157.48"/>
-<pinref part="U12" gate="G$1" pin="COUT1"/>
-<pinref part="U12" gate="G$1" pin="LE"/>
-<pinref part="U12" gate="G$1" pin="COUT2"/>
+<pinref part="U14" gate="G$1" pin="COUT1"/>
+<pinref part="U14" gate="G$1" pin="LE"/>
+<pinref part="U14" gate="G$1" pin="COUT2"/>
 <pinref part="R64" gate="R" pin="1"/>
-<pinref part="Q7" gate="G$1" pin="G"/>
-<pinref part="Q3" gate="G$1" pin="G"/>
+<pinref part="Q5" gate="G$1" pin="G"/>
+<pinref part="Q2" gate="G$1" pin="G"/>
 <pinref part="TP52" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$604" class="0">
 <segment>
 <wire x1="284.48" y1="195.58" x2="281.94" y2="195.58" width="0.1524" layer="91"/>
-<pinref part="U12" gate="G$1" pin="INHIBIT"/>
+<pinref part="U14" gate="G$1" pin="INHIBIT"/>
 <pinref part="R38" gate="R" pin="1"/>
 </segment>
 </net>
@@ -21386,10 +21416,10 @@ slow I2C</text>
 <label x="152.4" y="160.02" size="1.778" layer="95"/>
 <label x="370.84" y="150.876" size="1.778" layer="95"/>
 <junction x="375.92" y="190.5"/>
-<pinref part="U14" gate="G$1" pin="IO2"/>
+<pinref part="U16" gate="G$1" pin="IO2"/>
 <pinref part="R32" gate="R" pin="1"/>
 <pinref part="TP45" gate="G$1" pin="1"/>
-<pinref part="Q3" gate="G$1" pin="D"/>
+<pinref part="Q2" gate="G$1" pin="D"/>
 </segment>
 </net>
 <net name="MAX4211-3V3" class="0">
@@ -21407,8 +21437,8 @@ slow I2C</text>
 <wire x1="246.38" y1="129.54" x2="246.38" y2="205.74" width="0.1524" layer="91"/>
 <wire x1="246.38" y1="205.74" x2="259.08" y2="205.74" width="0.1524" layer="91"/>
 <label x="162.56" y="129.54" size="1.778" layer="95"/>
-<pinref part="U14" gate="G$1" pin="IO7"/>
-<pinref part="U12" gate="G$1" pin="VCC"/>
+<pinref part="U16" gate="G$1" pin="IO7"/>
+<pinref part="U14" gate="G$1" pin="VCC"/>
 <pinref part="C34" gate="CE" pin="1"/>
 <pinref part="TP56" gate="G$1" pin="1"/>
 </segment>
@@ -21444,7 +21474,7 @@ slow I2C</text>
 <junction x="114.3" y="180.34"/>
 <label x="113.03" y="181.61" size="1.778" layer="95"/>
 <wire x1="132.08" y1="180.34" x2="132.08" y2="190.5" width="0.1524" layer="91"/>
-<pinref part="U14" gate="G$1" pin="V+"/>
+<pinref part="U16" gate="G$1" pin="V+"/>
 <pinref part="C39" gate="CE" pin="2"/>
 <pinref part="R57" gate="R" pin="2"/>
 <pinref part="R55" gate="R" pin="2"/>
@@ -21454,23 +21484,23 @@ slow I2C</text>
 </segment>
 <segment>
 <wire x1="127" y1="68.58" x2="127" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="142.24" y1="68.58" x2="142.24" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="142.24" y1="71.12" x2="127" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="142.24" y1="71.12" x2="142.24" y2="73.66" width="0.1524" layer="91"/>
 <junction x="142.24" y="71.12"/>
 <pinref part="R44" gate="R" pin="2"/>
 <pinref part="VPD4" gate="G$1" pin="VPD"/>
-<pinref part="Q5" gate="G$1" pin="VCC"/>
+<pinref part="U13" gate="G$1" pin="VDD"/>
+<wire x1="142.24" y1="63.5" x2="142.24" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="127" y1="109.22" x2="127" y2="111.76" width="0.1524" layer="91"/>
-<wire x1="142.24" y1="109.22" x2="142.24" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="142.24" y1="111.76" x2="127" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="142.24" y1="111.76" x2="142.24" y2="114.3" width="0.1524" layer="91"/>
 <junction x="142.24" y="111.76"/>
 <pinref part="R36" gate="R" pin="2"/>
 <pinref part="VPD3" gate="G$1" pin="VPD"/>
-<pinref part="Q2" gate="G$1" pin="VCC"/>
+<pinref part="U12" gate="G$1" pin="VDD"/>
+<wire x1="142.24" y1="104.14" x2="142.24" y2="111.76" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$99" class="0">
@@ -21480,10 +21510,10 @@ slow I2C</text>
 <wire x1="304.8" y1="218.44" x2="363.22" y2="218.44" width="0.1524" layer="91"/>
 <wire x1="363.22" y1="218.44" x2="365.76" y2="218.44" width="0.1524" layer="91"/>
 <junction x="363.22" y="218.44"/>
-<pinref part="U12" gate="G$1" pin="RS-"/>
+<pinref part="U14" gate="G$1" pin="RS-"/>
 <pinref part="R63" gate="G$1" pin="2"/>
 <pinref part="R64" gate="R" pin="2"/>
-<pinref part="Q7" gate="G$1" pin="S"/>
+<pinref part="Q5" gate="G$1" pin="S"/>
 </segment>
 </net>
 <net name="PB6/SCL" class="0">
@@ -21493,7 +21523,7 @@ slow I2C</text>
 <wire x1="172.72" y1="165.1" x2="147.32" y2="165.1" width="0.1524" layer="91"/>
 <junction x="172.72" y="165.1"/>
 <wire x1="172.72" y1="165.1" x2="172.72" y2="167.64" width="0.1524" layer="91"/>
-<pinref part="U14" gate="G$1" pin="IO0"/>
+<pinref part="U16" gate="G$1" pin="IO0"/>
 <pinref part="R60" gate="R" pin="2"/>
 </segment>
 </net>
@@ -21504,7 +21534,7 @@ slow I2C</text>
 <wire x1="166.37" y1="162.56" x2="166.37" y2="151.13" width="0.1524" layer="91"/>
 <wire x1="166.37" y1="162.56" x2="177.8" y2="162.56" width="0.1524" layer="91"/>
 <wire x1="177.8" y1="162.56" x2="177.8" y2="165.1" width="0.1524" layer="91"/>
-<pinref part="U14" gate="G$1" pin="IO1"/>
+<pinref part="U16" gate="G$1" pin="IO1"/>
 <pinref part="R59" gate="R" pin="2"/>
 <junction x="166.37" y="162.56"/>
 </segment>
@@ -21513,7 +21543,7 @@ slow I2C</text>
 <segment>
 <label x="152.4" y="135.89" size="1.27" layer="95" rot="R180" xref="yes"/>
 <wire x1="147.32" y1="152.4" x2="153.67" y2="152.4" width="0.1524" layer="91"/>
-<pinref part="U14" gate="G$1" pin="IO5"/>
+<pinref part="U16" gate="G$1" pin="IO5"/>
 <wire x1="153.67" y1="152.4" x2="153.67" y2="135.89" width="0.1524" layer="91"/>
 <pinref part="TP51" gate="G$1" pin="1"/>
 </segment>
@@ -21529,21 +21559,21 @@ slow I2C</text>
 <segment>
 <wire x1="93.98" y1="58.42" x2="85.09" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="R41" gate="R" pin="2"/>
-<pinref part="Q4" gate=".2" pin="S"/>
+<pinref part="Q3" gate=".2" pin="S"/>
 </segment>
 </net>
 <net name="N$580" class="0">
 <segment>
 <wire x1="96.52" y1="40.64" x2="96.52" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="154.94" y1="58.42" x2="160.02" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="160.02" y1="58.42" x2="160.02" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="160.02" y1="40.64" x2="96.52" y2="40.64" width="0.1524" layer="91"/>
 <junction x="96.52" y="40.64"/>
-<junction x="160.02" y="40.64"/>
 <pinref part="R43" gate="R" pin="2"/>
 <pinref part="TP43" gate="G$1" pin="1"/>
-<pinref part="Q5" gate="G$1" pin="COUT"/>
-<pinref part="Q4" gate=".2" pin="G"/>
+<pinref part="Q3" gate=".2" pin="G"/>
+<pinref part="U13" gate="G$1" pin="OUT"/>
+<wire x1="153.035" y1="55.88" x2="160.02" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="55.88" x2="160.02" y2="40.64" width="0.1524" layer="91"/>
+<junction x="160.02" y="40.64"/>
 </segment>
 </net>
 <net name="N$385" class="0">
@@ -21555,7 +21585,7 @@ slow I2C</text>
 <wire x1="172.72" y1="138.43" x2="172.72" y2="140.97" width="0.1524" layer="91"/>
 <wire x1="162.56" y1="138.43" x2="166.37" y2="138.43" width="0.1524" layer="91"/>
 <junction x="166.37" y="138.43"/>
-<pinref part="U14" gate="G$1" pin="IO6"/>
+<pinref part="U16" gate="G$1" pin="IO6"/>
 <pinref part="R59" gate="R" pin="1"/>
 <pinref part="R60" gate="R" pin="1"/>
 <pinref part="TP53" gate="G$1" pin="1"/>
@@ -21565,7 +21595,7 @@ slow I2C</text>
 <segment>
 <wire x1="93.98" y1="99.06" x2="85.09" y2="99.06" width="0.1524" layer="91"/>
 <pinref part="R48" gate="R" pin="2"/>
-<pinref part="Q4" gate=".1" pin="S"/>
+<pinref part="Q3" gate=".1" pin="S"/>
 </segment>
 </net>
 <net name="PEN-SCL-FILT" class="0">
@@ -21595,12 +21625,12 @@ slow I2C</text>
 <wire x1="109.22" y1="111.76" x2="91.44" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="91.44" y1="111.76" x2="91.44" y2="154.94" width="0.1524" layer="91"/>
 <junction x="91.44" y="154.94"/>
-<pinref part="U14" gate="G$1" pin="SCL"/>
+<pinref part="U16" gate="G$1" pin="SCL"/>
 <pinref part="R69" gate="R" pin="1"/>
 <pinref part="R67" gate="R" pin="1"/>
 <pinref part="R65" gate="R" pin="1"/>
 <pinref part="TP66" gate="G$1" pin="1"/>
-<pinref part="Q4" gate=".1" pin="D"/>
+<pinref part="Q3" gate=".1" pin="D"/>
 <pinref part="R37" gate="R" pin="2"/>
 <pinref part="TP42" gate="G$1" pin="1"/>
 </segment>
@@ -21643,14 +21673,14 @@ slow I2C</text>
 <junction x="109.22" y="152.4"/>
 <wire x1="93.98" y1="124.46" x2="93.98" y2="152.4" width="0.1524" layer="91"/>
 <junction x="93.98" y="152.4"/>
-<pinref part="U14" gate="G$1" pin="SDA"/>
+<pinref part="U16" gate="G$1" pin="SDA"/>
 <pinref part="R70" gate="R" pin="2"/>
 <pinref part="R68" gate="R" pin="2"/>
 <pinref part="R66" gate="R" pin="2"/>
 <pinref part="TP65" gate="G$1" pin="1"/>
 <pinref part="R45" gate="R" pin="2"/>
 <pinref part="TP41" gate="G$1" pin="1"/>
-<pinref part="Q4" gate=".2" pin="D"/>
+<pinref part="Q3" gate=".2" pin="D"/>
 </segment>
 </net>
 <net name="POUT" class="0">
@@ -21659,46 +21689,46 @@ slow I2C</text>
 <wire x1="317.5" y1="203.2" x2="320.04" y2="203.2" width="0.1524" layer="91"/>
 <junction x="317.5" y="203.2"/>
 <label x="320.04" y="203.2" size="1.778" layer="95" xref="yes"/>
-<pinref part="U12" gate="G$1" pin="POUT"/>
+<pinref part="U14" gate="G$1" pin="POUT"/>
 <pinref part="TP64" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$100" class="0">
 <segment>
-<pinref part="Q5" gate="G$1" pin="CIN"/>
-<wire x1="129.54" y1="58.42" x2="127" y2="58.42" width="0.1524" layer="91"/>
 <junction x="127" y="58.42"/>
 <pinref part="R44" gate="R" pin="1"/>
 <wire x1="127" y1="58.42" x2="116.84" y2="58.42" width="0.1524" layer="91"/>
 <junction x="116.84" y="58.42"/>
 <pinref part="R45" gate="R" pin="1"/>
 <pinref part="C35" gate="CE" pin="1"/>
+<pinref part="U13" gate="G$1" pin="INP"/>
+<wire x1="134.62" y1="58.42" x2="127" y2="58.42" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$25" class="0">
 <segment>
-<pinref part="Q2" gate="G$1" pin="CIN"/>
-<wire x1="129.54" y1="99.06" x2="127" y2="99.06" width="0.1524" layer="91"/>
 <junction x="127" y="99.06"/>
 <pinref part="R36" gate="R" pin="1"/>
 <wire x1="127" y1="99.06" x2="116.84" y2="99.06" width="0.1524" layer="91"/>
 <junction x="116.84" y="99.06"/>
 <pinref part="R37" gate="R" pin="1"/>
 <pinref part="C32" gate="CE" pin="1"/>
+<pinref part="U12" gate="G$1" pin="INP"/>
+<wire x1="134.62" y1="99.06" x2="127" y2="99.06" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$27" class="0">
 <segment>
 <wire x1="96.52" y1="81.28" x2="96.52" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="154.94" y1="99.06" x2="160.02" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="160.02" y1="99.06" x2="160.02" y2="81.28" width="0.1524" layer="91"/>
 <wire x1="160.02" y1="81.28" x2="96.52" y2="81.28" width="0.1524" layer="91"/>
-<junction x="160.02" y="81.28"/>
-<pinref part="Q4" gate=".1" pin="G"/>
+<pinref part="Q3" gate=".1" pin="G"/>
 <pinref part="TP44" gate="G$1" pin="1"/>
-<pinref part="Q2" gate="G$1" pin="COUT"/>
 <pinref part="R35" gate="R" pin="2"/>
 <junction x="96.52" y="81.28"/>
+<pinref part="U12" gate="G$1" pin="OUT"/>
+<wire x1="153.035" y1="96.52" x2="160.02" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="96.52" x2="160.02" y2="81.28" width="0.1524" layer="91"/>
+<junction x="160.02" y="81.28"/>
 </segment>
 </net>
 </nets>
@@ -22233,7 +22263,7 @@ SYSBOOT[2] LOW == SD Card</text>
 <instance part="TP149" gate="G$1" x="571.5" y="383.54" smashed="yes" rot="R180">
 <attribute name="NAME" x="566.928" y="384.302" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
-<instance part="TP134" gate="G$1" x="571.5" y="381" smashed="yes" rot="R180">
+<instance part="TP135" gate="G$1" x="571.5" y="381" smashed="yes" rot="R180">
 <attribute name="NAME" x="566.928" y="381.762" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
 <instance part="TP101" gate="G$1" x="353.06" y="393.7" smashed="yes">
@@ -22380,7 +22410,7 @@ SYSBOOT[2] LOW == SD Card</text>
 <instance part="TP131" gate="G$1" x="353.06" y="297.18" smashed="yes">
 <attribute name="NAME" x="357.632" y="296.418" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="TP135" gate="G$1" x="353.06" y="299.72" smashed="yes">
+<instance part="TP134" gate="G$1" x="353.06" y="299.72" smashed="yes">
 <attribute name="NAME" x="357.632" y="298.958" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="TP148" gate="G$1" x="571.5" y="375.92" smashed="yes" rot="R180">
@@ -24253,7 +24283,7 @@ SYSBOOT[2] LOW == SD Card</text>
 <net name="N$56" class="0">
 <segment>
 <pinref part="U7" gate="D" pin="MII1_TXD2"/>
-<pinref part="TP134" gate="G$1" pin="1"/>
+<pinref part="TP135" gate="G$1" pin="1"/>
 <wire x1="574.04" y1="381" x2="571.5" y2="381" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -24358,7 +24388,7 @@ SYSBOOT[2] LOW == SD Card</text>
 <net name="N$93" class="0">
 <segment>
 <pinref part="U7" gate="C" pin="GPMC_ADVN_ALE"/>
-<pinref part="TP135" gate="G$1" pin="1"/>
+<pinref part="TP134" gate="G$1" pin="1"/>
 <wire x1="350.52" y1="299.72" x2="353.06" y2="299.72" width="0.1524" layer="91"/>
 </segment>
 </net>
