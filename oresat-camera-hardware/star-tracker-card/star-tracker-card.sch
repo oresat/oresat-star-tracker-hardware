@@ -7646,7 +7646,10 @@ This package is identical to 0603-C, but has its tPlace silkscreen layer removed
 <connect gate="G$1" pin="VIN" pad="2 3 8"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="DPN" value="296-39444-1-ND" constant="no"/>
+<attribute name="MPN" value="TPS62112RSAR" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -7697,7 +7700,10 @@ This package is identical to 0603-C, but has its tPlace silkscreen layer removed
 <connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="DPN" value="XC2337CT-ND" constant="no"/>
+<attribute name="MPN" value="ECS-MPI4040R4-6R8-R" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -8743,11 +8749,9 @@ recommended</text>
 </connects>
 <technologies>
 <technology name="">
-<attribute name="DESCRIPTION" value=" 21mm 256 Ball Bga "/>
-<attribute name="DIGI-KEY_PART_NUMBER" value="1676-1002-ND"/>
-<attribute name="DIGI-KEY_PURCHASE_URL" value="https://www.digikey.com/product-detail/en/octavo-systems-llc/OSD3358-512M-BSM/1676-1002-ND/7644258?utm_source=snapeda&amp;utm_medium=aggregator&amp;utm_campaign=symbol"/>
-<attribute name="MF" value="Octavo Systems"/>
-<attribute name="MP" value="OSD3358-512M-BSM"/>
+<attribute name="DPN" value="1676-1002-ND" constant="no"/>
+<attribute name="MFR" value="Octavo Systems"/>
+<attribute name="MPN" value="OSD3358-512M-BSM" constant="no"/>
 <attribute name="PACKAGE" value="BGA-400 Octavo Systems"/>
 </technology>
 </technologies>
@@ -10144,7 +10148,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </connects>
 <technologies>
 <technology name="">
-<attribute name="PROD_ID" value="DIO-00821" constant="no"/>
 <attribute name="VALUE" value="GREEN" constant="no"/>
 </technology>
 </technologies>
@@ -10294,7 +10297,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </connects>
 <technologies>
 <technology name="">
-<attribute name="PROD_ID" value="NDUC-13805"/>
 <attribute name="VALUE" value="30Ω/1.8A"/>
 </technology>
 </technologies>
@@ -10532,8 +10534,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </connects>
 <technologies>
 <technology name="">
+<attribute name="DPN" value="296-29537-1-ND" constant="no"/>
+<attribute name="MFR" value="Texas Instruments" constant="no"/>
 <attribute name="MPN" value="TPS2051CDBVR" constant="no"/>
-<attribute name="VENDOR" value="Texas Instruments" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -10857,8 +10860,8 @@ by exp-lbrs.ulp</description>
 </connects>
 <technologies>
 <technology name="">
-<attribute name="MANUFACTURER" value="Panasonic Electronic Components" constant="no"/>
-<attribute name="MANUFACTURER_PART_NUMBER" value="EXB-A10P103J" constant="no"/>
+<attribute name="MFR" value="Panasonic Electronic Components" constant="no"/>
+<attribute name="MPN" value="EXB-A10PXXXJ" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -11521,7 +11524,10 @@ NOTE: The only way this differs from the other package is that J5 is connected t
 <connect gate="G$1" pin="X2" pad="3"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="DPN" value="XC2580CT-ND" constant="no"/>
+<attribute name="MPN" value="ECS-240-12-30BQ-AEN-TR" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -11618,7 +11624,10 @@ NOTE: The only way this differs from the other package is that J5 is connected t
 <connect gate="G$1" pin="VSS" pad="6 GND"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="DPN" value="DM3BT-DSF-PEJS" constant="no"/>
+<attribute name="MPN" value="DM3BT-DSF-PEJS"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -12077,7 +12086,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <connect gate="G$1" pin="OUT" pad="5"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="DPN" value="296-40607-1-ND" constant="no"/>
+<attribute name="MPN" value="TLV70028QDDCRQ1 " constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -12145,8 +12157,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </connects>
 <technologies>
 <technology name="">
-<attribute name="MANUFACTURER_PART_NUMBER" value="TCA9509DGKR" constant="no"/>
-<attribute name="VENDOR" value="Texas Instruments" constant="no"/>
+<attribute name="DPN" value="296-30283-1-ND" constant="no"/>
+<attribute name="MFR" value="Texas Instruments" constant="no"/>
+<attribute name="MPN" value="TCA9509DGKR" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -12287,8 +12300,8 @@ LOW: B--&gt;A</text>
 </connects>
 <technologies>
 <technology name="">
-<attribute name="MANUFACTURER_PART_NUMBER" value="SN74LVC8T245MPWREP" constant="no"/>
-<attribute name="VENDOR" value="Texas Instruments" constant="no"/>
+<attribute name="DPN" value="296-24003-1-ND" constant="no"/>
+<attribute name="MPN" value=" ‎SN74LVC8T245MPWREP‎" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -12492,7 +12505,10 @@ LOW: B--&gt;A</text>
 <connect gate="A" pin="VCCB" pad="7 18"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="DPN" value="296-23948-1-ND" constant="no"/>
+<attribute name="MPN" value="CLVCH16T245MDGGREP" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -12558,7 +12574,10 @@ LOW: B--&gt;A</text>
 <connect gate="G$1" pin="VCC" pad="3"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="DPN" value="296-44211-1-ND" constant="no"/>
+<attribute name="MPN" value="TCAN330GDCNT"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -12623,6 +12642,7 @@ LOW: B--&gt;A</text>
 </connects>
 <technologies>
 <technology name="">
+<attribute name="DPN" value="RCLAMP0504FBTCTCT-ND" constant="no"/>
 <attribute name="MPN" value="RCLAMP0504FBTCT" constant="no"/>
 </technology>
 </technologies>
@@ -12681,8 +12701,10 @@ LOW: B--&gt;A</text>
 <connect gate="G$1" pin="E" pad="E"/>
 </connects>
 <technologies>
-<technology name=""/>
-<technology name="ALT1"/>
+<technology name="">
+<attribute name="DPN" value="MMBT2907A-FDICT-ND" constant="no"/>
+<attribute name="MPN" value="MMBT2907A-7-F" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -12734,7 +12756,10 @@ LOW: B--&gt;A</text>
 <connect gate="U" pin="REF" pad="1"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="DPN" value="296-36778-1-ND" constant="no"/>
+<attribute name="MPN" value="TLVH431BQDBZRQ1" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -12797,7 +12822,10 @@ LOW: B--&gt;A</text>
 <connect gate="G$1" pin="Y" pad="4"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="DPN" value="296-8486-1-ND" constant="no"/>
+<attribute name="MPN" value="SN74LVC1G07DCKR" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -12960,7 +12988,10 @@ LOW: B--&gt;A</text>
 <connect gate="A" pin="PAD" pad="S1 S2"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="DPN" value="A100291CT-ND" constant="no"/>
+<attribute name="MPN" value="3-1734592-6" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -13130,7 +13161,10 @@ LOW: B--&gt;A</text>
 <connect gate="G$1" pin="9" pad="9"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="DPN" value="SAM10145-ND" constant="no"/>
+<attribute name="MPN" value="TFM-120-01-L-D-RA" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -13244,7 +13278,10 @@ LOW: B--&gt;A</text>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:8018497/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="DPN" value="MAX7310ATE+-ND" constant="no"/>
+<attribute name="MPN" value="MAX7310ATE+" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -13356,7 +13393,10 @@ LOW: B--&gt;A</text>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:8018497/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="DPN" value="MAX4211FETE+-ND" constant="no"/>
+<attribute name="MPN" value="MAX4211FETE+" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -17951,7 +17991,10 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <connect gate="G$1" pin="S" pad="4"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="DPN" value="DMP3050LVT-7DICT-ND" constant="no"/>
+<attribute name="MPN" value="DMP3050LVT-7" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -18053,7 +18096,10 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <connect gate=".2" pin="S" pad="2"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="DPN" value="DMP2240UDMDICT-ND" constant="no"/>
+<attribute name="MPN" value="DMP2240UDM-7" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -18100,7 +18146,10 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <connect gate="G$1" pin="P$2" pad="P$2"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="DPN" value="535-9542-1-ND" constant="no"/>
+<attribute name="MPN" value="ABS07-32.768KHZ-T" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -18272,7 +18321,10 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <connect gate="G$1" pin="VTARGET" pad="11"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="DPN" value="A100287CT-ND" constant="no"/>
+<attribute name="MPN" value="2-1734592-0" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="-SOLAR" package="WURTH_687120183622">
@@ -18383,7 +18435,10 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <connect gate="G$1" pin="VDD" pad="5"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="DPN" value="576-2927-1-ND" constant="no"/>
+<attribute name="MPN" value="MIC842LYC5" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -18446,10 +18501,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 </connects>
 <technologies>
 <technology name="">
-<attribute name="BUILT_BY" value="EMA_UL_Team" constant="no"/>
-<attribute name="MANUFACTURER_PART_NUMBER" value="25AA02E48T-I/SN" constant="no"/>
-<attribute name="SOURCELIBRARY" value="Microchip_2014-06-20" constant="no"/>
-<attribute name="VENDOR" value="Microchip" constant="no"/>
+<attribute name="MPN" value="25AA02E48T-I/SN" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -18471,42 +18523,22 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 </classes>
 <parts>
 <part name="FRAME1" library="frames" deviceset="FRAME_B_L" device=""/>
-<part name="D8" library="SparkFun-LED" deviceset="LED-GREEN" device="0603" value="GREEN">
-<attribute name="PROD_ID" value=""/>
-</part>
+<part name="D8" library="SparkFun-LED" deviceset="LED-GREEN" device="0603" value="GREEN"/>
 <part name="GND24" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R62" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="2.7k">
-<attribute name="DIS" value="Digi-Key"/>
-<attribute name="DPN" value="1276-4275-1-ND"/>
-<attribute name="MFR" value="Samsung"/>
-<attribute name="MPN" value="RC1005F6653CS"/>
-</part>
+<part name="R62" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="2.7k"/>
 <part name="FRAME2" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="FRAME_B_L" device=""/>
-<part name="U15" library="U-TI-TPS6211x-SPS-buck" deviceset="TPS6211X" device="" value="TPS62112">
-<attribute name="MFR" value="TI"/>
-<attribute name="MPN" value="TPS62111RSA"/>
-</part>
+<part name="U15" library="U-TI-TPS6211x-SPS-buck" deviceset="TPS6211X" device="" value="TPS62112"/>
 <part name="GND19" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="TP48" library="Tova" deviceset="TEST-POINT" device=""/>
 <part name="TP46" library="Tova" deviceset="TEST-POINT" device=""/>
 <part name="C38" library="oresat-rcl" deviceset="C-EU" device="0805-B" value="10uF"/>
-<part name="C37" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="1uF">
-<attribute name="DIS" value="Digi-Key"/>
-<attribute name="DPN" value="1276-1001-1-ND"/>
-<attribute name="MFR" value="Samsung"/>
-<attribute name="MPN" value="CL05B104KO5NNNC"/>
-</part>
+<part name="C37" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="1uF"/>
 <part name="GND14" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND13" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND22" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="C36" library="oresat-rcl" deviceset="C-EU" device="C1210" value="22uF"/>
 <part name="TP49" library="Tova" deviceset="TEST-POINT" device=""/>
-<part name="R34" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k">
-<attribute name="DIS" value="Digi-Key"/>
-<attribute name="DPN" value="1276-4275-1-ND"/>
-<attribute name="MFR" value="Samsung"/>
-<attribute name="MPN" value="RC1005F6653CS"/>
-</part>
+<part name="R34" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k"/>
 <part name="R40" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="NP">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
@@ -18514,10 +18546,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <attribute name="MPN" value="RC1005F6653CS"/>
 </part>
 <part name="GND17" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="L1" library="L-ECS-MPI4040" deviceset="L-ECS-MPI4040" device="" value="6.8u">
-<attribute name="MFR" value="ECS"/>
-<attribute name="MPN" value="ECS-MPI4040R4-6R8-R"/>
-</part>
+<part name="L1" library="L-ECS-MPI4040" deviceset="L-ECS-MPI4040" device="" value="6.8u"/>
 <part name="VBUSP1" library="oresat-supplies" deviceset="VBUSP" device=""/>
 <part name="U7" library="U-OSD3358-512M-BSM" deviceset="OSD3358-512M-BSM" device=""/>
 <part name="TP2" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
@@ -18544,13 +18573,13 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="GND71" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="TP136" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="U4" library="U-TI-SN74LVC1G07DCK-Buffer" deviceset="SN74LVC1G07DCK" device="" value="SN74LVC1G07DCK"/>
-<part name="C18" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="0.1uF, 6.3V"/>
+<part name="C18" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="0.1uF"/>
 <part name="TP14" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="GND70" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="GND72" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="C22" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="18pF, 50V"/>
 <part name="C19" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="18pF, 50V"/>
-<part name="R13" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="1M, 1%"/>
+<part name="R13" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="1M"/>
 <part name="J102" library="J-Samtec-FTSH-105-XXX-DV-K-ARM-SWD" deviceset="FTSH-105-XX-X-DV-K" device=""/>
 <part name="3V-24" library="oresat-supplies" deviceset="3.3V" device=""/>
 <part name="GND57" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
@@ -18568,6 +18597,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="GND59" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="C4" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="0.1uF"/>
 <part name="FB2" library="SparkFun-Coils" deviceset="FERRITE_BEAD" device="-0603" value="30Ω/1.8A">
+<attribute name="DPN" value="490-14027-1-ND"/>
 <attribute name="MPN" value="BLM18KG300JH1D"/>
 </part>
 <part name="U2" library="U-TI-TPS2051C" deviceset="TPS2051CDBVR" device=""/>
@@ -18577,6 +18607,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="C7" library="oresat-rcl" deviceset="C-EU" device="0805-B" value="10uF"/>
 <part name="C1" library="oresat-rcl" deviceset="C-EU" device="0805-B" value="10uF"/>
 <part name="FB1" library="SparkFun-Coils" deviceset="FERRITE_BEAD" device="-0603" value="30Ω/1.8A">
+<attribute name="DPN" value="490-14027-1-ND"/>
 <attribute name="MPN" value="BLM18KG300JH1D"/>
 </part>
 <part name="R6" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k"/>
@@ -18591,11 +18622,26 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="C8" library="oresat-rcl" deviceset="C-EU" device="0805-B" value="10uF"/>
 <part name="3V-23" library="oresat-supplies" deviceset="3.3V" device=""/>
 <part name="GND51" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="R8" library="R-Panasonic-EXB_A10PXXXJ" deviceset="EXB-A10P391J" device="C_ARRAY_EXBA-M" value="10K"/>
-<part name="R24" library="R-Panasonic-EXB_A10PXXXJ" deviceset="EXB-A10P391J" device="C_ARRAY_EXBA-M" value="100K"/>
-<part name="R26" library="R-Panasonic-EXB_A10PXXXJ" deviceset="EXB-A10P391J" device="C_ARRAY_EXBA-M" value="100K"/>
-<part name="R25" library="R-Panasonic-EXB_A10PXXXJ" deviceset="EXB-A10P391J" device="C_ARRAY_EXBA-M" value="100K"/>
-<part name="U3" library="U-Generic-eMMC-153pin" deviceset="EMMC+RESET+5.1-COMPATIBLE" device="-BA"/>
+<part name="R8" library="R-Panasonic-EXB_A10PXXXJ" deviceset="EXB-A10P391J" device="C_ARRAY_EXBA-M" value="10K">
+<attribute name="DPN" value="U7103CT-ND"/>
+<attribute name="MPN" value="EXB-A10P103J"/>
+</part>
+<part name="R24" library="R-Panasonic-EXB_A10PXXXJ" deviceset="EXB-A10P391J" device="C_ARRAY_EXBA-M" value="100K">
+<attribute name="DPN" value="U7104CT-ND"/>
+<attribute name="MPN" value="EXB-A10P104J"/>
+</part>
+<part name="R26" library="R-Panasonic-EXB_A10PXXXJ" deviceset="EXB-A10P391J" device="C_ARRAY_EXBA-M" value="100K">
+<attribute name="DPN" value="U7104CT-ND"/>
+<attribute name="MPN" value="EXB-A10P104J"/>
+</part>
+<part name="R25" library="R-Panasonic-EXB_A10PXXXJ" deviceset="EXB-A10P391J" device="C_ARRAY_EXBA-M" value="100K">
+<attribute name="DPN" value="U7104CT-ND"/>
+<attribute name="MPN" value="EXB-A10P104J"/>
+</part>
+<part name="U3" library="U-Generic-eMMC-153pin" deviceset="EMMC+RESET+5.1-COMPATIBLE" device="-BA">
+<attribute name="DPN" value="THGBMJG7C2LBAU8-ND"/>
+<attribute name="MPN" value="THGBMJG7C2LBAU8"/>
+</part>
 <part name="3V-17" library="oresat-supplies" deviceset="3.3V" device=""/>
 <part name="GND44" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="C9" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="1uF"/>
@@ -18603,23 +18649,13 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="C5" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="1uF"/>
 <part name="C3" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="1uF"/>
 <part name="C2" library="oresat-rcl" deviceset="C-EU" device="0805-B" value="10uF"/>
-<part name="Y1" library="X-ECS-240-12-30BQ-AEN-TR" deviceset="ECS-240-12-30BQ-AEN-TR" device="" value="24MHz">
-<attribute name="MPN" value="ECS-240-12-30BQ-AEN-TR"/>
-</part>
+<part name="Y1" library="X-ECS-240-12-30BQ-AEN-TR" deviceset="ECS-240-12-30BQ-AEN-TR" device="" value="24MHz"/>
 <part name="GND56" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="J100" library="J-Hirose-DM3BT-DSF-PEJS" deviceset="DM3BT-DSF-PEJS" device=""/>
-<part name="C31" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="0.1uF">
-<attribute name="DIS" value="Digi-Key"/>
-<attribute name="DPN" value="1276-1001-1-ND"/>
-<attribute name="MFR" value="Samsung"/>
-<attribute name="MPN" value="CL05B104KO5NNNC"/>
-</part>
+<part name="C31" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="0.1uF"/>
 <part name="GND31" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND32" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="U11" library="U-TI-TCAN330-CAN-transceiver" deviceset="TCAN330" device="">
-<attribute name="MFR" value="Texas Instruments"/>
-<attribute name="MPN" value="TCAN330GDCNT"/>
-</part>
+<part name="U11" library="U-TI-TCAN330-CAN-transceiver" deviceset="TCAN330" device=""/>
 <part name="3V-5" library="oresat-supplies" deviceset="3.3V" device=""/>
 <part name="TP35" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP40" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
@@ -18684,7 +18720,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="GND49" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="Q1" library="Q-Diodesinc-MMBT2907-PNP" deviceset="MMBT2907*" device="SMD" value="MMBT2907"/>
 <part name="U10" library="U-TI-TLVH431-Shunt-Regulator" deviceset="TLVH431" device="" value="TLVH431"/>
-<part name="R28" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10.0K"/>
+<part name="R28" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k"/>
 <part name="R31" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="40.2K"/>
 <part name="R23" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="499"/>
 <part name="3V-1" library="oresat-supplies" deviceset="5V" device=""/>
@@ -18776,10 +18812,16 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="TP117" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP103" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="3V-11" library="oresat-supplies" deviceset="3.3V" device=""/>
-<part name="R9" library="R-Panasonic-EXB_A10PXXXJ" deviceset="EXB-A10P391J" device="C_ARRAY_EXBA-M" value="10K"/>
+<part name="R9" library="R-Panasonic-EXB_A10PXXXJ" deviceset="EXB-A10P391J" device="C_ARRAY_EXBA-M" value="10K">
+<attribute name="DPN" value="U7103CT-ND"/>
+<attribute name="MPN" value="EXB-A10P103J"/>
+</part>
 <part name="U1" library="U-Semtec-RCLAMP0504FB" deviceset="RCLAMP0504FB" device=""/>
 <part name="3V-15" library="oresat-supplies" deviceset="3.3V" device=""/>
-<part name="R10" library="R-Panasonic-EXB_A10PXXXJ" deviceset="EXB-A10P391J" device="C_ARRAY_EXBA-M" value="10K"/>
+<part name="R10" library="R-Panasonic-EXB_A10PXXXJ" deviceset="EXB-A10P391J" device="C_ARRAY_EXBA-M" value="10K">
+<attribute name="DPN" value="U7103CT-ND"/>
+<attribute name="MPN" value="EXB-A10P103J"/>
+</part>
 <part name="TP1" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="JP101" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NC_TRACE" device="_SILK"/>
 <part name="JP104" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NC_TRACE" device="_SILK"/>
@@ -18790,43 +18832,20 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="TP131" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP134" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP148" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
-<part name="D7" library="SparkFun-LED" deviceset="LED-GREEN" device="0603" value="GREEN">
-<attribute name="PROD_ID" value=""/>
-</part>
+<part name="D7" library="SparkFun-LED" deviceset="LED-GREEN" device="0603" value="GREEN"/>
 <part name="GND29" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R61" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="2.7k">
-<attribute name="DIS" value="Digi-Key"/>
-<attribute name="DPN" value="1276-4275-1-ND"/>
-<attribute name="MFR" value="Samsung"/>
-<attribute name="MPN" value="RC1005F6653CS"/>
-</part>
-<part name="J4" library="J-Samtec-TFM-120-X1-XXX-D-RA" deviceset="J-SAMTEC-TFM-120-X1-XXX-D-RA" device="" value="TFM-120-01-L-D-RA">
-<attribute name="MFR" value="Samtec"/>
-<attribute name="MPN" value="TFM-120-01-L-D-RA"/>
-</part>
+<part name="R61" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="2.7k"/>
+<part name="J4" library="J-Samtec-TFM-120-X1-XXX-D-RA" deviceset="J-SAMTEC-TFM-120-X1-XXX-D-RA" device="" value="TFM-120-01-L-D-RA"/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="U16" library="U-Maxim-MAX7310-I2C-GPIO-expander" deviceset="MAX7310" device="" package3d_urn="urn:adsk.eagle:package:8018497/1" value="MAX7310ATE">
 <attribute name="MFR" value="Maxim"/>
 <attribute name="MPN" value="MAX7310ATE"/>
 </part>
 <part name="GND9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="C39" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="0.1uF">
-<attribute name="DIS" value="Digi-Key"/>
-<attribute name="DPN" value="1276-1001-1-ND"/>
-<attribute name="MFR" value="Samsung"/>
-<attribute name="MPN" value="CL05B104KO5NNNC"/>
-</part>
+<part name="C39" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="0.1uF"/>
 <part name="GND12" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R71" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="100">
-<attribute name="DIS" value="Digi-Key"/>
-<attribute name="DPN" value="1276-4275-1-ND"/>
-<attribute name="MFR" value="Samsung"/>
-<attribute name="MPN" value="RC1005F6653CS"/>
-</part>
-<part name="U14" library="U-Maxim-MAX4211-power-monitor" deviceset="MAX4211" device="" package3d_urn="urn:adsk.eagle:package:8018497/1" value="MAX4211FETE">
-<attribute name="MFR" value="Maxim"/>
-<attribute name="MPN" value="MAX4211FETE"/>
-</part>
+<part name="R71" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="100"/>
+<part name="U14" library="U-Maxim-MAX4211-power-monitor" deviceset="MAX4211" device="" package3d_urn="urn:adsk.eagle:package:8018497/1" value="MAX4211FETE"/>
 <part name="GND23" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R57" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="NP">
 <attribute name="DIS" value="Digi-Key"/>
@@ -18903,59 +18922,24 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <attribute name="MPN" value="RC1005F6653CS"/>
 </part>
 <part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R41" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="100">
-<attribute name="DIS" value="Digi-Key"/>
-<attribute name="DPN" value="1276-4275-1-ND"/>
-<attribute name="MFR" value="Samsung"/>
-<attribute name="MPN" value="RC1005F6653CS"/>
-</part>
-<part name="R72" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k">
-<attribute name="DIS" value="Digi-Key"/>
-<attribute name="DPN" value="1276-4275-1-ND"/>
-<attribute name="MFR" value="Samsung"/>
-<attribute name="MPN" value="RC1005F6653CS"/>
-</part>
+<part name="R41" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="100"/>
+<part name="R72" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k"/>
 <part name="VBUS1" library="oresat-supplies" deviceset="VBUS" device=""/>
-<part name="R52" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k">
-<attribute name="DIS" value="Digi-Key"/>
-<attribute name="DPN" value="1276-4275-1-ND"/>
-<attribute name="MFR" value="Samsung"/>
-<attribute name="MPN" value="RC1005F6653CS"/>
-</part>
+<part name="R52" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k"/>
 <part name="GND16" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R46" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k">
-<attribute name="DIS" value="Digi-Key"/>
-<attribute name="DPN" value="1276-4275-1-ND"/>
-<attribute name="MFR" value="Samsung"/>
-<attribute name="MPN" value="RC1005F6653CS"/>
-</part>
+<part name="R46" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k"/>
 <part name="GND15" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R63" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R1206" package3d_urn="urn:adsk.eagle:package:23540/2" value="100m"/>
-<part name="R39" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k">
-<attribute name="DIS" value="Digi-Key"/>
-<attribute name="DPN" value="1276-4275-1-ND"/>
-<attribute name="MFR" value="Samsung"/>
-<attribute name="MPN" value="RC1005F6653CS"/>
-</part>
+<part name="R39" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k"/>
 <part name="GND25" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R50" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="0">
-<attribute name="DIS" value="Digi-Key"/>
-<attribute name="DPN" value="1276-4275-1-ND"/>
-<attribute name="MFR" value="Samsung"/>
-<attribute name="MPN" value="RC1005F6653CS"/>
-</part>
+<part name="R50" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="0"/>
 <part name="R51" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="NP">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
 <attribute name="MFR" value="Samsung"/>
 <attribute name="MPN" value="RC1005F6653CS"/>
 </part>
-<part name="R47" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="0">
-<attribute name="DIS" value="Digi-Key"/>
-<attribute name="DPN" value="1276-4275-1-ND"/>
-<attribute name="MFR" value="Samsung"/>
-<attribute name="MPN" value="RC1005F6653CS"/>
-</part>
+<part name="R47" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="0"/>
 <part name="R42" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="NP">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
@@ -18969,12 +18953,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="TP57" library="Tova" deviceset="TEST-POINT" device=""/>
 <part name="TP50" library="Tova" deviceset="TEST-POINT" device=""/>
 <part name="TP54" library="Tova" deviceset="TEST-POINT" device=""/>
-<part name="R64" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k">
-<attribute name="DIS" value="Digi-Key"/>
-<attribute name="DPN" value="1276-4275-1-ND"/>
-<attribute name="MFR" value="Samsung"/>
-<attribute name="MPN" value="RC1005F6653CS"/>
-</part>
+<part name="R64" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k"/>
 <part name="R33" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="NP">
 <attribute name="DIS" value="Digi-Key"/>
 <attribute name="DPN" value="1276-4275-1-ND"/>
@@ -18995,30 +18974,24 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <attribute name="MPN" value="CL05B104KO5NNNC"/>
 </part>
 <part name="GND28" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R32" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k">
-<attribute name="DIS" value="Digi-Key"/>
-<attribute name="DPN" value="1276-4275-1-ND"/>
-<attribute name="MFR" value="Samsung"/>
-<attribute name="MPN" value="RC1005F6653CS"/>
-</part>
+<part name="R32" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k"/>
 <part name="TP45" library="Tova" deviceset="TEST-POINT" device=""/>
 <part name="TP55" library="Tova" deviceset="TEST-POINT" device=""/>
 <part name="Q5" library="Q-MOSFET-PCH-SOT23-6" deviceset="MOSFET-PCH-SOT23-6" device="">
-<attribute name="MFR" value="Diodes Inc"/>
 <attribute name="MPN" value="DMP3050LVT-7"/>
 </part>
 <part name="Q6" library="Q-MOSFET-PCH-SOT23-6" deviceset="MOSFET-PCH-SOT23-6" device="">
-<attribute name="MFR" value="Diodes Inc"/>
 <attribute name="MPN" value="DMP3050LVT-7"/>
 </part>
-<part name="Q4" library="Tova" deviceset="PMV45EN" device=""/>
-<part name="Q2" library="Tova" deviceset="PMV45EN" device=""/>
-<part name="C34" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="1uF">
-<attribute name="DIS" value="Digi-Key"/>
-<attribute name="DPN" value="1276-1001-1-ND"/>
-<attribute name="MFR" value="Samsung"/>
-<attribute name="MPN" value="CL05B104KO5NNNC"/>
+<part name="Q4" library="Tova" deviceset="PMV45EN" device="">
+<attribute name="DPN" value="1727-2307-1-ND"/>
+<attribute name="MPN" value="PMV45EN2R"/>
 </part>
+<part name="Q2" library="Tova" deviceset="PMV45EN" device="">
+<attribute name="DPN" value="1727-2307-1-ND"/>
+<attribute name="MPN" value="PMV45EN2R"/>
+</part>
+<part name="C34" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="1uF"/>
 <part name="GND20" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="VBUSP2" library="oresat-supplies" deviceset="VBUSP" device=""/>
 <part name="VPD1" library="oresat-supplies" deviceset="VPD" device=""/>
@@ -19032,65 +19005,27 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <attribute name="PROD_ID" value=""/>
 </part>
 <part name="GND18" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R49" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="2.7k">
-<attribute name="DIS" value="Digi-Key"/>
-<attribute name="DPN" value="1276-4275-1-ND"/>
-<attribute name="MFR" value="Samsung"/>
-<attribute name="MPN" value="RC1005F6653CS"/>
-</part>
-<part name="R43" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k">
-<attribute name="DIS" value="Digi-Key"/>
-<attribute name="DPN" value="1276-4275-1-ND"/>
-<attribute name="MFR" value="Samsung"/>
-<attribute name="MPN" value="RC1005F6653CS"/>
-</part>
+<part name="R49" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="2.7k"/>
+<part name="R43" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k"/>
 <part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="TP52" library="Tova" deviceset="TEST-POINT" device=""/>
 <part name="TP53" library="Tova" deviceset="TEST-POINT" device=""/>
-<part name="R45" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="330k">
-<attribute name="DIS" value="Digi-Key"/>
-<attribute name="DPN" value="1276-4275-1-ND"/>
-<attribute name="MFR" value="Samsung"/>
-<attribute name="MPN" value="RC1005F6653CS"/>
-</part>
-<part name="R44" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="1M">
-<attribute name="DIS" value="Digi-Key"/>
-<attribute name="DPN" value="1276-4275-1-ND"/>
-<attribute name="MFR" value="Samsung"/>
-<attribute name="MPN" value="RC1005F6653CS"/>
-</part>
+<part name="R45" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="330k"/>
+<part name="R44" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="1M"/>
 <part name="GND11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="VPD4" library="oresat-supplies" deviceset="VPD" device=""/>
-<part name="C35" library="oresat-rcl" deviceset="C-EU" device="0805-B-NOSILK" value="1u"/>
+<part name="C35" library="oresat-rcl" deviceset="C-EU" device="0805-B-NOSILK" value="1uF"/>
 <part name="GND8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="TP41" library="Tova" deviceset="TEST-POINT" device=""/>
 <part name="TP43" library="Tova" deviceset="TEST-POINT" device=""/>
-<part name="R48" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="100">
-<attribute name="DIS" value="Digi-Key"/>
-<attribute name="DPN" value="1276-4275-1-ND"/>
-<attribute name="MFR" value="Samsung"/>
-<attribute name="MPN" value="RC1005F6653CS"/>
-</part>
-<part name="Q3" library="Q-MOSFET-PCH-dual-SOT23-6" deviceset="MOSFET-PCH-SOT23-6" device="" value="DMP2240UDM">
-<attribute name="MFR" value="Diodes Inc"/>
-<attribute name="MPN" value="DMP2240UDM"/>
-</part>
+<part name="R48" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="100"/>
+<part name="Q3" library="Q-MOSFET-PCH-dual-SOT23-6" deviceset="MOSFET-PCH-SOT23-6" device="" value="DMP2240UDM"/>
 <part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R37" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="330k">
-<attribute name="DIS" value="Digi-Key"/>
-<attribute name="DPN" value="1276-4275-1-ND"/>
-<attribute name="MFR" value="Samsung"/>
-<attribute name="MPN" value="RC1005F6653CS"/>
-</part>
-<part name="R36" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="1M">
-<attribute name="DIS" value="Digi-Key"/>
-<attribute name="DPN" value="1276-4275-1-ND"/>
-<attribute name="MFR" value="Samsung"/>
-<attribute name="MPN" value="RC1005F6653CS"/>
-</part>
+<part name="R37" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="330k"/>
+<part name="R36" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="1M"/>
 <part name="GND10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="VPD3" library="oresat-supplies" deviceset="VPD" device=""/>
-<part name="C32" library="oresat-rcl" deviceset="C-EU" device="0805-B-NOSILK" value="1u"/>
+<part name="C32" library="oresat-rcl" deviceset="C-EU" device="0805-B-NOSILK" value="1uF"/>
 <part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="TP42" library="Tova" deviceset="TEST-POINT" device=""/>
 <part name="TP44" library="Tova" deviceset="TEST-POINT" device=""/>
@@ -19106,22 +19041,15 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="TP25" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="C15" library="oresat-rcl" deviceset="C-EU" device="C1210" value="22uF"/>
 <part name="GND75" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="R27" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="1M, DNI"/>
+<part name="R27" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="DNP"/>
 <part name="C30" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="18pF, 50V"/>
 <part name="C29" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="18pF, 50V"/>
-<part name="Y2" library="OSD3358-SM-RED Platform" deviceset="ABS07-32.768KHZ-T" device="">
-<attribute name="MPN" value="ABS07-32.768KHZ-T"/>
-</part>
+<part name="Y2" library="OSD3358-SM-RED Platform" deviceset="ABS07-32.768KHZ-T" device=""/>
 <part name="TP168" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="R20" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k"/>
 <part name="R22" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k"/>
 <part name="3V-25" library="oresat-supplies" deviceset="3.3V" device=""/>
-<part name="R35" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k">
-<attribute name="DIS" value="Digi-Key"/>
-<attribute name="DPN" value="1276-4275-1-ND"/>
-<attribute name="MFR" value="Samsung"/>
-<attribute name="MPN" value="RC1005F6653CS"/>
-</part>
+<part name="R35" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="10k"/>
 <part name="TP110" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="TP109" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4"/>
 <part name="J1" library="oresat-debug-connector" deviceset="ORESAT-DEBUG-CONNECTOR" device="-CARD"/>
@@ -19150,12 +19078,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="U17" library="U-Generic-SPI-EEPROM" deviceset="25AAXX" device=""/>
 <part name="GND52" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="3V-27" library="oresat-supplies" deviceset="3.3V" device=""/>
-<part name="C40" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="0.1uF">
-<attribute name="DIS" value="Digi-Key"/>
-<attribute name="DPN" value="1276-1001-1-ND"/>
-<attribute name="MFR" value="Samsung"/>
-<attribute name="MPN" value="CL05B104KO5NNNC"/>
-</part>
+<part name="C40" library="oresat-rcl" deviceset="C-EU" device="0603-A" value="0.1uF"/>
 <part name="R59" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="DNP"/>
 <part name="R60" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="DNP"/>
 <part name="3V-29" library="oresat-supplies" deviceset="3.3V" device=""/>
@@ -19203,8 +19126,6 @@ unconnected?</text>
 <instance part="J4" gate="G$1" x="111.76" y="172.72" smashed="yes" rot="MR0">
 <attribute name="NAME" x="118.11" y="224.155" size="1.778" layer="95" rot="MR0"/>
 <attribute name="VALUE" x="105.41" y="118.11" size="1.778" layer="96" rot="MR180"/>
-<attribute name="MFR" x="111.76" y="172.72" size="2.54" layer="96" rot="MR0" display="off"/>
-<attribute name="MPN" x="111.76" y="172.72" size="2.54" layer="96" rot="MR0" display="off"/>
 </instance>
 <instance part="GND1" gate="1" x="149.86" y="120.65" smashed="yes" rot="MR0">
 <attribute name="VALUE" x="152.4" y="118.11" size="1.778" layer="96" rot="MR0"/>
@@ -19612,18 +19533,12 @@ reserved on all oresat cards</text>
 <attribute name="VALUE" x="302.26" y="59.69" size="1.778" layer="96" rot="MR0"/>
 </instance>
 <instance part="R62" gate="R" x="299.72" y="82.55" smashed="yes" rot="R90">
-<attribute name="DIS" x="299.72" y="82.55" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="DPN" x="299.72" y="82.55" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="MFR" x="299.72" y="82.55" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="MPN" x="299.72" y="82.55" size="1.778" layer="96" rot="R90" display="off"/>
 <attribute name="NAME" x="298.2214" y="78.74" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="303.022" y="78.74" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="U15" gate="G$1" x="243.84" y="78.74" smashed="yes">
 <attribute name="NAME" x="248.92" y="60.96" size="1.778" layer="95"/>
 <attribute name="VALUE" x="248.92" y="58.42" size="1.778" layer="96"/>
-<attribute name="MFR" x="243.84" y="78.74" size="1.778" layer="96" display="off"/>
-<attribute name="MPN" x="243.84" y="78.74" size="1.778" layer="96" display="off"/>
 </instance>
 <instance part="GND19" gate="1" x="243.84" y="53.34" smashed="yes">
 <attribute name="VALUE" x="241.3" y="50.8" size="1.778" layer="96"/>
@@ -19639,10 +19554,6 @@ reserved on all oresat cards</text>
 <attribute name="VALUE" x="201.93" y="76.2" size="1.778" layer="96"/>
 </instance>
 <instance part="C37" gate="CE" x="208.28" y="81.28" smashed="yes">
-<attribute name="DIS" x="208.28" y="81.28" size="1.778" layer="96" display="off"/>
-<attribute name="DPN" x="208.28" y="81.28" size="1.778" layer="96" display="off"/>
-<attribute name="MFR" x="208.28" y="81.28" size="1.778" layer="96" display="off"/>
-<attribute name="MPN" x="208.28" y="81.28" size="1.778" layer="96" display="off"/>
 <attribute name="NAME" x="209.55" y="81.28" size="1.778" layer="95"/>
 <attribute name="VALUE" x="209.55" y="76.2" size="1.778" layer="96"/>
 </instance>
@@ -19663,10 +19574,6 @@ reserved on all oresat cards</text>
 <attribute name="NAME" x="284.48" y="87.63" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="R34" gate="R" x="218.44" y="78.74" smashed="yes" rot="R90">
-<attribute name="DIS" x="218.44" y="78.74" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="DPN" x="218.44" y="78.74" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="MFR" x="218.44" y="78.74" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="MPN" x="218.44" y="78.74" size="1.778" layer="96" rot="R90" display="off"/>
 <attribute name="NAME" x="217.17" y="74.93" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="217.17" y="78.74" size="1.778" layer="96" rot="R90"/>
 </instance>
@@ -19684,8 +19591,6 @@ reserved on all oresat cards</text>
 <instance part="L1" gate="G$1" x="269.24" y="86.36" smashed="yes" rot="R90">
 <attribute name="NAME" x="265.43" y="88.9" size="1.778" layer="95"/>
 <attribute name="VALUE" x="270.51" y="88.9" size="1.778" layer="96"/>
-<attribute name="MFR" x="269.24" y="86.36" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="MPN" x="269.24" y="86.36" size="1.778" layer="96" rot="R90" display="off"/>
 </instance>
 <instance part="VBUSP1" gate="G$1" x="200.66" y="88.9" smashed="yes">
 <attribute name="VALUE" x="200.66" y="91.694" size="1.778" layer="96" align="bottom-center"/>
@@ -19704,10 +19609,6 @@ reserved on all oresat cards</text>
 <attribute name="VALUE" x="401.32" y="187.96" size="1.778" layer="96" rot="MR0"/>
 </instance>
 <instance part="R61" gate="R" x="398.78" y="210.82" smashed="yes" rot="R90">
-<attribute name="DIS" x="398.78" y="210.82" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="DPN" x="398.78" y="210.82" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="MFR" x="398.78" y="210.82" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="MPN" x="398.78" y="210.82" size="1.778" layer="96" rot="R90" display="off"/>
 <attribute name="NAME" x="397.51" y="205.74" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="397.51" y="210.82" size="1.778" layer="96" rot="R90"/>
 </instance>
@@ -19721,10 +19622,6 @@ reserved on all oresat cards</text>
 <attribute name="VALUE" x="134.62" y="134.62" size="1.778" layer="96" rot="MR0"/>
 </instance>
 <instance part="C39" gate="CE" x="139.7" y="180.34" smashed="yes" rot="MR90">
-<attribute name="DIS" x="139.7" y="180.34" size="1.778" layer="96" rot="MR90" display="off"/>
-<attribute name="DPN" x="139.7" y="180.34" size="1.778" layer="96" rot="MR90" display="off"/>
-<attribute name="MFR" x="139.7" y="180.34" size="1.778" layer="96" rot="MR90" display="off"/>
-<attribute name="MPN" x="139.7" y="180.34" size="1.778" layer="96" rot="MR90" display="off"/>
 <attribute name="NAME" x="140.081" y="181.864" size="1.778" layer="95" rot="MR90"/>
 <attribute name="VALUE" x="135.001" y="181.864" size="1.778" layer="96" rot="MR90"/>
 </instance>
@@ -19732,18 +19629,12 @@ reserved on all oresat cards</text>
 <attribute name="VALUE" x="147.32" y="172.72" size="1.778" layer="96" rot="MR0"/>
 </instance>
 <instance part="R71" gate="R" x="69.85" y="236.22" smashed="yes">
-<attribute name="DIS" x="69.85" y="236.22" size="1.778" layer="96" display="off"/>
-<attribute name="DPN" x="69.85" y="236.22" size="1.778" layer="96" display="off"/>
-<attribute name="MFR" x="69.85" y="236.22" size="1.778" layer="96" display="off"/>
-<attribute name="MPN" x="69.85" y="236.22" size="1.778" layer="96" display="off"/>
 <attribute name="NAME" x="66.04" y="237.49" size="1.778" layer="95"/>
 <attribute name="VALUE" x="72.39" y="237.49" size="1.778" layer="96"/>
 </instance>
 <instance part="U14" gate="G$1" x="299.72" y="195.58" smashed="yes">
 <attribute name="NAME" x="302.26" y="170.18" size="1.778" layer="95"/>
 <attribute name="VALUE" x="302.26" y="167.64" size="1.778" layer="96"/>
-<attribute name="MPN" x="299.72" y="195.58" size="1.778" layer="96" display="off"/>
-<attribute name="MFR" x="299.72" y="195.58" size="1.778" layer="96" display="off"/>
 </instance>
 <instance part="GND23" gate="1" x="299.72" y="165.1" smashed="yes" rot="MR0">
 <attribute name="VALUE" x="302.26" y="162.56" size="1.778" layer="96" rot="MR0"/>
@@ -19854,18 +19745,10 @@ reserved on all oresat cards</text>
 <attribute name="VALUE" x="78.74" y="182.88" size="1.778" layer="96" rot="MR0"/>
 </instance>
 <instance part="R41" gate="R" x="80.01" y="58.42" smashed="yes">
-<attribute name="DIS" x="80.01" y="58.42" size="1.778" layer="96" display="off"/>
-<attribute name="DPN" x="80.01" y="58.42" size="1.778" layer="96" display="off"/>
-<attribute name="MFR" x="80.01" y="58.42" size="1.778" layer="96" display="off"/>
-<attribute name="MPN" x="80.01" y="58.42" size="1.778" layer="96" display="off"/>
 <attribute name="NAME" x="76.2" y="59.69" size="1.778" layer="95"/>
 <attribute name="VALUE" x="82.55" y="59.69" size="1.778" layer="96"/>
 </instance>
 <instance part="R72" gate="R" x="114.3" y="172.72" smashed="yes" rot="R90">
-<attribute name="DIS" x="114.3" y="172.72" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="DPN" x="114.3" y="172.72" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="MFR" x="114.3" y="172.72" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="MPN" x="114.3" y="172.72" size="1.778" layer="96" rot="R90" display="off"/>
 <attribute name="NAME" x="112.8014" y="168.91" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="112.522" y="175.26" size="1.778" layer="96" rot="R90"/>
 </instance>
@@ -19873,10 +19756,6 @@ reserved on all oresat cards</text>
 <attribute name="VALUE" x="215.9" y="223.774" size="1.778" layer="96" align="bottom-center"/>
 </instance>
 <instance part="R52" gate="R" x="215.9" y="213.36" smashed="yes" rot="R90">
-<attribute name="DIS" x="215.9" y="213.36" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="DPN" x="215.9" y="213.36" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="MFR" x="215.9" y="213.36" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="MPN" x="215.9" y="213.36" size="1.778" layer="96" rot="R90" display="off"/>
 <attribute name="NAME" x="214.63" y="208.28" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="214.63" y="214.63" size="1.778" layer="96" rot="R90"/>
 </instance>
@@ -19884,10 +19763,6 @@ reserved on all oresat cards</text>
 <attribute name="VALUE" x="220.98" y="190.5" size="1.778" layer="96" rot="MR0"/>
 </instance>
 <instance part="R46" gate="R" x="210.82" y="193.04" smashed="yes" rot="R90">
-<attribute name="DIS" x="210.82" y="193.04" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="DPN" x="210.82" y="193.04" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="MFR" x="210.82" y="193.04" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="MPN" x="210.82" y="193.04" size="1.778" layer="96" rot="R90" display="off"/>
 <attribute name="NAME" x="209.55" y="187.96" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="209.55" y="194.31" size="1.778" layer="96" rot="R90"/>
 </instance>
@@ -19899,10 +19774,6 @@ reserved on all oresat cards</text>
 <attribute name="VALUE" x="300.99" y="219.71" size="1.778" layer="96"/>
 </instance>
 <instance part="R39" gate="R" x="325.12" y="167.64" smashed="yes" rot="R90">
-<attribute name="DIS" x="325.12" y="167.64" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="DPN" x="325.12" y="167.64" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="MFR" x="325.12" y="167.64" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="MPN" x="325.12" y="167.64" size="1.778" layer="96" rot="R90" display="off"/>
 <attribute name="NAME" x="323.85" y="162.56" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="323.85" y="167.64" size="1.778" layer="96" rot="R90"/>
 </instance>
@@ -19910,10 +19781,6 @@ reserved on all oresat cards</text>
 <attribute name="VALUE" x="327.66" y="157.48" size="1.778" layer="96" rot="MR0"/>
 </instance>
 <instance part="R50" gate="R" x="342.9" y="205.74" smashed="yes" rot="R180">
-<attribute name="DIS" x="342.9" y="205.74" size="1.778" layer="96" rot="R180" display="off"/>
-<attribute name="DPN" x="342.9" y="205.74" size="1.778" layer="96" rot="R180" display="off"/>
-<attribute name="MFR" x="342.9" y="205.74" size="1.778" layer="96" rot="R180" display="off"/>
-<attribute name="MPN" x="342.9" y="205.74" size="1.778" layer="96" rot="R180" display="off"/>
 <attribute name="NAME" x="337.82" y="207.01" size="1.778" layer="95"/>
 <attribute name="VALUE" x="344.17" y="207.01" size="1.778" layer="96"/>
 </instance>
@@ -19926,10 +19793,6 @@ reserved on all oresat cards</text>
 <attribute name="VALUE" x="351.79" y="201.93" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="R47" gate="R" x="337.82" y="198.12" smashed="yes" rot="R180">
-<attribute name="DIS" x="337.82" y="198.12" size="1.778" layer="96" rot="R180" display="off"/>
-<attribute name="DPN" x="337.82" y="198.12" size="1.778" layer="96" rot="R180" display="off"/>
-<attribute name="MFR" x="337.82" y="198.12" size="1.778" layer="96" rot="R180" display="off"/>
-<attribute name="MPN" x="337.82" y="198.12" size="1.778" layer="96" rot="R180" display="off"/>
 <attribute name="NAME" x="332.74" y="199.39" size="1.778" layer="95"/>
 <attribute name="VALUE" x="339.09" y="199.39" size="1.778" layer="96"/>
 </instance>
@@ -19963,10 +19826,6 @@ reserved on all oresat cards</text>
 <attribute name="NAME" x="330.2" y="151.13" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="R64" gate="R" x="363.22" y="213.36" smashed="yes" rot="R90">
-<attribute name="DIS" x="363.22" y="213.36" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="DPN" x="363.22" y="213.36" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="MFR" x="363.22" y="213.36" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="MPN" x="363.22" y="213.36" size="1.778" layer="96" rot="R90" display="off"/>
 <attribute name="NAME" x="361.95" y="208.28" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="361.95" y="214.63" size="1.778" layer="96" rot="R90"/>
 </instance>
@@ -20001,10 +19860,6 @@ reserved on all oresat cards</text>
 <attribute name="VALUE" x="378.46" y="172.72" size="1.778" layer="96" rot="MR0"/>
 </instance>
 <instance part="R32" gate="R" x="375.92" y="198.12" smashed="yes" rot="R90">
-<attribute name="DIS" x="375.92" y="198.12" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="DPN" x="375.92" y="198.12" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="MFR" x="375.92" y="198.12" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="MPN" x="375.92" y="198.12" size="1.778" layer="96" rot="R90" display="off"/>
 <attribute name="NAME" x="374.65" y="193.04" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="374.65" y="199.39" size="1.778" layer="96" rot="R90"/>
 </instance>
@@ -20017,28 +19872,26 @@ reserved on all oresat cards</text>
 <instance part="Q5" gate="G$1" x="370.84" y="215.9" smashed="yes" rot="R90">
 <attribute name="VALUE" x="364.49" y="222.25" size="1.778" layer="96"/>
 <attribute name="NAME" x="364.49" y="224.79" size="1.778" layer="95"/>
-<attribute name="MFR" x="370.84" y="215.9" size="1.778" layer="96" rot="R90" display="off"/>
 <attribute name="MPN" x="370.84" y="215.9" size="1.778" layer="96" rot="R90" display="off"/>
 </instance>
 <instance part="Q6" gate="G$1" x="223.52" y="215.9" smashed="yes" rot="R90">
 <attribute name="VALUE" x="220.98" y="222.25" size="1.778" layer="96"/>
 <attribute name="NAME" x="220.98" y="224.79" size="1.778" layer="95"/>
-<attribute name="MFR" x="223.52" y="215.9" size="1.778" layer="96" rot="R90" display="off"/>
 <attribute name="MPN" x="223.52" y="215.9" size="1.778" layer="96" rot="R90" display="off"/>
 </instance>
 <instance part="Q4" gate="G$1" x="218.44" y="203.2" smashed="yes">
 <attribute name="VALUE" x="220.98" y="203.2" size="1.778" layer="96"/>
 <attribute name="NAME" x="220.98" y="205.74" size="1.778" layer="95"/>
+<attribute name="MPN" x="218.44" y="203.2" size="1.778" layer="96" display="off"/>
+<attribute name="DPN" x="218.44" y="203.2" size="1.778" layer="96" display="off"/>
 </instance>
 <instance part="Q2" gate="G$1" x="375.92" y="185.42" smashed="yes">
 <attribute name="VALUE" x="378.46" y="185.42" size="1.778" layer="96"/>
 <attribute name="NAME" x="378.46" y="187.96" size="1.778" layer="95"/>
+<attribute name="MPN" x="375.92" y="185.42" size="1.778" layer="96" display="off"/>
+<attribute name="DPN" x="375.92" y="185.42" size="1.778" layer="96" display="off"/>
 </instance>
 <instance part="C34" gate="CE" x="259.08" y="200.66" smashed="yes">
-<attribute name="DIS" x="259.08" y="200.66" size="1.778" layer="96" display="off"/>
-<attribute name="DPN" x="259.08" y="200.66" size="1.778" layer="96" display="off"/>
-<attribute name="MFR" x="259.08" y="200.66" size="1.778" layer="96" display="off"/>
-<attribute name="MPN" x="259.08" y="200.66" size="1.778" layer="96" display="off"/>
 <attribute name="NAME" x="260.35" y="200.66" size="1.778" layer="95"/>
 <attribute name="VALUE" x="260.35" y="195.58" size="1.778" layer="96"/>
 </instance>
@@ -20077,18 +19930,10 @@ reserved on all oresat cards</text>
 <attribute name="VALUE" x="235.966" y="161.544" size="1.778" layer="96" rot="MR0"/>
 </instance>
 <instance part="R49" gate="R" x="212.09" y="172.72" smashed="yes" rot="R180">
-<attribute name="DIS" x="212.09" y="172.72" size="1.778" layer="96" rot="R180" display="off"/>
-<attribute name="DPN" x="212.09" y="172.72" size="1.778" layer="96" rot="R180" display="off"/>
-<attribute name="MFR" x="212.09" y="172.72" size="1.778" layer="96" rot="R180" display="off"/>
-<attribute name="MPN" x="212.09" y="172.72" size="1.778" layer="96" rot="R180" display="off"/>
 <attribute name="NAME" x="215.9" y="171.2214" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="215.9" y="176.022" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="R43" gate="R" x="96.52" y="35.56" smashed="yes" rot="R90">
-<attribute name="DIS" x="96.52" y="35.56" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="DPN" x="96.52" y="35.56" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="MFR" x="96.52" y="35.56" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="MPN" x="96.52" y="35.56" size="1.778" layer="96" rot="R90" display="off"/>
 <attribute name="NAME" x="95.25" y="31.75" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="95.25" y="38.1" size="1.778" layer="96" rot="R90"/>
 </instance>
@@ -20102,18 +19947,10 @@ reserved on all oresat cards</text>
 <attribute name="NAME" x="160.782" y="146.05" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="R45" gate="R" x="116.84" y="63.5" smashed="yes" rot="R90">
-<attribute name="DIS" x="116.84" y="63.5" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="DPN" x="116.84" y="63.5" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="MFR" x="116.84" y="63.5" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="MPN" x="116.84" y="63.5" size="1.778" layer="96" rot="R90" display="off"/>
 <attribute name="NAME" x="115.57" y="59.69" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="115.57" y="66.04" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="R44" gate="R" x="127" y="63.5" smashed="yes" rot="R90">
-<attribute name="DIS" x="127" y="63.5" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="DPN" x="127" y="63.5" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="MFR" x="127" y="63.5" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="MPN" x="127" y="63.5" size="1.778" layer="96" rot="R90" display="off"/>
 <attribute name="NAME" x="125.73" y="59.69" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="125.73" y="66.04" size="1.778" layer="96" rot="R90"/>
 </instance>
@@ -20137,35 +19974,21 @@ reserved on all oresat cards</text>
 <attribute name="NAME" x="162.56" y="44.45" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
 <instance part="R48" gate="R" x="80.01" y="99.06" smashed="yes">
-<attribute name="DIS" x="80.01" y="99.06" size="1.778" layer="96" display="off"/>
-<attribute name="DPN" x="80.01" y="99.06" size="1.778" layer="96" display="off"/>
-<attribute name="MFR" x="80.01" y="99.06" size="1.778" layer="96" display="off"/>
-<attribute name="MPN" x="80.01" y="99.06" size="1.778" layer="96" display="off"/>
 <attribute name="NAME" x="76.2" y="100.33" size="1.778" layer="95"/>
 <attribute name="VALUE" x="82.55" y="100.33" size="1.778" layer="96"/>
 </instance>
 <instance part="Q3" gate=".1" x="99.06" y="96.52" smashed="yes" rot="R90">
 <attribute name="VALUE" x="97.79" y="91.44" size="1.778" layer="96"/>
 <attribute name="NAME" x="97.79" y="93.98" size="1.778" layer="95"/>
-<attribute name="MFR" x="99.06" y="96.52" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="MPN" x="99.06" y="96.52" size="1.778" layer="96" rot="R90" display="off"/>
 </instance>
 <instance part="GND4" gate="1" x="96.52" y="66.04" smashed="yes" rot="MR0">
 <attribute name="VALUE" x="99.06" y="63.5" size="1.778" layer="96" rot="MR0"/>
 </instance>
 <instance part="R37" gate="R" x="116.84" y="104.14" smashed="yes" rot="R90">
-<attribute name="DIS" x="116.84" y="104.14" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="DPN" x="116.84" y="104.14" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="MFR" x="116.84" y="104.14" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="MPN" x="116.84" y="104.14" size="1.778" layer="96" rot="R90" display="off"/>
 <attribute name="NAME" x="115.57" y="100.33" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="115.57" y="106.68" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="R36" gate="R" x="127" y="104.14" smashed="yes" rot="R90">
-<attribute name="DIS" x="127" y="104.14" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="DPN" x="127" y="104.14" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="MFR" x="127" y="104.14" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="MPN" x="127" y="104.14" size="1.778" layer="96" rot="R90" display="off"/>
 <attribute name="NAME" x="125.73" y="100.33" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="125.73" y="106.68" size="1.778" layer="96" rot="R90"/>
 </instance>
@@ -20196,10 +20019,6 @@ reserved on all oresat cards</text>
 <attribute name="NAME" x="168.402" y="148.59" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="R35" gate="R" x="96.52" y="76.2" smashed="yes" rot="R90">
-<attribute name="DIS" x="96.52" y="76.2" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="DPN" x="96.52" y="76.2" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="MFR" x="96.52" y="76.2" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="MPN" x="96.52" y="76.2" size="1.778" layer="96" rot="R90" display="off"/>
 <attribute name="NAME" x="95.25" y="72.39" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="95.25" y="78.74" size="1.778" layer="96" rot="R90"/>
 </instance>
@@ -21104,7 +20923,7 @@ the optional ones on the camera board</text>
 <text x="493.522" y="151.384" size="1.27" layer="97">OE pullup to start in high Z</text>
 <text x="533.654" y="216.662" size="1.778" layer="97">2.8V regulator</text>
 <text x="393.954" y="178.054" size="1.778" layer="97">I2C Transceiver</text>
-<text x="518.16" y="386.08" size="1.778" layer="97">NOTE:
+<text x="508" y="386.08" size="1.778" layer="97">NOTE:
 All these signals are outputs with the
 exception of FLASH. Likewise, I put the
 outputs on GPIO2,3 and inputs on GPIO0.
@@ -21119,10 +20938,10 @@ seemed logical</text>
 <wire x1="185.42" y1="287.02" x2="254" y2="287.02" width="0.1524" layer="97"/>
 <wire x1="254" y1="287.02" x2="254" y2="307.34" width="0.1524" layer="97"/>
 <wire x1="254" y1="307.34" x2="185.42" y2="307.34" width="0.1524" layer="97"/>
-<wire x1="515.62" y1="403.86" x2="515.62" y2="383.54" width="0.1524" layer="97"/>
-<wire x1="515.62" y1="383.54" x2="566.42" y2="383.54" width="0.1524" layer="97"/>
-<wire x1="566.42" y1="383.54" x2="566.42" y2="403.86" width="0.1524" layer="97"/>
-<wire x1="566.42" y1="403.86" x2="515.62" y2="403.86" width="0.1524" layer="97"/>
+<wire x1="505.46" y1="403.86" x2="505.46" y2="383.54" width="0.1524" layer="97"/>
+<wire x1="505.46" y1="383.54" x2="556.26" y2="383.54" width="0.1524" layer="97"/>
+<wire x1="556.26" y1="383.54" x2="556.26" y2="403.86" width="0.1524" layer="97"/>
+<wire x1="556.26" y1="403.86" x2="505.46" y2="403.86" width="0.1524" layer="97"/>
 <wire x1="538.48" y1="408.178" x2="570.23" y2="408.178" width="0.1524" layer="97"/>
 <wire x1="570.23" y1="408.178" x2="570.23" y2="462.28" width="0.1524" layer="97"/>
 <wire x1="570.23" y1="462.28" x2="538.48" y2="462.28" width="0.1524" layer="97"/>
@@ -21212,22 +21031,28 @@ DNP for now</text>
 <instance part="R8" gate="A" x="121.92" y="426.72" smashed="yes" rot="R90">
 <attribute name="VALUE" x="119.4816" y="429.3108" size="1.778" layer="96" font="vector" ratio="10" rot="SR0"/>
 <attribute name="NAME" x="119.3292" y="431.8508" size="1.778" layer="95" font="vector" ratio="10" rot="SR0"/>
+<attribute name="DPN" x="121.92" y="426.72" size="1.778" layer="96" rot="R90" display="off"/>
 </instance>
 <instance part="R24" gate="A" x="711.2" y="429.26" smashed="yes" rot="R90">
 <attribute name="VALUE" x="711.3016" y="431.8508" size="1.778" layer="96" font="vector" ratio="10" rot="SR0"/>
 <attribute name="NAME" x="711.1492" y="434.3908" size="1.778" layer="95" font="vector" ratio="10" rot="SR0"/>
+<attribute name="DPN" x="711.2" y="429.26" size="1.778" layer="96" rot="R90" display="off"/>
 </instance>
 <instance part="R26" gate="A" x="673.1" y="332.74" smashed="yes" rot="R270">
 <attribute name="VALUE" x="655.4216" y="327.7108" size="1.778" layer="96" font="vector" ratio="10" rot="SR0"/>
 <attribute name="NAME" x="655.2692" y="330.2508" size="1.778" layer="95" font="vector" ratio="10" rot="SR0"/>
+<attribute name="DPN" x="673.1" y="332.74" size="1.778" layer="96" rot="R270" display="off"/>
 </instance>
 <instance part="R25" gate="A" x="698.5" y="332.74" smashed="yes" rot="R270">
 <attribute name="VALUE" x="698.6016" y="327.7108" size="1.778" layer="96" font="vector" ratio="10" rot="SR0"/>
 <attribute name="NAME" x="698.4492" y="330.2508" size="1.778" layer="95" font="vector" ratio="10" rot="SR0"/>
+<attribute name="DPN" x="698.5" y="332.74" size="1.778" layer="96" rot="R270" display="off"/>
 </instance>
 <instance part="U3" gate="U" x="449.58" y="332.74" smashed="yes" rot="MR0">
 <attribute name="PART" x="443.23" y="349.25" size="1.778" layer="95" align="bottom-right"/>
 <attribute name="VALUE" x="445.77" y="312.42" size="1.778" layer="96" rot="MR0"/>
+<attribute name="MPN" x="449.58" y="332.74" size="1.778" layer="96" rot="MR0" display="off"/>
+<attribute name="DPN" x="449.58" y="332.74" size="1.778" layer="96" rot="MR0" display="off"/>
 </instance>
 <instance part="3V-17" gate="G$1" x="447.04" y="355.6" smashed="yes">
 <attribute name="VALUE" x="446.405" y="356.235" size="1.27" layer="96"/>
@@ -21259,10 +21084,6 @@ DNP for now</text>
 <attribute name="NAME" x="104.14" y="378.46" size="1.778" layer="95" ratio="12" rot="MR0"/>
 </instance>
 <instance part="C31" gate="CE" x="208.28" y="523.24" smashed="yes" rot="MR180">
-<attribute name="DIS" x="208.28" y="523.24" size="1.778" layer="96" rot="MR180" display="off"/>
-<attribute name="DPN" x="208.28" y="523.24" size="1.778" layer="96" rot="MR180" display="off"/>
-<attribute name="MFR" x="208.28" y="523.24" size="1.778" layer="96" rot="MR180" display="off"/>
-<attribute name="MPN" x="208.28" y="523.24" size="1.778" layer="96" rot="MR180" display="off"/>
 <attribute name="NAME" x="209.804" y="522.859" size="1.778" layer="95" rot="MR180"/>
 <attribute name="VALUE" x="209.804" y="527.939" size="1.778" layer="96" rot="MR180"/>
 </instance>
@@ -21275,8 +21096,6 @@ DNP for now</text>
 <instance part="U11" gate="G$1" x="226.06" y="508" smashed="yes" rot="MR0">
 <attribute name="NAME" x="222.25" y="492.76" size="1.778" layer="95" rot="MR0"/>
 <attribute name="VALUE" x="222.25" y="490.22" size="1.778" layer="96" rot="MR0"/>
-<attribute name="MFR" x="226.06" y="508" size="1.778" layer="96" rot="MR0" display="off"/>
-<attribute name="MPN" x="226.06" y="508" size="1.778" layer="96" rot="MR0" display="off"/>
 </instance>
 <instance part="3V-5" gate="G$1" x="226.06" y="530.86" smashed="yes" rot="MR0">
 <attribute name="VALUE" x="226.695" y="531.495" size="1.27" layer="96" rot="MR0"/>
@@ -21673,6 +21492,7 @@ DNP for now</text>
 <instance part="R9" gate="A" x="386.08" y="365.76" smashed="yes" rot="R90">
 <attribute name="VALUE" x="383.6416" y="368.3508" size="1.778" layer="96" font="vector" ratio="10" rot="SR0"/>
 <attribute name="NAME" x="383.4892" y="370.8908" size="1.778" layer="95" font="vector" ratio="10" rot="SR0"/>
+<attribute name="DPN" x="386.08" y="365.76" size="1.778" layer="96" rot="R90" display="off"/>
 </instance>
 <instance part="3V-15" gate="G$1" x="416.56" y="373.38" smashed="yes">
 <attribute name="VALUE" x="415.925" y="374.015" size="1.27" layer="96"/>
@@ -21740,10 +21560,6 @@ DNP for now</text>
 <attribute name="VALUE" x="211.455" y="473.075" size="1.27" layer="96" rot="MR0"/>
 </instance>
 <instance part="C40" gate="CE" x="248.92" y="449.58" smashed="yes" rot="MR180">
-<attribute name="DIS" x="248.92" y="449.58" size="1.778" layer="96" rot="MR180" display="off"/>
-<attribute name="DPN" x="248.92" y="449.58" size="1.778" layer="96" rot="MR180" display="off"/>
-<attribute name="MFR" x="248.92" y="449.58" size="1.778" layer="96" rot="MR180" display="off"/>
-<attribute name="MPN" x="248.92" y="449.58" size="1.778" layer="96" rot="MR180" display="off"/>
 <attribute name="NAME" x="250.444" y="449.199" size="1.778" layer="95" rot="MR180"/>
 <attribute name="VALUE" x="250.444" y="454.279" size="1.778" layer="96" rot="MR180"/>
 </instance>
@@ -24101,6 +23917,7 @@ battery circuit</text>
 <wire x1="144.78" y1="120.904" x2="144.78" y2="114.3" width="0.1524" layer="97"/>
 <wire x1="144.78" y1="114.3" x2="93.98" y2="114.3" width="0.1524" layer="97"/>
 <wire x1="93.98" y1="114.3" x2="93.98" y2="120.904" width="0.1524" layer="97"/>
+<text x="152.908" y="204.724" size="1.778" layer="102">1M if populated</text>
 </plain>
 <instances>
 <instance part="U7" gate="B" x="200.66" y="200.66" smashed="yes">
@@ -24138,6 +23955,7 @@ battery circuit</text>
 <instance part="FB2" gate="G$1" x="139.7" y="78.74" smashed="yes" rot="R90">
 <attribute name="NAME" x="137.795" y="81.28" size="1.778" layer="95" font="vector"/>
 <attribute name="MPN" x="139.7" y="78.74" size="1.778" layer="96" rot="R90" display="off"/>
+<attribute name="DPN" x="139.7" y="78.74" size="1.778" layer="96" rot="R90" display="off"/>
 </instance>
 <instance part="U2" gate="A" x="292.1" y="96.52" smashed="yes">
 <attribute name="NAME" x="299.8216" y="85.3186" size="2.0828" layer="95" ratio="6" rot="SR0"/>
@@ -24163,6 +23981,7 @@ battery circuit</text>
 <instance part="FB1" gate="G$1" x="287.02" y="68.58" smashed="yes" rot="R90">
 <attribute name="NAME" x="285.115" y="71.12" size="1.778" layer="95" font="vector"/>
 <attribute name="MPN" x="287.02" y="68.58" size="1.778" layer="96" rot="R90" display="off"/>
+<attribute name="DPN" x="287.02" y="68.58" size="1.778" layer="96" rot="R90" display="off"/>
 </instance>
 <instance part="R6" gate="R" x="276.86" y="88.9" smashed="yes" rot="R90">
 <attribute name="NAME" x="275.3614" y="85.09" size="1.778" layer="95" rot="R90"/>
