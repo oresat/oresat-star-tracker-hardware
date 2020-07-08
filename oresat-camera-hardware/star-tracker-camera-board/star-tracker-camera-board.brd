@@ -2663,12 +2663,14 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <attribute name="VALUE" x="5.4" y="3.15" size="0.8" layer="28" font="vector" ratio="15" rot="MR270"/>
 </element>
 <element name="U3" library="U-TI-TPS71928-28-VoltageReg" package="DRV6_1P6X1" value="TPS71928-28DRVT" x="23" y="12" smashed="yes" rot="MR90">
-<attribute name="MANUFACTURER_PART_NUMBER" value="TPS7192828DRVT" x="23" y="12" size="1" layer="28" rot="MR90" display="off"/>
+<attribute name="DPN" value="296-21660-1-ND" x="23" y="12" size="1.778" layer="28" rot="MR90" display="off"/>
+<attribute name="MPN" value="TPS71928-28DRVR" x="23" y="12" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="NAME" x="22.2446" y="9.526" size="0.508" layer="26" font="vector" ratio="15" rot="SMR0"/>
 <attribute name="VENDOR" value="Texas Instruments" x="23" y="12" size="1" layer="28" rot="MR90" display="off"/>
 </element>
 <element name="U4" library="U-TI-TPS71928-28-VoltageReg" package="DRV6_1P6X1" value="TPS71928-28DRVT" x="28.5" y="12" smashed="yes" rot="MR90">
-<attribute name="MANUFACTURER_PART_NUMBER" value="TPS7192828DRVT" x="32.75" y="8.5" size="1" layer="28" rot="MR90" display="off"/>
+<attribute name="DPN" value="296-21660-1-ND" x="28.5" y="12" size="1.778" layer="28" rot="MR90" display="off"/>
+<attribute name="MPN" value="TPS71928-28DRVR" x="28.5" y="12" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="NAME" x="29.9321" y="9.5885" size="0.508" layer="26" font="vector" ratio="15" rot="SMR0"/>
 <attribute name="VENDOR" value="Texas Instruments" x="32.75" y="8.5" size="1" layer="28" rot="MR90" display="off"/>
 </element>
@@ -2710,7 +2712,8 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <attribute name="VALUE" x="21.3165" y="12.9315" size="0.0254" layer="28" rot="MR0"/>
 </element>
 <element name="U2" library="U-TI-TPS70618-VoltageReg" package="DRV6_1P6X1" value="TPS70618DRVR" x="17" y="12" smashed="yes" rot="MR90">
-<attribute name="MANUFACTURER_PART_NUMBER" value="TPS7192828DRVT" x="17" y="12" size="1" layer="28" rot="MR90" display="off"/>
+<attribute name="DPN" value="296-48768-1-ND" x="17" y="12" size="1.778" layer="28" rot="MR90" display="off"/>
+<attribute name="MPN" value="TPS70618DRVR" x="17" y="12" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="NAME" x="15.3125" y="12.3125" size="0.508" layer="26" font="vector" ratio="15" rot="SMR0"/>
 <attribute name="VENDOR" value="Texas Instruments" x="17" y="12" size="1" layer="28" rot="MR90" display="off"/>
 </element>
@@ -2764,20 +2767,15 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <attribute name="VALUE" x="24.6" y="7.3" size="0.8" layer="28" font="vector" ratio="15" rot="MR270"/>
 </element>
 <element name="X1" library="X-KYOCERA-KC2520B27" package="OSC_KYOCERA_KC2520B" value="KC2520B27.0000C10E00" x="2" y="2.25" smashed="yes" rot="MR90">
-<attribute name="MANUFACTURER_PART_NUMBER" value="KC2520B27.0000C10E00" x="2" y="2.25" size="1" layer="28" rot="MR90" display="off"/>
+<attribute name="DPN" value="478-4781-1-ND" x="2" y="2.25" size="1.778" layer="28" rot="MR90" display="off"/>
+<attribute name="MPN" value="KC2520B27.0000C10E00" x="2" y="2.25" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="NAME" x="1.75" y="3.9375" size="0.508" layer="26" font="vector" ratio="15" rot="SMR90"/>
 <attribute name="VENDOR" value="Kyocera" x="2" y="2.25" size="1" layer="28" rot="MR90" display="off"/>
 </element>
 <element name="J1" library="J-TEConnectivity-3-1734742-6 " package="TE_3-1734742-6" value="3-1734742-6" x="18.25" y="2.5" smashed="yes" rot="MR0">
-<attribute name="COMMENT" value="4-1734742-0" x="18.25" y="2.5" size="1" layer="28" rot="MR0" display="off"/>
-<attribute name="DESCRIPTION" value="  Conn FPC Connector SKT 36 POS 0.5mm Solder ST SMD T/R " x="18.25" y="2.5" size="1" layer="28" rot="MR0" display="off"/>
-<attribute name="DIGI-KEY_PART_NUMBER" value="A100242CT-ND" x="18.25" y="2.5" size="1" layer="28" rot="MR0" display="off"/>
-<attribute name="DIGI-KEY_PURCHASE_URL" value="" x="18.25" y="2.5" size="1" layer="28" rot="MR0" display="off"/>
-<attribute name="MF" value="TE Connectivity" x="18.25" y="2.5" size="1" layer="28" rot="MR0" display="off"/>
-<attribute name="MP" value="4-1734742-0" x="18.25" y="2.5" size="1" layer="28" rot="MR0" display="off"/>
+<attribute name="DIGI-KEY_PART_NUMBER" value="A100241CT-ND" x="18.25" y="2.5" size="1" layer="28" rot="MR0" display="off"/>
+<attribute name="MP" value="3-1734742-6" x="18.25" y="2.5" size="1" layer="28" rot="MR0" display="off"/>
 <attribute name="NAME" x="28.6834" y="4.59941875" size="0.5" layer="26" font="vector" ratio="15" rot="MR0"/>
-<attribute name="PACKAGE" value="None" x="18.25" y="2.5" size="1" layer="28" rot="MR0" display="off"/>
-<attribute name="TE_PURCHASE_URL" value="" x="18.25" y="2.5" size="1" layer="28" rot="MR0" display="off"/>
 <attribute name="VALUE" x="30.6855" y="-3.63571875" size="1.77908125" layer="28" rot="MR0"/>
 </element>
 <element name="U1" library="U-ONSemi-AR0134" package="AR0134CSSM00SPCA0" value="AR0134CSSM00SPCA0" x="7" y="7" smashed="yes" rot="R180"/>

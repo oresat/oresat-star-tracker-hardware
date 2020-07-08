@@ -7337,7 +7337,8 @@ This package is identical to 0603-A, but has its tPlace silkscreen layer removed
 </connects>
 <technologies>
 <technology name="">
-<attribute name="MANUFACTURER_PART_NUMBER" value="TPS7192828DRVT" constant="no"/>
+<attribute name="DPN" value="296-21660-1-ND" constant="no"/>
+<attribute name="MPN" value="TPS71928-28DRVR" constant="no"/>
 <attribute name="VENDOR" value="Texas Instruments" constant="no"/>
 </technology>
 </technologies>
@@ -7696,7 +7697,8 @@ This package is identical to 0603-A, but has its tPlace silkscreen layer removed
 </connects>
 <technologies>
 <technology name="">
-<attribute name="MANUFACTURER_PART_NUMBER" value="TPS7192828DRVT" constant="no"/>
+<attribute name="DPN" value="296-48768-1-ND" constant="no"/>
+<attribute name="MPN" value="TPS70618DRVR" constant="no"/>
 <attribute name="VENDOR" value="Texas Instruments" constant="no"/>
 </technology>
 </technologies>
@@ -7747,7 +7749,8 @@ This package is identical to 0603-A, but has its tPlace silkscreen layer removed
 </connects>
 <technologies>
 <technology name="">
-<attribute name="MANUFACTURER_PART_NUMBER" value="KC2520B27.0000C10E00" constant="no"/>
+<attribute name="DPN" value="478-4781-1-ND" constant="no"/>
+<attribute name="MPN" value="KC2520B27.0000C10E00" constant="no"/>
 <attribute name="VENDOR" value="Kyocera" constant="no"/>
 </technology>
 </technologies>
@@ -9456,14 +9459,8 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </connects>
 <technologies>
 <technology name="">
-<attribute name="COMMENT" value="4-1734742-0"/>
-<attribute name="DESCRIPTION" value="  Conn FPC Connector SKT 36 POS 0.5mm Solder ST SMD T/R "/>
-<attribute name="DIGI-KEY_PART_NUMBER" value="A100242CT-ND"/>
-<attribute name="DIGI-KEY_PURCHASE_URL" value=""/>
-<attribute name="MF" value="TE Connectivity"/>
-<attribute name="MP" value="4-1734742-0"/>
-<attribute name="PACKAGE" value="None"/>
-<attribute name="TE_PURCHASE_URL" value=""/>
+<attribute name="DIGI-KEY_PART_NUMBER" value="A100241CT-ND"/>
+<attribute name="MP" value="3-1734742-6"/>
 </technology>
 </technologies>
 </device>
