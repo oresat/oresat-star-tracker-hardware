@@ -9459,8 +9459,8 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </connects>
 <technologies>
 <technology name="">
-<attribute name="DIGI-KEY_PART_NUMBER" value="A100241CT-ND"/>
-<attribute name="MP" value="3-1734742-6"/>
+<attribute name="DPN" value="A100241CT-ND"/>
+<attribute name="MPN" value="3-1734742-6"/>
 </technology>
 </technologies>
 </device>

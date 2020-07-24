@@ -2772,13 +2772,13 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <attribute name="NAME" x="1.75" y="3.9375" size="0.508" layer="26" font="vector" ratio="15" rot="SMR90"/>
 <attribute name="VENDOR" value="Kyocera" x="2" y="2.25" size="1" layer="28" rot="MR90" display="off"/>
 </element>
-<element name="J1" library="J-TEConnectivity-3-1734742-6 " package="TE_3-1734742-6" value="3-1734742-6" x="18.25" y="2.5" smashed="yes" rot="MR0">
-<attribute name="DIGI-KEY_PART_NUMBER" value="A100241CT-ND" x="18.25" y="2.5" size="1" layer="28" rot="MR0" display="off"/>
-<attribute name="MP" value="3-1734742-6" x="18.25" y="2.5" size="1" layer="28" rot="MR0" display="off"/>
-<attribute name="NAME" x="28.6834" y="4.59941875" size="0.5" layer="26" font="vector" ratio="15" rot="MR0"/>
-<attribute name="VALUE" x="30.6855" y="-3.63571875" size="1.77908125" layer="28" rot="MR0"/>
+<element name="J1" library="J-TEConnectivity-3-1734742-6 " package="TE_3-1734742-6" value="3-1734742-6" x="18.25" y="2.5" locked="yes" smashed="yes" rot="MR0">
+<attribute name="DPN" value="A100241CT-ND" x="18.25" y="2.5" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="MPN" value="3-1734742-6" x="18.25" y="2.5" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="NAME" x="28.6834" y="4.59941875" locked="yes" size="0.5" layer="26" font="vector" ratio="15" rot="MR0"/>
+<attribute name="VALUE" x="30.6855" y="-3.63571875" locked="yes" size="1.77908125" layer="28" rot="MR0"/>
 </element>
-<element name="U1" library="U-ONSemi-AR0134" package="AR0134CSSM00SPCA0" value="AR0134CSSM00SPCA0" x="7" y="7" smashed="yes" rot="R180"/>
+<element name="U1" library="U-ONSemi-AR0134" package="AR0134CSSM00SPCA0" value="AR0134CSSM00SPCA0" x="7" y="7" locked="yes" smashed="yes" rot="R180"/>
 <element name="R3" library="oresat-rcl" package=".0402-B-NOSILK" value="DNP" x="20.5" y="6.5" smashed="yes" rot="MR90">
 <attribute name="NAME" x="20.3" y="7.5125" size="0.5" layer="26" font="vector" ratio="15" rot="MR90"/>
 <attribute name="NAME" x="20.5" y="6.5" size="0.2" layer="34" ratio="15" rot="MR90" align="center"/>
