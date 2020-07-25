@@ -1,7 +1,0 @@
-
-*.o
-*.out
-PRU_code/gen/*
-PRU_code/gen
-*.swp
-*.pgm
