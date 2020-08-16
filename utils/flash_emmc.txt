@@ -3,12 +3,12 @@
 #######################
 
 # build the needed eMMC device tree file
-$ cd/opt/source/bb.org-overlays
+$ cd /opt/source/bb.org-overlays
 $ make
 ...
 
 # copy the device tree file to /lib/firmware
-$ cp /src/arm/BB-BONE-eMMC1-01-00A0.dtbo /lib/firmware
+$ cp ./src/arm/BB-BONE-eMMC1-01-00A0.dtbo /lib/firmware
 
 # add the below line to your /boot/uEnv.txt file
 uboot_overlay_addr4=/lib/firmware/BB-BONE-eMMC1-01-00A0.dtbo
