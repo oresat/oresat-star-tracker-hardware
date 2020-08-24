@@ -1,9 +1,5 @@
 #!/usr/bin/python3
 
-# This script writes the board ID to the EEPROM in the OSD3358 and reads
-# it back afterwards. I ran it on another pocketbealge using i2c-2, but
-# it would probably work on other boards with a i2c peripheral
-
 import io
 import fcntl
 import sys
@@ -11,6 +7,7 @@ import sys
 # i2c slave address is first argument
 slave_addr = int(sys.argv[1], 16)
 
+# register to read is second arg
 reg = int(sys.argv[2], 16)
 
 addr_bu = (reg >> 8) & 0xff # address upper byte
