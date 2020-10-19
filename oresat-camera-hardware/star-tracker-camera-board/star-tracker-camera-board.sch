@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.6.1">
+<eagle version="9.6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -9508,14 +9508,9 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="TP8" library="J-TestPoint-Small" deviceset="TP" device="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1"/>
 <part name="TP9" library="J-TestPoint-Small" deviceset="TP" device="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1"/>
 <part name="TP10" library="J-TestPoint-Small" deviceset="TP" device="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1"/>
-<part name="TP2" library="J-TestPoint-Small" deviceset="TP" device="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1"/>
-<part name="TP3" library="J-TestPoint-Small" deviceset="TP" device="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1"/>
-<part name="TP4" library="J-TestPoint-Small" deviceset="TP" device="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1"/>
-<part name="TP5" library="J-TestPoint-Small" deviceset="TP" device="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1"/>
 <part name="U2" library="U-TI-TPS70618-VoltageReg" deviceset="TPS70618DRVR" device=""/>
 <part name="SUPPLY10" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 <part name="GND8" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="TP1" library="J-TestPoint-Small" deviceset="TP" device="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1"/>
 <part name="C19" library="oresat-rcl" deviceset="C-EU" device="0603-C-NOSILK" value="2.2uF"/>
 <part name="TP6" library="J-TestPoint-Small" deviceset="TP" device="TP06R" package3d_urn="urn:adsk.eagle:package:27954/1"/>
 <part name="C18" library="oresat-rcl" deviceset="C-EU" device="0603-C-NOSILK" value="2.2uF"/>
@@ -9737,22 +9732,6 @@ CLK_EN: Low; Clock disabled</text>
 <attribute name="NAME" x="336.55" y="74.93" size="1.27" layer="95"/>
 <attribute name="TP_SIGNAL_NAME" x="336.55" y="74.93" size="1.778" layer="97"/>
 </instance>
-<instance part="TP2" gate="G$1" x="299.72" y="124.46" smashed="yes">
-<attribute name="NAME" x="300.228" y="124.46" size="1.27" layer="95"/>
-<attribute name="TP_SIGNAL_NAME" x="300.99" y="123.19" size="1.778" layer="97"/>
-</instance>
-<instance part="TP3" gate="G$1" x="299.72" y="119.38" smashed="yes">
-<attribute name="NAME" x="300.228" y="119.38" size="1.27" layer="95"/>
-<attribute name="TP_SIGNAL_NAME" x="300.99" y="118.11" size="1.778" layer="97"/>
-</instance>
-<instance part="TP4" gate="G$1" x="299.72" y="81.28" smashed="yes">
-<attribute name="NAME" x="300.228" y="81.28" size="1.27" layer="95"/>
-<attribute name="TP_SIGNAL_NAME" x="300.99" y="80.01" size="1.778" layer="97"/>
-</instance>
-<instance part="TP5" gate="G$1" x="299.72" y="76.2" smashed="yes">
-<attribute name="NAME" x="300.228" y="76.2" size="1.27" layer="95"/>
-<attribute name="TP_SIGNAL_NAME" x="300.99" y="74.93" size="1.778" layer="97"/>
-</instance>
 <instance part="U2" gate="A" x="317.5" y="162.56" smashed="yes">
 <attribute name="NAME" x="325.12" y="174.244" size="2.0828" layer="95" ratio="6" rot="SR0"/>
 <attribute name="VALUE" x="325.12" y="171.704" size="2.0828" layer="96" ratio="6" rot="SR0"/>
@@ -9762,10 +9741,6 @@ CLK_EN: Low; Clock disabled</text>
 </instance>
 <instance part="GND8" gate="1" x="317.5" y="147.32" smashed="yes">
 <attribute name="VALUE" x="316.484" y="144.78" size="1.27" layer="96" rot="R90" align="top-center"/>
-</instance>
-<instance part="TP1" gate="G$1" x="299.72" y="165.1" smashed="yes">
-<attribute name="NAME" x="300.228" y="165.1" size="1.27" layer="95"/>
-<attribute name="TP_SIGNAL_NAME" x="300.99" y="163.83" size="1.778" layer="97"/>
 </instance>
 <instance part="C19" gate="CE" x="411.48" y="101.6" smashed="yes">
 <attribute name="NAME" x="413.004" y="101.981" size="1.778" layer="95"/>
@@ -9993,34 +9968,19 @@ CLK_EN: Low; Clock disabled</text>
 <pinref part="U2" gate="A" pin="EN1"/>
 <wire x1="289.56" y1="162.56" x2="289.56" y2="121.92" width="0.1524" layer="91"/>
 <wire x1="289.56" y1="121.92" x2="289.56" y2="119.38" width="0.1524" layer="91"/>
-<wire x1="302.26" y1="162.56" x2="299.72" y2="162.56" width="0.1524" layer="91"/>
-<pinref part="TP1" gate="G$1" pin="TP"/>
-<wire x1="299.72" y1="162.56" x2="289.56" y2="162.56" width="0.1524" layer="91"/>
-<junction x="299.72" y="162.56"/>
+<wire x1="302.26" y1="162.56" x2="289.56" y2="162.56" width="0.1524" layer="91"/>
 <junction x="289.56" y="162.56"/>
 <pinref part="U3" gate="A" pin="EN1"/>
-<wire x1="302.26" y1="121.92" x2="299.72" y2="121.92" width="0.1524" layer="91"/>
-<pinref part="TP2" gate="G$1" pin="TP"/>
-<wire x1="299.72" y1="121.92" x2="289.56" y2="121.92" width="0.1524" layer="91"/>
-<junction x="299.72" y="121.92"/>
+<wire x1="302.26" y1="121.92" x2="289.56" y2="121.92" width="0.1524" layer="91"/>
 <junction x="289.56" y="121.92"/>
 <pinref part="U3" gate="A" pin="EN2"/>
-<wire x1="302.26" y1="116.84" x2="299.72" y2="116.84" width="0.1524" layer="91"/>
-<pinref part="TP3" gate="G$1" pin="TP"/>
-<wire x1="299.72" y1="116.84" x2="289.56" y2="116.84" width="0.1524" layer="91"/>
-<junction x="299.72" y="116.84"/>
+<wire x1="302.26" y1="116.84" x2="289.56" y2="116.84" width="0.1524" layer="91"/>
 <junction x="289.56" y="116.84"/>
 <pinref part="U4" gate="A" pin="EN1"/>
-<wire x1="302.26" y1="78.74" x2="299.72" y2="78.74" width="0.1524" layer="91"/>
-<pinref part="TP4" gate="G$1" pin="TP"/>
-<wire x1="299.72" y1="78.74" x2="289.56" y2="78.74" width="0.1524" layer="91"/>
-<junction x="299.72" y="78.74"/>
+<wire x1="302.26" y1="78.74" x2="289.56" y2="78.74" width="0.1524" layer="91"/>
 <junction x="289.56" y="78.74"/>
 <pinref part="U4" gate="A" pin="EN2"/>
-<wire x1="302.26" y1="73.66" x2="299.72" y2="73.66" width="0.1524" layer="91"/>
-<pinref part="TP5" gate="G$1" pin="TP"/>
-<wire x1="299.72" y1="73.66" x2="289.56" y2="73.66" width="0.1524" layer="91"/>
-<junction x="299.72" y="73.66"/>
+<wire x1="302.26" y1="73.66" x2="289.56" y2="73.66" width="0.1524" layer="91"/>
 <junction x="289.56" y="73.66"/>
 <label x="160.02" y="111.76" size="1.778" layer="95" rot="R90"/>
 </segment>

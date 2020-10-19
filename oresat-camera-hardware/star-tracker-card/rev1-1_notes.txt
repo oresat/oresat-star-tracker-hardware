@@ -1,0 +1,7 @@
+r18 c28 ref des flipped
+u12 u13 ref des under pad
+r15 ref des on TP
+c31 ref des on via
+add camera ffc to BOM
+r46 r52 r64 r72 not on digikey bom
+c36 on l1
