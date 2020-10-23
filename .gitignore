@@ -66,3 +66,6 @@ prucam.mod.c
 # pru build files
 pru_fw.asm
 */pru_code/gen
+
+# macs are annoying
+.DS_Store
