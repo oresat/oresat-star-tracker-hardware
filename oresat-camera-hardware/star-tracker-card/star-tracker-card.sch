@@ -19470,6 +19470,10 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="R73" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="100"/>
 <part name="R74" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="100"/>
 <part name="R75" library="oresat-rcl" deviceset="R-US_" device="0603-A" value="100"/>
+<part name="C42" library="oresat-rcl" deviceset="C-EU" device="C1210" value="22uF"/>
+<part name="C43" library="oresat-rcl" deviceset="C-EU" device="C1210" value="22uF"/>
+<part name="3V-30" library="oresat-supplies" deviceset="3.3V" device=""/>
+<part name="GND55" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -21963,6 +21967,20 @@ DNP for now</text>
 <instance part="TP69" gate="G$1" x="167.64" y="449.58" smashed="yes" rot="R90">
 <attribute name="NAME" x="168.402" y="454.152" size="1.778" layer="95" font="vector" rot="R90"/>
 </instance>
+<instance part="C42" gate="CE" x="365.76" y="68.58" smashed="yes">
+<attribute name="NAME" x="369.316" y="68.961" size="1.778" layer="95"/>
+<attribute name="VALUE" x="369.316" y="65.659" size="1.778" layer="96"/>
+</instance>
+<instance part="C43" gate="CE" x="350.52" y="68.58" smashed="yes">
+<attribute name="NAME" x="354.076" y="68.961" size="1.778" layer="95"/>
+<attribute name="VALUE" x="354.076" y="65.659" size="1.778" layer="96"/>
+</instance>
+<instance part="3V-30" gate="G$1" x="358.14" y="78.74" smashed="yes">
+<attribute name="VALUE" x="357.505" y="79.375" size="1.27" layer="96"/>
+</instance>
+<instance part="GND55" gate="1" x="358.14" y="55.88" smashed="yes">
+<attribute name="VALUE" x="357.4415" y="53.34" size="1.27" layer="96" rot="R90" align="top-center"/>
+</instance>
 </instances>
 <busses>
 <bus name="CAMERA_BUS_INTERNAL:D0_I,D1_I,D2_I,D3_I,D4_I,D5_I,D6_I,D7_I,D8_I,D9_I,D10_I,D11_I,HSYNC_I,PIXCLK_I,VSYNC_I">
@@ -22174,6 +22192,17 @@ DNP for now</text>
 <pinref part="R60" gate="R" pin="1"/>
 <pinref part="3V-29" gate="G$1" pin="3.3V"/>
 <wire x1="162.56" y1="457.2" x2="162.56" y2="459.74" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C43" gate="CE" pin="1"/>
+<wire x1="350.52" y1="71.12" x2="350.52" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="350.52" y1="73.66" x2="358.14" y2="73.66" width="0.1524" layer="91"/>
+<pinref part="3V-30" gate="G$1" pin="3.3V"/>
+<wire x1="358.14" y1="73.66" x2="358.14" y2="76.2" width="0.1524" layer="91"/>
+<pinref part="C42" gate="CE" pin="1"/>
+<wire x1="365.76" y1="71.12" x2="365.76" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="365.76" y1="73.66" x2="358.14" y2="73.66" width="0.1524" layer="91"/>
+<junction x="358.14" y="73.66"/>
 </segment>
 </net>
 <net name="N$535" class="0">
@@ -24195,6 +24224,17 @@ DNP for now</text>
 <pinref part="R59" gate="R" pin="2"/>
 <pinref part="GND53" gate="1" pin="GND"/>
 <wire x1="162.56" y1="436.88" x2="162.56" y2="434.34" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C43" gate="CE" pin="2"/>
+<wire x1="350.52" y1="63.5" x2="350.52" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="350.52" y1="60.96" x2="358.14" y2="60.96" width="0.1524" layer="91"/>
+<pinref part="GND55" gate="1" pin="GND"/>
+<wire x1="358.14" y1="60.96" x2="358.14" y2="58.42" width="0.1524" layer="91"/>
+<pinref part="C42" gate="CE" pin="2"/>
+<wire x1="358.14" y1="60.96" x2="365.76" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="365.76" y1="60.96" x2="365.76" y2="63.5" width="0.1524" layer="91"/>
+<junction x="358.14" y="60.96"/>
 </segment>
 </net>
 <net name="N$110" class="0">
