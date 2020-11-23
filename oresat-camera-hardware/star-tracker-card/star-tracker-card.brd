@@ -37,7 +37,7 @@
 <layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
 <layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
@@ -1868,6 +1868,7 @@ when focused to infinity</text>
 <wire x1="91.4" y1="95.6" x2="8.4" y2="95.6" width="0.001" layer="50"/>
 <wire x1="8.4" y1="95.6" x2="8.4" y2="97.2" width="0.001" layer="50"/>
 <wire x1="91.4" y1="97.2" x2="91.4" y2="95.6" width="0.001" layer="50"/>
+<hole x="94.5" y="5.5" drill="3"/>
 </package>
 </packages>
 </library>
@@ -5778,8 +5779,8 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <element name="U3" library="U-Generic-eMMC-153pin" package="BGA-153(11.5X13)(EMMC-BA)" value="THGBMJG7C2LBAU8" x="59" y="19.9" smashed="yes">
 <attribute name="DPN" value="THGBMJG7C2LBAU8-ND" x="59" y="19.9" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="THGBMJG7C2LBAU8" x="59" y="19.9" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="59" y="19.9" size="1.5" layer="33" ratio="15" align="center"/>
 <attribute name="NAME" x="63.425" y="27.0125" size="0.635" layer="25" font="vector" ratio="20"/>
+<attribute name="NAME" x="59" y="19.9" size="1.5" layer="33" ratio="15" align="center"/>
 <attribute name="VALUE" x="53.4" y="12.3" size="0.8" layer="27" font="vector" ratio="15"/>
 </element>
 <element name="C9" library="oresat-rcl" package=".0603-A" value="1uF" x="50.875" y="19.18125" smashed="yes" rot="R180">
@@ -13253,7 +13254,6 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <via x="81" y="1.4" extent="1-16" drill="0.254"/>
 <via x="85.5" y="5.9" extent="1-16" drill="0.254"/>
 <via x="90" y="5.9" extent="1-16" drill="0.254"/>
-<via x="94.5" y="5.9" extent="1-16" drill="0.254"/>
 <via x="95.375" y="9.2125" extent="1-16" drill="0.254"/>
 <via x="45" y="3.4" extent="1-16" drill="0.254"/>
 <via x="49.75" y="10.18125" extent="1-16" drill="0.254"/>

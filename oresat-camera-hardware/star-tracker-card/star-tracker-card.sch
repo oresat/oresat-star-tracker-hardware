@@ -19050,6 +19050,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <wire x1="91.4" y1="95.6" x2="8.4" y2="95.6" width="0.001" layer="50"/>
 <wire x1="8.4" y1="95.6" x2="8.4" y2="97.2" width="0.001" layer="50"/>
 <wire x1="91.4" y1="97.2" x2="91.4" y2="95.6" width="0.001" layer="50"/>
+<hole x="94.5" y="5.5" drill="3"/>
 </package>
 </packages>
 <symbols>
