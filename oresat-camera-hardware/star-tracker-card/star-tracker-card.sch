@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.6.2">
+<eagle version="9.6.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -18884,6 +18884,199 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 </deviceset>
 </devicesets>
 </library>
+<library name="oresat-cards">
+<packages>
+<package name="ORESAT-CARD-V1.3-STAR-TRACKER">
+<circle x="49.9" y="49.9" radius="0.5" width="0.001" layer="51"/>
+<wire x1="48.9" y1="49.9" x2="50.9" y2="49.9" width="0.001" layer="51"/>
+<wire x1="49.9" y1="50.9" x2="49.9" y2="48.9" width="0.001" layer="51"/>
+<circle x="49.9" y="87.9" radius="0.5" width="0.001" layer="51"/>
+<wire x1="49.9" y1="88.894" x2="49.9" y2="86.894" width="0.001" layer="51"/>
+<wire x1="48.9" y1="87.9" x2="50.9" y2="87.9" width="0.001" layer="51"/>
+<wire x1="21.9" y1="88.894" x2="21.9" y2="86.894" width="0.001" layer="51"/>
+<circle x="21.9" y="87.9" radius="0.5" width="0.001" layer="51"/>
+<wire x1="20.9" y1="87.9" x2="22.9" y2="87.9" width="0.001" layer="51"/>
+<polygon width="0.1" layer="29">
+<vertex x="2.7" y="8.551"/>
+<vertex x="0.5" y="8.551" curve="-90"/>
+<vertex x="0" y="9.051"/>
+<vertex x="0" y="88.9"/>
+<vertex x="2.7" y="91.6"/>
+</polygon>
+<polygon width="0.1" layer="29">
+<vertex x="99.8" y="88.9"/>
+<vertex x="99.8" y="9.1" curve="-90"/>
+<vertex x="99.3" y="8.6"/>
+<vertex x="97.1" y="8.6"/>
+<vertex x="97.1" y="91.4"/>
+</polygon>
+<polygon width="0.1" layer="30">
+<vertex x="2.7" y="8.551"/>
+<vertex x="0.5" y="8.551" curve="-90"/>
+<vertex x="0" y="9.051"/>
+<vertex x="0" y="88.9"/>
+<vertex x="2.7" y="91.6"/>
+</polygon>
+<polygon width="0.1" layer="29">
+<vertex x="84.3" y="2.7"/>
+<vertex x="84.3" y="0.5" curve="-90"/>
+<vertex x="83.8" y="0"/>
+<vertex x="43.525" y="0" curve="-90"/>
+<vertex x="43.025" y="0.5"/>
+<vertex x="43.025" y="2.7"/>
+</polygon>
+<polygon width="0.1" layer="30">
+<vertex x="99.8" y="88.9"/>
+<vertex x="99.8" y="9.1" curve="-90"/>
+<vertex x="99.3" y="8.6"/>
+<vertex x="97.1" y="8.6"/>
+<vertex x="97.1" y="91.4"/>
+</polygon>
+<polygon width="0.1" layer="30">
+<vertex x="84.3" y="2.7"/>
+<vertex x="84.3" y="0.5" curve="-90"/>
+<vertex x="83.8" y="0"/>
+<vertex x="43.525" y="0" curve="-90"/>
+<vertex x="43.025" y="0.5"/>
+<vertex x="43.025" y="2.7"/>
+</polygon>
+<circle x="49.9" y="49.8" radius="2.5" width="0.001" layer="50"/>
+<wire x1="49.9" y1="44.671840625" x2="49.9" y2="89.9" width="0.001" layer="50"/>
+<wire x1="19.1" y1="87.9" x2="56" y2="87.9" width="0.001" layer="50"/>
+<wire x1="21.9" y1="89.9" x2="21.9" y2="86" width="0.001" layer="50"/>
+<rectangle x1="8.4" y1="95.6" x2="91.4" y2="97.2" layer="51"/>
+<rectangle x1="8.4" y1="95.6" x2="91.4" y2="97.2" layer="52"/>
+<wire x1="10.25" y1="22.8" x2="10.25" y2="21.2" width="0.001" layer="48"/>
+<wire x1="41.75" y1="21.2" x2="41.75" y2="22.8" width="0.001" layer="48"/>
+<wire x1="41.75" y1="22.8" x2="10.25" y2="22.8" width="0.001" layer="48"/>
+<wire x1="10.25" y1="21.2" x2="41.75" y2="21.2" width="0.001" layer="48"/>
+<wire x1="11.25" y1="28.9" x2="41" y2="28.9" width="0.001" layer="20"/>
+<wire x1="9.25" y1="3.4" x2="9.25" y2="26.9" width="0.001" layer="20"/>
+<wire x1="3.25" y1="2.9" x2="8.75" y2="2.9" width="0.001" layer="20"/>
+<wire x1="2.75" y1="8.1" x2="2.75" y2="3.4" width="0.001" layer="20"/>
+<wire x1="2.25" y1="8.6" x2="0.5" y2="8.6" width="0.001" layer="20"/>
+<wire x1="0" y1="88.8" x2="0" y2="9.1" width="0.001" layer="20"/>
+<wire x1="8.66795" y1="94.6" x2="5.8" y2="94.6" width="0.001" layer="20"/>
+<wire x1="31.66795" y1="94.6" x2="12.13205" y2="94.6" width="0.001" layer="20"/>
+<wire x1="64.66795" y1="94.6" x2="35.13205" y2="94.6" width="0.001" layer="20"/>
+<wire x1="87.66795" y1="94.6" x2="68.13205" y2="94.6" width="0.001" layer="20"/>
+<wire x1="94" y1="94.6" x2="91.13205" y2="94.6" width="0.001" layer="20"/>
+<wire x1="99.8" y1="9.1" x2="99.8" y2="88.8" width="0.001" layer="20"/>
+<wire x1="99.3" y1="8.6" x2="97.55" y2="8.6" width="0.001" layer="20"/>
+<wire x1="97.05" y1="3.4" x2="97.05" y2="8.1" width="0.001" layer="20"/>
+<wire x1="84.8" y1="2.9" x2="96.55" y2="2.9" width="0.001" layer="20"/>
+<wire x1="84.3" y1="0.5" x2="84.3" y2="2.4" width="0.001" layer="20"/>
+<wire x1="83.8" y1="0" x2="43.5" y2="0" width="0.001" layer="20"/>
+<wire x1="43" y1="26.9" x2="43" y2="0.5" width="0.001" layer="20"/>
+<wire x1="5.8" y1="94.6" x2="0" y2="88.8" width="0.001" layer="20"/>
+<wire x1="99.8" y1="88.8" x2="94" y2="94.6" width="0.001" layer="20"/>
+<wire x1="43" y1="26.9" x2="41" y2="28.9" width="0.001" layer="20" curve="90"/>
+<wire x1="11.25" y1="28.9" x2="9.25" y2="26.9" width="0.001" layer="20" curve="90"/>
+<wire x1="8.75" y1="2.9" x2="9.25" y2="3.4" width="0.001" layer="20" curve="90"/>
+<wire x1="2.75" y1="3.4" x2="3.25" y2="2.9" width="0.001" layer="20" curve="90"/>
+<wire x1="2.75" y1="8.1" x2="2.25" y2="8.6" width="0.001" layer="20" curve="90"/>
+<wire x1="0" y1="9.1" x2="0.5" y2="8.6" width="0.001" layer="20" curve="90"/>
+<wire x1="8.66795" y1="94.6" x2="12.13205" y2="94.6" width="0.001" layer="20" curve="119.999977"/>
+<wire x1="31.66795" y1="94.6" x2="35.13205" y2="94.6" width="0.001" layer="20" curve="119.999977"/>
+<wire x1="64.66795" y1="94.6" x2="68.13205" y2="94.6" width="0.001" layer="20" curve="119.999977"/>
+<wire x1="87.66795" y1="94.6" x2="91.13205" y2="94.6" width="0.001" layer="20" curve="119.999977"/>
+<wire x1="99.3" y1="8.6" x2="99.8" y2="9.1" width="0.001" layer="20" curve="90"/>
+<wire x1="97.55" y1="8.6" x2="97.05" y2="8.1" width="0.001" layer="20" curve="90"/>
+<wire x1="96.55" y1="2.9" x2="97.05" y2="3.4" width="0.001" layer="20" curve="90"/>
+<wire x1="84.8" y1="2.9" x2="84.3" y2="2.4" width="0.001" layer="20" curve="90"/>
+<wire x1="83.8" y1="0" x2="84.3" y2="0.5" width="0.001" layer="20" curve="90"/>
+<wire x1="43" y1="0.5" x2="43.5" y2="0" width="0.001" layer="20" curve="90"/>
+<rectangle x1="43" y1="5.6" x2="49" y2="22.2" layer="40"/>
+<rectangle x1="43" y1="5.6" x2="49" y2="22.2" layer="39"/>
+<hole x="46" y="19.7" drill="2.4"/>
+<hole x="46" y="8.1" drill="2.4"/>
+<rectangle x1="3.25" y1="5.6" x2="9.25" y2="22.2" layer="40"/>
+<rectangle x1="3.25" y1="5.6" x2="9.25" y2="22.2" layer="39"/>
+<hole x="6.25" y="19.7" drill="2.4"/>
+<hole x="6.25" y="8.1" drill="2.4"/>
+<wire x1="3.25" y1="5.6" x2="3.25" y2="22.2" width="0.001" layer="50"/>
+<wire x1="3.25" y1="22.2" x2="9.25" y2="22.2" width="0.001" layer="50"/>
+<wire x1="9.25" y1="5.6" x2="3.25" y2="5.6" width="0.001" layer="50"/>
+<wire x1="49" y1="5.6" x2="43" y2="5.6" width="0.001" layer="50"/>
+<wire x1="49" y1="22.2" x2="49" y2="5.6" width="0.001" layer="50"/>
+<wire x1="43" y1="5.6" x2="43" y2="22.2" width="0.001" layer="50"/>
+<wire x1="43" y1="22.2" x2="49" y2="22.2" width="0.001" layer="50"/>
+<wire x1="9.25" y1="22.2" x2="9.25" y2="5.6" width="0.001" layer="50"/>
+<wire x1="10.25" y1="22.8" x2="10.25" y2="21.2" width="0.001" layer="50"/>
+<wire x1="41.75" y1="21.2" x2="41.75" y2="22.8" width="0.001" layer="50"/>
+<wire x1="41.75" y1="22.8" x2="10.25" y2="22.8" width="0.001" layer="50"/>
+<wire x1="10.25" y1="21.2" x2="41.75" y2="21.2" width="0.001" layer="50"/>
+<circle x="46" y="8.1" radius="1.2" width="0.001" layer="50"/>
+<circle x="6.25" y="8.1" radius="1.2" width="0.001" layer="50"/>
+<circle x="6.25" y="19.7" radius="1.2" width="0.001" layer="50"/>
+<circle x="46" y="19.7" radius="1.2" width="0.001" layer="50"/>
+<wire x1="11.25" y1="28.9" x2="41" y2="28.9" width="0.001" layer="50"/>
+<wire x1="9.25" y1="3.4" x2="9.25" y2="26.9" width="0.001" layer="50"/>
+<wire x1="3.25" y1="2.9" x2="8.75" y2="2.9" width="0.001" layer="50"/>
+<wire x1="2.75" y1="8.1" x2="2.75" y2="3.4" width="0.001" layer="50"/>
+<wire x1="2.25" y1="8.6" x2="0.5" y2="8.6" width="0.001" layer="50"/>
+<wire x1="0" y1="88.8" x2="0" y2="9.1" width="0.001" layer="50"/>
+<wire x1="8.66795" y1="94.6" x2="5.8" y2="94.6" width="0.001" layer="50"/>
+<wire x1="31.66795" y1="94.6" x2="12.13205" y2="94.6" width="0.001" layer="50"/>
+<wire x1="64.66795" y1="94.6" x2="35.13205" y2="94.6" width="0.001" layer="50"/>
+<wire x1="87.66795" y1="94.6" x2="68.13205" y2="94.6" width="0.001" layer="50"/>
+<wire x1="94" y1="94.6" x2="91.13205" y2="94.6" width="0.001" layer="50"/>
+<wire x1="99.8" y1="9.1" x2="99.8" y2="88.8" width="0.001" layer="50"/>
+<wire x1="99.3" y1="8.6" x2="97.55" y2="8.6" width="0.001" layer="50"/>
+<wire x1="97.05" y1="3.4" x2="97.05" y2="8.1" width="0.001" layer="50"/>
+<wire x1="84.8" y1="2.9" x2="96.55" y2="2.9" width="0.001" layer="50"/>
+<wire x1="84.3" y1="0.5" x2="84.3" y2="2.4" width="0.001" layer="50"/>
+<wire x1="83.8" y1="0" x2="43.5" y2="0" width="0.001" layer="50"/>
+<wire x1="43" y1="26.9" x2="43" y2="0.5" width="0.001" layer="50"/>
+<wire x1="5.8" y1="94.6" x2="0" y2="88.8" width="0.001" layer="50"/>
+<wire x1="99.8" y1="88.8" x2="94" y2="94.6" width="0.001" layer="50"/>
+<wire x1="43" y1="26.9" x2="41" y2="28.9" width="0.001" layer="50" curve="90"/>
+<wire x1="11.25" y1="28.9" x2="9.25" y2="26.9" width="0.001" layer="50" curve="90"/>
+<wire x1="8.75" y1="2.9" x2="9.25" y2="3.4" width="0.001" layer="50" curve="90"/>
+<wire x1="2.75" y1="3.4" x2="3.25" y2="2.9" width="0.001" layer="50" curve="90"/>
+<wire x1="2.75" y1="8.1" x2="2.25" y2="8.6" width="0.001" layer="50" curve="90"/>
+<wire x1="0" y1="9.1" x2="0.5" y2="8.6" width="0.001" layer="50" curve="90"/>
+<wire x1="8.66795" y1="94.6" x2="12.13205" y2="94.6" width="0.001" layer="50" curve="119.999977"/>
+<wire x1="31.66795" y1="94.6" x2="35.13205" y2="94.6" width="0.001" layer="50" curve="119.999977"/>
+<wire x1="64.66795" y1="94.6" x2="68.13205" y2="94.6" width="0.001" layer="50" curve="119.999977"/>
+<wire x1="87.66795" y1="94.6" x2="91.13205" y2="94.6" width="0.001" layer="50" curve="119.999977"/>
+<wire x1="99.3" y1="8.6" x2="99.8" y2="9.1" width="0.001" layer="50" curve="90"/>
+<wire x1="97.55" y1="8.6" x2="97.05" y2="8.1" width="0.001" layer="50" curve="90"/>
+<wire x1="96.55" y1="2.9" x2="97.05" y2="3.4" width="0.001" layer="50" curve="90"/>
+<wire x1="84.8" y1="2.9" x2="84.3" y2="2.4" width="0.001" layer="50" curve="90"/>
+<wire x1="83.8" y1="0" x2="84.3" y2="0.5" width="0.001" layer="50" curve="90"/>
+<wire x1="43" y1="0.5" x2="43.5" y2="0" width="0.001" layer="50" curve="90"/>
+<wire x1="91.4" y1="97.2" x2="8.4" y2="97.2" width="0.001" layer="50"/>
+<wire x1="91.4" y1="95.6" x2="8.4" y2="95.6" width="0.001" layer="50"/>
+<wire x1="8.4" y1="95.6" x2="8.4" y2="97.2" width="0.001" layer="50"/>
+<wire x1="91.4" y1="97.2" x2="91.4" y2="95.6" width="0.001" layer="50"/>
+</package>
+</packages>
+<symbols>
+<symbol name="ORESAT-CARD-V1.3-STAR-TRACKER">
+<wire x1="-1.27" y1="1.27" x2="-1.27" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="-1.27" x2="1.27" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="1.27" y1="-1.27" x2="1.27" y2="1.27" width="0.254" layer="94"/>
+<wire x1="1.27" y1="1.27" x2="-1.27" y2="1.27" width="0.254" layer="94"/>
+<text x="2.54" y="-1.27" size="2.54" layer="94">OreSat Card v1.3: Star Tracker Card</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="ORESAT-CARD-V1.3-STAR-TRACKER" prefix="PCB">
+<description>Star Tracker Outline for OreSat Card v1.3. This version uses the two sided camera grab; note that there's no need for 1.3 mm keepouts near the card edges since the camer card must go in the center slot of the "U" due to the solar panel cutouts.</description>
+<gates>
+<gate name="G$1" symbol="ORESAT-CARD-V1.3-STAR-TRACKER" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="ORESAT-CARD-V1.3-STAR-TRACKER">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -19013,7 +19206,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <attribute name="DPN" value="U7104CT-ND"/>
 <attribute name="MPN" value="EXB-A10P104J"/>
 </part>
-<part name="U3" library="U-Generic-eMMC-153pin" deviceset="EMMC+RESET+5.1-COMPATIBLE" device="-BA">
+<part name="U3" library="U-Generic-eMMC-153pin" deviceset="EMMC+RESET+5.1-COMPATIBLE" device="-BA" value="THGBMJG7C2LBAU8">
 <attribute name="DPN" value="THGBMJG7C2LBAU8-ND"/>
 <attribute name="MPN" value="THGBMJG7C2LBAU8"/>
 </part>
@@ -19474,6 +19667,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="C43" library="oresat-rcl" deviceset="C-EU" device="C1210" value="22uF"/>
 <part name="3V-30" library="oresat-supplies" deviceset="3.3V" device=""/>
 <part name="GND55" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
+<part name="PCB1" library="oresat-cards" deviceset="ORESAT-CARD-V1.3-STAR-TRACKER" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -19547,6 +19741,7 @@ unconnected?</text>
 <instance part="VBUS2" gate="1" x="129.54" y="165.1" smashed="yes">
 <attribute name="VALUE" x="129.54" y="165.354" size="1.778" layer="96" align="bottom-center"/>
 </instance>
+<instance part="PCB1" gate="G$1" x="134.62" y="5.08" smashed="yes"/>
 </instances>
 <busses>
 </busses>
@@ -26218,7 +26413,6 @@ the internal EEPROM can be programmed.</text>
 <approved hash="104,5,-200.66,63.5,U18,VCC,3.3VA,,,"/>
 <approved hash="113,1,215.796,139.596,FRAME1,,,,,"/>
 <approved hash="113,2,215.796,139.596,FRAME2,,,,,"/>
-<approved hash="113,3,446.215,331.47,U3,,,,,"/>
 <approved hash="113,3,431.8,279.296,FRAME3,,,,,"/>
 <approved hash="113,4,215.796,139.596,FRAME4,,,,,"/>
 <approved hash="113,5,-12.804,106.576,FRAME5,,,,,"/>
