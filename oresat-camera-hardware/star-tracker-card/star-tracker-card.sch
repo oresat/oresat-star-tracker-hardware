@@ -19078,6 +19078,44 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 </deviceset>
 </devicesets>
 </library>
+<library name="oresat-flight-marker">
+<packages>
+<package name="FLIGHTMARKER_NEW_BOARDS">
+<text x="0" y="0" size="1.27" layer="21" font="vector" ratio="15">FLIGHT HARDWARE IF NOT CHECKED</text>
+<wire x1="18.7" y1="-0.5" x2="22.4" y2="-0.5" width="0.1524" layer="21"/>
+<rectangle x1="31.5" y1="-0.3" x2="33.3" y2="1.5" layer="21"/>
+</package>
+<package name="FLIGHTMARKER_OLD_BOARDS">
+<text x="0" y="0" size="1.27" layer="21" font="vector" ratio="15">FLIGHT HARDWARE IF  NOT CHECKED</text>
+<rectangle x1="36" y1="-0.2" x2="37.8" y2="1.6" layer="21"/>
+<wire x1="22.077" y1="-0.381" x2="26.087" y2="-0.381" width="0.1524" layer="21"/>
+</package>
+</packages>
+<symbols>
+<symbol name="FLIGHTHARDWARE">
+<text x="0" y="0" size="2.54" layer="94">Flight Hardware Marker (on PCB)</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="FLIGHMARKER">
+<gates>
+<gate name="G$1" symbol="FLIGHTHARDWARE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="NEW" package="FLIGHTMARKER_NEW_BOARDS">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="OLD" package="FLIGHTMARKER_OLD_BOARDS">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -19669,13 +19707,14 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="PCB1" library="oresat-cards" deviceset="ORESAT-CARD-V1.3-STAR-TRACKER" device=""/>
 <part name="C44" library="oresat-rcl" deviceset="C-EU" device="0805-B" value="10uF"/>
 <part name="GND60" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="U$1" library="oresat-flight-marker" deviceset="FLIGHMARKER" device="NEW"/>
 </parts>
 <sheets>
 <sheet>
 <description>Connectors</description>
 <plain>
-<text x="341.63" y="26.67" size="3.81" layer="94">OreSat Proto-Card</text>
-<text x="416.56" y="6.35" size="3.81" layer="94">3.1</text>
+<text x="336.55" y="26.67" size="3.81" layer="94">OreSat Star Tracker: Connectors</text>
+<text x="416.56" y="6.35" size="3.81" layer="94">1.2</text>
 <text x="11.43" y="5.08" size="1.778" layer="97">All resistors 0402 +/- 1% unless marked</text>
 <text x="11.43" y="2.54" size="1.778" layer="97">All caps are 0402 ceramic 10% X5R Vw&gt;=16V unless marked</text>
 <wire x1="99.06" y1="236.22" x2="205.74" y2="236.22" width="0.1524" layer="97"/>
@@ -19743,6 +19782,7 @@ unconnected?</text>
 <attribute name="VALUE" x="129.54" y="165.354" size="1.778" layer="96" align="bottom-center"/>
 </instance>
 <instance part="PCB1" gate="G$1" x="134.62" y="5.08" smashed="yes"/>
+<instance part="U$1" gate="G$1" x="246.38" y="2.54" smashed="yes"/>
 </instances>
 <busses>
 </busses>
@@ -20076,7 +20116,7 @@ unconnected?</text>
 <wire x1="312.42" y1="114.3" x2="312.42" y2="43.18" width="0.1524" layer="97"/>
 <wire x1="312.42" y1="43.18" x2="185.42" y2="43.18" width="0.1524" layer="97"/>
 <wire x1="185.42" y1="43.18" x2="185.42" y2="114.3" width="0.1524" layer="97"/>
-<text x="416.56" y="6.35" size="3.81" layer="94">3.1</text>
+<text x="416.56" y="6.35" size="3.81" layer="94">1.2</text>
 <text x="209.55" y="256.54" size="2.54" layer="97">Main Power Switch</text>
 <text x="132.08" y="129.54" size="2.54" layer="97" align="center">OreSat Power Enable
 (PEN)</text>
@@ -20099,6 +20139,7 @@ Power Supply (3.3V)</text>
 <text x="96.012" y="136.144" size="1.778" layer="97">Note: Address 0b0111110x is 
 reserved on all oresat cards</text>
 <text x="241.3" y="233.68" size="1.778" layer="97">0805</text>
+<text x="339.09" y="26.67" size="3.81" layer="94">OreSat Star Tracker: OPD v4.1</text>
 </plain>
 <instances>
 <instance part="FRAME2" gate="G$1" x="0" y="0" smashed="yes"/>
@@ -21553,6 +21594,8 @@ SYSBOOT[2] LOW == SD Card</text>
 <text x="165.1" y="469.9" size="2.54" layer="97">SPI Flash/EEPROM
 For SPI boot
 DNP for now</text>
+<text x="764.54" y="27.94" size="3.81" layer="94">OreSat Star Tracker: Camera, eMMC</text>
+<text x="848.36" y="6.35" size="3.81" layer="94">1.2</text>
 </plain>
 <instances>
 <instance part="U7" gate="C" x="320.04" y="350.52" smashed="yes">
@@ -24543,6 +24586,8 @@ battery circuit</text>
 <wire x1="144.78" y1="114.3" x2="93.98" y2="114.3" width="0.1524" layer="97"/>
 <wire x1="93.98" y1="114.3" x2="93.98" y2="120.904" width="0.1524" layer="97"/>
 <text x="152.908" y="204.724" size="1.778" layer="102">1M if populated</text>
+<text x="331.47" y="26.67" size="3.81" layer="94">OreSat Star Tracker: USB, JTAG, OSC</text>
+<text x="415.29" y="6.35" size="3.81" layer="94">1.2</text>
 </plain>
 <instances>
 <instance part="U7" gate="B" x="200.66" y="200.66" smashed="yes">
@@ -25344,6 +25389,8 @@ pullup resistors, and the I2C0 ESD protection</text>
 I2C0 lines. This is required because
 these lines are routed externally so
 the internal EEPROM can be programmed.</text>
+<text x="102.87" y="-6.35" size="3.81" layer="94">OreSat Star Tracker: OSD Power/Misc</text>
+<text x="187.96" y="-26.67" size="3.81" layer="94">1.2</text>
 </plain>
 <instances>
 <instance part="U7" gate="A" x="-88.9" y="96.52" smashed="yes">
