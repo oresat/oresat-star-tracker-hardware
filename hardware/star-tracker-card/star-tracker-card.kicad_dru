@@ -1,0 +1,4 @@
+(version 1)
+(rule "class 1:1"
+  (condition "A.NetClass == 'diff pair' && B.NetClass == 'diff pair'")
+  (constraint clearance (min 0.1905mm)))

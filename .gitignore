@@ -1,6 +1,39 @@
-# Compiled source #
-###################
-*.npy
+# Ignore local archives and build folders
+archive
+build
+
+# For PCBs designed using KiCad: https://www.kicad.org/
+# Format documentation: https://kicad.org/help/file-formats/
+
+# Temporary files
+*.000
+*.bak
+*.bck
+*.lck
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*-backups
+*.kicad_prl
+*.sch-bak
+*~
+_autosave-*
+*.tmp
+*-save.pro
+*-save.kicad_pcb
+fp-info-cache
+
+# Netlist files (exported from Eeschema)
+*.net
+
+# Autorouter files (exported from Pcbnew)
+*.dsn
+*.ses
+
+# Exported BOM files
+*.xml
+*.csv
+
+# ----------------------------------------------------------------------------
 
 # Ignore list for Eagle, a PCB layout tool
 
@@ -8,6 +41,10 @@
 *.s#?
 *.b#?
 *.l#?
+*.d#?
+*.b$?
+*.s$?
+*.l$?
 
 # Eagle project file
 # It contains a serial number and references to the file structure
@@ -35,9 +72,15 @@ eagle.epf
 *.drl
 *.gpi
 *.pls
+*.ger
+*.gpi
+*.xln
 
 *.drd
 *.drd.*
+
+*.s#*
+*.b#*
 
 *.info
 
@@ -45,27 +88,3 @@ eagle.epf
 
 # file locks introduced since 7.x
 *.lck
-
-# pycache
-__pycache__/
-
-# LKM build files
-*.ko
-*.cmd
-.tmp_versions
-Module.symvers
-modules.order
-prucam.mod.c
-
-# BMP images
-*.bmp
-
-# vim swap files
-*.swp
-
-# pru build files
-pru_fw.asm
-*/pru_code/gen
-
-# macs are annoying
-.DS_Store
