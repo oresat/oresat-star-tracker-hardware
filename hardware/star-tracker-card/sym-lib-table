@@ -1,4 +1,4 @@
 (sym_lib_table
-  (version 0)
+  (version 7)
   (lib (name "star-tracker-card-eagle-import")(type "KiCad")(uri "${KIPRJMOD}/star-tracker-card-eagle-import.kicad_sym")(options "")(descr ""))
 )
