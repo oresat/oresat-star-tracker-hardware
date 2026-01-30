@@ -3,7 +3,13 @@
 	(generator "eeschema")
 	(generator_version "9.0")
 	(uuid "1ca331d1-c870-4ff2-ad81-5b4c8b1ae4f6")
-	(paper "User" 469.9 317.627)
+	(paper "B")
+	(title_block
+		(title "OreSat Star Tracker")
+		(date "2026-01-30")
+		(rev "1.3")
+		(company "Portland State Aerospace Society")
+	)
 	(lib_symbols
 		(symbol "star-tracker-card-eagle-import:3.3V"
 			(power)
@@ -8499,805 +8505,10 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "star-tracker-card-eagle-import:frames_229_FRAME_B_L"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#FRAME"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "FRAME B Size , 11 x 17 INCH, Landscape"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "frames_229_FRAME_B_L_1_0"
-				(polyline
-					(pts
-						(xy 0 279.4) (xy 431.8 279.4) (xy 431.8 0) (xy 0 0) (xy 0 279.4)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 232.8333) (xy 3.81 232.8333)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 186.2667) (xy 3.81 186.2667)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 139.7) (xy 3.81 139.7)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 93.1333) (xy 3.81 93.1333)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 46.5667) (xy 3.81 46.5667)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.81 275.59) (xy 3.81 3.81)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 47.9778 279.4) (xy 47.9778 275.59)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 95.9556 279.4) (xy 95.9556 275.59)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 143.9333 279.4) (xy 143.9333 275.59)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 191.9111 279.4) (xy 191.9111 275.59)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 239.8889 279.4) (xy 239.8889 275.59)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 287.8667 279.4) (xy 287.8667 275.59)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 335.8444 279.4) (xy 335.8444 275.59)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 383.8222 279.4) (xy 383.8222 275.59)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 427.99 275.59) (xy 3.81 275.59)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 427.99 275.59) (xy 427.99 3.81)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 427.99 232.8333) (xy 431.8 232.8333)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 427.99 186.2667) (xy 431.8 186.2667)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 427.99 139.7) (xy 431.8 139.7)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 427.99 93.1333) (xy 431.8 93.1333)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 427.99 46.5667) (xy 431.8 46.5667)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(text "A"
-					(at 1.905 256.1167 0)
-					(effects
-						(font
-							(size 2.54 2.286)
-						)
-					)
-				)
-				(text "B"
-					(at 1.905 209.55 0)
-					(effects
-						(font
-							(size 2.54 2.286)
-						)
-					)
-				)
-				(text "C"
-					(at 1.905 162.9833 0)
-					(effects
-						(font
-							(size 2.54 2.286)
-						)
-					)
-				)
-				(text "D"
-					(at 1.905 116.4167 0)
-					(effects
-						(font
-							(size 2.54 2.286)
-						)
-					)
-				)
-				(text "E"
-					(at 1.905 69.85 0)
-					(effects
-						(font
-							(size 2.54 2.286)
-						)
-					)
-				)
-				(text "F"
-					(at 1.905 23.2833 0)
-					(effects
-						(font
-							(size 2.54 2.286)
-						)
-					)
-				)
-				(text "1"
-					(at 23.9889 277.495 0)
-					(effects
-						(font
-							(size 2.54 2.286)
-						)
-					)
-				)
-				(text "2"
-					(at 71.9667 277.495 0)
-					(effects
-						(font
-							(size 2.54 2.286)
-						)
-					)
-				)
-				(text "3"
-					(at 119.9444 277.495 0)
-					(effects
-						(font
-							(size 2.54 2.286)
-						)
-					)
-				)
-				(text "4"
-					(at 167.9222 277.495 0)
-					(effects
-						(font
-							(size 2.54 2.286)
-						)
-					)
-				)
-				(text "5"
-					(at 215.9 277.495 0)
-					(effects
-						(font
-							(size 2.54 2.286)
-						)
-					)
-				)
-				(text "6"
-					(at 263.8778 277.495 0)
-					(effects
-						(font
-							(size 2.54 2.286)
-						)
-					)
-				)
-				(text "7"
-					(at 311.8556 277.495 0)
-					(effects
-						(font
-							(size 2.54 2.286)
-						)
-					)
-				)
-				(text "8"
-					(at 359.8333 277.495 0)
-					(effects
-						(font
-							(size 2.54 2.286)
-						)
-					)
-				)
-				(text "9"
-					(at 407.8111 277.495 0)
-					(effects
-						(font
-							(size 2.54 2.286)
-						)
-					)
-				)
-				(text "A"
-					(at 429.895 256.1167 0)
-					(effects
-						(font
-							(size 2.54 2.286)
-						)
-					)
-				)
-				(text "B"
-					(at 429.895 209.55 0)
-					(effects
-						(font
-							(size 2.54 2.286)
-						)
-					)
-				)
-				(text "C"
-					(at 429.895 162.9833 0)
-					(effects
-						(font
-							(size 2.54 2.286)
-						)
-					)
-				)
-				(text "D"
-					(at 429.895 116.4167 0)
-					(effects
-						(font
-							(size 2.54 2.286)
-						)
-					)
-				)
-				(text "E"
-					(at 429.895 69.85 0)
-					(effects
-						(font
-							(size 2.54 2.286)
-						)
-					)
-				)
-				(text "F"
-					(at 429.895 23.2833 0)
-					(effects
-						(font
-							(size 2.54 2.286)
-						)
-					)
-				)
-			)
-			(symbol "frames_229_FRAME_B_L_2_0"
-				(polyline
-					(pts
-						(xy 0 22.86) (xy 0 35.56)
-					)
-					(stroke
-						(width 0.1016)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 22.86) (xy 101.6 22.86)
-					)
-					(stroke
-						(width 0.1016)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 15.24) (xy 0 22.86)
-					)
-					(stroke
-						(width 0.1016)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 5.08) (xy 0 15.24)
-					)
-					(stroke
-						(width 0.1016)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 5.08) (xy 71.12 5.08)
-					)
-					(stroke
-						(width 0.1016)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 5.08)
-					)
-					(stroke
-						(width 0.1016)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 71.12 0)
-					)
-					(stroke
-						(width 0.1016)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 71.12 5.08) (xy 71.12 0)
-					)
-					(stroke
-						(width 0.1016)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 71.12 5.08) (xy 87.63 5.08)
-					)
-					(stroke
-						(width 0.1016)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 71.12 0) (xy 101.6 0)
-					)
-					(stroke
-						(width 0.1016)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 87.63 15.24) (xy 0 15.24)
-					)
-					(stroke
-						(width 0.1016)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 87.63 15.24) (xy 87.63 5.08)
-					)
-					(stroke
-						(width 0.1016)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 87.63 5.08) (xy 101.6 5.08)
-					)
-					(stroke
-						(width 0.1016)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 101.6 35.56) (xy 0 35.56)
-					)
-					(stroke
-						(width 0.1016)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 101.6 35.56) (xy 101.6 22.86)
-					)
-					(stroke
-						(width 0.1016)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 101.6 22.86) (xy 101.6 15.24)
-					)
-					(stroke
-						(width 0.1016)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 101.6 15.24) (xy 87.63 15.24)
-					)
-					(stroke
-						(width 0.1016)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 101.6 15.24) (xy 101.6 5.08)
-					)
-					(stroke
-						(width 0.1016)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 101.6 5.08) (xy 101.6 0)
-					)
-					(stroke
-						(width 0.1016)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(text "TITLE:"
-					(at 1.27 19.05 0)
-					(effects
-						(font
-							(size 2.54 2.159)
-						)
-						(justify left bottom)
-					)
-				)
-				(text "Document Number:"
-					(at 1.27 11.43 0)
-					(effects
-						(font
-							(size 2.54 2.159)
-						)
-						(justify left bottom)
-					)
-				)
-				(text "Date:"
-					(at 1.27 1.27 0)
-					(effects
-						(font
-							(size 2.54 2.159)
-						)
-						(justify left bottom)
-					)
-				)
-				(text "${CURRENT_DATE}"
-					(at 12.7 1.27 0)
-					(effects
-						(font
-							(size 2.54 2.159)
-						)
-						(justify left bottom)
-					)
-				)
-				(text "${PROJECTNAME}"
-					(at 17.78 19.05 0)
-					(effects
-						(font
-							(size 2.54 2.159)
-						)
-						(justify left bottom)
-					)
-				)
-				(text "Sheet:"
-					(at 72.39 1.27 0)
-					(effects
-						(font
-							(size 2.54 2.159)
-						)
-						(justify left bottom)
-					)
-				)
-				(text "${#}/${##}"
-					(at 86.36 1.27 0)
-					(effects
-						(font
-							(size 2.54 2.159)
-						)
-						(justify left bottom)
-					)
-				)
-				(text "REV:"
-					(at 88.9 11.43 0)
-					(effects
-						(font
-							(size 2.54 2.159)
-						)
-						(justify left bottom)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 	)
 	(text "\" \""
 		(exclude_from_sim no)
-		(at 51.816 169.164 0)
+		(at 40.64 134.62 0)
 		(effects
 			(font
 				(size 1.778 1.5113)
@@ -9308,7 +8519,7 @@
 	)
 	(text "PWR LED"
 		(exclude_from_sim no)
-		(at 215.9 109.22 0)
+		(at 204.47 74.93 0)
 		(effects
 			(font
 				(size 1.778 1.5113)
@@ -9319,7 +8530,7 @@
 	)
 	(text "RTC_KALDO_ENN is grounded thru a 10K ohm resistor so that\nthe internal RTC LDO is enabled and CAP_VDD_RTC does not\nneed to be connected to VDD_CORE."
 		(exclude_from_sim no)
-		(at 99.06 274.32 0)
+		(at 87.63 240.03 0)
 		(effects
 			(font
 				(size 1.778 1.5113)
@@ -9330,7 +8541,7 @@
 	)
 	(text "PWR from USB client circuit"
 		(exclude_from_sim no)
-		(at 38.1 106.68 0)
+		(at 26.67 72.39 0)
 		(effects
 			(font
 				(size 1.778 1.5113)
@@ -9339,20 +8550,9 @@
 		)
 		(uuid "399fa4cf-2107-425b-9525-bdcbcd945b86")
 	)
-	(text "1.2"
-		(exclude_from_sim no)
-		(at 434.34 290.83 0)
-		(effects
-			(font
-				(size 3.81 3.2385)
-			)
-			(justify left bottom)
-		)
-		(uuid "49f3ee5c-ee54-4643-87a0-f1a1b2dd4bad")
-	)
 	(text "PMIC_PGOOD drives PWRONRSTN and\nWARMRSTN when the power supplies are\nready. Because of different voltage levels,\nan open-drain buffer is required."
 		(exclude_from_sim no)
-		(at 193.04 269.24 0)
+		(at 181.61 234.95 0)
 		(effects
 			(font
 				(size 1.778 1.5113)
@@ -9363,7 +8563,7 @@
 	)
 	(text "3.3V Alternate\nThis is used to power a few internal and/or\nOctavo specific functions, like the power\nsupply clamping circuit, reset circuitry, I2C0\npullup resistors, and the I2C0 ESD protection"
 		(exclude_from_sim no)
-		(at 241.3 210.82 0)
+		(at 229.87 176.53 0)
 		(effects
 			(font
 				(size 1.778 1.5113)
@@ -9374,7 +8574,7 @@
 	)
 	(text "Pull low to program EEPROM.\nProgram EEPROM with below script,\nusing another Pocketbeagle\noresat-star-tracker/utils/i2c-program-board-id.py"
 		(exclude_from_sim no)
-		(at 40.894 258.572 0)
+		(at 29.21 224.79 0)
 		(effects
 			(font
 				(size 1.778 1.5113)
@@ -9385,7 +8585,7 @@
 	)
 	(text "Power Management Buffer powered\nfrom SYS_RTC_1P8V"
 		(exclude_from_sim no)
-		(at 226.06 226.06 0)
+		(at 214.63 191.77 0)
 		(effects
 			(font
 				(size 1.778 1.5113)
@@ -9396,7 +8596,7 @@
 	)
 	(text "SYS_VDD1_3P3V is where system\n3.3V power originates, 500mA max,"
 		(exclude_from_sim no)
-		(at 233.426 107.442 0)
+		(at 222.25 73.66 0)
 		(effects
 			(font
 				(size 1.778 1.5113)
@@ -9407,7 +8607,7 @@
 	)
 	(text "SYS_VOUT is where system 5V power\noriginates, 500mA max. This will always be\n5V as long as VIN_AC or VIN_USB are used at\n5V. However, if VIN_BAT is used with non-5V\ninput, this will reflect that voltage. VIN_BAT\nwill probably be used from the oresat power\ncircuit, so we need to prepare for this case.\nLikewise, right now the only component using\n5V is the USB host circuit"
 		(exclude_from_sim no)
-		(at 210.82 78.74 0)
+		(at 199.39 44.45 0)
 		(effects
 			(font
 				(size 1.778 1.5113)
@@ -9416,20 +8616,9 @@
 		)
 		(uuid "8d461552-5f00-4f31-85c6-e670dd7680ee")
 	)
-	(text "OreSat Star Tracker: OSD Power/Misc"
-		(exclude_from_sim no)
-		(at 349.25 270.51 0)
-		(effects
-			(font
-				(size 3.81 3.2385)
-			)
-			(justify left bottom)
-		)
-		(uuid "98c22bbb-4d00-42e3-99da-ce0aa7fc1a9a")
-	)
 	(text "This is a clamping circuit between the SYS_RTC_1P8V\nand SYS_VDD3_3P3V outputs of the TPS65217\npower management IC inside the OSD335x-SM.  The\nclamping circuit is related to power down issues\n(see https://octavosystems.com/osd335x/clamping/\nfor more information). This may not be needed in\nyour application if the power down conditions do\nnot apply to your application.\nNOTE: Taken verbatim from RED board"
 		(exclude_from_sim no)
-		(at 264.16 165.1 0)
+		(at 252.73 130.81 0)
 		(effects
 			(font
 				(size 1.778 1.5113)
@@ -9440,7 +8629,7 @@
 	)
 	(text "Jumper to disconnect\noctavo from OPD power"
 		(exclude_from_sim no)
-		(at 63.5 71.12 0)
+		(at 52.07 36.83 0)
 		(effects
 			(font
 				(size 1.778 1.5113)
@@ -9451,7 +8640,7 @@
 	)
 	(text "ESD protection clamping diodes for\nI2C0 lines. This is required because\nthese lines are routed externally so\nthe internal EEPROM can be programmed."
 		(exclude_from_sim no)
-		(at 28.194 189.992 0)
+		(at 16.51 156.21 0)
 		(effects
 			(font
 				(size 1.778 1.5113)
@@ -9461,624 +8650,624 @@
 		(uuid "e68e626c-ec4c-46f3-b2a5-1a71fbc6cfd5")
 	)
 	(junction
-		(at 119.38 208.28)
+		(at 107.95 173.99)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "036bf8d9-570a-40bf-8e26-0b96ae8fe85f")
 	)
 	(junction
-		(at 198.12 167.64)
+		(at 186.69 133.35)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "053d2668-65bf-4619-b22d-e1b38e9602af")
 	)
 	(junction
-		(at 226.06 139.7)
+		(at 214.63 105.41)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "065ed483-cd9b-4f74-9165-3526b8bc7921")
 	)
 	(junction
-		(at 203.2 109.22)
+		(at 191.77 74.93)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "090a327c-2601-48fa-b2b8-15e1677f2fc0")
 	)
 	(junction
-		(at 340.36 96.52)
+		(at 336.55 104.14)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0be1eb53-8108-4340-af32-8bf63b072557")
 	)
 	(junction
-		(at 203.2 114.3)
+		(at 191.77 80.01)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1182ec88-a0ea-4ec8-b459-8eefc98d70c2")
 	)
 	(junction
-		(at 198.12 220.98)
+		(at 186.69 186.69)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "13acda89-8ea7-4d9e-82cf-19c62a013eb1")
 	)
 	(junction
-		(at 203.2 111.76)
+		(at 191.77 77.47)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "14470f64-90d9-4ecc-a504-3360f96a3481")
 	)
 	(junction
-		(at 198.12 88.9)
+		(at 186.69 54.61)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "167b2fd7-b461-4558-8535-5a2f16e5329c")
 	)
 	(junction
-		(at 203.2 88.9)
+		(at 191.77 54.61)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "17399e32-dc20-4c39-991a-8a1e0b060637")
 	)
 	(junction
-		(at 198.12 182.88)
+		(at 186.69 148.59)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "17904a95-1c47-46a4-8f1e-3c2d5edd342f")
 	)
 	(junction
-		(at 411.48 68.58)
+		(at 407.67 76.2)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1a3c5d39-4547-4db1-8dbd-b0bc9b096e97")
 	)
 	(junction
-		(at 210.82 210.82)
+		(at 199.39 176.53)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1c7f75f3-88d4-49f0-9433-b7c63e24183e")
 	)
 	(junction
-		(at 411.48 96.52)
+		(at 407.67 104.14)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "230980b0-478a-4ac8-b43e-8f6c14881d12")
 	)
 	(junction
-		(at 200.66 93.98)
+		(at 189.23 59.69)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2a91cbd3-bc6b-47f4-a5b3-8fbf51f84a64")
 	)
 	(junction
-		(at 198.12 193.04)
+		(at 186.69 158.75)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2cf3a7ff-a1db-4695-873d-38f9adb3bb08")
 	)
 	(junction
-		(at 340.36 53.34)
+		(at 336.55 60.96)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2f7f751c-d333-4991-bac0-a7d23b495796")
 	)
 	(junction
-		(at 198.12 210.82)
+		(at 186.69 176.53)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3164572e-77f8-4b34-978d-108505c22aa8")
 	)
 	(junction
-		(at 411.48 48.26)
+		(at 407.67 55.88)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "31f3079f-5e73-4290-81c8-ff5da61e3188")
 	)
 	(junction
-		(at 119.38 185.42)
+		(at 107.95 151.13)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "32d89c1c-ca0b-493f-ad4e-08cf988259ca")
 	)
 	(junction
-		(at 340.36 60.96)
+		(at 336.55 68.58)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "335a5eff-9fb3-4765-83bf-060a86a61662")
 	)
 	(junction
-		(at 200.66 88.9)
+		(at 189.23 54.61)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "35ee69fb-d1de-4b55-bd8a-8f0c999b7c15")
 	)
 	(junction
-		(at 340.36 91.44)
+		(at 336.55 99.06)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "37ae1682-1cb5-4799-8ac7-a3dad49f2433")
 	)
 	(junction
-		(at 198.12 238.76)
+		(at 186.69 204.47)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "394aa422-dbd5-499e-97b2-94e35566c49e")
 	)
 	(junction
-		(at 68.58 226.06)
+		(at 57.15 191.77)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "39d8cf35-c054-41aa-b091-d60c2ae2bcb9")
 	)
 	(junction
-		(at 45.72 198.12)
+		(at 34.29 163.83)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3b1d7bf7-58d6-48fe-ac8e-529d65a925bb")
 	)
 	(junction
-		(at 198.12 213.36)
+		(at 186.69 179.07)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3b83b663-2c06-4936-87cb-9734dec3f85a")
 	)
 	(junction
-		(at 203.2 139.7)
+		(at 191.77 105.41)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3e3065f3-1f71-44c9-8699-c15940159ecf")
 	)
 	(junction
-		(at 119.38 88.9)
+		(at 107.95 54.61)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "41780054-6f09-461d-aa2d-78e2660fef28")
 	)
 	(junction
-		(at 198.12 190.5)
+		(at 186.69 156.21)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "42d58582-9a4b-4d4b-8104-eb0c3168f6c2")
 	)
 	(junction
-		(at 198.12 172.72)
+		(at 186.69 138.43)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "44110346-10e5-4533-bcd8-d91ddda14a30")
 	)
 	(junction
-		(at 198.12 165.1)
+		(at 186.69 130.81)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "45823d82-152a-48d2-b4d0-70a4678ec03a")
 	)
 	(junction
-		(at 198.12 205.74)
+		(at 186.69 171.45)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "48605e8e-ecfe-4607-bd91-1e329cc2a04b")
 	)
 	(junction
-		(at 411.48 66.04)
+		(at 407.67 73.66)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4a22c248-ed04-47e7-8585-9d548b54dcfd")
 	)
 	(junction
-		(at 340.36 63.5)
+		(at 336.55 71.12)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4aa4f352-a7bc-4ab9-9638-43664ba15e3f")
 	)
 	(junction
-		(at 198.12 154.94)
+		(at 186.69 120.65)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4acb8878-895a-438b-91d6-fe5d585f9b28")
 	)
 	(junction
-		(at 198.12 218.44)
+		(at 186.69 184.15)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "532ccccf-5162-45df-ba23-5d52b78f3ce9")
 	)
 	(junction
-		(at 241.3 139.7)
+		(at 229.87 105.41)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "576eaceb-898e-4fe4-9612-0c60973377f8")
 	)
 	(junction
-		(at 101.6 106.68)
+		(at 90.17 72.39)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5a8795b5-4d88-4b53-9907-758518ca736c")
 	)
 	(junction
-		(at 340.36 78.74)
+		(at 336.55 86.36)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5aefa29e-1ec3-41dd-a8a3-332ac36c5035")
 	)
 	(junction
-		(at 198.12 157.48)
+		(at 186.69 123.19)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5c6ecac0-a997-4b05-abdb-7714e7e0414c")
 	)
 	(junction
-		(at 83.82 210.82)
+		(at 72.39 176.53)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6059e07d-af0a-42eb-89d3-a734bbaf85fc")
 	)
 	(junction
-		(at 198.12 124.46)
+		(at 186.69 90.17)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "60b8ecc0-58f6-4802-b090-41c883f1b9f0")
 	)
 	(junction
-		(at 411.48 83.82)
+		(at 407.67 91.44)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6122b0d2-e042-4803-8b3e-37c7ec267aff")
 	)
 	(junction
-		(at 198.12 139.7)
+		(at 186.69 105.41)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "63a5611e-db12-40d2-8ce8-90c32aa7d353")
 	)
 	(junction
-		(at 198.12 215.9)
+		(at 186.69 181.61)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "66a3a6a8-495d-4051-ac90-661a50dbf828")
 	)
 	(junction
-		(at 198.12 106.68)
+		(at 186.69 72.39)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "69e941d9-cd28-426e-84ed-86b04048eb2c")
 	)
 	(junction
-		(at 205.74 238.76)
+		(at 194.31 204.47)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6b5d60fe-0186-4b46-af82-186ba879ab42")
 	)
 	(junction
-		(at 241.3 185.42)
+		(at 229.87 151.13)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6e0dd92e-3e6c-43a6-bfa9-f500432feca0")
 	)
 	(junction
-		(at 411.48 53.34)
+		(at 407.67 60.96)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "701ab7a0-a342-40a3-8336-1109936f44c5")
 	)
 	(junction
-		(at 215.9 231.14)
+		(at 204.47 196.85)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "71515e1a-937c-48f9-b82c-5066d1a281ac")
 	)
 	(junction
-		(at 200.66 91.44)
+		(at 189.23 57.15)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "71f1eb68-38f8-46ad-857f-849758b7d6dc")
 	)
 	(junction
-		(at 119.38 91.44)
+		(at 107.95 57.15)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "782e5565-cb05-4ccd-a160-9bce8bc4dbec")
 	)
 	(junction
-		(at 198.12 187.96)
+		(at 186.69 153.67)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7e095715-10e8-4006-928f-ae426cd98713")
 	)
 	(junction
-		(at 340.36 55.88)
+		(at 336.55 63.5)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7ed69864-1b00-472b-85a7-820b20413ce7")
 	)
 	(junction
-		(at 119.38 104.14)
+		(at 107.95 69.85)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "82cb7f8a-eef6-45ba-8ff2-03e740a8a36b")
 	)
 	(junction
-		(at 203.2 106.68)
+		(at 191.77 72.39)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "840ddd01-bcfa-4f63-825e-6f99461d0f5a")
 	)
 	(junction
-		(at 411.48 58.42)
+		(at 407.67 66.04)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "87f3f9a5-9828-4204-a18b-e746874de9c5")
 	)
 	(junction
-		(at 411.48 78.74)
+		(at 407.67 86.36)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8a7aef05-52a5-4827-8f0b-d6535419b01c")
 	)
 	(junction
-		(at 411.48 86.36)
+		(at 407.67 93.98)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8ea1802d-299a-48c8-a982-69f7e34f4e63")
 	)
 	(junction
-		(at 198.12 170.18)
+		(at 186.69 135.89)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8ef6accb-4303-4db7-b21a-bac771269511")
 	)
 	(junction
-		(at 119.38 193.04)
+		(at 107.95 158.75)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9607803a-71e6-4e22-a964-7142b09aa8b4")
 	)
 	(junction
-		(at 411.48 76.2)
+		(at 407.67 83.82)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9691218e-a761-4068-b8f9-d1f6ecef70fc")
 	)
 	(junction
-		(at 340.36 76.2)
+		(at 336.55 83.82)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9b5de90a-9954-49af-829d-c52e727771fd")
 	)
 	(junction
-		(at 198.12 208.28)
+		(at 186.69 173.99)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9be0b622-b09c-46fc-b731-6d5fd3403dd2")
 	)
 	(junction
-		(at 83.82 226.06)
+		(at 72.39 191.77)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9e19f101-1e22-4a29-b58d-345ca8d24a68")
 	)
 	(junction
-		(at 45.72 226.06)
+		(at 34.29 191.77)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a1a272c0-55b4-4fd9-963b-ec8cb0c52aa9")
 	)
 	(junction
-		(at 109.22 129.54)
+		(at 97.79 95.25)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a40a26d0-c578-4b64-90a4-013c8ad2c0cb")
 	)
 	(junction
-		(at 411.48 50.8)
+		(at 407.67 58.42)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a7f3bfd8-b8aa-454b-bc33-ab37048fdd1d")
 	)
 	(junction
-		(at 226.06 185.42)
+		(at 214.63 151.13)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ac2067a9-5671-4cb6-adaa-be5148a4339c")
 	)
 	(junction
-		(at 411.48 88.9)
+		(at 407.67 96.52)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ae6b1838-558a-472b-ae62-4595838354ca")
 	)
 	(junction
-		(at 119.38 220.98)
+		(at 107.95 186.69)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b073153a-d705-409f-8912-be65e5f738a1")
 	)
 	(junction
-		(at 340.36 71.12)
+		(at 336.55 78.74)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b2230c8a-51e3-4ad7-a0d9-7cb339a3b1b9")
 	)
 	(junction
-		(at 198.12 162.56)
+		(at 186.69 128.27)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b2426fd4-22f6-4b88-9ffe-f8a669ea0f6d")
 	)
 	(junction
-		(at 198.12 185.42)
+		(at 186.69 151.13)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b63b2ef5-02e6-4b51-a6c1-c6ee6bc8d4a8")
 	)
 	(junction
-		(at 411.48 60.96)
+		(at 407.67 68.58)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "bfc54709-f3e5-434d-b520-2b4c896ffddd")
 	)
 	(junction
-		(at 119.38 231.14)
+		(at 107.95 196.85)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c06410b6-8141-49f4-b6fd-580fa34dcb61")
 	)
 	(junction
-		(at 340.36 66.04)
+		(at 336.55 73.66)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c364f50e-c598-483c-ab7a-245192622c23")
 	)
 	(junction
-		(at 411.48 91.44)
+		(at 407.67 99.06)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c82263ce-9233-4154-9877-4bb6d3cbce76")
 	)
 	(junction
-		(at 340.36 83.82)
+		(at 336.55 91.44)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c9f5df06-e60f-420b-995e-0d86bbd7325a")
 	)
 	(junction
-		(at 340.36 68.58)
+		(at 336.55 76.2)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ca53cae6-6ca1-4512-bd76-0bf6d4cbbaa7")
 	)
 	(junction
-		(at 83.82 236.22)
+		(at 72.39 201.93)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "cb11c30c-26ca-4140-9150-aace93a174e5")
 	)
 	(junction
-		(at 210.82 139.7)
+		(at 199.39 105.41)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "cccdcb93-8933-4944-970b-7ca74e25ec7c")
 	)
 	(junction
-		(at 119.38 121.92)
+		(at 107.95 87.63)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "cf2c68db-df8b-4769-9e7b-e6216d2df0ef")
 	)
 	(junction
-		(at 96.52 88.9)
+		(at 85.09 54.61)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d2c14f65-2616-410c-9b37-62801129856e")
 	)
 	(junction
-		(at 411.48 73.66)
+		(at 407.67 81.28)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d5547259-6840-4a48-87a0-a9ef7a92c9f2")
 	)
 	(junction
-		(at 259.08 154.94)
+		(at 247.65 120.65)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d7d631be-691e-4e88-ba1b-1ff68455ccc8")
 	)
 	(junction
-		(at 119.38 124.46)
+		(at 107.95 90.17)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d821995c-8e82-4604-9a10-4296830c80d0")
 	)
 	(junction
-		(at 340.36 58.42)
+		(at 336.55 66.04)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "db546a98-b4a8-4e14-a774-266a89b9b86d")
 	)
 	(junction
-		(at 340.36 86.36)
+		(at 336.55 93.98)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "dc606de0-2a6f-4fcb-bf4c-3f9211673d40")
 	)
 	(junction
-		(at 119.38 200.66)
+		(at 107.95 166.37)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "dd180d20-eaa6-4b8c-8159-c022c2f3b08f")
 	)
 	(junction
-		(at 119.38 106.68)
+		(at 107.95 72.39)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "dd59d1c1-3051-4a45-bcda-52374c1f3f93")
 	)
 	(junction
-		(at 223.52 251.46)
+		(at 212.09 217.17)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "dea00085-71b7-46ec-8d17-e6a1afaed92b")
 	)
 	(junction
-		(at 340.36 93.98)
+		(at 336.55 101.6)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e42f63a4-2070-4275-bbf4-4a39a2edd024")
 	)
 	(junction
-		(at 340.36 48.26)
+		(at 336.55 55.88)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e6628e2a-05bb-4d12-b322-a4254460fed4")
 	)
 	(junction
-		(at 198.12 160.02)
+		(at 186.69 125.73)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e78c096f-29ba-4edd-acd5-ae09cebddec9")
 	)
 	(junction
-		(at 116.84 124.46)
+		(at 105.41 90.17)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ebb8222a-75ec-42b7-a41b-a8d4114d8d33")
 	)
 	(junction
-		(at 340.36 99.06)
+		(at 336.55 106.68)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f0d2fdef-06ed-4a65-b0be-21f9c12aa978")
 	)
 	(junction
-		(at 411.48 81.28)
+		(at 407.67 88.9)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f50df9ec-e91a-4bfc-a0a3-abdb5466800d")
 	)
 	(junction
-		(at 241.3 165.1)
+		(at 229.87 130.81)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f5f65ac5-a12d-491f-8c67-204ef767503a")
 	)
 	(junction
-		(at 411.48 99.06)
+		(at 407.67 106.68)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f986aac1-3391-42b2-b0e5-69f201e89707")
 	)
 	(junction
-		(at 60.96 236.22)
+		(at 49.53 201.93)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "fabc79b6-d238-4717-a347-c434499c30a4")
 	)
 	(no_connect
-		(at 55.88 213.36)
+		(at 44.45 179.07)
 		(uuid "a06d0363-fe2a-4f8a-a04c-509b1650fbd8")
 	)
 	(wire
 		(pts
-			(xy 203.2 88.9) (xy 203.2 81.28)
+			(xy 191.77 54.61) (xy 191.77 46.99)
 		)
 		(stroke
 			(width 0.1524)
@@ -10088,7 +9277,7 @@
 	)
 	(polyline
 		(pts
-			(xy 172.72 264.16) (xy 96.52 264.16)
+			(xy 161.29 229.87) (xy 85.09 229.87)
 		)
 		(stroke
 			(width 0.1524)
@@ -10098,7 +9287,7 @@
 	)
 	(wire
 		(pts
-			(xy 345.44 91.44) (xy 340.36 91.44)
+			(xy 341.63 99.06) (xy 336.55 99.06)
 		)
 		(stroke
 			(width 0.1524)
@@ -10108,7 +9297,7 @@
 	)
 	(wire
 		(pts
-			(xy 241.3 185.42) (xy 259.08 185.42)
+			(xy 229.87 151.13) (xy 247.65 151.13)
 		)
 		(stroke
 			(width 0.1524)
@@ -10118,7 +9307,7 @@
 	)
 	(wire
 		(pts
-			(xy 340.36 86.36) (xy 340.36 83.82)
+			(xy 336.55 93.98) (xy 336.55 91.44)
 		)
 		(stroke
 			(width 0.1524)
@@ -10128,7 +9317,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 172.72) (xy 198.12 172.72)
+			(xy 181.61 138.43) (xy 186.69 138.43)
 		)
 		(stroke
 			(width 0.1524)
@@ -10138,7 +9327,7 @@
 	)
 	(wire
 		(pts
-			(xy 411.48 99.06) (xy 406.4 99.06)
+			(xy 407.67 106.68) (xy 402.59 106.68)
 		)
 		(stroke
 			(width 0.1524)
@@ -10148,7 +9337,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 157.48) (xy 198.12 154.94)
+			(xy 186.69 123.19) (xy 186.69 120.65)
 		)
 		(stroke
 			(width 0.1524)
@@ -10158,7 +9347,7 @@
 	)
 	(polyline
 		(pts
-			(xy 91.44 63.5) (xy 60.96 63.5)
+			(xy 80.01 29.21) (xy 49.53 29.21)
 		)
 		(stroke
 			(width 0.1524)
@@ -10168,7 +9357,7 @@
 	)
 	(wire
 		(pts
-			(xy 411.48 99.06) (xy 411.48 96.52)
+			(xy 407.67 106.68) (xy 407.67 104.14)
 		)
 		(stroke
 			(width 0.1524)
@@ -10178,7 +9367,7 @@
 	)
 	(polyline
 		(pts
-			(xy 213.36 134.62) (xy 327.66 134.62)
+			(xy 201.93 100.33) (xy 316.23 100.33)
 		)
 		(stroke
 			(width 0.1524)
@@ -10188,7 +9377,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 223.52) (xy 198.12 220.98)
+			(xy 186.69 189.23) (xy 186.69 186.69)
 		)
 		(stroke
 			(width 0.1524)
@@ -10198,7 +9387,7 @@
 	)
 	(wire
 		(pts
-			(xy 411.48 86.36) (xy 411.48 83.82)
+			(xy 407.67 93.98) (xy 407.67 91.44)
 		)
 		(stroke
 			(width 0.1524)
@@ -10208,7 +9397,7 @@
 	)
 	(wire
 		(pts
-			(xy 210.82 231.14) (xy 215.9 231.14)
+			(xy 199.39 196.85) (xy 204.47 196.85)
 		)
 		(stroke
 			(width 0.1524)
@@ -10218,7 +9407,7 @@
 	)
 	(wire
 		(pts
-			(xy 340.36 63.5) (xy 340.36 66.04)
+			(xy 336.55 71.12) (xy 336.55 73.66)
 		)
 		(stroke
 			(width 0.1524)
@@ -10228,7 +9417,7 @@
 	)
 	(polyline
 		(pts
-			(xy 35.56 101.6) (xy 35.56 109.22)
+			(xy 24.13 67.31) (xy 24.13 74.93)
 		)
 		(stroke
 			(width 0.1524)
@@ -10238,7 +9427,7 @@
 	)
 	(wire
 		(pts
-			(xy 411.48 66.04) (xy 411.48 68.58)
+			(xy 407.67 73.66) (xy 407.67 76.2)
 		)
 		(stroke
 			(width 0.1524)
@@ -10248,7 +9437,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 162.56) (xy 198.12 162.56)
+			(xy 181.61 128.27) (xy 186.69 128.27)
 		)
 		(stroke
 			(width 0.1524)
@@ -10258,7 +9447,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 208.28) (xy 198.12 208.28)
+			(xy 181.61 173.99) (xy 186.69 173.99)
 		)
 		(stroke
 			(width 0.1524)
@@ -10268,7 +9457,7 @@
 	)
 	(wire
 		(pts
-			(xy 340.36 53.34) (xy 340.36 55.88)
+			(xy 336.55 60.96) (xy 336.55 63.5)
 		)
 		(stroke
 			(width 0.1524)
@@ -10278,7 +9467,7 @@
 	)
 	(wire
 		(pts
-			(xy 223.52 251.46) (xy 228.6 251.46)
+			(xy 212.09 217.17) (xy 217.17 217.17)
 		)
 		(stroke
 			(width 0.1524)
@@ -10288,7 +9477,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 220.98) (xy 83.82 210.82)
+			(xy 72.39 186.69) (xy 72.39 176.53)
 		)
 		(stroke
 			(width 0.1524)
@@ -10298,7 +9487,7 @@
 	)
 	(wire
 		(pts
-			(xy 340.36 78.74) (xy 340.36 76.2)
+			(xy 336.55 86.36) (xy 336.55 83.82)
 		)
 		(stroke
 			(width 0.1524)
@@ -10308,7 +9497,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 185.42) (xy 119.38 185.42)
+			(xy 110.49 151.13) (xy 107.95 151.13)
 		)
 		(stroke
 			(width 0.1524)
@@ -10318,7 +9507,7 @@
 	)
 	(wire
 		(pts
-			(xy 203.2 114.3) (xy 208.28 114.3)
+			(xy 191.77 80.01) (xy 196.85 80.01)
 		)
 		(stroke
 			(width 0.1524)
@@ -10328,7 +9517,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 167.64) (xy 198.12 165.1)
+			(xy 186.69 133.35) (xy 186.69 130.81)
 		)
 		(stroke
 			(width 0.1524)
@@ -10338,7 +9527,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 93.98) (xy 200.66 93.98)
+			(xy 181.61 59.69) (xy 189.23 59.69)
 		)
 		(stroke
 			(width 0.1524)
@@ -10348,7 +9537,7 @@
 	)
 	(wire
 		(pts
-			(xy 226.06 185.42) (xy 226.06 170.18)
+			(xy 214.63 151.13) (xy 214.63 135.89)
 		)
 		(stroke
 			(width 0.1524)
@@ -10358,7 +9547,7 @@
 	)
 	(wire
 		(pts
-			(xy 355.6 195.58) (xy 353.06 195.58)
+			(xy 344.17 161.29) (xy 341.63 161.29)
 		)
 		(stroke
 			(width 0.1524)
@@ -10368,7 +9557,7 @@
 	)
 	(wire
 		(pts
-			(xy 411.48 91.44) (xy 406.4 91.44)
+			(xy 407.67 99.06) (xy 402.59 99.06)
 		)
 		(stroke
 			(width 0.1524)
@@ -10378,7 +9567,7 @@
 	)
 	(wire
 		(pts
-			(xy 345.44 48.26) (xy 340.36 48.26)
+			(xy 341.63 55.88) (xy 336.55 55.88)
 		)
 		(stroke
 			(width 0.1524)
@@ -10388,7 +9577,7 @@
 	)
 	(polyline
 		(pts
-			(xy 38.1 246.38) (xy 38.1 261.62)
+			(xy 26.67 212.09) (xy 26.67 227.33)
 		)
 		(stroke
 			(width 0.1524)
@@ -10398,7 +9587,7 @@
 	)
 	(wire
 		(pts
-			(xy 223.52 251.46) (xy 193.04 251.46)
+			(xy 212.09 217.17) (xy 181.61 217.17)
 		)
 		(stroke
 			(width 0.1524)
@@ -10408,7 +9597,7 @@
 	)
 	(wire
 		(pts
-			(xy 411.48 58.42) (xy 406.4 58.42)
+			(xy 407.67 66.04) (xy 402.59 66.04)
 		)
 		(stroke
 			(width 0.1524)
@@ -10418,7 +9607,7 @@
 	)
 	(wire
 		(pts
-			(xy 340.36 60.96) (xy 340.36 63.5)
+			(xy 336.55 68.58) (xy 336.55 71.12)
 		)
 		(stroke
 			(width 0.1524)
@@ -10428,7 +9617,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 228.6) (xy 119.38 228.6)
+			(xy 110.49 194.31) (xy 107.95 194.31)
 		)
 		(stroke
 			(width 0.1524)
@@ -10438,7 +9627,7 @@
 	)
 	(wire
 		(pts
-			(xy 231.14 114.3) (xy 233.68 114.3)
+			(xy 219.71 80.01) (xy 222.25 80.01)
 		)
 		(stroke
 			(width 0.1524)
@@ -10448,7 +9637,7 @@
 	)
 	(wire
 		(pts
-			(xy 241.3 139.7) (xy 259.08 139.7)
+			(xy 229.87 105.41) (xy 247.65 105.41)
 		)
 		(stroke
 			(width 0.1524)
@@ -10458,7 +9647,7 @@
 	)
 	(wire
 		(pts
-			(xy 411.48 81.28) (xy 406.4 81.28)
+			(xy 407.67 88.9) (xy 402.59 88.9)
 		)
 		(stroke
 			(width 0.1524)
@@ -10468,7 +9657,7 @@
 	)
 	(wire
 		(pts
-			(xy 215.9 139.7) (xy 210.82 139.7)
+			(xy 204.47 105.41) (xy 199.39 105.41)
 		)
 		(stroke
 			(width 0.1524)
@@ -10478,7 +9667,7 @@
 	)
 	(polyline
 		(pts
-			(xy 264.16 53.34) (xy 208.28 53.34)
+			(xy 252.73 19.05) (xy 196.85 19.05)
 		)
 		(stroke
 			(width 0.1524)
@@ -10488,7 +9677,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 220.98) (xy 198.12 218.44)
+			(xy 186.69 186.69) (xy 186.69 184.15)
 		)
 		(stroke
 			(width 0.1524)
@@ -10498,7 +9687,7 @@
 	)
 	(wire
 		(pts
-			(xy 203.2 106.68) (xy 203.2 104.14)
+			(xy 191.77 72.39) (xy 191.77 69.85)
 		)
 		(stroke
 			(width 0.1524)
@@ -10508,7 +9697,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 193.04) (xy 119.38 193.04)
+			(xy 110.49 158.75) (xy 107.95 158.75)
 		)
 		(stroke
 			(width 0.1524)
@@ -10518,7 +9707,7 @@
 	)
 	(wire
 		(pts
-			(xy 345.44 53.34) (xy 340.36 53.34)
+			(xy 341.63 60.96) (xy 336.55 60.96)
 		)
 		(stroke
 			(width 0.1524)
@@ -10528,7 +9717,7 @@
 	)
 	(wire
 		(pts
-			(xy 96.52 129.54) (xy 109.22 129.54)
+			(xy 85.09 95.25) (xy 97.79 95.25)
 		)
 		(stroke
 			(width 0.1524)
@@ -10538,7 +9727,7 @@
 	)
 	(wire
 		(pts
-			(xy 205.74 238.76) (xy 198.12 238.76)
+			(xy 194.31 204.47) (xy 186.69 204.47)
 		)
 		(stroke
 			(width 0.1524)
@@ -10548,7 +9737,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 106.68) (xy 198.12 106.68)
+			(xy 181.61 72.39) (xy 186.69 72.39)
 		)
 		(stroke
 			(width 0.1524)
@@ -10558,7 +9747,7 @@
 	)
 	(wire
 		(pts
-			(xy 200.66 91.44) (xy 200.66 88.9)
+			(xy 189.23 57.15) (xy 189.23 54.61)
 		)
 		(stroke
 			(width 0.1524)
@@ -10568,7 +9757,7 @@
 	)
 	(polyline
 		(pts
-			(xy 241.3 271.78) (xy 241.3 256.54)
+			(xy 229.87 237.49) (xy 229.87 222.25)
 		)
 		(stroke
 			(width 0.1524)
@@ -10578,7 +9767,7 @@
 	)
 	(wire
 		(pts
-			(xy 411.48 50.8) (xy 406.4 50.8)
+			(xy 407.67 58.42) (xy 402.59 58.42)
 		)
 		(stroke
 			(width 0.1524)
@@ -10588,7 +9777,7 @@
 	)
 	(wire
 		(pts
-			(xy 345.44 83.82) (xy 340.36 83.82)
+			(xy 341.63 91.44) (xy 336.55 91.44)
 		)
 		(stroke
 			(width 0.1524)
@@ -10598,7 +9787,7 @@
 	)
 	(wire
 		(pts
-			(xy 411.48 78.74) (xy 411.48 76.2)
+			(xy 407.67 86.36) (xy 407.67 83.82)
 		)
 		(stroke
 			(width 0.1524)
@@ -10608,7 +9797,7 @@
 	)
 	(wire
 		(pts
-			(xy 236.22 238.76) (xy 236.22 241.3)
+			(xy 224.79 204.47) (xy 224.79 207.01)
 		)
 		(stroke
 			(width 0.1524)
@@ -10618,7 +9807,7 @@
 	)
 	(wire
 		(pts
-			(xy 210.82 238.76) (xy 205.74 238.76)
+			(xy 199.39 204.47) (xy 194.31 204.47)
 		)
 		(stroke
 			(width 0.1524)
@@ -10628,7 +9817,7 @@
 	)
 	(wire
 		(pts
-			(xy 340.36 55.88) (xy 340.36 58.42)
+			(xy 336.55 63.5) (xy 336.55 66.04)
 		)
 		(stroke
 			(width 0.1524)
@@ -10638,7 +9827,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 124.46) (xy 109.22 129.54)
+			(xy 97.79 90.17) (xy 97.79 95.25)
 		)
 		(stroke
 			(width 0.1524)
@@ -10648,7 +9837,7 @@
 	)
 	(wire
 		(pts
-			(xy 411.48 73.66) (xy 411.48 76.2)
+			(xy 407.67 81.28) (xy 407.67 83.82)
 		)
 		(stroke
 			(width 0.1524)
@@ -10658,7 +9847,7 @@
 	)
 	(wire
 		(pts
-			(xy 203.2 111.76) (xy 203.2 114.3)
+			(xy 191.77 77.47) (xy 191.77 80.01)
 		)
 		(stroke
 			(width 0.1524)
@@ -10668,7 +9857,7 @@
 	)
 	(polyline
 		(pts
-			(xy 93.98 246.38) (xy 38.1 246.38)
+			(xy 82.55 212.09) (xy 26.67 212.09)
 		)
 		(stroke
 			(width 0.1524)
@@ -10678,7 +9867,7 @@
 	)
 	(wire
 		(pts
-			(xy 116.84 124.46) (xy 109.22 124.46)
+			(xy 105.41 90.17) (xy 97.79 90.17)
 		)
 		(stroke
 			(width 0.1524)
@@ -10688,7 +9877,7 @@
 	)
 	(wire
 		(pts
-			(xy 100.33 231.14) (xy 119.38 231.14)
+			(xy 88.9 196.85) (xy 107.95 196.85)
 		)
 		(stroke
 			(width 0.1524)
@@ -10698,7 +9887,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 213.36) (xy 198.12 213.36)
+			(xy 181.61 179.07) (xy 186.69 179.07)
 		)
 		(stroke
 			(width 0.1524)
@@ -10708,7 +9897,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 124.46) (xy 119.38 124.46)
+			(xy 110.49 90.17) (xy 107.95 90.17)
 		)
 		(stroke
 			(width 0.1524)
@@ -10718,7 +9907,7 @@
 	)
 	(wire
 		(pts
-			(xy 100.33 236.22) (xy 100.33 241.3)
+			(xy 88.9 201.93) (xy 88.9 207.01)
 		)
 		(stroke
 			(width 0.1524)
@@ -10728,7 +9917,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 238.76) (xy 193.04 238.76)
+			(xy 186.69 204.47) (xy 181.61 204.47)
 		)
 		(stroke
 			(width 0.1524)
@@ -10738,7 +9927,7 @@
 	)
 	(wire
 		(pts
-			(xy 411.48 66.04) (xy 406.4 66.04)
+			(xy 407.67 73.66) (xy 402.59 73.66)
 		)
 		(stroke
 			(width 0.1524)
@@ -10748,7 +9937,7 @@
 	)
 	(wire
 		(pts
-			(xy 218.44 114.3) (xy 223.52 114.3)
+			(xy 207.01 80.01) (xy 212.09 80.01)
 		)
 		(stroke
 			(width 0.1524)
@@ -10758,7 +9947,7 @@
 	)
 	(wire
 		(pts
-			(xy 208.28 88.9) (xy 203.2 88.9)
+			(xy 196.85 54.61) (xy 191.77 54.61)
 		)
 		(stroke
 			(width 0.1524)
@@ -10768,7 +9957,7 @@
 	)
 	(wire
 		(pts
-			(xy 226.06 160.02) (xy 226.06 139.7)
+			(xy 214.63 125.73) (xy 214.63 105.41)
 		)
 		(stroke
 			(width 0.1524)
@@ -10778,7 +9967,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 116.84) (xy 101.6 114.3)
+			(xy 90.17 82.55) (xy 90.17 80.01)
 		)
 		(stroke
 			(width 0.1524)
@@ -10788,7 +9977,7 @@
 	)
 	(wire
 		(pts
-			(xy 30.48 210.82) (xy 30.48 198.12)
+			(xy 19.05 176.53) (xy 19.05 163.83)
 		)
 		(stroke
 			(width 0.1524)
@@ -10798,7 +9987,7 @@
 	)
 	(wire
 		(pts
-			(xy 340.36 71.12) (xy 340.36 76.2)
+			(xy 336.55 78.74) (xy 336.55 83.82)
 		)
 		(stroke
 			(width 0.1524)
@@ -10808,7 +9997,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 157.48) (xy 198.12 157.48)
+			(xy 181.61 123.19) (xy 186.69 123.19)
 		)
 		(stroke
 			(width 0.1524)
@@ -10818,7 +10007,7 @@
 	)
 	(wire
 		(pts
-			(xy 345.44 63.5) (xy 340.36 63.5)
+			(xy 341.63 71.12) (xy 336.55 71.12)
 		)
 		(stroke
 			(width 0.1524)
@@ -10828,7 +10017,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 190.5) (xy 198.12 187.96)
+			(xy 186.69 156.21) (xy 186.69 153.67)
 		)
 		(stroke
 			(width 0.1524)
@@ -10838,7 +10027,7 @@
 	)
 	(wire
 		(pts
-			(xy 340.36 96.52) (xy 340.36 93.98)
+			(xy 336.55 104.14) (xy 336.55 101.6)
 		)
 		(stroke
 			(width 0.1524)
@@ -10848,7 +10037,7 @@
 	)
 	(wire
 		(pts
-			(xy 241.3 162.56) (xy 241.3 165.1)
+			(xy 229.87 128.27) (xy 229.87 130.81)
 		)
 		(stroke
 			(width 0.1524)
@@ -10858,7 +10047,7 @@
 	)
 	(wire
 		(pts
-			(xy 411.48 81.28) (xy 411.48 78.74)
+			(xy 407.67 88.9) (xy 407.67 86.36)
 		)
 		(stroke
 			(width 0.1524)
@@ -10868,7 +10057,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 160.02) (xy 198.12 157.48)
+			(xy 186.69 125.73) (xy 186.69 123.19)
 		)
 		(stroke
 			(width 0.1524)
@@ -10878,7 +10067,7 @@
 	)
 	(wire
 		(pts
-			(xy 411.48 50.8) (xy 411.48 53.34)
+			(xy 407.67 58.42) (xy 407.67 60.96)
 		)
 		(stroke
 			(width 0.1524)
@@ -10888,7 +10077,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 165.1) (xy 198.12 162.56)
+			(xy 186.69 130.81) (xy 186.69 128.27)
 		)
 		(stroke
 			(width 0.1524)
@@ -10898,7 +10087,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 205.74) (xy 198.12 205.74)
+			(xy 181.61 171.45) (xy 186.69 171.45)
 		)
 		(stroke
 			(width 0.1524)
@@ -10908,7 +10097,7 @@
 	)
 	(wire
 		(pts
-			(xy 236.22 210.82) (xy 210.82 210.82)
+			(xy 224.79 176.53) (xy 199.39 176.53)
 		)
 		(stroke
 			(width 0.1524)
@@ -10918,7 +10107,7 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 172.72) (xy 121.92 172.72)
+			(xy 102.87 138.43) (xy 110.49 138.43)
 		)
 		(stroke
 			(width 0.1524)
@@ -10928,7 +10117,7 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 185.42) (xy 259.08 177.8)
+			(xy 247.65 151.13) (xy 247.65 143.51)
 		)
 		(stroke
 			(width 0.1524)
@@ -10938,7 +10127,7 @@
 	)
 	(wire
 		(pts
-			(xy 345.44 60.96) (xy 340.36 60.96)
+			(xy 341.63 68.58) (xy 336.55 68.58)
 		)
 		(stroke
 			(width 0.1524)
@@ -10948,7 +10137,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 124.46) (xy 193.04 124.46)
+			(xy 186.69 90.17) (xy 181.61 90.17)
 		)
 		(stroke
 			(width 0.1524)
@@ -10958,7 +10147,7 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 198.12) (xy 45.72 195.58)
+			(xy 34.29 163.83) (xy 34.29 161.29)
 		)
 		(stroke
 			(width 0.1524)
@@ -10968,7 +10157,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 124.46) (xy 119.38 121.92)
+			(xy 107.95 90.17) (xy 107.95 87.63)
 		)
 		(stroke
 			(width 0.1524)
@@ -10978,7 +10167,7 @@
 	)
 	(wire
 		(pts
-			(xy 411.48 78.74) (xy 406.4 78.74)
+			(xy 407.67 86.36) (xy 402.59 86.36)
 		)
 		(stroke
 			(width 0.1524)
@@ -10988,7 +10177,7 @@
 	)
 	(polyline
 		(pts
-			(xy 71.12 101.6) (xy 35.56 101.6)
+			(xy 59.69 67.31) (xy 24.13 67.31)
 		)
 		(stroke
 			(width 0.1524)
@@ -10998,7 +10187,7 @@
 	)
 	(wire
 		(pts
-			(xy 345.44 45.72) (xy 340.36 45.72)
+			(xy 341.63 53.34) (xy 336.55 53.34)
 		)
 		(stroke
 			(width 0.1524)
@@ -11008,7 +10197,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 241.3) (xy 198.12 241.3)
+			(xy 181.61 207.01) (xy 186.69 207.01)
 		)
 		(stroke
 			(width 0.1524)
@@ -11018,7 +10207,7 @@
 	)
 	(wire
 		(pts
-			(xy 411.48 88.9) (xy 411.48 86.36)
+			(xy 407.67 96.52) (xy 407.67 93.98)
 		)
 		(stroke
 			(width 0.1524)
@@ -11028,7 +10217,7 @@
 	)
 	(wire
 		(pts
-			(xy 223.52 251.46) (xy 223.52 238.76)
+			(xy 212.09 217.17) (xy 212.09 204.47)
 		)
 		(stroke
 			(width 0.1524)
@@ -11038,7 +10227,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 106.68) (xy 203.2 106.68)
+			(xy 186.69 72.39) (xy 191.77 72.39)
 		)
 		(stroke
 			(width 0.1524)
@@ -11048,7 +10237,7 @@
 	)
 	(wire
 		(pts
-			(xy 30.48 218.44) (xy 30.48 226.06)
+			(xy 19.05 184.15) (xy 19.05 191.77)
 		)
 		(stroke
 			(width 0.1524)
@@ -11058,7 +10247,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 241.3) (xy 81.28 241.3)
+			(xy 72.39 207.01) (xy 69.85 207.01)
 		)
 		(stroke
 			(width 0.1524)
@@ -11068,7 +10257,7 @@
 	)
 	(polyline
 		(pts
-			(xy 327.66 134.62) (xy 327.66 187.96)
+			(xy 316.23 100.33) (xy 316.23 153.67)
 		)
 		(stroke
 			(width 0.1524)
@@ -11078,7 +10267,7 @@
 	)
 	(wire
 		(pts
-			(xy 340.36 68.58) (xy 340.36 71.12)
+			(xy 336.55 76.2) (xy 336.55 78.74)
 		)
 		(stroke
 			(width 0.1524)
@@ -11088,7 +10277,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 241.3) (xy 198.12 238.76)
+			(xy 186.69 207.01) (xy 186.69 204.47)
 		)
 		(stroke
 			(width 0.1524)
@@ -11098,7 +10287,7 @@
 	)
 	(wire
 		(pts
-			(xy 241.3 185.42) (xy 226.06 185.42)
+			(xy 229.87 151.13) (xy 214.63 151.13)
 		)
 		(stroke
 			(width 0.1524)
@@ -11108,7 +10297,7 @@
 	)
 	(wire
 		(pts
-			(xy 411.48 76.2) (xy 406.4 76.2)
+			(xy 407.67 83.82) (xy 402.59 83.82)
 		)
 		(stroke
 			(width 0.1524)
@@ -11118,7 +10307,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 88.9) (xy 121.92 88.9)
+			(xy 107.95 54.61) (xy 110.49 54.61)
 		)
 		(stroke
 			(width 0.1524)
@@ -11128,7 +10317,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 195.58) (xy 198.12 193.04)
+			(xy 186.69 161.29) (xy 186.69 158.75)
 		)
 		(stroke
 			(width 0.1524)
@@ -11138,7 +10327,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 91.44) (xy 119.38 91.44)
+			(xy 110.49 57.15) (xy 107.95 57.15)
 		)
 		(stroke
 			(width 0.1524)
@@ -11148,7 +10337,7 @@
 	)
 	(wire
 		(pts
-			(xy 215.9 228.6) (xy 215.9 231.14)
+			(xy 204.47 194.31) (xy 204.47 196.85)
 		)
 		(stroke
 			(width 0.1524)
@@ -11158,7 +10347,7 @@
 	)
 	(wire
 		(pts
-			(xy 100.33 220.98) (xy 119.38 220.98)
+			(xy 88.9 186.69) (xy 107.95 186.69)
 		)
 		(stroke
 			(width 0.1524)
@@ -11168,7 +10357,7 @@
 	)
 	(wire
 		(pts
-			(xy 411.48 88.9) (xy 406.4 88.9)
+			(xy 407.67 96.52) (xy 402.59 96.52)
 		)
 		(stroke
 			(width 0.1524)
@@ -11178,7 +10367,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 236.22) (xy 60.96 236.22)
+			(xy 72.39 201.93) (xy 49.53 201.93)
 		)
 		(stroke
 			(width 0.1524)
@@ -11188,7 +10377,7 @@
 	)
 	(polyline
 		(pts
-			(xy 327.66 187.96) (xy 213.36 187.96)
+			(xy 316.23 153.67) (xy 201.93 153.67)
 		)
 		(stroke
 			(width 0.1524)
@@ -11198,7 +10387,7 @@
 	)
 	(wire
 		(pts
-			(xy 411.48 83.82) (xy 411.48 81.28)
+			(xy 407.67 91.44) (xy 407.67 88.9)
 		)
 		(stroke
 			(width 0.1524)
@@ -11208,7 +10397,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 106.68) (xy 91.44 106.68)
+			(xy 90.17 72.39) (xy 80.01 72.39)
 		)
 		(stroke
 			(width 0.1524)
@@ -11218,7 +10407,7 @@
 	)
 	(wire
 		(pts
-			(xy 353.06 190.5) (xy 355.6 190.5)
+			(xy 341.63 156.21) (xy 344.17 156.21)
 		)
 		(stroke
 			(width 0.1524)
@@ -11228,7 +10417,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 205.74) (xy 119.38 205.74)
+			(xy 110.49 171.45) (xy 107.95 171.45)
 		)
 		(stroke
 			(width 0.1524)
@@ -11238,7 +10427,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 88.9) (xy 96.52 88.9)
+			(xy 107.95 54.61) (xy 85.09 54.61)
 		)
 		(stroke
 			(width 0.1524)
@@ -11248,7 +10437,7 @@
 	)
 	(wire
 		(pts
-			(xy 411.48 48.26) (xy 411.48 50.8)
+			(xy 407.67 55.88) (xy 407.67 58.42)
 		)
 		(stroke
 			(width 0.1524)
@@ -11258,7 +10447,7 @@
 	)
 	(polyline
 		(pts
-			(xy 241.3 256.54) (xy 190.5 256.54)
+			(xy 229.87 222.25) (xy 179.07 222.25)
 		)
 		(stroke
 			(width 0.1524)
@@ -11268,7 +10457,7 @@
 	)
 	(wire
 		(pts
-			(xy 93.98 132.08) (xy 121.92 132.08)
+			(xy 82.55 97.79) (xy 110.49 97.79)
 		)
 		(stroke
 			(width 0.1524)
@@ -11278,7 +10467,7 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 139.7) (xy 259.08 142.24)
+			(xy 247.65 105.41) (xy 247.65 107.95)
 		)
 		(stroke
 			(width 0.1524)
@@ -11288,7 +10477,7 @@
 	)
 	(wire
 		(pts
-			(xy 200.66 93.98) (xy 200.66 91.44)
+			(xy 189.23 59.69) (xy 189.23 57.15)
 		)
 		(stroke
 			(width 0.1524)
@@ -11298,7 +10487,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 139.7) (xy 198.12 139.7)
+			(xy 181.61 105.41) (xy 186.69 105.41)
 		)
 		(stroke
 			(width 0.1524)
@@ -11308,7 +10497,7 @@
 	)
 	(wire
 		(pts
-			(xy 100.33 241.3) (xy 121.92 241.3)
+			(xy 88.9 207.01) (xy 110.49 207.01)
 		)
 		(stroke
 			(width 0.1524)
@@ -11318,7 +10507,7 @@
 	)
 	(wire
 		(pts
-			(xy 411.48 91.44) (xy 411.48 88.9)
+			(xy 407.67 99.06) (xy 407.67 96.52)
 		)
 		(stroke
 			(width 0.1524)
@@ -11328,7 +10517,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 185.42) (xy 198.12 182.88)
+			(xy 186.69 151.13) (xy 186.69 148.59)
 		)
 		(stroke
 			(width 0.1524)
@@ -11338,7 +10527,7 @@
 	)
 	(wire
 		(pts
-			(xy 411.48 96.52) (xy 406.4 96.52)
+			(xy 407.67 104.14) (xy 402.59 104.14)
 		)
 		(stroke
 			(width 0.1524)
@@ -11348,7 +10537,7 @@
 	)
 	(wire
 		(pts
-			(xy 208.28 96.52) (xy 208.28 99.06)
+			(xy 196.85 62.23) (xy 196.85 64.77)
 		)
 		(stroke
 			(width 0.1524)
@@ -11358,7 +10547,7 @@
 	)
 	(wire
 		(pts
-			(xy 355.6 170.18) (xy 353.06 170.18)
+			(xy 344.17 135.89) (xy 341.63 135.89)
 		)
 		(stroke
 			(width 0.1524)
@@ -11368,7 +10557,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 251.46) (xy 104.14 251.46)
+			(xy 97.79 217.17) (xy 92.71 217.17)
 		)
 		(stroke
 			(width 0.1524)
@@ -11378,7 +10567,7 @@
 	)
 	(wire
 		(pts
-			(xy 411.48 68.58) (xy 411.48 73.66)
+			(xy 407.67 76.2) (xy 407.67 81.28)
 		)
 		(stroke
 			(width 0.1524)
@@ -11388,7 +10577,7 @@
 	)
 	(wire
 		(pts
-			(xy 353.06 175.26) (xy 355.6 175.26)
+			(xy 341.63 140.97) (xy 344.17 140.97)
 		)
 		(stroke
 			(width 0.1524)
@@ -11398,7 +10587,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 170.18) (xy 198.12 170.18)
+			(xy 181.61 135.89) (xy 186.69 135.89)
 		)
 		(stroke
 			(width 0.1524)
@@ -11408,7 +10597,7 @@
 	)
 	(wire
 		(pts
-			(xy 411.48 83.82) (xy 406.4 83.82)
+			(xy 407.67 91.44) (xy 402.59 91.44)
 		)
 		(stroke
 			(width 0.1524)
@@ -11418,7 +10607,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 91.44) (xy 119.38 88.9)
+			(xy 107.95 57.15) (xy 107.95 54.61)
 		)
 		(stroke
 			(width 0.1524)
@@ -11428,7 +10617,7 @@
 	)
 	(polyline
 		(pts
-			(xy 96.52 276.86) (xy 172.72 276.86)
+			(xy 85.09 242.57) (xy 161.29 242.57)
 		)
 		(stroke
 			(width 0.1524)
@@ -11438,7 +10627,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 231.14) (xy 81.28 231.14)
+			(xy 72.39 196.85) (xy 69.85 196.85)
 		)
 		(stroke
 			(width 0.1524)
@@ -11448,7 +10637,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 127) (xy 198.12 127)
+			(xy 181.61 92.71) (xy 186.69 92.71)
 		)
 		(stroke
 			(width 0.1524)
@@ -11458,7 +10647,7 @@
 	)
 	(wire
 		(pts
-			(xy 68.58 226.06) (xy 63.5 226.06)
+			(xy 57.15 191.77) (xy 52.07 191.77)
 		)
 		(stroke
 			(width 0.1524)
@@ -11468,7 +10657,7 @@
 	)
 	(wire
 		(pts
-			(xy 411.48 195.58) (xy 414.02 195.58)
+			(xy 400.05 161.29) (xy 402.59 161.29)
 		)
 		(stroke
 			(width 0.1524)
@@ -11478,7 +10667,7 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 162.56) (xy 121.92 162.56)
+			(xy 102.87 128.27) (xy 110.49 128.27)
 		)
 		(stroke
 			(width 0.1524)
@@ -11488,7 +10677,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 185.42) (xy 198.12 185.42)
+			(xy 181.61 151.13) (xy 186.69 151.13)
 		)
 		(stroke
 			(width 0.1524)
@@ -11498,7 +10687,7 @@
 	)
 	(wire
 		(pts
-			(xy 210.82 139.7) (xy 210.82 210.82)
+			(xy 199.39 105.41) (xy 199.39 176.53)
 		)
 		(stroke
 			(width 0.1524)
@@ -11508,7 +10697,7 @@
 	)
 	(wire
 		(pts
-			(xy 63.5 226.06) (xy 63.5 208.28)
+			(xy 52.07 191.77) (xy 52.07 173.99)
 		)
 		(stroke
 			(width 0.1524)
@@ -11518,7 +10707,7 @@
 	)
 	(wire
 		(pts
-			(xy 411.48 73.66) (xy 406.4 73.66)
+			(xy 407.67 81.28) (xy 402.59 81.28)
 		)
 		(stroke
 			(width 0.1524)
@@ -11528,7 +10717,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 205.74) (xy 119.38 208.28)
+			(xy 107.95 171.45) (xy 107.95 173.99)
 		)
 		(stroke
 			(width 0.1524)
@@ -11538,7 +10727,7 @@
 	)
 	(wire
 		(pts
-			(xy 411.48 53.34) (xy 406.4 53.34)
+			(xy 407.67 60.96) (xy 402.59 60.96)
 		)
 		(stroke
 			(width 0.1524)
@@ -11548,7 +10737,7 @@
 	)
 	(wire
 		(pts
-			(xy 340.36 48.26) (xy 340.36 53.34)
+			(xy 336.55 55.88) (xy 336.55 60.96)
 		)
 		(stroke
 			(width 0.1524)
@@ -11558,7 +10747,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 96.52) (xy 200.66 96.52)
+			(xy 181.61 62.23) (xy 189.23 62.23)
 		)
 		(stroke
 			(width 0.1524)
@@ -11568,7 +10757,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 121.92) (xy 119.38 119.38)
+			(xy 107.95 87.63) (xy 107.95 85.09)
 		)
 		(stroke
 			(width 0.1524)
@@ -11578,7 +10767,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 172.72) (xy 198.12 170.18)
+			(xy 186.69 138.43) (xy 186.69 135.89)
 		)
 		(stroke
 			(width 0.1524)
@@ -11588,7 +10777,7 @@
 	)
 	(wire
 		(pts
-			(xy 241.3 147.32) (xy 241.3 139.7)
+			(xy 229.87 113.03) (xy 229.87 105.41)
 		)
 		(stroke
 			(width 0.1524)
@@ -11598,7 +10787,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 88.9) (xy 200.66 88.9)
+			(xy 186.69 54.61) (xy 189.23 54.61)
 		)
 		(stroke
 			(width 0.1524)
@@ -11608,7 +10797,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 106.68) (xy 119.38 106.68)
+			(xy 110.49 72.39) (xy 107.95 72.39)
 		)
 		(stroke
 			(width 0.1524)
@@ -11618,7 +10807,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 193.04) (xy 198.12 190.5)
+			(xy 186.69 158.75) (xy 186.69 156.21)
 		)
 		(stroke
 			(width 0.1524)
@@ -11628,7 +10817,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 190.5) (xy 119.38 193.04)
+			(xy 107.95 156.21) (xy 107.95 158.75)
 		)
 		(stroke
 			(width 0.1524)
@@ -11638,7 +10827,7 @@
 	)
 	(wire
 		(pts
-			(xy 345.44 99.06) (xy 340.36 99.06)
+			(xy 341.63 106.68) (xy 336.55 106.68)
 		)
 		(stroke
 			(width 0.1524)
@@ -11648,7 +10837,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 218.44) (xy 198.12 215.9)
+			(xy 186.69 184.15) (xy 186.69 181.61)
 		)
 		(stroke
 			(width 0.1524)
@@ -11658,7 +10847,7 @@
 	)
 	(wire
 		(pts
-			(xy 340.36 58.42) (xy 340.36 60.96)
+			(xy 336.55 66.04) (xy 336.55 68.58)
 		)
 		(stroke
 			(width 0.1524)
@@ -11668,7 +10857,7 @@
 	)
 	(wire
 		(pts
-			(xy 355.6 180.34) (xy 353.06 180.34)
+			(xy 344.17 146.05) (xy 341.63 146.05)
 		)
 		(stroke
 			(width 0.1524)
@@ -11678,7 +10867,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 210.82) (xy 198.12 210.82)
+			(xy 181.61 176.53) (xy 186.69 176.53)
 		)
 		(stroke
 			(width 0.1524)
@@ -11688,7 +10877,7 @@
 	)
 	(wire
 		(pts
-			(xy 340.36 91.44) (xy 340.36 86.36)
+			(xy 336.55 99.06) (xy 336.55 93.98)
 		)
 		(stroke
 			(width 0.1524)
@@ -11698,7 +10887,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 193.04) (xy 114.3 193.04)
+			(xy 107.95 158.75) (xy 102.87 158.75)
 		)
 		(stroke
 			(width 0.1524)
@@ -11708,7 +10897,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 231.14) (xy 83.82 226.06)
+			(xy 72.39 196.85) (xy 72.39 191.77)
 		)
 		(stroke
 			(width 0.1524)
@@ -11718,7 +10907,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 88.9) (xy 198.12 88.9)
+			(xy 181.61 54.61) (xy 186.69 54.61)
 		)
 		(stroke
 			(width 0.1524)
@@ -11728,7 +10917,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 200.66) (xy 114.3 200.66)
+			(xy 107.95 166.37) (xy 102.87 166.37)
 		)
 		(stroke
 			(width 0.1524)
@@ -11738,7 +10927,7 @@
 	)
 	(polyline
 		(pts
-			(xy 231.14 109.22) (xy 231.14 101.6)
+			(xy 219.71 74.93) (xy 219.71 67.31)
 		)
 		(stroke
 			(width 0.1524)
@@ -11748,7 +10937,7 @@
 	)
 	(wire
 		(pts
-			(xy 411.48 45.72) (xy 406.4 45.72)
+			(xy 407.67 53.34) (xy 402.59 53.34)
 		)
 		(stroke
 			(width 0.1524)
@@ -11758,7 +10947,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 185.42) (xy 114.3 185.42)
+			(xy 107.95 151.13) (xy 102.87 151.13)
 		)
 		(stroke
 			(width 0.1524)
@@ -11768,7 +10957,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 162.56) (xy 198.12 160.02)
+			(xy 186.69 128.27) (xy 186.69 125.73)
 		)
 		(stroke
 			(width 0.1524)
@@ -11778,7 +10967,7 @@
 	)
 	(wire
 		(pts
-			(xy 241.3 165.1) (xy 241.3 167.64)
+			(xy 229.87 130.81) (xy 229.87 133.35)
 		)
 		(stroke
 			(width 0.1524)
@@ -11788,7 +10977,7 @@
 	)
 	(wire
 		(pts
-			(xy 411.48 60.96) (xy 411.48 66.04)
+			(xy 407.67 68.58) (xy 407.67 73.66)
 		)
 		(stroke
 			(width 0.1524)
@@ -11798,7 +10987,7 @@
 	)
 	(wire
 		(pts
-			(xy 411.48 101.6) (xy 411.48 99.06)
+			(xy 407.67 109.22) (xy 407.67 106.68)
 		)
 		(stroke
 			(width 0.1524)
@@ -11808,7 +10997,7 @@
 	)
 	(wire
 		(pts
-			(xy 200.66 88.9) (xy 203.2 88.9)
+			(xy 189.23 54.61) (xy 191.77 54.61)
 		)
 		(stroke
 			(width 0.1524)
@@ -11818,7 +11007,7 @@
 	)
 	(polyline
 		(pts
-			(xy 264.16 81.28) (xy 264.16 53.34)
+			(xy 252.73 46.99) (xy 252.73 19.05)
 		)
 		(stroke
 			(width 0.1524)
@@ -11828,7 +11017,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 127) (xy 198.12 124.46)
+			(xy 186.69 92.71) (xy 186.69 90.17)
 		)
 		(stroke
 			(width 0.1524)
@@ -11838,7 +11027,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 154.94) (xy 203.2 154.94)
+			(xy 186.69 120.65) (xy 191.77 120.65)
 		)
 		(stroke
 			(width 0.1524)
@@ -11848,7 +11037,7 @@
 	)
 	(wire
 		(pts
-			(xy 345.44 86.36) (xy 340.36 86.36)
+			(xy 341.63 93.98) (xy 336.55 93.98)
 		)
 		(stroke
 			(width 0.1524)
@@ -11858,7 +11047,7 @@
 	)
 	(wire
 		(pts
-			(xy 203.2 109.22) (xy 203.2 111.76)
+			(xy 191.77 74.93) (xy 191.77 77.47)
 		)
 		(stroke
 			(width 0.1524)
@@ -11868,7 +11057,7 @@
 	)
 	(polyline
 		(pts
-			(xy 91.44 73.66) (xy 91.44 63.5)
+			(xy 80.01 39.37) (xy 80.01 29.21)
 		)
 		(stroke
 			(width 0.1524)
@@ -11878,7 +11067,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 182.88) (xy 119.38 185.42)
+			(xy 107.95 148.59) (xy 107.95 151.13)
 		)
 		(stroke
 			(width 0.1524)
@@ -11888,7 +11077,7 @@
 	)
 	(wire
 		(pts
-			(xy 345.44 93.98) (xy 340.36 93.98)
+			(xy 341.63 101.6) (xy 336.55 101.6)
 		)
 		(stroke
 			(width 0.1524)
@@ -11898,7 +11087,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 137.16) (xy 193.04 137.16)
+			(xy 186.69 102.87) (xy 181.61 102.87)
 		)
 		(stroke
 			(width 0.1524)
@@ -11908,7 +11097,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 223.52) (xy 198.12 223.52)
+			(xy 181.61 189.23) (xy 186.69 189.23)
 		)
 		(stroke
 			(width 0.1524)
@@ -11918,7 +11107,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 218.44) (xy 198.12 218.44)
+			(xy 181.61 184.15) (xy 186.69 184.15)
 		)
 		(stroke
 			(width 0.1524)
@@ -11928,7 +11117,7 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 226.06) (xy 45.72 223.52)
+			(xy 34.29 191.77) (xy 34.29 189.23)
 		)
 		(stroke
 			(width 0.1524)
@@ -11938,7 +11127,7 @@
 	)
 	(polyline
 		(pts
-			(xy 231.14 101.6) (xy 274.32 101.6)
+			(xy 219.71 67.31) (xy 262.89 67.31)
 		)
 		(stroke
 			(width 0.1524)
@@ -11948,7 +11137,7 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 88.9) (xy 96.52 88.9)
+			(xy 46.99 54.61) (xy 85.09 54.61)
 		)
 		(stroke
 			(width 0.1524)
@@ -11958,7 +11147,7 @@
 	)
 	(wire
 		(pts
-			(xy 241.3 165.1) (xy 231.14 165.1)
+			(xy 229.87 130.81) (xy 219.71 130.81)
 		)
 		(stroke
 			(width 0.1524)
@@ -11968,7 +11157,7 @@
 	)
 	(wire
 		(pts
-			(xy 345.44 96.52) (xy 340.36 96.52)
+			(xy 341.63 104.14) (xy 336.55 104.14)
 		)
 		(stroke
 			(width 0.1524)
@@ -11978,7 +11167,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 208.28) (xy 114.3 208.28)
+			(xy 107.95 173.99) (xy 102.87 173.99)
 		)
 		(stroke
 			(width 0.1524)
@@ -11988,7 +11177,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 215.9) (xy 198.12 213.36)
+			(xy 186.69 181.61) (xy 186.69 179.07)
 		)
 		(stroke
 			(width 0.1524)
@@ -11998,7 +11187,7 @@
 	)
 	(wire
 		(pts
-			(xy 200.66 96.52) (xy 200.66 93.98)
+			(xy 189.23 62.23) (xy 189.23 59.69)
 		)
 		(stroke
 			(width 0.1524)
@@ -12008,7 +11197,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 124.46) (xy 116.84 124.46)
+			(xy 107.95 90.17) (xy 105.41 90.17)
 		)
 		(stroke
 			(width 0.1524)
@@ -12018,7 +11207,7 @@
 	)
 	(polyline
 		(pts
-			(xy 190.5 271.78) (xy 241.3 271.78)
+			(xy 179.07 237.49) (xy 229.87 237.49)
 		)
 		(stroke
 			(width 0.1524)
@@ -12028,7 +11217,7 @@
 	)
 	(wire
 		(pts
-			(xy 340.36 66.04) (xy 340.36 68.58)
+			(xy 336.55 73.66) (xy 336.55 76.2)
 		)
 		(stroke
 			(width 0.1524)
@@ -12038,7 +11227,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 93.98) (xy 119.38 93.98)
+			(xy 110.49 59.69) (xy 107.95 59.69)
 		)
 		(stroke
 			(width 0.1524)
@@ -12048,7 +11237,7 @@
 	)
 	(polyline
 		(pts
-			(xy 274.32 109.22) (xy 231.14 109.22)
+			(xy 262.89 74.93) (xy 219.71 74.93)
 		)
 		(stroke
 			(width 0.1524)
@@ -12058,7 +11247,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 187.96) (xy 198.12 187.96)
+			(xy 181.61 153.67) (xy 186.69 153.67)
 		)
 		(stroke
 			(width 0.1524)
@@ -12068,7 +11257,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 139.7) (xy 203.2 139.7)
+			(xy 186.69 105.41) (xy 191.77 105.41)
 		)
 		(stroke
 			(width 0.1524)
@@ -12078,7 +11267,7 @@
 	)
 	(wire
 		(pts
-			(xy 411.48 45.72) (xy 411.48 48.26)
+			(xy 407.67 53.34) (xy 407.67 55.88)
 		)
 		(stroke
 			(width 0.1524)
@@ -12088,7 +11277,7 @@
 	)
 	(wire
 		(pts
-			(xy 241.3 177.8) (xy 241.3 185.42)
+			(xy 229.87 143.51) (xy 229.87 151.13)
 		)
 		(stroke
 			(width 0.1524)
@@ -12098,7 +11287,7 @@
 	)
 	(wire
 		(pts
-			(xy 411.48 68.58) (xy 406.4 68.58)
+			(xy 407.67 76.2) (xy 402.59 76.2)
 		)
 		(stroke
 			(width 0.1524)
@@ -12108,7 +11297,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 185.42) (xy 215.9 185.42)
+			(xy 186.69 151.13) (xy 204.47 151.13)
 		)
 		(stroke
 			(width 0.1524)
@@ -12118,7 +11307,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 208.28) (xy 119.38 208.28)
+			(xy 110.49 173.99) (xy 107.95 173.99)
 		)
 		(stroke
 			(width 0.1524)
@@ -12128,7 +11317,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 139.7) (xy 198.12 137.16)
+			(xy 186.69 105.41) (xy 186.69 102.87)
 		)
 		(stroke
 			(width 0.1524)
@@ -12138,7 +11327,7 @@
 	)
 	(polyline
 		(pts
-			(xy 172.72 276.86) (xy 172.72 264.16)
+			(xy 161.29 242.57) (xy 161.29 229.87)
 		)
 		(stroke
 			(width 0.1524)
@@ -12148,7 +11337,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 165.1) (xy 198.12 165.1)
+			(xy 181.61 130.81) (xy 186.69 130.81)
 		)
 		(stroke
 			(width 0.1524)
@@ -12158,7 +11347,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 190.5) (xy 198.12 190.5)
+			(xy 181.61 156.21) (xy 186.69 156.21)
 		)
 		(stroke
 			(width 0.1524)
@@ -12168,7 +11357,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 129.54) (xy 121.92 129.54)
+			(xy 97.79 95.25) (xy 110.49 95.25)
 		)
 		(stroke
 			(width 0.1524)
@@ -12178,7 +11367,7 @@
 	)
 	(wire
 		(pts
-			(xy 236.22 231.14) (xy 215.9 231.14)
+			(xy 224.79 196.85) (xy 204.47 196.85)
 		)
 		(stroke
 			(width 0.1524)
@@ -12188,7 +11377,7 @@
 	)
 	(polyline
 		(pts
-			(xy 71.12 109.22) (xy 71.12 101.6)
+			(xy 59.69 74.93) (xy 59.69 67.31)
 		)
 		(stroke
 			(width 0.1524)
@@ -12198,7 +11387,7 @@
 	)
 	(wire
 		(pts
-			(xy 340.36 45.72) (xy 340.36 48.26)
+			(xy 336.55 53.34) (xy 336.55 55.88)
 		)
 		(stroke
 			(width 0.1524)
@@ -12208,7 +11397,7 @@
 	)
 	(polyline
 		(pts
-			(xy 213.36 187.96) (xy 213.36 134.62)
+			(xy 201.93 153.67) (xy 201.93 100.33)
 		)
 		(stroke
 			(width 0.1524)
@@ -12218,7 +11407,7 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 154.94) (xy 248.92 154.94)
+			(xy 247.65 120.65) (xy 237.49 120.65)
 		)
 		(stroke
 			(width 0.1524)
@@ -12228,7 +11417,7 @@
 	)
 	(polyline
 		(pts
-			(xy 38.1 261.62) (xy 93.98 261.62)
+			(xy 26.67 227.33) (xy 82.55 227.33)
 		)
 		(stroke
 			(width 0.1524)
@@ -12238,7 +11427,7 @@
 	)
 	(polyline
 		(pts
-			(xy 60.96 73.66) (xy 91.44 73.66)
+			(xy 49.53 39.37) (xy 80.01 39.37)
 		)
 		(stroke
 			(width 0.1524)
@@ -12248,7 +11437,7 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 215.9) (xy 55.88 215.9)
+			(xy 46.99 181.61) (xy 44.45 181.61)
 		)
 		(stroke
 			(width 0.1524)
@@ -12258,7 +11447,7 @@
 	)
 	(polyline
 		(pts
-			(xy 208.28 53.34) (xy 208.28 81.28)
+			(xy 196.85 19.05) (xy 196.85 46.99)
 		)
 		(stroke
 			(width 0.1524)
@@ -12268,7 +11457,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 226.06) (xy 68.58 226.06)
+			(xy 72.39 191.77) (xy 57.15 191.77)
 		)
 		(stroke
 			(width 0.1524)
@@ -12278,7 +11467,7 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 220.98) (xy 83.82 220.98)
+			(xy 78.74 186.69) (xy 72.39 186.69)
 		)
 		(stroke
 			(width 0.1524)
@@ -12288,7 +11477,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 167.64) (xy 198.12 167.64)
+			(xy 181.61 133.35) (xy 186.69 133.35)
 		)
 		(stroke
 			(width 0.1524)
@@ -12298,7 +11487,7 @@
 	)
 	(wire
 		(pts
-			(xy 411.48 53.34) (xy 411.48 58.42)
+			(xy 407.67 60.96) (xy 407.67 66.04)
 		)
 		(stroke
 			(width 0.1524)
@@ -12308,7 +11497,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 111.76) (xy 203.2 111.76)
+			(xy 181.61 77.47) (xy 191.77 77.47)
 		)
 		(stroke
 			(width 0.1524)
@@ -12318,7 +11507,7 @@
 	)
 	(wire
 		(pts
-			(xy 345.44 78.74) (xy 340.36 78.74)
+			(xy 341.63 86.36) (xy 336.55 86.36)
 		)
 		(stroke
 			(width 0.1524)
@@ -12328,7 +11517,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 210.82) (xy 55.88 210.82)
+			(xy 72.39 176.53) (xy 44.45 176.53)
 		)
 		(stroke
 			(width 0.1524)
@@ -12338,7 +11527,7 @@
 	)
 	(wire
 		(pts
-			(xy 345.44 76.2) (xy 340.36 76.2)
+			(xy 341.63 83.82) (xy 336.55 83.82)
 		)
 		(stroke
 			(width 0.1524)
@@ -12348,7 +11537,7 @@
 	)
 	(wire
 		(pts
-			(xy 96.52 99.06) (xy 96.52 96.52)
+			(xy 85.09 64.77) (xy 85.09 62.23)
 		)
 		(stroke
 			(width 0.1524)
@@ -12358,7 +11547,7 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 236.22) (xy 58.42 215.9)
+			(xy 46.99 201.93) (xy 46.99 181.61)
 		)
 		(stroke
 			(width 0.1524)
@@ -12368,7 +11557,7 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 236.22) (xy 83.82 236.22)
+			(xy 78.74 201.93) (xy 72.39 201.93)
 		)
 		(stroke
 			(width 0.1524)
@@ -12378,7 +11567,7 @@
 	)
 	(wire
 		(pts
-			(xy 345.44 55.88) (xy 340.36 55.88)
+			(xy 341.63 63.5) (xy 336.55 63.5)
 		)
 		(stroke
 			(width 0.1524)
@@ -12388,7 +11577,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 182.88) (xy 198.12 172.72)
+			(xy 186.69 148.59) (xy 186.69 138.43)
 		)
 		(stroke
 			(width 0.1524)
@@ -12398,7 +11587,7 @@
 	)
 	(wire
 		(pts
-			(xy 210.82 139.7) (xy 203.2 139.7)
+			(xy 199.39 105.41) (xy 191.77 105.41)
 		)
 		(stroke
 			(width 0.1524)
@@ -12408,7 +11597,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 187.96) (xy 198.12 185.42)
+			(xy 186.69 153.67) (xy 186.69 151.13)
 		)
 		(stroke
 			(width 0.1524)
@@ -12418,7 +11607,7 @@
 	)
 	(wire
 		(pts
-			(xy 63.5 208.28) (xy 55.88 208.28)
+			(xy 52.07 173.99) (xy 44.45 173.99)
 		)
 		(stroke
 			(width 0.1524)
@@ -12428,7 +11617,7 @@
 	)
 	(wire
 		(pts
-			(xy 223.52 238.76) (xy 220.98 238.76)
+			(xy 212.09 204.47) (xy 209.55 204.47)
 		)
 		(stroke
 			(width 0.1524)
@@ -12438,7 +11627,7 @@
 	)
 	(wire
 		(pts
-			(xy 411.48 60.96) (xy 406.4 60.96)
+			(xy 407.67 68.58) (xy 402.59 68.58)
 		)
 		(stroke
 			(width 0.1524)
@@ -12448,7 +11637,7 @@
 	)
 	(wire
 		(pts
-			(xy 236.22 208.28) (xy 236.22 210.82)
+			(xy 224.79 173.99) (xy 224.79 176.53)
 		)
 		(stroke
 			(width 0.1524)
@@ -12458,7 +11647,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 109.22) (xy 119.38 106.68)
+			(xy 107.95 74.93) (xy 107.95 72.39)
 		)
 		(stroke
 			(width 0.1524)
@@ -12468,7 +11657,7 @@
 	)
 	(polyline
 		(pts
-			(xy 208.28 81.28) (xy 264.16 81.28)
+			(xy 196.85 46.99) (xy 252.73 46.99)
 		)
 		(stroke
 			(width 0.1524)
@@ -12478,7 +11667,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 154.94) (xy 198.12 154.94)
+			(xy 181.61 120.65) (xy 186.69 120.65)
 		)
 		(stroke
 			(width 0.1524)
@@ -12488,7 +11677,7 @@
 	)
 	(wire
 		(pts
-			(xy 353.06 165.1) (xy 355.6 165.1)
+			(xy 341.63 130.81) (xy 344.17 130.81)
 		)
 		(stroke
 			(width 0.1524)
@@ -12498,7 +11687,7 @@
 	)
 	(wire
 		(pts
-			(xy 411.48 190.5) (xy 414.02 190.5)
+			(xy 400.05 156.21) (xy 402.59 156.21)
 		)
 		(stroke
 			(width 0.1524)
@@ -12508,7 +11697,7 @@
 	)
 	(wire
 		(pts
-			(xy 203.2 114.3) (xy 193.04 114.3)
+			(xy 191.77 80.01) (xy 181.61 80.01)
 		)
 		(stroke
 			(width 0.1524)
@@ -12518,7 +11707,7 @@
 	)
 	(wire
 		(pts
-			(xy 210.82 210.82) (xy 210.82 231.14)
+			(xy 199.39 176.53) (xy 199.39 196.85)
 		)
 		(stroke
 			(width 0.1524)
@@ -12528,7 +11717,7 @@
 	)
 	(wire
 		(pts
-			(xy 226.06 139.7) (xy 241.3 139.7)
+			(xy 214.63 105.41) (xy 229.87 105.41)
 		)
 		(stroke
 			(width 0.1524)
@@ -12538,7 +11727,7 @@
 	)
 	(wire
 		(pts
-			(xy 345.44 68.58) (xy 340.36 68.58)
+			(xy 341.63 76.2) (xy 336.55 76.2)
 		)
 		(stroke
 			(width 0.1524)
@@ -12548,7 +11737,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 193.04) (xy 198.12 193.04)
+			(xy 181.61 158.75) (xy 186.69 158.75)
 		)
 		(stroke
 			(width 0.1524)
@@ -12558,7 +11747,7 @@
 	)
 	(polyline
 		(pts
-			(xy 190.5 256.54) (xy 190.5 271.78)
+			(xy 179.07 222.25) (xy 179.07 237.49)
 		)
 		(stroke
 			(width 0.1524)
@@ -12568,7 +11757,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 93.98) (xy 119.38 91.44)
+			(xy 107.95 59.69) (xy 107.95 57.15)
 		)
 		(stroke
 			(width 0.1524)
@@ -12578,7 +11767,7 @@
 	)
 	(wire
 		(pts
-			(xy 100.33 226.06) (xy 100.33 231.14)
+			(xy 88.9 191.77) (xy 88.9 196.85)
 		)
 		(stroke
 			(width 0.1524)
@@ -12588,7 +11777,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 109.22) (xy 203.2 109.22)
+			(xy 181.61 74.93) (xy 191.77 74.93)
 		)
 		(stroke
 			(width 0.1524)
@@ -12598,7 +11787,7 @@
 	)
 	(polyline
 		(pts
-			(xy 274.32 101.6) (xy 274.32 109.22)
+			(xy 262.89 67.31) (xy 262.89 74.93)
 		)
 		(stroke
 			(width 0.1524)
@@ -12608,7 +11797,7 @@
 	)
 	(wire
 		(pts
-			(xy 340.36 101.6) (xy 340.36 99.06)
+			(xy 336.55 109.22) (xy 336.55 106.68)
 		)
 		(stroke
 			(width 0.1524)
@@ -12618,7 +11807,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 119.38) (xy 121.92 119.38)
+			(xy 107.95 85.09) (xy 110.49 85.09)
 		)
 		(stroke
 			(width 0.1524)
@@ -12628,7 +11817,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 231.14) (xy 119.38 231.14)
+			(xy 110.49 196.85) (xy 107.95 196.85)
 		)
 		(stroke
 			(width 0.1524)
@@ -12638,7 +11827,7 @@
 	)
 	(wire
 		(pts
-			(xy 30.48 226.06) (xy 45.72 226.06)
+			(xy 19.05 191.77) (xy 34.29 191.77)
 		)
 		(stroke
 			(width 0.1524)
@@ -12648,7 +11837,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 220.98) (xy 119.38 220.98)
+			(xy 110.49 186.69) (xy 107.95 186.69)
 		)
 		(stroke
 			(width 0.1524)
@@ -12658,7 +11847,7 @@
 	)
 	(wire
 		(pts
-			(xy 215.9 231.14) (xy 215.9 236.22)
+			(xy 204.47 196.85) (xy 204.47 201.93)
 		)
 		(stroke
 			(width 0.1524)
@@ -12668,7 +11857,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 251.46) (xy 119.38 251.46)
+			(xy 110.49 217.17) (xy 107.95 217.17)
 		)
 		(stroke
 			(width 0.1524)
@@ -12678,7 +11867,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 210.82) (xy 198.12 208.28)
+			(xy 186.69 176.53) (xy 186.69 173.99)
 		)
 		(stroke
 			(width 0.1524)
@@ -12688,7 +11877,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 241.3) (xy 83.82 236.22)
+			(xy 72.39 207.01) (xy 72.39 201.93)
 		)
 		(stroke
 			(width 0.1524)
@@ -12698,7 +11887,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 218.44) (xy 119.38 218.44)
+			(xy 110.49 184.15) (xy 107.95 184.15)
 		)
 		(stroke
 			(width 0.1524)
@@ -12708,7 +11897,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 215.9) (xy 198.12 215.9)
+			(xy 181.61 181.61) (xy 186.69 181.61)
 		)
 		(stroke
 			(width 0.1524)
@@ -12718,7 +11907,7 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 167.64) (xy 259.08 154.94)
+			(xy 247.65 133.35) (xy 247.65 120.65)
 		)
 		(stroke
 			(width 0.1524)
@@ -12728,7 +11917,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 190.5) (xy 119.38 190.5)
+			(xy 110.49 156.21) (xy 107.95 156.21)
 		)
 		(stroke
 			(width 0.1524)
@@ -12738,7 +11927,7 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 236.22) (xy 58.42 236.22)
+			(xy 49.53 201.93) (xy 46.99 201.93)
 		)
 		(stroke
 			(width 0.1524)
@@ -12748,7 +11937,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 91.44) (xy 200.66 91.44)
+			(xy 181.61 57.15) (xy 189.23 57.15)
 		)
 		(stroke
 			(width 0.1524)
@@ -12758,7 +11947,7 @@
 	)
 	(polyline
 		(pts
-			(xy 93.98 261.62) (xy 93.98 246.38)
+			(xy 82.55 227.33) (xy 82.55 212.09)
 		)
 		(stroke
 			(width 0.1524)
@@ -12768,7 +11957,7 @@
 	)
 	(wire
 		(pts
-			(xy 30.48 198.12) (xy 45.72 198.12)
+			(xy 19.05 163.83) (xy 34.29 163.83)
 		)
 		(stroke
 			(width 0.1524)
@@ -12778,7 +11967,7 @@
 	)
 	(wire
 		(pts
-			(xy 340.36 93.98) (xy 340.36 91.44)
+			(xy 336.55 101.6) (xy 336.55 99.06)
 		)
 		(stroke
 			(width 0.1524)
@@ -12788,7 +11977,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 198.12) (xy 119.38 200.66)
+			(xy 107.95 163.83) (xy 107.95 166.37)
 		)
 		(stroke
 			(width 0.1524)
@@ -12798,7 +11987,7 @@
 	)
 	(wire
 		(pts
-			(xy 411.48 96.52) (xy 411.48 91.44)
+			(xy 407.67 104.14) (xy 407.67 99.06)
 		)
 		(stroke
 			(width 0.1524)
@@ -12808,7 +11997,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 195.58) (xy 198.12 195.58)
+			(xy 181.61 161.29) (xy 186.69 161.29)
 		)
 		(stroke
 			(width 0.1524)
@@ -12818,7 +12007,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 170.18) (xy 198.12 167.64)
+			(xy 186.69 135.89) (xy 186.69 133.35)
 		)
 		(stroke
 			(width 0.1524)
@@ -12828,7 +12017,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 198.12) (xy 119.38 198.12)
+			(xy 110.49 163.83) (xy 107.95 163.83)
 		)
 		(stroke
 			(width 0.1524)
@@ -12838,7 +12027,7 @@
 	)
 	(wire
 		(pts
-			(xy 345.44 71.12) (xy 340.36 71.12)
+			(xy 341.63 78.74) (xy 336.55 78.74)
 		)
 		(stroke
 			(width 0.1524)
@@ -12848,7 +12037,7 @@
 	)
 	(polyline
 		(pts
-			(xy 35.56 109.22) (xy 71.12 109.22)
+			(xy 24.13 74.93) (xy 59.69 74.93)
 		)
 		(stroke
 			(width 0.1524)
@@ -12858,7 +12047,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 106.68) (xy 119.38 104.14)
+			(xy 107.95 72.39) (xy 107.95 69.85)
 		)
 		(stroke
 			(width 0.1524)
@@ -12868,7 +12057,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 104.14) (xy 121.92 104.14)
+			(xy 107.95 69.85) (xy 110.49 69.85)
 		)
 		(stroke
 			(width 0.1524)
@@ -12878,7 +12067,7 @@
 	)
 	(wire
 		(pts
-			(xy 414.02 193.04) (xy 411.48 193.04)
+			(xy 402.59 158.75) (xy 400.05 158.75)
 		)
 		(stroke
 			(width 0.1524)
@@ -12888,7 +12077,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 218.44) (xy 119.38 220.98)
+			(xy 107.95 184.15) (xy 107.95 186.69)
 		)
 		(stroke
 			(width 0.1524)
@@ -12898,7 +12087,7 @@
 	)
 	(wire
 		(pts
-			(xy 411.48 86.36) (xy 406.4 86.36)
+			(xy 407.67 93.98) (xy 402.59 93.98)
 		)
 		(stroke
 			(width 0.1524)
@@ -12908,7 +12097,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 106.68) (xy 101.6 106.68)
+			(xy 107.95 72.39) (xy 90.17 72.39)
 		)
 		(stroke
 			(width 0.1524)
@@ -12918,7 +12107,7 @@
 	)
 	(wire
 		(pts
-			(xy 411.48 48.26) (xy 406.4 48.26)
+			(xy 407.67 55.88) (xy 402.59 55.88)
 		)
 		(stroke
 			(width 0.1524)
@@ -12928,7 +12117,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 226.06) (xy 90.17 226.06)
+			(xy 72.39 191.77) (xy 78.74 191.77)
 		)
 		(stroke
 			(width 0.1524)
@@ -12938,7 +12127,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 205.74) (xy 203.2 205.74)
+			(xy 186.69 171.45) (xy 191.77 171.45)
 		)
 		(stroke
 			(width 0.1524)
@@ -12948,7 +12137,7 @@
 	)
 	(wire
 		(pts
-			(xy 345.44 58.42) (xy 340.36 58.42)
+			(xy 341.63 66.04) (xy 336.55 66.04)
 		)
 		(stroke
 			(width 0.1524)
@@ -12958,7 +12147,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 182.88) (xy 198.12 182.88)
+			(xy 181.61 148.59) (xy 186.69 148.59)
 		)
 		(stroke
 			(width 0.1524)
@@ -12968,7 +12157,7 @@
 	)
 	(wire
 		(pts
-			(xy 104.14 251.46) (xy 104.14 254)
+			(xy 92.71 217.17) (xy 92.71 219.71)
 		)
 		(stroke
 			(width 0.1524)
@@ -12978,7 +12167,7 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 200.66) (xy 45.72 198.12)
+			(xy 34.29 166.37) (xy 34.29 163.83)
 		)
 		(stroke
 			(width 0.1524)
@@ -12988,7 +12177,7 @@
 	)
 	(wire
 		(pts
-			(xy 345.44 66.04) (xy 340.36 66.04)
+			(xy 341.63 73.66) (xy 336.55 73.66)
 		)
 		(stroke
 			(width 0.1524)
@@ -12998,7 +12187,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 228.6) (xy 119.38 231.14)
+			(xy 107.95 194.31) (xy 107.95 196.85)
 		)
 		(stroke
 			(width 0.1524)
@@ -13008,7 +12197,7 @@
 	)
 	(wire
 		(pts
-			(xy 203.2 109.22) (xy 203.2 106.68)
+			(xy 191.77 74.93) (xy 191.77 72.39)
 		)
 		(stroke
 			(width 0.1524)
@@ -13018,7 +12207,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 121.92) (xy 119.38 121.92)
+			(xy 110.49 87.63) (xy 107.95 87.63)
 		)
 		(stroke
 			(width 0.1524)
@@ -13028,7 +12217,7 @@
 	)
 	(wire
 		(pts
-			(xy 340.36 78.74) (xy 340.36 83.82)
+			(xy 336.55 86.36) (xy 336.55 91.44)
 		)
 		(stroke
 			(width 0.1524)
@@ -13038,7 +12227,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 160.02) (xy 198.12 160.02)
+			(xy 181.61 125.73) (xy 186.69 125.73)
 		)
 		(stroke
 			(width 0.1524)
@@ -13048,7 +12237,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 200.66) (xy 119.38 200.66)
+			(xy 110.49 166.37) (xy 107.95 166.37)
 		)
 		(stroke
 			(width 0.1524)
@@ -13058,7 +12247,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 109.22) (xy 119.38 109.22)
+			(xy 110.49 74.93) (xy 107.95 74.93)
 		)
 		(stroke
 			(width 0.1524)
@@ -13068,7 +12257,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 220.98) (xy 198.12 220.98)
+			(xy 181.61 186.69) (xy 186.69 186.69)
 		)
 		(stroke
 			(width 0.1524)
@@ -13078,7 +12267,7 @@
 	)
 	(polyline
 		(pts
-			(xy 60.96 63.5) (xy 60.96 73.66)
+			(xy 49.53 29.21) (xy 49.53 39.37)
 		)
 		(stroke
 			(width 0.1524)
@@ -13088,7 +12277,7 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 154.94) (xy 259.08 152.4)
+			(xy 247.65 120.65) (xy 247.65 118.11)
 		)
 		(stroke
 			(width 0.1524)
@@ -13098,7 +12287,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 208.28) (xy 198.12 205.74)
+			(xy 186.69 173.99) (xy 186.69 171.45)
 		)
 		(stroke
 			(width 0.1524)
@@ -13108,7 +12297,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 213.36) (xy 198.12 210.82)
+			(xy 186.69 179.07) (xy 186.69 176.53)
 		)
 		(stroke
 			(width 0.1524)
@@ -13118,7 +12307,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 182.88) (xy 119.38 182.88)
+			(xy 110.49 148.59) (xy 107.95 148.59)
 		)
 		(stroke
 			(width 0.1524)
@@ -13128,7 +12317,7 @@
 	)
 	(wire
 		(pts
-			(xy 215.9 243.84) (xy 215.9 241.3)
+			(xy 204.47 209.55) (xy 204.47 207.01)
 		)
 		(stroke
 			(width 0.1524)
@@ -13138,7 +12327,7 @@
 	)
 	(wire
 		(pts
-			(xy 340.36 99.06) (xy 340.36 96.52)
+			(xy 336.55 106.68) (xy 336.55 104.14)
 		)
 		(stroke
 			(width 0.1524)
@@ -13148,7 +12337,7 @@
 	)
 	(wire
 		(pts
-			(xy 411.48 58.42) (xy 411.48 60.96)
+			(xy 407.67 66.04) (xy 407.67 68.58)
 		)
 		(stroke
 			(width 0.1524)
@@ -13158,7 +12347,7 @@
 	)
 	(polyline
 		(pts
-			(xy 96.52 264.16) (xy 96.52 276.86)
+			(xy 85.09 229.87) (xy 85.09 242.57)
 		)
 		(stroke
 			(width 0.1524)
@@ -13167,7 +12356,7 @@
 		(uuid "fff0101a-467b-4b62-bdef-b92e7099c6c1")
 	)
 	(label "PMIC_PGOOD"
-		(at 193.04 238.76 0)
+		(at 181.61 204.47 0)
 		(effects
 			(font
 				(size 1.2446 1.2446)
@@ -13177,7 +12366,7 @@
 		(uuid "0d56c76b-813e-4786-8417-c39b55878b47")
 	)
 	(label "3.3VA"
-		(at 226.06 231.14 0)
+		(at 214.63 196.85 0)
 		(effects
 			(font
 				(size 1.2446 1.2446)
@@ -13188,7 +12377,7 @@
 	)
 	(global_label "I2C0_SDA"
 		(shape bidirectional)
-		(at 81.28 231.14 180)
+		(at 69.85 196.85 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13198,7 +12387,7 @@
 		)
 		(uuid "2b4b94f0-5d80-4420-8d9b-dc22afbd2057")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 72.2319 231.14 0)
+			(at 60.8019 196.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13210,7 +12399,7 @@
 	)
 	(global_label "I2C0_SCL"
 		(shape bidirectional)
-		(at 83.82 217.17 180)
+		(at 72.39 182.88 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13220,7 +12409,7 @@
 		)
 		(uuid "6801c433-5414-407c-a41d-0128c2d75737")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 74.8142 217.17 0)
+			(at 63.3842 182.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13232,7 +12421,7 @@
 	)
 	(global_label "RESET#"
 		(shape bidirectional)
-		(at 200.66 251.46 0)
+		(at 189.23 217.17 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13242,7 +12431,7 @@
 		)
 		(uuid "7556b4cc-6d43-43d7-b3cd-72c45fbee268")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 211.5492 251.46 0)
+			(at 200.1192 217.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13254,7 +12443,7 @@
 	)
 	(global_label "VIN_USB"
 		(shape bidirectional)
-		(at 91.44 106.68 180)
+		(at 80.01 72.39 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13264,7 +12453,7 @@
 		)
 		(uuid "c349caea-5b73-403b-a43c-45ba015dab61")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 79.7803 106.68 0)
+			(at 68.3503 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13276,7 +12465,7 @@
 	)
 	(global_label "EEPROM_WP"
 		(shape bidirectional)
-		(at 81.28 241.3 180)
+		(at 69.85 207.01 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13286,7 +12475,7 @@
 		)
 		(uuid "ee558498-31f4-4a6a-b908-5b45e0dcf71f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 70.4964 241.3 0)
+			(at 59.0664 207.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13297,71 +12486,8 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-card-eagle-import:frames_229_FRAME_B_L")
-		(at 342.9 297.18 0)
-		(unit 2)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "055e40de-b7a2-48d6-93c7-2d96f8399979")
-		(property "Reference" "#FRAME5"
-			(at 342.9 297.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "FRAME_B_L"
-			(at 342.9 297.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 342.9 297.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 342.9 297.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 342.9 297.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project ""
-				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/27f3aeed-347f-4362-9166-18725d92163b"
-					(reference "#FRAME5")
-					(unit 2)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "star-tracker-card-eagle-import:LED-GREEN0603")
-		(at 226.06 114.3 90)
+		(at 214.63 80.01 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13369,7 +12495,7 @@
 		(dnp no)
 		(uuid "060ba803-71a0-4bae-94fd-3f4e428af7b0")
 		(property "Reference" "D1"
-			(at 230.632 117.729 90)
+			(at 219.202 83.439 90)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -13378,7 +12504,7 @@
 			)
 		)
 		(property "Value" "GREEN"
-			(at 230.632 112.395 90)
+			(at 219.202 78.105 90)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -13387,7 +12513,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:LED-0603"
-			(at 226.06 114.3 0)
+			(at 214.63 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13396,7 +12522,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 226.06 114.3 0)
+			(at 214.63 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13405,7 +12531,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 226.06 114.3 0)
+			(at 214.63 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13430,7 +12556,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:C-EU0603-A")
-		(at 30.48 213.36 0)
+		(at 19.05 179.07 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13438,7 +12564,7 @@
 		(dnp no)
 		(uuid "0715a5eb-5256-40ee-b2ec-31b35284217c")
 		(property "Reference" "C41"
-			(at 31.496 212.725 0)
+			(at 20.066 178.435 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -13447,7 +12573,7 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 31.496 217.551 0)
+			(at 20.066 183.261 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -13456,7 +12582,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:.0603-A"
-			(at 30.48 213.36 0)
+			(at 19.05 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13465,7 +12591,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 30.48 213.36 0)
+			(at 19.05 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13474,7 +12600,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 30.48 213.36 0)
+			(at 19.05 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13499,7 +12625,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
-		(at 203.2 154.94 90)
+		(at 191.77 120.65 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13507,7 +12633,7 @@
 		(dnp no)
 		(uuid "07736337-cbc2-4675-8d39-4f6a14ddc0ad")
 		(property "Reference" "TP165"
-			(at 207.645 155.575 0)
+			(at 196.215 121.285 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -13516,7 +12642,7 @@
 			)
 		)
 		(property "Value" "TEST-POINT3X4"
-			(at 205.74 157.48 0)
+			(at 194.31 123.19 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -13526,7 +12652,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 203.2 154.94 0)
+			(at 191.77 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13535,7 +12661,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 203.2 154.94 0)
+			(at 191.77 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13544,7 +12670,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 203.2 154.94 0)
+			(at 191.77 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13566,7 +12692,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:RCLAMP0504FB")
-		(at 45.72 210.82 0)
+		(at 34.29 176.53 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -13575,7 +12701,7 @@
 		(dnp no)
 		(uuid "0833c788-afa3-4289-b71c-8dd63e98d5ad")
 		(property "Reference" "U18"
-			(at 55.88 198.12 0)
+			(at 44.45 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.0795)
@@ -13584,7 +12710,7 @@
 			)
 		)
 		(property "Value" "RCLAMP0504FB"
-			(at 55.88 200.66 0)
+			(at 44.45 166.37 0)
 			(effects
 				(font
 					(size 1.27 1.0795)
@@ -13593,7 +12719,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:SC70-6"
-			(at 45.72 210.82 0)
+			(at 34.29 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13602,7 +12728,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 45.72 210.82 0)
+			(at 34.29 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13611,7 +12737,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 45.72 210.82 0)
+			(at 34.29 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13648,7 +12774,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:GND")
-		(at 208.28 101.6 0)
+		(at 196.85 67.31 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13656,7 +12782,7 @@
 		(dnp no)
 		(uuid "0840bf8f-4110-4af2-a325-a188b1b3fffc")
 		(property "Reference" "#GND75"
-			(at 208.28 101.6 0)
+			(at 196.85 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13665,7 +12791,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 208.28 101.854 0)
+			(at 196.85 67.564 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -13674,7 +12800,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 208.28 101.6 0)
+			(at 196.85 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13683,7 +12809,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 208.28 101.6 0)
+			(at 196.85 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13692,7 +12818,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 208.28 101.6 0)
+			(at 196.85 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13714,7 +12840,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:R-US_0603-A")
-		(at 213.36 114.3 0)
+		(at 201.93 80.01 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13722,7 +12848,7 @@
 		(dnp no)
 		(uuid "0b344654-47d6-462a-83ae-905d740cf688")
 		(property "Reference" "R1"
-			(at 209.55 112.8014 0)
+			(at 198.12 78.5114 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -13731,7 +12857,7 @@
 			)
 		)
 		(property "Value" "1k"
-			(at 209.55 117.602 0)
+			(at 198.12 83.312 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -13740,7 +12866,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:.0603-A"
-			(at 213.36 114.3 0)
+			(at 201.93 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13749,7 +12875,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 213.36 114.3 0)
+			(at 201.93 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13758,7 +12884,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 213.36 114.3 0)
+			(at 201.93 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13783,7 +12909,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:R-US_0603-A")
-		(at 241.3 172.72 270)
+		(at 229.87 138.43 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13791,7 +12917,7 @@
 		(dnp no)
 		(uuid "0b8083d5-5c9e-4490-84f4-493fecfeb334")
 		(property "Reference" "R23"
-			(at 238.76 172.72 90)
+			(at 227.33 138.43 90)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -13800,7 +12926,7 @@
 			)
 		)
 		(property "Value" "499"
-			(at 238.76 175.26 90)
+			(at 227.33 140.97 90)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -13809,7 +12935,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:.0603-A"
-			(at 241.3 172.72 0)
+			(at 229.87 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13818,7 +12944,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 241.3 172.72 0)
+			(at 229.87 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13827,7 +12953,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 241.3 172.72 0)
+			(at 229.87 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13852,7 +12978,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:C-EUC1210")
-		(at 96.52 91.44 0)
+		(at 85.09 57.15 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13860,7 +12986,7 @@
 		(dnp no)
 		(uuid "0f77687a-ede4-488e-b0d6-347422e16189")
 		(property "Reference" "C14"
-			(at 94.996 94.361 0)
+			(at 83.566 60.071 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -13869,7 +12995,7 @@
 			)
 		)
 		(property "Value" "22uF"
-			(at 94.996 96.901 0)
+			(at 83.566 62.611 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -13878,7 +13004,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:C1210"
-			(at 96.52 91.44 0)
+			(at 85.09 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13887,7 +13013,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 96.52 91.44 0)
+			(at 85.09 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13896,7 +13022,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 96.52 91.44 0)
+			(at 85.09 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13921,7 +13047,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
-		(at 198.12 106.68 90)
+		(at 186.69 72.39 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13929,7 +13055,7 @@
 		(dnp no)
 		(uuid "13028a5c-4ec2-4f26-8f3c-071492e02953")
 		(property "Reference" "TP25"
-			(at 201.93 105.41 0)
+			(at 190.5 71.12 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -13938,7 +13064,7 @@
 			)
 		)
 		(property "Value" "TEST-POINT3X4"
-			(at 200.66 109.22 0)
+			(at 189.23 74.93 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -13948,7 +13074,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 198.12 106.68 0)
+			(at 186.69 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13957,7 +13083,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 198.12 106.68 0)
+			(at 186.69 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13966,7 +13092,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 198.12 106.68 0)
+			(at 186.69 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13988,7 +13114,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:GND")
-		(at 236.22 243.84 0)
+		(at 224.79 209.55 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13996,7 +13122,7 @@
 		(dnp no)
 		(uuid "144e244f-bf31-48d9-81bf-56dbc556ed47")
 		(property "Reference" "#GND72"
-			(at 236.22 243.84 0)
+			(at 224.79 209.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14005,7 +13131,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 236.22 246.634 0)
+			(at 224.79 212.344 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -14014,7 +13140,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 236.22 243.84 0)
+			(at 224.79 209.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14023,7 +13149,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 236.22 243.84 0)
+			(at 224.79 209.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14032,7 +13158,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 236.22 243.84 0)
+			(at 224.79 209.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14054,7 +13180,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:C-EUC1210")
-		(at 101.6 109.22 0)
+		(at 90.17 74.93 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14062,7 +13188,7 @@
 		(dnp no)
 		(uuid "14effe20-47af-456f-88d5-5675b5ed46fd")
 		(property "Reference" "C13"
-			(at 92.964 111.379 0)
+			(at 81.534 77.089 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -14071,7 +13197,7 @@
 			)
 		)
 		(property "Value" "22uF"
-			(at 92.964 113.919 0)
+			(at 81.534 79.629 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -14080,7 +13206,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:C1210"
-			(at 101.6 109.22 0)
+			(at 90.17 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14089,7 +13215,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 101.6 109.22 0)
+			(at 90.17 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14098,7 +13224,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 101.6 109.22 0)
+			(at 90.17 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14123,7 +13249,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
-		(at 353.06 175.26 180)
+		(at 341.63 140.97 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14131,7 +13257,7 @@
 		(dnp no)
 		(uuid "157d1afc-f3f7-422b-88c3-3d11d1935251")
 		(property "Reference" "TP160"
-			(at 348.488 174.498 0)
+			(at 337.058 140.208 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -14140,7 +13266,7 @@
 			)
 		)
 		(property "Value" "TEST-POINT3X4"
-			(at 355.6 172.72 0)
+			(at 344.17 138.43 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -14150,7 +13276,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 353.06 175.26 0)
+			(at 341.63 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14159,7 +13285,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 353.06 175.26 0)
+			(at 341.63 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14168,7 +13294,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 353.06 175.26 0)
+			(at 341.63 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14190,7 +13316,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
-		(at 93.98 132.08 90)
+		(at 82.55 97.79 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14198,7 +13324,7 @@
 		(dnp no)
 		(uuid "1601be6b-00f0-49ef-899c-7788ef402cef")
 		(property "Reference" "TP129"
-			(at 93.726 126.746 0)
+			(at 82.296 92.456 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -14207,7 +13333,7 @@
 			)
 		)
 		(property "Value" "TEST-POINT3X4"
-			(at 96.52 134.62 0)
+			(at 85.09 100.33 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -14217,7 +13343,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 93.98 132.08 0)
+			(at 82.55 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14226,7 +13352,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 93.98 132.08 0)
+			(at 82.55 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14235,7 +13361,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 93.98 132.08 0)
+			(at 82.55 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14257,7 +13383,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
-		(at 198.12 124.46 90)
+		(at 186.69 90.17 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14265,7 +13391,7 @@
 		(dnp no)
 		(uuid "18f144a9-5695-4719-ac3f-9e2c9d593c91")
 		(property "Reference" "TP161"
-			(at 201.93 123.19 0)
+			(at 190.5 88.9 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -14274,7 +13400,7 @@
 			)
 		)
 		(property "Value" "TEST-POINT3X4"
-			(at 200.66 127 0)
+			(at 189.23 92.71 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -14284,7 +13410,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 198.12 124.46 0)
+			(at 186.69 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14293,7 +13419,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 198.12 124.46 0)
+			(at 186.69 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14302,7 +13428,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 198.12 124.46 0)
+			(at 186.69 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14324,7 +13450,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:R-US_0603-A")
-		(at 259.08 172.72 270)
+		(at 247.65 138.43 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14332,7 +13458,7 @@
 		(dnp no)
 		(uuid "2b802dd1-fa64-4d9b-82e9-18ad3ea43184")
 		(property "Reference" "R28"
-			(at 256.54 172.72 90)
+			(at 245.11 138.43 90)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -14341,7 +13467,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 256.54 175.26 90)
+			(at 245.11 140.97 90)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -14350,7 +13476,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:.0603-A"
-			(at 259.08 172.72 0)
+			(at 247.65 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14359,7 +13485,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 259.08 172.72 0)
+			(at 247.65 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14368,7 +13494,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 259.08 172.72 0)
+			(at 247.65 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14393,7 +13519,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
-		(at 203.2 205.74 90)
+		(at 191.77 171.45 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14401,7 +13527,7 @@
 		(dnp no)
 		(uuid "2dd4267f-e234-47b4-a095-a0513744f457")
 		(property "Reference" "TP163"
-			(at 208.28 205.74 0)
+			(at 196.85 171.45 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -14410,7 +13536,7 @@
 			)
 		)
 		(property "Value" "TEST-POINT3X4"
-			(at 205.74 208.28 0)
+			(at 194.31 173.99 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -14420,7 +13546,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 203.2 205.74 0)
+			(at 191.77 171.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14429,7 +13555,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 203.2 205.74 0)
+			(at 191.77 171.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14438,7 +13564,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 203.2 205.74 0)
+			(at 191.77 171.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14460,7 +13586,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:R-US_0603-A")
-		(at 259.08 147.32 270)
+		(at 247.65 113.03 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14468,7 +13594,7 @@
 		(dnp no)
 		(uuid "30985961-3361-4b11-9a81-ad60cce204a7")
 		(property "Reference" "R31"
-			(at 256.54 142.24 90)
+			(at 245.11 107.95 90)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -14477,7 +13603,7 @@
 			)
 		)
 		(property "Value" "40.2K"
-			(at 256.54 144.78 90)
+			(at 245.11 110.49 90)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -14486,7 +13612,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:.0603-A"
-			(at 259.08 147.32 0)
+			(at 247.65 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14495,7 +13621,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 259.08 147.32 0)
+			(at 247.65 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14504,7 +13630,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 259.08 147.32 0)
+			(at 247.65 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14529,7 +13655,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
-		(at 198.12 88.9 90)
+		(at 186.69 54.61 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14537,7 +13663,7 @@
 		(dnp no)
 		(uuid "3178c4b0-3ee7-4105-b7db-076e4a2ae10a")
 		(property "Reference" "TP3"
-			(at 198.755 85.09 0)
+			(at 187.325 50.8 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -14546,7 +13672,7 @@
 			)
 		)
 		(property "Value" "TEST-POINT3X4"
-			(at 200.66 91.44 0)
+			(at 189.23 57.15 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -14556,7 +13682,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 198.12 88.9 0)
+			(at 186.69 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14565,7 +13691,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 198.12 88.9 0)
+			(at 186.69 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14574,7 +13700,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 198.12 88.9 0)
+			(at 186.69 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14596,7 +13722,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
-		(at 83.82 210.82 90)
+		(at 72.39 176.53 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14604,7 +13730,7 @@
 		(dnp no)
 		(uuid "322837b7-ae93-48ef-ba58-99d14dc483fb")
 		(property "Reference" "TP155"
-			(at 81.915 208.28 0)
+			(at 70.485 173.99 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -14613,7 +13739,7 @@
 			)
 		)
 		(property "Value" "TEST-POINT3X4"
-			(at 86.36 213.36 0)
+			(at 74.93 179.07 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -14623,7 +13749,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 83.82 210.82 0)
+			(at 72.39 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14632,7 +13758,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 83.82 210.82 0)
+			(at 72.39 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14641,7 +13767,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 83.82 210.82 0)
+			(at 72.39 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14663,7 +13789,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
-		(at 353.06 190.5 180)
+		(at 341.63 156.21 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14671,7 +13797,7 @@
 		(dnp no)
 		(uuid "3236715f-565c-4c43-afbc-9b34f4906a6a")
 		(property "Reference" "TP173"
-			(at 348.488 189.738 0)
+			(at 337.058 155.448 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -14680,7 +13806,7 @@
 			)
 		)
 		(property "Value" "TEST-POINT3X4"
-			(at 355.6 187.96 0)
+			(at 344.17 153.67 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -14690,7 +13816,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 353.06 190.5 0)
+			(at 341.63 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14699,7 +13825,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 353.06 190.5 0)
+			(at 341.63 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14708,7 +13834,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 353.06 190.5 0)
+			(at 341.63 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14730,7 +13856,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
-		(at 353.06 170.18 180)
+		(at 341.63 135.89 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14738,7 +13864,7 @@
 		(dnp no)
 		(uuid "3594ba74-32ca-4c75-8d2c-7553c3a266b8")
 		(property "Reference" "TP154"
-			(at 348.488 169.418 0)
+			(at 337.058 135.128 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -14747,7 +13873,7 @@
 			)
 		)
 		(property "Value" "TEST-POINT3X4"
-			(at 355.6 167.64 0)
+			(at 344.17 133.35 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -14757,7 +13883,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 353.06 170.18 0)
+			(at 341.63 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14766,7 +13892,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 353.06 170.18 0)
+			(at 341.63 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14775,7 +13901,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 353.06 170.18 0)
+			(at 341.63 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14797,7 +13923,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:3.3VA")
-		(at 236.22 205.74 0)
+		(at 224.79 171.45 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14805,7 +13931,7 @@
 		(dnp no)
 		(uuid "39899c3b-a173-4e01-899a-ba8c15d4cf57")
 		(property "Reference" "#3.3VA1"
-			(at 236.22 205.74 0)
+			(at 224.79 171.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14814,7 +13940,7 @@
 			)
 		)
 		(property "Value" "3.3VA"
-			(at 236.22 205.486 0)
+			(at 224.79 171.196 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -14823,7 +13949,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 236.22 205.74 0)
+			(at 224.79 171.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14832,7 +13958,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 236.22 205.74 0)
+			(at 224.79 171.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14841,7 +13967,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 236.22 205.74 0)
+			(at 224.79 171.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14863,7 +13989,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
-		(at 116.84 124.46 90)
+		(at 105.41 90.17 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14871,7 +13997,7 @@
 		(dnp no)
 		(uuid "3a4764f6-b6a1-4e2c-be9e-dc23d02efebf")
 		(property "Reference" "TP4"
-			(at 117.602 120.142 0)
+			(at 106.172 85.852 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -14880,7 +14006,7 @@
 			)
 		)
 		(property "Value" "TEST-POINT3X4"
-			(at 119.38 127 0)
+			(at 107.95 92.71 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -14890,7 +14016,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 116.84 124.46 0)
+			(at 105.41 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14899,7 +14025,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 116.84 124.46 0)
+			(at 105.41 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14908,7 +14034,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 116.84 124.46 0)
+			(at 105.41 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14930,7 +14056,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
-		(at 114.3 185.42 90)
+		(at 102.87 151.13 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14938,7 +14064,7 @@
 		(dnp no)
 		(uuid "3a61107d-9de0-46c2-967a-9c9688590c97")
 		(property "Reference" "TP121"
-			(at 112.395 186.69 0)
+			(at 100.965 152.4 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -14947,7 +14073,7 @@
 			)
 		)
 		(property "Value" "TEST-POINT3X4"
-			(at 116.84 187.96 0)
+			(at 105.41 153.67 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -14957,7 +14083,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 114.3 185.42 0)
+			(at 102.87 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14966,7 +14092,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 114.3 185.42 0)
+			(at 102.87 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14975,7 +14101,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 114.3 185.42 0)
+			(at 102.87 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14997,7 +14123,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:C-EUC1210")
-		(at 208.28 91.44 0)
+		(at 196.85 57.15 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15005,7 +14131,7 @@
 		(dnp no)
 		(uuid "4618250f-e699-4767-84d0-73d77f52c676")
 		(property "Reference" "C15"
-			(at 211.836 91.059 0)
+			(at 200.406 56.769 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -15014,7 +14140,7 @@
 			)
 		)
 		(property "Value" "22uF"
-			(at 211.836 94.361 0)
+			(at 200.406 60.071 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -15023,7 +14149,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:C1210"
-			(at 208.28 91.44 0)
+			(at 196.85 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15032,7 +14158,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 208.28 91.44 0)
+			(at 196.85 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15041,7 +14167,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 208.28 91.44 0)
+			(at 196.85 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15066,7 +14192,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:5V")
-		(at 58.42 86.36 0)
+		(at 46.99 52.07 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15074,7 +14200,7 @@
 		(dnp no)
 		(uuid "4d34ba57-3b38-4f8f-ab20-c0712b004aff")
 		(property "Reference" "#3V-26"
-			(at 58.42 86.36 0)
+			(at 46.99 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15083,7 +14209,7 @@
 			)
 		)
 		(property "Value" "5V"
-			(at 57.785 85.725 0)
+			(at 46.355 51.435 0)
 			(effects
 				(font
 					(size 1.27 1.0795)
@@ -15092,7 +14218,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 58.42 86.36 0)
+			(at 46.99 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15101,7 +14227,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 58.42 86.36 0)
+			(at 46.99 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15110,7 +14236,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 58.42 86.36 0)
+			(at 46.99 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15132,7 +14258,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:SN74LVC1G07DCK")
-		(at 215.9 238.76 0)
+		(at 204.47 204.47 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15140,7 +14266,7 @@
 		(dnp no)
 		(uuid "531c079e-9401-4d4a-a88a-22c5a90fe04d")
 		(property "Reference" "U4"
-			(at 217.678 242.062 0)
+			(at 206.248 207.772 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -15149,7 +14275,7 @@
 			)
 		)
 		(property "Value" "SN74LVC1G07DCK"
-			(at 217.678 244.094 0)
+			(at 206.248 209.804 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -15158,7 +14284,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:C70(TI-DCK)"
-			(at 215.9 238.76 0)
+			(at 204.47 204.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15167,7 +14293,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 215.9 238.76 0)
+			(at 204.47 204.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15176,7 +14302,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 215.9 238.76 0)
+			(at 204.47 204.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15207,7 +14333,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:VDD")
-		(at 203.2 81.28 0)
+		(at 191.77 46.99 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15215,7 +14341,7 @@
 		(dnp no)
 		(uuid "5341586f-ecef-4e50-83cb-45889aa87773")
 		(property "Reference" "#SUPPLY3"
-			(at 203.2 81.28 0)
+			(at 191.77 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15224,7 +14350,7 @@
 			)
 		)
 		(property "Value" "VDD"
-			(at 203.2 78.486 0)
+			(at 191.77 44.196 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -15233,7 +14359,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 203.2 81.28 0)
+			(at 191.77 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15242,7 +14368,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 203.2 81.28 0)
+			(at 191.77 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15251,7 +14377,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 203.2 81.28 0)
+			(at 191.77 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15273,7 +14399,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:OSD3358-512M-BSM")
-		(at 157.48 167.64 0)
+		(at 146.05 133.35 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15281,7 +14407,7 @@
 		(dnp no)
 		(uuid "53c94193-be0b-428b-b9ee-b858c0b063f2")
 		(property "Reference" "U7"
-			(at 127 76.2 0)
+			(at 115.57 41.91 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -15290,7 +14416,7 @@
 			)
 		)
 		(property "Value" "OSD3358-512M-BSM"
-			(at 127 81.28 0)
+			(at 115.57 46.99 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -15299,7 +14425,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:OSD335X-BGA-256"
-			(at 157.48 167.64 0)
+			(at 146.05 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15308,7 +14434,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 157.48 167.64 0)
+			(at 146.05 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15317,7 +14443,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 157.48 167.64 0)
+			(at 146.05 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16104,7 +15230,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
-		(at 353.06 180.34 180)
+		(at 341.63 146.05 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -16112,7 +15238,7 @@
 		(dnp no)
 		(uuid "58227afe-1142-4c94-b517-a35595a4322d")
 		(property "Reference" "TP166"
-			(at 348.488 179.578 0)
+			(at 337.058 145.288 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -16121,7 +15247,7 @@
 			)
 		)
 		(property "Value" "TEST-POINT3X4"
-			(at 355.6 177.8 0)
+			(at 344.17 143.51 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -16131,7 +15257,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 353.06 180.34 0)
+			(at 341.63 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16140,7 +15266,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 353.06 180.34 0)
+			(at 341.63 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16149,7 +15275,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 353.06 180.34 0)
+			(at 341.63 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16171,7 +15297,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
-		(at 414.02 193.04 0)
+		(at 402.59 158.75 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -16179,7 +15305,7 @@
 		(dnp no)
 		(uuid "5f642010-aab7-45f1-8efc-6ad0e04def01")
 		(property "Reference" "TP150"
-			(at 418.592 193.802 0)
+			(at 407.162 159.512 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -16188,7 +15314,7 @@
 			)
 		)
 		(property "Value" "TEST-POINT3X4"
-			(at 411.48 195.58 0)
+			(at 400.05 161.29 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -16198,7 +15324,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 414.02 193.04 0)
+			(at 402.59 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16207,7 +15333,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 414.02 193.04 0)
+			(at 402.59 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16216,7 +15342,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 414.02 193.04 0)
+			(at 402.59 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16238,7 +15364,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:GND")
-		(at 215.9 246.38 0)
+		(at 204.47 212.09 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -16246,7 +15372,7 @@
 		(dnp no)
 		(uuid "6155a0d3-d0b4-48d8-a603-674f0b30698d")
 		(property "Reference" "#GND70"
-			(at 215.9 246.38 0)
+			(at 204.47 212.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16255,7 +15381,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 215.9 246.634 0)
+			(at 204.47 212.344 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -16264,7 +15390,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 215.9 246.38 0)
+			(at 204.47 212.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16273,7 +15399,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 215.9 246.38 0)
+			(at 204.47 212.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16282,7 +15408,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 215.9 246.38 0)
+			(at 204.47 212.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16304,7 +15430,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
-		(at 203.2 139.7 90)
+		(at 191.77 105.41 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -16312,7 +15438,7 @@
 		(dnp no)
 		(uuid "731fc2af-e5e8-4c11-8a57-81f80afb7596")
 		(property "Reference" "TP164"
-			(at 207.01 139.065 0)
+			(at 195.58 104.775 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -16321,7 +15447,7 @@
 			)
 		)
 		(property "Value" "TEST-POINT3X4"
-			(at 205.74 142.24 0)
+			(at 194.31 107.95 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -16331,7 +15457,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 203.2 139.7 0)
+			(at 191.77 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16340,7 +15466,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 203.2 139.7 0)
+			(at 191.77 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16349,7 +15475,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 203.2 139.7 0)
+			(at 191.77 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16371,7 +15497,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:OSD3358-512M-BSM")
-		(at 383.54 185.42 0)
+		(at 372.11 151.13 0)
 		(unit 6)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -16379,7 +15505,7 @@
 		(dnp no)
 		(uuid "734d23b7-392c-416d-860e-0ca98ff05d31")
 		(property "Reference" "U7"
-			(at 363.22 157.48 0)
+			(at 351.79 123.19 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -16388,7 +15514,7 @@
 			)
 		)
 		(property "Value" "OSD3358-512M-BSM"
-			(at 383.54 187.96 0)
+			(at 372.11 153.67 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -16397,7 +15523,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:OSD335X-BGA-256"
-			(at 383.54 185.42 0)
+			(at 372.11 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16406,7 +15532,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 383.54 185.42 0)
+			(at 372.11 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16415,7 +15541,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 383.54 185.42 0)
+			(at 372.11 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17202,7 +16328,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
-		(at 215.9 228.6 90)
+		(at 204.47 194.31 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -17210,7 +16336,7 @@
 		(dnp no)
 		(uuid "7ad8125f-6346-45b5-8856-e7f08a1d8ebe")
 		(property "Reference" "TP14"
-			(at 220.98 228.6 0)
+			(at 209.55 194.31 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -17219,7 +16345,7 @@
 			)
 		)
 		(property "Value" "TEST-POINT3X4"
-			(at 218.44 231.14 0)
+			(at 207.01 196.85 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -17229,7 +16355,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 215.9 228.6 0)
+			(at 204.47 194.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17238,7 +16364,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 215.9 228.6 0)
+			(at 204.47 194.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17247,7 +16373,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 215.9 228.6 0)
+			(at 204.47 194.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17269,7 +16395,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:OSD3358-512M-BSM")
-		(at 375.92 71.12 0)
+		(at 372.11 78.74 0)
 		(unit 5)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -17277,7 +16403,7 @@
 		(dnp no)
 		(uuid "81553201-39e3-4dc0-9521-6cf700827b75")
 		(property "Reference" "U7"
-			(at 353.06 35.56 0)
+			(at 349.25 43.18 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -17286,7 +16412,7 @@
 			)
 		)
 		(property "Value" "OSD3358-512M-BSM"
-			(at 375.92 73.66 0)
+			(at 372.11 81.28 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -17295,7 +16421,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:OSD335X-BGA-256"
-			(at 375.92 71.12 0)
+			(at 372.11 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17304,7 +16430,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 375.92 71.12 0)
+			(at 372.11 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17313,7 +16439,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 375.92 71.12 0)
+			(at 372.11 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18100,7 +17226,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
-		(at 205.74 238.76 90)
+		(at 194.31 204.47 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -18108,7 +17234,7 @@
 		(dnp no)
 		(uuid "86104f9e-1107-4434-a7e8-29c2880fe73e")
 		(property "Reference" "TP110"
-			(at 202.438 242.062 90)
+			(at 191.008 207.772 90)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -18117,7 +17243,7 @@
 			)
 		)
 		(property "Value" "TEST-POINT3X4"
-			(at 208.28 241.3 0)
+			(at 196.85 207.01 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -18127,7 +17253,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 205.74 238.76 0)
+			(at 194.31 204.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18136,7 +17262,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 205.74 238.76 0)
+			(at 194.31 204.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18145,7 +17271,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 205.74 238.76 0)
+			(at 194.31 204.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18167,7 +17293,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:R-US_0603-A")
-		(at 95.25 226.06 0)
+		(at 83.82 191.77 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -18175,7 +17301,7 @@
 		(dnp no)
 		(uuid "890a487e-2a26-4a10-b2f3-4ccd037d8469")
 		(property "Reference" "R74"
-			(at 91.44 224.79 0)
+			(at 80.01 190.5 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -18184,7 +17310,7 @@
 			)
 		)
 		(property "Value" "100"
-			(at 97.79 224.79 0)
+			(at 86.36 190.5 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -18193,7 +17319,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:.0603-A"
-			(at 95.25 226.06 0)
+			(at 83.82 191.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18202,7 +17328,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 95.25 226.06 0)
+			(at 83.82 191.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18211,7 +17337,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 95.25 226.06 0)
+			(at 83.82 191.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18236,7 +17362,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:GND")
-		(at 96.52 101.6 0)
+		(at 85.09 67.31 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -18244,7 +17370,7 @@
 		(dnp no)
 		(uuid "8a2cf3a2-90c8-4efa-9701-38c6706fb673")
 		(property "Reference" "#GND66"
-			(at 96.52 101.6 0)
+			(at 85.09 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18253,7 +17379,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 96.52 101.854 0)
+			(at 85.09 67.564 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -18262,7 +17388,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 96.52 101.6 0)
+			(at 85.09 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18271,7 +17397,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 96.52 101.6 0)
+			(at 85.09 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18280,7 +17406,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 96.52 101.6 0)
+			(at 85.09 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18302,7 +17428,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
-		(at 114.3 172.72 90)
+		(at 102.87 138.43 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -18310,7 +17436,7 @@
 		(dnp no)
 		(uuid "9126c118-73f3-4e75-a746-9ac7fbd0b2b0")
 		(property "Reference" "TP102"
-			(at 112.395 173.99 0)
+			(at 100.965 139.7 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -18319,7 +17445,7 @@
 			)
 		)
 		(property "Value" "TEST-POINT3X4"
-			(at 116.84 175.26 0)
+			(at 105.41 140.97 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -18329,7 +17455,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 114.3 172.72 0)
+			(at 102.87 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18338,7 +17464,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 114.3 172.72 0)
+			(at 102.87 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18347,7 +17473,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 114.3 172.72 0)
+			(at 102.87 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18369,7 +17495,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
-		(at 114.3 162.56 90)
+		(at 102.87 128.27 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -18377,7 +17503,7 @@
 		(dnp no)
 		(uuid "98598c3f-4750-4067-9d39-ce8fe294fc82")
 		(property "Reference" "TP136"
-			(at 112.395 163.83 0)
+			(at 100.965 129.54 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -18386,7 +17512,7 @@
 			)
 		)
 		(property "Value" "TEST-POINT3X4"
-			(at 116.84 165.1 0)
+			(at 105.41 130.81 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -18396,7 +17522,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 114.3 162.56 0)
+			(at 102.87 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18405,7 +17531,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 114.3 162.56 0)
+			(at 102.87 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18414,7 +17540,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 114.3 162.56 0)
+			(at 102.87 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18436,7 +17562,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
-		(at 114.3 208.28 90)
+		(at 102.87 173.99 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -18444,7 +17570,7 @@
 		(dnp no)
 		(uuid "99349415-3a84-42c3-8b94-888ddd97e27f")
 		(property "Reference" "TP167"
-			(at 112.395 209.55 0)
+			(at 100.965 175.26 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -18453,7 +17579,7 @@
 			)
 		)
 		(property "Value" "TEST-POINT3X4"
-			(at 116.84 210.82 0)
+			(at 105.41 176.53 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -18463,7 +17589,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 114.3 208.28 0)
+			(at 102.87 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18472,7 +17598,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 114.3 208.28 0)
+			(at 102.87 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18481,7 +17607,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 114.3 208.28 0)
+			(at 102.87 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18503,7 +17629,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:R-US_0603-A")
-		(at 95.25 220.98 0)
+		(at 83.82 186.69 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -18511,7 +17637,7 @@
 		(dnp no)
 		(uuid "a0e7efa0-20ce-4245-9a9b-dc120630c3d9")
 		(property "Reference" "R73"
-			(at 91.44 219.71 0)
+			(at 80.01 185.42 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -18520,7 +17646,7 @@
 			)
 		)
 		(property "Value" "100"
-			(at 97.79 219.71 0)
+			(at 86.36 185.42 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -18529,7 +17655,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:.0603-A"
-			(at 95.25 220.98 0)
+			(at 83.82 186.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18538,7 +17664,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 95.25 220.98 0)
+			(at 83.82 186.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18547,7 +17673,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 95.25 220.98 0)
+			(at 83.82 186.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18572,7 +17698,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:GND")
-		(at 233.68 116.84 0)
+		(at 222.25 82.55 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -18580,7 +17706,7 @@
 		(dnp no)
 		(uuid "a1b0ffb9-5631-4514-a1ad-0cdd6a68fe66")
 		(property "Reference" "#GND71"
-			(at 233.68 116.84 0)
+			(at 222.25 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18589,7 +17715,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 233.68 117.094 0)
+			(at 222.25 82.804 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -18598,7 +17724,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 233.68 116.84 0)
+			(at 222.25 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18607,7 +17733,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 233.68 116.84 0)
+			(at 222.25 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18616,7 +17742,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 233.68 116.84 0)
+			(at 222.25 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18638,7 +17764,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
-		(at 353.06 195.58 180)
+		(at 341.63 161.29 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -18646,7 +17772,7 @@
 		(dnp no)
 		(uuid "a46fb868-8f56-421b-8f5d-e50e1bb306d1")
 		(property "Reference" "TP157"
-			(at 348.488 194.818 0)
+			(at 337.058 160.528 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -18655,7 +17781,7 @@
 			)
 		)
 		(property "Value" "TEST-POINT3X4"
-			(at 355.6 193.04 0)
+			(at 344.17 158.75 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -18665,7 +17791,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 353.06 195.58 0)
+			(at 341.63 161.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18674,7 +17800,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 353.06 195.58 0)
+			(at 341.63 161.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18683,7 +17809,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 353.06 195.58 0)
+			(at 341.63 161.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18705,7 +17831,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:GND")
-		(at 45.72 228.6 0)
+		(at 34.29 194.31 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -18713,7 +17839,7 @@
 		(dnp no)
 		(uuid "a604ccf9-ca3b-40fb-ae84-9b0307903972")
 		(property "Reference" "#GND54"
-			(at 45.72 228.6 0)
+			(at 34.29 194.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18722,7 +17848,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 45.72 228.854 0)
+			(at 34.29 194.564 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -18731,7 +17857,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 45.72 228.6 0)
+			(at 34.29 194.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18740,7 +17866,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 45.72 228.6 0)
+			(at 34.29 194.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18749,7 +17875,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 45.72 228.6 0)
+			(at 34.29 194.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18771,7 +17897,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:JUMPER-SMT_2_NC_TRACE_SILK")
-		(at 220.98 139.7 0)
+		(at 209.55 105.41 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -18779,7 +17905,7 @@
 		(dnp no)
 		(uuid "a99c4fe9-1248-450f-a6ac-bf04a126e726")
 		(property "Reference" "JP104"
-			(at 218.44 137.16 0)
+			(at 207.01 102.87 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -18788,7 +17914,7 @@
 			)
 		)
 		(property "Value" "JUMPER-SMT_2_NC_TRACE_SILK"
-			(at 218.44 142.24 0)
+			(at 207.01 107.95 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -18798,7 +17924,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:SMT-JUMPER_2_NC_TRACE_SILK"
-			(at 220.98 139.7 0)
+			(at 209.55 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18807,7 +17933,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 220.98 139.7 0)
+			(at 209.55 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18816,7 +17942,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 220.98 139.7 0)
+			(at 209.55 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18841,7 +17967,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
-		(at 119.38 104.14 90)
+		(at 107.95 69.85 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -18849,7 +17975,7 @@
 		(dnp no)
 		(uuid "aac3b58f-86b5-458a-8e15-3730fd892a6e")
 		(property "Reference" "TP2"
-			(at 116.84 102.235 0)
+			(at 105.41 67.945 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -18858,7 +17984,7 @@
 			)
 		)
 		(property "Value" "TEST-POINT3X4"
-			(at 121.92 106.68 0)
+			(at 110.49 72.39 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -18868,7 +17994,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 119.38 104.14 0)
+			(at 107.95 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18877,7 +18003,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 119.38 104.14 0)
+			(at 107.95 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18886,7 +18012,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 119.38 104.14 0)
+			(at 107.95 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18908,7 +18034,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
-		(at 68.58 226.06 90)
+		(at 57.15 191.77 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -18916,7 +18042,7 @@
 		(dnp no)
 		(uuid "ab9a7720-5e4f-4487-ad59-f9b68520cad4")
 		(property "Reference" "TP151"
-			(at 66.675 223.52 0)
+			(at 55.245 189.23 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -18925,7 +18051,7 @@
 			)
 		)
 		(property "Value" "TEST-POINT3X4"
-			(at 71.12 228.6 0)
+			(at 59.69 194.31 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -18935,7 +18061,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 68.58 226.06 0)
+			(at 57.15 191.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18944,7 +18070,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 68.58 226.06 0)
+			(at 57.15 191.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18953,7 +18079,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 68.58 226.06 0)
+			(at 57.15 191.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18975,7 +18101,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:3.3VA")
-		(at 45.72 193.04 0)
+		(at 34.29 158.75 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -18983,7 +18109,7 @@
 		(dnp no)
 		(uuid "abc7b41f-330b-43ae-9668-18303a434406")
 		(property "Reference" "#3.3VA2"
-			(at 45.72 193.04 0)
+			(at 34.29 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18992,7 +18118,7 @@
 			)
 		)
 		(property "Value" "3.3VA"
-			(at 45.72 192.786 0)
+			(at 34.29 158.496 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -19001,7 +18127,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 45.72 193.04 0)
+			(at 34.29 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19010,7 +18136,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 45.72 193.04 0)
+			(at 34.29 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19019,7 +18145,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 45.72 193.04 0)
+			(at 34.29 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19040,71 +18166,8 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-card-eagle-import:frames_229_FRAME_B_L")
-		(at 17.78 297.18 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "aeb909cf-545f-4873-8208-2fba74ad8ecd")
-		(property "Reference" "#FRAME5"
-			(at 17.78 297.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "FRAME_B_L"
-			(at 17.78 297.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 17.78 297.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 17.78 297.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 17.78 297.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project ""
-				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/27f3aeed-347f-4362-9166-18725d92163b"
-					(reference "#FRAME5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "star-tracker-card-eagle-import:JUMPER-SMT_2_NC_TRACE_SILK")
-		(at 220.98 185.42 0)
+		(at 209.55 151.13 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -19112,7 +18175,7 @@
 		(dnp no)
 		(uuid "b0818253-1405-472b-9939-cdcb69bd7856")
 		(property "Reference" "JP101"
-			(at 218.44 182.88 0)
+			(at 207.01 148.59 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -19121,7 +18184,7 @@
 			)
 		)
 		(property "Value" "JUMPER-SMT_2_NC_TRACE_SILK"
-			(at 218.44 187.96 0)
+			(at 207.01 153.67 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -19131,7 +18194,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:SMT-JUMPER_2_NC_TRACE_SILK"
-			(at 220.98 185.42 0)
+			(at 209.55 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19140,7 +18203,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 220.98 185.42 0)
+			(at 209.55 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19149,7 +18212,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 220.98 185.42 0)
+			(at 209.55 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19174,7 +18237,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:GND")
-		(at 411.48 104.14 0)
+		(at 407.67 111.76 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -19182,7 +18245,7 @@
 		(dnp no)
 		(uuid "b497e913-23c2-4ec0-bf76-0a3ccd457faf")
 		(property "Reference" "#GND74"
-			(at 411.48 104.14 0)
+			(at 407.67 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19191,7 +18254,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 411.48 104.394 0)
+			(at 407.67 112.014 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -19200,7 +18263,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 411.48 104.14 0)
+			(at 407.67 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19209,7 +18272,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 411.48 104.14 0)
+			(at 407.67 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19218,7 +18281,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 411.48 104.14 0)
+			(at 407.67 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19240,7 +18303,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
-		(at 228.6 251.46 90)
+		(at 217.17 217.17 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -19248,7 +18311,7 @@
 		(dnp no)
 		(uuid "bd533302-4a19-4bef-a583-607d33d70576")
 		(property "Reference" "TP109"
-			(at 225.298 254.762 90)
+			(at 213.868 220.472 90)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -19257,7 +18320,7 @@
 			)
 		)
 		(property "Value" "TEST-POINT3X4"
-			(at 231.14 254 0)
+			(at 219.71 219.71 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -19267,7 +18330,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 228.6 251.46 0)
+			(at 217.17 217.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19276,7 +18339,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 228.6 251.46 0)
+			(at 217.17 217.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19285,7 +18348,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 228.6 251.46 0)
+			(at 217.17 217.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19307,7 +18370,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:MMBT2907SMD")
-		(at 228.6 165.1 180)
+		(at 217.17 130.81 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -19315,7 +18378,7 @@
 		(dnp no)
 		(uuid "beb74eba-96fd-43a6-b2f3-264830b35b31")
 		(property "Reference" "Q1"
-			(at 228.6 157.48 0)
+			(at 217.17 123.19 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -19324,7 +18387,7 @@
 			)
 		)
 		(property "Value" "MMBT2907"
-			(at 228.6 160.02 0)
+			(at 217.17 125.73 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -19333,7 +18396,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:SOT23-BEC"
-			(at 228.6 165.1 0)
+			(at 217.17 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19342,7 +18405,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 228.6 165.1 0)
+			(at 217.17 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19351,7 +18414,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 228.6 165.1 0)
+			(at 217.17 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19379,7 +18442,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:C-EU0603-A")
-		(at 236.22 233.68 0)
+		(at 224.79 199.39 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -19387,7 +18450,7 @@
 		(dnp no)
 		(uuid "ca7dc0a0-9fae-462b-a9f3-a90261ae9fb6")
 		(property "Reference" "C18"
-			(at 239.014 233.426 0)
+			(at 227.584 199.136 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -19396,7 +18459,7 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 239.014 235.712 0)
+			(at 227.584 201.422 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -19405,7 +18468,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:.0603-A"
-			(at 236.22 233.68 0)
+			(at 224.79 199.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19414,7 +18477,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 236.22 233.68 0)
+			(at 224.79 199.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19423,7 +18486,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 236.22 233.68 0)
+			(at 224.79 199.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19448,7 +18511,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:3.3V")
-		(at 203.2 101.6 0)
+		(at 191.77 67.31 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -19456,7 +18519,7 @@
 		(dnp no)
 		(uuid "cd7a3517-368b-4d4b-af70-4fe5796566e6")
 		(property "Reference" "#3V-28"
-			(at 203.2 101.6 0)
+			(at 191.77 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19465,7 +18528,7 @@
 			)
 		)
 		(property "Value" "3.3V"
-			(at 202.565 100.965 0)
+			(at 191.135 66.675 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -19474,7 +18537,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 203.2 101.6 0)
+			(at 191.77 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19483,7 +18546,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 203.2 101.6 0)
+			(at 191.77 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19492,7 +18555,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 203.2 101.6 0)
+			(at 191.77 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19514,7 +18577,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:R-US_0603-A")
-		(at 114.3 251.46 0)
+		(at 102.87 217.17 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -19522,7 +18585,7 @@
 		(dnp no)
 		(uuid "d329a269-aea8-4fa3-85c1-2b593bc365b6")
 		(property "Reference" "R15"
-			(at 110.49 249.9614 0)
+			(at 99.06 215.6714 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -19531,7 +18594,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 110.49 254.762 0)
+			(at 99.06 220.472 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -19540,7 +18603,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:.0603-A"
-			(at 114.3 251.46 0)
+			(at 102.87 217.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19549,7 +18612,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 114.3 251.46 0)
+			(at 102.87 217.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19558,7 +18621,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 114.3 251.46 0)
+			(at 102.87 217.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19583,7 +18646,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
-		(at 114.3 200.66 90)
+		(at 102.87 166.37 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -19591,7 +18654,7 @@
 		(dnp no)
 		(uuid "d4575b19-3c06-4a3b-9750-4169909a7938")
 		(property "Reference" "TP140"
-			(at 112.395 201.93 0)
+			(at 100.965 167.64 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -19600,7 +18663,7 @@
 			)
 		)
 		(property "Value" "TEST-POINT3X4"
-			(at 116.84 203.2 0)
+			(at 105.41 168.91 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -19610,7 +18673,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 114.3 200.66 0)
+			(at 102.87 166.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19619,7 +18682,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 114.3 200.66 0)
+			(at 102.87 166.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19628,7 +18691,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 114.3 200.66 0)
+			(at 102.87 166.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19650,7 +18713,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:GND")
-		(at 101.6 119.38 0)
+		(at 90.17 85.09 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -19658,7 +18721,7 @@
 		(dnp no)
 		(uuid "d8190b1f-1ee8-486c-b299-676a16b6a264")
 		(property "Reference" "#GND68"
-			(at 101.6 119.38 0)
+			(at 90.17 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19667,7 +18730,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 101.6 119.634 0)
+			(at 90.17 85.344 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -19676,7 +18739,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 101.6 119.38 0)
+			(at 90.17 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19685,7 +18748,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 101.6 119.38 0)
+			(at 90.17 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19694,7 +18757,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 101.6 119.38 0)
+			(at 90.17 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19716,7 +18779,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
-		(at 414.02 195.58 0)
+		(at 402.59 161.29 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -19724,7 +18787,7 @@
 		(dnp no)
 		(uuid "d86145b5-c69b-474b-8092-06a16707d041")
 		(property "Reference" "TP145"
-			(at 418.592 196.342 0)
+			(at 407.162 162.052 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -19733,7 +18796,7 @@
 			)
 		)
 		(property "Value" "TEST-POINT3X4"
-			(at 411.48 198.12 0)
+			(at 400.05 163.83 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -19743,7 +18806,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 414.02 195.58 0)
+			(at 402.59 161.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19752,7 +18815,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 414.02 195.58 0)
+			(at 402.59 161.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19761,7 +18824,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 414.02 195.58 0)
+			(at 402.59 161.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19783,7 +18846,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
-		(at 414.02 190.5 0)
+		(at 402.59 156.21 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -19791,7 +18854,7 @@
 		(dnp no)
 		(uuid "da9e471b-123d-409d-b723-14b5b094f61b")
 		(property "Reference" "TP172"
-			(at 418.592 191.262 0)
+			(at 407.162 156.972 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -19800,7 +18863,7 @@
 			)
 		)
 		(property "Value" "TEST-POINT3X4"
-			(at 411.48 193.04 0)
+			(at 400.05 158.75 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -19810,7 +18873,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 414.02 190.5 0)
+			(at 402.59 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19819,7 +18882,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 414.02 190.5 0)
+			(at 402.59 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19828,7 +18891,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 414.02 190.5 0)
+			(at 402.59 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19850,7 +18913,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:GND")
-		(at 104.14 256.54 0)
+		(at 92.71 222.25 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -19858,7 +18921,7 @@
 		(dnp no)
 		(uuid "e0232fc2-1764-4bd0-a982-2ca3883be8aa")
 		(property "Reference" "#GND69"
-			(at 104.14 256.54 0)
+			(at 92.71 222.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19867,7 +18930,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 104.14 256.794 0)
+			(at 92.71 222.504 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -19876,7 +18939,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 104.14 256.54 0)
+			(at 92.71 222.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19885,7 +18948,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 104.14 256.54 0)
+			(at 92.71 222.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19894,7 +18957,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 104.14 256.54 0)
+			(at 92.71 222.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19916,7 +18979,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
-		(at 353.06 165.1 180)
+		(at 341.63 130.81 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -19924,7 +18987,7 @@
 		(dnp no)
 		(uuid "e3bd1461-fa24-449c-b700-6aa9c68b94b8")
 		(property "Reference" "TP156"
-			(at 348.488 164.338 0)
+			(at 337.058 130.048 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -19933,7 +18996,7 @@
 			)
 		)
 		(property "Value" "TEST-POINT3X4"
-			(at 355.6 162.56 0)
+			(at 344.17 128.27 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -19943,7 +19006,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 353.06 165.1 0)
+			(at 341.63 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19952,7 +19015,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 353.06 165.1 0)
+			(at 341.63 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19961,7 +19024,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 353.06 165.1 0)
+			(at 341.63 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19983,7 +19046,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
-		(at 60.96 236.22 90)
+		(at 49.53 201.93 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -19991,7 +19054,7 @@
 		(dnp no)
 		(uuid "e7ea270a-aef5-41d8-9d02-ab1279180975")
 		(property "Reference" "TP112"
-			(at 60.325 234.95 0)
+			(at 48.895 200.66 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -20000,7 +19063,7 @@
 			)
 		)
 		(property "Value" "TEST-POINT3X4"
-			(at 63.5 238.76 0)
+			(at 52.07 204.47 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -20010,7 +19073,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 60.96 236.22 0)
+			(at 49.53 201.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20019,7 +19082,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 60.96 236.22 0)
+			(at 49.53 201.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20028,7 +19091,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 60.96 236.22 0)
+			(at 49.53 201.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20050,7 +19113,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
-		(at 96.52 129.54 90)
+		(at 85.09 95.25 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -20058,7 +19121,7 @@
 		(dnp no)
 		(uuid "f12628ab-eb1e-41a8-8643-5804e7e0a6c1")
 		(property "Reference" "TP130"
-			(at 97.282 125.73 0)
+			(at 85.852 91.44 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -20067,7 +19130,7 @@
 			)
 		)
 		(property "Value" "TEST-POINT3X4"
-			(at 99.06 132.08 0)
+			(at 87.63 97.79 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -20077,7 +19140,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 96.52 129.54 0)
+			(at 85.09 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20086,7 +19149,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 96.52 129.54 0)
+			(at 85.09 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20095,7 +19158,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 96.52 129.54 0)
+			(at 85.09 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20117,7 +19180,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:TLVH431")
-		(at 243.84 154.94 270)
+		(at 232.41 120.65 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -20125,7 +19188,7 @@
 		(dnp no)
 		(uuid "f3e89cde-a379-4e9b-8b55-9f44ea7731de")
 		(property "Reference" "U10"
-			(at 238.76 147.32 90)
+			(at 227.33 113.03 90)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -20134,7 +19197,7 @@
 			)
 		)
 		(property "Value" "TLVH431"
-			(at 238.76 149.86 90)
+			(at 227.33 115.57 90)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -20143,7 +19206,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:SOT23-3"
-			(at 243.84 154.94 0)
+			(at 232.41 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20152,7 +19215,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 243.84 154.94 0)
+			(at 232.41 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20161,7 +19224,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 243.84 154.94 0)
+			(at 232.41 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20189,7 +19252,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
-		(at 114.3 193.04 90)
+		(at 102.87 158.75 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -20197,7 +19260,7 @@
 		(dnp no)
 		(uuid "fd664e75-070d-44a5-893c-f4acd91d0638")
 		(property "Reference" "TP132"
-			(at 112.395 194.31 0)
+			(at 100.965 160.02 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -20206,7 +19269,7 @@
 			)
 		)
 		(property "Value" "TEST-POINT3X4"
-			(at 116.84 195.58 0)
+			(at 105.41 161.29 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -20216,7 +19279,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 114.3 193.04 0)
+			(at 102.87 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20225,7 +19288,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 114.3 193.04 0)
+			(at 102.87 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20234,7 +19297,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 114.3 193.04 0)
+			(at 102.87 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20256,7 +19319,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:R-US_0603-A")
-		(at 95.25 236.22 0)
+		(at 83.82 201.93 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -20264,7 +19327,7 @@
 		(dnp no)
 		(uuid "fed02144-e88e-47c5-b1dc-7ba16951ae10")
 		(property "Reference" "R75"
-			(at 91.44 234.95 0)
+			(at 80.01 200.66 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -20273,7 +19336,7 @@
 			)
 		)
 		(property "Value" "100"
-			(at 97.79 234.95 0)
+			(at 86.36 200.66 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -20282,7 +19345,7 @@
 			)
 		)
 		(property "Footprint" "star-tracker-card:.0603-A"
-			(at 95.25 236.22 0)
+			(at 83.82 201.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20291,7 +19354,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 95.25 236.22 0)
+			(at 83.82 201.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20300,7 +19363,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 95.25 236.22 0)
+			(at 83.82 201.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20325,7 +19388,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:GND")
-		(at 340.36 104.14 0)
+		(at 336.55 111.76 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -20333,7 +19396,7 @@
 		(dnp no)
 		(uuid "fffe525a-2753-4849-8c7c-a4194417b308")
 		(property "Reference" "#GND73"
-			(at 340.36 104.14 0)
+			(at 336.55 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20342,7 +19405,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 340.36 104.394 0)
+			(at 336.55 112.014 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -20351,7 +19414,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 340.36 104.14 0)
+			(at 336.55 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20360,7 +19423,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 340.36 104.14 0)
+			(at 336.55 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20369,7 +19432,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 340.36 104.14 0)
+			(at 336.55 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
