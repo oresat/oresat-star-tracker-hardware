@@ -9043,7 +9043,7 @@
 				(hide yes)
 			)
 		)
-		(property "DPN" "399-C2220X106J5RACAUTOTR-ND"
+		(property "DPN" "490-12286-1-ND"
 			(at 334.01 43.18 0)
 			(effects
 				(font
@@ -9052,7 +9052,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFR" "KEMET"
+		(property "MFR" "Murata Electronics"
 			(at 334.01 43.18 0)
 			(effects
 				(font
@@ -9061,7 +9061,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "C2220X106J5RACAUTO"
+		(property "MPN" "GRT188C81C106ME13D"
 			(at 334.01 43.18 0)
 			(effects
 				(font
@@ -11743,7 +11743,7 @@
 				(hide yes)
 			)
 		)
-		(property "DPN" "399-C2220X106J5RACAUTOTR-ND"
+		(property "DPN" "490-12286-1-ND"
 			(at 323.85 43.18 0)
 			(effects
 				(font
@@ -11752,7 +11752,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFR" "KEMET"
+		(property "MFR" "Murata Electronics"
 			(at 323.85 43.18 0)
 			(effects
 				(font
@@ -11761,7 +11761,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "C2220X106J5RACAUTO"
+		(property "MPN" "GRT188C81C106ME13D"
 			(at 323.85 43.18 0)
 			(effects
 				(font
@@ -12625,7 +12625,7 @@
 				(hide yes)
 			)
 		)
-		(property "DPN" "399-C2220X106J5RACAUTOTR-ND"
+		(property "DPN" "490-12286-1-ND"
 			(at 303.53 43.18 0)
 			(effects
 				(font
@@ -12634,7 +12634,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFR" "KEMET"
+		(property "MFR" "Murata Electronics"
 			(at 303.53 43.18 0)
 			(effects
 				(font
@@ -12643,7 +12643,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "C2220X106J5RACAUTO"
+		(property "MPN" "GRT188C81C106ME13D"
 			(at 303.53 43.18 0)
 			(effects
 				(font
@@ -13092,7 +13092,7 @@
 				(hide yes)
 			)
 		)
-		(property "DPN" "399-C2220X106J5RACAUTOTR-ND"
+		(property "DPN" "490-12286-1-ND"
 			(at 293.37 43.18 0)
 			(effects
 				(font
@@ -13101,7 +13101,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFR" "KEMET"
+		(property "MFR" "Murata Electronics"
 			(at 293.37 43.18 0)
 			(effects
 				(font
@@ -13110,7 +13110,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "C2220X106J5RACAUTO"
+		(property "MPN" "GRT188C81C106ME13D"
 			(at 293.37 43.18 0)
 			(effects
 				(font
@@ -13696,7 +13696,7 @@
 				(hide yes)
 			)
 		)
-		(property "DPN" "399-C2220X106J5RACAUTOTR-ND"
+		(property "DPN" "490-12286-1-ND"
 			(at 313.69 43.18 0)
 			(effects
 				(font
@@ -13705,7 +13705,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFR" "KEMET"
+		(property "MFR" "Murata Electronics"
 			(at 313.69 43.18 0)
 			(effects
 				(font
@@ -13714,7 +13714,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "C2220X106J5RACAUTO"
+		(property "MPN" "GRT188C81C106ME13D"
 			(at 313.69 43.18 0)
 			(effects
 				(font
