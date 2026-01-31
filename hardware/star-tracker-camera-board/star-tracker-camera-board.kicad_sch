@@ -8479,7 +8479,7 @@
 				(hide yes)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "Digikey"
 			(at 97.79 147.32 0)
 			(effects
 				(font
@@ -8488,7 +8488,7 @@
 				(hide yes)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "738-RMCA0402FT10K0-HPCT-ND"
 			(at 97.79 147.32 0)
 			(effects
 				(font
@@ -8497,7 +8497,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "Stackpole Electronics"
 			(at 97.79 147.32 0)
 			(effects
 				(font
@@ -8506,7 +8506,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "RMCA0402FT10K0-HP"
 			(at 97.79 147.32 0)
 			(effects
 				(font
@@ -8716,7 +8716,7 @@
 				(hide yes)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "Digikey"
 			(at 77.47 60.96 0)
 			(effects
 				(font
@@ -8725,7 +8725,7 @@
 				(hide yes)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "399-19365-1-ND"
 			(at 77.47 60.96 0)
 			(effects
 				(font
@@ -8734,7 +8734,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "KEMET"
 			(at 77.47 60.96 0)
 			(effects
 				(font
@@ -8743,7 +8743,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "C0402C103J5RACAUTO"
 			(at 77.47 60.96 0)
 			(effects
 				(font
@@ -9034,7 +9034,7 @@
 				(hide yes)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "Digikey"
 			(at 334.01 43.18 0)
 			(effects
 				(font
@@ -9043,7 +9043,7 @@
 				(hide yes)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "399-C2220X106J5RACAUTOTR-ND"
 			(at 334.01 43.18 0)
 			(effects
 				(font
@@ -9052,7 +9052,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "KEMET"
 			(at 334.01 43.18 0)
 			(effects
 				(font
@@ -9061,7 +9061,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "C2220X106J5RACAUTO"
 			(at 334.01 43.18 0)
 			(effects
 				(font
@@ -9401,7 +9401,7 @@
 				(hide yes)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "Digikey"
 			(at 107.95 147.32 0)
 			(effects
 				(font
@@ -9410,7 +9410,7 @@
 				(hide yes)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "738-RMCA0402FT10K0-HPCT-ND"
 			(at 107.95 147.32 0)
 			(effects
 				(font
@@ -9419,7 +9419,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "Stackpole Electronics"
 			(at 107.95 147.32 0)
 			(effects
 				(font
@@ -9428,7 +9428,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "RMCA0402FT10K0-HP"
 			(at 107.95 147.32 0)
 			(effects
 				(font
@@ -9506,7 +9506,7 @@
 				(hide yes)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "Digikey"
 			(at 130.81 58.42 0)
 			(effects
 				(font
@@ -9515,7 +9515,7 @@
 				(hide yes)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "738-RMCA0402FT100R-HPCT-ND"
 			(at 130.81 58.42 0)
 			(effects
 				(font
@@ -9524,7 +9524,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "Stackpole Electronics Inc"
 			(at 130.81 58.42 0)
 			(effects
 				(font
@@ -9533,7 +9533,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "RMCA0402FT100R-HP"
 			(at 130.81 58.42 0)
 			(effects
 				(font
@@ -9913,7 +9913,7 @@
 				(hide yes)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "Digikey"
 			(at 110.49 99.06 0)
 			(effects
 				(font
@@ -9922,7 +9922,7 @@
 				(hide yes)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "738-RMCA0402FT4K70-HPCT-ND"
 			(at 110.49 99.06 0)
 			(effects
 				(font
@@ -9931,7 +9931,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "Stackpole Electronics"
 			(at 110.49 99.06 0)
 			(effects
 				(font
@@ -9940,7 +9940,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "RMCA0402FT4K70-HP"
 			(at 110.49 99.06 0)
 			(effects
 				(font
@@ -10571,7 +10571,7 @@
 				(hide yes)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "Digikey"
 			(at 163.83 132.08 0)
 			(effects
 				(font
@@ -10580,7 +10580,7 @@
 				(hide yes)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "738-RNCP0402FTD10K0CT-ND"
 			(at 163.83 132.08 0)
 			(effects
 				(font
@@ -10589,7 +10589,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "Stackpole Electronics"
 			(at 163.83 132.08 0)
 			(effects
 				(font
@@ -10598,7 +10598,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "RNCP0402FTD10K0"
 			(at 163.83 132.08 0)
 			(effects
 				(font
@@ -10874,7 +10874,7 @@
 				(hide yes)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "Digikey"
 			(at 120.65 99.06 0)
 			(effects
 				(font
@@ -10883,7 +10883,7 @@
 				(hide yes)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "738-RMCA0402FT4K70-HPCT-ND"
 			(at 120.65 99.06 0)
 			(effects
 				(font
@@ -10892,7 +10892,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "Stackpole Electronics"
 			(at 120.65 99.06 0)
 			(effects
 				(font
@@ -10901,7 +10901,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "RMCA0402FT4K70-HP"
 			(at 120.65 99.06 0)
 			(effects
 				(font
@@ -11045,7 +11045,7 @@
 				(hide yes)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "Digikey"
 			(at 387.35 43.18 0)
 			(effects
 				(font
@@ -11054,7 +11054,7 @@
 				(hide yes)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "399-17548-1-ND"
 			(at 387.35 43.18 0)
 			(effects
 				(font
@@ -11063,7 +11063,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "KEMET"
 			(at 387.35 43.18 0)
 			(effects
 				(font
@@ -11072,7 +11072,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "C0402C104J4RACAUTO"
 			(at 387.35 43.18 0)
 			(effects
 				(font
@@ -11629,7 +11629,7 @@
 				(hide yes)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "Digikey"
 			(at 163.83 119.38 0)
 			(effects
 				(font
@@ -11734,7 +11734,7 @@
 				(hide yes)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "Digikey"
 			(at 323.85 43.18 0)
 			(effects
 				(font
@@ -11743,7 +11743,7 @@
 				(hide yes)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "399-C2220X106J5RACAUTOTR-ND"
 			(at 323.85 43.18 0)
 			(effects
 				(font
@@ -11752,7 +11752,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "KEMET"
 			(at 323.85 43.18 0)
 			(effects
 				(font
@@ -11761,7 +11761,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "C2220X106J5RACAUTO"
 			(at 323.85 43.18 0)
 			(effects
 				(font
@@ -12616,7 +12616,7 @@
 				(hide yes)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "Digikey"
 			(at 303.53 43.18 0)
 			(effects
 				(font
@@ -12625,7 +12625,7 @@
 				(hide yes)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "399-C2220X106J5RACAUTOTR-ND"
 			(at 303.53 43.18 0)
 			(effects
 				(font
@@ -12634,7 +12634,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "KEMET"
 			(at 303.53 43.18 0)
 			(effects
 				(font
@@ -12643,7 +12643,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "C2220X106J5RACAUTO"
 			(at 303.53 43.18 0)
 			(effects
 				(font
@@ -12912,7 +12912,7 @@
 				(hide yes)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "Digikey"
 			(at 346.71 43.18 0)
 			(effects
 				(font
@@ -12921,7 +12921,7 @@
 				(hide yes)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "399-17548-1-ND"
 			(at 346.71 43.18 0)
 			(effects
 				(font
@@ -12930,7 +12930,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "KEMET"
 			(at 346.71 43.18 0)
 			(effects
 				(font
@@ -12939,7 +12939,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "C0402C104J4RACAUTO"
 			(at 346.71 43.18 0)
 			(effects
 				(font
@@ -13083,7 +13083,7 @@
 				(hide yes)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "Digikey"
 			(at 293.37 43.18 0)
 			(effects
 				(font
@@ -13092,7 +13092,7 @@
 				(hide yes)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "399-C2220X106J5RACAUTOTR-ND"
 			(at 293.37 43.18 0)
 			(effects
 				(font
@@ -13101,7 +13101,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "KEMET"
 			(at 293.37 43.18 0)
 			(effects
 				(font
@@ -13110,7 +13110,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "C2220X106J5RACAUTO"
 			(at 293.37 43.18 0)
 			(effects
 				(font
@@ -13687,7 +13687,7 @@
 				(hide yes)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "Digikey"
 			(at 313.69 43.18 0)
 			(effects
 				(font
@@ -13696,7 +13696,7 @@
 				(hide yes)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "399-C2220X106J5RACAUTOTR-ND"
 			(at 313.69 43.18 0)
 			(effects
 				(font
@@ -13705,7 +13705,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "KEMET"
 			(at 313.69 43.18 0)
 			(effects
 				(font
@@ -13714,7 +13714,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "C2220X106J5RACAUTO"
 			(at 313.69 43.18 0)
 			(effects
 				(font
@@ -13989,7 +13989,7 @@
 				(hide yes)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "Digikey"
 			(at 97.79 129.54 0)
 			(effects
 				(font
@@ -13998,7 +13998,7 @@
 				(hide yes)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "738-RMCA0402FT10K0-HPCT-ND"
 			(at 97.79 129.54 0)
 			(effects
 				(font
@@ -14007,7 +14007,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "Stackpole Electronics"
 			(at 97.79 129.54 0)
 			(effects
 				(font
@@ -14016,7 +14016,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "RMCA0402FT10K0-HP"
 			(at 97.79 129.54 0)
 			(effects
 				(font
@@ -14290,7 +14290,7 @@
 				(hide yes)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "Digikey"
 			(at 107.95 129.54 0)
 			(effects
 				(font
@@ -14299,7 +14299,7 @@
 				(hide yes)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "738-RMCA0402FT10K0-HPCT-ND"
 			(at 107.95 129.54 0)
 			(effects
 				(font
@@ -14308,7 +14308,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "Stackpole Electronics"
 			(at 107.95 129.54 0)
 			(effects
 				(font
@@ -14317,7 +14317,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "RMCA0402FT10K0-HP"
 			(at 107.95 129.54 0)
 			(effects
 				(font
@@ -15163,7 +15163,7 @@
 				(hide yes)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "Digikey"
 			(at 285.75 116.84 0)
 			(effects
 				(font
@@ -15172,7 +15172,7 @@
 				(hide yes)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "738-RNCP0402FTD10K0CT-ND"
 			(at 285.75 116.84 0)
 			(effects
 				(font
@@ -15181,7 +15181,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "Stackpole Electronics"
 			(at 285.75 116.84 0)
 			(effects
 				(font
@@ -15190,7 +15190,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "RNCP0402FTD10K0"
 			(at 285.75 116.84 0)
 			(effects
 				(font
@@ -15268,7 +15268,7 @@
 				(hide yes)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "Digikey"
 			(at 285.75 220.98 0)
 			(effects
 				(font
@@ -15373,7 +15373,7 @@
 				(hide yes)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "Digikey"
 			(at 377.19 43.18 0)
 			(effects
 				(font
@@ -15382,7 +15382,7 @@
 				(hide yes)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "399-17548-1-ND"
 			(at 377.19 43.18 0)
 			(effects
 				(font
@@ -15391,7 +15391,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "KEMET"
 			(at 377.19 43.18 0)
 			(effects
 				(font
@@ -15400,7 +15400,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "C0402C104J4RACAUTO"
 			(at 377.19 43.18 0)
 			(effects
 				(font
@@ -15478,7 +15478,7 @@
 				(hide yes)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "Digikey"
 			(at 356.87 43.18 0)
 			(effects
 				(font
@@ -15487,7 +15487,7 @@
 				(hide yes)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "399-17548-1-ND"
 			(at 356.87 43.18 0)
 			(effects
 				(font
@@ -15496,7 +15496,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "KEMET"
 			(at 356.87 43.18 0)
 			(effects
 				(font
@@ -15505,7 +15505,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "C0402C104J4RACAUTO"
 			(at 356.87 43.18 0)
 			(effects
 				(font
@@ -15583,7 +15583,7 @@
 				(hide yes)
 			)
 		)
-		(property "DIS" ""
+		(property "DIS" "Digikey"
 			(at 367.03 43.18 0)
 			(effects
 				(font
@@ -15592,7 +15592,7 @@
 				(hide yes)
 			)
 		)
-		(property "DPN" ""
+		(property "DPN" "399-17548-1-ND"
 			(at 367.03 43.18 0)
 			(effects
 				(font
@@ -15601,7 +15601,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFR" ""
+		(property "MFR" "KEMET"
 			(at 367.03 43.18 0)
 			(effects
 				(font
@@ -15610,7 +15610,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "C0402C104J4RACAUTO"
 			(at 367.03 43.18 0)
 			(effects
 				(font
