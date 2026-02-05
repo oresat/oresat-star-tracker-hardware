@@ -11,6 +11,503 @@
 		(company "Portland State Aerospace Society")
 	)
 	(lib_symbols
+		(symbol "Device:C_Small"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.254 1.778 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C_Small"
+				(at 0.254 -2.032 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Unpolarized capacitor, small symbol"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "capacitor cap"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_Small_0_1"
+				(polyline
+					(pts
+						(xy -1.524 0.508) (xy 1.524 0.508)
+					)
+					(stroke
+						(width 0.3048)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 -0.508) (xy 1.524 -0.508)
+					)
+					(stroke
+						(width 0.3302)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_Small_1_1"
+				(pin passive line
+					(at 0 2.54 270)
+					(length 2.032)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 2.032)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:R_Small_US"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 0.762 0.508 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "R_Small_US"
+				(at 0.762 -1.016 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Resistor, small US symbol"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "r resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_Small_US_1_1"
+				(polyline
+					(pts
+						(xy 0 1.524) (xy 1.016 1.143) (xy 0 0.762) (xy -1.016 0.381) (xy 0 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 1.016 -0.381) (xy 0 -0.762) (xy -1.016 -1.143) (xy 0 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 0 2.54 270)
+					(length 1.016)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 1.016)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "oresat-misc:Test-Point-1mm-round"
+			(exclude_from_sim yes)
+			(in_bom no)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.0795)
+					)
+				)
+			)
+			(property "Value" ""
+				(at 0 7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Footprint" "oresat-misc:TestPoint_Pad_D1.0mm"
+				(at 0 10.16 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "1mm round SMT test point"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Test-Point-1mm-round_1_0"
+				(polyline
+					(pts
+						(xy -1.27 1.27) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -1.27) (xy -1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.27) (xy -1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 0 0 0)
+					(length 0)
+					(name "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:GND"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "star-tracker-card-eagle-import:3.3V"
 			(power)
 			(exclude_from_sim no)
@@ -274,292 +771,6 @@
 						)
 					)
 					(number "P$2"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "star-tracker-card-eagle-import:C-EU0603-A"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "C"
-				(at 1.524 0.381 0)
-				(effects
-					(font
-						(size 1.778 1.5113)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Value" ""
-				(at 1.524 -4.699 0)
-				(effects
-					(font
-						(size 1.778 1.5113)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Footprint" "star-tracker-card:.0603-A"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "CAPACITOR, European symbol"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "C-EU0603-A_1_0"
-				(rectangle
-					(start -2.032 -1.016)
-					(end 2.032 -0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start -2.032 -2.032)
-					(end 2.032 -1.524)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 -0.508)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -2.54) (xy 0 -2.032)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at 0 2.54 270)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -5.08 90)
-					(length 2.54)
-					(name "2"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "star-tracker-card-eagle-import:C-EU0805-B"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "C"
-				(at 1.524 0.381 0)
-				(effects
-					(font
-						(size 1.778 1.5113)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Value" ""
-				(at 1.524 -4.699 0)
-				(effects
-					(font
-						(size 1.778 1.5113)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Footprint" "star-tracker-card:.0805-B"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "CAPACITOR, European symbol"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "C-EU0805-B_1_0"
-				(rectangle
-					(start -2.032 -1.016)
-					(end 2.032 -0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start -2.032 -2.032)
-					(end 2.032 -1.524)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 -0.508)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -2.54) (xy 0 -2.032)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at 0 2.54 270)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -5.08 90)
-					(length 2.54)
-					(name "2"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "2"
 						(effects
 							(font
 								(size 0 0)
@@ -1073,701 +1284,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "star-tracker-card-eagle-import:FTSH-105-XX-X-DV-K"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "CM"
-				(at -6.35 18.415 0)
-				(effects
-					(font
-						(size 1.778 1.5113)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Value" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Footprint" "star-tracker-card:CON10_2X5_DUK_FTSH"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "FTSH-105-XX-X-DV-K_1_0"
-				(polyline
-					(pts
-						(xy -6.35 17.78) (xy -6.35 -10.16)
-					)
-					(stroke
-						(width 0.4064)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -6.35 -10.16) (xy 15.24 -10.16)
-					)
-					(stroke
-						(width 0.4064)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 15.24 17.78) (xy -6.35 17.78)
-					)
-					(stroke
-						(width 0.4064)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 15.24 -10.16) (xy 15.24 17.78)
-					)
-					(stroke
-						(width 0.4064)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(text "KEY"
-					(at -5.715 -0.635 0)
-					(effects
-						(font
-							(size 1.524 1.2954)
-						)
-						(justify left bottom)
-					)
-				)
-				(text "10pin SWD"
-					(at -1.27 -12.7 0)
-					(effects
-						(font
-							(size 1.524 1.2954)
-						)
-						(justify left bottom)
-					)
-				)
-				(pin passive inverted
-					(at -7.62 15.24 0)
-					(length 5.08)
-					(name "VTREF"
-						(effects
-							(font
-								(size 1.524 1.524)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-				)
-				(pin passive inverted
-					(at -7.62 12.7 0)
-					(length 5.08)
-					(name "SWDIO/TMS"
-						(effects
-							(font
-								(size 1.524 1.524)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-				)
-				(pin passive inverted
-					(at -7.62 10.16 0)
-					(length 5.08)
-					(name "GND"
-						(effects
-							(font
-								(size 1.524 1.524)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-				)
-				(pin passive inverted
-					(at -7.62 7.62 0)
-					(length 5.08)
-					(name "SWDCLK/TCK"
-						(effects
-							(font
-								(size 1.524 1.524)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-				)
-				(pin passive inverted
-					(at -7.62 5.08 0)
-					(length 5.08)
-					(name "GND@2"
-						(effects
-							(font
-								(size 1.524 1.524)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-				)
-				(pin passive inverted
-					(at -7.62 2.54 0)
-					(length 5.08)
-					(name "SWO/TDO"
-						(effects
-							(font
-								(size 1.524 1.524)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-				)
-				(pin passive inverted
-					(at -7.62 -2.54 0)
-					(length 5.08)
-					(name "NC/TDI"
-						(effects
-							(font
-								(size 1.524 1.524)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-				)
-				(pin passive inverted
-					(at -7.62 -5.08 0)
-					(length 5.08)
-					(name "GNDDET"
-						(effects
-							(font
-								(size 1.524 1.524)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-				)
-				(pin passive inverted
-					(at -7.62 -7.62 0)
-					(length 5.08)
-					(name "~{RESET}"
-						(effects
-							(font
-								(size 1.524 1.524)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "star-tracker-card-eagle-import:GND"
-			(power)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#GND"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" ""
-				(at 0 -0.254 0)
-				(effects
-					(font
-						(size 1.778 1.5113)
-					)
-					(justify top)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Ground Supply Symbol\n\nGeneric signal ground supply symbol."
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "GND_1_0"
-				(polyline
-					(pts
-						(xy -1.905 0) (xy 1.905 0)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin power_in line
-					(at 0 2.54 270)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "star-tracker-card-eagle-import:JUMPER-SMT_2_NC_TRACE_SILK"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "JP"
-				(at -2.54 2.54 0)
-				(effects
-					(font
-						(size 1.778 1.778)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Value" ""
-				(at -2.54 -2.54 0)
-				(effects
-					(font
-						(size 1.778 1.778)
-					)
-					(justify left top)
-				)
-			)
-			(property "Footprint" "star-tracker-card:SMT-JUMPER_2_NC_TRACE_SILK"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Normally closed trace jumper\n\nThis jumper has a trace between two pads so it's normally closed (NC). Use a razor knife to open the connection. For best results follow the IPC guidelines for cutting traces:\n\n• Cutout at least 0.063 mm (0.005 in).\n• Remove all loose material to clean up the cut area.\n• Seal the cut with an approved epoxy.\n\nReapply solder to reclose the connection."
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "JUMPER-SMT_2_NC_TRACE_SILK_1_0"
-				(polyline
-					(pts
-						(xy -2.54 0) (xy -1.651 0)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.762 0) (xy 1.016 0)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -0.381 -0.635)
-					(mid -1.0159 0.0001)
-					(end -0.3808 0.635)
-					(stroke
-						(width 1.27)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0.381 0.635)
-					(mid 0.83 0.4489)
-					(end 1.0159 -0.0001)
-					(stroke
-						(width 1.27)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 1.016 0)
-					(mid 0.83 -0.4491)
-					(end 0.3809 -0.6351)
-					(stroke
-						(width 1.27)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 0) (xy 1.651 0)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 0 180)
-					(length 2.54)
-					(name "2"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "star-tracker-card-eagle-import:JUMPER-SMT_2_NO_SILK"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "JP"
-				(at -2.54 2.54 0)
-				(effects
-					(font
-						(size 1.778 1.778)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Value" ""
-				(at -2.54 -2.54 0)
-				(effects
-					(font
-						(size 1.778 1.778)
-					)
-					(justify left top)
-				)
-			)
-			(property "Footprint" "star-tracker-card:SMT-JUMPER_2_NO_SILK"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Normally open jumper\n\nThis jumper has two pads in close proximity to each other. Apply solder to close the connection.\n\nRound pads are easier to solder for beginners, but are a lot larger.\n\nSparkFun Product that uses the round pads:\n\n• https://www.sparkfun.com/products/12781 SparkFun EL Sequencer"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "JUMPER-SMT_2_NO_SILK_1_0"
-				(polyline
-					(pts
-						(xy -2.54 0) (xy -1.651 0)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -0.381 -0.635)
-					(mid -1.0159 0.0001)
-					(end -0.3808 0.635)
-					(stroke
-						(width 1.27)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0.381 0.635)
-					(mid 1.0159 -0.0001)
-					(end 0.3808 -0.635)
-					(stroke
-						(width 1.27)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 0) (xy 1.651 0)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 0 180)
-					(length 2.54)
-					(name "2"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "star-tracker-card-eagle-import:OSD3358-512M-BSM"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -1826,148 +1342,15 @@
 				)
 			)
 			(symbol "OSD3358-512M-BSM_1_0"
-				(polyline
-					(pts
-						(xy -30.48 83.82) (xy 0 83.82)
-					)
+				(rectangle
+					(start -30.48 83.82)
+					(end 30.48 -88.9)
 					(stroke
-						(width 0.254)
+						(width 0)
 						(type solid)
 					)
 					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -30.48 68.58) (xy -30.48 83.82)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -30.48 53.34) (xy -30.48 68.58)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -30.48 30.48) (xy -30.48 53.34)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -30.48 10.16) (xy -30.48 30.48)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -30.48 0) (xy -30.48 10.16)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -30.48 -10.16) (xy -30.48 0)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -30.48 -45.72) (xy -30.48 -10.16)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -30.48 -68.58) (xy -30.48 -45.72)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -30.48 -78.74) (xy -30.48 -68.58)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -30.48 -88.9) (xy -30.48 -78.74)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -30.48 -88.9) (xy 0 -88.9)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
+						(type background)
 					)
 				)
 				(polyline
@@ -1975,19 +1358,7 @@
 						(xy 0 83.82) (xy 0 68.58)
 					)
 					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 83.82) (xy 30.48 83.82)
-					)
-					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -1999,7 +1370,7 @@
 						(xy 0 68.58) (xy -30.48 68.58)
 					)
 					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -2011,7 +1382,7 @@
 						(xy 0 68.58) (xy 0 66.04)
 					)
 					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -2023,7 +1394,7 @@
 						(xy 0 66.04) (xy 0 53.34)
 					)
 					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -2035,7 +1406,7 @@
 						(xy 0 53.34) (xy -30.48 53.34)
 					)
 					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -2047,7 +1418,7 @@
 						(xy 0 53.34) (xy 0 48.26)
 					)
 					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -2059,7 +1430,7 @@
 						(xy 0 48.26) (xy 0 35.56)
 					)
 					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -2071,7 +1442,7 @@
 						(xy 0 35.56) (xy 0 30.48)
 					)
 					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -2083,7 +1454,7 @@
 						(xy 0 30.48) (xy -30.48 30.48)
 					)
 					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -2095,7 +1466,7 @@
 						(xy 0 30.48) (xy 0 22.86)
 					)
 					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -2107,7 +1478,7 @@
 						(xy 0 22.86) (xy 0 10.16)
 					)
 					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -2119,7 +1490,7 @@
 						(xy 0 10.16) (xy -30.48 10.16)
 					)
 					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -2131,7 +1502,7 @@
 						(xy 0 10.16) (xy 0 0)
 					)
 					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -2143,7 +1514,7 @@
 						(xy 0 0) (xy -30.48 0)
 					)
 					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -2155,7 +1526,7 @@
 						(xy 0 0) (xy 0 -10.16)
 					)
 					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -2167,7 +1538,7 @@
 						(xy 0 -10.16) (xy -30.48 -10.16)
 					)
 					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -2179,7 +1550,7 @@
 						(xy 0 -10.16) (xy 0 -33.02)
 					)
 					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -2191,7 +1562,7 @@
 						(xy 0 -33.02) (xy 0 -45.72)
 					)
 					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -2203,7 +1574,7 @@
 						(xy 0 -45.72) (xy -30.48 -45.72)
 					)
 					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -2215,7 +1586,7 @@
 						(xy 0 -45.72) (xy 0 -66.04)
 					)
 					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -2227,7 +1598,7 @@
 						(xy 0 -66.04) (xy 0 -68.58)
 					)
 					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -2239,7 +1610,7 @@
 						(xy 0 -68.58) (xy -30.48 -68.58)
 					)
 					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -2251,7 +1622,7 @@
 						(xy 0 -68.58) (xy 0 -78.74)
 					)
 					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -2263,7 +1634,7 @@
 						(xy 0 -78.74) (xy -30.48 -78.74)
 					)
 					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -2275,31 +1646,7 @@
 						(xy 0 -78.74) (xy 0 -88.9)
 					)
 					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -88.9) (xy 30.48 -88.9)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 30.48 83.82) (xy 30.48 66.04)
-					)
-					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -2311,19 +1658,7 @@
 						(xy 30.48 66.04) (xy 0 66.04)
 					)
 					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 30.48 66.04) (xy 30.48 48.26)
-					)
-					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -2335,19 +1670,7 @@
 						(xy 30.48 48.26) (xy 0 48.26)
 					)
 					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 30.48 48.26) (xy 30.48 35.56)
-					)
-					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -2359,19 +1682,7 @@
 						(xy 30.48 35.56) (xy 0 35.56)
 					)
 					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 30.48 35.56) (xy 30.48 22.86)
-					)
-					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -2383,19 +1694,7 @@
 						(xy 30.48 22.86) (xy 0 22.86)
 					)
 					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 30.48 22.86) (xy 30.48 -10.16)
-					)
-					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -2407,19 +1706,7 @@
 						(xy 30.48 -10.16) (xy 0 -10.16)
 					)
 					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 30.48 -10.16) (xy 30.48 -33.02)
-					)
-					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -2431,19 +1718,7 @@
 						(xy 30.48 -33.02) (xy 0 -33.02)
 					)
 					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 30.48 -33.02) (xy 30.48 -66.04)
-					)
-					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -2455,19 +1730,7 @@
 						(xy 30.48 -66.04) (xy 0 -66.04)
 					)
 					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 30.48 -66.04) (xy 30.48 -88.9)
-					)
-					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -3691,28 +2954,15 @@
 				)
 			)
 			(symbol "OSD3358-512M-BSM_2_0"
-				(polyline
-					(pts
-						(xy -25.4 58.42) (xy 25.4 58.42)
-					)
+				(rectangle
+					(start -25.4 58.42)
+					(end 25.4 -60.96)
 					(stroke
-						(width 0.254)
+						(width 0)
 						(type solid)
 					)
 					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -25.4 48.26) (xy -25.4 58.42)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
+						(type background)
 					)
 				)
 				(polyline
@@ -3720,19 +2970,7 @@
 						(xy -25.4 48.26) (xy 0 48.26)
 					)
 					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -25.4 17.78) (xy -25.4 48.26)
-					)
-					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -3744,19 +2982,7 @@
 						(xy -25.4 17.78) (xy 0 17.78)
 					)
 					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -25.4 -12.7) (xy -25.4 17.78)
-					)
-					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -3768,19 +2994,7 @@
 						(xy -25.4 -12.7) (xy 0 -12.7)
 					)
 					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -25.4 -38.1) (xy -25.4 -12.7)
-					)
-					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -3792,19 +3006,7 @@
 						(xy -25.4 -38.1) (xy 25.4 -38.1)
 					)
 					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -25.4 -60.96) (xy -25.4 -38.1)
-					)
-					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -3816,7 +3018,7 @@
 						(xy 0 48.26) (xy 0 17.78)
 					)
 					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -3828,7 +3030,7 @@
 						(xy 0 48.26) (xy 25.4 48.26)
 					)
 					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -3840,7 +3042,7 @@
 						(xy 0 17.78) (xy 0 0)
 					)
 					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -3852,7 +3054,7 @@
 						(xy 0 0) (xy 0 -12.7)
 					)
 					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -3864,7 +3066,7 @@
 						(xy 0 0) (xy 25.4 0)
 					)
 					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -3876,79 +3078,7 @@
 						(xy 0 -12.7) (xy 0 -60.96)
 					)
 					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -60.96) (xy -25.4 -60.96)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 25.4 58.42) (xy 25.4 48.26)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 25.4 48.26) (xy 25.4 0)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 25.4 0) (xy 25.4 -38.1)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 25.4 -38.1) (xy 25.4 -60.96)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 25.4 -60.96) (xy 0 -60.96)
-					)
-					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -4731,54 +3861,6 @@
 				)
 			)
 			(symbol "OSD3358-512M-BSM_3_0"
-				(polyline
-					(pts
-						(xy -25.4 60.96) (xy 25.4 60.96)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -25.4 -63.5) (xy -25.4 60.96)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 25.4 60.96) (xy 25.4 -63.5)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 25.4 -63.5) (xy -25.4 -63.5)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
 				(text "SIP C"
 					(at -5.08 53.34 0)
 					(effects
@@ -6049,55 +5131,20 @@
 					)
 				)
 			)
+			(symbol "OSD3358-512M-BSM_3_1"
+				(rectangle
+					(start -25.4 60.96)
+					(end 25.4 -63.5)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
 			(symbol "OSD3358-512M-BSM_4_0"
-				(polyline
-					(pts
-						(xy -25.4 33.02) (xy 25.4 33.02)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -25.4 -35.56) (xy -25.4 33.02)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 25.4 33.02) (xy 25.4 -35.56)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 25.4 -35.56) (xy -25.4 -35.56)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
 				(text "SIP D"
 					(at -20.32 -30.48 0)
 					(effects
@@ -6792,53 +5839,29 @@
 					)
 				)
 			)
+			(symbol "OSD3358-512M-BSM_4_1"
+				(rectangle
+					(start -25.4 33.02)
+					(end 25.4 -35.56)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
 			(symbol "OSD3358-512M-BSM_5_0"
-				(polyline
-					(pts
-						(xy -25.4 30.48) (xy 25.4 30.48)
-					)
+				(rectangle
+					(start -25.4 30.48)
+					(end 25.4 -33.02)
 					(stroke
-						(width 0.254)
+						(width 0)
 						(type solid)
 					)
 					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -25.4 -33.02) (xy -25.4 30.48)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 25.4 30.48) (xy 25.4 -33.02)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 25.4 -33.02) (xy -25.4 -33.02)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
+						(type background)
 					)
 				)
 				(text "NOTE:  Can use pours\nto connect DGND pads\ninstead of a via per\npad."
@@ -7511,82 +6534,10 @@
 			(symbol "OSD3358-512M-BSM_6_0"
 				(polyline
 					(pts
-						(xy -22.86 25.4) (xy 22.86 25.4)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -22.86 0) (xy -22.86 25.4)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
 						(xy -22.86 0) (xy 22.86 0)
 					)
 					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -22.86 -22.86) (xy -22.86 0)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 22.86 25.4) (xy 22.86 0)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 22.86 0) (xy 22.86 -22.86)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 22.86 -22.86) (xy -22.86 -22.86)
-					)
-					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -7783,208 +6734,16 @@
 					)
 				)
 			)
-			(embedded_fonts no)
-		)
-		(symbol "star-tracker-card-eagle-import:R-US_0603-A"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "R"
-				(at -3.81 1.4986 0)
-				(effects
-					(font
-						(size 1.778 1.5113)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Value" ""
-				(at -3.81 -3.302 0)
-				(effects
-					(font
-						(size 1.778 1.5113)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Footprint" "star-tracker-card:.0603-A"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "RESISTOR, American symbol"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "R-US_0603-A_1_0"
-				(polyline
-					(pts
-						(xy -2.54 0) (xy -2.159 1.016)
-					)
+			(symbol "OSD3358-512M-BSM_6_1"
+				(rectangle
+					(start -22.86 25.4)
+					(end 22.86 -22.86)
 					(stroke
-						(width 0.2032)
+						(width 0)
 						(type solid)
 					)
 					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.159 1.016) (xy -1.524 -1.016)
-					)
-					(stroke
-						(width 0.2032)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.524 -1.016) (xy -0.889 1.016)
-					)
-					(stroke
-						(width 0.2032)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.889 1.016) (xy -0.254 -1.016)
-					)
-					(stroke
-						(width 0.2032)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.254 -1.016) (xy 0.381 1.016)
-					)
-					(stroke
-						(width 0.2032)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.381 1.016) (xy 1.016 -1.016)
-					)
-					(stroke
-						(width 0.2032)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.016 -1.016) (xy 1.651 1.016)
-					)
-					(stroke
-						(width 0.2032)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.651 1.016) (xy 2.286 -1.016)
-					)
-					(stroke
-						(width 0.2032)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.286 -1.016) (xy 2.54 0)
-					)
-					(stroke
-						(width 0.2032)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 0 180)
-					(length 2.54)
-					(name "2"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
+						(type background)
 					)
 				)
 			)
@@ -8048,54 +6807,6 @@
 				)
 			)
 			(symbol "RCLAMP0504FB_1_0"
-				(polyline
-					(pts
-						(xy -7.62 7.62) (xy 7.62 7.62)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -7.62 -10.16) (xy -7.62 7.62)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 7.62) (xy 7.62 -10.16)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 -10.16) (xy -7.62 -10.16)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
 				(pin bidirectional line
 					(at -10.16 2.54 0)
 					(length 2.54)
@@ -8205,413 +6916,16 @@
 					)
 				)
 			)
-			(embedded_fonts no)
-		)
-		(symbol "star-tracker-card-eagle-import:TEST-POINT3X4"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "TP"
-				(at -2.54 2.54 0)
-				(effects
-					(font
-						(size 1.778 1.778)
-					)
-					(justify left bottom)
-					(hide yes)
-				)
-			)
-			(property "Value" ""
-				(at -2.54 -2.54 0)
-				(effects
-					(font
-						(size 1.778 1.778)
-					)
-					(justify left bottom)
-					(hide yes)
-				)
-			)
-			(property "Footprint" "star-tracker-card:PAD.03X.04"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "SparkFun Test Points\n\nBare copper test points for troubleshooting or In-Circuit-Testing. These are used by our Production team for verifying production board runs using pogo-pins on test beds.\n\nSparkFun Products:\n\n• SparkFun LSM9DS1 Breakout\n• SparkFun PSOC\n• https://www.sparkfun.com/products/13879 SparkFun Load Cell Amplifier"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "TEST-POINT3X4_1_0"
-				(polyline
-					(pts
-						(xy 2.54 0) (xy 0 0)
-					)
+			(symbol "RCLAMP0504FB_1_1"
+				(rectangle
+					(start -7.62 7.62)
+					(end 7.62 -10.16)
 					(stroke
-						(width 0.1524)
+						(width 0)
 						(type solid)
 					)
 					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 3.302 -0.762)
-					(mid 2.54 0)
-					(end 3.302 0.762)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin bidirectional line
-					(at 0 0 180)
-					(length 0)
-					(name "1"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "P$1"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "star-tracker-card-eagle-import:TPS2051CDBVR"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "U"
-				(at -4.9784 9.1186 0)
-				(effects
-					(font
-						(size 2.0828 1.7703)
-					)
-					(justify left bottom)
-					(hide yes)
-				)
-			)
-			(property "Value" ""
-				(at -4.8514 6.5786 0)
-				(effects
-					(font
-						(size 2.0828 1.7703)
-					)
-					(justify left bottom)
-					(hide yes)
-				)
-			)
-			(property "Footprint" "star-tracker-card:DBV5"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "TPS2051CDBVR_1_0"
-				(polyline
-					(pts
-						(xy -10.16 5.08) (xy -10.16 -7.62)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -10.16 -7.62) (xy 10.16 -7.62)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 5.08) (xy -10.16 5.08)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -7.62) (xy 10.16 5.08)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin input line
-					(at -12.7 0 0)
-					(length 2.54)
-					(name "IN"
-						(effects
-							(font
-								(size 1.524 1.524)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.524 1.524)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -12.7 -2.54 0)
-					(length 2.54)
-					(name "EN"
-						(effects
-							(font
-								(size 1.524 1.524)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.524 1.524)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 -10.16 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.524 1.524)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.524 1.524)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 12.7 0 180)
-					(length 2.54)
-					(name "OUT"
-						(effects
-							(font
-								(size 1.524 1.524)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.524 1.524)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 12.7 -2.54 180)
-					(length 2.54)
-					(name "~{FLT}"
-						(effects
-							(font
-								(size 1.524 1.524)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.524 1.524)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "star-tracker-card-eagle-import:VDD"
-			(power)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#SUPPLY"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" ""
-				(at 0 2.794 0)
-				(effects
-					(font
-						(size 1.778 1.5113)
-					)
-					(justify bottom)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "VDD Voltage Supply\n\nPositive voltage supply (traditionally for a CMOS device, D=drain)."
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "VDD_1_0"
-				(polyline
-					(pts
-						(xy 0 2.54) (xy -0.762 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 1.27) (xy 0 2.54)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin power_in line
-					(at 0 0 90)
-					(length 2.54)
-					(name "VDD"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
+						(type background)
 					)
 				)
 			)
@@ -8728,28 +7042,6 @@
 		)
 		(uuid "908b4edd-203c-4ae9-97eb-2ef82710e249")
 	)
-	(text "JTAG connector"
-		(exclude_from_sim no)
-		(at 68.58 119.38 0)
-		(effects
-			(font
-				(size 2.54 2.159)
-			)
-			(justify left bottom)
-		)
-		(uuid "981b340a-9aef-4382-b29c-689f3a83597a")
-	)
-	(text "USB Host Circuit\nNOTE: if VIN_BAT is used,\nthis will likely be below 5V\nas this input will come the\nbattery circuit"
-		(exclude_from_sim no)
-		(at 274.32 185.42 0)
-		(effects
-			(font
-				(size 2.54 2.159)
-			)
-			(justify left bottom)
-		)
-		(uuid "a87ac136-8996-493a-bcc0-bdf0025ce6b4")
-	)
 	(text "See Connectors Sheet"
 		(exclude_from_sim no)
 		(at 119.38 231.14 0)
@@ -8760,28 +7052,6 @@
 			(justify left bottom)
 		)
 		(uuid "afa86fef-924c-4621-bd93-d2b08d446aa2")
-	)
-	(text "USB Power Switch"
-		(exclude_from_sim no)
-		(at 298.45 191.77 0)
-		(effects
-			(font
-				(size 1.778 1.5113)
-			)
-			(justify left bottom)
-		)
-		(uuid "e8f5abdd-44d8-4978-ba35-b7cd9184ca90")
-	)
-	(text "See Connectors Sheet"
-		(exclude_from_sim no)
-		(at 317.5 226.06 0)
-		(effects
-			(font
-				(size 1.778 1.5113)
-			)
-			(justify left bottom)
-		)
-		(uuid "fe243229-d5a6-4ab2-8c74-d24923d3c943")
 	)
 	(text "USB Client Circuit"
 		(exclude_from_sim no)
@@ -8801,12 +7071,6 @@
 		(uuid "20dfd4b6-6dda-4c29-bcde-d168981c508e")
 	)
 	(junction
-		(at 269.24 231.14)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "20fe33b9-5933-450f-b808-83cbdf0846ae")
-	)
-	(junction
 		(at 152.4 99.06)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -8817,18 +7081,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2446ee5e-7a6d-4855-b51b-4b785834ffe5")
-	)
-	(junction
-		(at 292.1 193.04)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "31c1913b-6acb-4602-8724-4f2745821c11")
-	)
-	(junction
-		(at 294.64 203.2)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "353fd137-bd0f-4b0c-be9f-7ea6996a4da2")
 	)
 	(junction
 		(at 157.48 53.34)
@@ -8847,12 +7099,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "612a4ab3-6567-4608-825d-9382070394f0")
-	)
-	(junction
-		(at 330.2 200.66)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "622428af-eafa-4616-a607-81aaca17ab73")
 	)
 	(junction
 		(at 165.1 195.58)
@@ -8885,34 +7131,16 @@
 		(uuid "790cef29-163d-4d0b-8ce1-04cb63b2c024")
 	)
 	(junction
-		(at 294.64 228.6)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "83de3409-c494-4b08-8c9c-ffa5439df61b")
-	)
-	(junction
 		(at 157.48 68.58)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "85d6a1cc-c577-443d-a608-9850576c7b0d")
 	)
 	(junction
-		(at 266.7 233.68)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "95e81e25-f202-437f-9c2c-3b7648245345")
-	)
-	(junction
 		(at 137.16 124.46)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9c043b5b-f36f-456d-8405-05d904f5ab2f")
-	)
-	(junction
-		(at 101.6 139.7)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b0d236e4-4bb7-42b1-b0e2-f4590f4a7d84")
 	)
 	(junction
 		(at 162.56 83.82)
@@ -8933,40 +7161,46 @@
 		(uuid "c9e6a2cf-4a27-4d2b-b75c-5473ad08aa9b")
 	)
 	(junction
-		(at 309.88 213.36)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d9068742-f38e-4344-aaf7-53db9f043f23")
-	)
-	(junction
-		(at 193.04 198.12)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "dddaef41-b4bd-41f1-a963-107c4b95f52e")
-	)
-	(junction
-		(at 279.4 228.6)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e9075852-3f10-4237-886f-18763ac15667")
-	)
-	(junction
-		(at 101.6 144.78)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ec6c6000-d98b-43a8-8179-a97acccb7163")
-	)
-	(junction
 		(at 142.24 68.58)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "eda21975-7c97-4ddd-9aa2-422651a990b1")
 	)
 	(junction
+		(at 193.04 195.58)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f0ea8e58-4bee-49e8-a067-5381a5b6ac89")
+	)
+	(junction
 		(at 142.24 53.34)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "fd1e158b-6a7f-4f3c-8e72-fb972af3f4fe")
+	)
+	(no_connect
+		(at 187.96 119.38)
+		(uuid "01510ade-f2ab-4d42-bafb-24e5d338876c")
+	)
+	(no_connect
+		(at 182.88 213.36)
+		(uuid "484d1e9d-132c-4094-83ec-e019eb209b9e")
+	)
+	(no_connect
+		(at 187.96 114.3)
+		(uuid "657e065a-69de-44a0-abb4-b03c6c783029")
+	)
+	(no_connect
+		(at 182.88 215.9)
+		(uuid "6ccc3a95-8aed-4beb-9b2e-291214475e7e")
+	)
+	(no_connect
+		(at 187.96 116.84)
+		(uuid "8572d29d-a7b9-43c2-899a-c3426e84f6dc")
+	)
+	(no_connect
+		(at 187.96 121.92)
+		(uuid "fa5cb3b6-9d43-4ba9-83be-b37582b58834")
 	)
 	(polyline
 		(pts
@@ -9000,43 +7234,13 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 200.66) (xy 193.04 198.12)
+			(xy 147.32 142.24) (xy 147.32 144.78)
 		)
 		(stroke
-			(width 0.1524)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "033f69d7-95bf-421c-9815-5222476c58e9")
-	)
-	(wire
-		(pts
-			(xy 266.7 144.78) (xy 266.7 233.68)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "03d7f105-5904-438d-a61e-b701538060d0")
-	)
-	(wire
-		(pts
-			(xy 99.06 104.14) (xy 86.36 104.14)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "04092afb-4668-4f83-862e-dfbb2bdfe44e")
-	)
-	(wire
-		(pts
-			(xy 93.98 149.86) (xy 96.52 149.86)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "04963998-757d-471b-8c94-87ca940d54bd")
+		(uuid "029d13e9-9b99-4068-9b34-4c5fd0b2cc1e")
 	)
 	(wire
 		(pts
@@ -9060,16 +7264,6 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 121.92) (xy 187.96 121.92)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "0cb68c0e-cb51-403c-adc4-17ee6c284caf")
-	)
-	(wire
-		(pts
 			(xy 124.46 68.58) (xy 124.46 53.34)
 		)
 		(stroke
@@ -9080,7 +7274,7 @@
 	)
 	(wire
 		(pts
-			(xy 248.92 149.86) (xy 251.46 149.86)
+			(xy 248.92 149.86) (xy 271.78 149.86)
 		)
 		(stroke
 			(width 0.1524)
@@ -9110,23 +7304,13 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 119.38) (xy 187.96 119.38)
+			(xy 142.24 134.62) (xy 142.24 137.16)
 		)
 		(stroke
-			(width 0.1524)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "136ddb2d-4e13-4d5d-a4c8-dfbb65876c14")
-	)
-	(wire
-		(pts
-			(xy 297.18 200.66) (xy 292.1 200.66)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "15a71c7d-1cff-400c-8705-07b4be2bfbc0")
+		(uuid "136f92ba-5771-421b-a259-c4394679db7e")
 	)
 	(wire
 		(pts
@@ -9170,26 +7354,6 @@
 	)
 	(wire
 		(pts
-			(xy 337.82 220.98) (xy 294.64 220.98)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "240f0691-0db0-420d-85b3-edf476143e19")
-	)
-	(wire
-		(pts
-			(xy 266.7 233.68) (xy 180.34 233.68)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "2604d135-a21b-44c9-8f61-8a11458e43f7")
-	)
-	(wire
-		(pts
 			(xy 248.92 81.28) (xy 248.92 71.12)
 		)
 		(stroke
@@ -9197,16 +7361,6 @@
 			(type solid)
 		)
 		(uuid "264b8365-d265-474f-b512-366906d460a0")
-	)
-	(polyline
-		(pts
-			(xy 350.52 165.1) (xy 350.52 254)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "2a8d0765-3ade-4e86-ba69-b4f80daa5971")
 	)
 	(wire
 		(pts
@@ -9220,6 +7374,16 @@
 	)
 	(wire
 		(pts
+			(xy 134.62 68.58) (xy 137.16 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2b97f40e-5303-45a3-ae3c-5c32f8d0bf37")
+	)
+	(wire
+		(pts
 			(xy 248.92 111.76) (xy 251.46 111.76)
 		)
 		(stroke
@@ -9230,33 +7394,13 @@
 	)
 	(wire
 		(pts
-			(xy 269.24 231.14) (xy 269.24 142.24)
+			(xy 129.54 129.54) (xy 129.54 132.08)
 		)
 		(stroke
-			(width 0.1524)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "2eb9f8a8-7dbd-4d08-9c4b-ab33f3001fc3")
-	)
-	(wire
-		(pts
-			(xy 309.88 228.6) (xy 314.96 228.6)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "3021db33-23fa-49d1-9314-5623b51b4e31")
-	)
-	(wire
-		(pts
-			(xy 264.16 152.4) (xy 248.92 152.4)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "3149d551-e007-4d6a-bdf1-c06ea45e65ef")
+		(uuid "2dd24354-95fb-428b-a089-35160ca14702")
 	)
 	(wire
 		(pts
@@ -9267,16 +7411,6 @@
 			(type solid)
 		)
 		(uuid "31e97bef-4fb7-4d98-ad15-3861aa45bf82")
-	)
-	(polyline
-		(pts
-			(xy 109.22 170.18) (xy 109.22 114.3)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "3381186c-937c-438b-9345-10bd9f38189b")
 	)
 	(wire
 		(pts
@@ -9290,16 +7424,6 @@
 	)
 	(wire
 		(pts
-			(xy 269.24 236.22) (xy 269.24 231.14)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "34cab1f4-d1b2-4c3e-a83f-9b2fcf39f749")
-	)
-	(wire
-		(pts
 			(xy 187.96 83.82) (xy 162.56 83.82)
 		)
 		(stroke
@@ -9307,16 +7431,6 @@
 			(type solid)
 		)
 		(uuid "35f0d6dc-068f-4448-a801-4a3acc9d73c9")
-	)
-	(wire
-		(pts
-			(xy 119.38 142.24) (xy 119.38 119.38)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "37104fbc-6e40-4397-a3eb-f696ef59f718")
 	)
 	(polyline
 		(pts
@@ -9350,16 +7464,6 @@
 	)
 	(wire
 		(pts
-			(xy 93.98 144.78) (xy 101.6 144.78)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "3cf80e38-5838-419f-8e30-15ff75b73372")
-	)
-	(wire
-		(pts
 			(xy 157.48 68.58) (xy 157.48 66.04)
 		)
 		(stroke
@@ -9380,23 +7484,13 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 198.12) (xy 193.04 195.58)
+			(xy 193.04 195.58) (xy 193.04 200.66)
 		)
 		(stroke
 			(width 0.1524)
 			(type solid)
 		)
 		(uuid "4164a1e3-1c6d-4580-a1c6-a73e25c67889")
-	)
-	(wire
-		(pts
-			(xy 337.82 200.66) (xy 337.82 220.98)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "44ee0759-e441-45a7-ba81-e877550a0051")
 	)
 	(wire
 		(pts
@@ -9418,6 +7512,26 @@
 		)
 		(uuid "4591b879-b74f-4f9a-993c-694df1c16dd4")
 	)
+	(wire
+		(pts
+			(xy 134.62 83.82) (xy 137.16 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "45e7b6f4-b140-4287-94b1-14449ff13328")
+	)
+	(wire
+		(pts
+			(xy 134.62 53.34) (xy 137.16 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4696197e-8b8e-4c4c-984a-e799f430dccc")
+	)
 	(polyline
 		(pts
 			(xy 218.44 172.72) (xy 109.22 172.72)
@@ -9427,16 +7541,6 @@
 			(type solid)
 		)
 		(uuid "4b05c732-aeb3-4a3e-b8f0-4795e3921f94")
-	)
-	(polyline
-		(pts
-			(xy 223.52 165.1) (xy 350.52 165.1)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "4bd8a5c4-66cf-411a-930f-ccc2e2174f5a")
 	)
 	(wire
 		(pts
@@ -9450,16 +7554,6 @@
 	)
 	(wire
 		(pts
-			(xy 96.52 160.02) (xy 83.82 160.02)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "4eb90dfd-71fe-4063-8b92-6583b18844f7")
-	)
-	(wire
-		(pts
 			(xy 162.56 83.82) (xy 152.4 83.82)
 		)
 		(stroke
@@ -9467,36 +7561,6 @@
 			(type solid)
 		)
 		(uuid "4f7b1671-6829-4486-9bf4-60cbdc773ded")
-	)
-	(wire
-		(pts
-			(xy 182.88 215.9) (xy 177.8 215.9)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "5095e76d-4598-4c47-b051-16fd795100e3")
-	)
-	(wire
-		(pts
-			(xy 271.78 228.6) (xy 271.78 139.7)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "5471930d-ce23-4753-a2a2-bfe4ea5cb6ae")
-	)
-	(wire
-		(pts
-			(xy 294.64 213.36) (xy 309.88 213.36)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "5606cf53-c3c4-42f8-b071-5bf8cc700eea")
 	)
 	(wire
 		(pts
@@ -9520,16 +7584,6 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 127) (xy 99.06 104.14)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "5cba098d-28b8-4f25-96eb-e5165a66f0bb")
-	)
-	(wire
-		(pts
 			(xy 142.24 53.34) (xy 137.16 53.34)
 		)
 		(stroke
@@ -9550,26 +7604,6 @@
 	)
 	(wire
 		(pts
-			(xy 325.12 203.2) (xy 325.12 195.58)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "6241bcde-0d4f-4873-8441-4d555d7ca767")
-	)
-	(wire
-		(pts
-			(xy 289.56 210.82) (xy 264.16 210.82)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "648dcd82-2ef1-455e-94dc-0406e1c1b487")
-	)
-	(wire
-		(pts
 			(xy 142.24 149.86) (xy 142.24 144.78)
 		)
 		(stroke
@@ -9580,26 +7614,6 @@
 	)
 	(wire
 		(pts
-			(xy 294.64 203.2) (xy 289.56 203.2)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "65f6105e-9df4-4f44-aad4-9e0a162d0400")
-	)
-	(polyline
-		(pts
-			(xy 223.52 254) (xy 223.52 165.1)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "665a3f4c-269f-4bb0-877f-d1f11f4ba69f")
-	)
-	(wire
-		(pts
 			(xy 137.16 68.58) (xy 142.24 68.58)
 		)
 		(stroke
@@ -9607,46 +7621,6 @@
 			(type solid)
 		)
 		(uuid "6dc82ac8-6264-41ac-8cd9-ee7ab19331aa")
-	)
-	(wire
-		(pts
-			(xy 121.92 147.32) (xy 121.92 121.92)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "713ed7ce-e536-4db8-bebc-9155f8c82057")
-	)
-	(wire
-		(pts
-			(xy 101.6 144.78) (xy 101.6 160.02)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "79e3865a-5810-4216-a8ab-02ec91879fa5")
-	)
-	(wire
-		(pts
-			(xy 314.96 231.14) (xy 269.24 231.14)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "7ce9c027-3a5a-4d5f-a39c-6536c0067b69")
-	)
-	(wire
-		(pts
-			(xy 182.88 213.36) (xy 180.34 213.36)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "7db5d425-dfeb-421a-81ac-d360d565a571")
 	)
 	(wire
 		(pts
@@ -9670,33 +7644,13 @@
 	)
 	(wire
 		(pts
-			(xy 292.1 193.04) (xy 281.94 193.04)
+			(xy 248.92 147.32) (xy 271.78 147.32)
 		)
 		(stroke
-			(width 0.1524)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "83c24826-3acf-45b2-9ec2-620915bdd7f9")
-	)
-	(wire
-		(pts
-			(xy 116.84 137.16) (xy 93.98 137.16)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "844a9f3a-4a1f-4c8c-8331-615339893fbc")
-	)
-	(wire
-		(pts
-			(xy 322.58 203.2) (xy 325.12 203.2)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "846cf861-3151-47cd-8721-afe538f1b02b")
+		(uuid "84c9e6d2-942d-4b04-b7a4-d4a3e70c3dbd")
 	)
 	(wire
 		(pts
@@ -9707,6 +7661,26 @@
 			(type solid)
 		)
 		(uuid "851a8bf6-622f-4f26-b39d-96685a36f436")
+	)
+	(wire
+		(pts
+			(xy 134.62 99.06) (xy 137.16 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "86399821-63ff-4146-8d7b-20c6621dbdf6")
+	)
+	(wire
+		(pts
+			(xy 142.24 142.24) (xy 142.24 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8674f127-990d-4481-9824-019c32fc9c60")
 	)
 	(wire
 		(pts
@@ -9740,16 +7714,6 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 114.3) (xy 187.96 114.3)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "8970f966-6224-460e-9be3-bcdf252b8b12")
-	)
-	(wire
-		(pts
 			(xy 193.04 195.58) (xy 165.1 195.58)
 		)
 		(stroke
@@ -9768,16 +7732,6 @@
 		)
 		(uuid "8dcce91d-919c-41b7-98bd-c8a847267cfc")
 	)
-	(wire
-		(pts
-			(xy 93.98 142.24) (xy 119.38 142.24)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "8f23a475-7fd0-4623-81ce-182e8588edae")
-	)
 	(polyline
 		(pts
 			(xy 111.76 66.04) (xy 111.76 58.42)
@@ -9787,36 +7741,6 @@
 			(type solid)
 		)
 		(uuid "8f5ee62d-9604-4460-94fd-4186296c7225")
-	)
-	(wire
-		(pts
-			(xy 297.18 203.2) (xy 294.64 203.2)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "90c931a1-4fe5-467e-9d87-5fffd31163a3")
-	)
-	(wire
-		(pts
-			(xy 292.1 200.66) (xy 292.1 193.04)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "911bf89b-7f99-451c-b275-74af1757aa4c")
-	)
-	(wire
-		(pts
-			(xy 93.98 147.32) (xy 121.92 147.32)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "913ba9c5-3937-4304-9057-86eec85baaed")
 	)
 	(wire
 		(pts
@@ -9830,16 +7754,6 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 129.54) (xy 101.6 139.7)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "92c1993e-9f14-4057-9977-11f45939a2a8")
-	)
-	(wire
-		(pts
 			(xy 162.56 129.54) (xy 162.56 149.86)
 		)
 		(stroke
@@ -9847,16 +7761,6 @@
 			(type solid)
 		)
 		(uuid "93e8b3b6-4628-4ee5-bd94-fb6983f7d7b8")
-	)
-	(wire
-		(pts
-			(xy 101.6 139.7) (xy 101.6 144.78)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "95f39203-27d7-41f2-b30d-6858396a32f7")
 	)
 	(wire
 		(pts
@@ -9870,16 +7774,6 @@
 	)
 	(wire
 		(pts
-			(xy 276.86 160.02) (xy 276.86 157.48)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "99279794-ef0b-4c37-8cdc-1b48e2e3267c")
-	)
-	(wire
-		(pts
 			(xy 152.4 99.06) (xy 152.4 96.52)
 		)
 		(stroke
@@ -9887,6 +7781,16 @@
 			(type solid)
 		)
 		(uuid "9a48eb03-b32c-4291-855f-c4e87ca44071")
+	)
+	(wire
+		(pts
+			(xy 162.56 93.98) (xy 162.56 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9a61fc4f-dd7d-4c1e-9263-bb3f7eafdc56")
 	)
 	(wire
 		(pts
@@ -9950,16 +7854,6 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 236.22) (xy 269.24 236.22)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "a496a3b6-e0fc-4d5c-bfc6-223fbb309d5f")
-	)
-	(wire
-		(pts
 			(xy 152.4 99.06) (xy 142.24 99.06)
 		)
 		(stroke
@@ -9987,26 +7881,6 @@
 			(type solid)
 		)
 		(uuid "a699b6af-d7a6-4213-adf8-86a46729b334")
-	)
-	(wire
-		(pts
-			(xy 116.84 116.84) (xy 187.96 116.84)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "ab15130e-3d87-4174-8e53-bbf3969dd1ea")
-	)
-	(wire
-		(pts
-			(xy 266.7 233.68) (xy 314.96 233.68)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "ace7e49c-1dc4-4163-94e2-720c42336458")
 	)
 	(wire
 		(pts
@@ -10050,6 +7924,16 @@
 	)
 	(wire
 		(pts
+			(xy 147.32 134.62) (xy 147.32 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b1b896e8-17b8-4bc6-b381-a0c8f731c32d")
+	)
+	(wire
+		(pts
 			(xy 124.46 83.82) (xy 124.46 99.06)
 		)
 		(stroke
@@ -10057,26 +7941,6 @@
 			(type solid)
 		)
 		(uuid "b1e5e5ac-c931-467f-9bb0-757ebac7c98a")
-	)
-	(wire
-		(pts
-			(xy 337.82 200.66) (xy 330.2 200.66)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "b3098f9a-4874-4047-81c9-b2de74ca7b78")
-	)
-	(wire
-		(pts
-			(xy 264.16 210.82) (xy 264.16 152.4)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "b555924e-5d3e-413e-9612-140c5c173067")
 	)
 	(wire
 		(pts
@@ -10090,16 +7954,6 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 132.08) (xy 114.3 114.3)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "b69430a6-aa0c-4aa0-8227-c140868056ad")
-	)
-	(wire
-		(pts
 			(xy 134.62 99.06) (xy 124.46 99.06)
 		)
 		(stroke
@@ -10110,23 +7964,13 @@
 	)
 	(wire
 		(pts
-			(xy 248.92 144.78) (xy 266.7 144.78)
+			(xy 248.92 144.78) (xy 271.78 144.78)
 		)
 		(stroke
 			(width 0.1524)
 			(type solid)
 		)
 		(uuid "b97ce5f9-bdac-4f24-a7e2-d71794454b35")
-	)
-	(wire
-		(pts
-			(xy 279.4 228.6) (xy 271.78 228.6)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "b9f879b0-92cd-4213-ac42-00c812278e22")
 	)
 	(wire
 		(pts
@@ -10137,16 +7981,6 @@
 			(type solid)
 		)
 		(uuid "ba746e3e-426a-4d16-9145-3ceda51a3d4a")
-	)
-	(wire
-		(pts
-			(xy 330.2 208.28) (xy 330.2 213.36)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "beefef43-ad1b-450e-8db4-13a35ec303e9")
 	)
 	(polyline
 		(pts
@@ -10160,7 +7994,17 @@
 	)
 	(wire
 		(pts
-			(xy 269.24 142.24) (xy 248.92 142.24)
+			(xy 157.48 63.5) (xy 157.48 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c20c454e-2468-4edc-a753-5502ba77c4c4")
+	)
+	(wire
+		(pts
+			(xy 248.92 142.24) (xy 271.78 142.24)
 		)
 		(stroke
 			(width 0.1524)
@@ -10180,13 +8024,13 @@
 	)
 	(wire
 		(pts
-			(xy 96.52 149.86) (xy 96.52 160.02)
+			(xy 248.92 152.4) (xy 271.78 152.4)
 		)
 		(stroke
 			(width 0.1524)
 			(type solid)
 		)
-		(uuid "c7596e07-f33f-4d74-890d-819645c03de6")
+		(uuid "c78197d7-3e5b-444f-a173-3e52b475bc9f")
 	)
 	(wire
 		(pts
@@ -10208,25 +8052,15 @@
 		)
 		(uuid "c91ab2d0-a77a-4fb4-b49b-9605dcc18f36")
 	)
-	(polyline
+	(wire
 		(pts
-			(xy 350.52 254) (xy 223.52 254)
+			(xy 129.54 137.16) (xy 129.54 139.7)
 		)
 		(stroke
-			(width 0.1524)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "c9ee5899-5951-42d0-8540-5b1961fc0679")
-	)
-	(polyline
-		(pts
-			(xy 60.96 170.18) (xy 109.22 170.18)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "ca54d100-385f-47c9-aafb-15d3d8801950")
+		(uuid "c9acc2ce-95dc-4182-92c3-070ba619ad37")
 	)
 	(wire
 		(pts
@@ -10240,27 +8074,7 @@
 	)
 	(wire
 		(pts
-			(xy 294.64 228.6) (xy 299.72 228.6)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "cc67b934-4bde-4ba7-99c4-20495f8c40e5")
-	)
-	(wire
-		(pts
-			(xy 93.98 129.54) (xy 101.6 129.54)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "ce3ded5c-5a62-4719-b536-f88f8df7ee64")
-	)
-	(wire
-		(pts
-			(xy 193.04 198.12) (xy 205.74 198.12)
+			(xy 193.04 195.58) (xy 205.74 195.58)
 		)
 		(stroke
 			(width 0.1524)
@@ -10290,23 +8104,13 @@
 	)
 	(wire
 		(pts
-			(xy 205.74 198.12) (xy 205.74 210.82)
+			(xy 205.74 195.58) (xy 205.74 210.82)
 		)
 		(stroke
 			(width 0.1524)
 			(type solid)
 		)
 		(uuid "d8996a60-66bc-4b4d-887c-0132099424cb")
-	)
-	(wire
-		(pts
-			(xy 330.2 200.66) (xy 322.58 200.66)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "da134d9d-bb73-4184-a234-a81ab5466f31")
 	)
 	(wire
 		(pts
@@ -10317,26 +8121,6 @@
 			(type solid)
 		)
 		(uuid "da1d9e9a-2d6a-4e6b-8855-dfaf8f3defed")
-	)
-	(polyline
-		(pts
-			(xy 60.96 114.3) (xy 60.96 170.18)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "da3638ae-9c54-4d41-bf14-e645d8f4c774")
-	)
-	(wire
-		(pts
-			(xy 330.2 213.36) (xy 309.88 213.36)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "dac6da33-c499-45b7-8025-62fa5f170dcc")
 	)
 	(wire
 		(pts
@@ -10350,23 +8134,13 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 215.9) (xy 177.8 236.22)
+			(xy 157.48 55.88) (xy 157.48 58.42)
 		)
 		(stroke
-			(width 0.1524)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "dcb67ac4-68b8-4e38-bd8d-40f614e4d45c")
-	)
-	(wire
-		(pts
-			(xy 76.2 104.14) (xy 68.58 104.14)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "dcc83148-92f2-4245-8643-0aaa6df7189a")
+		(uuid "dbab48a8-709a-4134-bb19-70974c175c59")
 	)
 	(wire
 		(pts
@@ -10390,13 +8164,13 @@
 	)
 	(wire
 		(pts
-			(xy 276.86 147.32) (xy 248.92 147.32)
+			(xy 205.74 215.9) (xy 205.74 218.44)
 		)
 		(stroke
-			(width 0.1524)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "df3471d0-aac1-41e9-abb0-f66e437f560a")
+		(uuid "df1f01aa-2ddc-4770-929d-53e77ccbe8e7")
 	)
 	(wire
 		(pts
@@ -10420,16 +8194,6 @@
 	)
 	(wire
 		(pts
-			(xy 116.84 137.16) (xy 116.84 116.84)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "e246b97b-8a6d-443e-8d04-ab21a5db2daa")
-	)
-	(wire
-		(pts
 			(xy 187.96 99.06) (xy 162.56 99.06)
 		)
 		(stroke
@@ -10437,16 +8201,6 @@
 			(type solid)
 		)
 		(uuid "e2508ef8-e7e1-471d-8a1d-1bdbf737923f")
-	)
-	(wire
-		(pts
-			(xy 289.56 203.2) (xy 289.56 210.82)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "e2d0819f-8783-4b4e-99ad-a15749f57a07")
 	)
 	(wire
 		(pts
@@ -10490,16 +8244,6 @@
 	)
 	(wire
 		(pts
-			(xy 281.94 200.66) (xy 281.94 203.2)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "ea1d3b6d-1349-4362-b626-425b989f3d73")
-	)
-	(wire
-		(pts
 			(xy 147.32 147.32) (xy 160.02 147.32)
 		)
 		(stroke
@@ -10517,16 +8261,6 @@
 			(type solid)
 		)
 		(uuid "eadba917-33c1-4064-aac8-7d17a6768b73")
-	)
-	(wire
-		(pts
-			(xy 294.64 220.98) (xy 294.64 228.6)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "ebec1f3b-8c13-44e9-bff6-fc00d1710802")
 	)
 	(wire
 		(pts
@@ -10590,16 +8324,6 @@
 	)
 	(wire
 		(pts
-			(xy 93.98 132.08) (xy 114.3 132.08)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "ef190856-aade-46ef-8e61-859a5ac931cb")
-	)
-	(wire
-		(pts
 			(xy 152.4 218.44) (xy 134.62 218.44)
 		)
 		(stroke
@@ -10607,26 +8331,6 @@
 			(type solid)
 		)
 		(uuid "ef470cf7-14a3-4517-8612-416cde41d8bc")
-	)
-	(wire
-		(pts
-			(xy 93.98 139.7) (xy 101.6 139.7)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "f19397d0-59d8-41bc-b50e-4976acf4e3a9")
-	)
-	(wire
-		(pts
-			(xy 325.12 185.42) (xy 325.12 182.88)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "f20844ea-3564-42a1-814b-bcbc9ba70e2c")
 	)
 	(polyline
 		(pts
@@ -10650,13 +8354,13 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 233.68) (xy 180.34 213.36)
+			(xy 162.56 86.36) (xy 162.56 88.9)
 		)
 		(stroke
-			(width 0.1524)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "f6042178-5347-448f-8054-0dcfa9b8d25e")
+		(uuid "f712e07e-b5fd-48c8-a6b6-5198206b5153")
 	)
 	(wire
 		(pts
@@ -10670,26 +8374,6 @@
 	)
 	(wire
 		(pts
-			(xy 309.88 213.36) (xy 309.88 210.82)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "f8a3babb-4cf4-4102-97d1-977f196fa794")
-	)
-	(polyline
-		(pts
-			(xy 109.22 114.3) (xy 60.96 114.3)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "f92dd26c-9b34-41d7-b598-c83caa07649f")
-	)
-	(wire
-		(pts
 			(xy 182.88 210.82) (xy 170.18 210.82)
 		)
 		(stroke
@@ -10697,36 +8381,6 @@
 			(type solid)
 		)
 		(uuid "fd0c21e0-e0af-4321-9b17-9e4852adf639")
-	)
-	(wire
-		(pts
-			(xy 294.64 228.6) (xy 279.4 228.6)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "ff333043-3a75-402b-92e8-e64b4c0b6bf2")
-	)
-	(wire
-		(pts
-			(xy 93.98 127) (xy 99.06 127)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "ffe91173-7fba-4231-8e67-589432fae8da")
-	)
-	(label "VOUT_USB"
-		(at 294.64 220.98 0)
-		(effects
-			(font
-				(size 1.2446 1.2446)
-			)
-			(justify left bottom)
-		)
-		(uuid "2fbe9cba-ee6d-4532-9213-9bb84b5440b5")
 	)
 	(label "OSC0_OUT"
 		(at 144.78 68.58 0)
@@ -10758,185 +8412,53 @@
 		)
 		(uuid "e0626465-a47b-46d2-860b-3c623780371f")
 	)
-	(global_label "USB_CLI_N"
+	(hierarchical_label "USB_CLI_VBUS"
+		(shape input)
+		(at 134.62 218.44 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "0a32faed-4049-4a48-b594-fefd9c31bf69")
+	)
+	(hierarchical_label "USB_CLI_N"
 		(shape bidirectional)
 		(at 134.62 220.98 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 0.9957 0.9957)
+				(size 1.27 1.27)
 			)
 			(justify right)
 		)
-		(uuid "2c768662-efc5-4d2d-ab3e-17ef07fb1204")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 123.5851 220.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
+		(uuid "37f54df7-6cf5-43df-9929-ba68a6b5e3ce")
 	)
-	(global_label "RESET#"
-		(shape bidirectional)
-		(at 68.58 104.14 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.2446 1.2446)
-			)
-			(justify right)
-		)
-		(uuid "30058a87-9e22-4e96-b844-739aeb7a4389")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 57.6908 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "USB_HO_N"
-		(shape bidirectional)
-		(at 314.96 231.14 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 0.9957 0.9957)
-			)
-			(justify left)
-		)
-		(uuid "3929b2d3-e477-42b1-916f-8e6bbbeb0f33")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 325.8053 231.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "USB_HO_PX"
-		(shape bidirectional)
-		(at 314.96 233.68 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 0.9957 0.9957)
-			)
-			(justify left)
-		)
-		(uuid "ae2510d1-155c-4656-a60f-57589e754146")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 326.7062 233.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "USB_CLI_VBUS"
-		(shape bidirectional)
-		(at 134.62 218.44 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 0.9957 0.9957)
-			)
-			(justify right)
-		)
-		(uuid "b6d92069-a733-46c0-a94c-774a71094a56")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 120.7876 218.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "VIN_USB"
-		(shape bidirectional)
-		(at 165.1 185.42 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.2446 1.2446)
-			)
-			(justify right)
-		)
-		(uuid "bfcea6f6-a701-42ab-b4b0-593db59e6e63")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 153.4403 185.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "USB_CLI_P"
+	(hierarchical_label "USB_CLI_P"
 		(shape bidirectional)
 		(at 134.62 223.52 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 0.9957 0.9957)
+				(size 1.27 1.27)
 			)
 			(justify right)
 		)
-		(uuid "ce1c4c05-d6be-4fc4-a199-be8181107f0f")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 123.6325 223.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
+		(uuid "9213bdb9-8bb7-4af6-8d2d-8ea714d92ca4")
 	)
-	(global_label "USB_HO_VBUS"
-		(shape bidirectional)
-		(at 314.96 228.6 0)
-		(fields_autoplaced yes)
+	(hierarchical_label "VIN_USB"
+		(shape input)
+		(at 165.1 185.42 180)
 		(effects
 			(font
-				(size 0.9957 0.9957)
+				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
-		(uuid "e186f687-134f-4de8-8470-d6121aa1df03")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 328.6028 228.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
+		(uuid "9f704dbd-1710-4135-ad55-d7701d251ec7")
 	)
 	(symbol
-		(lib_id "star-tracker-card-eagle-import:GND")
-		(at 129.54 144.78 0)
+		(lib_id "power:GND")
+		(at 129.54 142.24 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10944,7 +8466,7 @@
 		(dnp no)
 		(uuid "01ae7dd4-c84b-4629-af28-e72e50fceb06")
 		(property "Reference" "#GND58"
-			(at 129.54 144.78 0)
+			(at 129.54 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10962,7 +8484,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 129.54 144.78 0)
+			(at 129.54 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10971,7 +8493,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 129.54 144.78 0)
+			(at 129.54 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10979,8 +8501,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 129.54 144.78 0)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 129.54 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11076,11 +8598,11 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
+		(lib_id "oresat-misc:Test-Point-1mm-round")
 		(at 251.46 124.46 0)
 		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
+		(exclude_from_sim yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "05cf7e6a-8be4-4ae9-b110-30c67ec1e2ff")
@@ -11103,8 +8625,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 251.46 124.46 0)
+		(property "Footprint" "oresat-misc:TestPoint_Pad_D1.0mm"
+			(at 251.46 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11121,7 +8643,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "1mm round SMT test point"
 			(at 251.46 124.46 0)
 			(effects
 				(font
@@ -11130,7 +8652,7 @@
 				(hide yes)
 			)
 		)
-		(pin "P$1"
+		(pin "1"
 			(uuid "67309f7b-e853-4dfd-a083-a821c5d8aef4")
 		)
 		(instances
@@ -11143,77 +8665,8 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-card-eagle-import:C-EU0805-B")
-		(at 330.2 203.2 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "0ddc4397-6fe9-4f1c-a2d0-0bf0a34b3348")
-		(property "Reference" "C1"
-			(at 331.216 202.565 0)
-			(effects
-				(font
-					(size 1.778 1.5113)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Value" "10uF"
-			(at 331.216 207.391 0)
-			(effects
-				(font
-					(size 1.778 1.5113)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Footprint" "star-tracker-card:.0805-B"
-			(at 330.2 203.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 330.2 203.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 330.2 203.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "702054a7-ae00-4243-824d-ab6a0a03e318")
-		)
-		(pin "2"
-			(uuid "65876baf-8d4a-45d1-a75e-0446894e44ea")
-		)
-		(instances
-			(project ""
-				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
-					(reference "C1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "star-tracker-card-eagle-import:GND")
-		(at 119.38 66.04 0)
+		(lib_id "power:GND")
+		(at 119.38 63.5 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11221,7 +8674,7 @@
 		(dnp no)
 		(uuid "0ffbb559-48b2-4811-b391-98beadde6c67")
 		(property "Reference" "#GND56"
-			(at 119.38 66.04 0)
+			(at 119.38 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11239,7 +8692,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 119.38 66.04 0)
+			(at 119.38 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11248,7 +8701,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 119.38 66.04 0)
+			(at 119.38 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11256,8 +8709,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 119.38 66.04 0)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 119.38 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11278,11 +8731,11 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
+		(lib_id "oresat-misc:Test-Point-1mm-round")
 		(at 251.46 104.14 0)
 		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
+		(exclude_from_sim yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "12238cf5-2c9a-4ad5-a83b-c7fde86d2953")
@@ -11305,8 +8758,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 251.46 104.14 0)
+		(property "Footprint" "oresat-misc:TestPoint_Pad_D1.0mm"
+			(at 251.46 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11323,7 +8776,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "1mm round SMT test point"
 			(at 251.46 104.14 0)
 			(effects
 				(font
@@ -11332,7 +8785,7 @@
 				(hide yes)
 			)
 		)
-		(pin "P$1"
+		(pin "1"
 			(uuid "009263d1-3696-4d13-bab0-f946a2e26b41")
 		)
 		(instances
@@ -11345,11 +8798,11 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
+		(lib_id "oresat-misc:Test-Point-1mm-round")
 		(at 248.92 71.12 0)
 		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
+		(exclude_from_sim yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "1329246e-108f-44fc-926d-f64f585f5ef2")
@@ -11372,8 +8825,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 248.92 71.12 0)
+		(property "Footprint" "oresat-misc:TestPoint_Pad_D1.0mm"
+			(at 248.92 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11390,7 +8843,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "1mm round SMT test point"
 			(at 248.92 71.12 0)
 			(effects
 				(font
@@ -11399,7 +8852,7 @@
 				(hide yes)
 			)
 		)
-		(pin "P$1"
+		(pin "1"
 			(uuid "bd5a9090-7de3-4fe9-a993-34e85d025695")
 		)
 		(instances
@@ -11478,8 +8931,8 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-card-eagle-import:R-US_0603-A")
-		(at 147.32 139.7 90)
+		(lib_id "Device:R_Small_US")
+		(at 147.32 139.7 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11487,7 +8940,7 @@
 		(dnp no)
 		(uuid "1fbcf5f1-a2e5-413c-961c-c452de8ecdb8")
 		(property "Reference" "R22"
-			(at 151.1554 144.526 0)
+			(at 152.908 140.462 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -11496,7 +8949,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 151.13 139.192 0)
+			(at 152.654 137.16 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -11504,7 +8957,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "star-tracker-card:.0603-A"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 147.32 139.7 0)
 			(effects
 				(font
@@ -11513,7 +8966,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 147.32 139.7 0)
 			(effects
 				(font
@@ -11522,7 +8975,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small US symbol"
 			(at 147.32 139.7 0)
 			(effects
 				(font
@@ -11547,7 +9000,7 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-card-eagle-import:C-EU0603-A")
+		(lib_id "Device:C_Small")
 		(at 205.74 213.36 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -11573,7 +9026,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "star-tracker-card:.0603-A"
+		(property "Footprint" "oresat-passives:c_0603-SMALL"
 			(at 205.74 213.36 0)
 			(effects
 				(font
@@ -11582,7 +9035,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 205.74 213.36 0)
 			(effects
 				(font
@@ -11591,7 +9044,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 205.74 213.36 0)
 			(effects
 				(font
@@ -11616,11 +9069,11 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
+		(lib_id "oresat-misc:Test-Point-1mm-round")
 		(at 251.46 50.8 0)
 		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
+		(exclude_from_sim yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "253eeef4-b91d-4557-aa31-0dc5dfe6d7d1")
@@ -11643,8 +9096,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 251.46 50.8 0)
+		(property "Footprint" "oresat-misc:TestPoint_Pad_D1.0mm"
+			(at 251.46 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11661,7 +9114,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "1mm round SMT test point"
 			(at 251.46 50.8 0)
 			(effects
 				(font
@@ -11670,7 +9123,7 @@
 				(hide yes)
 			)
 		)
-		(pin "P$1"
+		(pin "1"
 			(uuid "9c3624e4-88e0-4220-ad9e-adac1fc13006")
 		)
 		(instances
@@ -11683,8 +9136,9 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-card-eagle-import:R-US_0603-A")
-		(at 157.48 60.96 90)
+		(lib_id "Device:R_Small_US")
+		(at 157.48 60.96 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11692,7 +9146,7 @@
 		(dnp no)
 		(uuid "28a217a2-1fc2-4ead-9c55-55c05adf71d2")
 		(property "Reference" "R13"
-			(at 156.972 58.166 0)
+			(at 160.274 61.468 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -11701,7 +9155,7 @@
 			)
 		)
 		(property "Value" "1M"
-			(at 157.988 58.166 0)
+			(at 160.274 60.452 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -11709,7 +9163,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" "star-tracker-card:.0603-A"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 157.48 60.96 0)
 			(effects
 				(font
@@ -11718,7 +9172,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 157.48 60.96 0)
 			(effects
 				(font
@@ -11727,7 +9181,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small US symbol"
 			(at 157.48 60.96 0)
 			(effects
 				(font
@@ -11752,11 +9206,11 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
+		(lib_id "oresat-misc:Test-Point-1mm-round")
 		(at 251.46 109.22 0)
 		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
+		(exclude_from_sim yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "2cb8c877-df83-40c5-9f0d-acbe4e6eab9a")
@@ -11779,8 +9233,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 251.46 109.22 0)
+		(property "Footprint" "oresat-misc:TestPoint_Pad_D1.0mm"
+			(at 251.46 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11797,7 +9251,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "1mm round SMT test point"
 			(at 251.46 109.22 0)
 			(effects
 				(font
@@ -11806,7 +9260,7 @@
 				(hide yes)
 			)
 		)
-		(pin "P$1"
+		(pin "1"
 			(uuid "4bd29dc2-c326-492b-a2c4-1fccf8e6940e")
 		)
 		(instances
@@ -11819,11 +9273,11 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
+		(lib_id "oresat-misc:Test-Point-1mm-round")
 		(at 185.42 149.86 180)
 		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
+		(exclude_from_sim yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "349b5d26-d68d-409f-ab06-84ecbd27455c")
@@ -11846,8 +9300,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 185.42 149.86 0)
+		(property "Footprint" "oresat-misc:TestPoint_Pad_D1.0mm"
+			(at 185.42 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11864,7 +9318,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "1mm round SMT test point"
 			(at 185.42 149.86 0)
 			(effects
 				(font
@@ -11873,7 +9327,7 @@
 				(hide yes)
 			)
 		)
-		(pin "P$1"
+		(pin "1"
 			(uuid "8b0b623f-6c15-4b66-8132-e36c21b79a35")
 		)
 		(instances
@@ -11886,101 +9340,11 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-card-eagle-import:FERRITE_BEAD-0603")
-		(at 304.8 228.6 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "369dc64c-c235-4e26-b2cd-5d0d9e268cb8")
-		(property "Reference" "FB1"
-			(at 302.895 226.06 90)
-			(effects
-				(font
-					(size 1.778 1.778)
-				)
-				(justify right top)
-			)
-		)
-		(property "Value" "30Ω/1.8A"
-			(at 307.34 227.33 0)
-			(effects
-				(font
-					(size 1.778 1.778)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "star-tracker-card:0603"
-			(at 304.8 228.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 304.8 228.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 304.8 228.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "DPN" "490-14027-1-ND"
-			(at 304.8 228.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-				(hide yes)
-			)
-		)
-		(property "MPN" "BLM18KG300JH1D"
-			(at 304.8 228.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "20c49d35-afa9-4e66-a4fc-e274e39e7a8f")
-		)
-		(pin "2"
-			(uuid "d89c9104-4130-4c70-bd20-0e90b0695909")
-		)
-		(instances
-			(project ""
-				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
-					(reference "FB1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
+		(lib_id "oresat-misc:Test-Point-1mm-round")
 		(at 251.46 119.38 0)
 		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
+		(exclude_from_sim yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "3d9c336a-0b54-45c7-bc40-3a410fd20bd3")
@@ -12003,8 +9367,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 251.46 119.38 0)
+		(property "Footprint" "oresat-misc:TestPoint_Pad_D1.0mm"
+			(at 251.46 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12021,7 +9385,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "1mm round SMT test point"
 			(at 251.46 119.38 0)
 			(effects
 				(font
@@ -12030,7 +9394,7 @@
 				(hide yes)
 			)
 		)
-		(pin "P$1"
+		(pin "1"
 			(uuid "0ee03bd8-67b1-49fb-bb26-7db6512942d5")
 		)
 		(instances
@@ -12043,11 +9407,11 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
+		(lib_id "oresat-misc:Test-Point-1mm-round")
 		(at 251.46 129.54 0)
 		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
+		(exclude_from_sim yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "42fec8fc-f8b2-477d-8b03-e6c57b8a41ac")
@@ -12070,8 +9434,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 251.46 129.54 0)
+		(property "Footprint" "oresat-misc:TestPoint_Pad_D1.0mm"
+			(at 251.46 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12088,7 +9452,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "1mm round SMT test point"
 			(at 251.46 129.54 0)
 			(effects
 				(font
@@ -12097,7 +9461,7 @@
 				(hide yes)
 			)
 		)
-		(pin "P$1"
+		(pin "1"
 			(uuid "c4e63ba6-d95a-4653-b874-759ea8b548ba")
 		)
 		(instances
@@ -12110,11 +9474,11 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
+		(lib_id "oresat-misc:Test-Point-1mm-round")
 		(at 251.46 111.76 0)
 		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
+		(exclude_from_sim yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "471c168e-78ce-41bd-94d3-ff292f57261b")
@@ -12137,8 +9501,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 251.46 111.76 0)
+		(property "Footprint" "oresat-misc:TestPoint_Pad_D1.0mm"
+			(at 251.46 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12155,7 +9519,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "1mm round SMT test point"
 			(at 251.46 111.76 0)
 			(effects
 				(font
@@ -12164,151 +9528,13 @@
 				(hide yes)
 			)
 		)
-		(pin "P$1"
+		(pin "1"
 			(uuid "fe962412-f527-4574-92e4-0179b42424e1")
 		)
 		(instances
 			(project ""
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
 					(reference "TP176")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "star-tracker-card-eagle-import:C-EU0805-B")
-		(at 281.94 195.58 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "498d61de-e3c5-4518-881f-0d2b1aebe82e")
-		(property "Reference" "C7"
-			(at 282.956 194.945 0)
-			(effects
-				(font
-					(size 1.778 1.5113)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Value" "10uF"
-			(at 282.956 199.771 0)
-			(effects
-				(font
-					(size 1.778 1.5113)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Footprint" "star-tracker-card:.0805-B"
-			(at 281.94 195.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 281.94 195.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 281.94 195.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "2a176188-e2fe-4c2d-b90b-80071ee4d023")
-		)
-		(pin "2"
-			(uuid "42e35cbb-bbe0-4e77-aafd-48da41631c70")
-		)
-		(instances
-			(project ""
-				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
-					(reference "C7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "star-tracker-card-eagle-import:JUMPER-SMT_2_NC_TRACE_SILK")
-		(at 276.86 152.4 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "4d0da680-13a5-464e-b791-c89e1a3732fe")
-		(property "Reference" "JP100"
-			(at 279.4 149.86 0)
-			(effects
-				(font
-					(size 1.778 1.778)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Value" "JUMPER-SMT_2_NC_TRACE_SILK"
-			(at 274.32 149.86 0)
-			(effects
-				(font
-					(size 1.778 1.778)
-				)
-				(justify left top)
-			)
-		)
-		(property "Footprint" "star-tracker-card:SMT-JUMPER_2_NC_TRACE_SILK"
-			(at 276.86 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 276.86 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 276.86 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f5377267-a327-483d-a9ca-186c6a186d29")
-		)
-		(pin "2"
-			(uuid "3d176577-7295-4ca4-82dd-cb8ec792bdf2")
-		)
-		(instances
-			(project ""
-				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
-					(reference "JP100")
 					(unit 1)
 				)
 			)
@@ -12384,77 +9610,11 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-card-eagle-import:GND")
-		(at 101.6 162.56 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "52cacb94-b720-4405-848f-4f164d09d17a")
-		(property "Reference" "#GND57"
-			(at 101.6 162.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 101.6 162.814 0)
-			(effects
-				(font
-					(size 1.778 1.5113)
-				)
-				(justify top)
-			)
-		)
-		(property "Footprint" ""
-			(at 101.6 162.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 101.6 162.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 101.6 162.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "41f146f5-b869-4542-b8c0-90b2fa20ce0e")
-		)
-		(instances
-			(project ""
-				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
-					(reference "#GND57")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
+		(lib_id "oresat-misc:Test-Point-1mm-round")
 		(at 251.46 101.6 0)
 		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
+		(exclude_from_sim yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "58d14aa1-4245-4db2-9472-e0c71afa9c4d")
@@ -12477,8 +9637,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 251.46 101.6 0)
+		(property "Footprint" "oresat-misc:TestPoint_Pad_D1.0mm"
+			(at 251.46 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12495,7 +9655,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "1mm round SMT test point"
 			(at 251.46 101.6 0)
 			(effects
 				(font
@@ -12504,7 +9664,7 @@
 				(hide yes)
 			)
 		)
-		(pin "P$1"
+		(pin "1"
 			(uuid "4039879f-e624-4f4e-b9a6-d622d57257c5")
 		)
 		(instances
@@ -12517,8 +9677,8 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-card-eagle-import:R-US_0603-A")
-		(at 129.54 134.62 90)
+		(lib_id "Device:R_Small_US")
+		(at 129.54 134.62 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12526,7 +9686,7 @@
 		(dnp no)
 		(uuid "59f12798-0b2f-4382-a4f0-d51e3814c046")
 		(property "Reference" "R19"
-			(at 128.0414 138.43 0)
+			(at 128.27 136.1186 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -12535,7 +9695,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 132.842 138.43 0)
+			(at 128.27 131.318 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -12543,7 +9703,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "star-tracker-card:.0603-A"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 129.54 134.62 0)
 			(effects
 				(font
@@ -12552,7 +9712,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 129.54 134.62 0)
 			(effects
 				(font
@@ -12561,7 +9721,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small US symbol"
 			(at 129.54 134.62 0)
 			(effects
 				(font
@@ -12586,7 +9746,74 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-card-eagle-import:C-EU0603-A")
+		(lib_id "oresat-misc:Test-Point-1mm-round")
+		(at 271.78 152.4 0)
+		(unit 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "5f24325e-0cbc-4e51-bd00-e3f387070120")
+		(property "Reference" "TP74"
+			(at 276.352 153.162 0)
+			(effects
+				(font
+					(size 1.778 1.778)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "TEST-POINT3X4"
+			(at 269.24 154.94 0)
+			(effects
+				(font
+					(size 1.778 1.778)
+				)
+				(justify left bottom)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "oresat-misc:TestPoint_Pad_D1.0mm"
+			(at 271.78 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 271.78 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "1mm round SMT test point"
+			(at 271.78 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9a516a83-3ad6-4f42-b8fb-865a068d2dfc")
+		)
+		(instances
+			(project "star-tracker-card"
+				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
+					(reference "TP74")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
 		(at 132.08 68.58 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -12604,7 +9831,7 @@
 			)
 		)
 		(property "Value" "18pF, 50V"
-			(at 127.254 73.152 90)
+			(at 125.222 72.644 90)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -12612,7 +9839,7 @@
 				(justify right top)
 			)
 		)
-		(property "Footprint" "star-tracker-card:.0603-A"
+		(property "Footprint" "oresat-passives:c_0603-SMALL"
 			(at 132.08 68.58 0)
 			(effects
 				(font
@@ -12621,7 +9848,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 132.08 68.58 0)
 			(effects
 				(font
@@ -12630,7 +9857,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 132.08 68.58 0)
 			(effects
 				(font
@@ -12655,7 +9882,7 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-card-eagle-import:C-EU0603-A")
+		(lib_id "Device:C_Small")
 		(at 132.08 53.34 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -12673,7 +9900,7 @@
 			)
 		)
 		(property "Value" "18pF, 50V"
-			(at 127.254 57.912 90)
+			(at 124.968 57.912 90)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -12681,7 +9908,7 @@
 				(justify right top)
 			)
 		)
-		(property "Footprint" "star-tracker-card:.0603-A"
+		(property "Footprint" "oresat-passives:c_0603-SMALL"
 			(at 132.08 53.34 0)
 			(effects
 				(font
@@ -12690,7 +9917,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 132.08 53.34 0)
 			(effects
 				(font
@@ -12699,7 +9926,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 132.08 53.34 0)
 			(effects
 				(font
@@ -12724,34 +9951,102 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-card-eagle-import:TPS2051CDBVR")
-		(at 309.88 200.66 0)
+		(lib_id "oresat-misc:Test-Point-1mm-round")
+		(at 271.78 144.78 0)
 		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
+		(exclude_from_sim yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "8406ff3e-51a3-4b74-a00b-b433164730f3")
-		(property "Reference" "U2"
-			(at 317.6016 211.8614 0)
+		(uuid "79e61849-eb94-4c80-9b40-89b47cd1e097")
+		(property "Reference" "TP76"
+			(at 276.352 145.542 0)
 			(effects
 				(font
-					(size 2.0828 1.7703)
+					(size 1.778 1.778)
 				)
 				(justify left bottom)
 			)
 		)
-		(property "Value" "TPS2051CDBVR"
-			(at 297.4086 194.0814 0)
+		(property "Value" "TEST-POINT3X4"
+			(at 269.24 147.32 0)
 			(effects
 				(font
-					(size 2.0828 1.7703)
+					(size 1.778 1.778)
+				)
+				(justify left bottom)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "oresat-misc:TestPoint_Pad_D1.0mm"
+			(at 271.78 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 271.78 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "1mm round SMT test point"
+			(at 271.78 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ce334b73-1174-406c-8254-cb51b054080f")
+		)
+		(instances
+			(project "star-tracker-card"
+				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
+					(reference "TP76")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "oresat-misc:Test-Point-1mm-round")
+		(at 271.78 147.32 0)
+		(unit 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "80febacf-7a0e-48df-a1e2-15e9da7b32e1")
+		(property "Reference" "TP75"
+			(at 276.352 148.082 0)
+			(effects
+				(font
+					(size 1.778 1.778)
 				)
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "star-tracker-card:DBV5"
-			(at 309.88 200.66 0)
+		(property "Value" "TEST-POINT3X4"
+			(at 269.24 149.86 0)
+			(effects
+				(font
+					(size 1.778 1.778)
+				)
+				(justify left bottom)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "oresat-misc:TestPoint_Pad_D1.0mm"
+			(at 271.78 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12760,7 +10055,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 309.88 200.66 0)
+			(at 271.78 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12768,87 +10063,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 309.88 200.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "5"
-			(uuid "3b7e9abd-b459-4a0b-9d09-9bb1e7836b71")
-		)
-		(pin "4"
-			(uuid "2744ebd4-6aa2-4ede-8580-5e86efb68d2b")
-		)
-		(pin "2"
-			(uuid "ae09e646-3d3f-4635-b167-69658f5f34d6")
-		)
-		(pin "1"
-			(uuid "a36f58ef-849c-46ea-b3fc-fb4c52d29571")
-		)
-		(pin "3"
-			(uuid "6c42b528-baf2-4f18-bc83-e7511451e55b")
-		)
-		(instances
-			(project ""
-				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
-					(reference "U2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "star-tracker-card-eagle-import:GND")
-		(at 309.88 215.9 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "855e01d6-5488-4013-b3cc-3cab40083c94")
-		(property "Reference" "#GND64"
-			(at 309.88 215.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 309.88 216.154 0)
-			(effects
-				(font
-					(size 1.778 1.5113)
-				)
-				(justify top)
-			)
-		)
-		(property "Footprint" ""
-			(at 309.88 215.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 309.88 215.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 309.88 215.9 0)
+		(property "Description" "1mm round SMT test point"
+			(at 271.78 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12857,85 +10073,19 @@
 			)
 		)
 		(pin "1"
-			(uuid "e6cb2b1d-9a86-4920-b828-fb9fb4989a5e")
+			(uuid "e738eb1c-550e-48d9-81a9-aad8ee24b0db")
 		)
 		(instances
-			(project ""
+			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
-					(reference "#GND64")
+					(reference "TP75")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-card-eagle-import:VDD")
-		(at 292.1 193.04 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "87af7b32-47ad-463e-9a42-f5b96a88f096")
-		(property "Reference" "#SUPPLY1"
-			(at 292.1 193.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VDD"
-			(at 292.1 190.246 0)
-			(effects
-				(font
-					(size 1.778 1.5113)
-				)
-				(justify bottom)
-			)
-		)
-		(property "Footprint" ""
-			(at 292.1 193.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 292.1 193.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 292.1 193.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "11922ee5-dac1-4acb-ad73-dc850d263c28")
-		)
-		(instances
-			(project ""
-				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
-					(reference "#SUPPLY1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "star-tracker-card-eagle-import:C-EU0603-A")
+		(lib_id "Device:C_Small")
 		(at 139.7 83.82 270)
 		(unit 1)
 		(exclude_from_sim no)
@@ -12961,7 +10111,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "star-tracker-card:.0603-A"
+		(property "Footprint" "oresat-passives:c_0603-SMALL"
 			(at 139.7 83.82 0)
 			(effects
 				(font
@@ -12970,7 +10120,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 139.7 83.82 0)
 			(effects
 				(font
@@ -12979,7 +10129,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 139.7 83.82 0)
 			(effects
 				(font
@@ -13004,11 +10154,11 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
+		(lib_id "oresat-misc:Test-Point-1mm-round")
 		(at 137.16 124.46 270)
 		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
+		(exclude_from_sim yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "8f932e4b-bfa1-4d07-b00d-f1469e157dab")
@@ -13031,8 +10181,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 137.16 124.46 0)
+		(property "Footprint" "oresat-misc:TestPoint_Pad_D1.0mm"
+			(at 147.32 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13049,7 +10199,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "1mm round SMT test point"
 			(at 137.16 124.46 0)
 			(effects
 				(font
@@ -13058,7 +10208,7 @@
 				(hide yes)
 			)
 		)
-		(pin "P$1"
+		(pin "1"
 			(uuid "63c56c4f-4fa4-42f7-a52f-a6d5648f4f19")
 		)
 		(instances
@@ -13071,11 +10221,11 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
+		(lib_id "oresat-misc:Test-Point-1mm-round")
 		(at 251.46 116.84 0)
 		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
+		(exclude_from_sim yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "90253c3b-2a92-4095-84c0-1a9c168830f8")
@@ -13098,8 +10248,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 251.46 116.84 0)
+		(property "Footprint" "oresat-misc:TestPoint_Pad_D1.0mm"
+			(at 251.46 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13116,7 +10266,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "1mm round SMT test point"
 			(at 251.46 116.84 0)
 			(effects
 				(font
@@ -13125,7 +10275,7 @@
 				(hide yes)
 			)
 		)
-		(pin "P$1"
+		(pin "1"
 			(uuid "33c29c61-f21a-4dcf-9e6d-1772945c1ca9")
 		)
 		(instances
@@ -13138,8 +10288,8 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-card-eagle-import:GND")
-		(at 193.04 228.6 0)
+		(lib_id "power:GND")
+		(at 193.04 226.06 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13147,7 +10297,7 @@
 		(dnp no)
 		(uuid "91a46e07-1baa-4231-b530-d070d2fe1c4c")
 		(property "Reference" "#GND59"
-			(at 193.04 228.6 0)
+			(at 193.04 226.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13165,7 +10315,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 193.04 228.6 0)
+			(at 193.04 226.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13174,7 +10324,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 193.04 228.6 0)
+			(at 193.04 226.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13182,8 +10332,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 193.04 228.6 0)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 193.04 226.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13204,11 +10354,11 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
+		(lib_id "oresat-misc:Test-Point-1mm-round")
 		(at 185.42 152.4 180)
 		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
+		(exclude_from_sim yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "92a0eff3-482f-46d9-85c0-2435d1172f1e")
@@ -13231,8 +10381,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 185.42 152.4 0)
+		(property "Footprint" "oresat-misc:TestPoint_Pad_D1.0mm"
+			(at 185.42 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13249,7 +10399,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "1mm round SMT test point"
 			(at 185.42 152.4 0)
 			(effects
 				(font
@@ -13258,7 +10408,7 @@
 				(hide yes)
 			)
 		)
-		(pin "P$1"
+		(pin "1"
 			(uuid "71de9d49-32e3-4994-acfb-2d3bb53c5b29")
 		)
 		(instances
@@ -13271,35 +10421,35 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-card-eagle-import:GND")
-		(at 276.86 162.56 0)
-		(mirror y)
+		(lib_id "oresat-misc:Test-Point-1mm-round")
+		(at 271.78 142.24 0)
 		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
+		(exclude_from_sim yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "99a4f1c8-f37c-454c-96e0-ac41938404dc")
-		(property "Reference" "#GND35"
-			(at 276.86 162.56 0)
+		(uuid "99279293-e3fb-4d37-b73d-b6cfd0ae2ec7")
+		(property "Reference" "TP77"
+			(at 276.352 143.002 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1.778 1.778)
 				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "TEST-POINT3X4"
+			(at 269.24 144.78 0)
+			(effects
+				(font
+					(size 1.778 1.778)
+				)
+				(justify left bottom)
 				(hide yes)
 			)
 		)
-		(property "Value" "GND"
-			(at 276.86 162.814 0)
-			(effects
-				(font
-					(size 1.778 1.5113)
-				)
-				(justify top)
-			)
-		)
-		(property "Footprint" ""
-			(at 276.86 162.56 0)
+		(property "Footprint" "oresat-misc:TestPoint_Pad_D1.0mm"
+			(at 271.78 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13308,7 +10458,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 276.86 162.56 0)
+			(at 271.78 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13316,8 +10466,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 276.86 162.56 0)
+		(property "Description" "1mm round SMT test point"
+			(at 271.78 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13326,23 +10476,23 @@
 			)
 		)
 		(pin "1"
-			(uuid "09af10cf-08eb-4a3b-9c52-8b54da32e45c")
+			(uuid "0dbc6a01-7d1e-4895-920e-bb778cf238d8")
 		)
 		(instances
-			(project ""
+			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
-					(reference "#GND35")
+					(reference "TP77")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
+		(lib_id "oresat-misc:Test-Point-1mm-round")
 		(at 251.46 106.68 0)
 		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
+		(exclude_from_sim yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "a04220a5-3310-4be9-bdd8-c5642223b270")
@@ -13365,8 +10515,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 251.46 106.68 0)
+		(property "Footprint" "oresat-misc:TestPoint_Pad_D1.0mm"
+			(at 251.46 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13383,7 +10533,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "1mm round SMT test point"
 			(at 251.46 106.68 0)
 			(effects
 				(font
@@ -13392,7 +10542,7 @@
 				(hide yes)
 			)
 		)
-		(pin "P$1"
+		(pin "1"
 			(uuid "09449239-25b6-4642-a905-efa7e5072ba8")
 		)
 		(instances
@@ -13405,151 +10555,16 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-card-eagle-import:JUMPER-SMT_2_NO_SILK")
-		(at 81.28 104.14 0)
+		(lib_id "Device:R_Small_US")
+		(at 162.56 91.44 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
-		(uuid "a32c7a89-98f4-41a7-b63f-faa7a9df7dc3")
-		(property "Reference" "JP1"
-			(at 78.74 101.6 0)
-			(effects
-				(font
-					(size 1.778 1.778)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Value" "JUMPER-SMT_2_NO_SILK"
-			(at 78.74 106.68 0)
-			(effects
-				(font
-					(size 1.778 1.778)
-				)
-				(justify left top)
-			)
-		)
-		(property "Footprint" "star-tracker-card:SMT-JUMPER_2_NO_SILK"
-			(at 81.28 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 81.28 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 81.28 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "d8828510-1aaa-4839-bd6e-5aa0b99263e8")
-		)
-		(pin "2"
-			(uuid "30b60090-c433-48f0-9194-416d3c5efffa")
-		)
-		(instances
-			(project ""
-				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
-					(reference "JP1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "star-tracker-card-eagle-import:3.3V")
-		(at 83.82 157.48 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "a34045e8-7e6d-4b76-89af-36b98797cea9")
-		(property "Reference" "#3V-24"
-			(at 83.82 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "3.3V"
-			(at 83.185 156.845 0)
-			(effects
-				(font
-					(size 1.778 1.5113)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Footprint" ""
-			(at 83.82 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 83.82 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 83.82 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ef4ce1b0-abc6-4769-8638-d52373774a04")
-		)
-		(instances
-			(project ""
-				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
-					(reference "#3V-24")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "star-tracker-card-eagle-import:R-US_0603-A")
-		(at 162.56 91.44 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "a6a3630c-c5af-43c3-853d-6be12c16e7c1")
 		(property "Reference" "R27"
-			(at 165.1 91.44 90)
+			(at 164.084 90.932 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -13558,15 +10573,16 @@
 			)
 		)
 		(property "Value" "DNP"
-			(at 165.1 93.98 90)
+			(at 165.1 88.9 90)
 			(effects
 				(font
 					(size 1.778 1.5113)
 				)
 				(justify right top)
+				(hide yes)
 			)
 		)
-		(property "Footprint" "star-tracker-card:.0603-A"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 162.56 91.44 0)
 			(effects
 				(font
@@ -13575,7 +10591,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 162.56 91.44 0)
 			(effects
 				(font
@@ -13584,7 +10600,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small US symbol"
 			(at 162.56 91.44 0)
 			(effects
 				(font
@@ -13690,78 +10706,11 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-card-eagle-import:GND")
-		(at 281.94 205.74 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "b596f560-3eea-4d93-a3af-7b6c646a75ff")
-		(property "Reference" "#GND63"
-			(at 281.94 205.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 281.94 205.994 0)
-			(effects
-				(font
-					(size 1.778 1.5113)
-				)
-				(justify top)
-			)
-		)
-		(property "Footprint" ""
-			(at 281.94 205.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 281.94 205.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 281.94 205.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f398b5f3-c3bf-4882-a16e-62a8ba8d8d7b")
-		)
-		(instances
-			(project ""
-				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
-					(reference "#GND63")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
+		(lib_id "oresat-misc:Test-Point-1mm-round")
 		(at 251.46 114.3 0)
 		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
+		(exclude_from_sim yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "bfed5f88-7819-4f7f-b598-55a8686654eb")
@@ -13784,8 +10733,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 251.46 114.3 0)
+		(property "Footprint" "oresat-misc:TestPoint_Pad_D1.0mm"
+			(at 251.46 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13802,7 +10751,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "1mm round SMT test point"
 			(at 251.46 114.3 0)
 			(effects
 				(font
@@ -13811,7 +10760,7 @@
 				(hide yes)
 			)
 		)
-		(pin "P$1"
+		(pin "1"
 			(uuid "59d0eb9f-9468-4279-b89d-e6af742323a5")
 		)
 		(instances
@@ -13824,7 +10773,7 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-card-eagle-import:C-EU0603-A")
+		(lib_id "Device:C_Small")
 		(at 139.7 99.06 270)
 		(unit 1)
 		(exclude_from_sim no)
@@ -13850,7 +10799,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "star-tracker-card:.0603-A"
+		(property "Footprint" "oresat-passives:c_0603-SMALL"
 			(at 139.7 99.06 0)
 			(effects
 				(font
@@ -13859,7 +10808,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 139.7 99.06 0)
 			(effects
 				(font
@@ -13868,7 +10817,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 139.7 99.06 0)
 			(effects
 				(font
@@ -13893,16 +10842,16 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
-		(at 279.4 228.6 90)
+		(lib_id "oresat-misc:Test-Point-1mm-round")
+		(at 271.78 139.7 0)
 		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
+		(exclude_from_sim yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "e33bbc5b-111e-48b6-b4a6-7502c38c4e17")
 		(property "Reference" "TP1"
-			(at 276.86 226.695 0)
+			(at 276.098 139.954 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -13911,7 +10860,7 @@
 			)
 		)
 		(property "Value" "TEST-POINT3X4"
-			(at 281.94 231.14 0)
+			(at 269.24 142.24 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -13920,8 +10869,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 279.4 228.6 0)
+		(property "Footprint" "oresat-misc:TestPoint_Pad_D1.0mm"
+			(at 271.78 129.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13930,7 +10879,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 279.4 228.6 0)
+			(at 271.78 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13938,8 +10887,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 279.4 228.6 0)
+		(property "Description" "1mm round SMT test point"
+			(at 271.78 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13947,7 +10896,7 @@
 				(hide yes)
 			)
 		)
-		(pin "P$1"
+		(pin "1"
 			(uuid "c23dfb4c-8e65-4162-a520-bc1bc9ac3daa")
 		)
 		(instances
@@ -13960,82 +10909,16 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-card-eagle-import:VDD")
-		(at 325.12 182.88 0)
+		(lib_id "oresat-misc:Test-Point-1mm-round")
+		(at 271.78 149.86 0)
 		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "e6d06744-0041-46c8-ba12-b4e0bb687363")
-		(property "Reference" "#SUPPLY2"
-			(at 325.12 182.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VDD"
-			(at 325.12 180.086 0)
-			(effects
-				(font
-					(size 1.778 1.5113)
-				)
-				(justify bottom)
-			)
-		)
-		(property "Footprint" ""
-			(at 325.12 182.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 325.12 182.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 325.12 182.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "3d527e88-17ab-4d89-84c2-6295d88e01d4")
-		)
-		(instances
-			(project ""
-				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
-					(reference "#SUPPLY2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
-		(at 251.46 149.86 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
+		(exclude_from_sim yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "e6db8fff-5d50-49f6-a952-0cd53dfd46fe")
 		(property "Reference" "TP144"
-			(at 256.032 150.622 0)
+			(at 276.352 150.622 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -14044,7 +10927,7 @@
 			)
 		)
 		(property "Value" "TEST-POINT3X4"
-			(at 248.92 152.4 0)
+			(at 269.24 152.4 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -14053,8 +10936,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 251.46 149.86 0)
+		(property "Footprint" "oresat-misc:TestPoint_Pad_D1.0mm"
+			(at 271.78 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14063,7 +10946,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 251.46 149.86 0)
+			(at 271.78 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14071,8 +10954,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 251.46 149.86 0)
+		(property "Description" "1mm round SMT test point"
+			(at 271.78 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14080,7 +10963,7 @@
 				(hide yes)
 			)
 		)
-		(pin "P$1"
+		(pin "1"
 			(uuid "2b542c1b-6e49-4d58-a428-7b98a35c3bbf")
 		)
 		(instances
@@ -14093,11 +10976,11 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
+		(lib_id "oresat-misc:Test-Point-1mm-round")
 		(at 185.42 147.32 180)
 		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
+		(exclude_from_sim yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "e987b72c-697c-4791-ad58-4a5d42e561ab")
@@ -14120,8 +11003,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "star-tracker-card:PAD.03X.04"
-			(at 185.42 147.32 0)
+		(property "Footprint" "oresat-misc:TestPoint_Pad_D1.0mm"
+			(at 185.42 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14138,74 +11021,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "1mm round SMT test point"
 			(at 185.42 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "P$1"
-			(uuid "2daf0a6b-df79-4b0b-bde4-159f4f6a72df")
-		)
-		(instances
-			(project ""
-				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
-					(reference "TP138")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "star-tracker-card-eagle-import:R-US_0603-A")
-		(at 325.12 190.5 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "ebda456e-2b26-4758-9b6c-c3e9e5f5f118")
-		(property "Reference" "R7"
-			(at 323.6214 194.31 0)
-			(effects
-				(font
-					(size 1.778 1.5113)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Value" "10k"
-			(at 328.422 194.31 0)
-			(effects
-				(font
-					(size 1.778 1.5113)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Footprint" "star-tracker-card:.0603-A"
-			(at 325.12 190.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 325.12 190.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 325.12 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14214,15 +11031,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "f458ebe2-d6c8-45ca-9a3a-c81c3620c24b")
-		)
-		(pin "2"
-			(uuid "fe0e58cf-03ad-4869-adc7-b29a7b06a37d")
+			(uuid "2daf0a6b-df79-4b0b-bde4-159f4f6a72df")
 		)
 		(instances
 			(project ""
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
-					(reference "R7")
+					(reference "TP138")
 					(unit 1)
 				)
 			)
@@ -14273,7 +11087,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Octavo Systems LLC OSD335x Family SiP:  21mm x 21mm, 1.27mm pitch 256 pin BGA contains AM3358, 512MB DDR3, TPS65217, TL5209, 4KB EEPROM and passives.  Commerical Temperature (case):  0C to 85C."
 			(at 218.44 96.52 0)
 			(effects
 				(font
@@ -15060,8 +11874,8 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-card-eagle-import:R-US_0603-A")
-		(at 142.24 139.7 90)
+		(lib_id "Device:R_Small_US")
+		(at 142.24 139.7 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15069,7 +11883,7 @@
 		(dnp no)
 		(uuid "f194f1c3-4647-443f-af8e-51dc9c5992a3")
 		(property "Reference" "R20"
-			(at 140.4874 144.018 0)
+			(at 140.208 141.478 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -15078,7 +11892,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 140.462 138.43 0)
+			(at 139.954 138.938 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -15086,7 +11900,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "star-tracker-card:.0603-A"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 142.24 139.7 0)
 			(effects
 				(font
@@ -15095,7 +11909,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 142.24 139.7 0)
 			(effects
 				(font
@@ -15104,7 +11918,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small US symbol"
 			(at 142.24 139.7 0)
 			(effects
 				(font
@@ -15123,75 +11937,6 @@
 			(project ""
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
 					(reference "R20")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "star-tracker-card-eagle-import:R-US_0603-A")
-		(at 294.64 208.28 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "f75751cb-df2b-4d92-9586-9ea24d5efabe")
-		(property "Reference" "R6"
-			(at 293.1414 212.09 0)
-			(effects
-				(font
-					(size 1.778 1.5113)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Value" "10k"
-			(at 297.942 212.09 0)
-			(effects
-				(font
-					(size 1.778 1.5113)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Footprint" "star-tracker-card:.0603-A"
-			(at 294.64 208.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 294.64 208.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 294.64 208.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "9f387c29-36c0-44ad-b276-0ba822bac8cf")
-		)
-		(pin "2"
-			(uuid "7d7f32e3-acbf-4c0f-b722-b916459fabbc")
-		)
-		(instances
-			(project ""
-				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
-					(reference "R6")
 					(unit 1)
 				)
 			)
@@ -15282,96 +12027,6 @@
 			(project ""
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
 					(reference "FB2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "star-tracker-card-eagle-import:FTSH-105-XX-X-DV-K")
-		(at 86.36 134.62 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "fc8b21d4-a232-4406-8b91-0294a7c430c0")
-		(property "Reference" "J102"
-			(at 92.71 153.035 0)
-			(effects
-				(font
-					(size 1.778 1.5113)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Value" "FTSH-105-XX-X-DV-K"
-			(at 86.36 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "star-tracker-card:CON10_2X5_DUK_FTSH"
-			(at 86.36 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 86.36 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 86.36 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ea4a93a2-19ee-4d63-a452-a18696cbf967")
-		)
-		(pin "2"
-			(uuid "1784b8c8-8b06-4244-87e4-d0e60b6a0560")
-		)
-		(pin "3"
-			(uuid "140ab73d-4856-4561-84c0-09a8deee3ce0")
-		)
-		(pin "4"
-			(uuid "758143e7-9314-48cb-9ea3-835cc1f4e2b3")
-		)
-		(pin "5"
-			(uuid "2516c667-9c02-4d71-90c4-103cd7f63763")
-		)
-		(pin "6"
-			(uuid "c3c02cd6-2c99-4687-9052-44a4c71c91c7")
-		)
-		(pin "8"
-			(uuid "f9c9ee87-8ced-4a66-9dd3-a85e6f6bd88f")
-		)
-		(pin "9"
-			(uuid "0c7953ca-177b-4cd4-bc48-846ce24f821c")
-		)
-		(pin "10"
-			(uuid "0f1c4244-74a0-4799-a1ef-dba137d17f35")
-		)
-		(instances
-			(project ""
-				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
-					(reference "J102")
 					(unit 1)
 				)
 			)

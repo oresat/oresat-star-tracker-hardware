@@ -256,7 +256,20 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [],
+    "erc_exclusions": [
+      [
+        "footprint_link_issues|2819400|1968500|498d61de-e3c5-4518-881f-0d2b1aebe82e|00000000-0000-0000-0000-000000000000|||",
+        ""
+      ],
+      [
+        "footprint_link_issues|3302000|2057400|0ddc4397-6fe9-4f1c-a2d0-0bf0a34b3348|00000000-0000-0000-0000-000000000000|||",
+        ""
+      ],
+      [
+        "multiple_net_names|3302000|2235200|033d79f5-347c-4f9d-818e-ee8adf0b4e2d|795ac0b1-9cbf-401c-a525-506eec8c8b23|/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190|/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190|/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190",
+        ""
+      ]
+    ],
     "meta": {
       "version": 0
     },
@@ -441,8 +454,8 @@
       "duplicate_sheet_names": "error",
       "endpoint_off_grid": "warning",
       "extra_units": "error",
-      "footprint_filter": "ignore",
-      "footprint_link_issues": "warning",
+      "footprint_filter": "error",
+      "footprint_link_issues": "ignore",
       "four_way_junction": "ignore",
       "global_label_dangling": "warning",
       "hier_label_mismatch": "error",
@@ -454,20 +467,20 @@
       "missing_input_pin": "warning",
       "missing_power_pin": "error",
       "missing_unit": "warning",
-      "multiple_net_names": "warning",
+      "multiple_net_names": "error",
       "net_not_bus_member": "warning",
       "no_connect_connected": "warning",
       "no_connect_dangling": "warning",
       "pin_not_connected": "error",
       "pin_not_driven": "error",
-      "pin_to_pin": "warning",
+      "pin_to_pin": "ignore",
       "power_pin_not_driven": "ignore",
       "same_local_global_label": "warning",
       "similar_label_and_power": "warning",
       "similar_labels": "warning",
       "similar_power": "warning",
       "simulation_model_issue": "ignore",
-      "single_global_label": "ignore",
+      "single_global_label": "error",
       "unannotated": "error",
       "unconnected_wire_endpoint": "warning",
       "undefined_netclass": "error",
@@ -575,7 +588,7 @@
     },
     "bom_presets": [],
     "bom_settings": {
-      "exclude_dnp": true,
+      "exclude_dnp": false,
       "fields_ordered": [
         {
           "group_by": false,
@@ -666,14 +679,32 @@
           "label": "#",
           "name": "${ITEM_NUMBER}",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "DIST",
+          "name": "DIST",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Distributor",
+          "name": "Distributor",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Pins",
+          "name": "Sim.Pins",
+          "show": false
         }
       ],
-      "filter_string": "",
+      "filter_string": "c",
       "group_symbols": true,
       "include_excluded_from_bom": false,
       "name": "",
       "sort_asc": true,
-      "sort_field": "${QUANTITY}"
+      "sort_field": "Footprint"
     },
     "connection_grid_size": 50.0,
     "drawing": {
@@ -704,7 +735,7 @@
     },
     "net_format_name": "",
     "page_layout_descr_file": "kicad-embed://oresat-schematic-title-block.kicad_wks",
-    "plot_directory": "",
+    "plot_directory": "C:/Users/Edward/Desktop/",
     "space_save_all_events": true,
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
@@ -721,24 +752,28 @@
       "Root"
     ],
     [
-      "5c15621b-beb3-4a89-9b40-ee1802c4f8e5",
-      "star-tracker-card_1"
-    ],
-    [
       "79e6f5da-9b7e-4636-a735-d76e4a141190",
-      "star-tracker-card_2"
-    ],
-    [
-      "c38dcfbe-e8e3-410e-98db-09d235320446",
-      "star-tracker-card_3"
-    ],
-    [
-      "180c7308-0a0c-41f6-9c76-108b10aa05c2",
-      "star-tracker-card_4"
+      "Card Power Domain"
     ],
     [
       "27f3aeed-347f-4362-9166-18725d92163b",
-      "star-tracker-card_5"
+      "SIP A, E ,F"
+    ],
+    [
+      "180c7308-0a0c-41f6-9c76-108b10aa05c2",
+      "SIP B"
+    ],
+    [
+      "c38dcfbe-e8e3-410e-98db-09d235320446",
+      "SIP C"
+    ],
+    [
+      "a084c86d-a957-44c2-8803-b841b67f8737",
+      "SIP D"
+    ],
+    [
+      "9edd79c7-1f35-42ab-883b-4f04e19f8786",
+      "Camera Logical Level Shifters"
     ]
   ],
   "text_variables": {}
