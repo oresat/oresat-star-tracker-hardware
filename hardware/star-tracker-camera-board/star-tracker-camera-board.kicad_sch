@@ -11,6 +11,522 @@
 		(company "Portland State Aerospace Society")
 	)
 	(lib_symbols
+		(symbol "Device:C_Small"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.254 1.778 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C_Small"
+				(at 0.254 -2.032 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Unpolarized capacitor, small symbol"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "capacitor cap"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_Small_0_1"
+				(polyline
+					(pts
+						(xy -1.524 0.508) (xy 1.524 0.508)
+					)
+					(stroke
+						(width 0.3048)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 -0.508) (xy 1.524 -0.508)
+					)
+					(stroke
+						(width 0.3302)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_Small_1_1"
+				(pin passive line
+					(at 0 2.54 270)
+					(length 2.032)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 2.032)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:R_Small_US"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 0.762 0.508 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "R_Small_US"
+				(at 0.762 -1.016 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Resistor, small US symbol"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "r resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_Small_US_1_1"
+				(polyline
+					(pts
+						(xy 0 1.524) (xy 1.016 1.143) (xy 0 0.762) (xy -1.016 0.381) (xy 0 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 1.016 -0.381) (xy 0 -0.762) (xy -1.016 -1.143) (xy 0 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 0 2.54 270)
+					(length 1.016)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 1.016)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "TPS71928-28DRVT_1"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -12.7 11.684 0)
+				(effects
+					(font
+						(size 2.0828 1.7703)
+					)
+					(justify left bottom)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at -12.7 9.144 0)
+				(effects
+					(font
+						(size 2.0828 1.7703)
+					)
+					(justify left bottom)
+					(hide yes)
+				)
+			)
+			(property "Footprint" "star-tracker-camera-board:DRV6_1P6X1"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TPS71928-28DRVT_1_1_0"
+				(pin passive line
+					(at -15.24 2.54 0)
+					(length 2.54)
+					(name "EN1"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -15.24 -2.54 0)
+					(length 2.54)
+					(name "EN2"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 10.16 270)
+					(length 2.54)
+					(name "VIN"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -10.16 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -10.16 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -10.16 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -10.16 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 15.24 2.54 180)
+					(length 2.54)
+					(name "OUT1"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 15.24 -2.54 180)
+					(length 2.54)
+					(name "OUT2"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+			)
+			(symbol "TPS71928-28DRVT_1_1_1"
+				(rectangle
+					(start -12.7 7.62)
+					(end 12.7 -7.62)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:GND"
 			(power)
 			(pin_numbers
@@ -170,54 +686,6 @@
 				)
 			)
 			(symbol "3-1734742-6_1_0"
-				(polyline
-					(pts
-						(xy -7.62 53.34) (xy 5.08 53.34)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -7.62 -43.18) (xy -7.62 53.34)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -7.62 -43.18) (xy 5.08 -43.18)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 5.08 53.34) (xy 5.08 -43.18)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
 				(pin passive line
 					(at -10.16 50.8 0)
 					(length 2.54)
@@ -903,6 +1371,19 @@
 					)
 				)
 			)
+			(symbol "3-1734742-6_1_1"
+				(rectangle
+					(start -7.62 53.34)
+					(end 5.08 -43.18)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
 			(embedded_fonts no)
 		)
 		(symbol "star-tracker-camera-board-eagle-import:3.3V"
@@ -1071,30 +1552,6 @@
 			(symbol "AR0134CSSM00SPCA0_1_0"
 				(polyline
 					(pts
-						(xy -27.94 27.94) (xy 27.94 27.94)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -27.94 -30.48) (xy -27.94 27.94)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
 						(xy -15.24 2.54) (xy -12.7 2.54)
 					)
 					(stroke
@@ -1192,30 +1649,6 @@
 				(polyline
 					(pts
 						(xy 12.7 20.32) (xy 10.16 20.32)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 27.94 27.94) (xy 27.94 -30.48)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 27.94 -30.48) (xy -27.94 -30.48)
 					)
 					(stroke
 						(width 0.254)
@@ -2107,6 +2540,17 @@
 				)
 			)
 			(symbol "AR0134CSSM00SPCA0_1_1"
+				(rectangle
+					(start -27.94 27.94)
+					(end 27.94 -30.48)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type background)
+					)
+				)
 				(pin no_connect line
 					(at -3.81 8.89 180)
 					(length 2.54)
@@ -2129,436 +2573,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "star-tracker-camera-board-eagle-import:C-EU0402-A-NOSILK"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "C"
-				(at 1.524 0.381 0)
-				(effects
-					(font
-						(size 1.778 1.5113)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Value" ""
-				(at 1.524 -4.699 0)
-				(effects
-					(font
-						(size 1.778 1.5113)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Footprint" "star-tracker-camera-board:.0402-A-NOSILK"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "CAPACITOR, European symbol"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "C-EU0402-A-NOSILK_1_0"
-				(rectangle
-					(start -2.032 -1.016)
-					(end 2.032 -0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start -2.032 -2.032)
-					(end 2.032 -1.524)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 -0.508)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -2.54) (xy 0 -2.032)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at 0 2.54 270)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -5.08 90)
-					(length 2.54)
-					(name "2"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "star-tracker-camera-board-eagle-import:C-EU0402-B-NOSILK"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "C"
-				(at 1.524 0.381 0)
-				(effects
-					(font
-						(size 1.778 1.5113)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Value" ""
-				(at 1.524 -4.699 0)
-				(effects
-					(font
-						(size 1.778 1.5113)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Footprint" "star-tracker-camera-board:.0402-B-NOSILK"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "CAPACITOR, European symbol"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "C-EU0402-B-NOSILK_1_0"
-				(rectangle
-					(start -2.032 -1.016)
-					(end 2.032 -0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start -2.032 -2.032)
-					(end 2.032 -1.524)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 -0.508)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -2.54) (xy 0 -2.032)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at 0 2.54 270)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -5.08 90)
-					(length 2.54)
-					(name "2"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "star-tracker-camera-board-eagle-import:C-EU0603-C-NOSILK"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "C"
-				(at 1.524 0.381 0)
-				(effects
-					(font
-						(size 1.778 1.5113)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Value" ""
-				(at 1.524 -4.699 0)
-				(effects
-					(font
-						(size 1.778 1.5113)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Footprint" "star-tracker-camera-board:.0603-C-NOSILK"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "CAPACITOR, European symbol"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "C-EU0603-C-NOSILK_1_0"
-				(rectangle
-					(start -2.032 -1.016)
-					(end 2.032 -0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start -2.032 -2.032)
-					(end 2.032 -1.524)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 -0.508)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -2.54) (xy 0 -2.032)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at 0 2.54 270)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -5.08 90)
-					(length 2.54)
-					(name "2"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "star-tracker-camera-board-eagle-import:KC2520B27.0000C10E00"
+		(symbol "star-tracker-camera-board-eagle-import:MC2520Z27.0000C19XSH"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2617,55 +2632,7 @@
 					)
 				)
 			)
-			(symbol "KC2520B27.0000C10E00_1_0"
-				(polyline
-					(pts
-						(xy -10.16 10.16) (xy -10.16 -10.16)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -10.16 -10.16) (xy 10.16 -10.16)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 10.16) (xy -10.16 10.16)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -10.16) (xy 10.16 10.16)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
+			(symbol "MC2520Z27.0000C19XSH_1_0"
 				(pin passive line
 					(at -12.7 0 0)
 					(length 2.54)
@@ -2739,413 +2706,16 @@
 					)
 				)
 			)
-			(embedded_fonts no)
-		)
-		(symbol "star-tracker-camera-board-eagle-import:R-US_0402-B"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "R"
-				(at -3.81 1.4986 0)
-				(effects
-					(font
-						(size 1.778 1.5113)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Value" ""
-				(at -3.81 -3.302 0)
-				(effects
-					(font
-						(size 1.778 1.5113)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Footprint" "star-tracker-camera-board:.0402-B"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "RESISTOR, American symbol"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "R-US_0402-B_1_0"
-				(polyline
-					(pts
-						(xy -2.54 0) (xy -2.159 1.016)
-					)
+			(symbol "MC2520Z27.0000C19XSH_1_1"
+				(rectangle
+					(start -10.16 10.16)
+					(end 10.16 -10.16)
 					(stroke
-						(width 0.2032)
+						(width 0)
 						(type solid)
 					)
 					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.159 1.016) (xy -1.524 -1.016)
-					)
-					(stroke
-						(width 0.2032)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.524 -1.016) (xy -0.889 1.016)
-					)
-					(stroke
-						(width 0.2032)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.889 1.016) (xy -0.254 -1.016)
-					)
-					(stroke
-						(width 0.2032)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.254 -1.016) (xy 0.381 1.016)
-					)
-					(stroke
-						(width 0.2032)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.381 1.016) (xy 1.016 -1.016)
-					)
-					(stroke
-						(width 0.2032)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.016 -1.016) (xy 1.651 1.016)
-					)
-					(stroke
-						(width 0.2032)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.651 1.016) (xy 2.286 -1.016)
-					)
-					(stroke
-						(width 0.2032)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.286 -1.016) (xy 2.54 0)
-					)
-					(stroke
-						(width 0.2032)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 0 180)
-					(length 2.54)
-					(name "2"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "star-tracker-camera-board-eagle-import:R-US_0402-B-NOSILK"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "R"
-				(at -3.81 1.4986 0)
-				(effects
-					(font
-						(size 1.778 1.5113)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Value" ""
-				(at -3.81 -3.302 0)
-				(effects
-					(font
-						(size 1.778 1.5113)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Footprint" "star-tracker-camera-board:.0402-B-NOSILK"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "RESISTOR, American symbol"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "R-US_0402-B-NOSILK_1_0"
-				(polyline
-					(pts
-						(xy -2.54 0) (xy -2.159 1.016)
-					)
-					(stroke
-						(width 0.2032)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.159 1.016) (xy -1.524 -1.016)
-					)
-					(stroke
-						(width 0.2032)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.524 -1.016) (xy -0.889 1.016)
-					)
-					(stroke
-						(width 0.2032)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.889 1.016) (xy -0.254 -1.016)
-					)
-					(stroke
-						(width 0.2032)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.254 -1.016) (xy 0.381 1.016)
-					)
-					(stroke
-						(width 0.2032)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.381 1.016) (xy 1.016 -1.016)
-					)
-					(stroke
-						(width 0.2032)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.016 -1.016) (xy 1.651 1.016)
-					)
-					(stroke
-						(width 0.2032)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.651 1.016) (xy 2.286 -1.016)
-					)
-					(stroke
-						(width 0.2032)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.286 -1.016) (xy 2.54 0)
-					)
-					(stroke
-						(width 0.2032)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 0 180)
-					(length 2.54)
-					(name "2"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
+						(type background)
 					)
 				)
 			)
@@ -3211,54 +2781,6 @@
 				)
 			)
 			(symbol "TPS70618DRVR_1_0"
-				(polyline
-					(pts
-						(xy -12.7 7.62) (xy -12.7 -7.62)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -12.7 -7.62) (xy 12.7 -7.62)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 12.7 7.62) (xy -12.7 7.62)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 12.7 -7.62) (xy 12.7 7.62)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
 				(pin passive line
 					(at -15.24 0 0)
 					(length 2.54)
@@ -3422,6 +2944,19 @@
 					)
 				)
 			)
+			(symbol "TPS70618DRVR_1_1"
+				(rectangle
+					(start -12.7 7.62)
+					(end 12.7 -7.62)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
 			(embedded_fonts no)
 		)
 		(symbol "star-tracker-camera-board-eagle-import:TPS71928-28DRVT"
@@ -3484,54 +3019,6 @@
 				)
 			)
 			(symbol "TPS71928-28DRVT_1_0"
-				(polyline
-					(pts
-						(xy -12.7 7.62) (xy -12.7 -7.62)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -12.7 -7.62) (xy 12.7 -7.62)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 12.7 7.62) (xy -12.7 7.62)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 12.7 -7.62) (xy 12.7 7.62)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
 				(pin passive line
 					(at -15.24 2.54 0)
 					(length 2.54)
@@ -3692,6 +3179,19 @@
 								(size 1.524 1.524)
 							)
 						)
+					)
+				)
+			)
+			(symbol "TPS71928-28DRVT_1_1"
+				(rectangle
+					(start -12.7 7.62)
+					(end 12.7 -7.62)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type background)
 					)
 				)
 			)
@@ -4561,6 +4061,12 @@
 		(uuid "4b6c4459-20dd-40d3-9c4a-c48c999ee960")
 	)
 	(junction
+		(at 107.95 45.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4ccb7bcb-0e48-402c-be2b-8a7aef2b0017")
+	)
+	(junction
 		(at 217.17 119.38)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4649,12 +4155,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b814aaa7-f96f-4a2d-b60e-8bdb020c5938")
-	)
-	(junction
-		(at 107.95 45.72)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c79877d7-47d5-4f52-bee7-7aef5de572fb")
 	)
 	(junction
 		(at 331.47 208.28)
@@ -5014,6 +4514,16 @@
 	)
 	(wire
 		(pts
+			(xy 97.79 132.08) (xy 97.79 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "02f454ea-57d0-4424-9fed-fa0a750b3daf")
+	)
+	(wire
+		(pts
 			(xy 285.75 121.92) (xy 285.75 124.46)
 		)
 		(stroke
@@ -5031,6 +4541,16 @@
 			(type solid)
 		)
 		(uuid "03dca5f9-862e-4cbb-bd9a-1624f0e2adf6")
+	)
+	(wire
+		(pts
+			(xy 323.85 45.72) (xy 323.85 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "03dce637-b026-48c3-9fe5-bc1b55a4642c")
 	)
 	(bus
 		(pts
@@ -5101,6 +4621,26 @@
 			(type solid)
 		)
 		(uuid "121fea25-cf39-4688-97cd-e50c77afc8be")
+	)
+	(wire
+		(pts
+			(xy 407.67 132.08) (xy 407.67 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "134c5da8-ff4c-4c25-b17c-670a3e13f1f0")
+	)
+	(wire
+		(pts
+			(xy 293.37 45.72) (xy 293.37 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "15c61009-9aad-4483-9607-adfda793a6f7")
 	)
 	(wire
 		(pts
@@ -5394,6 +4934,16 @@
 	)
 	(wire
 		(pts
+			(xy 313.69 45.72) (xy 313.69 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2b0b696c-093e-4530-b334-45fd2b3cbcdf")
+	)
+	(wire
+		(pts
 			(xy 397.51 127) (xy 397.51 124.46)
 		)
 		(stroke
@@ -5411,6 +4961,16 @@
 			(type solid)
 		)
 		(uuid "2b5299e9-af23-43d0-9871-67bee0e7955d")
+	)
+	(wire
+		(pts
+			(xy 77.47 55.88) (xy 77.47 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2bf48e55-2c88-46d0-9414-27db1235b31e")
 	)
 	(wire
 		(pts
@@ -5492,6 +5052,16 @@
 		)
 		(uuid "318e6e39-0a19-47f8-b4ef-a8547746505d")
 	)
+	(wire
+		(pts
+			(xy 303.53 45.72) (xy 303.53 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "32053828-119a-407f-bed0-dee385cfb7bc")
+	)
 	(bus
 		(pts
 			(xy 92.71 175.26) (xy 90.17 175.26)
@@ -5571,6 +5141,16 @@
 			(type solid)
 		)
 		(uuid "3a21c4fc-9b36-4f82-92a1-ca4eff9d049b")
+	)
+	(wire
+		(pts
+			(xy 387.35 132.08) (xy 387.35 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3c829a19-0bdf-4401-964e-57a069a6689f")
 	)
 	(wire
 		(pts
@@ -5684,6 +5264,16 @@
 	)
 	(wire
 		(pts
+			(xy 107.95 124.46) (xy 107.95 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "478436c3-951d-4bb6-9d2c-bd610d76ba05")
+	)
+	(wire
+		(pts
 			(xy 367.03 48.26) (xy 367.03 50.8)
 		)
 		(stroke
@@ -5764,6 +5354,16 @@
 	)
 	(wire
 		(pts
+			(xy 397.51 132.08) (xy 397.51 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4fe0378b-1d7f-4f54-a144-ca52ecd8c77b")
+	)
+	(wire
+		(pts
 			(xy 387.35 124.46) (xy 397.51 124.46)
 		)
 		(stroke
@@ -5781,6 +5381,26 @@
 			(type solid)
 		)
 		(uuid "50ccb753-bb4d-4acf-9823-9b1badea4833")
+	)
+	(wire
+		(pts
+			(xy 377.19 45.72) (xy 377.19 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "51972edf-3d27-4da5-a6ae-ecf6593aa275")
+	)
+	(wire
+		(pts
+			(xy 132.08 58.42) (xy 135.89 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5259e4d0-a94e-473d-9e36-74bd275c7809")
 	)
 	(wire
 		(pts
@@ -5804,6 +5424,16 @@
 	)
 	(wire
 		(pts
+			(xy 367.03 45.72) (xy 367.03 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "541214b9-e193-416c-a1fc-0b1f39eb86c3")
+	)
+	(wire
+		(pts
 			(xy 100.33 177.8) (xy 100.33 187.96)
 		)
 		(stroke
@@ -5824,6 +5454,16 @@
 	)
 	(wire
 		(pts
+			(xy 107.95 132.08) (xy 107.95 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "564d1b79-41de-4d0b-940a-d4ae72fedab4")
+	)
+	(wire
+		(pts
 			(xy 387.35 134.62) (xy 387.35 137.16)
 		)
 		(stroke
@@ -5841,6 +5481,16 @@
 			(type solid)
 		)
 		(uuid "5a10e2cb-6e93-44e9-b543-f616b2efe16a")
+	)
+	(wire
+		(pts
+			(xy 387.35 45.72) (xy 387.35 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5c01bb39-697e-46c7-998a-092dce91e9af")
 	)
 	(wire
 		(pts
@@ -5871,6 +5521,16 @@
 			(type solid)
 		)
 		(uuid "5cb5de86-53e3-4193-89a1-6ff7ccaf16f6")
+	)
+	(wire
+		(pts
+			(xy 163.83 114.3) (xy 163.83 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5cd576e7-ffd5-4b37-9fdb-0376c7bc4c1e")
 	)
 	(wire
 		(pts
@@ -5961,6 +5621,16 @@
 			(type solid)
 		)
 		(uuid "6433c3bd-0f2b-4c1e-9fb8-3aa33803403a")
+	)
+	(wire
+		(pts
+			(xy 97.79 142.24) (xy 97.79 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "64572c49-aab6-445b-ba12-ede29eb1ee3e")
 	)
 	(wire
 		(pts
@@ -6064,6 +5734,16 @@
 	)
 	(wire
 		(pts
+			(xy 163.83 127) (xy 163.83 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6de87599-e870-42be-9d6a-f1e276ef05b5")
+	)
+	(wire
+		(pts
 			(xy 161.29 182.88) (xy 161.29 177.8)
 		)
 		(stroke
@@ -6081,6 +5761,16 @@
 			(type solid)
 		)
 		(uuid "6ea1b7e2-49fc-499c-af5a-2a94a581adc3")
+	)
+	(wire
+		(pts
+			(xy 356.87 45.72) (xy 356.87 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "702d57e4-072a-427d-8bce-bb4486ef9468")
 	)
 	(wire
 		(pts
@@ -6144,6 +5834,16 @@
 	)
 	(wire
 		(pts
+			(xy 110.49 101.6) (xy 110.49 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "75415c64-8542-4ea1-833e-918d1bcf91e2")
+	)
+	(wire
+		(pts
 			(xy 186.69 93.98) (xy 135.89 93.98)
 		)
 		(stroke
@@ -6161,6 +5861,16 @@
 			(type solid)
 		)
 		(uuid "76ba24a3-aa4a-415b-9736-4443a0e1222a")
+	)
+	(wire
+		(pts
+			(xy 285.75 223.52) (xy 285.75 226.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "76ee16e4-2da2-4d8f-8533-e1fe3a154980")
 	)
 	(wire
 		(pts
@@ -6244,6 +5954,26 @@
 	)
 	(wire
 		(pts
+			(xy 110.49 93.98) (xy 110.49 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7d2d638c-56e8-4059-9ca9-c224ecd38f35")
+	)
+	(wire
+		(pts
+			(xy 163.83 121.92) (xy 163.83 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7ded73eb-ecb7-44ed-a580-da63905a0e55")
+	)
+	(wire
+		(pts
 			(xy 87.63 58.42) (xy 87.63 86.36)
 		)
 		(stroke
@@ -6294,6 +6024,16 @@
 	)
 	(wire
 		(pts
+			(xy 367.03 187.96) (xy 367.03 190.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "830860bf-ab42-4f95-b859-b2adfcabc2ba")
+	)
+	(wire
+		(pts
 			(xy 356.87 48.26) (xy 356.87 50.8)
 		)
 		(stroke
@@ -6301,6 +6041,16 @@
 			(type solid)
 		)
 		(uuid "8381363f-910e-4ac4-a55e-38a80b22bbf3")
+	)
+	(wire
+		(pts
+			(xy 407.67 187.96) (xy 407.67 190.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "869a7fb9-b835-4d44-a06f-32569baae7d4")
 	)
 	(wire
 		(pts
@@ -6411,6 +6161,16 @@
 			(type solid)
 		)
 		(uuid "932f7473-dd0f-489a-a00a-e2d98eb61736")
+	)
+	(wire
+		(pts
+			(xy 120.65 101.6) (xy 120.65 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "941cd1b3-0ee5-435d-8456-3c97a8defc8c")
 	)
 	(wire
 		(pts
@@ -6544,7 +6304,7 @@
 	)
 	(wire
 		(pts
-			(xy 120.65 58.42) (xy 125.73 58.42)
+			(xy 120.65 58.42) (xy 127 58.42)
 		)
 		(stroke
 			(width 0.1524)
@@ -6682,6 +6442,16 @@
 		)
 		(uuid "ae2b5192-d0c6-47c0-b6c6-e1926e5b1da3")
 	)
+	(wire
+		(pts
+			(xy 97.79 124.46) (xy 97.79 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ae641b9b-282c-4e04-8d05-1069d98c5a5a")
+	)
 	(bus
 		(pts
 			(xy 265.43 68.58) (xy 265.43 71.12)
@@ -6754,6 +6524,26 @@
 	)
 	(wire
 		(pts
+			(xy 387.35 187.96) (xy 387.35 190.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b55667ad-e27b-4302-a40d-09678fc4448d")
+	)
+	(wire
+		(pts
+			(xy 107.95 142.24) (xy 107.95 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b5bb1fd8-eebe-40a7-82ce-5f5bb6132cbc")
+	)
+	(wire
+		(pts
 			(xy 135.89 68.58) (xy 186.69 68.58)
 		)
 		(stroke
@@ -6781,6 +6571,16 @@
 			(type solid)
 		)
 		(uuid "b753e237-6dd6-4f46-896c-c683074fe527")
+	)
+	(wire
+		(pts
+			(xy 334.01 45.72) (xy 334.01 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b8afecfa-d689-4b26-91e4-2febff59a135")
 	)
 	(wire
 		(pts
@@ -6904,6 +6704,16 @@
 	)
 	(wire
 		(pts
+			(xy 397.51 187.96) (xy 397.51 190.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c784fc18-c1c2-4f42-86c7-b3335da9d280")
+	)
+	(wire
+		(pts
 			(xy 156.21 167.64) (xy 156.21 187.96)
 		)
 		(stroke
@@ -6971,6 +6781,16 @@
 			(type solid)
 		)
 		(uuid "cbe1658d-2437-48da-bcdf-2fc4b43fec65")
+	)
+	(wire
+		(pts
+			(xy 107.95 149.86) (xy 107.95 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cc0e8788-2f41-46fa-8a28-47f565552678")
 	)
 	(wire
 		(pts
@@ -7044,6 +6864,26 @@
 	)
 	(wire
 		(pts
+			(xy 285.75 215.9) (xy 285.75 218.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d235173f-38ed-40ba-a486-72dd6c6ab2d9")
+	)
+	(wire
+		(pts
+			(xy 377.19 187.96) (xy 377.19 190.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d25ef24c-e89c-4cc1-b6b0-0573e7c12a61")
+	)
+	(wire
+		(pts
 			(xy 285.75 213.36) (xy 285.75 208.28)
 		)
 		(stroke
@@ -7051,6 +6891,16 @@
 			(type solid)
 		)
 		(uuid "d3d399e9-b43f-4f4b-8d40-206abdcda600")
+	)
+	(wire
+		(pts
+			(xy 346.71 45.72) (xy 346.71 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d4309e37-02cf-43a3-a22c-1ee481d6c05c")
 	)
 	(wire
 		(pts
@@ -7111,6 +6961,16 @@
 			(type solid)
 		)
 		(uuid "da057554-8855-44ae-8ca3-b35586e3acb8")
+	)
+	(wire
+		(pts
+			(xy 163.83 134.62) (xy 163.83 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da577c8e-a1fa-4d78-a64d-a19984ceabff")
 	)
 	(wire
 		(pts
@@ -7191,6 +7051,16 @@
 			(type solid)
 		)
 		(uuid "ded9277c-59bf-4aa9-91e7-6ab1e4e45905")
+	)
+	(wire
+		(pts
+			(xy 120.65 93.98) (xy 120.65 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "df73c173-25ff-48b5-a524-fb6feaadb5f7")
 	)
 	(wire
 		(pts
@@ -7364,6 +7234,16 @@
 	)
 	(wire
 		(pts
+			(xy 285.75 111.76) (xy 285.75 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ef58a984-80af-4409-ad1a-e7b738cafd09")
+	)
+	(wire
+		(pts
 			(xy 293.37 40.64) (xy 293.37 38.1)
 		)
 		(stroke
@@ -7371,6 +7251,16 @@
 			(type solid)
 		)
 		(uuid "efe67ed9-93c8-40d7-849e-033f2334515e")
+	)
+	(wire
+		(pts
+			(xy 97.79 149.86) (xy 97.79 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "efeabda0-c913-42c1-8a4b-276bd2046b40")
 	)
 	(wire
 		(pts
@@ -7471,6 +7361,16 @@
 			(type solid)
 		)
 		(uuid "f575e552-738d-4444-a6d0-e6f5487fe21b")
+	)
+	(wire
+		(pts
+			(xy 285.75 119.38) (xy 285.75 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f5feebe1-fb6e-4d99-9559-0bd2aceb5093")
 	)
 	(wire
 		(pts
@@ -8255,7 +8155,7 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-camera-board-eagle-import:C-EU0603-C-NOSILK")
+		(lib_id "Device:C_Small")
 		(at 377.19 185.42 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -8281,7 +8181,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "star-tracker-camera-board:.0603-C-NOSILK"
+		(property "Footprint" "oresat-passives:c_0603-SMALL"
 			(at 377.19 185.42 0)
 			(effects
 				(font
@@ -8290,7 +8190,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRT188C71E225KE13-01.pdf"
+		(property "Datasheet" "~"
 			(at 377.19 185.42 0)
 			(effects
 				(font
@@ -8299,7 +8199,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "2.2 µF ±10% 25V Ceramic Capacitor X7S 0603 (1608 Metric)"
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 377.19 185.42 0)
 			(effects
 				(font
@@ -8426,8 +8326,8 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-camera-board-eagle-import:R-US_0402-B")
-		(at 97.79 147.32 90)
+		(lib_id "Device:R_Small_US")
+		(at 97.79 147.32 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8435,7 +8335,7 @@
 		(dnp no)
 		(uuid "0d039c7e-e301-4d14-a038-dffff59795c7")
 		(property "Reference" "R9"
-			(at 96.2914 151.13 0)
+			(at 95.504 148.844 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -8444,7 +8344,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 101.092 151.13 0)
+			(at 95.504 144.0434 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -8452,7 +8352,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "star-tracker-camera-board:.0402-B"
+		(property "Footprint" "oresat-passives:0402-B-NOSILK"
 			(at 97.79 147.32 0)
 			(effects
 				(font
@@ -8461,7 +8361,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 97.79 147.32 0)
 			(effects
 				(font
@@ -8470,7 +8370,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small US symbol"
 			(at 97.79 147.32 0)
 			(effects
 				(font
@@ -8663,7 +8563,7 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-camera-board-eagle-import:C-EU0402-A-NOSILK")
+		(lib_id "Device:C_Small")
 		(at 77.47 60.96 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -8689,7 +8589,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "star-tracker-camera-board:.0402-A-NOSILK"
+		(property "Footprint" "oresat-passives:0402-B-NOSILK"
 			(at 77.47 60.96 0)
 			(effects
 				(font
@@ -8698,7 +8598,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 77.47 60.96 0)
 			(effects
 				(font
@@ -8707,7 +8607,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 77.47 60.96 0)
 			(effects
 				(font
@@ -8812,7 +8712,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "36 Position FFC, FPC Connector Contacts, Vertical - 1 Sided 0.020\" (0.50mm) Surface Mount"
+		(property "Description" "36 Position FFC, FPC Connector Contacts, Vertical, 1 Sided 0.020\" (0.50mm) Surface Mount"
 			(at 120.65 198.12 0)
 			(effects
 				(font
@@ -8981,7 +8881,7 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-camera-board-eagle-import:C-EU0603-C-NOSILK")
+		(lib_id "Device:C_Small")
 		(at 334.01 43.18 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -9007,7 +8907,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "star-tracker-camera-board:.0603-C-NOSILK"
+		(property "Footprint" "oresat-passives:c_0603-SMALL"
 			(at 334.01 43.18 0)
 			(effects
 				(font
@@ -9016,7 +8916,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 334.01 43.18 0)
 			(effects
 				(font
@@ -9025,7 +8925,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 334.01 43.18 0)
 			(effects
 				(font
@@ -9348,8 +9248,8 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-camera-board-eagle-import:R-US_0402-B")
-		(at 107.95 147.32 90)
+		(lib_id "Device:R_Small_US")
+		(at 107.95 147.32 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9357,7 +9257,7 @@
 		(dnp no)
 		(uuid "2f064113-c8d8-45ac-827b-f93fc26af05a")
 		(property "Reference" "R12"
-			(at 106.4514 151.13 0)
+			(at 114.046 148.844 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -9366,7 +9266,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 111.252 151.13 0)
+			(at 114.046 144.0434 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -9374,7 +9274,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "star-tracker-camera-board:.0402-B"
+		(property "Footprint" "oresat-passives:0402-B-NOSILK"
 			(at 107.95 147.32 0)
 			(effects
 				(font
@@ -9383,7 +9283,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 107.95 147.32 0)
 			(effects
 				(font
@@ -9392,7 +9292,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small US symbol"
 			(at 107.95 147.32 0)
 			(effects
 				(font
@@ -9453,8 +9353,8 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-camera-board-eagle-import:R-US_0402-B")
-		(at 130.81 58.42 0)
+		(lib_id "Device:R_Small_US")
+		(at 129.54 58.42 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9462,7 +9362,7 @@
 		(dnp no)
 		(uuid "309341e8-e539-4b37-9e66-c6cb98081df4")
 		(property "Reference" "R2"
-			(at 127 56.9214 0)
+			(at 130.81 60.1726 90)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -9471,7 +9371,7 @@
 			)
 		)
 		(property "Value" "100"
-			(at 127 61.722 0)
+			(at 130.81 55.372 90)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -9479,8 +9379,8 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "star-tracker-camera-board:.0402-B"
-			(at 130.81 58.42 0)
+		(property "Footprint" "oresat-passives:0402-B-NOSILK"
+			(at 129.54 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9488,8 +9388,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 130.81 58.42 0)
+		(property "Datasheet" "~"
+			(at 129.54 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9497,8 +9397,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 130.81 58.42 0)
+		(property "Description" "Resistor, small US symbol"
+			(at 129.54 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9507,7 +9407,7 @@
 			)
 		)
 		(property "DIS" "Digikey"
-			(at 130.81 58.42 0)
+			(at 129.54 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9516,7 +9416,7 @@
 			)
 		)
 		(property "DPN" "738-RMCA0402FT100R-HPCT-ND"
-			(at 130.81 58.42 0)
+			(at 129.54 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9525,7 +9425,7 @@
 			)
 		)
 		(property "MFR" "Stackpole Electronics Inc"
-			(at 130.81 58.42 0)
+			(at 129.54 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9534,7 +9434,7 @@
 			)
 		)
 		(property "MPN" "RMCA0402FT100R-HP"
-			(at 130.81 58.42 0)
+			(at 129.54 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9558,7 +9458,7 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-camera-board-eagle-import:C-EU0603-C-NOSILK")
+		(lib_id "Device:C_Small")
 		(at 367.03 185.42 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -9584,7 +9484,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "star-tracker-camera-board:.0603-C-NOSILK"
+		(property "Footprint" "oresat-passives:c_0603-SMALL"
 			(at 367.03 185.42 0)
 			(effects
 				(font
@@ -9593,7 +9493,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRT188C71E225KE13-01.pdf"
+		(property "Datasheet" "~"
 			(at 367.03 185.42 0)
 			(effects
 				(font
@@ -9602,7 +9502,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "2.2 µF ±10% 25V Ceramic Capacitor X7S 0603 (1608 Metric)"
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 367.03 185.42 0)
 			(effects
 				(font
@@ -9860,8 +9760,8 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-camera-board-eagle-import:R-US_0402-B-NOSILK")
-		(at 110.49 99.06 90)
+		(lib_id "Device:R_Small_US")
+		(at 110.49 99.06 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9869,7 +9769,7 @@
 		(dnp no)
 		(uuid "4185c2db-d3c7-4792-9c93-de33c1d6940e")
 		(property "Reference" "R8"
-			(at 108.9914 102.87 0)
+			(at 108.966 101.092 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -9878,7 +9778,7 @@
 			)
 		)
 		(property "Value" "4.7k"
-			(at 113.792 102.87 0)
+			(at 108.966 96.2914 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -9886,7 +9786,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "star-tracker-camera-board:.0402-B-NOSILK"
+		(property "Footprint" "oresat-passives:0402-B-NOSILK"
 			(at 110.49 99.06 0)
 			(effects
 				(font
@@ -9895,7 +9795,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 110.49 99.06 0)
 			(effects
 				(font
@@ -9904,7 +9804,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small US symbol"
 			(at 110.49 99.06 0)
 			(effects
 				(font
@@ -9965,7 +9865,7 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-camera-board-eagle-import:C-EU0603-C-NOSILK")
+		(lib_id "Device:C_Small")
 		(at 397.51 129.54 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -9991,7 +9891,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "star-tracker-camera-board:.0603-C-NOSILK"
+		(property "Footprint" "oresat-passives:c_0603-SMALL"
 			(at 397.51 129.54 0)
 			(effects
 				(font
@@ -10000,7 +9900,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRT188R71E105KE13-01.pdf"
+		(property "Datasheet" "~"
 			(at 397.51 129.54 0)
 			(effects
 				(font
@@ -10009,7 +9909,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "1 µF ±10% 25V Ceramic Capacitor X7R 0603 (1608 Metric)"
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 397.51 129.54 0)
 			(effects
 				(font
@@ -10136,6 +10036,7 @@
 		)
 	)
 	(symbol
+		(lib_name "TPS71928-28DRVT_1")
 		(lib_id "star-tracker-camera-board-eagle-import:TPS71928-28DRVT")
 		(at 313.69 210.82 0)
 		(unit 1)
@@ -10518,8 +10419,8 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-camera-board-eagle-import:R-US_0402-B-NOSILK")
-		(at 163.83 132.08 90)
+		(lib_id "Device:R_Small_US")
+		(at 163.83 132.08 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10527,7 +10428,7 @@
 		(dnp no)
 		(uuid "52a80099-46b9-468c-9303-dea6987537c2")
 		(property "Reference" "R4"
-			(at 162.3314 135.89 0)
+			(at 169.418 133.5786 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -10536,7 +10437,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 167.132 135.89 0)
+			(at 169.418 128.778 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -10544,7 +10445,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "star-tracker-camera-board:.0402-B-NOSILK"
+		(property "Footprint" "oresat-passives:0402-B-NOSILK"
 			(at 163.83 132.08 0)
 			(effects
 				(font
@@ -10553,7 +10454,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 163.83 132.08 0)
 			(effects
 				(font
@@ -10562,7 +10463,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small US symbol"
 			(at 163.83 132.08 0)
 			(effects
 				(font
@@ -10821,8 +10722,8 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-camera-board-eagle-import:R-US_0402-B-NOSILK")
-		(at 120.65 99.06 90)
+		(lib_id "Device:R_Small_US")
+		(at 120.65 99.06 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10830,7 +10731,7 @@
 		(dnp no)
 		(uuid "67ba85c1-b044-4faf-a44b-12f12dcbb454")
 		(property "Reference" "R7"
-			(at 119.1514 102.87 0)
+			(at 126.238 100.584 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -10839,7 +10740,7 @@
 			)
 		)
 		(property "Value" "4.7k"
-			(at 123.952 102.87 0)
+			(at 126.238 95.7834 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -10847,7 +10748,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "star-tracker-camera-board:.0402-B-NOSILK"
+		(property "Footprint" "oresat-passives:0402-B-NOSILK"
 			(at 120.65 99.06 0)
 			(effects
 				(font
@@ -10856,7 +10757,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 120.65 99.06 0)
 			(effects
 				(font
@@ -10865,7 +10766,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small US symbol"
 			(at 120.65 99.06 0)
 			(effects
 				(font
@@ -10992,7 +10893,7 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-camera-board-eagle-import:C-EU0402-B-NOSILK")
+		(lib_id "Device:C_Small")
 		(at 387.35 43.18 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -11018,7 +10919,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "star-tracker-camera-board:.0402-B-NOSILK"
+		(property "Footprint" "oresat-passives:0402-B-NOSILK"
 			(at 387.35 43.18 0)
 			(effects
 				(font
@@ -11027,7 +10928,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 387.35 43.18 0)
 			(effects
 				(font
@@ -11036,7 +10937,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 387.35 43.18 0)
 			(effects
 				(font
@@ -11162,7 +11063,7 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-camera-board-eagle-import:C-EU0603-C-NOSILK")
+		(lib_id "Device:C_Small")
 		(at 397.51 185.42 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -11188,7 +11089,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "star-tracker-camera-board:.0603-C-NOSILK"
+		(property "Footprint" "oresat-passives:c_0603-SMALL"
 			(at 397.51 185.42 0)
 			(effects
 				(font
@@ -11197,7 +11098,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRT188C71E225KE13-01.pdf"
+		(property "Datasheet" "~"
 			(at 397.51 185.42 0)
 			(effects
 				(font
@@ -11206,7 +11107,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "2.2 µF ±10% 25V Ceramic Capacitor X7S 0603 (1608 Metric)"
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 397.51 185.42 0)
 			(effects
 				(font
@@ -11576,16 +11477,16 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-camera-board-eagle-import:R-US_0402-B-NOSILK")
-		(at 163.83 119.38 90)
+		(lib_id "Device:R_Small_US")
+		(at 163.83 119.38 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "7572fdfd-091e-4a49-a9f2-d9d90891c358")
 		(property "Reference" "R3"
-			(at 162.3314 123.19 0)
+			(at 162.306 121.1326 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -11594,12 +11495,13 @@
 			)
 		)
 		(property "Value" "DNP"
-			(at 167.132 123.19 0)
+			(at 162.306 116.332 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
 				)
 				(justify left bottom)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "star-tracker-camera-board:.0402-B-NOSILK"
@@ -11611,7 +11513,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 163.83 119.38 0)
 			(effects
 				(font
@@ -11620,7 +11522,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small US symbol"
 			(at 163.83 119.38 0)
 			(effects
 				(font
@@ -11681,7 +11583,7 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-camera-board-eagle-import:C-EU0603-C-NOSILK")
+		(lib_id "Device:C_Small")
 		(at 323.85 43.18 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -11707,7 +11609,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "star-tracker-camera-board:.0603-C-NOSILK"
+		(property "Footprint" "oresat-passives:c_0603-SMALL"
 			(at 323.85 43.18 0)
 			(effects
 				(font
@@ -11716,7 +11618,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 323.85 43.18 0)
 			(effects
 				(font
@@ -11725,7 +11627,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 323.85 43.18 0)
 			(effects
 				(font
@@ -11918,7 +11820,7 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-camera-board-eagle-import:C-EU0603-C-NOSILK")
+		(lib_id "Device:C_Small")
 		(at 407.67 185.42 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -11944,7 +11846,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "star-tracker-camera-board:.0603-C-NOSILK"
+		(property "Footprint" "oresat-passives:c_0603-SMALL"
 			(at 407.67 185.42 0)
 			(effects
 				(font
@@ -11953,7 +11855,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRT188C71E225KE13-01.pdf"
+		(property "Datasheet" "~"
 			(at 407.67 185.42 0)
 			(effects
 				(font
@@ -11962,7 +11864,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "2.2 µF ±10% 25V Ceramic Capacitor X7S 0603 (1608 Metric)"
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 407.67 185.42 0)
 			(effects
 				(font
@@ -12089,7 +11991,7 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-camera-board-eagle-import:C-EU0603-C-NOSILK")
+		(lib_id "Device:C_Small")
 		(at 387.35 185.42 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -12115,7 +12017,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "star-tracker-camera-board:.0603-C-NOSILK"
+		(property "Footprint" "oresat-passives:c_0603-SMALL"
 			(at 387.35 185.42 0)
 			(effects
 				(font
@@ -12124,7 +12026,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRT188C71E225KE13-01.pdf"
+		(property "Datasheet" "~"
 			(at 387.35 185.42 0)
 			(effects
 				(font
@@ -12133,7 +12035,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "2.2 µF ±10% 25V Ceramic Capacitor X7S 0603 (1608 Metric)"
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 387.35 185.42 0)
 			(effects
 				(font
@@ -12260,7 +12162,7 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-camera-board-eagle-import:C-EU0603-C-NOSILK")
+		(lib_id "Device:C_Small")
 		(at 387.35 129.54 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -12286,7 +12188,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "star-tracker-camera-board:.0603-C-NOSILK"
+		(property "Footprint" "oresat-passives:c_0603-SMALL"
 			(at 387.35 129.54 0)
 			(effects
 				(font
@@ -12295,7 +12197,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRT188R71E105KE13-01.pdf"
+		(property "Datasheet" "~"
 			(at 387.35 129.54 0)
 			(effects
 				(font
@@ -12304,7 +12206,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "1 µF ±10% 25V Ceramic Capacitor X7R 0603 (1608 Metric)"
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 387.35 129.54 0)
 			(effects
 				(font
@@ -12563,7 +12465,7 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-camera-board-eagle-import:C-EU0603-C-NOSILK")
+		(lib_id "Device:C_Small")
 		(at 303.53 43.18 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -12589,7 +12491,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "star-tracker-camera-board:.0603-C-NOSILK"
+		(property "Footprint" "oresat-passives:c_0603-SMALL"
 			(at 303.53 43.18 0)
 			(effects
 				(font
@@ -12598,7 +12500,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 303.53 43.18 0)
 			(effects
 				(font
@@ -12607,7 +12509,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 303.53 43.18 0)
 			(effects
 				(font
@@ -12859,7 +12761,7 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-camera-board-eagle-import:C-EU0402-B-NOSILK")
+		(lib_id "Device:C_Small")
 		(at 346.71 43.18 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -12885,7 +12787,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "star-tracker-camera-board:.0402-B-NOSILK"
+		(property "Footprint" "oresat-passives:0402-B-NOSILK"
 			(at 346.71 43.18 0)
 			(effects
 				(font
@@ -12894,7 +12796,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 346.71 43.18 0)
 			(effects
 				(font
@@ -12903,7 +12805,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 346.71 43.18 0)
 			(effects
 				(font
@@ -13030,7 +12932,7 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-camera-board-eagle-import:C-EU0603-C-NOSILK")
+		(lib_id "Device:C_Small")
 		(at 293.37 43.18 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -13056,7 +12958,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "star-tracker-camera-board:.0603-C-NOSILK"
+		(property "Footprint" "oresat-passives:c_0603-SMALL"
 			(at 293.37 43.18 0)
 			(effects
 				(font
@@ -13065,7 +12967,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 293.37 43.18 0)
 			(effects
 				(font
@@ -13074,7 +12976,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 293.37 43.18 0)
 			(effects
 				(font
@@ -13260,6 +13162,82 @@
 			(project ""
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
 					(reference "#VBUS8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "star-tracker-camera-board-eagle-import:MC2520Z27.0000C19XSH")
+		(at 107.95 58.42 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "bcfd4ec8-8474-4d53-9fb8-b96c2d1e08f7")
+		(property "Reference" "X1"
+			(at 93.0656 43.6814 0)
+			(effects
+				(font
+					(size 2.0828 1.7703)
+				)
+				(justify left bottom)
+				(hide yes)
+			)
+		)
+		(property "Value" "MC2520Z27.0000C19XSH"
+			(at 109.982 45.974 0)
+			(effects
+				(font
+					(size 2.0828 1.7703)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "star-tracker-camera-board:OSC_KYOCERA_KC2520B"
+			(at 107.95 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 107.95 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 107.95 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "47269851-a777-47ad-9485-1a5687767ab5")
+		)
+		(pin "4"
+			(uuid "da619f95-513f-4269-98cd-d8996cffb0e3")
+		)
+		(pin "2"
+			(uuid "cce2b6c5-f4b6-4c54-9b80-1efb0802ac76")
+		)
+		(pin "3"
+			(uuid "ca7354eb-9724-4bde-a803-b2ebf2dcfffa")
+		)
+		(instances
+			(project ""
+				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
+					(reference "X1")
 					(unit 1)
 				)
 			)
@@ -13529,7 +13507,7 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-camera-board-eagle-import:C-EU0603-C-NOSILK")
+		(lib_id "Device:C_Small")
 		(at 407.67 129.54 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -13555,7 +13533,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "star-tracker-camera-board:.0603-C-NOSILK"
+		(property "Footprint" "oresat-passives:c_0603-SMALL"
 			(at 407.67 129.54 0)
 			(effects
 				(font
@@ -13564,7 +13542,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRT188R71E105KE13-01.pdf"
+		(property "Datasheet" "~"
 			(at 407.67 129.54 0)
 			(effects
 				(font
@@ -13573,7 +13551,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "1 µF ±10% 25V Ceramic Capacitor X7R 0603 (1608 Metric)"
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 407.67 129.54 0)
 			(effects
 				(font
@@ -13634,7 +13612,7 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-camera-board-eagle-import:C-EU0603-C-NOSILK")
+		(lib_id "Device:C_Small")
 		(at 313.69 43.18 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -13660,7 +13638,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "star-tracker-camera-board:.0603-C-NOSILK"
+		(property "Footprint" "oresat-passives:c_0603-SMALL"
 			(at 313.69 43.18 0)
 			(effects
 				(font
@@ -13669,7 +13647,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 313.69 43.18 0)
 			(effects
 				(font
@@ -13678,7 +13656,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 313.69 43.18 0)
 			(effects
 				(font
@@ -13936,8 +13914,8 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-camera-board-eagle-import:R-US_0402-B")
-		(at 97.79 129.54 90)
+		(lib_id "Device:R_Small_US")
+		(at 97.79 129.54 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13945,7 +13923,7 @@
 		(dnp no)
 		(uuid "ca4640cc-9b85-487c-ada7-c3a53009ad92")
 		(property "Reference" "R10"
-			(at 96.2914 133.35 0)
+			(at 96.52 131.064 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -13954,7 +13932,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 101.092 133.35 0)
+			(at 96.52 126.2634 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -13962,7 +13940,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "star-tracker-camera-board:.0402-B"
+		(property "Footprint" "oresat-passives:0402-B-NOSILK"
 			(at 97.79 129.54 0)
 			(effects
 				(font
@@ -13971,7 +13949,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 97.79 129.54 0)
 			(effects
 				(font
@@ -13980,7 +13958,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small US symbol"
 			(at 97.79 129.54 0)
 			(effects
 				(font
@@ -14237,8 +14215,8 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-camera-board-eagle-import:R-US_0402-B")
-		(at 107.95 129.54 90)
+		(lib_id "Device:R_Small_US")
+		(at 107.95 129.54 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14246,7 +14224,7 @@
 		(dnp no)
 		(uuid "d3ac5ad7-e7fe-4718-b30f-04c4f3f109ce")
 		(property "Reference" "R11"
-			(at 106.4514 133.35 0)
+			(at 114.3 131.064 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -14255,7 +14233,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 111.252 133.35 0)
+			(at 114.3 126.2634 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -14263,7 +14241,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "star-tracker-camera-board:.0402-B"
+		(property "Footprint" "oresat-passives:0402-B-NOSILK"
 			(at 107.95 129.54 0)
 			(effects
 				(font
@@ -14272,7 +14250,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 107.95 129.54 0)
 			(effects
 				(font
@@ -14281,7 +14259,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small US symbol"
 			(at 107.95 129.54 0)
 			(effects
 				(font
@@ -14801,117 +14779,6 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-camera-board-eagle-import:KC2520B27.0000C10E00")
-		(at 107.95 58.42 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "e2232565-386b-4d13-ab34-1ef2530b285c")
-		(property "Reference" "X1"
-			(at 115.57 43.18 0)
-			(effects
-				(font
-					(size 2.0828 1.7703)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Value" "KC2520B27.0000C10E00"
-			(at 115.57 45.72 0)
-			(effects
-				(font
-					(size 2.0828 1.7703)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Footprint" "star-tracker-camera-board:OSC_KYOCERA_KC2520B"
-			(at 107.95 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://ele.kyocera.com/assets/products/crystal-device/cry_e.pdf"
-			(at 107.95 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "27 MHz XO (Standard) CMOS Oscillator 1.6V ~ 3.63V Standby (Power Down) 4-SMD, No Lead"
-			(at 107.95 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "DIS" "DigiKey"
-			(at 107.95 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "DPN" "OBSOLETE"
-			(at 107.95 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MFR" "Kyocera"
-			(at 107.95 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MPN" "KC2520B27.0000C10E00"
-			(at 107.95 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "5ed31736-a588-4309-9106-2c1b8d6b41fa")
-		)
-		(pin "4"
-			(uuid "f96b857a-58e3-4c41-95d0-a8deaf20a7ab")
-		)
-		(pin "2"
-			(uuid "8f52f977-5037-4435-99ca-c7843c317b0b")
-		)
-		(pin "3"
-			(uuid "636f0e3c-1ede-415c-aad6-733645bb6a74")
-		)
-		(instances
-			(project ""
-				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "X1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "star-tracker-camera-board-eagle-import:VDD_PLL")
 		(at 217.17 40.64 0)
 		(unit 1)
@@ -15110,8 +14977,8 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-camera-board-eagle-import:R-US_0402-B-NOSILK")
-		(at 285.75 116.84 270)
+		(lib_id "Device:R_Small_US")
+		(at 285.75 116.84 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15119,7 +14986,7 @@
 		(dnp no)
 		(uuid "f5b12bbb-fa61-4228-a8c8-e364136514ea")
 		(property "Reference" "R5"
-			(at 287.2486 113.03 0)
+			(at 280.67 115.8494 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -15128,7 +14995,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 282.448 113.03 0)
+			(at 280.67 120.65 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -15136,7 +15003,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "star-tracker-camera-board:.0402-B-NOSILK"
+		(property "Footprint" "oresat-passives:0402-B-NOSILK"
 			(at 285.75 116.84 0)
 			(effects
 				(font
@@ -15145,7 +15012,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 285.75 116.84 0)
 			(effects
 				(font
@@ -15154,7 +15021,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small US symbol"
 			(at 285.75 116.84 0)
 			(effects
 				(font
@@ -15215,16 +15082,16 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-camera-board-eagle-import:R-US_0402-B-NOSILK")
-		(at 285.75 220.98 270)
+		(lib_id "Device:R_Small_US")
+		(at 285.75 220.98 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "f77daf4d-2c18-4206-80d2-cce3620e8b13")
 		(property "Reference" "R6"
-			(at 287.2486 217.17 0)
+			(at 281.94 219.4814 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -15233,12 +15100,13 @@
 			)
 		)
 		(property "Value" "DNP"
-			(at 282.448 217.17 0)
+			(at 281.94 224.282 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
 				)
 				(justify left bottom)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "star-tracker-camera-board:.0402-B-NOSILK"
@@ -15250,7 +15118,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 285.75 220.98 0)
 			(effects
 				(font
@@ -15259,7 +15127,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small US symbol"
 			(at 285.75 220.98 0)
 			(effects
 				(font
@@ -15320,7 +15188,7 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-camera-board-eagle-import:C-EU0402-B-NOSILK")
+		(lib_id "Device:C_Small")
 		(at 377.19 43.18 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -15346,7 +15214,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "star-tracker-camera-board:.0402-B-NOSILK"
+		(property "Footprint" "oresat-passives:0402-B-NOSILK"
 			(at 377.19 43.18 0)
 			(effects
 				(font
@@ -15355,7 +15223,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 377.19 43.18 0)
 			(effects
 				(font
@@ -15364,7 +15232,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 377.19 43.18 0)
 			(effects
 				(font
@@ -15425,7 +15293,7 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-camera-board-eagle-import:C-EU0402-B-NOSILK")
+		(lib_id "Device:C_Small")
 		(at 356.87 43.18 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -15451,7 +15319,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "star-tracker-camera-board:.0402-B-NOSILK"
+		(property "Footprint" "oresat-passives:0402-B-NOSILK"
 			(at 356.87 43.18 0)
 			(effects
 				(font
@@ -15460,7 +15328,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 356.87 43.18 0)
 			(effects
 				(font
@@ -15469,7 +15337,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 356.87 43.18 0)
 			(effects
 				(font
@@ -15530,7 +15398,7 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-camera-board-eagle-import:C-EU0402-B-NOSILK")
+		(lib_id "Device:C_Small")
 		(at 367.03 43.18 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -15556,7 +15424,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "star-tracker-camera-board:.0402-B-NOSILK"
+		(property "Footprint" "oresat-passives:0402-B-NOSILK"
 			(at 367.03 43.18 0)
 			(effects
 				(font
@@ -15565,7 +15433,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 367.03 43.18 0)
 			(effects
 				(font
@@ -15574,7 +15442,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 367.03 43.18 0)
 			(effects
 				(font
