@@ -1,5 +1,7 @@
 # oresat-star-tracker
 
+[![ERC](https://github.com/oresat/oresat-star-tracker-hardware/actions/workflows/checkErc.yml/badge.svg)](https://github.com/oresat/oresat-star-tracker-hardware/actions/workflows/checkErc.yml)
+
 This is the repository for all things related to the star tracker system for OreSat. The star tracker takes pictures of the local star field and returns the spacecraft's attitude (which way it's pointed). This is critical for both OreSat Live and the Cirrus Flux Camera missions which require the satellite to be pointed down to a specific location on the ground.
 
 ![Latest OreSat Star Tracker Board](https://github.com/oresat/oresat-star-tracker/blob/master/oresat-star-tracker-board.jpg)

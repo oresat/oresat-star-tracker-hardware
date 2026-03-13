@@ -1,0 +1,6 @@
+name: 'KiCad Action'
+description: 'Automate KiCad tasks, e.g. check ERC/DRC on pull requests or generate production files for releases'
+
+runs:
+    using: 'docker'
+    image: 'Dockerfile'

@@ -1,0 +1,16 @@
+name: ERC
+
+on: [push]
+
+jobs:
+  check-erc:
+    runs-on: ubuntu-latest
+    name: A job to run the schematic erc
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run KiCad ERC with a json output format
+        id: erc
+        uses: ./
+        if: '!cancelled()'
