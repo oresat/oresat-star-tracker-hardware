@@ -3355,12 +3355,6 @@
 		(uuid "487b9991-c83d-439c-af5c-d69aa61c369f")
 	)
 	(junction
-		(at 49.53 111.76)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "493ef34e-b948-4090-a070-5ef9210f8426")
-	)
-	(junction
 		(at 359.41 97.79)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3383,6 +3377,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6c41deac-676b-4978-be2c-4d41906da162")
+	)
+	(junction
+		(at 49.53 106.68)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7d4d70f5-5d2a-4272-9e72-40ba4e0eac00")
 	)
 	(junction
 		(at 49.53 83.82)
@@ -3469,16 +3469,16 @@
 		(uuid "e1886d29-0551-4550-9458-8f560309148d")
 	)
 	(junction
-		(at 49.53 106.68)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e608f787-c36b-4a29-8365-48dc62c649c1")
-	)
-	(junction
 		(at 386.08 195.58)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f2e89f2d-980d-4cb5-bfc6-61444fe715c8")
+	)
+	(junction
+		(at 49.53 111.76)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f3b006e4-7f07-4187-85b6-2d7ba9773cbe")
 	)
 	(junction
 		(at 49.53 86.36)
@@ -3515,6 +3515,10 @@
 		(uuid "66a0d657-105b-4e42-9f88-4dbf06f9a37a")
 	)
 	(no_connect
+		(at 46.99 104.14)
+		(uuid "8bb94ded-fde5-4005-b4bc-8af31a24afc2")
+	)
+	(no_connect
 		(at 46.99 78.74)
 		(uuid "a3c3cd55-b429-472a-a2fc-815bc88fea87")
 	)
@@ -3525,10 +3529,6 @@
 	(no_connect
 		(at 46.99 124.46)
 		(uuid "ad02ca26-6bd9-4254-9107-3c9cc2321c0e")
-	)
-	(no_connect
-		(at 46.99 114.3)
-		(uuid "ba6097f2-b4e2-465b-9760-071ef3db7bce")
 	)
 	(no_connect
 		(at 46.99 121.92)
@@ -3635,6 +3635,16 @@
 			(type default)
 		)
 		(uuid "0c2fb2ae-f63f-4f53-8083-69c9c484332b")
+	)
+	(wire
+		(pts
+			(xy 49.53 111.76) (xy 49.53 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0c8f0655-99d7-43a2-a9b5-7779530a8ff3")
 	)
 	(wire
 		(pts
@@ -3998,6 +4008,16 @@
 	)
 	(wire
 		(pts
+			(xy 49.53 106.68) (xy 69.85 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3639a0eb-185a-4ed3-bdc4-8f50646790c6")
+	)
+	(wire
+		(pts
 			(xy 171.45 119.38) (xy 190.5 119.38)
 		)
 		(stroke
@@ -4068,16 +4088,6 @@
 	)
 	(wire
 		(pts
-			(xy 46.99 106.68) (xy 49.53 106.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3f2ca4c4-db86-4147-89d9-80c87e539031")
-	)
-	(wire
-		(pts
 			(xy 48.26 50.8) (xy 48.26 53.34)
 		)
 		(stroke
@@ -4085,16 +4095,6 @@
 			(type solid)
 		)
 		(uuid "3f7467b6-7a74-449b-9ccb-1a23f6afe78b")
-	)
-	(wire
-		(pts
-			(xy 49.53 104.14) (xy 49.53 106.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "40b129c0-fb11-4a42-94ab-946007eeea13")
 	)
 	(wire
 		(pts
@@ -4208,16 +4208,6 @@
 	)
 	(wire
 		(pts
-			(xy 49.53 109.22) (xy 49.53 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "50074f82-5020-4902-9ebf-b37e202c1a5d")
-	)
-	(wire
-		(pts
 			(xy 48.26 66.04) (xy 48.26 68.58)
 		)
 		(stroke
@@ -4268,6 +4258,16 @@
 	)
 	(wire
 		(pts
+			(xy 49.53 109.22) (xy 49.53 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5a7f788c-55d6-4d9b-9b19-4aea33d7bdf0")
+	)
+	(wire
+		(pts
 			(xy 168.91 116.84) (xy 190.5 116.84)
 		)
 		(stroke
@@ -4305,6 +4305,16 @@
 			(type default)
 		)
 		(uuid "5f1edc2f-8807-4d6f-99af-5f0604531305")
+	)
+	(wire
+		(pts
+			(xy 46.99 109.22) (xy 49.53 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "61506eed-82be-4266-a4c1-829f02b4db03")
 	)
 	(wire
 		(pts
@@ -4588,7 +4598,7 @@
 	)
 	(wire
 		(pts
-			(xy 49.53 106.68) (xy 69.85 106.68)
+			(xy 46.99 106.68) (xy 49.53 106.68)
 		)
 		(stroke
 			(width 0)
@@ -4675,16 +4685,6 @@
 			(type solid)
 		)
 		(uuid "8ad333bd-1c4f-408d-a535-6778896370db")
-	)
-	(wire
-		(pts
-			(xy 49.53 111.76) (xy 69.85 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8c1568b4-7663-4928-969b-6534bd892a19")
 	)
 	(wire
 		(pts
@@ -4958,16 +4958,6 @@
 	)
 	(wire
 		(pts
-			(xy 46.99 104.14) (xy 49.53 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b3b7cf6c-fec8-4886-b611-0f111ecb4913")
-	)
-	(wire
-		(pts
 			(xy 308.61 167.64) (xy 391.16 167.64)
 		)
 		(stroke
@@ -4995,6 +4985,16 @@
 			(type solid)
 		)
 		(uuid "b852687d-85f9-4519-b8bb-b3340fc87428")
+	)
+	(wire
+		(pts
+			(xy 49.53 111.76) (xy 69.85 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b9a216e7-c8ff-480d-bce7-e09832730a2f")
 	)
 	(wire
 		(pts
@@ -5118,6 +5118,16 @@
 	)
 	(wire
 		(pts
+			(xy 46.99 114.3) (xy 49.53 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cf22c35a-ef95-40a9-8a18-8b4717388ddd")
+	)
+	(wire
+		(pts
 			(xy 46.99 25.4) (xy 48.26 25.4)
 		)
 		(stroke
@@ -5155,16 +5165,6 @@
 			(type solid)
 		)
 		(uuid "d87b954f-1d26-4e12-b164-c83fccad9f5c")
-	)
-	(wire
-		(pts
-			(xy 46.99 109.22) (xy 49.53 109.22)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d89efa7a-3375-48d6-b646-d785e66e94bd")
 	)
 	(wire
 		(pts
@@ -5395,16 +5395,6 @@
 			(type default)
 		)
 		(uuid "f42897f7-84c7-474d-865f-b29961f964b4")
-	)
-	(wire
-		(pts
-			(xy 69.85 111.76) (xy 69.85 113.03)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f7d18e24-7ba1-44ab-bf86-7870955f3b0d")
 	)
 	(wire
 		(pts
@@ -7256,7 +7246,7 @@
 	)
 	(symbol
 		(lib_id "oresat-misc:Test-Point-1mm-round")
-		(at 69.85 113.03 0)
+		(at 69.85 111.76 0)
 		(unit 1)
 		(exclude_from_sim yes)
 		(in_bom no)
@@ -7264,7 +7254,7 @@
 		(dnp no)
 		(uuid "dc77a924-86be-4e0c-8a90-6482ae1c4fdb")
 		(property "Reference" "TP183"
-			(at 74.422 113.792 0)
+			(at 74.422 112.522 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -7273,7 +7263,7 @@
 			)
 		)
 		(property "Value" "TEST-POINT3X4"
-			(at 67.31 115.57 0)
+			(at 67.31 114.3 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -7283,7 +7273,7 @@
 			)
 		)
 		(property "Footprint" "oresat-misc:TestPoint_Pad_D1.0mm"
-			(at 69.85 102.87 0)
+			(at 69.85 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7292,7 +7282,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 69.85 113.03 0)
+			(at 69.85 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7301,7 +7291,7 @@
 			)
 		)
 		(property "Description" "1mm round SMT test point"
-			(at 69.85 113.03 0)
+			(at 69.85 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
