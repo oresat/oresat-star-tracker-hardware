@@ -3903,111 +3903,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "star-tracker-card-eagle-import:TEST-POINT3X4"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "TP"
-				(at -2.54 2.54 0)
-				(effects
-					(font
-						(size 1.778 1.778)
-					)
-					(justify left bottom)
-					(hide yes)
-				)
-			)
-			(property "Value" ""
-				(at -2.54 -2.54 0)
-				(effects
-					(font
-						(size 1.778 1.778)
-					)
-					(justify left bottom)
-					(hide yes)
-				)
-			)
-			(property "Footprint" "star-tracker-card:PAD.03X.04"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "SparkFun Test Points\n\nBare copper test points for troubleshooting or In-Circuit-Testing. These are used by our Production team for verifying production board runs using pogo-pins on test beds.\n\nSparkFun Products:\n\n• SparkFun LSM9DS1 Breakout\n• SparkFun PSOC\n• https://www.sparkfun.com/products/13879 SparkFun Load Cell Amplifier"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "TEST-POINT3X4_1_0"
-				(polyline
-					(pts
-						(xy 2.54 0) (xy 0 0)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 3.302 -0.762)
-					(mid 2.54 0)
-					(end 3.302 0.762)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin bidirectional line
-					(at 0 0 180)
-					(length 0)
-					(name "1"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "P$1"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "star-tracker-card-eagle-import:VBUSP"
 			(power)
 			(exclude_from_sim no)
@@ -9100,7 +8995,7 @@
 		)
 	)
 	(symbol
-		(lib_id "star-tracker-card-eagle-import:TEST-POINT3X4")
+		(lib_id "star-tracker-card-eagle-import:TEST-POINT")
 		(at 74.93 46.99 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -9109,7 +9004,7 @@
 		(dnp no)
 		(uuid "0dbbc2de-2786-4546-ac39-5222d0257bf1")
 		(property "Reference" "TP63"
-			(at 77.47 43.18 0)
+			(at 78.232 49.276 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -9126,7 +9021,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "star-tracker-card:PAD.03X.04"
+		(property "Footprint" "star-tracker-card:2MM-TEST-POINT"
 			(at 74.93 46.99 0)
 			(effects
 				(font
@@ -9153,7 +9048,7 @@
 				(hide yes)
 			)
 		)
-		(pin "P$1"
+		(pin "1"
 			(uuid "2501ddec-09eb-4a13-904b-4cc4009ef947")
 		)
 		(instances

@@ -7528,16 +7528,6 @@
 				(justify left top)
 			)
 		)
-		(pin "VIN_USB" input
-			(at 167.64 214.63 0)
-			(uuid "67b933c5-2742-4f63-99ff-9f1f9f6ac0da")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
 		(pin "USB_CLI_N" bidirectional
 			(at 134.62 208.28 180)
 			(uuid "f65a5b75-5ed4-4fe1-bf60-8bfcd4024bcb")
@@ -7566,6 +7556,16 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+		(pin "VIN_USB" output
+			(at 167.64 214.63 0)
+			(uuid "f28900db-e4e6-4db0-aed2-9d8e74852aa2")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 		(instances
