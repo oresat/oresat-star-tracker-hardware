@@ -268,6 +268,10 @@
       [
         "multiple_net_names|3302000|2235200|033d79f5-347c-4f9d-818e-ee8adf0b4e2d|795ac0b1-9cbf-401c-a525-506eec8c8b23|/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190|/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190|/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190",
         ""
+      ],
+      [
+        "multiple_net_names|3302000|2235200|211a85ab-8c0b-48fa-89fd-aa391174af44|795ac0b1-9cbf-401c-a525-506eec8c8b23|/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190|/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190|/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190",
+        ""
       ]
     ],
     "meta": {
@@ -696,6 +700,18 @@
           "group_by": false,
           "label": "Sim.Pins",
           "name": "Sim.Pins",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "DST",
+          "name": "DST",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Device",
+          "name": "Sim.Device",
           "show": false
         }
       ],

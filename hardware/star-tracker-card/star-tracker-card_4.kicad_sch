@@ -9508,7 +9508,7 @@
 			(uuid "3d7de0f9-a41b-429f-92f8-035c54cbcd67")
 		)
 		(instances
-			(project ""
+			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
 					(reference "#GND58")
 					(unit 1)
@@ -9575,7 +9575,7 @@
 			(uuid "67309f7b-e853-4dfd-a083-a821c5d8aef4")
 		)
 		(instances
-			(project ""
+			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
 					(reference "TP168")
 					(unit 1)
@@ -9927,7 +9927,7 @@
 			(uuid "8163ef29-6135-4da8-ad01-83f8dcc771d9")
 		)
 		(instances
-			(project ""
+			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
 					(reference "C4")
 					(unit 1)
@@ -9994,7 +9994,7 @@
 			(uuid "9c3624e4-88e0-4220-ad9e-adac1fc13006")
 		)
 		(instances
-			(project ""
+			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
 					(reference "TP182")
 					(unit 1)
@@ -10064,7 +10064,7 @@
 			(uuid "3f35a540-656d-4b8a-a260-18e5882fe27a")
 		)
 		(instances
-			(project ""
+			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
 					(reference "R13")
 					(unit 1)
@@ -10243,7 +10243,7 @@
 			(uuid "8b0b623f-6c15-4b66-8132-e36c21b79a35")
 		)
 		(instances
-			(project ""
+			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
 					(reference "TP141")
 					(unit 1)
@@ -10310,7 +10310,7 @@
 			(uuid "c4e63ba6-d95a-4653-b874-759ea8b548ba")
 		)
 		(instances
-			(project ""
+			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
 					(reference "TP133")
 					(unit 1)
@@ -10448,7 +10448,7 @@
 			(uuid "3f8e76af-6d83-40c4-99a0-c8ffd5421f10")
 		)
 		(instances
-			(project ""
+			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
 					(reference "R19")
 					(unit 1)
@@ -10517,7 +10517,7 @@
 			(uuid "f5500361-e77f-47df-b55a-f4936c205eaf")
 		)
 		(instances
-			(project ""
+			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
 					(reference "C22")
 					(unit 1)
@@ -10696,7 +10696,7 @@
 			(uuid "aeef02fd-f92a-45fa-8f38-96090c92ff07")
 		)
 		(instances
-			(project ""
+			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
 					(reference "C19")
 					(unit 1)
@@ -10831,7 +10831,7 @@
 			(uuid "2ed5a06c-9244-418a-887d-ad975681a0d9")
 		)
 		(instances
-			(project ""
+			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
 					(reference "C30")
 					(unit 1)
@@ -10897,7 +10897,7 @@
 			(uuid "ef2b5bb2-647a-4a28-8e2b-3404108c1094")
 		)
 		(instances
-			(project ""
+			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
 					(reference "#GND59")
 					(unit 1)
@@ -10964,7 +10964,7 @@
 			(uuid "71de9d49-32e3-4994-acfb-2d3bb53c5b29")
 		)
 		(instances
-			(project ""
+			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
 					(reference "TP139")
 					(unit 1)
@@ -11144,7 +11144,7 @@
 			(uuid "a25d5dd6-3fea-4c1c-8b11-c1deb10fd41b")
 		)
 		(instances
-			(project ""
+			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
 					(reference "R27")
 					(unit 1)
@@ -11225,7 +11225,7 @@
 			(uuid "578f5486-1dea-4c21-8bce-f936ad13c7c5")
 		)
 		(instances
-			(project ""
+			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
 					(reference "U1")
 					(unit 1)
@@ -11363,7 +11363,7 @@
 			(uuid "3d94f6b1-27ec-4e96-8ce3-a86dcdfb1a12")
 		)
 		(instances
-			(project ""
+			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
 					(reference "C29")
 					(unit 1)
@@ -11565,7 +11565,7 @@
 			(uuid "2daf0a6b-df79-4b0b-bde4-159f4f6a72df")
 		)
 		(instances
-			(project ""
+			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
 					(reference "TP138")
 					(unit 1)
@@ -12465,7 +12465,7 @@
 			(uuid "a093b068-2397-4d9b-8da7-0a8df8564c62")
 		)
 		(instances
-			(project ""
+			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
 					(reference "U7")
 					(unit 2)
