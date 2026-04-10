@@ -4460,6 +4460,12 @@
 		(uuid "0aa2665a-64ff-4664-8888-fd2622c90e0e")
 	)
 	(junction
+		(at 358.14 49.53)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "13575017-7599-4568-8265-45c9a6a0864d")
+	)
+	(junction
 		(at 133.35 171.45)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4568,6 +4574,12 @@
 		(uuid "44995c5e-735d-4333-b104-c565db1d0448")
 	)
 	(junction
+		(at 358.14 39.37)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "455b80b2-c431-4382-8142-4ab3c0aeea73")
+	)
+	(junction
 		(at 200.66 55.88)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4590,12 +4602,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5cc1bfca-f1cf-4b16-90db-97ca9faa3763")
-	)
-	(junction
-		(at 358.14 39.37)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "63d94eb6-e78e-44b7-9323-85d28ea2c799")
 	)
 	(junction
 		(at 100.33 212.09)
@@ -4898,6 +4904,12 @@
 		(uuid "f7017afd-fe51-42d6-a172-080041e45d9c")
 	)
 	(junction
+		(at 350.52 39.37)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fa05749f-10ce-4d9b-b15f-a47907bd4fb8")
+	)
+	(junction
 		(at 200.66 92.71)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5101,7 +5113,17 @@
 	)
 	(wire
 		(pts
-			(xy 358.14 39.37) (xy 358.14 41.91)
+			(xy 133.35 212.09) (xy 143.51 212.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0aa1d76b-d339-4a9a-83a1-12c00b8819f5")
+	)
+	(wire
+		(pts
+			(xy 350.52 39.37) (xy 350.52 41.91)
 		)
 		(stroke
 			(width 0)
@@ -5291,6 +5313,16 @@
 	)
 	(wire
 		(pts
+			(xy 350.52 39.37) (xy 358.14 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "16475230-26d4-4470-b2a9-9107d8a11357")
+	)
+	(wire
+		(pts
 			(xy 107.95 135.89) (xy 105.41 135.89)
 		)
 		(stroke
@@ -5371,6 +5403,16 @@
 	)
 	(wire
 		(pts
+			(xy 358.14 39.37) (xy 360.68 39.37)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "1dd0ae6f-d080-4f83-8cbd-cc4d55a8ca90")
+	)
+	(wire
+		(pts
 			(xy 307.34 52.07) (xy 332.74 52.07)
 		)
 		(stroke
@@ -5398,16 +5440,6 @@
 			(type solid)
 		)
 		(uuid "202b0df8-68e0-4ff1-83a6-49961431e6c8")
-	)
-	(wire
-		(pts
-			(xy 358.14 39.37) (xy 360.68 39.37)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "20b1e85e-bc25-4bd1-843e-e8e49ec4b234")
 	)
 	(wire
 		(pts
@@ -5578,6 +5610,16 @@
 			(type default)
 		)
 		(uuid "2b515d60-287c-44a7-a6b3-11011c45a4a4")
+	)
+	(wire
+		(pts
+			(xy 358.14 46.99) (xy 358.14 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2b634d58-c9f5-4568-bfd9-7ef6c91b613d")
 	)
 	(wire
 		(pts
@@ -5841,6 +5883,16 @@
 	)
 	(wire
 		(pts
+			(xy 143.51 218.44) (xy 143.51 219.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3a7ccec4-3411-4b35-97d9-2f2d70438b56")
+	)
+	(wire
+		(pts
 			(xy 107.95 130.81) (xy 100.33 130.81)
 		)
 		(stroke
@@ -6071,7 +6123,7 @@
 	)
 	(wire
 		(pts
-			(xy 358.14 49.53) (xy 363.22 49.53)
+			(xy 350.52 49.53) (xy 358.14 49.53)
 		)
 		(stroke
 			(width 0.1524)
@@ -6261,16 +6313,6 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 219.71) (xy 133.35 212.09)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "580bf36d-966a-4c78-89da-5231d30f2161")
-	)
-	(wire
-		(pts
 			(xy 107.95 130.81) (xy 110.49 130.81)
 		)
 		(stroke
@@ -6431,7 +6473,7 @@
 	)
 	(wire
 		(pts
-			(xy 358.14 46.99) (xy 358.14 49.53)
+			(xy 350.52 46.99) (xy 350.52 49.53)
 		)
 		(stroke
 			(width 0)
@@ -6681,6 +6723,16 @@
 	)
 	(wire
 		(pts
+			(xy 350.52 39.37) (xy 358.14 39.37)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "79d2d1ca-0067-434a-aa22-32e3d7dbd4c0")
+	)
+	(wire
+		(pts
 			(xy 133.35 179.07) (xy 133.35 171.45)
 		)
 		(stroke
@@ -6718,6 +6770,16 @@
 			(type solid)
 		)
 		(uuid "7c8d85f5-eca7-4d78-8044-1e22e17fbfe9")
+	)
+	(wire
+		(pts
+			(xy 143.51 212.09) (xy 143.51 213.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7d2b53ed-dab8-4f20-b524-cd4585c53e56")
 	)
 	(wire
 		(pts
@@ -6778,6 +6840,16 @@
 			(type solid)
 		)
 		(uuid "82199954-7add-4a9b-84ee-4db9725bca45")
+	)
+	(wire
+		(pts
+			(xy 144.78 173.99) (xy 144.78 171.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8226b31f-d329-4721-97de-0683bd34907f")
 	)
 	(wire
 		(pts
@@ -6858,6 +6930,16 @@
 			(type solid)
 		)
 		(uuid "86df2444-d070-4c0e-b37d-88a3619658c0")
+	)
+	(wire
+		(pts
+			(xy 358.14 39.37) (xy 358.14 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8796f5c3-6498-456f-8ffd-d590fd0b9392")
 	)
 	(wire
 		(pts
@@ -7441,6 +7523,16 @@
 	)
 	(wire
 		(pts
+			(xy 133.35 212.09) (xy 133.35 219.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "afad352f-ce11-455d-a764-7f2bd54cdb4d")
+	)
+	(wire
+		(pts
 			(xy 200.66 152.4) (xy 179.07 152.4)
 		)
 		(stroke
@@ -7498,6 +7590,16 @@
 			(type default)
 		)
 		(uuid "b2354868-9281-492a-98b0-8d5acef63f95")
+	)
+	(wire
+		(pts
+			(xy 144.78 179.07) (xy 144.78 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b2a07b3b-f63b-49ee-ac34-b282790f3e74")
 	)
 	(wire
 		(pts
@@ -7651,7 +7753,7 @@
 	)
 	(wire
 		(pts
-			(xy 299.72 39.37) (xy 358.14 39.37)
+			(xy 299.72 39.37) (xy 350.52 39.37)
 		)
 		(stroke
 			(width 0.1524)
@@ -8311,6 +8413,16 @@
 	)
 	(wire
 		(pts
+			(xy 144.78 171.45) (xy 133.35 171.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f2c70cae-026c-4a16-ad69-68a458addfcb")
+	)
+	(wire
+		(pts
 			(xy 381 231.14) (xy 381 233.68)
 		)
 		(stroke
@@ -8318,6 +8430,16 @@
 			(type default)
 		)
 		(uuid "f3d72a44-f7ee-4b18-af2f-defe87461c12")
+	)
+	(wire
+		(pts
+			(xy 358.14 49.53) (xy 363.22 49.53)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "f4e3d3b3-5ccb-4902-8008-408718ed8de7")
 	)
 	(wire
 		(pts
@@ -11991,6 +12113,111 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C_Small")
+		(at 143.51 215.9 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4912b9a8-7248-40ac-9763-8921d7c9402c")
+		(property "Reference" "C48"
+			(at 146.05 214.6362 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 146.05 217.1762 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "oresat-passives:0603-C-NOSILK"
+			(at 143.51 215.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://search.kemet.com/download/specsheet/C0603C104K5RACAUTO"
+			(at 143.51 215.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.1 µF ±10% 50V Ceramic Capacitor X7R 0603 (1608 Metric)"
+			(at 143.51 215.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DIST" "DigiKey"
+			(at 143.51 215.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DPN" "399-6856-1-ND"
+			(at 143.51 215.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFR" "KEMET"
+			(at 143.51 215.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "C0603C104K5RACAUTO"
+			(at 143.51 215.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a6f81217-d292-4364-aed7-cd4945dc735a")
+		)
+		(pin "2"
+			(uuid "843d8d39-f3a7-4ae4-8bae-be1be0f82b68")
+		)
+		(instances
+			(project "star-tracker-card"
+				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
+					(reference "C48")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "oresat-transistors:DMP3050LVT-7")
 		(at 365.76 41.91 90)
 		(unit 1)
@@ -12510,6 +12737,111 @@
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
 					(reference "R54")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 144.78 176.53 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "58be0e37-f77c-4845-9b7a-a0d0ffb894ff")
+		(property "Reference" "C71"
+			(at 147.32 175.2662 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 147.32 177.8062 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "oresat-passives:0603-C-NOSILK"
+			(at 144.78 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://search.kemet.com/download/specsheet/C0603C104K5RACAUTO"
+			(at 144.78 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.1 µF ±10% 50V Ceramic Capacitor X7R 0603 (1608 Metric)"
+			(at 144.78 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DIST" "DigiKey"
+			(at 144.78 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DPN" "399-6856-1-ND"
+			(at 144.78 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFR" "KEMET"
+			(at 144.78 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "C0603C104K5RACAUTO"
+			(at 144.78 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "00c77fd0-cf36-45ca-a689-e5b17c4d3d93")
+		)
+		(pin "2"
+			(uuid "14dc190e-c7ed-4f81-819a-405f6c1a6aee")
+		)
+		(instances
+			(project "star-tracker-card"
+				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
+					(reference "C71")
 					(unit 1)
 				)
 			)
@@ -13165,6 +13497,73 @@
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
 					(reference "#VPD3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 144.78 180.34 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6cbf5853-e367-4391-b685-82679eafad09")
+		(property "Reference" "#GND060"
+			(at 144.78 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 147.066 185.42 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 144.78 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 144.78 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 144.78 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "62aed08d-4b0e-4712-a5b3-338c15d823da")
+		)
+		(instances
+			(project "star-tracker-card"
+				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
+					(reference "#GND060")
 					(unit 1)
 				)
 			)
@@ -13979,6 +14378,112 @@
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
 					(reference "#VPD2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 358.14 44.45 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8164b1f6-d8eb-43be-925f-a0823e5d9310")
+		(property "Reference" "C49"
+			(at 355.6 43.1862 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10n"
+			(at 355.6 45.7262 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "oresat-passives:0603-C-NOSILK"
+			(at 358.14 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.yageogroup.com/content/datasheet/asset/file/KEM_C1023_X7R_AUTO_SMD"
+			(at 358.14 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "10000 pF ±5% 50V Ceramic Capacitor X7R 0603 (1608 Metric)"
+			(at 358.14 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DIST" "DigiKey"
+			(at 358.14 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DPN" "399-12983-1-ND"
+			(at 358.14 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFR" "KEMET"
+			(at 358.14 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "C0603C103J5RACAUTO"
+			(at 358.14 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b78757e2-d40c-4838-95da-48c63ec20816")
+		)
+		(pin "2"
+			(uuid "446e48b6-114c-4265-971e-017ce2dda6d5")
+		)
+		(instances
+			(project "star-tracker-card"
+				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
+					(reference "C49")
 					(unit 1)
 				)
 			)
@@ -18497,6 +19002,73 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 143.51 219.71 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f63495ea-6a34-4662-8eed-a54e5207ecc0")
+		(property "Reference" "#GND061"
+			(at 143.51 219.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 145.796 224.79 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 143.51 219.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 143.51 219.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 143.51 219.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3d21d4f0-f961-450e-95af-1b44c55f0bd6")
+		)
+		(instances
+			(project "star-tracker-card"
+				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
+					(reference "#GND061")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "star-tracker-card-eagle-import:TEST-POINT")
 		(at 151.13 242.57 180)
 		(unit 1)
@@ -18743,7 +19315,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small_US")
-		(at 358.14 44.45 180)
+		(at 350.52 44.45 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -18751,7 +19323,7 @@
 		(dnp no)
 		(uuid "ff6cec28-3698-47e3-98e3-1abbc65d3c43")
 		(property "Reference" "R64"
-			(at 356.616 41.91 0)
+			(at 348.996 41.91 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -18760,7 +19332,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 356.362 44.196 0)
+			(at 348.742 44.196 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -18769,7 +19341,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 358.14 44.45 0)
+			(at 350.52 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18778,7 +19350,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 358.14 44.45 0)
+			(at 350.52 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18787,7 +19359,7 @@
 			)
 		)
 		(property "Description" "Resistor, small US symbol"
-			(at 358.14 44.45 0)
+			(at 350.52 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)

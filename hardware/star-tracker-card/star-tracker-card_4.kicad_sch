@@ -7856,6 +7856,28 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "IN/OUT"
+		(exclude_from_sim no)
+		(at 251.46 101.6 0)
+		(effects
+			(font
+				(size 1.778 1.5113)
+			)
+			(justify left bottom)
+		)
+		(uuid "0793634a-b401-4dd8-9453-8f9c56ca3b03")
+	)
+	(text "IN"
+		(exclude_from_sim no)
+		(at 251.46 116.84 0)
+		(effects
+			(font
+				(size 1.778 1.5113)
+			)
+			(justify left bottom)
+		)
+		(uuid "11b23704-d6ff-42ea-9ef1-c059623f6483")
+	)
 	(text "USB ESD\nprotection"
 		(exclude_from_sim no)
 		(at 187.96 193.04 0)
@@ -7866,6 +7888,28 @@
 			(justify left bottom)
 		)
 		(uuid "13408e63-4c7e-492b-988b-0da11675ddb4")
+	)
+	(text "IN"
+		(exclude_from_sim no)
+		(at 251.46 119.38 0)
+		(effects
+			(font
+				(size 1.778 1.5113)
+			)
+			(justify left bottom)
+		)
+		(uuid "18540f21-e7e5-41e0-900e-d5f0c4a1413d")
+	)
+	(text "IN/OUT"
+		(exclude_from_sim no)
+		(at 251.46 104.14 0)
+		(effects
+			(font
+				(size 1.778 1.5113)
+			)
+			(justify left bottom)
+		)
+		(uuid "18b4f812-30b6-40df-912b-62cfc6c35d40")
 	)
 	(text "1M if populated"
 		(exclude_from_sim no)
@@ -7880,7 +7924,7 @@
 	)
 	(text "TODO add optional resistors from AM335X datasheet?"
 		(exclude_from_sim no)
-		(at 116.84 43.18 0)
+		(at 116.078 38.608 0)
 		(effects
 			(font
 				(size 1.778 1.5113)
@@ -7900,9 +7944,20 @@
 		)
 		(uuid "45c21b25-8f85-4eae-b4ef-086fb9415a2f")
 	)
+	(text "IN/OUT"
+		(exclude_from_sim no)
+		(at 251.46 106.68 0)
+		(effects
+			(font
+				(size 1.778 1.5113)
+			)
+			(justify left bottom)
+		)
+		(uuid "6ba2df12-d757-40a7-b112-144ad733f0d9")
+	)
 	(text "taken verbatim from PB,"
 		(exclude_from_sim no)
-		(at 137.16 48.26 0)
+		(at 136.398 43.688 0)
 		(effects
 			(font
 				(size 1.778 1.5113)
@@ -7954,6 +8009,39 @@
 			(justify left bottom)
 		)
 		(uuid "908b4edd-203c-4ae9-97eb-2ef82710e249")
+	)
+	(text "IN/OUT"
+		(exclude_from_sim no)
+		(at 251.46 111.76 0)
+		(effects
+			(font
+				(size 1.778 1.5113)
+			)
+			(justify left bottom)
+		)
+		(uuid "c7021823-a17e-46d6-9c56-457b14bbe3ec")
+	)
+	(text "IN/OUT"
+		(exclude_from_sim no)
+		(at 251.46 109.22 0)
+		(effects
+			(font
+				(size 1.778 1.5113)
+			)
+			(justify left bottom)
+		)
+		(uuid "df024990-de86-4252-8eeb-42fa42ab280d")
+	)
+	(text "IN"
+		(exclude_from_sim no)
+		(at 251.46 114.3 0)
+		(effects
+			(font
+				(size 1.778 1.5113)
+			)
+			(justify left bottom)
+		)
+		(uuid "e1d732d5-d842-4b1d-8117-1b2f2b882e5e")
 	)
 	(text "USB Client Circuit"
 		(exclude_from_sim no)

@@ -3573,12 +3573,6 @@
 		(uuid "6c41deac-676b-4978-be2c-4d41906da162")
 	)
 	(junction
-		(at 49.53 106.68)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7d4d70f5-5d2a-4272-9e72-40ba4e0eac00")
-	)
-	(junction
 		(at 49.53 83.82)
 		(diameter 0.9144)
 		(color 0 0 0 0)
@@ -3663,12 +3657,6 @@
 		(uuid "f2e89f2d-980d-4cb5-bfc6-61444fe715c8")
 	)
 	(junction
-		(at 49.53 111.76)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f3b006e4-7f07-4187-85b6-2d7ba9773cbe")
-	)
-	(junction
 		(at 49.53 86.36)
 		(diameter 0.9144)
 		(color 0 0 0 0)
@@ -3691,6 +3679,10 @@
 		(uuid "2686bbeb-78fe-431f-b163-5975053f0d29")
 	)
 	(no_connect
+		(at 46.99 106.68)
+		(uuid "302daf3c-2bf6-49f2-87ee-1d0bab1a3093")
+	)
+	(no_connect
 		(at 46.99 43.18)
 		(uuid "37484fb4-3519-4d61-b341-54155ad20c34")
 	)
@@ -3705,6 +3697,14 @@
 	(no_connect
 		(at 57.15 168.91)
 		(uuid "5ec5faff-4c1f-4b5e-bcbb-0e202d619bdf")
+	)
+	(no_connect
+		(at 46.99 114.3)
+		(uuid "5f458a0e-de89-4c6e-83d0-47d21e2a948c")
+	)
+	(no_connect
+		(at 46.99 111.76)
+		(uuid "623f56f7-4c86-4845-881c-0eb2573ab37f")
 	)
 	(no_connect
 		(at 46.99 48.26)
@@ -3729,6 +3729,10 @@
 	(no_connect
 		(at 46.99 78.74)
 		(uuid "a3c3cd55-b429-472a-a2fc-815bc88fea87")
+	)
+	(no_connect
+		(at 46.99 109.22)
+		(uuid "a6984cae-c111-4e62-b9a1-c72726c10a32")
 	)
 	(no_connect
 		(at 57.15 163.83)
@@ -3837,16 +3841,6 @@
 			(type solid)
 		)
 		(uuid "0bc1193f-c9e5-4fef-be30-434bd0adeb40")
-	)
-	(wire
-		(pts
-			(xy 49.53 111.76) (xy 49.53 114.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0c8f0655-99d7-43a2-a9b5-7779530a8ff3")
 	)
 	(wire
 		(pts
@@ -4190,16 +4184,6 @@
 	)
 	(wire
 		(pts
-			(xy 49.53 106.68) (xy 69.85 106.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3639a0eb-185a-4ed3-bdc4-8f50646790c6")
-	)
-	(wire
-		(pts
 			(xy 171.45 119.38) (xy 190.5 119.38)
 		)
 		(stroke
@@ -4450,16 +4434,6 @@
 	)
 	(wire
 		(pts
-			(xy 49.53 109.22) (xy 49.53 106.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5a7f788c-55d6-4d9b-9b19-4aea33d7bdf0")
-	)
-	(wire
-		(pts
 			(xy 168.91 116.84) (xy 190.5 116.84)
 		)
 		(stroke
@@ -4497,16 +4471,6 @@
 			(type default)
 		)
 		(uuid "5f1edc2f-8807-4d6f-99af-5f0604531305")
-	)
-	(wire
-		(pts
-			(xy 46.99 109.22) (xy 49.53 109.22)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "61506eed-82be-4266-a4c1-829f02b4db03")
 	)
 	(wire
 		(pts
@@ -4670,16 +4634,6 @@
 	)
 	(wire
 		(pts
-			(xy 46.99 111.76) (xy 49.53 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "724dc531-f557-4847-8f2e-545289d875e9")
-	)
-	(wire
-		(pts
 			(xy 134.62 204.47) (xy 87.63 204.47)
 		)
 		(stroke
@@ -4767,16 +4721,6 @@
 			(type solid)
 		)
 		(uuid "79bd73e8-5c64-4726-b699-bdb9befa4821")
-	)
-	(wire
-		(pts
-			(xy 46.99 106.68) (xy 49.53 106.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "808e6d8d-b4d3-49cf-8e1e-dc8484d43b10")
 	)
 	(wire
 		(pts
@@ -5130,16 +5074,6 @@
 	)
 	(wire
 		(pts
-			(xy 49.53 111.76) (xy 69.85 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b9a216e7-c8ff-480d-bce7-e09832730a2f")
-	)
-	(wire
-		(pts
 			(xy 308.61 175.26) (xy 391.16 175.26)
 		)
 		(stroke
@@ -5247,16 +5181,6 @@
 			(type solid)
 		)
 		(uuid "cc113fbc-781f-4a23-a3a6-4d6093808c7f")
-	)
-	(wire
-		(pts
-			(xy 46.99 114.3) (xy 49.53 114.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cf22c35a-ef95-40a9-8a18-8b4717388ddd")
 	)
 	(wire
 		(pts
@@ -7182,73 +7106,6 @@
 		)
 	)
 	(symbol
-		(lib_id "oresat-misc:Test-Point-1mm-round")
-		(at 69.85 106.68 0)
-		(unit 1)
-		(exclude_from_sim yes)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(uuid "ca71b197-6773-4ed0-9d37-9ab2d1f49876")
-		(property "Reference" "TP184"
-			(at 74.422 107.442 0)
-			(effects
-				(font
-					(size 1.778 1.778)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Value" "TEST-POINT3X4"
-			(at 67.31 109.22 0)
-			(effects
-				(font
-					(size 1.778 1.778)
-				)
-				(justify left bottom)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "oresat-misc:TestPoint_Pad_D1.0mm"
-			(at 69.85 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 69.85 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "1mm round SMT test point"
-			(at 69.85 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "63e923d7-4f00-460f-8221-3d18fcb42297")
-		)
-		(instances
-			(project "star-tracker-card"
-				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a"
-					(reference "TP184")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 46.99 193.04 0)
 		(mirror y)
@@ -7310,73 +7167,6 @@
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a"
 					(reference "#GND76")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "oresat-misc:Test-Point-1mm-round")
-		(at 69.85 111.76 0)
-		(unit 1)
-		(exclude_from_sim yes)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(uuid "dc77a924-86be-4e0c-8a90-6482ae1c4fdb")
-		(property "Reference" "TP183"
-			(at 74.422 112.522 0)
-			(effects
-				(font
-					(size 1.778 1.778)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Value" "TEST-POINT3X4"
-			(at 67.31 114.3 0)
-			(effects
-				(font
-					(size 1.778 1.778)
-				)
-				(justify left bottom)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "oresat-misc:TestPoint_Pad_D1.0mm"
-			(at 69.85 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 69.85 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "1mm round SMT test point"
-			(at 69.85 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "12b6b93e-b712-4dfb-9141-7266fbcd7b6b")
-		)
-		(instances
-			(project "star-tracker-card"
-				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a"
-					(reference "TP183")
 					(unit 1)
 				)
 			)
