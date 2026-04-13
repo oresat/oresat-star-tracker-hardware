@@ -9710,7 +9710,7 @@
 				(justify right top)
 			)
 		)
-		(property "Footprint" "star-tracker-card:LED-0603"
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 217.17 85.09 0)
 			(effects
 				(font
@@ -12874,7 +12874,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" "star-tracker-card:LED-0603"
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 398.78 238.76 0)
 			(effects
 				(font
@@ -13952,7 +13952,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" "star-tracker-card:LED-0603"
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 393.7 58.42 0)
 			(effects
 				(font
