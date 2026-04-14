@@ -60,14 +60,6 @@
       ],
       "drc_exclusions": [
         [
-          "shorting_items|154351100|130650000|d2f1e2d6-fbac-49d3-bd87-02b395ced57a|fdc4048e-7102-4471-9745-1d6cdd702c5d",
-          ""
-        ],
-        [
-          "shorting_items|154354700|130650000|d2f1e2d6-fbac-49d3-bd87-02b395ced57a|efda8b24-dfbe-4a0a-a204-c3a68be39017",
-          ""
-        ],
-        [
           "shorting_items|154450095|129252595|1e80de33-4675-4654-b17f-5306ce44d26c|8abf9885-53da-4271-a6cb-2d9a612cf111",
           ""
         ],
@@ -109,10 +101,6 @@
         ],
         [
           "solder_mask_bridge|154471975|129153600|339a972b-6c55-47d2-a9b8-b5ffd4a368ff|8abf9885-53da-4271-a6cb-2d9a612cf111",
-          ""
-        ],
-        [
-          "solder_mask_bridge|154471975|130653600|7474041c-2ec7-4f1a-8289-caacf6879790|efda8b24-dfbe-4a0a-a204-c3a68be39017",
           ""
         ],
         [
