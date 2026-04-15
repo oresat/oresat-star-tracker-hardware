@@ -16,7 +16,7 @@
 			(justify left bottom)
 		)
 	)
-	(property "Value" ""
+	(property "Value" "Val**"
 		(at 0 0 0)
 		(layer "F.Fab")
 		(uuid "6d40b255-b5bc-417a-90cc-8444af4d82a4")
@@ -262,20 +262,6 @@
 		)
 		(layer "F.CrtYd")
 		(uuid "69b3c031-b8b5-4373-8430-61c852256c3b")
-	)
-	(fp_poly
-		(pts
-			(xy 3.683 -6.4739) (xy 5.2959 -6.4739) (xy 5.2959 6.4739) (xy 3.683 6.4739) (xy 3.683 6.8834) (xy -3.683 6.8834)
-			(xy -3.683 6.4739) (xy -5.2959 6.4739) (xy -5.2959 -6.4739) (xy -3.683 -6.4739) (xy -3.683 -6.8834)
-			(xy 3.683 -6.8834)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill yes)
-		(layer "F.CrtYd")
-		(uuid "05c985b1-a195-4443-b50d-5bc62338cf8f")
 	)
 	(pad "1" smd rect
 		(at -3.7211 -5.75)

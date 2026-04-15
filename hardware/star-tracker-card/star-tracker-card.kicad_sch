@@ -6,7 +6,7 @@
 	(paper "B")
 	(title_block
 		(title "OreSat Star Tracker")
-		(date "2026-01-30")
+		(date "2026-04-15")
 		(rev "1.3")
 		(company "Portland State Aerospace Society")
 	)
@@ -480,107 +480,6 @@
 						)
 					)
 					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "GND_1"
-			(power)
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#PWR"
-				(at 0 -6.35 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "GND"
-				(at 0 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "global power"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "GND_1_0_1"
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "GND_1_1_1"
-				(pin power_in line
-					(at 0 0 270)
-					(length 0)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3420,34 +3319,54 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "OreSat Power Domain,\ncreates system wide 5v rail\nwith circuit breaker"
+	(text "0805"
 		(exclude_from_sim no)
-		(at 190.5 42.418 0)
+		(at 67.056 93.472 0)
 		(effects
 			(font
-				(size 1.778 1.5113)
+				(size 1.27 1.27)
+				(thickness 0.1588)
 			)
-			(justify left bottom)
 		)
-		(uuid "637e402b-4023-44db-ae58-f5fd0fdbb609")
+		(uuid "22152a8a-58f9-4a2a-b3b7-080ca19c8b53")
 	)
-	(text "Debug Connector"
+	(text "Needed for programming\nboot EEPROM\n\nTPS65217 I2C Addrs = 0x24\nEEPROM I2C Addrs = 0x50\n\nNeeds 4 pos 1.27 mm socket\nand cable, e.g., \nSamtec SFSS-04-28-H-06.00-SR."
 		(exclude_from_sim no)
-		(at 34.544 183.642 90)
+		(at 42.926 239.522 0)
 		(effects
 			(font
-				(size 3.81 3.2385)
+				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "7193bb66-a8f7-4ae2-bc4f-db2639dbb0eb")
+		(uuid "37c6e3d5-fbd7-4111-916f-3911f53f8877")
+	)
+	(text "0805\n"
+		(exclude_from_sim no)
+		(at 368.3 104.648 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "50beae3d-debc-44f8-a6f7-93fb5295d451")
+	)
+	(text "0805\n"
+		(exclude_from_sim no)
+		(at 350.774 104.14 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "6c0d0c5d-80d3-4cce-8170-c57a537afe0a")
 	)
 	(text "Main OreSat Card Connector"
 		(exclude_from_sim no)
 		(at 38.1 93.98 90)
 		(effects
 			(font
-				(size 2.54 2.159)
+				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
@@ -3458,43 +3377,22 @@
 		(at 50.038 20.574 0)
 		(effects
 			(font
-				(size 3.81 3.2385)
+				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
 		(uuid "99c55d10-85f8-4345-9490-887093a027fc")
-	)
-	(text "Porgram Boot EEPROM"
-		(exclude_from_sim no)
-		(at 25.4 244.856 90)
-		(effects
-			(font
-				(size 3.81 3.2385)
-			)
-			(justify left bottom)
-		)
-		(uuid "9bbf9344-899c-45e2-bcc7-80795c74ee8a")
 	)
 	(text "36 Pin connector\nCamera Connector"
 		(exclude_from_sim no)
 		(at 362.966 87.63 0)
 		(effects
 			(font
-				(size 3.81 3.2385)
+				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
 		(uuid "b9312a4b-9a54-494c-8a88-84fe2dd292db")
-	)
-	(text "DOUBLECHECK"
-		(exclude_from_sim no)
-		(at 55.88 121.158 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "ec24e7c4-596c-4c01-b003-feffe0a72e54")
 	)
 	(text "Octavo\nOSD3358-512M-BSM SIP"
 		(exclude_from_sim no)
@@ -3567,12 +3465,6 @@
 		(uuid "699049f1-db5a-40a9-92d3-4b086d2e161d")
 	)
 	(junction
-		(at 48.26 73.66)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "6c41deac-676b-4978-be2c-4d41906da162")
-	)
-	(junction
 		(at 49.53 83.82)
 		(diameter 0.9144)
 		(color 0 0 0 0)
@@ -3613,6 +3505,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a1be42d6-1810-4a98-947e-b179f39a3bcf")
+	)
+	(junction
+		(at 48.26 71.12)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a2bdd1fd-1d44-449f-bcf9-2c20e0105b0f")
 	)
 	(junction
 		(at 62.23 86.36)
@@ -3794,7 +3692,7 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 66.04) (xy 148.59 66.04)
+			(xy 48.26 66.04) (xy 91.44 66.04)
 		)
 		(stroke
 			(width 0)
@@ -3864,17 +3762,7 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 116.84) (xy 168.91 116.84)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "0e0769a6-87f4-4e3d-bb90-54f1ea74886b")
-	)
-	(wire
-		(pts
-			(xy 104.14 71.12) (xy 190.5 71.12)
+			(xy 129.54 71.12) (xy 190.5 71.12)
 		)
 		(stroke
 			(width 0)
@@ -3904,7 +3792,7 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 176.53) (xy 114.3 119.38)
+			(xy 171.45 176.53) (xy 171.45 119.38)
 		)
 		(stroke
 			(width 0.1524)
@@ -3934,23 +3822,13 @@
 	)
 	(wire
 		(pts
-			(xy 148.59 104.14) (xy 190.5 104.14)
+			(xy 91.44 104.14) (xy 190.5 104.14)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "17eaacc7-f701-4a5c-905c-a76325db4426")
-	)
-	(wire
-		(pts
-			(xy 48.26 71.12) (xy 48.26 73.66)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "19dd150f-162e-4658-adf4-f5e126ae53a8")
 	)
 	(wire
 		(pts
@@ -4094,7 +3972,7 @@
 	)
 	(wire
 		(pts
-			(xy 176.53 226.06) (xy 176.53 210.82)
+			(xy 176.53 228.6) (xy 176.53 201.93)
 		)
 		(stroke
 			(width 0)
@@ -4111,16 +3989,6 @@
 			(type default)
 		)
 		(uuid "2ba9b87b-afa4-4ead-adfc-9866b698b2a3")
-	)
-	(wire
-		(pts
-			(xy 114.3 119.38) (xy 171.45 119.38)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "2e73f323-7015-42a6-829a-2e4799065731")
 	)
 	(wire
 		(pts
@@ -4304,7 +4172,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 106.68) (xy 146.05 106.68)
+			(xy 190.5 106.68) (xy 88.9 106.68)
 		)
 		(stroke
 			(width 0)
@@ -4334,7 +4202,7 @@
 	)
 	(wire
 		(pts
-			(xy 59.69 234.95) (xy 59.69 241.3)
+			(xy 88.9 234.95) (xy 88.9 236.22)
 		)
 		(stroke
 			(width 0)
@@ -4374,7 +4242,7 @@
 	)
 	(wire
 		(pts
-			(xy 57.15 173.99) (xy 111.76 173.99)
+			(xy 57.15 173.99) (xy 168.91 173.99)
 		)
 		(stroke
 			(width 0.1524)
@@ -4414,7 +4282,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 68.58) (xy 190.5 68.58)
+			(xy 127 68.58) (xy 190.5 68.58)
 		)
 		(stroke
 			(width 0)
@@ -4424,7 +4292,7 @@
 	)
 	(wire
 		(pts
-			(xy 57.15 180.34) (xy 71.12 180.34)
+			(xy 57.15 180.34) (xy 60.96 180.34)
 		)
 		(stroke
 			(width 0)
@@ -4534,7 +4402,7 @@
 	)
 	(wire
 		(pts
-			(xy 57.15 176.53) (xy 114.3 176.53)
+			(xy 57.15 176.53) (xy 171.45 176.53)
 		)
 		(stroke
 			(width 0.1524)
@@ -4564,7 +4432,7 @@
 	)
 	(wire
 		(pts
-			(xy 46.99 119.38) (xy 104.14 119.38)
+			(xy 46.99 119.38) (xy 129.54 119.38)
 		)
 		(stroke
 			(width 0)
@@ -4604,6 +4472,16 @@
 	)
 	(wire
 		(pts
+			(xy 48.26 71.12) (xy 48.26 73.66)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "6d28038f-1730-4a5d-a3cd-ec939809b31b")
+	)
+	(wire
+		(pts
 			(xy 49.53 88.9) (xy 46.99 88.9)
 		)
 		(stroke
@@ -4624,7 +4502,7 @@
 	)
 	(wire
 		(pts
-			(xy 55.88 232.41) (xy 134.62 232.41)
+			(xy 87.63 232.41) (xy 134.62 232.41)
 		)
 		(stroke
 			(width 0)
@@ -4714,7 +4592,7 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 173.99) (xy 111.76 116.84)
+			(xy 168.91 173.99) (xy 168.91 116.84)
 		)
 		(stroke
 			(width 0.1524)
@@ -4914,7 +4792,7 @@
 	)
 	(wire
 		(pts
-			(xy 46.99 116.84) (xy 101.6 116.84)
+			(xy 46.99 116.84) (xy 127 116.84)
 		)
 		(stroke
 			(width 0)
@@ -5034,7 +4912,7 @@
 	)
 	(wire
 		(pts
-			(xy 146.05 106.68) (xy 146.05 73.66)
+			(xy 88.9 106.68) (xy 88.9 71.12)
 		)
 		(stroke
 			(width 0)
@@ -5094,7 +4972,7 @@
 	)
 	(wire
 		(pts
-			(xy 104.14 119.38) (xy 104.14 71.12)
+			(xy 129.54 119.38) (xy 129.54 71.12)
 		)
 		(stroke
 			(width 0)
@@ -5104,7 +4982,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 116.84) (xy 101.6 68.58)
+			(xy 127 116.84) (xy 127 68.58)
 		)
 		(stroke
 			(width 0)
@@ -5264,7 +5142,7 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 73.66) (xy 146.05 73.66)
+			(xy 48.26 71.12) (xy 88.9 71.12)
 		)
 		(stroke
 			(width 0)
@@ -5274,7 +5152,7 @@
 	)
 	(wire
 		(pts
-			(xy 148.59 66.04) (xy 148.59 104.14)
+			(xy 91.44 66.04) (xy 91.44 104.14)
 		)
 		(stroke
 			(width 0)
@@ -5284,7 +5162,7 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 210.82) (xy 176.53 210.82)
+			(xy 167.64 201.93) (xy 176.53 201.93)
 		)
 		(stroke
 			(width 0)
@@ -5324,7 +5202,7 @@
 	)
 	(wire
 		(pts
-			(xy 55.88 229.87) (xy 134.62 229.87)
+			(xy 87.63 229.87) (xy 134.62 229.87)
 		)
 		(stroke
 			(width 0)
@@ -5344,7 +5222,7 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 226.06) (xy 176.53 226.06)
+			(xy 167.64 228.6) (xy 176.53 228.6)
 		)
 		(stroke
 			(width 0)
@@ -5464,7 +5342,7 @@
 	)
 	(wire
 		(pts
-			(xy 55.88 227.33) (xy 134.62 227.33)
+			(xy 87.63 227.33) (xy 134.62 227.33)
 		)
 		(stroke
 			(width 0)
@@ -5494,7 +5372,7 @@
 	)
 	(wire
 		(pts
-			(xy 55.88 234.95) (xy 59.69 234.95)
+			(xy 87.63 234.95) (xy 88.9 234.95)
 		)
 		(stroke
 			(width 0)
@@ -5603,7 +5481,7 @@
 		(uuid "2817f14a-eb37-4357-98db-7836daf69d7c")
 	)
 	(label "CAN2_L"
-		(at 49.53 73.66 0)
+		(at 49.53 71.12 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5892,24 +5770,24 @@
 		(dnp no)
 		(uuid "033206dd-e7ae-4ffc-b9f3-245fea7c00d7")
 		(property "Reference" "C42"
-			(at 366.776 101.219 0)
+			(at 365.506 100.838 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
 		)
-		(property "Value" "22uF"
-			(at 366.776 104.521 0)
+		(property "Value" "22u"
+			(at 366.014 102.87 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "oresat-passives:0805-B-NOSILK"
+		(property "Footprint" "Capacitor_SMD:C_1210_3225Metric"
 			(at 363.22 101.6 0)
 			(effects
 				(font
@@ -5961,21 +5839,20 @@
 		(dnp no)
 		(uuid "062f8637-b66c-427f-a4fc-4aab714e565d")
 		(property "Reference" "J1"
-			(at 44.45 133.35 0)
-			(effects
-				(font
-					(size 2.0828 1.7703)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Value" "ORESAT-DEBUG-CONNECTOR-CARD"
-			(at 46.99 165.1 0)
+			(at 45.974 139.954 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "SM14B-SHLS-TF"
+			(at 47.752 141.986 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(property "Footprint" "oresat-connectors:J-JST-SM14BSHLSTF"
@@ -6109,24 +5986,24 @@
 		(dnp no)
 		(uuid "0cda7afd-aa43-44c8-9480-ccc1e0b87d49")
 		(property "Reference" "C45"
-			(at 67.818 89.916 0)
+			(at 68.834 89.916 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
 		)
-		(property "Value" "10u 25V 0805"
-			(at 81.28 92.964 0)
+		(property "Value" "10u"
+			(at 68.834 91.948 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+		(property "Footprint" "oresat-passives:0805-B-NOSILK"
 			(at 62.23 90.17 0)
 			(effects
 				(font
@@ -6135,7 +6012,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/898/TMK316AB7106KLHT_SS.pdf"
+		(property "Datasheet" ""
 			(at 62.23 90.17 0)
 			(effects
 				(font
@@ -6144,7 +6021,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "10 µF ±10% 25V Ceramic Capacitor X7R 1206 (3216 Metric)"
+		(property "Description" ""
 			(at 62.23 90.17 0)
 			(effects
 				(font
@@ -6153,7 +6030,7 @@
 				(hide yes)
 			)
 		)
-		(property "DIS" "DigiKey"
+		(property "DIS" ""
 			(at 62.23 90.17 0)
 			(effects
 				(font
@@ -6162,7 +6039,7 @@
 				(hide yes)
 			)
 		)
-		(property "DPN" "587-3485-1-ND"
+		(property "DPN" ""
 			(at 62.23 90.17 0)
 			(effects
 				(font
@@ -6171,7 +6048,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFR" "Taiyo Yuden"
+		(property "MFR" ""
 			(at 62.23 90.17 0)
 			(effects
 				(font
@@ -6180,16 +6057,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "TMK316AB7106KLHT"
-			(at 62.23 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "DIST" ""
+		(property "MPN" ""
 			(at 62.23 90.17 0)
 			(effects
 				(font
@@ -6224,24 +6092,24 @@
 		(dnp no)
 		(uuid "13453bd2-eddd-4305-8368-e667d371edcd")
 		(property "Reference" "C43"
-			(at 352.044 101.219 0)
+			(at 352.552 100.584 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
 		)
-		(property "Value" "22uF"
-			(at 352.044 104.521 0)
+		(property "Value" "22u"
+			(at 353.06 102.616 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "oresat-passives:0805-B-NOSILK"
+		(property "Footprint" "Capacitor_SMD:C_1210_3225Metric"
 			(at 355.6 101.6 0)
 			(effects
 				(font
@@ -6293,8 +6161,8 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "2136bb8a-46cb-4daf-9751-66aed3e51749")
-		(property "Reference" "#GND43"
-			(at 378.46 148.59 0)
+		(property "Reference" "#PWR43"
+			(at 378.46 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6303,12 +6171,11 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 378.46 151.638 0)
+			(at 378.46 152.4 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
-				(justify top)
 			)
 		)
 		(property "Footprint" ""
@@ -6344,7 +6211,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a"
-					(reference "#GND43")
+					(reference "#PWR43")
 					(unit 1)
 				)
 			)
@@ -6352,7 +6219,7 @@
 	)
 	(symbol
 		(lib_id "oresat-misc:Test-Point-1mm-round")
-		(at 71.12 180.34 0)
+		(at 60.96 180.34 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim yes)
@@ -6361,7 +6228,7 @@
 		(dnp no)
 		(uuid "32c01f2e-39ef-45ee-b167-845dcb0d533c")
 		(property "Reference" "TP32"
-			(at 77.47 180.34 0)
+			(at 67.31 180.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6370,7 +6237,7 @@
 			)
 		)
 		(property "Value" "Test-Point"
-			(at 71.12 177.8 0)
+			(at 60.96 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6379,7 +6246,7 @@
 			)
 		)
 		(property "Footprint" "oresat-misc:TestPoint_Pad_D1.0mm"
-			(at 71.12 170.18 0)
+			(at 60.96 170.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6388,7 +6255,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 71.12 180.34 0)
+			(at 60.96 180.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6397,7 +6264,7 @@
 			)
 		)
 		(property "Description" "1mm round SMT test point"
-			(at 71.12 180.34 0)
+			(at 60.96 180.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6418,7 +6285,6 @@
 		)
 	)
 	(symbol
-		(lib_name "GND_1")
 		(lib_id "power:GND")
 		(at 62.23 95.25 0)
 		(unit 1)
@@ -6427,7 +6293,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "35fb87b8-8dfe-4924-a075-dd874e1de93f")
-		(property "Reference" "#GND01"
+		(property "Reference" "#PWR1"
 			(at 62.23 101.6 0)
 			(effects
 				(font
@@ -6477,7 +6343,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a"
-					(reference "#GND01")
+					(reference "#PWR1")
 					(unit 1)
 				)
 			)
@@ -6506,7 +6372,7 @@
 			(at 362.458 94.488 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -6560,8 +6426,8 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5653f333-81ba-4633-bf4c-26ed9626f6d3")
-		(property "Reference" "#GND45"
-			(at 386.08 196.85 0)
+		(property "Reference" "#PWR45"
+			(at 386.08 203.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6570,12 +6436,11 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 386.08 199.644 0)
+			(at 386.08 200.66 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
-				(justify top)
 			)
 		)
 		(property "Footprint" ""
@@ -6611,7 +6476,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a"
-					(reference "#GND45")
+					(reference "#PWR45")
 					(unit 1)
 				)
 			)
@@ -6625,7 +6490,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "5b32e263-8038-4dd4-bd5d-e402a54ab225")
 		(property "Reference" "#VBUS01"
 			(at 62.23 88.9 0)
@@ -6637,7 +6501,7 @@
 			)
 		)
 		(property "Value" "VBUS"
-			(at 62.23 80.01 0)
+			(at 62.23 81.788 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6693,8 +6557,8 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5bfa6dc6-9685-4dea-9c3e-ccb5f990ef4d")
-		(property "Reference" "#GND04"
-			(at 359.41 107.95 0)
+		(property "Reference" "#PWR4"
+			(at 359.41 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6703,12 +6567,11 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 359.41 110.998 0)
+			(at 359.41 111.76 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
-				(justify top)
 			)
 		)
 		(property "Footprint" ""
@@ -6744,7 +6607,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a"
-					(reference "#GND04")
+					(reference "#PWR4")
 					(unit 1)
 				)
 			)
@@ -6760,8 +6623,8 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "7ed7576d-017e-45ea-ba28-1cb11ac6e2cc")
-		(property "Reference" "#GND39"
-			(at 398.78 95.25 0)
+		(property "Reference" "#PWR39"
+			(at 398.78 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6770,12 +6633,11 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 398.78 98.298 0)
+			(at 398.78 99.06 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
-				(justify top)
 			)
 		)
 		(property "Footprint" ""
@@ -6811,7 +6673,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a"
-					(reference "#GND39")
+					(reference "#PWR39")
 					(unit 1)
 				)
 			)
@@ -6819,7 +6681,7 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x04")
-		(at 50.8 229.87 0)
+		(at 82.55 229.87 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -6828,7 +6690,7 @@
 		(dnp no)
 		(uuid "7f7a3e12-3cb8-45ab-bb50-9be2ead7877b")
 		(property "Reference" "J7"
-			(at 51.308 239.776 0)
+			(at 82.55 222.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6836,7 +6698,7 @@
 			)
 		)
 		(property "Value" "GRPB041VWVN-RC"
-			(at 43.942 237.744 0)
+			(at 82.296 224.536 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6844,7 +6706,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_1.27mm:PinHeader_1x04_P1.27mm_Vertical"
-			(at 50.8 229.87 0)
+			(at 82.55 229.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6853,7 +6715,7 @@
 			)
 		)
 		(property "Datasheet" "https://s3.amazonaws.com/catalogspreads-pdf/PAGE94-95%20.050%20MALE%20HDR%20ST%20RA%20SMT.pdf"
-			(at 50.8 229.87 0)
+			(at 82.55 229.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6862,7 +6724,7 @@
 			)
 		)
 		(property "Description" "Connector Header Through Hole 4 position 0.050\" (1.27mm)"
-			(at 50.8 229.87 0)
+			(at 82.55 229.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6871,16 +6733,7 @@
 			)
 		)
 		(property "DPN" "S9014E-04-ND"
-			(at 50.8 229.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "DST" "DigiKey"
-			(at 50.8 229.87 0)
+			(at 82.55 229.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6889,7 +6742,7 @@
 			)
 		)
 		(property "MFR" "Sullins Connector Solutions"
-			(at 50.8 229.87 0)
+			(at 82.55 229.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6898,7 +6751,7 @@
 			)
 		)
 		(property "MPN" "GRPB041VWVN-RC"
-			(at 50.8 229.87 0)
+			(at 82.55 229.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6941,7 +6794,7 @@
 			(at 390.2456 200.8886 0)
 			(effects
 				(font
-					(size 2.0828 1.7703)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -7115,8 +6968,8 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "cc71df78-2445-4efc-aee1-c942f20f2ecf")
-		(property "Reference" "#GND76"
-			(at 46.99 193.04 0)
+		(property "Reference" "#PWR76"
+			(at 46.99 199.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7125,12 +6978,11 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 49.276 197.612 0)
+			(at 46.99 196.85 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
-				(justify left bottom)
 			)
 		)
 		(property "Footprint" ""
@@ -7166,7 +7018,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a"
-					(reference "#GND76")
+					(reference "#PWR76")
 					(unit 1)
 				)
 			)
@@ -7174,15 +7026,15 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 59.69 241.3 0)
+		(at 88.9 236.22 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "fcbc09ba-2c28-4446-8ab8-6a51352521b6")
-		(property "Reference" "#GND054"
-			(at 59.69 241.3 0)
+		(property "Reference" "#PWR54"
+			(at 88.9 242.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7191,16 +7043,15 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 59.69 244.348 0)
+			(at 88.9 240.03 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
-				(justify top)
 			)
 		)
 		(property "Footprint" ""
-			(at 59.69 241.3 0)
+			(at 88.9 236.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7209,7 +7060,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 59.69 241.3 0)
+			(at 88.9 236.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7218,7 +7069,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 59.69 241.3 0)
+			(at 88.9 236.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7232,7 +7083,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a"
-					(reference "#GND054")
+					(reference "#PWR54")
 					(unit 1)
 				)
 			)
@@ -7251,7 +7102,7 @@
 			(at 35.56 22.225 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -7260,7 +7111,7 @@
 			(at 48.26 128.27 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify right top)
 			)
@@ -7422,8 +7273,8 @@
 		)
 	)
 	(sheet
-		(at 134.62 196.85)
-		(size 33.02 17.78)
+		(at 134.62 191.77)
+		(size 33.02 20.32)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -7438,7 +7289,7 @@
 		)
 		(uuid "180c7308-0a0c-41f6-9c76-108b10aa05c2")
 		(property "Sheetname" "SIP B"
-			(at 134.62 196.1384 0)
+			(at 134.62 191.0584 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7447,7 +7298,7 @@
 			)
 		)
 		(property "Sheetfile" "star-tracker-card_4.kicad_sch"
-			(at 134.62 215.2146 0)
+			(at 134.62 212.6746 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7486,7 +7337,7 @@
 			)
 		)
 		(pin "nRESET" input
-			(at 167.64 210.82 0)
+			(at 167.64 201.93 0)
 			(uuid "f4682f56-528e-44f2-9ba0-72088245f903")
 			(effects
 				(font
@@ -7504,8 +7355,8 @@
 		)
 	)
 	(sheet
-		(at 134.62 222.25)
-		(size 33.02 16.51)
+		(at 134.62 218.44)
+		(size 33.02 20.32)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -7520,7 +7371,7 @@
 		)
 		(uuid "27f3aeed-347f-4362-9166-18725d92163b")
 		(property "Sheetname" "SIP A"
-			(at 134.62 221.5384 0)
+			(at 134.62 217.7284 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7578,7 +7429,7 @@
 			)
 		)
 		(pin "nRESET" output
-			(at 167.64 226.06 0)
+			(at 167.64 228.6 0)
 			(uuid "bd30d9e3-907b-42d0-a58d-30028655cece")
 			(effects
 				(font
@@ -7597,12 +7448,11 @@
 	)
 	(sheet
 		(at 190.5 45.72)
-		(size 40.64 38.1)
+		(size 44.45 38.1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(stroke
 			(width 0)
 			(type solid)
@@ -7612,7 +7462,7 @@
 		)
 		(uuid "79e6f5da-9b7e-4636-a735-d76e4a141190")
 		(property "Sheetname" "Card Power Domain"
-			(at 190.5 45.0084 0)
+			(at 190.5 45.466 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7679,7 +7529,7 @@
 				(justify left)
 			)
 		)
-		(pin "SW_COM1" input
+		(pin "UART0_TX" input
 			(at 190.5 74.93 180)
 			(uuid "cfe9e0f0-5629-45de-bc9e-f6e41bbce978")
 			(effects
@@ -7689,7 +7539,7 @@
 				(justify left)
 			)
 		)
-		(pin "SW_COM2" output
+		(pin "UART0_RX" output
 			(at 190.5 77.47 180)
 			(uuid "5babf591-4df7-46e0-a64b-28f537c1ab1b")
 			(effects
@@ -8663,8 +8513,8 @@
 		)
 	)
 	(sheet
-		(at 299.72 35.56)
-		(size 39.37 39.37)
+		(at 265.43 45.72)
+		(size 43.18 38.1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -8679,7 +8529,7 @@
 		)
 		(uuid "eb575624-9a53-42ad-b889-70334a877908")
 		(property "Sheetname" "SIP E+F"
-			(at 299.72 34.8484 0)
+			(at 265.43 45.0084 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8688,7 +8538,7 @@
 			)
 		)
 		(property "Sheetfile" "SIP_E.kicad_sch"
-			(at 299.72 75.5146 0)
+			(at 265.43 84.4046 0)
 			(effects
 				(font
 					(size 1.27 1.27)

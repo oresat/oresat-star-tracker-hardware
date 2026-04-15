@@ -4,6 +4,12 @@
 	(generator_version "9.0")
 	(uuid "fab95533-5aba-4a85-875c-09b495abd845")
 	(paper "B")
+	(title_block
+		(title "OreSat Star Tracker")
+		(date "2026-04-15")
+		(rev "1.3")
+		(company "Portland State Aerospace Society")
+	)
 	(lib_symbols
 		(symbol "power:GND"
 			(power)
@@ -5572,6 +5578,17 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "All resistors are 0603 1% AEC-Q200 unless marked.\nAll capacitors are 0603 AEC-Q200 Vw >= 16V X5R or better unless marked."
+		(exclude_from_sim no)
+		(at 112.522 266.192 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9b4b8d71-7d97-4118-898a-9824d114351b")
+	)
 	(junction
 		(at 163.83 129.54)
 		(diameter 0)
@@ -6555,7 +6572,7 @@
 			(at 105.41 106.68 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left top)
 			)
@@ -6564,7 +6581,7 @@
 			(at 105.156 111.252 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -7382,8 +7399,8 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b497e913-23c2-4ec0-bf76-0a3ccd457faf")
-		(property "Reference" "#GND74"
-			(at 163.83 173.99 0)
+		(property "Reference" "#PWR74"
+			(at 163.83 180.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7392,12 +7409,11 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 163.83 177.038 0)
+			(at 163.83 177.8 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
-				(justify top)
 			)
 		)
 		(property "Footprint" ""
@@ -7433,7 +7449,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/eb575624-9a53-42ad-b889-70334a877908"
-					(reference "#GND74")
+					(reference "#PWR74")
 					(unit 1)
 				)
 			)
@@ -7452,7 +7468,7 @@
 			(at 275.59 118.11 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left top)
 			)
@@ -7461,7 +7477,7 @@
 			(at 275.59 117.602 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -8279,8 +8295,8 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "fffe525a-2753-4849-8c7c-a4194417b308")
-		(property "Reference" "#GND73"
-			(at 92.71 175.26 0)
+		(property "Reference" "#PWR73"
+			(at 92.71 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8289,12 +8305,11 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 92.71 178.562 0)
+			(at 92.71 179.07 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
-				(justify top)
 			)
 		)
 		(property "Footprint" ""
@@ -8330,7 +8345,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/eb575624-9a53-42ad-b889-70334a877908"
-					(reference "#GND73")
+					(reference "#PWR73")
 					(unit 1)
 				)
 			)

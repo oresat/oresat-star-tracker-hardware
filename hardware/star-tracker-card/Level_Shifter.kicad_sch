@@ -4,6 +4,12 @@
 	(generator_version "9.0")
 	(uuid "e4ba8923-13c8-420b-9a31-144aca0551e8")
 	(paper "B")
+	(title_block
+		(title "OreSat Star Tracker")
+		(date "2026-04-15")
+		(rev "1.3")
+		(company "Portland State Aerospace Society")
+	)
 	(lib_symbols
 		(symbol "Device:C_Small"
 			(pin_numbers
@@ -273,6 +279,184 @@
 						)
 					)
 					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Regulator_Linear:TLV70028_SOT353"
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -3.81 5.715 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TLV70028_SOT353"
+				(at 0 5.715 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-353_SC-70-5"
+				(at 0 7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tlv700.pdf"
+				(at 0 1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "200mA Low Dropout Voltage Regulator, Fixed Output 2.8V, SC70-5"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "200mA LDO Regulator Fixed Positive"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "SOT*353*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TLV70028_SOT353_0_1"
+				(rectangle
+					(start -5.08 4.445)
+					(end 5.08 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "TLV70028_SOT353_1_1"
+				(pin power_in line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "IN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name "EN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 5.08 0 180)
+					(length 2.54)
+					(hide yes)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 7.62 2.54 180)
+					(length 2.54)
+					(name "OUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2534,159 +2718,13 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "star-tracker-card-eagle-import:TLV70028QDDCRQ1"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "U"
-				(at 2.54 15.494 0)
-				(effects
-					(font
-						(size 1.778 1.778)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Value" ""
-				(at 2.54 14.732 0)
-				(effects
-					(font
-						(size 1.778 1.778)
-					)
-					(justify left top)
-				)
-			)
-			(property "Footprint" "star-tracker-card:SOT23-5"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "TLV70028QDDCRQ1_1_0"
-				(pin input line
-					(at -10.16 0 0)
-					(length 2.54)
-					(name "EN"
-						(effects
-							(font
-								(size 1.524 1.524)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 12.7 270)
-					(length 2.54)
-					(name "IN"
-						(effects
-							(font
-								(size 1.524 1.524)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 -12.7 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.524 1.524)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 10.16 0 180)
-					(length 2.54)
-					(name "OUT"
-						(effects
-							(font
-								(size 1.524 1.524)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-				)
-			)
-			(symbol "TLV70028QDDCRQ1_1_1"
-				(rectangle
-					(start -7.62 10.16)
-					(end 7.62 -10.16)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 	)
 	(text "Camera Output Level Shifter"
 		(exclude_from_sim no)
 		(at 203.2 80.01 0)
 		(effects
 			(font
-				(size 1.778 1.5113)
+				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
@@ -2697,7 +2735,7 @@
 		(at 233.68 182.88 0)
 		(effects
 			(font
-				(size 1.778 1.5113)
+				(size 1.27 1.27)
 			)
 			(justify right bottom)
 		)
@@ -2708,7 +2746,7 @@
 		(at 353.06 20.32 0)
 		(effects
 			(font
-				(size 1.778 1.5113)
+				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
@@ -2719,18 +2757,29 @@
 		(at 154.94 88.9 0)
 		(effects
 			(font
-				(size 1.27 1.0795)
+				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
 		(uuid "78fe8603-2086-4705-b28a-c3ef83cd8932")
+	)
+	(text "All resistors are 0603 1% AEC-Q200 unless marked.\nAll capacitors are 0603 AEC-Q200 Vw >= 16V X5R or better unless marked."
+		(exclude_from_sim no)
+		(at 112.522 266.192 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7992e233-74d8-443d-9148-9fd5176b8e09")
 	)
 	(text "These pullups can be populated instead of\nthe optional ones on the camera board"
 		(exclude_from_sim no)
 		(at 240.03 26.67 0)
 		(effects
 			(font
-				(size 1.27 1.0795)
+				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
@@ -2741,7 +2790,7 @@
 		(at 265.43 194.31 0)
 		(effects
 			(font
-				(size 1.27 1.0795)
+				(size 1.27 1.27)
 			)
 			(justify right bottom)
 		)
@@ -2752,7 +2801,7 @@
 		(at 209.55 20.32 0)
 		(effects
 			(font
-				(size 1.778 1.5113)
+				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
@@ -2771,7 +2820,13 @@
 		(uuid "00defaac-4c15-40d1-91fd-76b406d8af01")
 	)
 	(junction
-		(at 360.68 59.69)
+		(at 214.63 29.21)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "05b4cebe-047d-4c8e-b8b7-d55c9841ef01")
+	)
+	(junction
+		(at 360.68 53.34)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0954b11e-537d-4a99-ad92-7ad0ef64e90a")
@@ -2789,7 +2844,7 @@
 		(uuid "2309fd38-49dd-40b0-bfc8-056ff9f963c6")
 	)
 	(junction
-		(at 247.65 33.02)
+		(at 248.92 33.02)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "236503c9-4929-4ba6-8052-58e76e4b6bc2")
@@ -2841,6 +2896,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "427571da-4ea2-4d8a-8e39-208ca20da24a")
+	)
+	(junction
+		(at 342.9 41.91)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "47c65e55-b206-4685-ba02-703fe3f6b1e0")
 	)
 	(junction
 		(at 185.42 228.6)
@@ -2939,12 +3000,6 @@
 		(uuid "a56452af-bc0e-4052-be37-723903958798")
 	)
 	(junction
-		(at 360.68 29.21)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "abd76d58-cf4a-4594-882a-d21ba49ff9de")
-	)
-	(junction
 		(at 163.83 107.95)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2969,22 +3024,28 @@
 		(uuid "bf524fc8-3c61-4ce7-8c95-5f150d7edcd5")
 	)
 	(junction
-		(at 350.52 29.21)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "bf83fe71-c5e7-4bf9-8732-a637b9ecbc2c")
-	)
-	(junction
 		(at 199.39 113.03)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c98606bc-dca6-46fb-a27f-eca34bf6fb6b")
 	)
 	(junction
+		(at 219.71 29.21)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cf6fc081-4586-454d-9c55-fc15d5f7e0f4")
+	)
+	(junction
 		(at 199.39 107.95)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d0191e0e-a062-4cab-a7a3-0089cb933319")
+	)
+	(junction
+		(at 375.92 41.91)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d2fca47c-bffd-4c29-b174-6c512f5e347a")
 	)
 	(junction
 		(at 185.42 151.13)
@@ -2999,22 +3060,16 @@
 		(uuid "dfde32ab-cc63-4d0c-b7ec-00f4775057d9")
 	)
 	(junction
-		(at 375.92 44.45)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e1289d15-514b-4b68-8a36-c20c122c477a")
-	)
-	(junction
 		(at 182.88 226.06)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e83e109e-8b22-41ff-b987-56ad519f886b")
 	)
 	(junction
-		(at 219.71 27.94)
+		(at 350.52 41.91)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "f463fb97-e983-489a-9565-814d91fee147")
+		(uuid "eb39db3a-3531-4f44-9fd4-d26070a29373")
 	)
 	(junction
 		(at 191.77 97.79)
@@ -3027,12 +3082,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f91ecbc8-24fd-408e-8b45-026a1b03ea04")
-	)
-	(junction
-		(at 214.63 27.94)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f97148c8-a16d-498b-9bfd-8667d55e4416")
 	)
 	(junction
 		(at 160.02 125.73)
@@ -3093,16 +3142,6 @@
 			(type solid)
 		)
 		(uuid "023d3c6d-87e9-4856-8a24-b977218941d2")
-	)
-	(wire
-		(pts
-			(xy 199.39 33.02) (xy 199.39 35.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0394cec2-5ecc-44db-b5cd-9784de482808")
 	)
 	(wire
 		(pts
@@ -3176,26 +3215,6 @@
 	)
 	(wire
 		(pts
-			(xy 350.52 29.21) (xy 342.9 29.21)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "0f290f4d-9633-4954-b53f-faa132d1c79a")
-	)
-	(wire
-		(pts
-			(xy 370.84 44.45) (xy 375.92 44.45)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "107f5b3a-c721-4e98-8cf7-cd04f30adac6")
-	)
-	(wire
-		(pts
 			(xy 254 218.44) (xy 248.92 218.44)
 		)
 		(stroke
@@ -3246,6 +3265,16 @@
 	)
 	(wire
 		(pts
+			(xy 342.9 41.91) (xy 350.52 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "168be2b4-8f35-4a09-978a-49e2558b809f")
+	)
+	(wire
+		(pts
 			(xy 154.94 120.65) (xy 147.32 120.65)
 		)
 		(stroke
@@ -3266,13 +3295,23 @@
 	)
 	(wire
 		(pts
-			(xy 342.9 46.99) (xy 342.9 49.53)
+			(xy 342.9 48.26) (xy 342.9 49.53)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "1a821598-b5f6-4207-b0c1-075c20bb7523")
+	)
+	(wire
+		(pts
+			(xy 360.68 52.07) (xy 360.68 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1b7b5408-012e-4dd1-b82b-90eaeb90ab59")
 	)
 	(wire
 		(pts
@@ -3423,16 +3462,6 @@
 			(type solid)
 		)
 		(uuid "2b4e7d0b-5ac5-4aeb-a584-a56ab08c9e81")
-	)
-	(wire
-		(pts
-			(xy 375.92 49.53) (xy 375.92 52.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "305bd9fa-efdc-4977-9b47-fbd942be219a")
 	)
 	(wire
 		(pts
@@ -3736,6 +3765,16 @@
 	)
 	(wire
 		(pts
+			(xy 375.92 41.91) (xy 375.92 38.1)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "4d276434-d4c2-4e7a-af70-f2ed45fd0fd3")
+	)
+	(wire
+		(pts
 			(xy 217.17 168.91) (xy 217.17 166.37)
 		)
 		(stroke
@@ -3746,7 +3785,17 @@
 	)
 	(wire
 		(pts
-			(xy 342.9 59.69) (xy 342.9 49.53)
+			(xy 200.66 29.21) (xy 214.63 29.21)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "53358c8f-fe41-456d-bf74-056ddc85cfff")
+	)
+	(wire
+		(pts
+			(xy 342.9 53.34) (xy 342.9 49.53)
 		)
 		(stroke
 			(width 0.1524)
@@ -3766,7 +3815,7 @@
 	)
 	(wire
 		(pts
-			(xy 219.71 33.02) (xy 219.71 27.94)
+			(xy 219.71 33.02) (xy 219.71 29.21)
 		)
 		(stroke
 			(width 0.1524)
@@ -4026,17 +4075,7 @@
 	)
 	(wire
 		(pts
-			(xy 219.71 27.94) (xy 234.95 27.94)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "7ecc37c7-7f74-49de-a5b9-cdba0fe236b3")
-	)
-	(wire
-		(pts
-			(xy 360.68 59.69) (xy 360.68 62.23)
+			(xy 360.68 53.34) (xy 360.68 55.88)
 		)
 		(stroke
 			(width 0)
@@ -4076,16 +4115,6 @@
 	)
 	(wire
 		(pts
-			(xy 350.52 29.21) (xy 360.68 29.21)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "84db83db-0e89-40a2-a055-3199d8636453")
-	)
-	(wire
-		(pts
 			(xy 245.11 33.02) (xy 245.11 35.56)
 		)
 		(stroke
@@ -4116,23 +4145,13 @@
 	)
 	(wire
 		(pts
-			(xy 234.95 33.02) (xy 234.95 35.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "883f907d-7591-44d9-bcbb-b2ae59020a5c")
-	)
-	(wire
-		(pts
-			(xy 360.68 57.15) (xy 360.68 59.69)
+			(xy 219.71 29.21) (xy 219.71 27.94)
 		)
 		(stroke
 			(width 0.1524)
 			(type solid)
 		)
-		(uuid "887dff54-f446-4697-ad9b-9db8da8b9670")
+		(uuid "88de195b-c0c4-40e6-b992-c63f3736da14")
 	)
 	(wire
 		(pts
@@ -4176,6 +4195,26 @@
 	)
 	(wire
 		(pts
+			(xy 233.68 30.48) (xy 233.68 29.21)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "8fbe7613-88eb-4fe6-8ccb-d500d96beda4")
+	)
+	(wire
+		(pts
+			(xy 375.92 41.91) (xy 375.92 43.18)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "9068a1bd-f354-46cd-83b2-f7359daa9ece")
+	)
+	(wire
+		(pts
 			(xy 198.12 193.04) (xy 215.9 193.04)
 		)
 		(stroke
@@ -4193,6 +4232,16 @@
 			(type solid)
 		)
 		(uuid "908b6717-031e-442f-a90a-4df0f707f115")
+	)
+	(wire
+		(pts
+			(xy 368.3 41.91) (xy 375.92 41.91)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "91593e51-cfe8-4375-b2a3-d495e70e7d0a")
 	)
 	(wire
 		(pts
@@ -4273,6 +4322,16 @@
 			(type solid)
 		)
 		(uuid "9ca1d6e5-1a31-4d9e-8ba1-4305d2a2025c")
+	)
+	(wire
+		(pts
+			(xy 214.63 29.21) (xy 214.63 27.94)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "9dd13692-168f-4991-8ef7-49edf02704c3")
 	)
 	(wire
 		(pts
@@ -4486,7 +4545,7 @@
 	)
 	(wire
 		(pts
-			(xy 214.63 33.02) (xy 214.63 27.94)
+			(xy 214.63 33.02) (xy 214.63 29.21)
 		)
 		(stroke
 			(width 0.1524)
@@ -4536,6 +4595,16 @@
 	)
 	(wire
 		(pts
+			(xy 350.52 41.91) (xy 353.06 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0efa6b2-5e9b-4d64-82b2-ee907fe17760")
+	)
+	(wire
+		(pts
 			(xy 232.41 45.72) (xy 245.11 45.72)
 		)
 		(stroke
@@ -4576,16 +4645,6 @@
 	)
 	(wire
 		(pts
-			(xy 214.63 27.94) (xy 199.39 27.94)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "c70dc229-fc07-4256-96d5-af7b385b2195")
-	)
-	(wire
-		(pts
 			(xy 241.3 218.44) (xy 238.76 218.44)
 		)
 		(stroke
@@ -4606,7 +4665,7 @@
 	)
 	(wire
 		(pts
-			(xy 199.39 38.1) (xy 199.39 35.56)
+			(xy 200.66 36.83) (xy 200.66 35.56)
 		)
 		(stroke
 			(width 0.1524)
@@ -4616,7 +4675,7 @@
 	)
 	(wire
 		(pts
-			(xy 350.52 44.45) (xy 350.52 29.21)
+			(xy 350.52 44.45) (xy 350.52 41.91)
 		)
 		(stroke
 			(width 0.1524)
@@ -4666,7 +4725,7 @@
 	)
 	(wire
 		(pts
-			(xy 234.95 38.1) (xy 234.95 35.56)
+			(xy 233.68 36.83) (xy 233.68 35.56)
 		)
 		(stroke
 			(width 0.1524)
@@ -4696,7 +4755,7 @@
 	)
 	(wire
 		(pts
-			(xy 360.68 59.69) (xy 342.9 59.69)
+			(xy 360.68 53.34) (xy 342.9 53.34)
 		)
 		(stroke
 			(width 0.1524)
@@ -4756,7 +4815,17 @@
 	)
 	(wire
 		(pts
-			(xy 375.92 59.69) (xy 375.92 52.07)
+			(xy 350.52 44.45) (xy 353.06 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dcc4fa34-dc9f-40ec-b835-93d0c15d6142")
+	)
+	(wire
+		(pts
+			(xy 375.92 53.34) (xy 375.92 48.26)
 		)
 		(stroke
 			(width 0.1524)
@@ -4806,7 +4875,7 @@
 	)
 	(wire
 		(pts
-			(xy 252.73 33.02) (xy 247.65 33.02)
+			(xy 252.73 33.02) (xy 248.92 33.02)
 		)
 		(stroke
 			(width 0.1524)
@@ -4823,6 +4892,16 @@
 			(type solid)
 		)
 		(uuid "e4c998bf-8036-4157-a0b7-1c600f796afd")
+	)
+	(wire
+		(pts
+			(xy 233.68 29.21) (xy 219.71 29.21)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "e53f03bf-9f05-43f8-bad9-9ef3f2119f99")
 	)
 	(wire
 		(pts
@@ -4876,23 +4955,13 @@
 	)
 	(wire
 		(pts
-			(xy 360.68 59.69) (xy 375.92 59.69)
+			(xy 360.68 53.34) (xy 375.92 53.34)
 		)
 		(stroke
 			(width 0.1524)
 			(type solid)
 		)
 		(uuid "e87f88d2-5a4b-4692-bd83-b419cf45de26")
-	)
-	(wire
-		(pts
-			(xy 342.9 41.91) (xy 342.9 29.21)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "e8b84cd5-80f0-4f71-91fc-660216120d09")
 	)
 	(wire
 		(pts
@@ -4936,16 +5005,6 @@
 	)
 	(wire
 		(pts
-			(xy 360.68 31.75) (xy 360.68 29.21)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "ee5e1178-c45d-43b8-a8eb-4061ab130e88")
-	)
-	(wire
-		(pts
 			(xy 191.77 97.79) (xy 199.39 97.79)
 		)
 		(stroke
@@ -4956,13 +5015,13 @@
 	)
 	(wire
 		(pts
-			(xy 375.92 44.45) (xy 375.92 41.91)
+			(xy 342.9 43.18) (xy 342.9 41.91)
 		)
 		(stroke
-			(width 0.1524)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "efba9c41-58ae-4020-830e-127f1784e1d9")
+		(uuid "f15cae8c-2baa-47fb-bf18-4e4a28c3367b")
 	)
 	(wire
 		(pts
@@ -5016,6 +5075,26 @@
 	)
 	(wire
 		(pts
+			(xy 200.66 30.48) (xy 200.66 29.21)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "f71e9b46-bb1d-4b7e-9719-ada9f0f4d0dc")
+	)
+	(wire
+		(pts
+			(xy 248.92 31.75) (xy 248.92 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f90e7963-4a23-4c50-b01f-9b3dc5660d78")
+	)
+	(wire
+		(pts
 			(xy 232.41 158.75) (xy 250.19 158.75)
 		)
 		(stroke
@@ -5036,7 +5115,7 @@
 	)
 	(wire
 		(pts
-			(xy 245.11 33.02) (xy 247.65 33.02)
+			(xy 245.11 33.02) (xy 248.92 33.02)
 		)
 		(stroke
 			(width 0.1524)
@@ -5053,6 +5132,16 @@
 			(type solid)
 		)
 		(uuid "fe2fc094-1011-4245-8363-e2de597ae766")
+	)
+	(wire
+		(pts
+			(xy 342.9 38.1) (xy 342.9 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ffefb657-37cb-4a23-b3f4-268745456de6")
 	)
 	(wire
 		(pts
@@ -5637,7 +5726,7 @@
 		(uuid "fb175b76-9f56-4a52-8f52-2cf326a8657d")
 	)
 	(symbol
-		(lib_id "star-tracker-card-eagle-import:TLV70028QDDCRQ1")
+		(lib_id "Regulator_Linear:TLV70028_SOT353")
 		(at 360.68 44.45 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -5646,27 +5735,35 @@
 		(dnp no)
 		(uuid "03859b82-90e5-41f4-a6a5-0fafb7a8fbb0")
 		(property "Reference" "U8"
-			(at 363.22 28.956 0)
+			(at 352.044 36.576 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
-				(hide yes)
 			)
 		)
 		(property "Value" "TLV70028QDDCRQ1"
-			(at 363.22 29.718 0)
+			(at 352.044 37.338 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left top)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
+			(at 360.68 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
 				(hide yes)
 			)
 		)
-		(property "Footprint" "star-tracker-card:SOT23-5"
-			(at 360.68 44.45 0)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tlv700.pdf"
+			(at 360.68 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5674,16 +5771,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 360.68 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
+		(property "Description" "200mA Low Dropout Voltage Regulator, Fixed Output 2.8V, SC70-5"
 			(at 360.68 44.45 0)
 			(effects
 				(font
@@ -5703,6 +5791,9 @@
 		)
 		(pin "5"
 			(uuid "ac97f66d-faaf-46d7-a9c8-eec95e5d2ff2")
+		)
+		(pin "4"
+			(uuid "4429223e-c5bc-4065-8b3d-73d182258c1e")
 		)
 		(instances
 			(project "star-tracker-card"
@@ -5726,7 +5817,7 @@
 			(at 182.118 174.752 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -5735,7 +5826,7 @@
 			(at 180.34 167.64 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 				(hide yes)
@@ -5789,8 +5880,8 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0abfe284-8785-4d63-b1c7-e8b2550491e4")
-		(property "Reference" "#GND40"
-			(at 217.17 68.58 0)
+		(property "Reference" "#PWR40"
+			(at 217.17 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5799,12 +5890,11 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 217.17 71.882 0)
+			(at 217.17 72.39 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
-				(justify top)
 			)
 		)
 		(property "Footprint" ""
@@ -5840,7 +5930,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/9edd79c7-1f35-42ab-883b-4f04e19f8786"
-					(reference "#GND40")
+					(reference "#PWR40")
 					(unit 1)
 				)
 			)
@@ -5859,7 +5949,7 @@
 			(at 154.432 103.378 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -5868,7 +5958,7 @@
 			(at 156.21 110.49 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 				(hide yes)
@@ -5927,7 +6017,7 @@
 			(at 186.182 259.842 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -5936,7 +6026,7 @@
 			(at 187.96 252.73 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 				(hide yes)
@@ -5994,7 +6084,7 @@
 			(at 156.718 174.752 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -6003,7 +6093,7 @@
 			(at 154.94 167.64 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 				(hide yes)
@@ -6071,7 +6161,7 @@
 			(at 216.535 187.325 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -6128,21 +6218,21 @@
 			(at 239.776 194.945 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
 		)
-		(property "Value" "0.1uF"
+		(property "Value" "100n"
 			(at 239.776 199.771 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "oresat-passives:c_0603-SMALL"
+		(property "Footprint" "oresat-passives:0603-C-NOSILK"
 			(at 238.76 195.58 0)
 			(effects
 				(font
@@ -6207,7 +6297,7 @@
 			(at 221.615 187.325 0)
 			(effects
 				(font
-					(size 1.27 1.0795)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -6273,7 +6363,7 @@
 			(at 175.895 52.705 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -6319,7 +6409,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 375.92 46.99 0)
+		(at 375.92 45.72 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6327,25 +6417,25 @@
 		(dnp no)
 		(uuid "34271f44-dd52-4630-be1b-a58809a62db5")
 		(property "Reference" "C23"
-			(at 376.936 46.355 0)
+			(at 376.936 45.085 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
 		)
-		(property "Value" "1uF"
-			(at 376.936 51.181 0)
+		(property "Value" "1u"
+			(at 377.698 47.498 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "oresat-passives:c_0603-SMALL"
-			(at 375.92 46.99 0)
+		(property "Footprint" "oresat-passives:0603-C-NOSILK"
+			(at 375.92 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6354,7 +6444,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 375.92 46.99 0)
+			(at 375.92 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6363,7 +6453,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 375.92 46.99 0)
+			(at 375.92 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6388,7 +6478,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 199.39 30.48 0)
+		(at 200.66 33.02 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -6397,25 +6487,25 @@
 		(dnp no)
 		(uuid "34a8fb19-0c58-4b8f-b2bc-2a3c73bf34cb")
 		(property "Reference" "C28"
-			(at 198.374 29.845 0)
+			(at 197.866 32.766 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
 		)
-		(property "Value" "0.1uF"
-			(at 198.374 34.671 0)
+		(property "Value" "100n"
+			(at 198.12 34.798 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "oresat-passives:c_0603-SMALL"
-			(at 199.39 30.48 0)
+		(property "Footprint" "oresat-passives:0603-C-NOSILK"
+			(at 200.66 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6424,7 +6514,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 199.39 30.48 0)
+			(at 200.66 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6433,7 +6523,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 199.39 30.48 0)
+			(at 200.66 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6458,8 +6548,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 234.95 30.48 0)
-		(mirror y)
+		(at 233.68 33.02 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6467,25 +6556,25 @@
 		(dnp no)
 		(uuid "35a303de-812d-4a73-a55e-e0795491770b")
 		(property "Reference" "C24"
-			(at 242.316 29.718 0)
+			(at 227.584 32.512 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
 		)
-		(property "Value" "0.1uF"
-			(at 242.316 34.544 0)
+		(property "Value" "100n"
+			(at 226.822 34.544 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "oresat-passives:c_0603-SMALL"
-			(at 234.95 30.48 0)
+		(property "Footprint" "oresat-passives:0603-C-NOSILK"
+			(at 233.68 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6494,7 +6583,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 234.95 30.48 0)
+			(at 233.68 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6503,7 +6592,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 234.95 30.48 0)
+			(at 233.68 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6536,10 +6625,10 @@
 		(dnp no)
 		(uuid "3ad6abec-8eb0-4070-a349-9257b5a94d1a")
 		(property "Reference" "TP37"
-			(at 196.596 40.894 90)
+			(at 197.104 42.672 90)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -6548,7 +6637,7 @@
 			(at 196.85 48.26 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 				(hide yes)
@@ -6607,7 +6696,7 @@
 			(at 196.342 259.842 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -6616,7 +6705,7 @@
 			(at 198.12 252.73 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 				(hide yes)
@@ -6671,8 +6760,8 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "3f0a6b34-2922-4c6f-9a8a-0fc94ef65503")
-		(property "Reference" "#GND46"
-			(at 254 219.71 0)
+		(property "Reference" "#PWR46"
+			(at 254 226.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6681,12 +6770,11 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 254 222.504 0)
+			(at 254 223.52 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
-				(justify top)
 			)
 		)
 		(property "Footprint" ""
@@ -6722,7 +6810,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/9edd79c7-1f35-42ab-883b-4f04e19f8786"
-					(reference "#GND46")
+					(reference "#PWR46")
 					(unit 1)
 				)
 			)
@@ -6737,8 +6825,8 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "41d1de34-fc4a-46be-852c-84b3d0d6fb7f")
-		(property "Reference" "#GND36"
-			(at 217.17 168.91 0)
+		(property "Reference" "#PWR36"
+			(at 217.17 175.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6747,12 +6835,11 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 217.17 171.958 0)
+			(at 217.17 172.72 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
-				(justify top)
 			)
 		)
 		(property "Footprint" ""
@@ -6788,7 +6875,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/9edd79c7-1f35-42ab-883b-4f04e19f8786"
-					(reference "#GND36")
+					(reference "#PWR36")
 					(unit 1)
 				)
 			)
@@ -6807,7 +6894,7 @@
 			(at 169.418 174.752 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -6816,7 +6903,7 @@
 			(at 167.64 167.64 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 				(hide yes)
@@ -6874,7 +6961,7 @@
 			(at 154.178 174.752 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -6883,7 +6970,7 @@
 			(at 152.4 167.64 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 				(hide yes)
@@ -6930,7 +7017,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:2.8V")
-		(at 247.65 30.48 0)
+		(at 248.92 29.21 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6938,7 +7025,7 @@
 		(dnp no)
 		(uuid "46035573-6f5a-411d-8b40-66d717c58cbe")
 		(property "Reference" "#3V-16"
-			(at 247.65 30.48 0)
+			(at 248.92 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6947,16 +7034,16 @@
 			)
 		)
 		(property "Value" "2.8V"
-			(at 247.015 29.845 0)
+			(at 248.285 28.575 0)
 			(effects
 				(font
-					(size 1.27 1.0795)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
 		)
 		(property "Footprint" ""
-			(at 247.65 30.48 0)
+			(at 248.92 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6965,7 +7052,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 247.65 30.48 0)
+			(at 248.92 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6974,7 +7061,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 247.65 30.48 0)
+			(at 248.92 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7013,10 +7100,10 @@
 			)
 		)
 		(property "Value" "3.3V"
-			(at 213.995 24.765 0)
+			(at 212.852 24.892 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -7073,7 +7160,7 @@
 			(at 166.878 174.752 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -7082,7 +7169,7 @@
 			(at 165.1 167.64 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 				(hide yes)
@@ -7141,7 +7228,7 @@
 			(at 210.82 200.66 0)
 			(effects
 				(font
-					(size 2.0828 1.7703)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -7150,7 +7237,7 @@
 			(at 210.82 198.12 0)
 			(effects
 				(font
-					(size 2.0828 1.7703)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 				(hide yes)
@@ -7274,8 +7361,8 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "533cad3b-45d2-46f2-83be-9caa71900b98")
-		(property "Reference" "#GND47"
-			(at 238.76 203.2 0)
+		(property "Reference" "#PWR47"
+			(at 238.76 209.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7284,12 +7371,11 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 238.76 205.994 0)
+			(at 238.76 207.01 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
-				(justify top)
 			)
 		)
 		(property "Footprint" ""
@@ -7325,7 +7411,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/9edd79c7-1f35-42ab-883b-4f04e19f8786"
-					(reference "#GND47")
+					(reference "#PWR47")
 					(unit 1)
 				)
 			)
@@ -7345,7 +7431,7 @@
 			(at 188.722 259.842 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -7354,7 +7440,7 @@
 			(at 190.5 252.73 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 				(hide yes)
@@ -7413,7 +7499,7 @@
 			(at 193.802 259.842 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -7422,7 +7508,7 @@
 			(at 195.58 252.73 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 				(hide yes)
@@ -7469,14 +7555,14 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 360.68 62.23 0)
+		(at 360.68 55.88 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "669abbbd-8e76-41a1-b939-385fcbf44c0f")
-		(property "Reference" "#GND48"
+		(property "Reference" "#PWR48"
 			(at 360.68 62.23 0)
 			(effects
 				(font
@@ -7486,16 +7572,15 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 360.68 65.278 0)
+			(at 360.68 59.69 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
-				(justify top)
 			)
 		)
 		(property "Footprint" ""
-			(at 360.68 62.23 0)
+			(at 360.68 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7504,7 +7589,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 360.68 62.23 0)
+			(at 360.68 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7513,7 +7598,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 360.68 62.23 0)
+			(at 360.68 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7527,7 +7612,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/9edd79c7-1f35-42ab-883b-4f04e19f8786"
-					(reference "#GND48")
+					(reference "#PWR48")
 					(unit 1)
 				)
 			)
@@ -7546,7 +7631,7 @@
 			(at 164.338 174.752 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -7555,7 +7640,7 @@
 			(at 162.56 167.64 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 				(hide yes)
@@ -7614,7 +7699,7 @@
 			(at 198.882 259.842 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -7623,7 +7708,7 @@
 			(at 200.66 252.73 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 				(hide yes)
@@ -7681,7 +7766,7 @@
 			(at 192.278 174.752 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -7690,7 +7775,7 @@
 			(at 190.5 167.64 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 				(hide yes)
@@ -7748,7 +7833,7 @@
 			(at 161.798 174.752 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -7757,7 +7842,7 @@
 			(at 160.02 167.64 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 				(hide yes)
@@ -7816,21 +7901,21 @@
 			(at 185.674 93.345 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
 		)
-		(property "Value" "0.1uF"
+		(property "Value" "100n"
 			(at 185.674 98.171 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "oresat-passives:c_0603-SMALL"
+		(property "Footprint" "oresat-passives:0603-C-NOSILK"
 			(at 186.69 93.98 0)
 			(effects
 				(font
@@ -7882,8 +7967,8 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "805b3ec0-bba0-4968-9187-19666e7eecce")
-		(property "Reference" "#GND49"
-			(at 218.44 251.46 0)
+		(property "Reference" "#PWR49"
+			(at 218.44 257.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7892,12 +7977,11 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 218.44 254.508 0)
+			(at 218.44 255.27 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
-				(justify top)
 			)
 		)
 		(property "Footprint" ""
@@ -7933,7 +8017,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/9edd79c7-1f35-42ab-883b-4f04e19f8786"
-					(reference "#GND49")
+					(reference "#PWR49")
 					(unit 1)
 				)
 			)
@@ -7952,21 +8036,21 @@
 			(at 199.136 196.215 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
 		)
-		(property "Value" "0.1uF"
+		(property "Value" "100n"
 			(at 199.136 201.041 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "oresat-passives:c_0603-SMALL"
+		(property "Footprint" "oresat-passives:0603-C-NOSILK"
 			(at 198.12 196.85 0)
 			(effects
 				(font
@@ -8018,24 +8102,24 @@
 		(dnp no)
 		(uuid "91c3a03c-57d8-4e8c-a03e-4a90fcdae930")
 		(property "Reference" "R18"
-			(at 254.254 41.148 0)
+			(at 254 37.084 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
 		)
 		(property "Value" "4.7k"
-			(at 254.508 36.8046 0)
+			(at 254 39.116 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "oresat-passives:0603-C-NOSILK"
 			(at 252.73 38.1 0)
 			(effects
 				(font
@@ -8079,7 +8163,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 342.9 44.45 0)
+		(at 342.9 45.72 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8087,25 +8171,25 @@
 		(dnp no)
 		(uuid "935a3b4f-a6c6-4652-add4-5eae3bf93513")
 		(property "Reference" "C27"
-			(at 343.916 43.815 0)
+			(at 337.566 44.704 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
 		)
-		(property "Value" "1uF"
-			(at 343.916 48.641 0)
+		(property "Value" "1u"
+			(at 338.582 47.498 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "oresat-passives:c_0603-SMALL"
-			(at 342.9 44.45 0)
+		(property "Footprint" "oresat-passives:0603-C-NOSILK"
+			(at 342.9 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8114,7 +8198,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 342.9 44.45 0)
+			(at 342.9 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8123,7 +8207,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 342.9 44.45 0)
+			(at 342.9 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8159,7 +8243,7 @@
 			(at 198.374 110.236 90)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify right top)
 			)
@@ -8168,12 +8252,12 @@
 			(at 189.23 110.2614 90)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify right top)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "oresat-passives:0603-C-NOSILK"
 			(at 191.77 113.03 0)
 			(effects
 				(font
@@ -8229,7 +8313,7 @@
 			(at 269.748 208.788 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -8238,7 +8322,7 @@
 			(at 267.97 215.9 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 				(hide yes)
@@ -8296,7 +8380,7 @@
 			(at 171.958 174.752 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -8305,7 +8389,7 @@
 			(at 170.18 167.64 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 				(hide yes)
@@ -8359,8 +8443,8 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a6d8ec1b-7c46-47f9-a634-054bb5962cc3")
-		(property "Reference" "#GND37"
-			(at 247.65 100.33 0)
+		(property "Reference" "#PWR37"
+			(at 247.65 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8369,12 +8453,11 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 247.396 101.1555 0)
+			(at 247.65 104.14 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
-				(justify top)
 			)
 		)
 		(property "Footprint" ""
@@ -8410,7 +8493,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/9edd79c7-1f35-42ab-883b-4f04e19f8786"
-					(reference "#GND37")
+					(reference "#PWR37")
 					(unit 1)
 				)
 			)
@@ -8438,7 +8521,7 @@
 			(at 219.075 84.455 0)
 			(effects
 				(font
-					(size 1.27 1.0795)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -8495,7 +8578,7 @@
 			(at 174.498 174.752 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -8504,7 +8587,7 @@
 			(at 172.72 167.64 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 				(hide yes)
@@ -8563,21 +8646,21 @@
 			(at 259.334 92.456 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
 		)
-		(property "Value" "0.1uF"
+		(property "Value" "100n"
 			(at 259.334 97.282 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "oresat-passives:c_0603-SMALL"
+		(property "Footprint" "oresat-passives:0603-C-NOSILK"
 			(at 252.73 93.98 0)
 			(effects
 				(font
@@ -8632,7 +8715,7 @@
 			(at 222.504 96.774 0)
 			(effects
 				(font
-					(size 2.0828 1.7703)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -8641,7 +8724,7 @@
 			(at 224.79 90.17 0)
 			(effects
 				(font
-					(size 2.0828 1.7703)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 				(hide yes)
@@ -8840,7 +8923,7 @@
 			(at 163.068 99.0346 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -8849,12 +8932,12 @@
 			(at 169.418 98.806 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "oresat-passives:0603-C-NOSILK"
 			(at 163.83 102.87 0)
 			(effects
 				(font
@@ -8898,15 +8981,15 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 199.39 38.1 0)
+		(at 200.66 36.83 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "b4440d5a-a014-411d-ace9-0122af497ed6")
-		(property "Reference" "#GND38"
-			(at 199.39 38.1 0)
+		(property "Reference" "#PWR38"
+			(at 200.66 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8915,16 +8998,15 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 199.39 41.148 0)
+			(at 200.66 40.64 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
-				(justify top)
 			)
 		)
 		(property "Footprint" ""
-			(at 199.39 38.1 0)
+			(at 200.66 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8933,7 +9015,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 199.39 38.1 0)
+			(at 200.66 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8942,7 +9024,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 199.39 38.1 0)
+			(at 200.66 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8956,7 +9038,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/9edd79c7-1f35-42ab-883b-4f04e19f8786"
-					(reference "#GND38")
+					(reference "#PWR38")
 					(unit 1)
 				)
 			)
@@ -8976,7 +9058,7 @@
 			(at 236.982 214.884 90)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify right top)
 			)
@@ -8985,12 +9067,12 @@
 			(at 246.126 214.9094 90)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify right top)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "oresat-passives:0603-C-NOSILK"
 			(at 243.84 218.44 0)
 			(effects
 				(font
@@ -9054,7 +9136,7 @@
 			(at 213.995 84.455 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -9112,7 +9194,7 @@
 			(at 257.81 205.9686 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -9121,12 +9203,12 @@
 			(at 251.46 205.74 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "oresat-passives:0603-C-NOSILK"
 			(at 256.54 208.28 0)
 			(effects
 				(font
@@ -9191,7 +9273,7 @@
 			(at 257.175 197.485 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -9248,7 +9330,7 @@
 			(at 186.182 55.1434 90)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -9257,12 +9339,12 @@
 			(at 179.832 55.372 90)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "oresat-passives:0603-C-NOSILK"
 			(at 185.42 55.88 0)
 			(effects
 				(font
@@ -9313,8 +9395,8 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c0819edc-a1b2-4c5a-82e9-393dd05684dc")
-		(property "Reference" "#GND33"
-			(at 184.15 114.3 0)
+		(property "Reference" "#PWR33"
+			(at 184.15 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9323,12 +9405,11 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 184.15 117.348 0)
+			(at 184.15 118.11 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
-				(justify top)
 			)
 		)
 		(property "Footprint" ""
@@ -9364,7 +9445,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/9edd79c7-1f35-42ab-883b-4f04e19f8786"
-					(reference "#GND33")
+					(reference "#PWR33")
 					(unit 1)
 				)
 			)
@@ -9383,7 +9464,7 @@
 			(at 189.738 174.752 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -9392,7 +9473,7 @@
 			(at 187.96 167.64 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 				(hide yes)
@@ -9450,7 +9531,7 @@
 			(at 184.658 174.752 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -9459,7 +9540,7 @@
 			(at 182.88 167.64 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 				(hide yes)
@@ -9513,8 +9594,8 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c46af07d-584b-48ab-b94a-997861724633")
-		(property "Reference" "#GND34"
-			(at 191.77 100.33 0)
+		(property "Reference" "#PWR34"
+			(at 191.77 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9523,12 +9604,11 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 191.77 103.632 0)
+			(at 191.77 104.14 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
-				(justify top)
 			)
 		)
 		(property "Footprint" ""
@@ -9564,7 +9644,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/9edd79c7-1f35-42ab-883b-4f04e19f8786"
-					(reference "#GND34")
+					(reference "#PWR34")
 					(unit 1)
 				)
 			)
@@ -9580,24 +9660,24 @@
 		(dnp no)
 		(uuid "c6c45f3a-a5c4-42c3-aa4c-d080ded02583")
 		(property "Reference" "R17"
-			(at 238.76 41.91 0)
+			(at 240.284 37.338 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
 		)
 		(property "Value" "4.7k"
-			(at 238.506 37.0586 0)
+			(at 239.776 39.37 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "oresat-passives:0603-C-NOSILK"
 			(at 245.11 38.1 0)
 			(effects
 				(font
@@ -9649,22 +9729,21 @@
 		(dnp no)
 		(uuid "c9470eb6-f2c0-43c5-be15-8ae80bef5948")
 		(property "Reference" "U9"
-			(at 224.79 30.48 0)
+			(at 223.012 62.992 0)
 			(effects
 				(font
-					(size 2.0828 1.7703)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
 		)
 		(property "Value" "TCA9509DGKRDGK8-M"
-			(at 224.79 33.02 0)
+			(at 221.996 65.278 0)
 			(effects
 				(font
-					(size 2.0828 1.7703)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "star-tracker-card:DGK8-M"
@@ -9740,7 +9819,7 @@
 			(at 159.258 174.752 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -9749,7 +9828,7 @@
 			(at 157.48 167.64 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 				(hide yes)
@@ -9807,7 +9886,7 @@
 			(at 187.198 174.752 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -9816,7 +9895,7 @@
 			(at 185.42 167.64 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 				(hide yes)
@@ -9875,7 +9954,7 @@
 			(at 191.262 259.842 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -9884,7 +9963,7 @@
 			(at 193.04 252.73 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 				(hide yes)
@@ -9931,15 +10010,15 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 234.95 38.1 0)
+		(at 233.68 36.83 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "d9ef9c7b-f121-4913-8552-cb39906a1253")
-		(property "Reference" "#GND42"
-			(at 234.95 38.1 0)
+		(property "Reference" "#PWR42"
+			(at 233.68 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9948,16 +10027,15 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 234.95 41.402 0)
+			(at 233.68 40.64 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
-				(justify top)
 			)
 		)
 		(property "Footprint" ""
-			(at 234.95 38.1 0)
+			(at 233.68 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9966,7 +10044,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 234.95 38.1 0)
+			(at 233.68 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9975,7 +10053,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 234.95 38.1 0)
+			(at 233.68 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9989,7 +10067,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/9edd79c7-1f35-42ab-883b-4f04e19f8786"
-					(reference "#GND42")
+					(reference "#PWR42")
 					(unit 1)
 				)
 			)
@@ -10017,7 +10095,7 @@
 			(at 163.195 92.075 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -10075,21 +10153,21 @@
 			(at 206.248 92.71 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
 		)
-		(property "Value" "0.1uF"
+		(property "Value" "100n"
 			(at 206.248 97.536 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "oresat-passives:c_0603-SMALL"
+		(property "Footprint" "oresat-passives:0603-C-NOSILK"
 			(at 199.39 93.98 0)
 			(effects
 				(font
@@ -10133,7 +10211,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:3.3V")
-		(at 360.68 26.67 0)
+		(at 342.9 35.56 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10141,7 +10219,7 @@
 		(dnp no)
 		(uuid "ea266b0a-e7cc-4f3c-981a-1f70833201c4")
 		(property "Reference" "#3V-20"
-			(at 360.68 26.67 0)
+			(at 342.9 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10150,16 +10228,16 @@
 			)
 		)
 		(property "Value" "3.3V"
-			(at 360.045 26.035 0)
+			(at 341.122 35.306 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
 		)
 		(property "Footprint" ""
-			(at 360.68 26.67 0)
+			(at 342.9 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10168,7 +10246,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 360.68 26.67 0)
+			(at 342.9 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10177,7 +10255,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 360.68 26.67 0)
+			(at 342.9 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10211,21 +10289,21 @@
 			(at 239.014 93.345 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
 		)
-		(property "Value" "0.1uF"
+		(property "Value" "100n"
 			(at 239.014 98.171 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "oresat-passives:c_0603-SMALL"
+		(property "Footprint" "oresat-passives:0603-C-NOSILK"
 			(at 240.03 93.98 0)
 			(effects
 				(font
@@ -10286,10 +10364,10 @@
 			)
 		)
 		(property "Value" "2.8V"
-			(at 219.075 24.765 0)
+			(at 218.186 24.892 0)
 			(effects
 				(font
-					(size 1.27 1.0795)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -10346,7 +10424,7 @@
 			(at 179.578 174.752 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -10355,7 +10433,7 @@
 			(at 177.8 167.64 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 				(hide yes)
@@ -10413,7 +10491,7 @@
 			(at 177.038 174.752 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -10422,7 +10500,7 @@
 			(at 175.26 167.64 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 				(hide yes)
@@ -10477,8 +10555,8 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f1e06dfc-3c62-4655-83cb-98d80abd51ec")
-		(property "Reference" "#GND50"
-			(at 198.12 203.2 0)
+		(property "Reference" "#PWR50"
+			(at 198.12 209.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10487,12 +10565,11 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 198.12 205.994 0)
+			(at 198.12 207.01 0)
 			(effects
 				(font
-					(size 1.778 1.5113)
+					(size 1.27 1.27)
 				)
-				(justify top)
 			)
 		)
 		(property "Footprint" ""
@@ -10528,7 +10605,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/9edd79c7-1f35-42ab-883b-4f04e19f8786"
-					(reference "#GND50")
+					(reference "#PWR50")
 					(unit 1)
 				)
 			)
@@ -10548,7 +10625,7 @@
 			(at 183.642 259.842 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -10557,7 +10634,7 @@
 			(at 185.42 252.73 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 				(hide yes)
@@ -10612,10 +10689,10 @@
 		(dnp no)
 		(uuid "f614e41b-e695-4f3f-a500-6729e2586f8b")
 		(property "Reference" "TP36"
-			(at 190.5 52.832 90)
+			(at 192.024 51.562 90)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
@@ -10624,7 +10701,7 @@
 			(at 191.77 45.72 0)
 			(effects
 				(font
-					(size 1.778 1.778)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 				(hide yes)
@@ -10671,7 +10748,7 @@
 	)
 	(symbol
 		(lib_id "star-tracker-card-eagle-import:2.8V")
-		(at 375.92 39.37 0)
+		(at 375.92 35.56 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10679,7 +10756,7 @@
 		(dnp no)
 		(uuid "ff9ab6cb-1e85-41fd-89db-6984e58696ed")
 		(property "Reference" "#3V-22"
-			(at 375.92 39.37 0)
+			(at 375.92 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10688,16 +10765,16 @@
 			)
 		)
 		(property "Value" "2.8V"
-			(at 375.285 38.735 0)
+			(at 374.396 35.306 0)
 			(effects
 				(font
-					(size 1.27 1.0795)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
 		)
 		(property "Footprint" ""
-			(at 375.92 39.37 0)
+			(at 375.92 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10706,7 +10783,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 375.92 39.37 0)
+			(at 375.92 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10715,7 +10792,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 375.92 39.37 0)
+			(at 375.92 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
