@@ -2,3 +2,10 @@
 (rule "class 1:1"
   (condition "A.NetClass == 'diff pair' && B.NetClass == 'diff pair'")
   (constraint clearance (min 0.1905mm)))
+
+# For the eMMC, ignore routing through unconnected pins.
+
+(rule "Allow_Trace_Through_Unconnected_Pads"
+    (condition "A.Type == 'Track' && B.Type == 'Pad' && B.NetName == 'unconnected-*'")
+    (constraint clearance (min -1mm))
+)
