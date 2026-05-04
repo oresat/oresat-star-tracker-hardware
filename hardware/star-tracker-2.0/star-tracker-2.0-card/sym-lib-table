@@ -1,0 +1,13 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "star-tracker-card-eagle-import")(type "KiCad")(uri "${KIPRJMOD}/star-tracker-card-eagle-import.kicad_sym")(options "")(descr ""))
+  (lib (name "oresat-connectors")(type "KiCad")(uri "${ORESAT_LIBRARIES}/oresat-symbols/oresat-connectors.kicad_sym")(options "")(descr ""))
+  (lib (name "oresat-diodes")(type "KiCad")(uri "${ORESAT_LIBRARIES}/oresat-symbols/oresat-diodes.kicad_sym")(options "")(descr ""))
+  (lib (name "oresat-graphics")(type "KiCad")(uri "${ORESAT_LIBRARIES}/oresat-symbols/oresat-graphics.kicad_sym")(options "")(descr ""))
+  (lib (name "oresat-ics")(type "KiCad")(uri "${ORESAT_LIBRARIES}/oresat-symbols/oresat-ics.kicad_sym")(options "")(descr ""))
+  (lib (name "oresat-misc")(type "KiCad")(uri "${ORESAT_LIBRARIES}/oresat-symbols/oresat-misc.kicad_sym")(options "")(descr ""))
+  (lib (name "oresat-passives")(type "KiCad")(uri "${ORESAT_LIBRARIES}/oresat-symbols/oresat-passives.kicad_sym")(options "")(descr ""))
+  (lib (name "oresat-pcbs")(type "KiCad")(uri "${ORESAT_LIBRARIES}/oresat-symbols/oresat-pcbs.kicad_sym")(options "")(descr ""))
+  (lib (name "oresat-power")(type "KiCad")(uri "${ORESAT_LIBRARIES}/oresat-symbols/oresat-power.kicad_sym")(options "")(descr ""))
+  (lib (name "oresat-transistors")(type "KiCad")(uri "${ORESAT_LIBRARIES}/oresat-symbols/oresat-transistors.kicad_sym")(options "")(descr ""))
+)

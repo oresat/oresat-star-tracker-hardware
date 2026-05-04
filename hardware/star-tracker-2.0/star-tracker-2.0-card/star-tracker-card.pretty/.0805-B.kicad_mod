@@ -1,0 +1,216 @@
+(footprint ".0805-B"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "0805 (metric 2012) normal 'IPC-B'\nIn house package for nominal spacing based on IPC-7351B.")
+	(property "Reference" "REF**"
+		(at -1.5 -1 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "80dcb3d8-f303-4740-9e7d-8f614aecbf67")
+		(effects
+			(font
+				(size 0.68 0.68)
+				(thickness 0.12)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Value" ".0805-B"
+		(at -1.5 1.8 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "b02a130c-0f8f-464e-a551-9bd217f7ff91")
+		(effects
+			(font
+				(size 0.68 0.68)
+				(thickness 0.12)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a1d95211-2696-4772-8f9d-4ed0587f03de")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "fe82edcd-7987-4034-9de6-87b45f4a1360")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_poly
+		(pts
+			(xy -0.26 0.79) (xy -1.54 0.79) (xy -1.54 -0.79) (xy -0.26 -0.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.Mask")
+		(uuid "1f9f99d1-8afc-442d-8ae4-c5d0466628e1")
+	)
+	(fp_poly
+		(pts
+			(xy 1.54 0.79) (xy 0.26 0.79) (xy 0.26 -0.79) (xy 1.54 -0.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.Mask")
+		(uuid "cde29c07-1ebe-43ba-bc79-cafbfbde8841")
+	)
+	(fp_line
+		(start 0 -0.65)
+		(end 0 0.65)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ace9a3df-7c19-4910-8967-72b148062f31")
+	)
+	(fp_line
+		(start -1.745 -0.995)
+		(end -1.745 0.995)
+		(stroke
+			(width 0.01)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "c913791f-6d9e-4050-85c4-6c6dcb96f993")
+	)
+	(fp_line
+		(start -1.745 0.995)
+		(end 1.745 0.995)
+		(stroke
+			(width 0.01)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "faca6bb3-1867-4f97-b2b3-84e3c9697c43")
+	)
+	(fp_line
+		(start 1.745 -0.995)
+		(end -1.745 -0.995)
+		(stroke
+			(width 0.01)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "fbe5426f-4574-4aa6-9456-c8567495bed9")
+	)
+	(fp_line
+		(start 1.745 0.995)
+		(end 1.745 -0.995)
+		(stroke
+			(width 0.01)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "b1749b10-fd20-4d8e-98f3-2a974bde8cb3")
+	)
+	(fp_line
+		(start -1 -0.625)
+		(end 1 -0.625)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "4b66a17d-b6c0-4e6c-be7f-5c8226397975")
+	)
+	(fp_line
+		(start -1 0.625)
+		(end -1 -0.625)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "70a72963-0df9-4ca7-8b4d-04b96607e6b4")
+	)
+	(fp_line
+		(start 1 -0.625)
+		(end 1 0.625)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "498b4748-5684-4c6c-b514-8e70c2a2f478")
+	)
+	(fp_line
+		(start 1 0.625)
+		(end -1 0.625)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "226a8404-1204-4ae9-9d3d-7ce8605a23e5")
+	)
+	(fp_poly
+		(pts
+			(xy -0.8 0.6) (xy -0.425 0.6) (xy -0.425 -0.6) (xy -0.8 -0.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.Fab")
+		(uuid "6eceaa82-4941-43da-bc34-9c34eb8497b3")
+	)
+	(fp_poly
+		(pts
+			(xy 0.425 0.6) (xy 0.8 0.6) (xy 0.8 -0.6) (xy 0.425 -0.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.Fab")
+		(uuid "c5c71a1c-7905-486b-b70e-b4130093aaa9")
+	)
+	(pad "1" smd roundrect
+		(at -0.9 0)
+		(size 1.15 1.45)
+		(layers "F.Cu" "F.Paste")
+		(roundrect_rratio 0.175)
+		(solder_mask_margin 0.0635)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "1e45a151-0c61-4f53-b261-d8346e63d551")
+	)
+	(pad "2" smd roundrect
+		(at 0.9 0)
+		(size 1.15 1.45)
+		(layers "F.Cu" "F.Paste")
+		(roundrect_rratio 0.175)
+		(solder_mask_margin 0.0635)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "3ba86842-1e0b-4b7d-ade7-50b2405c1e32")
+	)
+	(embedded_fonts no)
+)
