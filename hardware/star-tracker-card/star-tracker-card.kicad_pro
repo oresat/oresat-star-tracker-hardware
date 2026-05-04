@@ -66,6 +66,10 @@
           ""
         ],
         [
+          "lib_footprint_mismatch|157601100|132403600|176b9ecc-8484-4da5-87db-89ea0d903b67|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
           "silk_edge_clearance|134213600|57672600|ffcbcb43-4fa1-4f73-8266-2010f9e5030b|5e09e8fc-7018-4361-8f6c-62bbc9f30766",
           ""
         ],
@@ -91,46 +95,6 @@
         ],
         [
           "silk_edge_clearance|162788600|57703600|ffcbcb43-4fa1-4f73-8266-2010f9e5030b|7e78a376-2ab9-4bb5-b045-c53c46ae5dc4",
-          ""
-        ],
-        [
-          "solder_mask_bridge|154522850|129153600|f092032b-51cf-4991-bd96-27bccf20d4b5|8abf9885-53da-4271-a6cb-2d9a612cf111",
-          ""
-        ],
-        [
-          "solder_mask_bridge|154522850|130653600|e4941edf-c2cf-4e94-8dcc-fa162d4d0a2c|9b9ec465-7929-4045-82d3-12c33a817cea",
-          ""
-        ],
-        [
-          "solder_mask_bridge|154522850|131153600|3c4b85d5-cde1-459a-88b4-2dcf57cbba94|8dd20d9c-464d-44b0-a93b-aec851623332",
-          ""
-        ],
-        [
-          "solder_mask_bridge|155022850|129153600|cea0ff7a-9943-41dd-94be-a34dad7bb316|81532214-0dda-49a9-bfd2-b2300e551357",
-          ""
-        ],
-        [
-          "solder_mask_bridge|155022850|130653600|480a2645-3880-41b4-99c5-372badc2eaf6|8dd20d9c-464d-44b0-a93b-aec851623332",
-          ""
-        ],
-        [
-          "solder_mask_bridge|155022850|135653600|60816071-ec9f-4333-b4cd-ef4af440a35a|72cf45fb-ad4d-449d-af3b-348a85f83174",
-          ""
-        ],
-        [
-          "solder_mask_bridge|155522850|130153600|f7e5d232-bcc2-40cf-bffd-c3503c48651a|8dd20d9c-464d-44b0-a93b-aec851623332",
-          ""
-        ],
-        [
-          "solder_mask_bridge|156022850|130653600|324fda27-8fe1-43b5-b83f-7c196869d5ac|fdb3bab7-fa0f-4d8d-bb3b-d5c0f5607ad6",
-          ""
-        ],
-        [
-          "solder_mask_bridge|156522850|130153600|54722eb6-064c-4d4a-9929-dbc34d0a1981|8b451a5e-1be8-4db2-a9d5-3484100c4167",
-          ""
-        ],
-        [
-          "solder_mask_bridge|157522850|129153600|1b68a7f1-97ae-4d59-9b19-aa5b78216f0a|7b7d19cb-cbcc-423a-9bb5-03b9c1aa6e64",
           ""
         ]
       ],
@@ -349,7 +313,7 @@
   "erc": {
     "erc_exclusions": [
       [
-        "multiple_net_names|3302000|2235200|033d79f5-347c-4f9d-818e-ee8adf0b4e2d|795ac0b1-9cbf-401c-a525-506eec8c8b23|/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190|/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190|/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190",
+        "multiple_net_names|2260600|2019300|033d79f5-347c-4f9d-818e-ee8adf0b4e2d|795ac0b1-9cbf-401c-a525-506eec8c8b23|/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190|/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190|/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190",
         ""
       ],
       [
@@ -542,8 +506,8 @@
       "endpoint_off_grid": "warning",
       "extra_units": "error",
       "field_name_whitespace": "warning",
-      "footprint_filter": "error",
-      "footprint_link_issues": "ignore",
+      "footprint_filter": "ignore",
+      "footprint_link_issues": "error",
       "four_way_junction": "ignore",
       "global_label_dangling": "warning",
       "ground_pin_not_ground": "warning",
@@ -983,12 +947,6 @@
         },
         {
           "group_by": false,
-          "label": "PROD_ID",
-          "name": "PROD_ID",
-          "show": false
-        },
-        {
-          "group_by": false,
           "label": "DIS",
           "name": "DIS",
           "show": true
@@ -1015,12 +973,6 @@
           "group_by": false,
           "label": "#",
           "name": "${ITEM_NUMBER}",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Distributor",
-          "name": "Distributor",
           "show": false
         },
         {
@@ -1092,7 +1044,7 @@
         "uuid": "324e9eb5-7420-4b7e-862c-cc20bb28618a"
       }
     ],
-    "used_designators": "",
+    "used_designators": "R77",
     "variants": []
   },
   "sheets": [

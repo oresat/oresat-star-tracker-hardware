@@ -6,7 +6,7 @@
 	(paper "B")
 	(title_block
 		(title "OreSat Star Tracker")
-		(date "2026-04-15")
+		(date "2026-04-22")
 		(rev "1.3")
 		(company "Portland State Aerospace Society")
 	)
@@ -14215,7 +14215,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/6778/5399_MMBT2907%20SOT-23.PDF"
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PMBT2907A.pdf"
 			(at 213.36 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -14226,7 +14226,7 @@
 				)
 			)
 		)
-		(property "Description" "Bipolar (BJT) Transistor PNP 40 V 600 mA 200MHz 250 mW Surface Mount SOT-23"
+		(property "Description" "Bipolar (BJT) Transistor PNP 60 V 600 mA 200MHz 250 mW Surface Mount TO-236AB"
 			(at 213.36 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -14270,7 +14270,7 @@
 				)
 			)
 		)
-		(property "DPN" "5399-MMBT2907CT-ND"
+		(property "DPN" "1727-2958-1-ND"
 			(at 213.36 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -14281,7 +14281,7 @@
 				)
 			)
 		)
-		(property "MFR" "Shenzhen Slkormicro Semicon Co., Ltd."
+		(property "MFR" "Nexperia"
 			(at 213.36 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -14292,7 +14292,7 @@
 				)
 			)
 		)
-		(property "MPN" "MMBT2907"
+		(property "MPN" "PMBT2907A,215"
 			(at 213.36 130.81 0)
 			(hide yes)
 			(show_name no)

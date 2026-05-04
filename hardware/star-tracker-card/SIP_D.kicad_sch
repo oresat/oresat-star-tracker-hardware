@@ -6,7 +6,7 @@
 	(paper "B")
 	(title_block
 		(title "OreSat Star Tracker")
-		(date "2026-04-15")
+		(date "2026-04-22")
 		(rev "1.3")
 		(company "Portland State Aerospace Society")
 	)
@@ -7132,6 +7132,16 @@
 		)
 		(uuid "9bd7d482-906c-4c67-b6ff-fec8d07eca2a")
 	)
+	(text "To OPD"
+		(exclude_from_sim no)
+		(at 309.118 105.664 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "a6fe7b72-e87e-44a6-bea1-fc0bd1e315b3")
+	)
 	(text "0"
 		(exclude_from_sim no)
 		(at 198.0419 134.62 0)
@@ -7253,6 +7263,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b608b131-809e-4795-8694-1dec03352e61")
+	)
+	(junction
+		(at 288.29 121.92)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d2d65cc2-13e8-4c9e-ab15-96a9a54f975c")
 	)
 	(no_connect
 		(at 127 124.46)
@@ -7476,6 +7492,16 @@
 	)
 	(wire
 		(pts
+			(xy 288.29 121.92) (xy 298.45 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4eed7a92-969d-4a63-9cae-04ba76483151")
+	)
+	(wire
+		(pts
 			(xy 279.4 93.98) (xy 279.4 88.9)
 		)
 		(stroke
@@ -7586,6 +7612,16 @@
 	)
 	(wire
 		(pts
+			(xy 293.37 105.41) (xy 288.29 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "87fa053c-19db-42b6-b395-f6b9357afbd1")
+	)
+	(wire
+		(pts
 			(xy 215.9 186.69) (xy 215.9 189.23)
 		)
 		(stroke
@@ -7656,7 +7692,7 @@
 	)
 	(wire
 		(pts
-			(xy 271.78 121.92) (xy 298.45 121.92)
+			(xy 271.78 121.92) (xy 288.29 121.92)
 		)
 		(stroke
 			(width 0)
@@ -7866,6 +7902,16 @@
 	)
 	(wire
 		(pts
+			(xy 288.29 105.41) (xy 288.29 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e7addeab-40fc-420b-b49e-ac7dbb0bcf4f")
+	)
+	(wire
+		(pts
 			(xy 127 132.08) (xy 109.22 132.08)
 		)
 		(stroke
@@ -7969,6 +8015,17 @@
 			(justify right)
 		)
 		(uuid "99656010-11b3-4ddc-901f-096817250c49")
+	)
+	(hierarchical_label "SYSBOOT2"
+		(shape input)
+		(at 293.37 105.41 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b94ccab2-f44f-4769-a5b5-1e25376d2496")
 	)
 	(hierarchical_label "RESET"
 		(shape output)
@@ -8103,7 +8160,7 @@
 		(dnp no)
 		(uuid "136813b5-0084-4ecb-a2ad-e9ff9d8029f7")
 		(property "Reference" "R25"
-			(at 251.4092 186.6392 90)
+			(at 244.9576 186.69 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8113,8 +8170,8 @@
 				(justify left bottom)
 			)
 		)
-		(property "Value" "100K"
-			(at 251.5616 189.1792 90)
+		(property "Value" "47K Array"
+			(at 245.11 189.23 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8135,7 +8192,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://industrial.panasonic.com/ww/products/pt/resistor-network-array/models/EXBA10P104J"
+		(property "Datasheet" "http://www.vishay.com/docs/31509/csc.pdf"
 			(at 251.46 184.15 0)
 			(hide yes)
 			(show_name no)
@@ -8146,7 +8203,7 @@
 				)
 			)
 		)
-		(property "Description" "100k Ohm ±5% 62.5mW Power Per Element Bussed 8 Resistor Network/Array ±200ppm/°C 2512 (6432 Metric), Concave, Long Side Terminals"
+		(property "Description" "47k Ohm ±5% 62.5mW Power Per Element Bussed 8 Resistor Network/Array ±200ppm/°C 2512 (6432 Metric), Concave, Long Side Terminals"
 			(at 251.46 184.15 0)
 			(hide yes)
 			(show_name no)
@@ -8157,7 +8214,7 @@
 				)
 			)
 		)
-		(property "DPN" "U7104CT-ND"
+		(property "DPN" "U7473CT-ND"
 			(at 251.46 184.15 0)
 			(hide yes)
 			(show_name no)
@@ -8169,7 +8226,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "MPN" "EXB-A10P104J"
+		(property "MPN" "EXB-A10P473J"
 			(at 251.46 184.15 0)
 			(hide yes)
 			(show_name no)
@@ -8191,7 +8248,7 @@
 				)
 			)
 		)
-		(property "MFR" "Panasonic Industry"
+		(property "MFR" "Panasonic Electronic Components"
 			(at 251.46 184.15 90)
 			(hide yes)
 			(show_name no)
@@ -9228,8 +9285,8 @@
 				(justify left bottom)
 			)
 		)
-		(property "Value" "100K"
-			(at 208.3816 189.1792 90)
+		(property "Value" "47K Array"
+			(at 201.168 188.976 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9250,7 +9307,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://industrial.panasonic.com/ww/products/pt/resistor-network-array/models/EXBA10P104J"
+		(property "Datasheet" "http://www.vishay.com/docs/31509/csc.pdf"
 			(at 226.06 184.15 0)
 			(hide yes)
 			(show_name no)
@@ -9261,7 +9318,7 @@
 				)
 			)
 		)
-		(property "Description" "100k Ohm ±5% 62.5mW Power Per Element Bussed 8 Resistor Network/Array ±200ppm/°C 2512 (6432 Metric), Concave, Long Side Terminals"
+		(property "Description" "47k Ohm ±5% 62.5mW Power Per Element Bussed 8 Resistor Network/Array ±200ppm/°C 2512 (6432 Metric), Concave, Long Side Terminals"
 			(at 226.06 184.15 0)
 			(hide yes)
 			(show_name no)
@@ -9272,7 +9329,7 @@
 				)
 			)
 		)
-		(property "DPN" "U7104CT-ND"
+		(property "DPN" "U7473CT-ND"
 			(at 226.06 184.15 0)
 			(hide yes)
 			(show_name no)
@@ -9284,7 +9341,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "MPN" "EXB-A10P104J"
+		(property "MPN" "EXB-A10P473J"
 			(at 226.06 184.15 0)
 			(hide yes)
 			(show_name no)
@@ -9306,7 +9363,7 @@
 				)
 			)
 		)
-		(property "MFR" "Panasonic Industry"
+		(property "MFR" "Panasonic Electronic Components"
 			(at 226.06 184.15 90)
 			(hide yes)
 			(show_name no)
@@ -9526,7 +9583,7 @@
 		(dnp no)
 		(uuid "cec18e8c-8882-4cca-8e8b-41efebb34cb3")
 		(property "Reference" "R24"
-			(at 264.1092 71.0692 90)
+			(at 262.2296 72.136 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9536,8 +9593,8 @@
 				(justify right top)
 			)
 		)
-		(property "Value" "100K"
-			(at 264.2616 73.6092 90)
+		(property "Value" "47K Array"
+			(at 262.382 74.676 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9558,7 +9615,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://industrial.panasonic.com/ww/products/pt/resistor-network-array/models/EXBA10P104J"
+		(property "Datasheet" "http://www.vishay.com/docs/31509/csc.pdf"
 			(at 264.16 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -9569,7 +9626,7 @@
 				)
 			)
 		)
-		(property "Description" "100k Ohm ±5% 62.5mW Power Per Element Bussed 8 Resistor Network/Array ±200ppm/°C 2512 (6432 Metric), Concave, Long Side Terminals"
+		(property "Description" "47k Ohm ±5% 62.5mW Power Per Element Bussed 8 Resistor Network/Array ±200ppm/°C 2512 (6432 Metric), Concave, Long Side Terminals"
 			(at 264.16 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -9580,7 +9637,7 @@
 				)
 			)
 		)
-		(property "DPN" "U7104CT-ND"
+		(property "DPN" "U7473CT-ND"
 			(at 264.16 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -9592,7 +9649,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "MPN" "EXB-A10P104J"
+		(property "MPN" "EXB-A10P473J"
 			(at 264.16 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -9614,7 +9671,7 @@
 				)
 			)
 		)
-		(property "MFR" "Panasonic Industry"
+		(property "MFR" "Panasonic Electronic Components"
 			(at 264.16 76.2 90)
 			(hide yes)
 			(show_name no)

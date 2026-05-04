@@ -7,5 +7,6 @@
 
 (rule "Allow_Trace_Through_Unconnected_Pads"
     (condition "A.Type == 'Track' && B.Type == 'Pad' && B.NetName == 'unconnected-*'")
-    (constraint clearance (min -1mm))
+    (constraint clearance (min 0mm))
+    (constraint bridged_mask)
 )

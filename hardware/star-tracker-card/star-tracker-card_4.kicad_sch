@@ -6,7 +6,7 @@
 	(paper "B")
 	(title_block
 		(title "OreSat Star Tracker")
-		(date "2026-04-15")
+		(date "2026-04-22")
 		(rev "1.3")
 		(company "Portland State Aerospace Society")
 	)
@@ -9631,6 +9631,17 @@
 				)
 			)
 		)
+		(property "DIS" "DigiKey"
+			(at 152.4 60.96 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "4f4bd866-1848-429a-a68e-2b7447562079")
 		)
@@ -9742,6 +9753,17 @@
 		)
 		(property "MPN" "ABS07-32.768KHZ-T"
 			(at 152.4 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIS" "DigiKey"
+			(at 152.4 91.44 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10108,7 +10130,7 @@
 		(dnp no)
 		(uuid "32f99064-35aa-4712-8571-1c9ea661ee71")
 		(property "Reference" "R74"
-			(at 293.3192 138.3792 90)
+			(at 304.6476 138.43 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10118,8 +10140,8 @@
 				(justify left bottom)
 			)
 		)
-		(property "Value" "100K"
-			(at 293.4716 140.9192 90)
+		(property "Value" "47K Array"
+			(at 304.8 140.97 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10140,7 +10162,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://industrial.panasonic.com/ww/products/pt/resistor-network-array/models/EXBA10P104J"
+		(property "Datasheet" "http://www.vishay.com/docs/31509/csc.pdf"
 			(at 311.15 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -10151,7 +10173,7 @@
 				)
 			)
 		)
-		(property "Description" "100k Ohm ±5% 62.5mW Power Per Element Bussed 8 Resistor Network/Array ±200ppm/°C 2512 (6432 Metric), Concave, Long Side Terminals"
+		(property "Description" "47k Ohm ±5% 62.5mW Power Per Element Bussed 8 Resistor Network/Array ±200ppm/°C 2512 (6432 Metric), Concave, Long Side Terminals"
 			(at 311.15 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -10162,7 +10184,7 @@
 				)
 			)
 		)
-		(property "DPN" "U7104CT-ND"
+		(property "DPN" "U7473CT-ND"
 			(at 311.15 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -10174,7 +10196,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "MPN" "EXB-A10P104J"
+		(property "MPN" "EXB-A10P473J"
 			(at 311.15 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -10196,7 +10218,7 @@
 				)
 			)
 		)
-		(property "MFR" "Panasonic Industry"
+		(property "MFR" "Panasonic Electronic Components"
 			(at 311.15 135.89 90)
 			(hide yes)
 			(show_name no)
