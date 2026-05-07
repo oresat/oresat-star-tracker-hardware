@@ -4020,6 +4020,16 @@
 	)
 	(wire
 		(pts
+			(xy 184.15 179.07) (xy 190.5 179.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1b475f6c-e276-4ad3-bd7a-74d92eddf84c")
+	)
+	(wire
+		(pts
 			(xy 386.08 106.68) (xy 386.08 104.14)
 		)
 		(stroke
@@ -4197,6 +4207,16 @@
 			(type solid)
 		)
 		(uuid "351255d7-3b74-4b84-8f32-f5f410052638")
+	)
+	(wire
+		(pts
+			(xy 184.15 147.32) (xy 184.15 179.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "35a242e9-9593-48d1-ab94-e5a3c0ab424c")
 	)
 	(wire
 		(pts
@@ -4860,6 +4880,16 @@
 	)
 	(wire
 		(pts
+			(xy 190.5 149.86) (xy 186.69 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8e0d32f1-3bbb-4b94-9a36-57ce307ff708")
+	)
+	(wire
+		(pts
 			(xy 308.61 137.16) (xy 391.16 137.16)
 		)
 		(stroke
@@ -5020,6 +5050,16 @@
 	)
 	(wire
 		(pts
+			(xy 186.69 149.86) (xy 186.69 176.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ab22e17d-b8cb-48fa-bb27-c982c5e02880")
+	)
+	(wire
+		(pts
 			(xy 46.99 86.36) (xy 49.53 86.36)
 		)
 		(stroke
@@ -5160,6 +5200,16 @@
 	)
 	(wire
 		(pts
+			(xy 190.5 147.32) (xy 184.15 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c3ceffee-85c7-43da-93f9-52a5781b4344")
+	)
+	(wire
+		(pts
 			(xy 92.71 199.39) (xy 134.62 199.39)
 		)
 		(stroke
@@ -5187,6 +5237,16 @@
 			(type solid)
 		)
 		(uuid "c5b16472-a350-44df-8d0a-a8dcc75bcbe5")
+	)
+	(wire
+		(pts
+			(xy 186.69 176.53) (xy 190.5 176.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c78ff725-5bea-4a04-9b96-d2c5b40e1f6b")
 	)
 	(wire
 		(pts
@@ -5220,7 +5280,7 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 81.28) (xy 190.5 81.28)
+			(xy 179.07 81.28) (xy 190.5 81.28)
 		)
 		(stroke
 			(width 0)
@@ -5340,7 +5400,7 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 176.53) (xy 182.88 81.28)
+			(xy 179.07 185.42) (xy 179.07 81.28)
 		)
 		(stroke
 			(width 0)
@@ -5460,7 +5520,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 176.53) (xy 182.88 176.53)
+			(xy 190.5 185.42) (xy 179.07 185.42)
 		)
 		(stroke
 			(width 0)
@@ -8875,8 +8935,28 @@
 			)
 		)
 		(pin "SYSBOOT2" input
-			(at 190.5 176.53 180)
+			(at 190.5 185.42 180)
 			(uuid "177e2442-1576-4e1b-a6f3-f31677592056")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "IMU_INT1" input
+			(at 190.5 176.53 180)
+			(uuid "861c942c-e96d-4373-af2e-07e0b8b3c59e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "IMU_INT2" input
+			(at 190.5 179.07 180)
+			(uuid "5e125c1f-ce4a-488b-8cb5-2292a153fafb")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9137,6 +9217,26 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+			)
+		)
+		(pin "IMU_INT1" output
+			(at 190.5 149.86 180)
+			(uuid "e11b0071-2a5c-40b2-93d3-ad68c1c79add")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "IMU_INT2" output
+			(at 190.5 147.32 180)
+			(uuid "0b318ef9-6e4a-4bff-aa09-3776f2ec9012")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 		(instances

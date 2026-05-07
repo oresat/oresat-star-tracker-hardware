@@ -7303,20 +7303,12 @@
 		(uuid "53a3492e-a941-45cf-a818-d5e9970b6c6b")
 	)
 	(no_connect
-		(at 127 116.84)
-		(uuid "5dfc1f53-72a9-4051-b9ff-1366f45c033c")
-	)
-	(no_connect
 		(at 127 160.02)
 		(uuid "62e19546-00c3-461c-bfdd-902860a6ace3")
 	)
 	(no_connect
 		(at 276.86 88.9)
 		(uuid "86325ff9-bf10-459c-8929-2b6a647a7594")
-	)
-	(no_connect
-		(at 127 119.38)
-		(uuid "8e824488-dcaf-4070-9535-41d8d95fe92e")
 	)
 	(no_connect
 		(at 127 129.54)
@@ -7442,6 +7434,16 @@
 	)
 	(wire
 		(pts
+			(xy 113.03 119.38) (xy 127 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2d6bfa13-6208-4818-bad1-5d93d98b0b6f")
+	)
+	(wire
+		(pts
 			(xy 213.36 171.45) (xy 213.36 139.7)
 		)
 		(stroke
@@ -7549,6 +7551,16 @@
 			(type default)
 		)
 		(uuid "651fb777-5bd4-4fb0-969b-d39b5e00a45e")
+	)
+	(wire
+		(pts
+			(xy 113.03 116.84) (xy 127 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6be5520f-0164-4105-ab3f-34dfe68b172c")
 	)
 	(wire
 		(pts
@@ -7994,6 +8006,17 @@
 		)
 		(uuid "63708380-2ebe-4e02-99e2-53cb738a72e2")
 	)
+	(hierarchical_label "IMU_INT2"
+		(shape input)
+		(at 113.03 119.38 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "652f41cd-d652-46a9-9797-2e2c5f3d7205")
+	)
 	(hierarchical_label "FLASH"
 		(shape output)
 		(at 109.22 127 180)
@@ -8059,6 +8082,17 @@
 			(justify right)
 		)
 		(uuid "e29610a5-6179-41f1-9a3e-8c90f13d1209")
+	)
+	(hierarchical_label "IMU_INT1"
+		(shape input)
+		(at 113.03 116.84 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f2f4b00f-ca20-4374-9d41-51901b5a0b7c")
 	)
 	(hierarchical_label "BUS_OE"
 		(shape output)
