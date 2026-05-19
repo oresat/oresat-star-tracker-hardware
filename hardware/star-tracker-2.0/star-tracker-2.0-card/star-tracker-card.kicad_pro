@@ -1044,7 +1044,7 @@
         "uuid": "324e9eb5-7420-4b7e-862c-cc20bb28618a"
       }
     ],
-    "used_designators": "#GND60-63,R59-60,R75,R77,R79,#3V11,#3V15-16,C40-41,C44,U17,#3V\\-25,#3V\\-27",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [
