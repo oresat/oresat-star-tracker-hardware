@@ -10458,7 +10458,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRT188R71E105KE13-01.pdf"
+		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRT155C81E105KE13-01.pdf"
 			(at 378.46 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -10469,7 +10469,7 @@
 				)
 			)
 		)
-		(property "Description" "1 µF ±10% 25V Ceramic Capacitor X7R 0603 (1608 Metric)"
+		(property "Description" "1 µF ±10% 25V Ceramic Capacitor X6S 0402 (1005 Metric)"
 			(at 378.46 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -10491,7 +10491,7 @@
 				)
 			)
 		)
-		(property "DPN" "490-GRT188R71E105KE13DCT-ND"
+		(property "DPN" "490-18215-1-ND"
 			(at 378.46 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -10513,7 +10513,7 @@
 				)
 			)
 		)
-		(property "MPN" "GRT188R71E105KE13D"
+		(property "MPN" "GRT155C81E105KE13D"
 			(at 378.46 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -13151,7 +13151,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRT188R71E105KE13-01.pdf"
+		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRT155C81E105KE13-01.pdf"
 			(at 368.3 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -13162,7 +13162,7 @@
 				)
 			)
 		)
-		(property "Description" "1 µF ±10% 25V Ceramic Capacitor X7R 0603 (1608 Metric)"
+		(property "Description" "1 µF ±10% 25V Ceramic Capacitor X6S 0402 (1005 Metric)"
 			(at 368.3 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -13184,7 +13184,7 @@
 				)
 			)
 		)
-		(property "DPN" "490-GRT188R71E105KE13DCT-ND"
+		(property "DPN" "490-18215-1-ND"
 			(at 368.3 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -13206,7 +13206,7 @@
 				)
 			)
 		)
-		(property "MPN" "GRT188R71E105KE13D"
+		(property "MPN" "GRT155C81E105KE13D"
 			(at 368.3 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -14784,7 +14784,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRT188R71E105KE13-01.pdf"
+		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRT155C81E105KE13-01.pdf"
 			(at 388.62 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -14795,7 +14795,7 @@
 				)
 			)
 		)
-		(property "Description" "1 µF ±10% 25V Ceramic Capacitor X7R 0603 (1608 Metric)"
+		(property "Description" "1 µF ±10% 25V Ceramic Capacitor X6S 0402 (1005 Metric)"
 			(at 388.62 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -14817,7 +14817,7 @@
 				)
 			)
 		)
-		(property "DPN" "490-GRT188R71E105KE13DCT-ND"
+		(property "DPN" "490-18215-1-ND"
 			(at 388.62 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -14839,7 +14839,7 @@
 				)
 			)
 		)
-		(property "MPN" "GRT188R71E105KE13D"
+		(property "MPN" "GRT155C81E105KE13D"
 			(at 388.62 137.16 0)
 			(hide yes)
 			(show_name no)

@@ -50,7 +50,23 @@
         "silk_text_thickness": 0.125,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.15
+          "border_display_style": 2,
+          "border_hatch_pitch": 0.5,
+          "corner_radius": 0.0,
+          "corner_smoothing": 0,
+          "fill_mode": 0,
+          "hatch_gap": 1.5,
+          "hatch_orientation": 0.0,
+          "hatch_smoothing_level": 0,
+          "hatch_smoothing_value": 0.1,
+          "hatch_thickness": 1.0,
+          "min_clearance": 0.15,
+          "min_island_area": 10.0,
+          "min_thickness": 0.25,
+          "pad_connection": 1,
+          "remove_islands": 0,
+          "thermal_relief_gap": 0.5,
+          "thermal_relief_spoke_width": 0.5
         }
       },
       "diff_pair_dimensions": [
@@ -62,11 +78,19 @@
       ],
       "drc_exclusions": [
         [
-          "solder_mask_bridge|147693720|103797631|95c45dfa-a8f5-488c-a79d-2608bc828119|36086e6a-4ace-42d4-a7c8-b4c1dc655426",
+          "items_not_allowed|147006231|104702432|0c11632b-7e51-4894-9b1d-21466fee2780|00000000-0000-0000-0000-000000000000",
           ""
         ],
         [
-          "solder_mask_bridge|162193720|103797631|737b7b80-963e-472e-8b20-62defdcf3c38|36086e6a-4ace-42d4-a7c8-b4c1dc655426",
+          "items_not_allowed|161506231|104702432|d0c8260f-3a07-4d5d-be81-f6cf5d3bfe02|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "solder_mask_bridge|149342978|104133254|95c45dfa-a8f5-488c-a79d-2608bc828119|0c11632b-7e51-4894-9b1d-21466fee2780",
+          ""
+        ],
+        [
+          "solder_mask_bridge|162070934|106240596|737b7b80-963e-472e-8b20-62defdcf3c38|d0c8260f-3a07-4d5d-be81-f6cf5d3bfe02",
           ""
         ]
       ],
@@ -822,7 +846,7 @@
           "group_by": true,
           "label": "Value",
           "name": "Value",
-          "show": false
+          "show": true
         },
         {
           "group_by": true,
@@ -846,7 +870,7 @@
           "group_by": true,
           "label": "Footprint",
           "name": "Footprint",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,
@@ -888,7 +912,7 @@
           "group_by": false,
           "label": "Datasheet",
           "name": "Datasheet",
-          "show": false
+          "show": true
         }
       ],
       "filter_string": "",
