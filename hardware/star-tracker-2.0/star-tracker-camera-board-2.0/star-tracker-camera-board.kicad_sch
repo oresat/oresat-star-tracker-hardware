@@ -7738,16 +7738,6 @@
 		)
 		(uuid "ff376848-f2e7-4351-826f-b3470d0987f7")
 	)
-	(label "FLASH"
-		(at 137.16 226.06 90)
-		(effects
-			(font
-				(size 1.2446 1.2446)
-			)
-			(justify left bottom)
-		)
-		(uuid "0784b329-074f-40bb-8475-e99f9409af9f")
-	)
 	(label "D3"
 		(at 231.14 81.28 0)
 		(effects
@@ -7757,6 +7747,16 @@
 			(justify left bottom)
 		)
 		(uuid "09a6f9e0-9666-4077-a8b3-7031973dcf30")
+	)
+	(label "FLASH"
+		(at 132.08 182.88 90)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "119ecb6f-79fd-49df-a3f4-4b369991cee5")
 	)
 	(label "D0"
 		(at 231.14 73.66 0)
@@ -7768,15 +7768,15 @@
 		)
 		(uuid "14158bec-4fc0-4f1d-938e-a7a1f9b3f9fb")
 	)
-	(label "TRIGGER"
-		(at 139.7 226.06 90)
+	(label "D0"
+		(at 91.44 185.42 90)
 		(effects
 			(font
-				(size 1.2446 1.2446)
+				(size 0.889 0.889)
 			)
 			(justify left bottom)
 		)
-		(uuid "181ea13c-a458-4580-9c9b-7aef4c6b2655")
+		(uuid "184de626-94b9-4b46-b1f1-eea80a62dab3")
 	)
 	(label "SCLK"
 		(at 166.37 99.06 180)
@@ -7798,35 +7798,35 @@
 		)
 		(uuid "1c86ec4c-7461-4c6d-8d78-d8e3955199bd")
 	)
-	(label "D6"
-		(at 81.28 228.6 90)
+	(label "D1"
+		(at 88.9 185.42 90)
 		(effects
 			(font
 				(size 0.889 0.889)
 			)
 			(justify left bottom)
 		)
-		(uuid "264cc2bb-cb24-459c-891e-2ed8ff9cce82")
+		(uuid "20533c98-b00a-4ad8-a86a-4cb46cb05fba")
+	)
+	(label "D7"
+		(at 93.98 185.42 90)
+		(effects
+			(font
+				(size 0.889 0.889)
+			)
+			(justify left bottom)
+		)
+		(uuid "2083d4cb-bc53-4aad-bcb9-f6e22d85dc2e")
 	)
 	(label "VREG_EN"
-		(at 142.24 226.06 90)
+		(at 137.16 182.88 90)
 		(effects
 			(font
 				(size 1.2446 1.2446)
 			)
 			(justify left bottom)
 		)
-		(uuid "268dc107-7999-490f-a191-1bab46762b9e")
-	)
-	(label "D4"
-		(at 86.36 228.6 90)
-		(effects
-			(font
-				(size 0.889 0.889)
-			)
-			(justify left bottom)
-		)
-		(uuid "2ac3dd6c-c769-4c5e-a53d-e4c952907769")
+		(uuid "20a333b2-8617-4414-92d5-9d52602f1ba2")
 	)
 	(label "D5"
 		(at 231.14 86.36 0)
@@ -7837,6 +7837,26 @@
 			(justify left bottom)
 		)
 		(uuid "2b0b7392-e386-42d3-b654-4dcb68c30ef7")
+	)
+	(label "STANDBY"
+		(at 124.46 182.88 90)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "2eacf784-fc37-4108-8529-626bb8d10795")
+	)
+	(label "D4"
+		(at 81.28 185.42 90)
+		(effects
+			(font
+				(size 0.889 0.889)
+			)
+			(justify left bottom)
+		)
+		(uuid "2f867b8a-abaf-480a-bc4f-541bb9c894b3")
 	)
 	(label "SADDR"
 		(at 166.37 104.14 180)
@@ -7858,35 +7878,35 @@
 		)
 		(uuid "358b4934-c3b0-4912-8119-7a34727efe5a")
 	)
-	(label "D9"
-		(at 104.14 228.6 90)
-		(effects
-			(font
-				(size 0.889 0.889)
-			)
-			(justify left bottom)
-		)
-		(uuid "3a6bb423-e52b-4e5a-b42a-5fc282a8a6f7")
-	)
-	(label "SCLK"
-		(at 119.38 226.06 90)
+	(label "SADDR"
+		(at 129.54 182.88 90)
 		(effects
 			(font
 				(size 1.2446 1.2446)
 			)
 			(justify left bottom)
 		)
-		(uuid "41403040-7d9a-460c-88fa-95daa73d847f")
+		(uuid "37862d95-aa95-4204-84c1-fa1ef65673a4")
 	)
-	(label "D10"
-		(at 106.68 228.6 90)
+	(label "~{OE}"
+		(at 127 182.88 90)
 		(effects
 			(font
-				(size 0.889 0.889)
+				(size 1.2446 1.2446)
 			)
 			(justify left bottom)
 		)
-		(uuid "49b76358-02a2-425f-8e9d-16cbcaf29782")
+		(uuid "3b1f5ebe-1a3b-467d-9b0f-643ff1978c0a")
+	)
+	(label "SDATA"
+		(at 116.84 182.88 90)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "4010548d-17a0-4a5c-9041-c0f0c06b4942")
 	)
 	(label "~{RESET}"
 		(at 166.37 86.36 180)
@@ -7908,6 +7928,26 @@
 		)
 		(uuid "4fc23d54-fc89-4958-994b-6bf307751250")
 	)
+	(label "VSYNC"
+		(at 71.12 185.42 90)
+		(effects
+			(font
+				(size 0.889 0.889)
+			)
+			(justify left bottom)
+		)
+		(uuid "56cb58f8-91c7-46e7-aa30-a0247cc9288d")
+	)
+	(label "CLK_EN"
+		(at 119.38 182.88 90)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "6795769c-b50e-43c4-8802-9de403e9e455")
+	)
 	(label "D9"
 		(at 231.14 96.52 0)
 		(effects
@@ -7918,15 +7958,15 @@
 		)
 		(uuid "67a19a43-00b9-4b04-999b-0c3649f69659")
 	)
-	(label "HSYNC"
-		(at 73.66 228.6 90)
+	(label "D11"
+		(at 104.14 185.42 90)
 		(effects
 			(font
 				(size 0.889 0.889)
 			)
 			(justify left bottom)
 		)
-		(uuid "68e808c4-4d65-4788-98b5-152e65fa1958")
+		(uuid "696d6708-0846-4c3b-938d-7f8e51091b98")
 	)
 	(label "{D[0..11] HSYNC VSYNC PIXCLK}"
 		(at 152.4 167.64 0)
@@ -7948,35 +7988,15 @@
 		)
 		(uuid "6a4ad649-6167-4c72-a792-984817eb47e3")
 	)
-	(label "D7"
-		(at 99.06 228.6 90)
+	(label "D6"
+		(at 76.2 185.42 90)
 		(effects
 			(font
 				(size 0.889 0.889)
 			)
 			(justify left bottom)
 		)
-		(uuid "71ffe9cf-07bd-4885-acbd-8c5b8421ea88")
-	)
-	(label "SADDR"
-		(at 134.62 226.06 90)
-		(effects
-			(font
-				(size 1.2446 1.2446)
-			)
-			(justify left bottom)
-		)
-		(uuid "7958e9f5-42ca-40be-adb7-7dca6b224404")
-	)
-	(label "D8"
-		(at 101.6 228.6 90)
-		(effects
-			(font
-				(size 0.889 0.889)
-			)
-			(justify left bottom)
-		)
-		(uuid "7fee581c-f9c9-45fc-8bb5-df87245a2f7e")
+		(uuid "7200e8dc-e79d-44ab-9302-7bb6b95bf6e5")
 	)
 	(label "HSYNC"
 		(at 231.14 104.14 0)
@@ -7998,16 +8018,6 @@
 		)
 		(uuid "82f94324-165f-4858-82d5-5f2d17009fcd")
 	)
-	(label "D2"
-		(at 91.44 228.6 90)
-		(effects
-			(font
-				(size 0.889 0.889)
-			)
-			(justify left bottom)
-		)
-		(uuid "87aa0cfe-e6ee-4278-a55d-173464b5bd26")
-	)
 	(label "D6"
 		(at 231.14 88.9 0)
 		(effects
@@ -8018,15 +8028,15 @@
 		)
 		(uuid "8a758a8f-fac4-400e-b86d-b01f6990268b")
 	)
-	(label "D5"
-		(at 83.82 228.6 90)
+	(label "PIXCLK"
+		(at 73.66 185.42 90)
 		(effects
 			(font
 				(size 0.889 0.889)
 			)
 			(justify left bottom)
 		)
-		(uuid "97d42474-7a8c-4f1c-ac20-b8d247f080c7")
+		(uuid "9b2d1490-ff43-4fe2-b7ba-31c3bd38558c")
 	)
 	(label "TRIGGER"
 		(at 166.37 81.28 180)
@@ -8048,6 +8058,16 @@
 		)
 		(uuid "a0eeb7f1-09fb-40a6-a231-255967845671")
 	)
+	(label "D2"
+		(at 86.36 185.42 90)
+		(effects
+			(font
+				(size 0.889 0.889)
+			)
+			(justify left bottom)
+		)
+		(uuid "a48e5a0b-b15f-49e8-afd0-1af71c0a3da0")
+	)
 	(label "~{OE}"
 		(at 166.37 83.82 180)
 		(effects
@@ -8058,45 +8078,15 @@
 		)
 		(uuid "a5d2764a-1f65-477e-8b9a-e373171f163e")
 	)
-	(label "D3"
-		(at 88.9 228.6 90)
+	(label "D10"
+		(at 101.6 185.42 90)
 		(effects
 			(font
 				(size 0.889 0.889)
 			)
 			(justify left bottom)
 		)
-		(uuid "a9453cee-24a9-46d1-9d97-d748a8d42d75")
-	)
-	(label "CLK_EN"
-		(at 124.46 226.06 90)
-		(effects
-			(font
-				(size 1.2446 1.2446)
-			)
-			(justify left bottom)
-		)
-		(uuid "ae3eb46f-43f2-4182-890e-d8ead69ce6b4")
-	)
-	(label "~{OE}"
-		(at 132.08 226.06 90)
-		(effects
-			(font
-				(size 1.2446 1.2446)
-			)
-			(justify left bottom)
-		)
-		(uuid "ae58ff29-76fd-4eed-9e9b-c3fac8256bc8")
-	)
-	(label "D1"
-		(at 93.98 228.6 90)
-		(effects
-			(font
-				(size 0.889 0.889)
-			)
-			(justify left bottom)
-		)
-		(uuid "aed709f0-f824-46e4-861a-98c143497ff7")
+		(uuid "a5ef6d94-adb5-4613-9ade-469e3f4612d3")
 	)
 	(label "VREG_EN"
 		(at 226.06 175.26 0)
@@ -8118,25 +8108,15 @@
 		)
 		(uuid "b386a479-2867-47aa-9981-6829fec272dd")
 	)
-	(label "VSYNC"
-		(at 76.2 228.6 90)
-		(effects
-			(font
-				(size 0.889 0.889)
-			)
-			(justify left bottom)
-		)
-		(uuid "b6323502-aafd-49ea-98d3-5811947aa59a")
-	)
-	(label "SDATA"
-		(at 121.92 226.06 90)
+	(label "TRIGGER"
+		(at 134.62 182.88 90)
 		(effects
 			(font
 				(size 1.2446 1.2446)
 			)
 			(justify left bottom)
 		)
-		(uuid "b7fe1a7d-2a1f-4f76-9250-fbe07cf1713b")
+		(uuid "b9805bee-c53f-434c-aebe-6b408f82a130")
 	)
 	(label "D10"
 		(at 231.14 99.06 0)
@@ -8148,6 +8128,16 @@
 		)
 		(uuid "bf2a930f-32bc-4d29-a562-c3004138eae3")
 	)
+	(label "D8"
+		(at 96.52 185.42 90)
+		(effects
+			(font
+				(size 0.889 0.889)
+			)
+			(justify left bottom)
+		)
+		(uuid "c0a90ad0-1c2d-4129-b280-fe5c8cd086c6")
+	)
 	(label "D11"
 		(at 231.14 101.6 0)
 		(effects
@@ -8158,25 +8148,55 @@
 		)
 		(uuid "c0f7e894-350e-434a-a3dd-f1d7ebf6cab1")
 	)
-	(label "D0"
-		(at 68.58 186.69 90)
+	(label "D5"
+		(at 78.74 185.42 90)
 		(effects
 			(font
 				(size 0.889 0.889)
 			)
 			(justify left bottom)
 		)
-		(uuid "c917ce90-fbc0-4eac-b7a8-a5b58a5d8636")
+		(uuid "c1a69f2f-bed8-49f9-9c83-07fe99bc1078")
 	)
 	(label "~{RESET}"
-		(at 127 226.06 90)
+		(at 121.92 182.88 90)
 		(effects
 			(font
 				(size 1.2446 1.2446)
 			)
 			(justify left bottom)
 		)
-		(uuid "e42c9bad-f5ed-4b12-a986-8b668a7ccf76")
+		(uuid "d0e516ef-4cdf-4936-a685-48c6c8289268")
+	)
+	(label "SCLK"
+		(at 114.3 182.88 90)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "d1ce9f7c-9820-4da6-8d83-e118c0c363d2")
+	)
+	(label "D9"
+		(at 99.06 185.42 90)
+		(effects
+			(font
+				(size 0.889 0.889)
+			)
+			(justify left bottom)
+		)
+		(uuid "df82615f-810f-45de-a1a0-8653f2ad6056")
+	)
+	(label "HSYNC"
+		(at 68.58 185.42 90)
+		(effects
+			(font
+				(size 0.889 0.889)
+			)
+			(justify left bottom)
+		)
+		(uuid "e0d40d75-8e8a-4507-8aa2-5304bf33d248")
 	)
 	(label "D2"
 		(at 231.14 78.74 0)
@@ -8187,16 +8207,6 @@
 			(justify left bottom)
 		)
 		(uuid "e827cf4d-be0d-4679-8589-5669238c33ed")
-	)
-	(label "STANDBY"
-		(at 129.54 226.06 90)
-		(effects
-			(font
-				(size 1.2446 1.2446)
-			)
-			(justify left bottom)
-		)
-		(uuid "ec62d3c8-bd9a-4e01-be55-f33ac56da9b8")
 	)
 	(label "PIXCLK"
 		(at 231.14 109.22 0)
@@ -8228,25 +8238,15 @@
 		)
 		(uuid "ee7f0e7a-2925-4337-bc66-912be1b58367")
 	)
-	(label "PIXCLK"
-		(at 78.74 228.6 90)
+	(label "D3"
+		(at 83.82 185.42 90)
 		(effects
 			(font
 				(size 0.889 0.889)
 			)
 			(justify left bottom)
 		)
-		(uuid "fccae7d8-aebb-4542-a372-e227e972650b")
-	)
-	(label "D11"
-		(at 109.22 228.6 90)
-		(effects
-			(font
-				(size 0.889 0.889)
-			)
-			(justify left bottom)
-		)
-		(uuid "fdf75e99-bdac-4b19-afe7-67da374f8314")
+		(uuid "f920f88d-caea-4c74-be34-b680279df552")
 	)
 	(symbol
 		(lib_id "star-tracker-camera-board-eagle-import:3.3V")
@@ -10458,7 +10458,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRT188R71E105KE13-01.pdf"
+		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRT155C81E105KE13-01.pdf"
 			(at 378.46 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -10469,7 +10469,7 @@
 				)
 			)
 		)
-		(property "Description" "1 µF ±10% 25V Ceramic Capacitor X7R 0603 (1608 Metric)"
+		(property "Description" "1 µF ±10% 25V Ceramic Capacitor X6S 0402 (1005 Metric)"
 			(at 378.46 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -10491,7 +10491,7 @@
 				)
 			)
 		)
-		(property "DPN" "490-GRT188R71E105KE13DCT-ND"
+		(property "DPN" "490-18215-1-ND"
 			(at 378.46 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -10513,7 +10513,7 @@
 				)
 			)
 		)
-		(property "MPN" "GRT188R71E105KE13D"
+		(property "MPN" "GRT155C81E105KE13D"
 			(at 378.46 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -13151,7 +13151,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRT188R71E105KE13-01.pdf"
+		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRT155C81E105KE13-01.pdf"
 			(at 368.3 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -13162,7 +13162,7 @@
 				)
 			)
 		)
-		(property "Description" "1 µF ±10% 25V Ceramic Capacitor X7R 0603 (1608 Metric)"
+		(property "Description" "1 µF ±10% 25V Ceramic Capacitor X6S 0402 (1005 Metric)"
 			(at 368.3 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -13184,7 +13184,7 @@
 				)
 			)
 		)
-		(property "DPN" "490-GRT188R71E105KE13DCT-ND"
+		(property "DPN" "490-18215-1-ND"
 			(at 368.3 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -13206,7 +13206,7 @@
 				)
 			)
 		)
-		(property "MPN" "GRT188R71E105KE13D"
+		(property "MPN" "GRT155C81E105KE13D"
 			(at 368.3 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -14784,7 +14784,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRT188R71E105KE13-01.pdf"
+		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRT155C81E105KE13-01.pdf"
 			(at 388.62 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -14795,7 +14795,7 @@
 				)
 			)
 		)
-		(property "Description" "1 µF ±10% 25V Ceramic Capacitor X7R 0603 (1608 Metric)"
+		(property "Description" "1 µF ±10% 25V Ceramic Capacitor X6S 0402 (1005 Metric)"
 			(at 388.62 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -14817,7 +14817,7 @@
 				)
 			)
 		)
-		(property "DPN" "490-GRT188R71E105KE13DCT-ND"
+		(property "DPN" "490-18215-1-ND"
 			(at 388.62 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -14839,7 +14839,7 @@
 				)
 			)
 		)
-		(property "MPN" "GRT188R71E105KE13D"
+		(property "MPN" "GRT155C81E105KE13D"
 			(at 388.62 137.16 0)
 			(hide yes)
 			(show_name no)
