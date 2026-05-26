@@ -50,7 +50,23 @@
         "silk_text_thickness": 0.125,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.2
+          "border_display_style": 2,
+          "border_hatch_pitch": 0.5,
+          "corner_radius": 0.2,
+          "corner_smoothing": 2,
+          "fill_mode": 0,
+          "hatch_gap": 1.5,
+          "hatch_orientation": 0.0,
+          "hatch_smoothing_level": 0,
+          "hatch_smoothing_value": 0.1,
+          "hatch_thickness": 1.0,
+          "min_clearance": 0.2,
+          "min_island_area": 10.0,
+          "min_thickness": 0.127,
+          "pad_connection": 2,
+          "remove_islands": 0,
+          "thermal_relief_gap": 0.127,
+          "thermal_relief_spoke_width": 0.3
         }
       },
       "diff_pair_dimensions": [
@@ -60,44 +76,7 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [
-        [
-          "isolated_copper|185966449|63392054|6858d2e3-b7d4-4658-9776-2c3af0c2f9c1|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "lib_footprint_mismatch|157601100|132403600|176b9ecc-8484-4da5-87db-89ea0d903b67|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "silk_edge_clearance|134213600|57672600|ffcbcb43-4fa1-4f73-8266-2010f9e5030b|5e09e8fc-7018-4361-8f6c-62bbc9f30766",
-          ""
-        ],
-        [
-          "silk_edge_clearance|134213600|57703600|ffcbcb43-4fa1-4f73-8266-2010f9e5030b|306ff9b2-3fd4-43f5-b4f1-d30ca76ca540",
-          ""
-        ],
-        [
-          "silk_edge_clearance|135483600|57672600|ffcbcb43-4fa1-4f73-8266-2010f9e5030b|a6a81064-d3c5-4dd5-92df-816c0144a121",
-          ""
-        ],
-        [
-          "silk_edge_clearance|135483600|57703600|ffcbcb43-4fa1-4f73-8266-2010f9e5030b|fdb3a0d4-e968-457e-b7e3-510a56f9a119",
-          ""
-        ],
-        [
-          "silk_edge_clearance|138277600|57672600|ffcbcb43-4fa1-4f73-8266-2010f9e5030b|04f8c0c5-5ee5-4182-8f3b-f2fe5c28f303",
-          ""
-        ],
-        [
-          "silk_edge_clearance|138277600|57703600|ffcbcb43-4fa1-4f73-8266-2010f9e5030b|246ce1c8-ac2f-4b14-85ee-581541dfe21f",
-          ""
-        ],
-        [
-          "silk_edge_clearance|162788600|57703600|ffcbcb43-4fa1-4f73-8266-2010f9e5030b|7e78a376-2ab9-4bb5-b045-c53c46ae5dc4",
-          ""
-        ]
-      ],
+      "drc_exclusions": [],
       "meta": {
         "filename": "board_design_settings.json",
         "version": 2
