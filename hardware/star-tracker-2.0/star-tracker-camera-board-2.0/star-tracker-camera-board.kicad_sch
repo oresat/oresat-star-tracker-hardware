@@ -8106,8 +8106,8 @@
 		)
 		(uuid "67a19a43-00b9-4b04-999b-0c3649f69659")
 	)
-	(label "{D[0..11] HSYNC VSYNC PIXCLK STANDBY TRIGGER ~{OE} ~{RESET} SCLK SDATA SADDR FLASH VREG_EN}"
-		(at 149.86 167.64 0)
+	(label "{D[0..11] HSYNC VSYNC PIXCLK STANDBY TRIGGER ~{OE} ~{RESET} SCLK SDATA SADDR FLASH VREG_EN CLK_EN}"
+		(at 142.24 167.64 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8325,16 +8325,6 @@
 			(justify left bottom)
 		)
 		(uuid "c0f7e894-350e-434a-a3dd-f1d7ebf6cab1")
-	)
-	(label "PIXCLK"
-		(at 123.19 270.51 90)
-		(effects
-			(font
-				(size 0.889 0.889)
-			)
-			(justify left bottom)
-		)
-		(uuid "d4ff75b9-792d-4207-ad6e-b88c04d5b783")
 	)
 	(label "D5"
 		(at 104.14 193.04 90)

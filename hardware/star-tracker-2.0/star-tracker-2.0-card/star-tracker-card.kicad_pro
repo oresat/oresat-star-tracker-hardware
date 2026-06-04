@@ -39,9 +39,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.8,
-          "height": 1.27,
-          "width": 2.54
+          "drill": 0.0,
+          "height": 0.28,
+          "width": 0.28
         },
         "silk_line_width": 0.125,
         "silk_text_italic": false,
@@ -1023,7 +1023,7 @@
         "uuid": "324e9eb5-7420-4b7e-862c-cc20bb28618a"
       }
     ],
-    "used_designators": "",
+    "used_designators": "TP130,R80-81",
     "variants": []
   },
   "sheets": [

@@ -60,7 +60,16 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "solder_mask_bridge|147693720|103797631|95c45dfa-a8f5-488c-a79d-2608bc828119|36086e6a-4ace-42d4-a7c8-b4c1dc655426",
+          ""
+        ],
+        [
+          "solder_mask_bridge|162193720|103797631|737b7b80-963e-472e-8b20-62defdcf3c38|36086e6a-4ace-42d4-a7c8-b4c1dc655426",
+          ""
+        ]
+      ],
       "meta": {
         "filename": "board_design_settings.json",
         "version": 2

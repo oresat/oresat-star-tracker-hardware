@@ -8261,6 +8261,14 @@
 		(uuid "70752156-fc65-4a88-b665-ea839751f4ae")
 	)
 	(no_connect
+		(at 187.96 149.86)
+		(uuid "79ed1034-382e-4364-90bd-f239a24352c2")
+	)
+	(no_connect
+		(at 187.96 147.32)
+		(uuid "82b5d358-c5c9-4347-ae34-3ab35cc849d6")
+	)
+	(no_connect
 		(at 248.92 152.4)
 		(uuid "a4952b8a-c9ed-4370-8435-1354fe7471db")
 	)
@@ -8277,12 +8285,20 @@
 		(uuid "c94c993d-ec84-4aae-8508-ba5a6b953f43")
 	)
 	(no_connect
+		(at 187.96 152.4)
+		(uuid "cc7e832b-16ce-412b-8b4b-b31d1d80b425")
+	)
+	(no_connect
 		(at 187.96 119.38)
 		(uuid "cebb01e6-8384-47ad-a792-8057832fca06")
 	)
 	(no_connect
 		(at 293.37 123.19)
 		(uuid "e5310da6-4afe-4406-b9b9-ac96cb91a57e")
+	)
+	(no_connect
+		(at 248.92 129.54)
+		(uuid "fb4ddb5b-ccb0-4862-be39-a98347ba1b55")
 	)
 	(wire
 		(pts
@@ -8766,16 +8782,6 @@
 	)
 	(wire
 		(pts
-			(xy 185.42 147.32) (xy 187.96 147.32)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "98f67ea9-11dd-4509-82c3-c778076f209b")
-	)
-	(wire
-		(pts
 			(xy 152.4 99.06) (xy 152.4 96.52)
 		)
 		(stroke
@@ -8813,16 +8819,6 @@
 			(type default)
 		)
 		(uuid "9c51b0a1-b3ed-47d0-89a6-f242be69cf4f")
-	)
-	(wire
-		(pts
-			(xy 187.96 152.4) (xy 185.42 152.4)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "9ce0b7be-fc26-4736-b237-b22085aa62bb")
 	)
 	(wire
 		(pts
@@ -8933,16 +8929,6 @@
 			(type default)
 		)
 		(uuid "b494b0da-189f-4e8b-8b43-a653bb19cf56")
-	)
-	(wire
-		(pts
-			(xy 248.92 129.54) (xy 251.46 129.54)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "b5b73c43-9782-47db-860d-9f265e456f71")
 	)
 	(wire
 		(pts
@@ -9133,16 +9119,6 @@
 			(type default)
 		)
 		(uuid "df1f01aa-2ddc-4770-929d-53e77ccbe8e7")
-	)
-	(wire
-		(pts
-			(xy 185.42 149.86) (xy 187.96 149.86)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "e1e0fa71-d84c-4844-9313-7d6e84c1e494")
 	)
 	(wire
 		(pts
@@ -10269,164 +10245,6 @@
 		)
 	)
 	(symbol
-		(lib_id "oresat-misc:Test-Point-1mm-round")
-		(at 185.42 149.86 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim yes)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "349b5d26-d68d-409f-ab06-84ecbd27455c")
-		(property "Reference" "TP141"
-			(at 183.642 149.098 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Value" "TEST-POINT3X4"
-			(at 187.96 147.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Footprint" "oresat-misc:TestPoint_Pad_D1.0mm"
-			(at 185.42 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 185.42 149.86 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "1mm round SMT test point"
-			(at 185.42 149.86 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "8b0b623f-6c15-4b66-8132-e36c21b79a35")
-		)
-		(instances
-			(project "star-tracker-card"
-				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
-					(reference "TP141")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "oresat-misc:Test-Point-1mm-round")
-		(at 251.46 129.54 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim yes)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "42fec8fc-f8b2-477d-8b03-e6c57b8a41ac")
-		(property "Reference" "TP133"
-			(at 253.238 130.302 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Value" "TEST-POINT3X4"
-			(at 248.92 132.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Footprint" "oresat-misc:TestPoint_Pad_D1.0mm"
-			(at 251.46 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 251.46 129.54 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "1mm round SMT test point"
-			(at 251.46 129.54 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c4e63ba6-d95a-4653-b874-759ea8b548ba")
-		)
-		(instances
-			(project "star-tracker-card"
-				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
-					(reference "TP133")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_Small_US")
 		(at 176.53 119.38 0)
 		(unit 1)
@@ -11206,85 +11024,6 @@
 		)
 	)
 	(symbol
-		(lib_id "oresat-misc:Test-Point-1mm-round")
-		(at 185.42 152.4 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim yes)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "92a0eff3-482f-46d9-85c0-2435d1172f1e")
-		(property "Reference" "TP139"
-			(at 183.642 151.638 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Value" "TEST-POINT3X4"
-			(at 187.96 149.86 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Footprint" "oresat-misc:TestPoint_Pad_D1.0mm"
-			(at 185.42 162.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 185.42 152.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "1mm round SMT test point"
-			(at 185.42 152.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "71de9d49-32e3-4994-acfb-2d3bb53c5b29")
-		)
-		(instances
-			(project "star-tracker-card"
-				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
-					(reference "TP139")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "star-tracker-card-eagle-import:3.3V")
 		(at 172.72 110.49 0)
 		(unit 1)
@@ -12027,85 +11766,6 @@
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
 					(reference "C7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "oresat-misc:Test-Point-1mm-round")
-		(at 185.42 147.32 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim yes)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "e987b72c-697c-4791-ad58-4a5d42e561ab")
-		(property "Reference" "TP138"
-			(at 183.642 146.558 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Value" "TEST-POINT3X4"
-			(at 187.96 144.78 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Footprint" "oresat-misc:TestPoint_Pad_D1.0mm"
-			(at 185.42 157.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 185.42 147.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "1mm round SMT test point"
-			(at 185.42 147.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2daf0a6b-df79-4b0b-bde4-159f4f6a72df")
-		)
-		(instances
-			(project "star-tracker-card"
-				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/180c7308-0a0c-41f6-9c76-108b10aa05c2"
-					(reference "TP138")
 					(unit 1)
 				)
 			)
