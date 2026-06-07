@@ -166,7 +166,7 @@
 		(uuid "2db8d3a1-f894-45f7-8f64-2c96a63197ff")
 		(at 139.7511 104.8036 -90)
 		(property "Reference" "U1"
-			(at 1.3964 -6.7489 180)
+			(at 1.3964 -6.7489 0)
 			(layer "F.SilkS")
 			(uuid "cffbaf2e-e890-4b95-aec6-fe3b80879498")
 			(effects
@@ -175,7 +175,7 @@
 					(thickness 0.125)
 					(bold yes)
 				)
-				(justify right top)
+				(justify left bottom)
 			)
 		)
 		(property "Value" "AR0134CSSM00SPCA0"
@@ -1202,6 +1202,17 @@
 			(uuid "9c66922d-c049-4ae9-ba3e-c257ca7406d1")
 		)
 		(embedded_fonts no)
+		(model "C:/Users/Edward/Desktop/AR0134CSSC00SPCA0-DPBR.stp"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "MountingHole:MountingHole_2.2mm_M2"
 		(layer "F.Cu")
@@ -1429,7 +1440,7 @@
 		(at 142.65 101.5 180)
 		(descr "<b>e0402 (metric 1005) normal 'IPC-B' without silkscreen</b>\n<br>In house package for nominal spacing based on IPC-7351B.\nThis package is identical to 0402-B, but has its tPlace silkscreen layer removed.")
 		(property "Reference" "C9"
-			(at 0.95 -0.25 0)
+			(at -0.8 0.55 0)
 			(layer "B.SilkS")
 			(uuid "f7648612-f7b9-448c-83e4-580e69b24a99")
 			(effects
@@ -1452,7 +1463,7 @@
 				(justify left bottom mirror)
 			)
 		)
-		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/KEM_C1023_X7R_AUTO_SMD"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -1465,7 +1476,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "0.1 µF ±5% 16V Ceramic Capacitor X7R 0402 (1005 Metric)"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -1478,72 +1489,10 @@
 				(justify mirror)
 			)
 		)
-		(property "DIS" "Digikey"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "8170bb27-1c27-45e2-955a-a63a63777699")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "DPN" "399-17548-1-ND"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "21118a9b-3f69-4139-85a9-264d82d4d552")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "MFR" "KEMET"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "f5e18a63-82b3-42a7-bf70-a2dab74bc157")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "MPN" "C0402C104J4RACAUTO"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "83c816e4-5591-40c8-8f47-c3f5d01ddb37")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(property ki_fp_filters "C_*")
 		(path "/fbd40d09-4b83-464b-924e-67ba3510cd5d")
 		(sheetname "/")
 		(sheetfile "star-tracker-camera-board.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start 0.945 0.495)
@@ -1670,14 +1619,25 @@
 			(uuid "f27689c0-b7d5-4d69-98a2-91e8257e19e9")
 		)
 		(embedded_fonts no)
+		(model "C:/Users/Edward/Desktop/RC0402FR-07226RL.STEP"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -90 -0 -0)
+			)
+		)
 	)
 	(footprint "oresat-passives:0402-B-NOSILK"
 		(layer "B.Cu")
 		(uuid "045f6571-9019-442b-84d8-6baacd9b4d7e")
 		(at 134.2 99.2 180)
 		(descr "<b>e0402 (metric 1005) normal 'IPC-B' without silkscreen</b>\n<br>In house package for nominal spacing based on IPC-7351B.\nThis package is identical to 0402-B, but has its tPlace silkscreen layer removed.")
-		(property "Reference" "C3"
-			(at -0.55 -2.25 0)
+		(property "Reference" "C7"
+			(at -0.8 0.55 0)
 			(layer "B.SilkS")
 			(uuid "48689b33-49fa-41f8-9a5c-a831cc9ca511")
 			(effects
@@ -1700,7 +1660,7 @@
 				(justify left bottom mirror)
 			)
 		)
-		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/KEM_C1023_X7R_AUTO_SMD"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -1713,7 +1673,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "0.1 µF ±5% 16V Ceramic Capacitor X7R 0402 (1005 Metric)"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -1726,72 +1686,10 @@
 				(justify mirror)
 			)
 		)
-		(property "DIS" "Digikey"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "aad9a31a-2ac8-492a-9af6-06257047d92f")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "DPN" "399-17548-1-ND"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "223d6c78-7e8a-4a7b-9238-f75d14176f95")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "MFR" "KEMET"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "15569532-bbb9-495e-8b15-c4930b9f1a2b")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "MPN" "C0402C104J4RACAUTO"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "51ec602a-484d-4731-8ea2-25b0313fff36")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(property ki_fp_filters "C_*")
 		(path "/aa6d33c5-135f-41a8-a593-eb464123929f")
 		(sheetname "/")
 		(sheetfile "star-tracker-camera-board.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start 0.945 0.495)
@@ -1918,13 +1816,24 @@
 			(uuid "0452b5a2-f1a2-44e3-a5ab-4fe840df078a")
 		)
 		(embedded_fonts no)
+		(model "C:/Users/Edward/Desktop/RC0402FR-07226RL.STEP"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -90 -0 -0)
+			)
+		)
 	)
 	(footprint "star-tracker-camera-board:TP06R"
 		(layer "B.Cu")
 		(uuid "08730db2-20c6-44d7-97b9-a77f7a31c579")
 		(at 136.2 109.84 180)
 		(descr "TEST PAD")
-		(property "Reference" "TP9"
+		(property "Reference" "TP4"
 			(at 0.75 1.79 90)
 			(unlocked yes)
 			(layer "B.SilkS")
@@ -2007,7 +1916,7 @@
 		(uuid "10964d37-8909-463b-8eb7-e1bfda60b1f1")
 		(at 163.3761 100.6786 90)
 		(descr "<b>0603 (metric 1608) tight 'IPC-C' without silkscreen</b>\n<br>In house package for minimum spacing based on IPC-7351B.\nThis package is identical to 0603-C, but has its tPlace silkscreen layer removed.")
-		(property "Reference" "C11"
+		(property "Reference" "C12"
 			(at -1 0.6989 90)
 			(layer "B.SilkS")
 			(uuid "cc8d307d-d00f-4e66-bbd4-c18e5c87bb11")
@@ -2266,7 +2175,7 @@
 		(uuid "2ce6e30e-e348-429b-9112-43cc92959cc8")
 		(at 154 105.3036 90)
 		(descr "e0402 (metric 1005) normal 'IPC-B' without silkscreen\nIn house package for nominal spacing based on IPC-7351B. This package is identical to 0402-B, but has its tPlace silkscreen layer removed.")
-		(property "Reference" "R3"
+		(property "Reference" "R8"
 			(at 1.6036 0 270)
 			(unlocked yes)
 			(layer "B.SilkS")
@@ -2545,7 +2454,7 @@
 		(uuid "2d6eeb64-1b07-4d65-8fb4-8c4555d21a94")
 		(at 143.15 100.64 -90)
 		(descr "TEST PAD")
-		(property "Reference" "TP7"
+		(property "Reference" "TP2"
 			(at -1.24 -0.75 0)
 			(unlocked yes)
 			(layer "B.SilkS")
@@ -2887,7 +2796,7 @@
 		(uuid "314dab7e-c285-4319-83b9-19670df5f03b")
 		(at 135.5 110.8 180)
 		(descr "<b>0603 (metric 1608) tight 'IPC-C' without silkscreen</b>\n<br>In house package for minimum spacing based on IPC-7351B.\nThis package is identical to 0603-C, but has its tPlace silkscreen layer removed.")
-		(property "Reference" "C12"
+		(property "Reference" "C5"
 			(at 0.6 0.5 0)
 			(layer "B.SilkS")
 			(uuid "84a473f7-506a-4403-b26c-8bf3707cb421")
@@ -3146,8 +3055,8 @@
 		(uuid "317f836e-be32-4d02-9734-00e92b94ddff")
 		(at 134.2 102.6 180)
 		(descr "<b>e0402 (metric 1005) normal 'IPC-B' without silkscreen</b>\n<br>In house package for nominal spacing based on IPC-7351B.\nThis package is identical to 0402-B, but has its tPlace silkscreen layer removed.")
-		(property "Reference" "R10"
-			(at -2.4 -0.25 0)
+		(property "Reference" "R1"
+			(at -0.8 0.55 0)
 			(layer "B.SilkS")
 			(uuid "49f2b9f6-a5c5-4cb3-9cc7-b0c5ec880ae8")
 			(effects
@@ -3170,7 +3079,7 @@
 				(justify left bottom mirror)
 			)
 		)
-		(property "Datasheet" "https://www.seielect.com/catalog/SEI-RMCF_RMCP.pdf"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -3183,7 +3092,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "10 kOhms ±1% 0.063W, 1/16W Chip Resistor 0402 (1005 Metric) Automotive AEC-Q200 Thick Film"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -3196,72 +3105,10 @@
 				(justify mirror)
 			)
 		)
-		(property "DIS" "Digikey"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "a8de572d-3257-456b-b67e-da581ae7f896")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "DPN" "RMCF0402FT10K0CT-ND"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "34d57e67-32df-4450-b587-274126184b95")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "MFR" "Stackpole Electronics"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "a253fe57-ad02-4a77-896a-f570370cd0df")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "MPN" "RMCF0402FT10K0"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "4e9104c6-66de-4b16-9c8d-2c4429f14f02")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(property ki_fp_filters "R_*")
 		(path "/ca4640cc-9b85-487c-ada7-c3a53009ad92")
 		(sheetname "/")
 		(sheetfile "star-tracker-camera-board.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start 0.945 0.495)
@@ -3388,14 +3235,25 @@
 			(uuid "67b8f7d7-a715-4dfd-9173-e425eb92c1ff")
 		)
 		(embedded_fonts no)
+		(model "C:/Users/Edward/Desktop/RC0402FR-07226RL.STEP"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -90 -0 -0)
+			)
+		)
 	)
 	(footprint "oresat-passives:0402-B-NOSILK"
 		(layer "B.Cu")
 		(uuid "35beb336-0a89-4f1f-a507-d8295ca5a4d9")
 		(at 152.83 105.3 90)
 		(descr "<b>e0402 (metric 1005) normal 'IPC-B' without silkscreen</b>\n<br>In house package for nominal spacing based on IPC-7351B.\nThis package is identical to 0402-B, but has its tPlace silkscreen layer removed.")
-		(property "Reference" "R7"
-			(at 2.1 0.35 270)
+		(property "Reference" "R6"
+			(at -0.8 0.55 270)
 			(layer "B.SilkS")
 			(uuid "0df6b5b4-9598-4f87-b358-dedc12f75275")
 			(effects
@@ -3418,7 +3276,7 @@
 				(justify left bottom mirror)
 			)
 		)
-		(property "Datasheet" "https://www.seielect.com/catalog/SEI-RMCF_RMCP.pdf"
+		(property "Datasheet" ""
 			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
@@ -3431,7 +3289,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "4.7 kOhms ±1% 0.063W, 1/16W Chip Resistor 0402 (1005 Metric) Automotive AEC-Q200 Thick Film"
+		(property "Description" ""
 			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
@@ -3444,72 +3302,10 @@
 				(justify mirror)
 			)
 		)
-		(property "DIS" "Digikey"
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "5177ae22-7aa5-42c5-8017-9dd20e20ac07")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "DPN" "RMCF0402FT4K70CT-ND"
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "794389e1-f8b6-4616-bf62-86a3e4d80c0d")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "MFR" "Stackpole Electronics"
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "c83373a1-2bcf-4561-bcc1-bd4827059714")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "MPN" "RMCF0402FT4K70"
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "6d7a73d2-468c-4442-874a-f27ef3a1fa15")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(property ki_fp_filters "R_*")
 		(path "/67ba85c1-b044-4faf-a44b-12f12dcbb454")
 		(sheetname "/")
 		(sheetfile "star-tracker-camera-board.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start 0.945 -0.495)
@@ -3636,14 +3432,25 @@
 			(uuid "abdea6b3-88f0-4c65-a134-af503a9271b3")
 		)
 		(embedded_fonts no)
+		(model "C:/Users/Edward/Desktop/RC0402FR-07226RL.STEP"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -90 -0 -0)
+			)
+		)
 	)
 	(footprint "oresat-passives:0402-B-NOSILK"
 		(layer "B.Cu")
 		(uuid "38d61d1a-954c-4558-a709-d8e20595ca9e")
 		(at 144.3 103.2 90)
 		(descr "<b>e0402 (metric 1005) normal 'IPC-B' without silkscreen</b>\n<br>In house package for nominal spacing based on IPC-7351B.\nThis package is identical to 0402-B, but has its tPlace silkscreen layer removed.")
-		(property "Reference" "R12"
-			(at -1 -1.05 180)
+		(property "Reference" "R4"
+			(at -0.8 0.55 270)
 			(layer "B.SilkS")
 			(uuid "ef428093-81b6-4266-8e57-b19d9fd94404")
 			(effects
@@ -3651,11 +3458,11 @@
 					(size 0.5 0.5)
 					(thickness 0.125)
 				)
-				(justify right top mirror)
+				(justify left bottom mirror)
 			)
 		)
 		(property "Value" "10k"
-			(at -0.8 -1.35 90)
+			(at -0.8 -1.35 270)
 			(layer "B.Fab")
 			(uuid "6153e796-7a60-4ba7-a342-38aaf0980f91")
 			(effects
@@ -3663,11 +3470,11 @@
 					(size 0.68 0.68)
 					(thickness 0.12)
 				)
-				(justify right top mirror)
+				(justify left bottom mirror)
 			)
 		)
-		(property "Datasheet" "https://www.seielect.com/catalog/SEI-RMCF_RMCP.pdf"
-			(at 0 0 90)
+		(property "Datasheet" ""
+			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "8c1e8390-63ca-41c6-b76a-10bf86cfe918")
@@ -3679,8 +3486,8 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "10 kOhms ±1% 0.063W, 1/16W Chip Resistor 0402 (1005 Metric) Automotive AEC-Q200 Thick Film"
-			(at 0 0 90)
+		(property "Description" ""
+			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "ee6f15dd-f042-4e5e-8163-446ece0d72ab")
@@ -3692,72 +3499,10 @@
 				(justify mirror)
 			)
 		)
-		(property "DIS" "Digikey"
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "6226e2c1-81f7-49d0-802b-ab400ac8257a")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "DPN" "RMCF0402FT10K0CT-ND"
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "a000674e-2fd2-42bd-beda-a4ae80a477ce")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "MFR" "Stackpole Electronics"
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "a25125c7-385c-4437-9d61-fa6d27e91134")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "MPN" "RMCF0402FT10K0"
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "06b69fab-2a9c-4db2-949f-dacda98c1dd4")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(property ki_fp_filters "R_*")
 		(path "/2f064113-c8d8-45ac-827b-f93fc26af05a")
 		(sheetname "/")
 		(sheetfile "star-tracker-camera-board.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start 0.945 -0.495)
@@ -3884,6 +3629,17 @@
 			(uuid "886a36e0-94fa-4202-8fc6-3936da869146")
 		)
 		(embedded_fonts no)
+		(model "C:/Users/Edward/Desktop/RC0402FR-07226RL.STEP"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -90 -0 -0)
+			)
+		)
 	)
 	(footprint "star-tracker-camera-board:OSC_KYOCERA_KC2520B"
 		(layer "B.Cu")
@@ -4093,7 +3849,7 @@
 		(uuid "3c132c2f-8f95-4629-a026-c28cb17f8887")
 		(at 139.3 110.25 -90)
 		(descr "<b>0603 (metric 1608) tight 'IPC-C' without silkscreen</b>\n<br>In house package for minimum spacing based on IPC-7351B.\nThis package is identical to 0603-C, but has its tPlace silkscreen layer removed.")
-		(property "Reference" "C16"
+		(property "Reference" "C6"
 			(at -2.9 -0.25 90)
 			(layer "B.SilkS")
 			(uuid "cc9206f6-c5e2-4616-9c42-d6e1c3363311")
@@ -4352,7 +4108,7 @@
 		(uuid "4b9e0b17-2e2e-4b10-b140-149e970d3e3c")
 		(at 138.25 109.08 180)
 		(descr "TEST PAD")
-		(property "Reference" "TP10"
+		(property "Reference" "TP5"
 			(at 0.3 0.38 90)
 			(unlocked yes)
 			(layer "B.SilkS")
@@ -4435,7 +4191,7 @@
 		(uuid "4ef83e2b-04e6-430d-a747-20477273fe81")
 		(at 136 99.8 180)
 		(descr "TEST PAD")
-		(property "Reference" "TP6"
+		(property "Reference" "TP1"
 			(at -1 -1.05 0)
 			(unlocked yes)
 			(layer "B.SilkS")
@@ -4518,7 +4274,7 @@
 		(uuid "505d2040-62f4-41c1-ba88-60383abc6507")
 		(at 159.1261 100.6786 90)
 		(descr "<b>0603 (metric 1608) tight 'IPC-C' without silkscreen</b>\n<br>In house package for minimum spacing based on IPC-7351B.\nThis package is identical to 0603-C, but has its tPlace silkscreen layer removed.")
-		(property "Reference" "C7"
+		(property "Reference" "C10"
 			(at -1.1714 0.3239 270)
 			(layer "B.SilkS")
 			(uuid "caa39105-a682-44d8-adf5-e7892b570f8f")
@@ -4777,7 +4533,7 @@
 		(uuid "5219fc4f-da97-4f98-8a92-610ecb2b3835")
 		(at 140.4 99.8 90)
 		(descr "<b>0603 (metric 1608) tight 'IPC-C' without silkscreen</b>\n<br>In house package for minimum spacing based on IPC-7351B.\nThis package is identical to 0603-C, but has its tPlace silkscreen layer removed.")
-		(property "Reference" "C4"
+		(property "Reference" "C3"
 			(at 1 0.75 180)
 			(layer "B.SilkS")
 			(uuid "1eb54e2d-583f-43c0-9ff3-09ce1a1eeb99")
@@ -5554,8 +5310,8 @@
 		(uuid "5d6a7b9a-d921-4051-aa70-5b892f9c2f2b")
 		(at 151.9386 99.6786 -90)
 		(descr "<b>e0402 (metric 1005) normal 'IPC-B' without silkscreen</b>\n<br>In house package for nominal spacing based on IPC-7351B.\nThis package is identical to 0402-B, but has its tPlace silkscreen layer removed.")
-		(property "Reference" "C14"
-			(at 0.7214 -0.3614 90)
+		(property "Reference" "C18"
+			(at -0.8 0.55 90)
 			(layer "B.SilkS")
 			(uuid "44b5bbcc-8f21-4271-bd83-0c65b808c69a")
 			(effects
@@ -5578,7 +5334,7 @@
 				(justify left bottom mirror)
 			)
 		)
-		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRT155C81E105KE13-01.pdf"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "B.Fab")
 			(hide yes)
@@ -5591,7 +5347,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "1 µF ±10% 25V Ceramic Capacitor X6S 0402 (1005 Metric)"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "B.Fab")
 			(hide yes)
@@ -5604,72 +5360,10 @@
 				(justify mirror)
 			)
 		)
-		(property "DIS" "DigiKey"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "9bef012b-d86f-4173-887e-d8626f061118")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "DPN" "490-18215-1-ND"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "893f8b39-9bda-476c-a738-f99c8b4dc824")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "MFR" "Murata Electronics"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "906ffcff-15d4-4597-a1ba-a94303bb352d")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "MPN" "GRT155C81E105KE13D"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "c49953de-e711-40d7-a9ab-c0f298eff60f")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(property ki_fp_filters "C_*")
 		(path "/c406e47a-6128-437a-8de2-5b7a97fa9012")
 		(sheetname "/")
 		(sheetfile "star-tracker-camera-board.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.945 0.495)
@@ -5796,14 +5490,25 @@
 			(uuid "2f6b741f-522d-4773-b731-7ccf315af618")
 		)
 		(embedded_fonts no)
+		(model "C:/Users/Edward/Desktop/RC0402FR-07226RL.STEP"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -90 -0 -0)
+			)
+		)
 	)
 	(footprint "oresat-passives:0402-B-NOSILK"
 		(layer "B.Cu")
 		(uuid "6ba11140-d859-42fd-a27b-cb87d7b38b84")
 		(at 160.5011 102.3661 180)
 		(descr "<b>e0402 (metric 1005) normal 'IPC-B' without silkscreen</b>\n<br>In house package for nominal spacing based on IPC-7351B.\nThis package is identical to 0402-B, but has its tPlace silkscreen layer removed.")
-		(property "Reference" "C10"
-			(at -0.6489 -1.0839 0)
+		(property "Reference" "C16"
+			(at -0.8 0.55 0)
 			(layer "B.SilkS")
 			(uuid "0a36dfaa-dabc-4f6c-a187-3fbf36014165")
 			(effects
@@ -5826,7 +5531,7 @@
 				(justify left bottom mirror)
 			)
 		)
-		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRT155C81E105KE13-01.pdf"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -5839,7 +5544,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "1 µF ±10% 25V Ceramic Capacitor X6S 0402 (1005 Metric)"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -5852,72 +5557,10 @@
 				(justify mirror)
 			)
 		)
-		(property "DIS" "DigiKey"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "10e28bc9-bf26-4d63-bbd9-c09592e8c565")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "DPN" "490-18215-1-ND"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "128b93fb-41fa-4990-affc-eb7c9af96eef")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "MFR" "Murata Electronics"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "931203d9-db7d-49cf-8c88-606f13fdd333")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "MPN" "GRT155C81E105KE13D"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "91885163-58d3-4b02-803d-c0d905499e07")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(property ki_fp_filters "C_*")
 		(path "/4501e859-0769-403e-ba61-19d6dd596046")
 		(sheetname "/")
 		(sheetfile "star-tracker-camera-board.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start 0.945 0.495)
@@ -6044,14 +5687,25 @@
 			(uuid "910a0d9a-7171-4917-abb1-89614b8c95d4")
 		)
 		(embedded_fonts no)
+		(model "C:/Users/Edward/Desktop/RC0402FR-07226RL.STEP"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -90 -0 -0)
+			)
+		)
 	)
 	(footprint "oresat-passives:0402-B-NOSILK"
 		(layer "B.Cu")
 		(uuid "7546aacd-a83e-468a-ae10-7e1ce50445da")
 		(at 136.1 101.4)
 		(descr "<b>e0402 (metric 1005) normal 'IPC-B' without silkscreen</b>\n<br>In house package for nominal spacing based on IPC-7351B.\nThis package is identical to 0402-B, but has its tPlace silkscreen layer removed.")
-		(property "Reference" "R9"
-			(at 0.85 -0.3 0)
+		(property "Reference" "R2"
+			(at -0.8 0.55 180)
 			(layer "B.SilkS")
 			(uuid "9b495d81-a9d2-48e0-8670-27667bb2f26f")
 			(effects
@@ -6059,11 +5713,11 @@
 					(size 0.5 0.5)
 					(thickness 0.125)
 				)
-				(justify right top mirror)
+				(justify left bottom mirror)
 			)
 		)
 		(property "Value" "10k"
-			(at -0.8 -1.35 0)
+			(at -0.8 -1.35 180)
 			(layer "B.Fab")
 			(uuid "cd6f1e47-9ab6-4e4c-a954-62214ab37a6c")
 			(effects
@@ -6071,11 +5725,11 @@
 					(size 0.68 0.68)
 					(thickness 0.12)
 				)
-				(justify right top mirror)
+				(justify left bottom mirror)
 			)
 		)
-		(property "Datasheet" "https://www.seielect.com/catalog/SEI-RMCF_RMCP.pdf"
-			(at 0 0 0)
+		(property "Datasheet" ""
+			(at 0 0 180)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "2518936b-0588-4672-a99a-ec8316111376")
@@ -6087,8 +5741,8 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "10 kOhms ±1% 0.063W, 1/16W Chip Resistor 0402 (1005 Metric) Automotive AEC-Q200 Thick Film"
-			(at 0 0 0)
+		(property "Description" ""
+			(at 0 0 180)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "d59fedf9-e6c7-4a6e-9433-b78901578bee")
@@ -6100,72 +5754,10 @@
 				(justify mirror)
 			)
 		)
-		(property "DIS" "Digikey"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "044ee099-022a-444c-ba1a-fe0b1edbe532")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "DPN" "RMCF0402FT10K0CT-ND"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "0a40fb85-91f8-4990-9a20-5a7676d41454")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "MFR" "Stackpole Electronics"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "7f5755e2-dfe5-43ca-a219-f3d9ff4f2b46")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "MPN" "RMCF0402FT10K0"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "f2fcb4da-b821-4248-b2c8-6feded6af24f")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(property ki_fp_filters "R_*")
 		(path "/0d039c7e-e301-4d14-a038-dffff59795c7")
 		(sheetname "/")
 		(sheetfile "star-tracker-camera-board.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.945 -0.495)
@@ -6292,14 +5884,25 @@
 			(uuid "8d8865a1-2c15-4d42-b73d-85a4a0bafa02")
 		)
 		(embedded_fonts no)
+		(model "C:/Users/Edward/Desktop/RC0402FR-07226RL.STEP"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -90 -0 -0)
+			)
+		)
 	)
 	(footprint "oresat-passives:0402-B-NOSILK"
 		(layer "B.Cu")
 		(uuid "7cdca5f2-558b-42d9-a69e-b1e8c136b311")
 		(at 156.4386 102.3661)
 		(descr "<b>e0402 (metric 1005) normal 'IPC-B' without silkscreen</b>\n<br>In house package for nominal spacing based on IPC-7351B.\nThis package is identical to 0402-B, but has its tPlace silkscreen layer removed.")
-		(property "Reference" "C6"
-			(at -0.9386 0.3089 180)
+		(property "Reference" "C14"
+			(at -0.8 0.55 180)
 			(layer "B.SilkS")
 			(uuid "1226d1e2-63f7-47f7-9555-4c78644706fc")
 			(effects
@@ -6322,7 +5925,7 @@
 				(justify left bottom mirror)
 			)
 		)
-		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRT155C81E105KE13-01.pdf"
+		(property "Datasheet" ""
 			(at 0 0 180)
 			(layer "B.Fab")
 			(hide yes)
@@ -6335,7 +5938,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "1 µF ±10% 25V Ceramic Capacitor X6S 0402 (1005 Metric)"
+		(property "Description" ""
 			(at 0 0 180)
 			(layer "B.Fab")
 			(hide yes)
@@ -6348,72 +5951,10 @@
 				(justify mirror)
 			)
 		)
-		(property "DIS" "DigiKey"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "4865c612-6d5f-4fa0-b97f-8b6bbc3e3241")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "DPN" "490-18215-1-ND"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "f0447e41-d814-4e83-b16b-42c0bf5c86a6")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "MFR" "Murata Electronics"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "290dfde3-6ea5-4618-9d5a-aa99b67161cb")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "MPN" "GRT155C81E105KE13D"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "575e4d3a-2f71-427b-999c-b1b049e55171")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(property ki_fp_filters "C_*")
 		(path "/970b5fd2-7392-42bf-901e-ec5548d40579")
 		(sheetname "/")
 		(sheetfile "star-tracker-camera-board.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.945 -0.495)
@@ -6540,14 +6081,25 @@
 			(uuid "a9631c8b-2120-4768-889a-7445ce088324")
 		)
 		(embedded_fonts no)
+		(model "C:/Users/Edward/Desktop/RC0402FR-07226RL.STEP"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -90 -0 -0)
+			)
+		)
 	)
 	(footprint "oresat-passives:0402-B-NOSILK"
 		(layer "B.Cu")
 		(uuid "83b798d3-0887-431d-a0c2-1ed9739c3e9e")
 		(at 151.8 105.3 90)
 		(descr "<b>e0402 (metric 1005) normal 'IPC-B' without silkscreen</b>\n<br>In house package for nominal spacing based on IPC-7351B.\nThis package is identical to 0402-B, but has its tPlace silkscreen layer removed.")
-		(property "Reference" "R8"
-			(at 2.1 0.3 270)
+		(property "Reference" "R5"
+			(at -0.8 0.55 270)
 			(layer "B.SilkS")
 			(uuid "c915ee07-dfb1-4028-9332-d5796694f28e")
 			(effects
@@ -6570,7 +6122,7 @@
 				(justify left bottom mirror)
 			)
 		)
-		(property "Datasheet" "https://www.seielect.com/catalog/SEI-RMCF_RMCP.pdf"
+		(property "Datasheet" ""
 			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
@@ -6583,7 +6135,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "4.7 kOhms ±1% 0.063W, 1/16W Chip Resistor 0402 (1005 Metric) Automotive AEC-Q200 Thick Film"
+		(property "Description" ""
 			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
@@ -6596,72 +6148,10 @@
 				(justify mirror)
 			)
 		)
-		(property "DIS" "Digikey"
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "bc5a50d4-e325-45ce-9a8c-371f40e6e495")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "DPN" "RMCF0402FT4K70CT-ND"
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "ddbddc8c-12c9-4ba5-8f11-ffd53d397fb8")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "MFR" "Stackpole Electronics"
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "d5feddb4-3e7a-462f-a116-05b6142fb0a9")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "MPN" "RMCF0402FT4K70"
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "62adbd76-4687-496e-9481-be05cc223b83")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(property ki_fp_filters "R_*")
 		(path "/4185c2db-d3c7-4792-9c93-de33c1d6940e")
 		(sheetname "/")
 		(sheetfile "star-tracker-camera-board.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start 0.945 -0.495)
@@ -6788,14 +6278,25 @@
 			(uuid "42d138de-2ff2-403c-a349-659c71ac2713")
 		)
 		(embedded_fonts no)
+		(model "C:/Users/Edward/Desktop/RC0402FR-07226RL.STEP"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -90 -0 -0)
+			)
+		)
 	)
 	(footprint "oresat-passives:0402-B-NOSILK"
 		(layer "B.Cu")
 		(uuid "890a0cc7-6ebb-4c88-8d5d-8f364dbb6f78")
 		(at 157.1 105.3036 90)
 		(descr "<b>e0402 (metric 1005) normal 'IPC-B' without silkscreen</b>\n<br>In house package for nominal spacing based on IPC-7351B.\nThis package is identical to 0402-B, but has its tPlace silkscreen layer removed.")
-		(property "Reference" "R5"
-			(at 0.0036 1.6989 180)
+		(property "Reference" "R10"
+			(at -0.8 0.55 270)
 			(layer "B.SilkS")
 			(uuid "44ff1b19-89a4-4825-bb77-414c88c072a4")
 			(effects
@@ -6818,7 +6319,7 @@
 				(justify left bottom mirror)
 			)
 		)
-		(property "Datasheet" "https://www.seielect.com/catalog/SEI-RMCF_RMCP.pdf"
+		(property "Datasheet" ""
 			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
@@ -6831,7 +6332,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "10 kOhms ±1% 0.063W, 1/16W Chip Resistor 0402 (1005 Metric) Automotive AEC-Q200 Thick Film"
+		(property "Description" ""
 			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
@@ -6844,72 +6345,10 @@
 				(justify mirror)
 			)
 		)
-		(property "DIS" "Digikey"
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "777a6a17-0d35-4a31-bf2f-54f7b082dd5f")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "DPN" "RMCF0402FT10K0CT-ND"
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "af7b8b22-050a-4967-966c-16f7c0ab0c2f")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "MFR" "Stackpole Electronics"
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "285e01ea-ffd5-438d-ae2e-971246b73b43")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "MPN" "RMCF0402FT10K0"
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "7017eb68-2a73-4f7c-8911-83206102f0cf")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(property ki_fp_filters "R_*")
 		(path "/f5b12bbb-fa61-4228-a8c8-e364136514ea")
 		(sheetname "/")
 		(sheetfile "star-tracker-camera-board.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start 0.945 -0.495)
@@ -7036,6 +6475,17 @@
 			(uuid "9d12f92d-c462-4f25-b6b1-9ce5c2c2b6df")
 		)
 		(embedded_fonts no)
+		(model "C:/Users/Edward/Desktop/RC0402FR-07226RL.STEP"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -90 -0 -0)
+			)
+		)
 	)
 	(footprint "star-tracker-camera-board:DRV6_1P6X1"
 		(layer "B.Cu")
@@ -7971,13 +7421,24 @@
 			(uuid "004fe994-0e17-4afd-8b6c-4da6714b7583")
 		)
 		(embedded_fonts no)
+		(model "C:/Users/Edward/Desktop/DRV0006A.stp"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "oresat-passives:0603-C-NOSILK"
 		(layer "B.Cu")
 		(uuid "9056c504-e7ad-46be-b608-fd82a20dd900")
 		(at 142.4625 102.5625 180)
 		(descr "<b>0603 (metric 1608) tight 'IPC-C' without silkscreen</b>\n<br>In house package for minimum spacing based on IPC-7351B.\nThis package is identical to 0603-C, but has its tPlace silkscreen layer removed.")
-		(property "Reference" "C8"
+		(property "Reference" "C4"
 			(at 1.1625 -0.1875 0)
 			(layer "B.SilkS")
 			(uuid "fe8934ed-61de-4bae-9068-cb0bb0bec265")
@@ -8236,8 +7697,8 @@
 		(uuid "93bc7b5b-e7bd-476c-a01a-fd1b2a8e8859")
 		(at 137.75 109.95 180)
 		(descr "<b>e0402 (metric 1005) normal 'IPC-B' without silkscreen</b>\n<br>In house package for nominal spacing based on IPC-7351B.\nThis package is identical to 0402-B, but has its tPlace silkscreen layer removed.")
-		(property "Reference" "C17"
-			(at -0.1 1.3 180)
+		(property "Reference" "C13"
+			(at -0.8 0.55 0)
 			(layer "B.SilkS")
 			(uuid "53bc268d-31c3-473d-9fc2-93885e3e6c9f")
 			(effects
@@ -8260,7 +7721,7 @@
 				(justify left bottom mirror)
 			)
 		)
-		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/KEM_C1023_X7R_AUTO_SMD"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -8273,7 +7734,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "0.1 µF ±5% 16V Ceramic Capacitor X7R 0402 (1005 Metric)"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -8286,72 +7747,10 @@
 				(justify mirror)
 			)
 		)
-		(property "DIS" "Digikey"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "82257f2d-551c-4fb3-bab7-a2bce31a122d")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "DPN" "399-17548-1-ND"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "c6fbe0f3-8028-43b6-a390-989c7fc11087")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "MFR" "KEMET"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "04c2e1e6-a691-489e-b95b-73ab7aafe343")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "MPN" "C0402C104J4RACAUTO"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "79768af1-7146-413b-a53a-6e12f9175d7f")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(property ki_fp_filters "C_*")
 		(path "/6c822e45-faaa-4ed1-80b8-6c2624106d5a")
 		(sheetname "/")
 		(sheetfile "star-tracker-camera-board.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start 0.945 0.495)
@@ -8478,14 +7877,25 @@
 			(uuid "351cf867-a1cf-4c39-b938-beb3bad02b82")
 		)
 		(embedded_fonts no)
+		(model "C:/Users/Edward/Desktop/RC0402FR-07226RL.STEP"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -90 -0 -0)
+			)
+		)
 	)
 	(footprint "oresat-passives:0402-B-NOSILK"
 		(layer "B.Cu")
 		(uuid "97d1eac2-cf19-4548-8f3e-78589790c053")
 		(at 134.2 103.6 180)
 		(descr "<b>e0402 (metric 1005) normal 'IPC-B' without silkscreen</b>\n<br>In house package for nominal spacing based on IPC-7351B.\nThis package is identical to 0402-B, but has its tPlace silkscreen layer removed.")
-		(property "Reference" "R11"
-			(at -1 0.25 0)
+		(property "Reference" "R3"
+			(at -0.8 0.55 0)
 			(layer "B.SilkS")
 			(uuid "9a093bb4-4fff-4aa2-abce-bbea98699381")
 			(effects
@@ -8493,7 +7903,7 @@
 					(size 0.5 0.5)
 					(thickness 0.125)
 				)
-				(justify right top mirror)
+				(justify left bottom mirror)
 			)
 		)
 		(property "Value" "10k"
@@ -8508,7 +7918,7 @@
 				(justify left bottom mirror)
 			)
 		)
-		(property "Datasheet" "https://www.seielect.com/catalog/SEI-RMCF_RMCP.pdf"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -8521,7 +7931,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "10 kOhms ±1% 0.063W, 1/16W Chip Resistor 0402 (1005 Metric) Automotive AEC-Q200 Thick Film"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -8534,72 +7944,10 @@
 				(justify mirror)
 			)
 		)
-		(property "DIS" "Digikey"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "15684f79-8f83-4fda-bd10-79e4d4e2145a")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "DPN" "RMCF0402FT10K0CT-ND"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "f272a6d3-43ad-45a5-b78f-8428e0a39584")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "MFR" "Stackpole Electronics"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "0c3bf1f0-f617-4b96-bfe9-1709e1d3bc7c")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "MPN" "RMCF0402FT10K0"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "f17f12fb-32ed-469a-a44f-e45e54739c12")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(property ki_fp_filters "R_*")
 		(path "/d3ac5ad7-e7fe-4718-b30f-04c4f3f109ce")
 		(sheetname "/")
 		(sheetfile "star-tracker-camera-board.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start 0.945 0.495)
@@ -8726,14 +8074,25 @@
 			(uuid "2f19c768-0532-4f76-a3fb-0b947f92054d")
 		)
 		(embedded_fonts no)
+		(model "C:/Users/Edward/Desktop/RC0402FR-07226RL.STEP"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -90 -0 -0)
+			)
+		)
 	)
 	(footprint "oresat-passives:0402-B-NOSILK"
 		(layer "B.Cu")
 		(uuid "a1f47dfb-28e5-4c04-840b-6a3edb7ba226")
 		(at 137.75 110.95)
 		(descr "<b>e0402 (metric 1005) normal 'IPC-B' without silkscreen</b>\n<br>In house package for nominal spacing based on IPC-7351B.\nThis package is identical to 0402-B, but has its tPlace silkscreen layer removed.")
-		(property "Reference" "C13"
-			(at -1.4 -2.1 0)
+		(property "Reference" "C11"
+			(at -0.8 0.55 180)
 			(layer "B.SilkS")
 			(uuid "bc16b05c-c2fd-428a-b2c2-a2c892b1a696")
 			(effects
@@ -8741,11 +8100,11 @@
 					(size 0.5 0.5)
 					(thickness 0.125)
 				)
-				(justify right top mirror)
+				(justify left bottom mirror)
 			)
 		)
 		(property "Value" "0.1uF"
-			(at -0.8 -1.35 0)
+			(at -0.8 -1.35 180)
 			(layer "B.Fab")
 			(uuid "19a28f72-db6c-45fb-b776-ac3adb84e1ca")
 			(effects
@@ -8753,11 +8112,11 @@
 					(size 0.68 0.68)
 					(thickness 0.12)
 				)
-				(justify right top mirror)
+				(justify left bottom mirror)
 			)
 		)
-		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/KEM_C1023_X7R_AUTO_SMD"
-			(at 0 0 0)
+		(property "Datasheet" ""
+			(at 0 0 180)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "9c31b126-9556-4418-a5bb-cc5cafc6f165")
@@ -8769,8 +8128,8 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "0.1 µF ±5% 16V Ceramic Capacitor X7R 0402 (1005 Metric)"
-			(at 0 0 0)
+		(property "Description" ""
+			(at 0 0 180)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "ba065048-2158-46cc-94d7-562e70b87ee0")
@@ -8782,72 +8141,10 @@
 				(justify mirror)
 			)
 		)
-		(property "DIS" "Digikey"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "685dadda-4a91-4565-abf2-cdf721746b73")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "DPN" "399-17548-1-ND"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "54f970a2-5389-4155-a072-fadab1a838f2")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "MFR" "KEMET"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "73441908-103f-48c1-b536-758d2bb05c71")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "MPN" "C0402C104J4RACAUTO"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "79f68fb2-1e16-4f3f-9a0f-a43c80d0571c")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(property ki_fp_filters "C_*")
 		(path "/f7e0ff0e-50f2-400c-ad0d-6f1654ba0f81")
 		(sheetname "/")
 		(sheetfile "star-tracker-camera-board.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.945 -0.495)
@@ -8974,14 +8271,25 @@
 			(uuid "9de7946a-89b4-497d-a26b-f0a721cb4e7b")
 		)
 		(embedded_fonts no)
+		(model "C:/Users/Edward/Desktop/RC0402FR-07226RL.STEP"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -90 -0 -0)
+			)
+		)
 	)
 	(footprint "oresat-passives:0402-B-NOSILK"
 		(layer "B.Cu")
 		(uuid "a75fdd95-5f1a-4610-951f-f5c4fc616381")
 		(at 144.3 101.2 -90)
 		(descr "<b>e0402 (metric 1005) normal 'IPC-B' without silkscreen</b>\n<br>In house package for nominal spacing based on IPC-7351B.\nThis package is identical to 0402-B, but has its tPlace silkscreen layer removed.")
-		(property "Reference" "R2"
-			(at -2.2 -0.25 90)
+		(property "Reference" "R7"
+			(at -0.8 0.55 90)
 			(layer "B.SilkS")
 			(uuid "4eb4bac1-927a-4946-ba8a-b9c212b11bb1")
 			(effects
@@ -9004,7 +8312,7 @@
 				(justify left bottom mirror)
 			)
 		)
-		(property "Datasheet" "https://www.seielect.com/catalog/SEI-RMCF_RMCP.pdf"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "B.Fab")
 			(hide yes)
@@ -9017,7 +8325,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "100 Ohms ±1% 0.063W, 1/16W Chip Resistor 0402 (1005 Metric) Automotive AEC-Q200 Thick Film"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "B.Fab")
 			(hide yes)
@@ -9030,72 +8338,10 @@
 				(justify mirror)
 			)
 		)
-		(property "DIS" "Digikey"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "9b4c7426-1389-4b58-bbc8-83994fd4365f")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "DPN" "RMCF0402FT100RCT-ND"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "61d25403-65d9-4aa1-8b22-a80592e0007e")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "MFR" "Stackpole Electronics Inc"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "808f2697-a3b7-40a6-8a9c-f2c1d8b89688")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "MPN" "RMCF0402FT100R"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "4f3ca904-1722-4d15-aa81-c8166ba79c1b")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(property ki_fp_filters "R_*")
 		(path "/309341e8-e539-4b37-9e66-c6cb98081df4")
 		(sheetname "/")
 		(sheetfile "star-tracker-camera-board.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.945 0.495)
@@ -9222,13 +8468,24 @@
 			(uuid "9afc6355-629f-4c4e-8ae2-980d28bdb1b4")
 		)
 		(embedded_fonts no)
+		(model "C:/Users/Edward/Desktop/RC0402FR-07226RL.STEP"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -90 -0 -0)
+			)
+		)
 	)
 	(footprint "star-tracker-camera-board:.0402-B-NOSILK"
 		(layer "B.Cu")
 		(uuid "ab6daa23-2395-4bed-b060-c2c6df5acdf3")
 		(at 156.1 105.3036 -90)
 		(descr "e0402 (metric 1005) normal 'IPC-B' without silkscreen\nIn house package for nominal spacing based on IPC-7351B. This package is identical to 0402-B, but has its tPlace silkscreen layer removed.")
-		(property "Reference" "R6"
+		(property "Reference" "R11"
 			(at -1.5036 0 90)
 			(unlocked yes)
 			(layer "B.SilkS")
@@ -9507,8 +8764,8 @@
 		(uuid "b27f0fe7-4c54-4b98-929e-35273dcb0f55")
 		(at 155 105.3036 -90)
 		(descr "<b>e0402 (metric 1005) normal 'IPC-B' without silkscreen</b>\n<br>In house package for nominal spacing based on IPC-7351B.\nThis package is identical to 0402-B, but has its tPlace silkscreen layer removed.")
-		(property "Reference" "R4"
-			(at -2.1036 -0.3511 270)
+		(property "Reference" "R9"
+			(at -0.8 0.55 90)
 			(layer "B.SilkS")
 			(uuid "207207bb-9d7e-4ea3-8ab8-dc268547be4d")
 			(effects
@@ -9531,7 +8788,7 @@
 				(justify left bottom mirror)
 			)
 		)
-		(property "Datasheet" "https://www.seielect.com/catalog/SEI-RMCF_RMCP.pdf"
+		(property "Datasheet" ""
 			(at 0 0 90)
 			(layer "B.Fab")
 			(hide yes)
@@ -9544,7 +8801,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "10 kOhms ±1% 0.063W, 1/16W Chip Resistor 0402 (1005 Metric) Automotive AEC-Q200 Thick Film"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "B.Fab")
 			(hide yes)
@@ -9557,72 +8814,10 @@
 				(justify mirror)
 			)
 		)
-		(property "DIS" "Digikey"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "979d01f0-2e78-467a-98d5-943056feca2f")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "DPN" "RMCF0402FT10K0CT-ND"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "a05d4d5b-ca81-48ae-bd3e-3039b2f367fd")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "MFR" "Stackpole Electronics"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "1a421a39-554f-451e-89d3-5f3d3496f5b4")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "MPN" "RMCF0402FT10K0"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "82c02e5d-6317-4c96-8f07-f89e18538c7a")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(property ki_fp_filters "R_*")
 		(path "/52a80099-46b9-468c-9303-dea6987537c2")
 		(sheetname "/")
 		(sheetfile "star-tracker-camera-board.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.945 0.495)
@@ -9749,6 +8944,17 @@
 			(uuid "0900fa3a-cf63-4e0b-b26e-934440beb233")
 		)
 		(embedded_fonts no)
+		(model "C:/Users/Edward/Desktop/RC0402FR-07226RL.STEP"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -90 -0 -0)
+			)
+		)
 	)
 	(footprint "star-tracker-camera-board:TE_3-1734742-6"
 		(locked yes)
@@ -11184,13 +10390,24 @@
 			(uuid "2065dceb-84f3-4585-ad4f-5017d6e01215")
 		)
 		(embedded_fonts no)
+		(model "C:/Users/Edward/Desktop/c-3-2492144-6-1-3d.stp"
+			(offset
+				(xyz -1 0 5)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -0 -0 -0)
+			)
+		)
 	)
 	(footprint "oresat-passives:0603-C-NOSILK"
 		(layer "B.Cu")
 		(uuid "b9d7324c-2f86-421d-aeb1-b2c4968f2ed9")
 		(at 153.6261 100.6786 90)
 		(descr "<b>0603 (metric 1608) tight 'IPC-C' without silkscreen</b>\n<br>In house package for minimum spacing based on IPC-7351B.\nThis package is identical to 0603-C, but has its tPlace silkscreen layer removed.")
-		(property "Reference" "C18"
+		(property "Reference" "C17"
 			(at 0.2786 -0.6261 270)
 			(layer "B.SilkS")
 			(uuid "ef751cfe-3215-421d-b777-43f9146cfcf8")
@@ -12378,13 +11595,24 @@
 			(uuid "d9d02e39-9ff7-4940-9fc4-d53bf83ff416")
 		)
 		(embedded_fonts no)
+		(model "C:/Users/Edward/Desktop/DRV0006A.stp"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "star-tracker-camera-board:TP06R"
 		(layer "B.Cu")
 		(uuid "e283cfe2-dcc9-492d-8bef-814e55be3bfe")
 		(at 133.7 104.41 180)
 		(descr "TEST PAD")
-		(property "Reference" "TP8"
+		(property "Reference" "TP3"
 			(at -1.05 -0.94 0)
 			(unlocked yes)
 			(layer "B.SilkS")
@@ -13396,6 +12624,17 @@
 			(uuid "4a622f68-f982-4ecc-ab0f-96c2c5cc5474")
 		)
 		(embedded_fonts no)
+		(model "C:/Users/Edward/Desktop/DRV0006A.stp"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "oresat-passives:0402-B-NOSILK"
 		(layer "B.Cu")
@@ -13403,7 +12642,7 @@
 		(at 145.5 103.9 90)
 		(descr "<b>e0402 (metric 1005) normal 'IPC-B' without silkscreen</b>\n<br>In house package for nominal spacing based on IPC-7351B.\nThis package is identical to 0402-B, but has its tPlace silkscreen layer removed.")
 		(property "Reference" "C1"
-			(at -1.05 -0.5 0)
+			(at -0.8 0.55 270)
 			(layer "B.SilkS")
 			(uuid "518a3fb4-f729-4afa-8fb5-c13b55a31497")
 			(effects
@@ -13411,11 +12650,11 @@
 					(size 0.5 0.5)
 					(thickness 0.125)
 				)
-				(justify right top mirror)
+				(justify left bottom mirror)
 			)
 		)
 		(property "Value" "10nF"
-			(at -0.8 -1.35 90)
+			(at -0.8 -1.35 270)
 			(layer "B.Fab")
 			(uuid "5d6f32c9-cb61-4de4-9180-2a459b5269d3")
 			(effects
@@ -13423,11 +12662,11 @@
 					(size 0.68 0.68)
 					(thickness 0.12)
 				)
-				(justify right top mirror)
+				(justify left bottom mirror)
 			)
 		)
-		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/KEM_C1023_X7R_AUTO_SMD"
-			(at 0 0 90)
+		(property "Datasheet" ""
+			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "1fdb9add-91e0-4f47-9f8b-59838b7e88de")
@@ -13439,8 +12678,8 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "10000 pF ±5% 50V Ceramic Capacitor X7R 0402 (1005 Metric)"
-			(at 0 0 90)
+		(property "Description" ""
+			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "80a35885-3e2f-4c5b-aa99-74eddb809eb8")
@@ -13452,72 +12691,10 @@
 				(justify mirror)
 			)
 		)
-		(property "DIS" "Digikey"
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "62b392d7-f455-4d2a-a991-c87351be0c09")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "DPN" "399-19365-1-ND"
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "913f888a-5297-4bf6-a766-94aecca0e812")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "MFR" "KEMET"
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "83f543c5-b8a5-447d-800d-20c4cbdd2476")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "MPN" "C0402C103J5RACAUTO"
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "66146da6-a4f2-44f6-8ab7-35fdec4cb9c9")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(property ki_fp_filters "C_*")
 		(path "/1f9d8e4c-bfe4-4ed7-a952-035816ff464d")
 		(sheetname "/")
 		(sheetfile "star-tracker-camera-board.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start 0.945 -0.495)
@@ -13644,14 +12821,25 @@
 			(uuid "2aeb1b97-bed0-4c1a-b547-8241e1832fe0")
 		)
 		(embedded_fonts no)
+		(model "C:/Users/Edward/Desktop/RC0402FR-07226RL.STEP"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -90 -0 -0)
+			)
+		)
 	)
 	(footprint "oresat-passives:0402-B-NOSILK"
 		(layer "B.Cu")
 		(uuid "f9f2d70a-329d-40c6-b465-54184a693afc")
 		(at 134.2 100.3 180)
 		(descr "<b>e0402 (metric 1005) normal 'IPC-B' without silkscreen</b>\n<br>In house package for nominal spacing based on IPC-7351B.\nThis package is identical to 0402-B, but has its tPlace silkscreen layer removed.")
-		(property "Reference" "C5"
-			(at -0.55 -1.85 180)
+		(property "Reference" "C8"
+			(at -0.8 0.55 0)
 			(layer "B.SilkS")
 			(uuid "741d41d5-35e8-42eb-b79a-ebe616342b53")
 			(effects
@@ -13674,7 +12862,7 @@
 				(justify left bottom mirror)
 			)
 		)
-		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/KEM_C1023_X7R_AUTO_SMD"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -13687,7 +12875,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "0.1 µF ±5% 16V Ceramic Capacitor X7R 0402 (1005 Metric)"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -13700,72 +12888,10 @@
 				(justify mirror)
 			)
 		)
-		(property "DIS" "Digikey"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "510904e2-a43d-4154-9d58-2c31071b4f2b")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "DPN" "399-17548-1-ND"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "42a5c341-608f-4dd9-9860-d550d2670f2e")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "MFR" "KEMET"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "fa52386d-df93-4b8e-bb05-0a41f2db4a89")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "MPN" "C0402C104J4RACAUTO"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "d7900893-9e1a-4a79-a853-c63385ad860b")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(property ki_fp_filters "C_*")
 		(path "/f8528557-ef81-4df4-af86-b5df5847132c")
 		(sheetname "/")
 		(sheetfile "star-tracker-camera-board.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start 0.945 0.495)
@@ -13892,6 +13018,17 @@
 			(uuid "498b33b5-f427-4afe-838c-0e130056404b")
 		)
 		(embedded_fonts no)
+		(model "C:/Users/Edward/Desktop/RC0402FR-07226RL.STEP"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -90 -0 -0)
+			)
+		)
 	)
 	(gr_circle
 		(center 148.0011 104.8036)

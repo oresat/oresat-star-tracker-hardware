@@ -8417,7 +8417,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "02bd7947-d283-4f8f-a418-f9bb6cece5b2")
-		(property "Reference" "#SUPPLY9"
+		(property "Reference" "#SUPPLY02"
 			(at 266.7 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -8478,7 +8478,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#SUPPLY9")
+					(reference "#SUPPLY02")
 					(unit 1)
 				)
 			)
@@ -8495,7 +8495,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "053c0ca9-7ff4-4084-a6a0-5529525f23bb")
-		(property "Reference" "#VBUS11"
+		(property "Reference" "#VBUS018"
 			(at 337.82 43.18 0)
 			(hide yes)
 			(show_name no)
@@ -8556,7 +8556,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#VBUS11")
+					(reference "#VBUS018")
 					(unit 1)
 				)
 			)
@@ -8573,7 +8573,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "067cf4c8-fd30-4f7b-961b-f4b938db58ff")
-		(property "Reference" "C11"
+		(property "Reference" "C12"
 			(at 359.664 192.659 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8681,7 +8681,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "C11")
+					(reference "C12")
 					(unit 1)
 				)
 			)
@@ -8698,7 +8698,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "0acfca4d-74b3-4256-b652-e89efeb419fe")
-		(property "Reference" "#VBUS15"
+		(property "Reference" "#VBUS014"
 			(at 320.04 170.18 0)
 			(hide yes)
 			(show_name no)
@@ -8759,7 +8759,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#VBUS15")
+					(reference "#VBUS014")
 					(unit 1)
 				)
 			)
@@ -8776,7 +8776,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "0d039c7e-e301-4d14-a038-dffff59795c7")
-		(property "Reference" "R9"
+		(property "Reference" "R2"
 			(at 76.454 146.304 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8884,7 +8884,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "R9")
+					(reference "R2")
 					(unit 1)
 				)
 			)
@@ -8901,7 +8901,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "117c48bb-14b5-46ef-a924-57c3cc25f8a0")
-		(property "Reference" "#U$1"
+		(property "Reference" "#U$01"
 			(at 203.2 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -8962,7 +8962,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#U$1")
+					(reference "#U$01")
 					(unit 1)
 				)
 			)
@@ -8979,7 +8979,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "13700958-f5cb-4447-b40b-bbcf4aef5bcb")
-		(property "Reference" "#VBUS20"
+		(property "Reference" "#VBUS024"
 			(at 388.62 182.88 0)
 			(hide yes)
 			(show_name no)
@@ -9040,7 +9040,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#VBUS20")
+					(reference "#VBUS024")
 					(unit 1)
 				)
 			)
@@ -9415,7 +9415,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "21cc6689-c84a-44bf-8106-268fd415d712")
-		(property "Reference" "C16"
+		(property "Reference" "C6"
 			(at 316.484 50.419 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9523,7 +9523,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "C16")
+					(reference "C6")
 					(unit 1)
 				)
 			)
@@ -9540,7 +9540,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "23daf8fe-7aab-4c63-a940-3c0977831c64")
-		(property "Reference" "#VBUS23"
+		(property "Reference" "#VBUS02"
 			(at 88.9 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -9601,7 +9601,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#VBUS23")
+					(reference "#VBUS02")
 					(unit 1)
 				)
 			)
@@ -9618,7 +9618,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "271adeb5-3326-488a-92b1-7e0fce131762")
-		(property "Reference" "#PWR9"
+		(property "Reference" "#PWR011"
 			(at 294.64 194.31 0)
 			(hide yes)
 			(show_name no)
@@ -9678,7 +9678,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#PWR9")
+					(reference "#PWR011")
 					(unit 1)
 				)
 			)
@@ -9695,7 +9695,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "2777bf61-d6aa-4255-b800-a053f5082709")
-		(property "Reference" "#VBUS14"
+		(property "Reference" "#VBUS013"
 			(at 320.04 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -9756,7 +9756,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#VBUS14")
+					(reference "#VBUS013")
 					(unit 1)
 				)
 			)
@@ -9773,7 +9773,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "29316195-d8f0-4d6c-9c28-1426fc3bab89")
-		(property "Reference" "#PWR5"
+		(property "Reference" "#PWR06"
 			(at 149.86 190.5 0)
 			(hide yes)
 			(show_name no)
@@ -9833,7 +9833,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#PWR5")
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -9850,7 +9850,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "2f064113-c8d8-45ac-827b-f93fc26af05a")
-		(property "Reference" "R12"
+		(property "Reference" "R4"
 			(at 94.996 146.304 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9958,7 +9958,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "R12")
+					(reference "R4")
 					(unit 1)
 				)
 			)
@@ -9975,7 +9975,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "309341e8-e539-4b37-9e66-c6cb98081df4")
-		(property "Reference" "R2"
+		(property "Reference" "R7"
 			(at 111.76 67.7926 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10083,7 +10083,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "R2")
+					(reference "R7")
 					(unit 1)
 				)
 			)
@@ -10100,7 +10100,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "327b5126-cd22-4d8f-836a-3527b551cbf4")
-		(property "Reference" "C7"
+		(property "Reference" "C10"
 			(at 349.504 192.659 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10208,7 +10208,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "C7")
+					(reference "C10")
 					(unit 1)
 				)
 			)
@@ -10225,7 +10225,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "37c1183c-2cd3-48bb-8e8d-0922a642c5ee")
-		(property "Reference" "#PWR8"
+		(property "Reference" "#PWR010"
 			(at 294.64 151.13 0)
 			(hide yes)
 			(show_name no)
@@ -10285,7 +10285,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#PWR8")
+					(reference "#PWR010")
 					(unit 1)
 				)
 			)
@@ -10302,7 +10302,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "3de77d26-18c8-4802-8849-761f98fec01a")
-		(property "Reference" "#VBUS16"
+		(property "Reference" "#VBUS015"
 			(at 322.58 175.26 0)
 			(hide yes)
 			(show_name no)
@@ -10363,7 +10363,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#VBUS16")
+					(reference "#VBUS015")
 					(unit 1)
 				)
 			)
@@ -10380,7 +10380,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "41585094-9222-404c-81d9-e31e60062bce")
-		(property "Reference" "TP8"
+		(property "Reference" "TP3"
 			(at 313.69 176.53 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10441,7 +10441,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "TP8")
+					(reference "TP3")
 					(unit 1)
 				)
 			)
@@ -10458,7 +10458,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4185c2db-d3c7-4792-9c93-de33c1d6940e")
-		(property "Reference" "R8"
+		(property "Reference" "R5"
 			(at 89.916 108.712 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10566,7 +10566,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "R8")
+					(reference "R5")
 					(unit 1)
 				)
 			)
@@ -10583,7 +10583,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4501e859-0769-403e-ba61-19d6dd596046")
-		(property "Reference" "C10"
+		(property "Reference" "C16"
 			(at 379.984 136.779 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10691,7 +10691,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "C10")
+					(reference "C16")
 					(unit 1)
 				)
 			)
@@ -10708,7 +10708,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4551b3cb-8393-47cc-93ee-77ca766fd8fc")
-		(property "Reference" "#VBUS6"
+		(property "Reference" "#VBUS09"
 			(at 274.32 43.18 0)
 			(hide yes)
 			(show_name no)
@@ -10769,7 +10769,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#VBUS6")
+					(reference "#VBUS09")
 					(unit 1)
 				)
 			)
@@ -10933,7 +10933,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "492cb572-de5c-42b0-aab6-2a1d3b3ec000")
-		(property "Reference" "#PWR10"
+		(property "Reference" "#PWR012"
 			(at 294.64 237.49 0)
 			(hide yes)
 			(show_name no)
@@ -10993,7 +10993,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#PWR10")
+					(reference "#PWR012")
 					(unit 1)
 				)
 			)
@@ -11010,7 +11010,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "493944ed-de68-412c-a560-fae16fead1f5")
-		(property "Reference" "#PWR6"
+		(property "Reference" "#PWR07"
 			(at 198.12 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -11070,7 +11070,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#PWR6")
+					(reference "#PWR07")
 					(unit 1)
 				)
 			)
@@ -11233,7 +11233,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "52a80099-46b9-468c-9303-dea6987537c2")
-		(property "Reference" "R4"
+		(property "Reference" "R9"
 			(at 150.368 141.1986 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11341,7 +11341,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "R4")
+					(reference "R9")
 					(unit 1)
 				)
 			)
@@ -11358,7 +11358,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "56eecaa6-55fb-43ff-b658-aae6dfd14167")
-		(property "Reference" "TP10"
+		(property "Reference" "TP5"
 			(at 313.69 219.71 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11419,7 +11419,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "TP10")
+					(reference "TP5")
 					(unit 1)
 				)
 			)
@@ -11436,7 +11436,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "5a46c5a7-d828-4560-bd63-88872241badc")
-		(property "Reference" "#VBUS19"
+		(property "Reference" "#VBUS023"
 			(at 378.46 182.88 0)
 			(hide yes)
 			(show_name no)
@@ -11497,7 +11497,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#VBUS19")
+					(reference "#VBUS023")
 					(unit 1)
 				)
 			)
@@ -11514,7 +11514,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "62295941-57c5-4ab7-b65a-e007ebd2dbad")
-		(property "Reference" "TP7"
+		(property "Reference" "TP2"
 			(at 313.69 171.45 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11575,7 +11575,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "TP7")
+					(reference "TP2")
 					(unit 1)
 				)
 			)
@@ -11592,7 +11592,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "67ba85c1-b044-4faf-a44b-12f12dcbb454")
-		(property "Reference" "R7"
+		(property "Reference" "R6"
 			(at 107.188 108.204 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11700,7 +11700,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "R7")
+					(reference "R6")
 					(unit 1)
 				)
 			)
@@ -11717,7 +11717,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6a0a1c01-8792-4a83-9b32-6f84dbcdb2f4")
-		(property "Reference" "#SUPPLY11"
+		(property "Reference" "#SUPPLY04"
 			(at 294.64 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -11778,7 +11778,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#SUPPLY11")
+					(reference "#SUPPLY04")
 					(unit 1)
 				)
 			)
@@ -11795,7 +11795,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6c822e45-faaa-4ed1-80b8-6c2624106d5a")
-		(property "Reference" "C17"
+		(property "Reference" "C13"
 			(at 369.824 50.419 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11903,7 +11903,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "C17")
+					(reference "C13")
 					(unit 1)
 				)
 			)
@@ -11920,7 +11920,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6f0aa21f-2b30-495b-90f0-b298cdb4c1b1")
-		(property "Reference" "#PWR11"
+		(property "Reference" "#PWR09"
 			(at 294.64 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -11980,7 +11980,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#PWR11")
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)
@@ -11997,7 +11997,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "700953f0-b976-491f-8417-77e2887861c2")
-		(property "Reference" "C18"
+		(property "Reference" "C17"
 			(at 379.984 192.659 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12105,7 +12105,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "C18")
+					(reference "C17")
 					(unit 1)
 				)
 			)
@@ -12385,7 +12385,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "73ff8533-80a3-4838-abd0-071fbdac9111")
-		(property "Reference" "#SUPPLY25"
+		(property "Reference" "#SUPPLY06"
 			(at 378.46 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -12446,7 +12446,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#SUPPLY25")
+					(reference "#SUPPLY06")
 					(unit 1)
 				)
 			)
@@ -12463,7 +12463,7 @@
 		(in_pos_files yes)
 		(dnp yes)
 		(uuid "7572fdfd-091e-4a49-a9f2-d9d90891c358")
-		(property "Reference" "R3"
+		(property "Reference" "R8"
 			(at 143.256 128.7526 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12572,7 +12572,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "R3")
+					(reference "R8")
 					(unit 1)
 				)
 			)
@@ -12589,7 +12589,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "777837aa-04f1-4c23-93d8-8a8b8a5903cd")
-		(property "Reference" "C12"
+		(property "Reference" "C5"
 			(at 306.324 50.419 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12697,7 +12697,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "C12")
+					(reference "C5")
 					(unit 1)
 				)
 			)
@@ -12714,7 +12714,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "872f1e46-3aff-42f2-abfa-06c2e3057e9f")
-		(property "Reference" "#VBUS7"
+		(property "Reference" "#VBUS010"
 			(at 284.48 43.18 0)
 			(hide yes)
 			(show_name no)
@@ -12775,7 +12775,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#VBUS7")
+					(reference "#VBUS010")
 					(unit 1)
 				)
 			)
@@ -12792,7 +12792,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "88b382e8-71e8-4d27-838b-12e9ded58b85")
-		(property "Reference" "#VBUS17"
+		(property "Reference" "#VBUS016"
 			(at 322.58 218.44 0)
 			(hide yes)
 			(show_name no)
@@ -12853,7 +12853,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#VBUS17")
+					(reference "#VBUS016")
 					(unit 1)
 				)
 			)
@@ -12995,7 +12995,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8cdf2162-57f6-40ef-b80e-b92892342c68")
-		(property "Reference" "#VBUS10"
+		(property "Reference" "#VBUS017"
 			(at 327.66 43.18 0)
 			(hide yes)
 			(show_name no)
@@ -13056,7 +13056,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#VBUS10")
+					(reference "#VBUS017")
 					(unit 1)
 				)
 			)
@@ -13198,7 +13198,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8e40834d-16a6-4df9-8232-3d590ca9d796")
-		(property "Reference" "#VBUS4"
+		(property "Reference" "#VBUS06"
 			(at 193.04 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -13259,7 +13259,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#VBUS4")
+					(reference "#VBUS06")
 					(unit 1)
 				)
 			)
@@ -13276,7 +13276,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "970b5fd2-7392-42bf-901e-ec5548d40579")
-		(property "Reference" "C6"
+		(property "Reference" "C14"
 			(at 369.824 136.779 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13384,7 +13384,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "C6")
+					(reference "C14")
 					(unit 1)
 				)
 			)
@@ -13401,7 +13401,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "99420e69-c495-4866-a4c9-d57b758b6e4c")
-		(property "Reference" "TP6"
+		(property "Reference" "TP1"
 			(at 313.69 130.81 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13462,7 +13462,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "TP6")
+					(reference "TP1")
 					(unit 1)
 				)
 			)
@@ -13479,7 +13479,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9b0f98e1-fdb4-4335-ab7b-fd3a5e061a15")
-		(property "Reference" "#VBUS21"
+		(property "Reference" "#VBUS04"
 			(at 144.78 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -13540,7 +13540,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#VBUS21")
+					(reference "#VBUS04")
 					(unit 1)
 				)
 			)
@@ -13557,7 +13557,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9e98a610-20d1-4d05-9a01-3a3b4b0e56ea")
-		(property "Reference" "#SUPPLY10"
+		(property "Reference" "#SUPPLY03"
 			(at 294.64 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -13618,7 +13618,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#SUPPLY10")
+					(reference "#SUPPLY03")
 					(unit 1)
 				)
 			)
@@ -13635,7 +13635,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9ea92804-cd53-4fc7-8288-8a9fe4a0e01c")
-		(property "Reference" "C4"
+		(property "Reference" "C3"
 			(at 286.004 50.419 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13743,7 +13743,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "C4")
+					(reference "C3")
 					(unit 1)
 				)
 			)
@@ -13906,7 +13906,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a607b048-f515-49b0-bfa3-8bd195177328")
-		(property "Reference" "#PWR3"
+		(property "Reference" "#PWR04"
 			(at 109.22 189.23 0)
 			(hide yes)
 			(show_name no)
@@ -13966,7 +13966,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#PWR3")
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
@@ -13983,7 +13983,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "aa6d33c5-135f-41a8-a593-eb464123929f")
-		(property "Reference" "C3"
+		(property "Reference" "C7"
 			(at 329.184 50.419 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14091,7 +14091,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "C3")
+					(reference "C7")
 					(unit 1)
 				)
 			)
@@ -14108,7 +14108,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ad072264-3397-484b-987e-194b75c2b9e5")
-		(property "Reference" "#VBUS22"
+		(property "Reference" "#VBUS03"
 			(at 96.52 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -14169,7 +14169,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#VBUS22")
+					(reference "#VBUS03")
 					(unit 1)
 				)
 			)
@@ -14311,7 +14311,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "affc142a-263e-42b0-8aef-b67a2ced8916")
-		(property "Reference" "#PWR13"
+		(property "Reference" "#PWR015"
 			(at 378.46 153.67 0)
 			(hide yes)
 			(show_name no)
@@ -14371,7 +14371,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#PWR13")
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -14388,7 +14388,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b2ad19d9-8a24-47ed-9078-edbe5e9c39e3")
-		(property "Reference" "#VBUS8"
+		(property "Reference" "#VBUS011"
 			(at 294.64 43.18 0)
 			(hide yes)
 			(show_name no)
@@ -14449,7 +14449,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#VBUS8")
+					(reference "#VBUS011")
 					(unit 1)
 				)
 			)
@@ -14598,7 +14598,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "be5d07cf-10f8-46c7-a65c-2d36614beae7")
-		(property "Reference" "#U$4"
+		(property "Reference" "#U$03"
 			(at 320.04 213.36 0)
 			(hide yes)
 			(show_name no)
@@ -14659,7 +14659,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#U$4")
+					(reference "#U$03")
 					(unit 1)
 				)
 			)
@@ -14676,7 +14676,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "bec6b54b-e647-4a70-aa27-d8a4f5de4f3c")
-		(property "Reference" "#PWR7"
+		(property "Reference" "#PWR08"
 			(at 266.7 242.57 0)
 			(hide yes)
 			(show_name no)
@@ -14736,7 +14736,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#PWR7")
+					(reference "#PWR08")
 					(unit 1)
 				)
 			)
@@ -14753,7 +14753,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c269911f-1512-41aa-b95a-b4b759ca585b")
-		(property "Reference" "#U$5"
+		(property "Reference" "#U$05"
 			(at 358.14 182.88 0)
 			(hide yes)
 			(show_name no)
@@ -14814,7 +14814,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#U$5")
+					(reference "#U$05")
 					(unit 1)
 				)
 			)
@@ -14831,7 +14831,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c39fdc97-8078-48a0-92d7-3083b1b41b93")
-		(property "Reference" "#U$2"
+		(property "Reference" "#U$02"
 			(at 304.8 43.18 0)
 			(hide yes)
 			(show_name no)
@@ -14892,7 +14892,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#U$2")
+					(reference "#U$02")
 					(unit 1)
 				)
 			)
@@ -14909,7 +14909,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c406e47a-6128-437a-8de2-5b7a97fa9012")
-		(property "Reference" "C14"
+		(property "Reference" "C18"
 			(at 390.144 136.779 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15017,7 +15017,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "C14")
+					(reference "C18")
 					(unit 1)
 				)
 			)
@@ -15034,7 +15034,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c417e9ba-f906-4234-9728-264509046349")
-		(property "Reference" "C8"
+		(property "Reference" "C4"
 			(at 296.164 50.419 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15142,7 +15142,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "C8")
+					(reference "C4")
 					(unit 1)
 				)
 			)
@@ -15159,7 +15159,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c73a207d-8bd5-41c5-b212-fd20ce64c8cf")
-		(property "Reference" "#VBUS12"
+		(property "Reference" "#VBUS019"
 			(at 347.98 43.18 0)
 			(hide yes)
 			(show_name no)
@@ -15220,7 +15220,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#VBUS12")
+					(reference "#VBUS019")
 					(unit 1)
 				)
 			)
@@ -15237,7 +15237,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c8dc640d-2b0f-40ab-8e53-33a627ec205b")
-		(property "Reference" "#PWR4"
+		(property "Reference" "#PWR05"
 			(at 144.78 153.67 0)
 			(hide yes)
 			(show_name no)
@@ -15297,7 +15297,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#PWR4")
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -15314,7 +15314,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c9c3e57a-0c64-4a0d-a9e9-8ca51572d112")
-		(property "Reference" "#VBUS9"
+		(property "Reference" "#VBUS012"
 			(at 314.96 43.18 0)
 			(hide yes)
 			(show_name no)
@@ -15375,7 +15375,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#VBUS9")
+					(reference "#VBUS012")
 					(unit 1)
 				)
 			)
@@ -15392,7 +15392,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ca4640cc-9b85-487c-ada7-c3a53009ad92")
-		(property "Reference" "R10"
+		(property "Reference" "R1"
 			(at 77.47 128.524 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15500,7 +15500,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "R10")
+					(reference "R1")
 					(unit 1)
 				)
 			)
@@ -15517,7 +15517,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "cc5be182-f181-41cf-978b-a651d458cc3d")
-		(property "Reference" "#PWR2"
+		(property "Reference" "#PWR03"
 			(at 88.9 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -15577,7 +15577,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#PWR2")
+					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -15594,7 +15594,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "cdecdd6c-735b-4fa3-8597-1151fa0a2e36")
-		(property "Reference" "#PWR1"
+		(property "Reference" "#PWR01"
 			(at 63.5 189.23 0)
 			(hide yes)
 			(show_name no)
@@ -15654,7 +15654,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#PWR1")
+					(reference "#PWR01")
 					(unit 1)
 				)
 			)
@@ -15671,7 +15671,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d2f721e7-2e90-4cc4-9861-cc6ec584ed67")
-		(property "Reference" "#SUPPLY12"
+		(property "Reference" "#SUPPLY05"
 			(at 294.64 205.74 0)
 			(hide yes)
 			(show_name no)
@@ -15732,7 +15732,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#SUPPLY12")
+					(reference "#SUPPLY05")
 					(unit 1)
 				)
 			)
@@ -15749,7 +15749,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d3ac5ad7-e7fe-4718-b30f-04c4f3f109ce")
-		(property "Reference" "R11"
+		(property "Reference" "R3"
 			(at 95.25 128.524 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15857,7 +15857,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "R11")
+					(reference "R3")
 					(unit 1)
 				)
 			)
@@ -15874,7 +15874,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d4b43d37-2971-45a5-9b14-c252220fa219")
-		(property "Reference" "#VBUS13"
+		(property "Reference" "#VBUS021"
 			(at 368.3 43.18 0)
 			(hide yes)
 			(show_name no)
@@ -15935,7 +15935,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#VBUS13")
+					(reference "#VBUS021")
 					(unit 1)
 				)
 			)
@@ -15952,7 +15952,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d508eed2-b4e1-48c4-9780-2edeb0fd773d")
-		(property "Reference" "#PWR14"
+		(property "Reference" "#PWR014"
 			(at 368.3 209.55 0)
 			(hide yes)
 			(show_name no)
@@ -16012,7 +16012,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#PWR14")
+					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -16029,7 +16029,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d7641914-e6e3-4987-8f10-a858a5fb2e10")
-		(property "Reference" "#VBUS18"
+		(property "Reference" "#VBUS022"
 			(at 368.3 182.88 0)
 			(hide yes)
 			(show_name no)
@@ -16090,7 +16090,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#VBUS18")
+					(reference "#VBUS022")
 					(unit 1)
 				)
 			)
@@ -16107,7 +16107,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d8039e19-80b9-4d14-bcd6-f76e71a50fb9")
-		(property "Reference" "#PWR15"
+		(property "Reference" "#PWR02"
 			(at 83.82 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -16167,7 +16167,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#PWR15")
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
@@ -16184,7 +16184,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d9bbeb51-aab5-48cc-8ea5-bb81c6f125cc")
-		(property "Reference" "TP9"
+		(property "Reference" "TP4"
 			(at 313.69 214.63 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16245,7 +16245,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "TP9")
+					(reference "TP4")
 					(unit 1)
 				)
 			)
@@ -16262,7 +16262,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "dd531e90-80e6-4649-9de0-be9fef18843a")
-		(property "Reference" "#PWR12"
+		(property "Reference" "#PWR013"
 			(at 347.98 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -16322,7 +16322,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#PWR12")
+					(reference "#PWR013")
 					(unit 1)
 				)
 			)
@@ -16339,7 +16339,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "de58ec03-5db9-437b-a495-c60cf444e42c")
-		(property "Reference" "#VBUS1"
+		(property "Reference" "#VBUS020"
 			(at 347.98 182.88 0)
 			(hide yes)
 			(show_name no)
@@ -16400,7 +16400,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#VBUS1")
+					(reference "#VBUS020")
 					(unit 1)
 				)
 			)
@@ -16417,7 +16417,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e67f2dd3-954e-4b12-8311-f755da9bd064")
-		(property "Reference" "#VBUS2"
+		(property "Reference" "#VBUS07"
 			(at 198.12 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -16478,7 +16478,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#VBUS2")
+					(reference "#VBUS07")
 					(unit 1)
 				)
 			)
@@ -16495,7 +16495,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ea7c4d94-5465-4c0e-b2bc-cac28026ac2a")
-		(property "Reference" "#VBUS24"
+		(property "Reference" "#VBUS01"
 			(at 83.82 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -16556,7 +16556,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#VBUS24")
+					(reference "#VBUS01")
 					(unit 1)
 				)
 			)
@@ -16573,7 +16573,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f424aae2-1440-493a-9a8a-cc0311c09b34")
-		(property "Reference" "#U$3"
+		(property "Reference" "#U$04"
 			(at 358.14 43.18 0)
 			(hide yes)
 			(show_name no)
@@ -16634,7 +16634,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#U$3")
+					(reference "#U$04")
 					(unit 1)
 				)
 			)
@@ -16651,7 +16651,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f5b12bbb-fa61-4228-a8c8-e364136514ea")
-		(property "Reference" "R5"
+		(property "Reference" "R10"
 			(at 261.62 123.4694 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16759,7 +16759,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "R5")
+					(reference "R10")
 					(unit 1)
 				)
 			)
@@ -16776,7 +16776,7 @@
 		(in_pos_files yes)
 		(dnp yes)
 		(uuid "f77daf4d-2c18-4206-80d2-cce3620e8b13")
-		(property "Reference" "R6"
+		(property "Reference" "R11"
 			(at 262.89 227.1014 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16885,7 +16885,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "R6")
+					(reference "R11")
 					(unit 1)
 				)
 			)
@@ -16902,7 +16902,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f7e0ff0e-50f2-400c-ad0d-6f1654ba0f81")
-		(property "Reference" "C13"
+		(property "Reference" "C11"
 			(at 359.664 50.419 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17010,7 +17010,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "C13")
+					(reference "C11")
 					(unit 1)
 				)
 			)
@@ -17027,7 +17027,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f8528557-ef81-4df4-af86-b5df5847132c")
-		(property "Reference" "C5"
+		(property "Reference" "C8"
 			(at 339.344 50.419 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17135,7 +17135,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "C5")
+					(reference "C8")
 					(unit 1)
 				)
 			)
@@ -17277,7 +17277,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "fc3ce5ee-bf0a-4263-860e-9113a6de345b")
-		(property "Reference" "#VBUS5"
+		(property "Reference" "#VBUS08"
 			(at 208.28 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -17338,7 +17338,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#VBUS5")
+					(reference "#VBUS08")
 					(unit 1)
 				)
 			)
@@ -17355,7 +17355,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "fdf3537d-55c4-4696-91a1-e491cd9c774b")
-		(property "Reference" "#VBUS3"
+		(property "Reference" "#VBUS05"
 			(at 187.96 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -17416,7 +17416,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#VBUS3")
+					(reference "#VBUS05")
 					(unit 1)
 				)
 			)
@@ -17433,7 +17433,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "fe5784b2-17d8-475c-86cf-90db111c2578")
-		(property "Reference" "#SUPPLY2"
+		(property "Reference" "#SUPPLY01"
 			(at 142.24 185.42 0)
 			(hide yes)
 			(show_name no)
@@ -17494,7 +17494,7 @@
 		(instances
 			(project "star-tracker-camera-board"
 				(path "/f9580dae-4cbd-4db1-9624-ffa4bae0464d"
-					(reference "#SUPPLY2")
+					(reference "#SUPPLY01")
 					(unit 1)
 				)
 			)
