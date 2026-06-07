@@ -6,8 +6,8 @@
 	(paper "B")
 	(title_block
 		(title "OreSat Star Tracker")
-		(date "2026-04-22")
-		(rev "1.3")
+		(date "2026-06-05")
+		(rev "2.0")
 		(company "Portland State Aerospace Society")
 	)
 	(lib_symbols
@@ -9005,7 +9005,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "03036cc5-d373-4b11-8402-55a1bc46d9a7")
-		(property "Reference" "Q3"
+		(property "Reference" "Q1"
 			(at 81.788 230.632 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9125,7 +9125,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "Q3")
+					(reference "Q1")
 					(unit 2)
 				)
 			)
@@ -9142,7 +9142,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "03bd797f-620d-479e-8a66-6017b1960576")
-		(property "Reference" "R61"
+		(property "Reference" "R44"
 			(at 399.034 45.212 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9250,7 +9250,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "R61")
+					(reference "R44")
 					(unit 1)
 				)
 			)
@@ -9268,7 +9268,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "055045d1-a0de-49c5-aceb-29b199038492")
-		(property "Reference" "#PWR21"
+		(property "Reference" "#PWR030"
 			(at 264.16 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -9328,7 +9328,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "#PWR21")
+					(reference "#PWR030")
 					(unit 1)
 				)
 			)
@@ -9345,7 +9345,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "06549287-d26e-42e9-a557-0ca6201ef9e6")
-		(property "Reference" "R49"
+		(property "Reference" "R25"
 			(at 202.184 88.9 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9453,7 +9453,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "R49")
+					(reference "R25")
 					(unit 1)
 				)
 			)
@@ -9470,7 +9470,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "09e3d25a-b9a7-47f0-8278-b079d73907f1")
-		(property "Reference" "#PWR18"
+		(property "Reference" "#PWR029"
 			(at 256.54 151.13 0)
 			(hide yes)
 			(show_name no)
@@ -9530,7 +9530,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "#PWR18")
+					(reference "#PWR029")
 					(unit 1)
 				)
 			)
@@ -9547,7 +9547,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "0dbbc2de-2786-4546-ac39-5222d0257bf1")
-		(property "Reference" "TP63"
+		(property "Reference" "TP2"
 			(at 78.232 49.276 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9608,7 +9608,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "TP63")
+					(reference "TP2")
 					(unit 1)
 				)
 			)
@@ -9625,7 +9625,7 @@
 		(in_pos_files yes)
 		(dnp yes)
 		(uuid "0ec262f8-ebba-463f-9bf8-aea999a3f1e4")
-		(property "Reference" "R42"
+		(property "Reference" "R38"
 			(at 342.9 76.2 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9738,7 +9738,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "R42")
+					(reference "R38")
 					(unit 1)
 				)
 			)
@@ -9756,7 +9756,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "0fec2640-de3d-4457-a325-103749d6fef8")
-		(property "Reference" "R73"
+		(property "Reference" "R30"
 			(at 259.08 164.084 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9864,7 +9864,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "R73")
+					(reference "R30")
 					(unit 1)
 				)
 			)
@@ -9881,7 +9881,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "139f112e-1e59-4274-8446-1e3cd3d2c9f5")
-		(property "Reference" "TP47"
+		(property "Reference" "TP13"
 			(at 323.85 73.66 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9942,7 +9942,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "TP47")
+					(reference "TP13")
 					(unit 1)
 				)
 			)
@@ -9959,7 +9959,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "17272b20-8736-4fd9-9760-4c3f26478124")
-		(property "Reference" "D6"
+		(property "Reference" "D1"
 			(at 218.44 88.265 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10078,7 +10078,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "D6")
+					(reference "D1")
 					(unit 1)
 				)
 			)
@@ -10096,7 +10096,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "17806975-c941-43ba-8f8f-dba889c991f1")
-		(property "Reference" "#PWR22"
+		(property "Reference" "#PWR031"
 			(at 276.86 219.71 0)
 			(hide yes)
 			(show_name no)
@@ -10156,7 +10156,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "#PWR22")
+					(reference "#PWR031")
 					(unit 1)
 				)
 			)
@@ -10173,7 +10173,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1c6f8075-13da-4377-a193-a824abfbd6e4")
-		(property "Reference" "U16"
+		(property "Reference" "U1"
 			(at 128.27 140.97 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10328,7 +10328,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "U16")
+					(reference "U1")
 					(unit 1)
 				)
 			)
@@ -10345,7 +10345,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1e7422ac-00eb-4d08-aeea-d37ff184326b")
-		(property "Reference" "#PWR14"
+		(property "Reference" "#PWR021"
 			(at 203.2 223.52 0)
 			(hide yes)
 			(show_name no)
@@ -10405,7 +10405,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "#PWR14")
+					(reference "#PWR021")
 					(unit 1)
 				)
 			)
@@ -10422,7 +10422,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "20ba27c9-4d55-422e-9d74-12cf854cad21")
-		(property "Reference" "R35"
+		(property "Reference" "R14"
 			(at 88.646 200.152 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10530,7 +10530,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "R35")
+					(reference "R14")
 					(unit 1)
 				)
 			)
@@ -10547,7 +10547,7 @@
 		(in_pos_files yes)
 		(dnp yes)
 		(uuid "21d38fc8-3c08-4c6d-a948-aad5bc942b0c")
-		(property "Reference" "R55"
+		(property "Reference" "R9"
 			(at 71.882 93.472 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10660,7 +10660,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "R55")
+					(reference "R9")
 					(unit 1)
 				)
 			)
@@ -10678,7 +10678,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "232a8a34-2201-4baa-ab1c-39abfda27c24")
-		(property "Reference" "#PWR27"
+		(property "Reference" "#PWR036"
 			(at 347.98 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -10738,7 +10738,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "#PWR27")
+					(reference "#PWR036")
 					(unit 1)
 				)
 			)
@@ -10755,7 +10755,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "23d28f4d-34f1-457d-a0ea-2ba867443c3b")
-		(property "Reference" "R46"
+		(property "Reference" "R24"
 			(at 211.328 58.928 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10863,7 +10863,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "R46")
+					(reference "R24")
 					(unit 1)
 				)
 			)
@@ -10880,7 +10880,7 @@
 		(in_pos_files yes)
 		(dnp yes)
 		(uuid "24e5291b-0365-4b65-89da-9e7ae306f6bb")
-		(property "Reference" "R57"
+		(property "Reference" "R13"
 			(at 87.122 93.98 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10993,7 +10993,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "R57")
+					(reference "R13")
 					(unit 1)
 				)
 			)
@@ -11010,7 +11010,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "25d42b1c-ca91-452e-ab2c-546af4f5f0f2")
-		(property "Reference" "TP50"
+		(property "Reference" "TP8"
 			(at 194.31 90.17 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11071,7 +11071,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "TP50")
+					(reference "TP8")
 					(unit 1)
 				)
 			)
@@ -11088,7 +11088,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "2633573d-ecc5-41b3-a576-bb5d884df7a9")
-		(property "Reference" "#VBUSP1"
+		(property "Reference" "#VBUSP01"
 			(at 195.58 199.39 0)
 			(hide yes)
 			(show_name no)
@@ -11149,7 +11149,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "#VBUSP1")
+					(reference "#VBUSP01")
 					(unit 1)
 				)
 			)
@@ -11166,7 +11166,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "2708f1eb-ff9d-4984-b056-fce557d433bb")
-		(property "Reference" "R56"
+		(property "Reference" "R11"
 			(at 83.82 89.662 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11278,7 +11278,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "R56")
+					(reference "R11")
 					(unit 1)
 				)
 			)
@@ -11295,7 +11295,7 @@
 		(in_pos_files yes)
 		(dnp yes)
 		(uuid "2b591d9b-c809-4af1-a3fb-9f17f1baa747")
-		(property "Reference" "R40"
+		(property "Reference" "R28"
 			(at 212.09 223.52 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11407,7 +11407,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "R40")
+					(reference "R28")
 					(unit 1)
 				)
 			)
@@ -11424,7 +11424,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "2d384da8-d63e-471d-95b7-6ae3547c448e")
-		(property "Reference" "C34"
+		(property "Reference" "C11"
 			(at 256.032 56.388 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11532,7 +11532,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "C34")
+					(reference "C11")
 					(unit 1)
 				)
 			)
@@ -11549,7 +11549,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "2dd1a82e-7c4d-4f24-a12e-61ed477dd00a")
-		(property "Reference" "#VPD4"
+		(property "Reference" "#VPD04"
 			(at 133.35 209.55 0)
 			(hide yes)
 			(show_name no)
@@ -11610,7 +11610,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "#VPD4")
+					(reference "#VPD04")
 					(unit 1)
 				)
 			)
@@ -11627,7 +11627,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "2f9cd3ce-bc56-4bba-a294-287f37d42083")
-		(property "Reference" "#VBUSP2"
+		(property "Reference" "#VBUSP02"
 			(at 393.7 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -11688,7 +11688,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "#VBUSP2")
+					(reference "#VBUSP02")
 					(unit 1)
 				)
 			)
@@ -11705,7 +11705,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "310189c6-2ed6-4f6a-9bbc-ee86d550d7bf")
-		(property "Reference" "R36"
+		(property "Reference" "R21"
 			(at 123.952 177.546 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11813,7 +11813,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "R36")
+					(reference "R21")
 					(unit 1)
 				)
 			)
@@ -11830,7 +11830,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "314aea6d-4384-4d14-91f4-7691070136ff")
-		(property "Reference" "R37"
+		(property "Reference" "R19"
 			(at 106.426 176.276 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11938,7 +11938,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "R37")
+					(reference "R19")
 					(unit 1)
 				)
 			)
@@ -11956,7 +11956,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "33dd0b86-91d1-4e8c-92c1-b4f3ed845af9")
-		(property "Reference" "#PWR20"
+		(property "Reference" "#PWR028"
 			(at 254 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -12016,7 +12016,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "#PWR20")
+					(reference "#PWR028")
 					(unit 1)
 				)
 			)
@@ -12034,7 +12034,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "34db5ca5-6074-4a17-9c72-e85356effbc0")
-		(property "Reference" "C39"
+		(property "Reference" "C6"
 			(at 127.762 99.314 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12142,7 +12142,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "C39")
+					(reference "C6")
 					(unit 1)
 				)
 			)
@@ -12159,7 +12159,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "364fac35-127e-48db-bd8c-73b99dc86aca")
-		(property "Reference" "R63"
+		(property "Reference" "R33"
 			(at 296.418 34.036 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12267,7 +12267,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "R63")
+					(reference "R33")
 					(unit 1)
 				)
 			)
@@ -12284,7 +12284,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "38036061-0269-4131-9c3c-97df8170ee63")
-		(property "Reference" "R33"
+		(property "Reference" "R31"
 			(at 262.89 67.564 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12396,7 +12396,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "R33")
+					(reference "R31")
 					(unit 1)
 				)
 			)
@@ -12413,7 +12413,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "3b085a3d-2f8c-41a1-a1ac-95810ecc173d")
-		(property "Reference" "C35"
+		(property "Reference" "C5"
 			(at 109.982 228.6 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12521,7 +12521,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "C35")
+					(reference "C5")
 					(unit 1)
 				)
 			)
@@ -12538,7 +12538,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "3b417085-4ca3-4d55-a442-458f52ff013c")
-		(property "Reference" "R77"
+		(property "Reference" "R41"
 			(at 366.522 55.88 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12644,7 +12644,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "R77")
+					(reference "R41")
 					(unit 1)
 				)
 			)
@@ -12662,7 +12662,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "3b9b1dd0-1cf5-4812-9783-4cdd83cb97f0")
-		(property "Reference" "Q6"
+		(property "Reference" "Q3"
 			(at 219.964 34.29 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12786,7 +12786,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "Q6")
+					(reference "Q3")
 					(unit 1)
 				)
 			)
@@ -12803,7 +12803,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "3d573740-12a5-4260-8aea-5da8ad233f0b")
-		(property "Reference" "R76"
+		(property "Reference" "R42"
 			(at 369.57 52.07 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12909,7 +12909,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "R76")
+					(reference "R42")
 					(unit 1)
 				)
 			)
@@ -12926,7 +12926,7 @@
 		(in_pos_files yes)
 		(dnp yes)
 		(uuid "3f250e1c-74a8-4eda-a0f8-6ca57603dfe1")
-		(property "Reference" "R65"
+		(property "Reference" "R2"
 			(at 60.452 77.47 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13039,7 +13039,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "R65")
+					(reference "R2")
 					(unit 1)
 				)
 			)
@@ -13057,7 +13057,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "40f22820-c829-4b75-8f0b-f50e9be2afdc")
-		(property "Reference" "#PWR26"
+		(property "Reference" "#PWR035"
 			(at 337.82 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -13117,7 +13117,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "#PWR26")
+					(reference "#PWR035")
 					(unit 1)
 				)
 			)
@@ -13134,7 +13134,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "410190c1-b213-4942-86d9-0a32ccd69b23")
-		(property "Reference" "Q2"
+		(property "Reference" "Q5"
 			(at 387.35 92.71 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13247,7 +13247,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "Q2")
+					(reference "Q5")
 					(unit 1)
 				)
 			)
@@ -13264,7 +13264,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4554696b-0cd7-4fc7-9baf-9a43842f26a8")
-		(property "Reference" "C46"
+		(property "Reference" "C16"
 			(at 378.46 43.1862 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13372,7 +13372,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "C46")
+					(reference "C16")
 					(unit 1)
 				)
 			)
@@ -13390,7 +13390,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "471391e8-c7f6-4d4a-93bf-0f4512de9e9a")
-		(property "Reference" "#PWR16"
+		(property "Reference" "#PWR024"
 			(at 218.44 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -13450,7 +13450,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "#PWR16")
+					(reference "#PWR024")
 					(unit 1)
 				)
 			)
@@ -13467,7 +13467,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4912b9a8-7248-40ac-9763-8921d7c9402c")
-		(property "Reference" "C48"
+		(property "Reference" "C7"
 			(at 146.05 214.6362 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13575,7 +13575,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "C48")
+					(reference "C7")
 					(unit 1)
 				)
 			)
@@ -13593,7 +13593,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "495811fa-af4c-4948-aad6-edddb5310fe3")
-		(property "Reference" "Q5"
+		(property "Reference" "Q4"
 			(at 366.776 33.528 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13717,7 +13717,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "Q5")
+					(reference "Q4")
 					(unit 1)
 				)
 			)
@@ -13735,7 +13735,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4a090e85-686e-4f48-8939-af9378814787")
-		(property "Reference" "#PWR12"
+		(property "Reference" "#PWR019"
 			(at 179.07 166.37 0)
 			(hide yes)
 			(show_name no)
@@ -13795,7 +13795,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "#PWR12")
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)
@@ -13812,7 +13812,7 @@
 		(in_pos_files yes)
 		(dnp yes)
 		(uuid "5228e5d9-d58f-4e1d-9c28-399b60075951")
-		(property "Reference" "R51"
+		(property "Reference" "R39"
 			(at 353.06 58.6486 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13925,7 +13925,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "R51")
+					(reference "R39")
 					(unit 1)
 				)
 			)
@@ -13942,7 +13942,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "5613824f-e217-4ecc-b7ca-fc1f9d80a986")
-		(property "Reference" "U12"
+		(property "Reference" "U2"
 			(at 136.652 191.262 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14059,7 +14059,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "U12")
+					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -14076,7 +14076,7 @@
 		(in_pos_files yes)
 		(dnp yes)
 		(uuid "582436d0-c169-4ed3-ba52-7f23bd9e12cb")
-		(property "Reference" "R54"
+		(property "Reference" "R5"
 			(at 68.834 88.646 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14189,7 +14189,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "R54")
+					(reference "R5")
 					(unit 1)
 				)
 			)
@@ -14206,7 +14206,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "58be0e37-f77c-4845-9b7a-a0d0ffb894ff")
-		(property "Reference" "C71"
+		(property "Reference" "C8"
 			(at 147.32 175.2662 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14314,7 +14314,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "C71")
+					(reference "C8")
 					(unit 1)
 				)
 			)
@@ -14331,7 +14331,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "5eba54bf-0a26-4648-8e05-6b5ab8a16c1e")
-		(property "Reference" "D8"
+		(property "Reference" "D2"
 			(at 299.212 216.408 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14450,7 +14450,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "D8")
+					(reference "D2")
 					(unit 1)
 				)
 			)
@@ -14467,7 +14467,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "626df177-411b-48c4-9a70-b04b67c91709")
-		(property "Reference" "R50"
+		(property "Reference" "R37"
 			(at 337.82 49.022 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14575,7 +14575,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "R50")
+					(reference "R37")
 					(unit 1)
 				)
 			)
@@ -14592,7 +14592,7 @@
 		(in_pos_files yes)
 		(dnp yes)
 		(uuid "6294a012-9921-424a-a89c-1cdb1b11850b")
-		(property "Reference" "R70"
+		(property "Reference" "R16"
 			(at 99.314 82.042 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14705,7 +14705,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "R70")
+					(reference "R16")
 					(unit 1)
 				)
 			)
@@ -14722,7 +14722,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "659e1ef2-81d2-4ea2-8158-e911c478f6cf")
-		(property "Reference" "U2"
+		(property "Reference" "U5"
 			(at 244.856 169.164 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14848,7 +14848,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "U2")
+					(reference "U5")
 					(unit 1)
 				)
 			)
@@ -14866,7 +14866,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "67437cc4-bbb6-45ef-af75-01c61d213dcd")
-		(property "Reference" "#PWR6"
+		(property "Reference" "#PWR010"
 			(at 97.79 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -14926,7 +14926,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "#PWR6")
+					(reference "#PWR010")
 					(unit 1)
 				)
 			)
@@ -14943,7 +14943,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "699b9b61-8f13-44e9-913e-9a9dfcd24015")
-		(property "Reference" "#VPD3"
+		(property "Reference" "#VPD03"
 			(at 133.35 168.91 0)
 			(hide yes)
 			(show_name no)
@@ -15004,7 +15004,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "#VPD3")
+					(reference "#VPD03")
 					(unit 1)
 				)
 			)
@@ -15022,7 +15022,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6cbf5853-e367-4391-b685-82679eafad09")
-		(property "Reference" "#PWR60"
+		(property "Reference" "#PWR018"
 			(at 144.78 186.69 0)
 			(hide yes)
 			(show_name no)
@@ -15082,7 +15082,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "#PWR60")
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -15099,7 +15099,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6e05adf4-3d08-454c-8149-a778ecf0d477")
-		(property "Reference" "#3V-1"
+		(property "Reference" "#3V-02"
 			(at 276.86 194.31 0)
 			(hide yes)
 			(show_name no)
@@ -15160,7 +15160,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "#3V-1")
+					(reference "#3V-02")
 					(unit 1)
 				)
 			)
@@ -15177,7 +15177,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "72955f2b-4c84-402a-92a6-1cb17fe79cfc")
-		(property "Reference" "#VPD5"
+		(property "Reference" "#VPD05"
 			(at 381 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -15238,7 +15238,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "#VPD5")
+					(reference "#VPD05")
 					(unit 1)
 				)
 			)
@@ -15256,7 +15256,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7384ea72-071a-45de-a27f-e3d2e60c4c82")
-		(property "Reference" "#PWR25"
+		(property "Reference" "#PWR034"
 			(at 320.04 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -15316,7 +15316,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "#PWR25")
+					(reference "#PWR034")
 					(unit 1)
 				)
 			)
@@ -15333,7 +15333,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "74fe54ca-2898-434e-aca0-67939c131f1c")
-		(property "Reference" "U13"
+		(property "Reference" "U3"
 			(at 136.906 232.156 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15450,7 +15450,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "U13")
+					(reference "U3")
 					(unit 1)
 				)
 			)
@@ -15468,7 +15468,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "751a3b71-4fc3-45eb-bc2f-d21190ae759c")
-		(property "Reference" "R7"
+		(property "Reference" "R29"
 			(at 258.572 150.114 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15576,7 +15576,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "R7")
+					(reference "R29")
 					(unit 1)
 				)
 			)
@@ -15593,7 +15593,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7683f467-2f14-47b6-a51b-48501ca08abb")
-		(property "Reference" "D7"
+		(property "Reference" "D3"
 			(at 398.272 57.404 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15712,7 +15712,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "D7")
+					(reference "D3")
 					(unit 1)
 				)
 			)
@@ -15729,7 +15729,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "76b6e6f2-b709-4e68-b8eb-a9ba336e24ad")
-		(property "Reference" "U15"
+		(property "Reference" "U4"
 			(at 228.6 196.342 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15882,7 +15882,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "U15")
+					(reference "U4")
 					(unit 1)
 				)
 			)
@@ -15900,7 +15900,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "78850819-c472-44db-a787-37aa8414be7c")
-		(property "Reference" "#PWR29"
+		(property "Reference" "#PWR038"
 			(at 393.7 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -15960,7 +15960,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "#PWR29")
+					(reference "#PWR038")
 					(unit 1)
 				)
 			)
@@ -15978,7 +15978,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "795e2d40-e8e4-455b-8e23-b0c05b6c4107")
-		(property "Reference" "#PWR0103"
+		(property "Reference" "#PWR016"
 			(at 135.89 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -16038,7 +16038,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "#PWR0103")
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -16055,7 +16055,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7e33214a-b0c5-481b-94d7-347cab6dc3dc")
-		(property "Reference" "TP48"
+		(property "Reference" "TP9"
 			(at 252.73 215.9 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16116,7 +16116,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "TP48")
+					(reference "TP9")
 					(unit 1)
 				)
 			)
@@ -16133,7 +16133,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8105c4bf-68ae-4cc5-9817-e2404135943e")
-		(property "Reference" "#VPD2"
+		(property "Reference" "#VPD02"
 			(at 123.19 92.71 0)
 			(hide yes)
 			(show_name no)
@@ -16194,7 +16194,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "#VPD2")
+					(reference "#VPD02")
 					(unit 1)
 				)
 			)
@@ -16212,7 +16212,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8164b1f6-d8eb-43be-925f-a0823e5d9310")
-		(property "Reference" "C49"
+		(property "Reference" "C15"
 			(at 355.6 43.1862 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16320,7 +16320,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "C49")
+					(reference "C15")
 					(unit 1)
 				)
 			)
@@ -16338,7 +16338,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8200f6d1-4827-47f3-9eb2-b6919259a565")
-		(property "Reference" "#PWR8"
+		(property "Reference" "#PWR012"
 			(at 107.95 241.3 0)
 			(hide yes)
 			(show_name no)
@@ -16398,7 +16398,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "#PWR8")
+					(reference "#PWR012")
 					(unit 1)
 				)
 			)
@@ -16416,7 +16416,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "85e536cf-f7c2-4e00-be50-8fd5cbe30ba9")
-		(property "Reference" "#PWR15"
+		(property "Reference" "#PWR022"
 			(at 205.74 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -16476,7 +16476,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "#PWR15")
+					(reference "#PWR022")
 					(unit 1)
 				)
 			)
@@ -16493,7 +16493,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "89331e99-317d-443a-bf19-563bf63da508")
-		(property "Reference" "TP45"
+		(property "Reference" "TP16"
 			(at 383.54 115.57 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16554,7 +16554,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "TP45")
+					(reference "TP16")
 					(unit 1)
 				)
 			)
@@ -16572,7 +16572,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8d6f5b9a-e8ca-4b2b-97ef-56f58f183428")
-		(property "Reference" "#PWR10"
+		(property "Reference" "#PWR014"
 			(at 133.35 203.2 0)
 			(hide yes)
 			(show_name no)
@@ -16632,7 +16632,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "#PWR10")
+					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -16649,7 +16649,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8e4f600e-b3a6-4f0d-89ee-3a27baf7c9e5")
-		(property "Reference" "#PWR19"
+		(property "Reference" "#PWR026"
 			(at 238.76 238.76 0)
 			(hide yes)
 			(show_name no)
@@ -16709,7 +16709,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "#PWR19")
+					(reference "#PWR026")
 					(unit 1)
 				)
 			)
@@ -16727,7 +16727,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8ec6298d-72e3-4ccf-8731-f2155806125c")
-		(property "Reference" "#PWR24"
+		(property "Reference" "#PWR033"
 			(at 294.64 229.87 0)
 			(hide yes)
 			(show_name no)
@@ -16787,7 +16787,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "#PWR24")
+					(reference "#PWR033")
 					(unit 1)
 				)
 			)
@@ -16804,7 +16804,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "90af4337-09e3-4b99-8417-6c76772fc697")
-		(property "Reference" "TP57"
+		(property "Reference" "TP15"
 			(at 339.09 68.58 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16865,7 +16865,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "TP57")
+					(reference "TP15")
 					(unit 1)
 				)
 			)
@@ -16882,7 +16882,7 @@
 		(in_pos_files yes)
 		(dnp yes)
 		(uuid "95a0e21f-902f-4690-88f4-b8b03f0f9bdd")
-		(property "Reference" "R66"
+		(property "Reference" "R4"
 			(at 69.088 78.74 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16995,7 +16995,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "R66")
+					(reference "R4")
 					(unit 1)
 				)
 			)
@@ -17012,7 +17012,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "974bb889-a990-469a-af27-65115e6e93e1")
-		(property "Reference" "TP66"
+		(property "Reference" "TP3"
 			(at 97.79 124.46 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17073,7 +17073,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "TP66")
+					(reference "TP3")
 					(unit 1)
 				)
 			)
@@ -17090,7 +17090,7 @@
 		(in_pos_files yes)
 		(dnp yes)
 		(uuid "977e46d6-cef8-4cbf-8476-7c86b29ccf64")
-		(property "Reference" "R68"
+		(property "Reference" "R10"
 			(at 84.074 82.042 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17203,7 +17203,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "R68")
+					(reference "R10")
 					(unit 1)
 				)
 			)
@@ -17221,7 +17221,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "97fcc27d-0c5f-41dc-99c5-e02a18c75814")
-		(property "Reference" "R6"
+		(property "Reference" "R23"
 			(at 180.594 155.194 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17329,7 +17329,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "R6")
+					(reference "R23")
 					(unit 1)
 				)
 			)
@@ -17346,7 +17346,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9a230166-c16a-4044-ba06-250ca37b3b1e")
-		(property "Reference" "R62"
+		(property "Reference" "R34"
 			(at 299.72 203.962 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17454,7 +17454,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "R62")
+					(reference "R34")
 					(unit 1)
 				)
 			)
@@ -17471,7 +17471,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9da6bb9c-9241-4de5-b283-5f44268cdb47")
-		(property "Reference" "TP54"
+		(property "Reference" "TP14"
 			(at 325.12 78.74 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17532,7 +17532,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "TP54")
+					(reference "TP14")
 					(unit 1)
 				)
 			)
@@ -17549,7 +17549,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9e645987-85a3-49ef-bc10-52e51155a2d4")
-		(property "Reference" "R48"
+		(property "Reference" "R6"
 			(at 76.454 181.102 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17657,7 +17657,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "R48")
+					(reference "R6")
 					(unit 1)
 				)
 			)
@@ -17674,7 +17674,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9f98c0b5-24eb-4ecb-98db-42d9353f7408")
-		(property "Reference" "R43"
+		(property "Reference" "R15"
 			(at 88.138 246.38 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17782,7 +17782,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "R43")
+					(reference "R15")
 					(unit 1)
 				)
 			)
@@ -17800,7 +17800,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a2cf44b3-6fe9-454d-bf2b-4c42e616264e")
-		(property "Reference" "C1"
+		(property "Reference" "C12"
 			(at 254 138.4362 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17908,7 +17908,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "C1")
+					(reference "C12")
 					(unit 1)
 				)
 			)
@@ -17925,7 +17925,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a520c97c-5804-47c5-9297-17fa3d8d59c3")
-		(property "Reference" "#PWR0102"
+		(property "Reference" "#PWR027"
 			(at 241.3 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -17985,7 +17985,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "#PWR0102")
+					(reference "#PWR027")
 					(unit 1)
 				)
 			)
@@ -18002,7 +18002,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a8a2d3af-786b-423d-b4e9-5a394f050262")
-		(property "Reference" "R52"
+		(property "Reference" "R26"
 			(at 209.55 41.91 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18110,7 +18110,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "R52")
+					(reference "R26")
 					(unit 1)
 				)
 			)
@@ -18128,7 +18128,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ab07d4d0-3afe-4f64-a854-17578c73b112")
-		(property "Reference" "#PWR3"
+		(property "Reference" "#PWR09"
 			(at 82.55 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -18188,7 +18188,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "#PWR3")
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)
@@ -18205,7 +18205,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "acce492d-dca9-4f99-9fb6-f7327d4b45e2")
-		(property "Reference" "TP49"
+		(property "Reference" "TP11"
 			(at 279.4 200.66 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18266,7 +18266,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "TP49")
+					(reference "TP11")
 					(unit 1)
 				)
 			)
@@ -18283,7 +18283,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b04d81d9-4b8b-4f7f-89a4-83f6d1de2393")
-		(property "Reference" "R32"
+		(property "Reference" "R43"
 			(at 386.334 78.232 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18391,7 +18391,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "R32")
+					(reference "R43")
 					(unit 1)
 				)
 			)
@@ -18409,7 +18409,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b2c39e90-517a-4e73-819c-1109f2caab9b")
-		(property "Reference" "#PWR11"
+		(property "Reference" "#PWR015"
 			(at 133.35 242.57 0)
 			(hide yes)
 			(show_name no)
@@ -18469,7 +18469,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "#PWR11")
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -18486,7 +18486,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b51e5d75-0e40-4831-8ca3-731f712c499b")
-		(property "Reference" "TP65"
+		(property "Reference" "TP4"
 			(at 97.79 134.62 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18547,7 +18547,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "TP65")
+					(reference "TP4")
 					(unit 1)
 				)
 			)
@@ -18564,7 +18564,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b818e5b8-d879-43a3-ba8a-c3e10b127a9d")
-		(property "Reference" "R53"
+		(property "Reference" "R3"
 			(at 60.706 87.884 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18676,7 +18676,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "R53")
+					(reference "R3")
 					(unit 1)
 				)
 			)
@@ -18693,7 +18693,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ba93b9dd-43a4-46d4-99d8-848dd826f680")
-		(property "Reference" "R38"
+		(property "Reference" "R32"
 			(at 273.812 66.294 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18805,7 +18805,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "R38")
+					(reference "R32")
 					(unit 1)
 				)
 			)
@@ -18822,7 +18822,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "bbcba6dc-5ec3-429c-9714-fe2729b9086f")
-		(property "Reference" "TP55"
+		(property "Reference" "TP17"
 			(at 392.43 36.83 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18883,7 +18883,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "TP55")
+					(reference "TP17")
 					(unit 1)
 				)
 			)
@@ -18900,7 +18900,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "bcf19eb9-5263-4d85-8cfe-ce79b61a765e")
-		(property "Reference" "R58"
+		(property "Reference" "R17"
 			(at 99.06 89.916 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19012,7 +19012,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "R58")
+					(reference "R17")
 					(unit 1)
 				)
 			)
@@ -19029,7 +19029,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "bd3aa16e-0f27-49ec-ad25-14fd19ec6f9e")
-		(property "Reference" "Q4"
+		(property "Reference" "Q2"
 			(at 221.234 56.642 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19142,7 +19142,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "Q4")
+					(reference "Q2")
 					(unit 1)
 				)
 			)
@@ -19159,7 +19159,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c1bb63d5-4a2a-4b77-9687-caf0ca8217b1")
-		(property "Reference" "R72"
+		(property "Reference" "R18"
 			(at 110.744 109.4486 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19267,7 +19267,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "R72")
+					(reference "R18")
 					(unit 1)
 				)
 			)
@@ -19284,7 +19284,7 @@
 		(in_pos_files yes)
 		(dnp yes)
 		(uuid "c80c9294-6a47-4056-a45b-41e601b56181")
-		(property "Reference" "R67"
+		(property "Reference" "R8"
 			(at 75.438 82.55 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19397,7 +19397,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "R67")
+					(reference "R8")
 					(unit 1)
 				)
 			)
@@ -19415,7 +19415,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c884e291-c4c0-479c-a775-022feacec834")
-		(property "Reference" "Q3"
+		(property "Reference" "Q1"
 			(at 84.074 190.246 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19535,7 +19535,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "Q3")
+					(reference "Q1")
 					(unit 1)
 				)
 			)
@@ -19552,7 +19552,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c981ab8d-7786-4f49-bedf-ef6a4cd0373c")
-		(property "Reference" "TP67"
+		(property "Reference" "TP5"
 			(at 153.162 119.38 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19613,7 +19613,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "TP67")
+					(reference "TP5")
 					(unit 1)
 				)
 			)
@@ -19630,7 +19630,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "cb8e627b-6895-409d-a678-3e4d6734cfd0")
-		(property "Reference" "#VPD1"
+		(property "Reference" "#VPD01"
 			(at 74.93 43.18 0)
 			(hide yes)
 			(show_name no)
@@ -19691,7 +19691,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "#VPD1")
+					(reference "#VPD01")
 					(unit 1)
 				)
 			)
@@ -19708,7 +19708,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "cc61e7de-4f63-4c3b-a3a6-28d5ff104626")
-		(property "Reference" "#PWR17"
+		(property "Reference" "#PWR023"
 			(at 213.36 237.49 0)
 			(hide yes)
 			(show_name no)
@@ -19768,7 +19768,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "#PWR17")
+					(reference "#PWR023")
 					(unit 1)
 				)
 			)
@@ -19785,7 +19785,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "cd2076f3-775d-49c4-abe8-853160ca8d59")
-		(property "Reference" "C32"
+		(property "Reference" "C4"
 			(at 110.236 186.69 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19893,7 +19893,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "C32")
+					(reference "C4")
 					(unit 1)
 				)
 			)
@@ -19911,7 +19911,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "cd948190-cac2-495d-bf25-ec06d3964c2e")
-		(property "Reference" "#PWR9"
+		(property "Reference" "#PWR013"
 			(at 123.19 149.86 0)
 			(hide yes)
 			(show_name no)
@@ -19971,7 +19971,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "#PWR9")
+					(reference "#PWR013")
 					(unit 1)
 				)
 			)
@@ -19989,7 +19989,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d189e1d9-0c8b-444b-b8a5-4a0f2e87bc24")
-		(property "Reference" "#PWR7"
+		(property "Reference" "#PWR011"
 			(at 107.95 198.12 0)
 			(hide yes)
 			(show_name no)
@@ -20049,7 +20049,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "#PWR7")
+					(reference "#PWR011")
 					(unit 1)
 				)
 			)
@@ -20066,7 +20066,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d998302a-dd89-4964-a6f9-fef78176bc38")
-		(property "Reference" "R39"
+		(property "Reference" "R35"
 			(at 318.262 87.376 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20174,7 +20174,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "R39")
+					(reference "R35")
 					(unit 1)
 				)
 			)
@@ -20191,7 +20191,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "da8d6430-97d4-43cd-802a-1d49b7ad30cd")
-		(property "Reference" "TP53"
+		(property "Reference" "TP7"
 			(at 152.908 134.112 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20252,7 +20252,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "TP53")
+					(reference "TP7")
 					(unit 1)
 				)
 			)
@@ -20269,7 +20269,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "daa27d4f-5b7b-49f5-a062-e24384fec44f")
-		(property "Reference" "C36"
+		(property "Reference" "C14"
 			(at 279.146 206.756 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20377,7 +20377,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "C36")
+					(reference "C14")
 					(unit 1)
 				)
 			)
@@ -20394,7 +20394,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "dcd94f95-8285-44db-90a9-01370a6b4b0b")
-		(property "Reference" "#3V-2"
+		(property "Reference" "#3V-03"
 			(at 294.64 194.31 0)
 			(hide yes)
 			(show_name no)
@@ -20455,7 +20455,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "#3V-2")
+					(reference "#3V-03")
 					(unit 1)
 				)
 			)
@@ -20472,7 +20472,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ddfc113d-059b-44d4-8b8f-3af31a7f7663")
-		(property "Reference" "C38"
+		(property "Reference" "C9"
 			(at 189.992 206.502 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20580,7 +20580,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "C38")
+					(reference "C9")
 					(unit 1)
 				)
 			)
@@ -20597,7 +20597,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "df8661be-6675-4e0a-8c7f-eb82e2bb75c5")
-		(property "Reference" "R34"
+		(property "Reference" "R27"
 			(at 218.186 208.026 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20705,7 +20705,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "R34")
+					(reference "R27")
 					(unit 1)
 				)
 			)
@@ -20722,7 +20722,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e129519d-d976-4814-bfa1-c1b91be4785a")
-		(property "Reference" "C37"
+		(property "Reference" "C10"
 			(at 204.978 206.502 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20830,7 +20830,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "C37")
+					(reference "C10")
 					(unit 1)
 				)
 			)
@@ -20847,7 +20847,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e1459954-46f1-4425-bafa-4f6638dd193a")
-		(property "Reference" "R71"
+		(property "Reference" "R1"
 			(at 66.802 43.688 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20955,7 +20955,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "R71")
+					(reference "R1")
 					(unit 1)
 				)
 			)
@@ -20972,7 +20972,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e1e1623e-93aa-4d61-a5a4-b96384228800")
-		(property "Reference" "#PWR13"
+		(property "Reference" "#PWR020"
 			(at 195.58 223.52 0)
 			(hide yes)
 			(show_name no)
@@ -21032,7 +21032,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "#PWR13")
+					(reference "#PWR020")
 					(unit 1)
 				)
 			)
@@ -21050,7 +21050,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e254bd9d-5f25-4e67-b11b-c8f5a6b05c13")
-		(property "Reference" "#PWR0101"
+		(property "Reference" "#PWR025"
 			(at 228.6 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -21110,7 +21110,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "#PWR0101")
+					(reference "#PWR025")
 					(unit 1)
 				)
 			)
@@ -21127,7 +21127,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e2f3a5c5-26b7-4cfd-ba52-08f1e7eb81a6")
-		(property "Reference" "U14"
+		(property "Reference" "U6"
 			(at 297.18 87.63 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21280,7 +21280,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "U14")
+					(reference "U6")
 					(unit 1)
 				)
 			)
@@ -21297,7 +21297,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e30b1bef-79fa-4a18-aafb-7f4efca144f2")
-		(property "Reference" "TP64"
+		(property "Reference" "TP12"
 			(at 316.738 55.626 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21358,7 +21358,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "TP64")
+					(reference "TP12")
 					(unit 1)
 				)
 			)
@@ -21375,7 +21375,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e344b058-d19a-423c-95dc-c73ac29595f5")
-		(property "Reference" "R45"
+		(property "Reference" "R20"
 			(at 113.538 213.614 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21483,7 +21483,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "R45")
+					(reference "R20")
 					(unit 1)
 				)
 			)
@@ -21626,7 +21626,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e48eff03-f8d0-4edf-b288-5789309d7f17")
-		(property "Reference" "C33"
+		(property "Reference" "C13"
 			(at 266.446 58.166 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21738,7 +21738,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "C33")
+					(reference "C13")
 					(unit 1)
 				)
 			)
@@ -21756,7 +21756,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e7420c32-b77a-47b7-a7cf-5a35d4d8f220")
-		(property "Reference" "TP52"
+		(property "Reference" "TP10"
 			(at 274.32 102.87 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21817,7 +21817,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "TP52")
+					(reference "TP10")
 					(unit 1)
 				)
 			)
@@ -21835,7 +21835,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e896ba8c-17ad-4031-ad53-ad6a958e366a")
-		(property "Reference" "#PWR28"
+		(property "Reference" "#PWR037"
 			(at 381 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -21895,7 +21895,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "#PWR28")
+					(reference "#PWR037")
 					(unit 1)
 				)
 			)
@@ -21913,7 +21913,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e8eabe9f-af11-40f4-9ec9-b778b5ddd590")
-		(property "Reference" "#PWR2"
+		(property "Reference" "#PWR08"
 			(at 67.31 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -21973,7 +21973,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "#PWR2")
+					(reference "#PWR08")
 					(unit 1)
 				)
 			)
@@ -21990,7 +21990,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ec455591-90bf-4474-913e-7f5694d98f00")
-		(property "Reference" "R47"
+		(property "Reference" "R36"
 			(at 331.724 56.896 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22098,7 +22098,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "R47")
+					(reference "R36")
 					(unit 1)
 				)
 			)
@@ -22116,7 +22116,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ec4851a9-20d7-4927-8cfc-2f32e668ee35")
-		(property "Reference" "#PWR23"
+		(property "Reference" "#PWR032"
 			(at 294.64 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -22176,7 +22176,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "#PWR23")
+					(reference "#PWR032")
 					(unit 1)
 				)
 			)
@@ -22193,7 +22193,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f2cdb34e-b6db-4552-9a82-26f70814cd4b")
-		(property "Reference" "R41"
+		(property "Reference" "R7"
 			(at 76.962 221.234 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22301,7 +22301,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "R41")
+					(reference "R7")
 					(unit 1)
 				)
 			)
@@ -22318,7 +22318,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f3b797ac-03ff-4e0b-9fe3-ea7cf926c121")
-		(property "Reference" "TP68"
+		(property "Reference" "TP6"
 			(at 153.162 121.92 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22379,7 +22379,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "TP68")
+					(reference "TP6")
 					(unit 1)
 				)
 			)
@@ -22475,7 +22475,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f63495ea-6a34-4662-8eed-a54e5207ecc0")
-		(property "Reference" "#PWR61"
+		(property "Reference" "#PWR017"
 			(at 143.51 226.06 0)
 			(hide yes)
 			(show_name no)
@@ -22535,7 +22535,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "#PWR61")
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -22552,7 +22552,7 @@
 		(in_pos_files yes)
 		(dnp yes)
 		(uuid "fec92641-e4e2-4759-b9d9-74513cd1d324")
-		(property "Reference" "R69"
+		(property "Reference" "R12"
 			(at 87.122 79.248 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22665,7 +22665,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "R69")
+					(reference "R12")
 					(unit 1)
 				)
 			)
@@ -22682,7 +22682,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "feffe179-7271-47d4-814a-601a6f254b25")
-		(property "Reference" "R44"
+		(property "Reference" "R22"
 			(at 123.698 216.408 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22790,7 +22790,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "R44")
+					(reference "R22")
 					(unit 1)
 				)
 			)
@@ -22807,7 +22807,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ff6cec28-3698-47e3-98e3-1abbc65d3c43")
-		(property "Reference" "R64"
+		(property "Reference" "R40"
 			(at 348.996 41.91 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22915,7 +22915,7 @@
 		(instances
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/79e6f5da-9b7e-4636-a735-d76e4a141190"
-					(reference "R64")
+					(reference "R40")
 					(unit 1)
 				)
 			)

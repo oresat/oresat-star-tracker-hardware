@@ -78,59 +78,31 @@
       ],
       "drc_exclusions": [
         [
-          "hole_to_hole|104841100|114193600|12a98dd4-7bf8-467c-8c81-42f8249588be|d9e5ec78-2b0e-49dc-856f-4acbeea99660",
+          "silk_edge_clearance|134213500|57673000|ffcbcb43-4fa1-4f73-8266-2010f9e5030b|5e09e8fc-7018-4361-8f6c-62bbc9f30766",
           ""
         ],
         [
-          "hole_to_hole|104841100|119193600|b23a69ac-638f-4214-8438-758cdbafa963|d439bb02-a897-4311-aaad-003baddd022c",
+          "silk_edge_clearance|134213500|57703600|ffcbcb43-4fa1-4f73-8266-2010f9e5030b|306ff9b2-3fd4-43f5-b4f1-d30ca76ca540",
           ""
         ],
         [
-          "hole_to_hole|104841100|124193600|3fbff22e-7a3b-44be-b8a2-9c3f321740e2|e202fc0c-a76a-48a3-9467-443b03978a8a",
+          "silk_edge_clearance|135483500|57673000|ffcbcb43-4fa1-4f73-8266-2010f9e5030b|a6a81064-d3c5-4dd5-92df-816c0144a121",
           ""
         ],
         [
-          "hole_to_hole|104841100|129193600|7750ade0-b31a-4e50-b306-d1a8aa2ade74|b2f069ba-d6a8-4fdb-a0b5-8c6fcb3db8a1",
+          "silk_edge_clearance|135483500|57703600|ffcbcb43-4fa1-4f73-8266-2010f9e5030b|fdb3a0d4-e968-457e-b7e3-510a56f9a119",
           ""
         ],
         [
-          "hole_to_hole|104841100|134193600|cff63f00-5895-4a00-b39a-1c7fa3b97d44|e59caf7a-de34-4284-ad44-67e4bddff031",
+          "silk_edge_clearance|138277500|57673000|ffcbcb43-4fa1-4f73-8266-2010f9e5030b|04f8c0c5-5ee5-4182-8f3b-f2fe5c28f303",
           ""
         ],
         [
-          "hole_to_hole|104851100|104193600|3e46f587-c9a1-4456-b061-7d2f94a2aed5|8628f104-db27-4976-90fe-6560ce2495e5",
+          "silk_edge_clearance|138277500|57703600|ffcbcb43-4fa1-4f73-8266-2010f9e5030b|246ce1c8-ac2f-4b14-85ee-581541dfe21f",
           ""
         ],
         [
-          "hole_to_hole|104851100|109193600|942c90f6-7e57-47de-8731-c792e99f6e4e|e7e64f08-8030-4acc-8194-ddf01b9633b9",
-          ""
-        ],
-        [
-          "hole_to_hole|144601100|114203600|33deb558-e435-424b-b4ea-ac3c20374e5a|db38fc47-b205-4a8f-9052-b378d9bad811",
-          ""
-        ],
-        [
-          "hole_to_hole|144601100|119203600|483395c6-ff4e-466d-8e07-b4b84a4faa93|7cb223d1-112c-4f0f-9f17-6b040457e589",
-          ""
-        ],
-        [
-          "hole_to_hole|144601100|124203600|6cd0c583-06f1-4a06-b226-8500e296ec9b|aa5e1b7d-5493-4ba2-95af-82137b432593",
-          ""
-        ],
-        [
-          "hole_to_hole|144601100|129203600|74d5ddce-8027-4d83-9eb7-9af8d46ab325|ea873bcd-bfb6-4b4b-9793-613c88887be3",
-          ""
-        ],
-        [
-          "hole_to_hole|144601100|134203600|a63da381-bbd7-48a0-a212-7eb957ca4182|ceed49bb-4116-4d33-a501-49e00b26d3cc",
-          ""
-        ],
-        [
-          "hole_to_hole|144611100|104203600|79a6b3ec-be00-4b2b-a150-bde3d3256558|a6a44bc7-cfad-48e6-b0bf-a1325ebd6cf3",
-          ""
-        ],
-        [
-          "hole_to_hole|144611100|109203600|6553122f-5dd5-41ba-a0f7-2d481a16e41c|b7956a9b-525e-4511-9bb6-c730fd2f0a56",
+          "silk_edge_clearance|162788500|57703600|ffcbcb43-4fa1-4f73-8266-2010f9e5030b|7e78a376-2ab9-4bb5-b045-c53c46ae5dc4",
           ""
         ]
       ],
@@ -327,7 +299,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": "1.3"
+      "sch_revision": "2.0"
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -1080,7 +1052,7 @@
         "uuid": "324e9eb5-7420-4b7e-862c-cc20bb28618a"
       }
     ],
-    "used_designators": "TP130,R80-81",
+    "used_designators": "U18",
     "variants": []
   },
   "sheets": [
