@@ -4141,12 +4141,14 @@
 		)
 		(uuid "55bea913-381b-4234-92bc-cd95ee4636d1")
 	)
-	(text "36 Pin connector"
+	(text "36 Pin connector to Star Tracker Card"
 		(exclude_from_sim no)
-		(at 88.9 218.44 0)
+		(at 87.122 215.138 0)
 		(effects
 			(font
-				(size 3.81 3.2385)
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
 			)
 			(justify left bottom)
 		)
@@ -4184,6 +4186,17 @@
 			(justify left bottom)
 		)
 		(uuid "9e8f2909-0096-468b-b789-0a1a892caeef")
+	)
+	(text "36 wire, 0.5 mm pitch, \n30 mm long FFC cable to\nStar Tracker card\nE.g., Molex 15266-0381"
+		(exclude_from_sim no)
+		(at 96.266 222.25 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "af7a5f60-42a1-4474-b7bf-a277767cdf16")
 	)
 	(text "VREG enable pulled high to enable. DNP pulldown resistor.\nPut VREG enable traces in a place I can cut them\nand enable then separately via test points"
 		(exclude_from_sim no)
@@ -9025,23 +9038,23 @@
 		(dnp no)
 		(uuid "20926605-64bf-42dd-9366-f5fe865a3961")
 		(property "Reference" "J1"
-			(at 160.02 198.12 0)
+			(at 151.892 213.106 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1.7808 1.5136)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)
 		)
 		(property "Value" "3-1734742-6"
-			(at 157.48 198.12 0)
+			(at 145.542 215.138 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1.7799 1.5129)
+					(size 1.27 1.27)
 				)
 				(justify left bottom)
 			)

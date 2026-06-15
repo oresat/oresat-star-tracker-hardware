@@ -3520,6 +3520,19 @@
 		)
 		(uuid "743be4d4-eeb5-455e-bc14-8a6ad2745f8a")
 	)
+	(text "36 wire, 0.5 mm pitch, \n30 mm long FFC cable to\nStar Tracker camera board\nE.g., Molex 15266-0381\n"
+		(exclude_from_sim no)
+		(at 382.016 142.494 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify left)
+		)
+		(uuid "82cc88ae-62a8-4e08-9533-d67d5df657f0")
+	)
 	(text "Main Connector"
 		(exclude_from_sim no)
 		(at 50.038 20.574 0)
@@ -3533,7 +3546,7 @@
 	)
 	(text "36 Pin connector\nCamera Connector"
 		(exclude_from_sim no)
-		(at 337.566 87.63 0)
+		(at 365.76 205.74 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7248,7 +7261,7 @@
 		(dnp no)
 		(uuid "bd9366e4-2a76-4435-a3d5-518b0bc3ab81")
 		(property "Reference" "J101"
-			(at 364.8456 200.8886 0)
+			(at 371.602 199.136 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
