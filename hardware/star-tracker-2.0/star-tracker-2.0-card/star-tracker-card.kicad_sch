@@ -7278,7 +7278,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Value" "3-1734592-64-1734592-0"
+		(property "Value" "3-2492104-6"
 			(at 398.78 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -7300,7 +7300,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.te.com/usa-en/product-3-1734592-0.datasheet.pdf"
+		(property "Datasheet" "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=2492104&DocType=Customer%20Drawing&DocLang=English&DocFormat=pdf&PartCntxt=3-2492104-6"
 			(at 398.78 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -7311,7 +7311,7 @@
 				)
 			)
 		)
-		(property "Description" "30 Position FPC Connector Contacts, Bottom 0.020\" (0.50mm) Surface Mount, Right Angle"
+		(property "Description" "36 Position FPC Connector Contacts, Bottom 0.020\" (0.50mm) Surface Mount, Right Angle"
 			(at 398.78 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -7333,7 +7333,7 @@
 				)
 			)
 		)
-		(property "DPN" "A100290CT-ND"
+		(property "DPN" "17-3-2492104-6CT-ND"
 			(at 398.78 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -7355,7 +7355,7 @@
 				)
 			)
 		)
-		(property "MPN" "3-1734592-0"
+		(property "MPN" "3-2492104-6"
 			(at 398.78 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -7896,7 +7896,7 @@
 			(type solid)
 		)
 		(fill
-			(color 0 0 0 0)
+			(color 255 229 191 1)
 		)
 		(uuid "180c7308-0a0c-41f6-9c76-108b10aa05c2")
 		(property "Sheetname" "SIP B"
@@ -7982,7 +7982,7 @@
 			(type solid)
 		)
 		(fill
-			(color 0 0 0 0)
+			(color 255 229 191 1)
 		)
 		(uuid "27f3aeed-347f-4362-9166-18725d92163b")
 		(property "Sheetname" "SIP A"
@@ -8077,7 +8077,7 @@
 			(type solid)
 		)
 		(fill
-			(color 0 0 0 0)
+			(color 255 229 191 1)
 		)
 		(uuid "79e6f5da-9b7e-4636-a735-d76e4a141190")
 		(property "Sheetname" "Card Power Domain"
@@ -8203,7 +8203,7 @@
 			(type solid)
 		)
 		(fill
-			(color 0 0 0 0)
+			(color 255 229 191 1)
 		)
 		(uuid "9edd79c7-1f35-42ab-883b-4f04e19f8786")
 		(property "Sheetname" "Camera Logical Level Shifters"
@@ -8769,7 +8769,7 @@
 			(type solid)
 		)
 		(fill
-			(color 0 0 0 0)
+			(color 255 229 191 1)
 		)
 		(uuid "a084c86d-a957-44c2-8803-b841b67f8737")
 		(property "Sheetname" "SIP D"
@@ -8944,7 +8944,7 @@
 			(type solid)
 		)
 		(fill
-			(color 0 0 0 0)
+			(color 255 229 191 1)
 		)
 		(uuid "c38dcfbe-e8e3-410e-98db-09d235320446")
 		(property "Sheetname" "SIP C"
@@ -9220,7 +9220,7 @@
 			(type solid)
 		)
 		(fill
-			(color 0 0 0 0)
+			(color 255 229 191 1)
 		)
 		(uuid "eb575624-9a53-42ad-b889-70334a877908")
 		(property "Sheetname" "SIP E+F"

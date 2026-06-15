@@ -62,11 +62,15 @@
       ],
       "drc_exclusions": [
         [
-          "solder_mask_bridge|147693720|103797631|95c45dfa-a8f5-488c-a79d-2608bc828119|36086e6a-4ace-42d4-a7c8-b4c1dc655426",
+          "solder_mask_bridge|147289503|106124065|95c45dfa-a8f5-488c-a79d-2608bc828119|0c11632b-7e51-4894-9b1d-21466fee2780",
           ""
         ],
         [
-          "solder_mask_bridge|162193720|103797631|737b7b80-963e-472e-8b20-62defdcf3c38|36086e6a-4ace-42d4-a7c8-b4c1dc655426",
+          "solder_mask_bridge|161016369|104590117|737b7b80-963e-472e-8b20-62defdcf3c38|d0c8260f-3a07-4d5d-be81-f6cf5d3bfe02",
+          ""
+        ],
+        [
+          "solder_mask_bridge|161588677|103613018|737b7b80-963e-472e-8b20-62defdcf3c38|d0c8260f-3a07-4d5d-be81-f6cf5d3bfe02",
           ""
         ]
       ],
@@ -947,7 +951,7 @@
         "uuid": "f9580dae-4cbd-4db1-9624-ffa4bae0464d"
       }
     ],
-    "used_designators": "#U$1-5,#PWR1-15,TP1-5,#SUPPLY1-6,C1-19,#VBUS1-24,R1-11,J1,U1-4,X1",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [
