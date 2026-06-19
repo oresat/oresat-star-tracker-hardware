@@ -6,8 +6,8 @@
 	(paper "B")
 	(title_block
 		(title "Oresat Star Tracker Camera Board")
-		(date "2026-04-22")
-		(rev "4.1")
+		(date "2026-06-19")
+		(rev "4.2")
 		(company "Portland State Aerospace Society")
 	)
 	(lib_symbols
@@ -8628,7 +8628,7 @@
 				)
 			)
 		)
-		(property "DIS" "DigiKey"
+		(property "DIS" "Mouser"
 			(at 358.14 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -8639,7 +8639,7 @@
 				)
 			)
 		)
-		(property "DPN" "490-GRT188C71E225KE13DCT-ND"
+		(property "DPN" "81-GRT188C71E225KE3D "
 			(at 358.14 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -8831,7 +8831,7 @@
 				)
 			)
 		)
-		(property "DIS" "Digikey"
+		(property "DIS" "Mouser"
 			(at 78.74 144.78 0)
 			(hide yes)
 			(show_name no)
@@ -8842,7 +8842,7 @@
 				)
 			)
 		)
-		(property "DPN" "RMCF0402FT10K0CT-ND"
+		(property "DPN" "708-RMCF0402FT10K0 "
 			(at 78.74 144.78 0)
 			(hide yes)
 			(show_name no)
@@ -8864,7 +8864,7 @@
 				)
 			)
 		)
-		(property "MPN" "RMCF0402FT10K0"
+		(property "MPN" "RMCF0402FT10K0 "
 			(at 78.74 144.78 0)
 			(hide yes)
 			(show_name no)
@@ -9226,7 +9226,7 @@
 				)
 			)
 		)
-		(property "Description" "36 Position FFC, FPC Connector Contacts, Vertical, 1 Sided 0.020\" (0.50mm) Surface Mount"
+		(property "Description" "36 Position FPC Connector Contacts, Vertical - 2 Sided 0.020\" (0.50mm) Surface Mount"
 			(at 101.6 205.74 0)
 			(hide yes)
 			(show_name no)
@@ -9248,7 +9248,7 @@
 				)
 			)
 		)
-		(property "DPN" "A100241CT-ND"
+		(property "DPN" "17-3-2492144-6TR-ND"
 			(at 101.6 205.74 0)
 			(hide yes)
 			(show_name no)
@@ -9270,7 +9270,7 @@
 				)
 			)
 		)
-		(property "MPN" "3-1734742-6"
+		(property "MPN" "3-2492144-6"
 			(at 101.6 205.74 0)
 			(hide yes)
 			(show_name no)
@@ -9905,7 +9905,7 @@
 				)
 			)
 		)
-		(property "DIS" "Digikey"
+		(property "DIS" "Mouser"
 			(at 88.9 144.78 0)
 			(hide yes)
 			(show_name no)
@@ -9916,7 +9916,7 @@
 				)
 			)
 		)
-		(property "DPN" "RMCF0402FT10K0CT-ND"
+		(property "DPN" "708-RMCF0402FT10K0 "
 			(at 88.9 144.78 0)
 			(hide yes)
 			(show_name no)
@@ -9938,7 +9938,7 @@
 				)
 			)
 		)
-		(property "MPN" "RMCF0402FT10K0"
+		(property "MPN" "RMCF0402FT10K0 "
 			(at 88.9 144.78 0)
 			(hide yes)
 			(show_name no)
@@ -10030,7 +10030,7 @@
 				)
 			)
 		)
-		(property "DIS" "Digikey"
+		(property "DIS" "Mouser"
 			(at 110.49 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -10041,7 +10041,7 @@
 				)
 			)
 		)
-		(property "DPN" "RMCF0402FT100RCT-ND"
+		(property "DPN" "708-RMCF0402FT100R "
 			(at 110.49 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -10155,7 +10155,7 @@
 				)
 			)
 		)
-		(property "DIS" "DigiKey"
+		(property "DIS" "Mouser"
 			(at 347.98 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -10166,7 +10166,7 @@
 				)
 			)
 		)
-		(property "DPN" "490-GRT188C71E225KE13DCT-ND"
+		(property "DPN" "81-GRT188C71E225KE3D "
 			(at 347.98 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -10513,7 +10513,7 @@
 				)
 			)
 		)
-		(property "DIS" "Digikey"
+		(property "DIS" "Mouser"
 			(at 91.44 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -10524,7 +10524,7 @@
 				)
 			)
 		)
-		(property "DPN" "RMCF0402FT4K70CT-ND"
+		(property "DPN" "708-RMCF0402FT4K70 "
 			(at 91.44 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -10638,7 +10638,7 @@
 				)
 			)
 		)
-		(property "DIS" "DigiKey"
+		(property "DIS" "Mouser"
 			(at 378.46 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -10649,7 +10649,7 @@
 				)
 			)
 		)
-		(property "DPN" "490-18215-1-ND"
+		(property "DPN" "81-GRT155C81E105KE3D"
 			(at 378.46 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -10842,7 +10842,7 @@
 				)
 			)
 		)
-		(property "DIS" "DigiKey"
+		(property "DIS" "Mouser"
 			(at 294.64 218.44 0)
 			(hide yes)
 			(show_name no)
@@ -10853,7 +10853,7 @@
 				)
 			)
 		)
-		(property "DPN" "296-TPS71928-28DRVTCT-ND"
+		(property "DPN" "595-TPS71928-28DRVT "
 			(at 294.64 218.44 0)
 			(hide yes)
 			(show_name no)
@@ -11142,7 +11142,7 @@
 				)
 			)
 		)
-		(property "DIS" "DigiKey"
+		(property "DIS" "Mouser"
 			(at 294.64 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -11153,7 +11153,7 @@
 				)
 			)
 		)
-		(property "DPN" "296-48768-1-ND"
+		(property "DPN" "595-TPS70618DRVR "
 			(at 294.64 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -11175,7 +11175,7 @@
 				)
 			)
 		)
-		(property "MPN" "TPS70618DRVR"
+		(property "MPN" "TPS70618DRVR "
 			(at 294.64 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -11288,7 +11288,7 @@
 				)
 			)
 		)
-		(property "DIS" "Digikey"
+		(property "DIS" "Mouser"
 			(at 144.78 139.7 0)
 			(hide yes)
 			(show_name no)
@@ -11299,7 +11299,7 @@
 				)
 			)
 		)
-		(property "DPN" "RMCF0402FT10K0CT-ND"
+		(property "DPN" "708-RMCF0402FT10K0 "
 			(at 144.78 139.7 0)
 			(hide yes)
 			(show_name no)
@@ -11321,7 +11321,7 @@
 				)
 			)
 		)
-		(property "MPN" "RMCF0402FT10K0"
+		(property "MPN" "RMCF0402FT10K0 "
 			(at 144.78 139.7 0)
 			(hide yes)
 			(show_name no)
@@ -11647,7 +11647,7 @@
 				)
 			)
 		)
-		(property "DIS" "Digikey"
+		(property "DIS" "Mouser"
 			(at 101.6 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -11658,7 +11658,7 @@
 				)
 			)
 		)
-		(property "DPN" "RMCF0402FT4K70CT-ND"
+		(property "DPN" "708-RMCF0402FT4K70 "
 			(at 101.6 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -11729,7 +11729,7 @@
 			)
 		)
 		(property "Value" "3.3V"
-			(at 295.656 157.48 90)
+			(at 295.656 157.48 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12052,7 +12052,7 @@
 				)
 			)
 		)
-		(property "DIS" "DigiKey"
+		(property "DIS" "Mouser"
 			(at 378.46 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -12063,7 +12063,7 @@
 				)
 			)
 		)
-		(property "DPN" "490-GRT188C71E225KE13DCT-ND"
+		(property "DPN" "81-GRT188C71E225KE3D "
 			(at 378.46 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -12177,7 +12177,7 @@
 				)
 			)
 		)
-		(property "DIS" "DigiKey"
+		(property "DIS" "Mouser"
 			(at 198.12 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -12925,7 +12925,7 @@
 				)
 			)
 		)
-		(property "DIS" "DigiKey"
+		(property "DIS" "Mouser"
 			(at 388.62 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -12936,7 +12936,7 @@
 				)
 			)
 		)
-		(property "DPN" "490-GRT188C71E225KE13DCT-ND"
+		(property "DPN" "81-GRT188C71E225KE3D "
 			(at 388.62 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -13128,7 +13128,7 @@
 				)
 			)
 		)
-		(property "DIS" "DigiKey"
+		(property "DIS" "Mouser"
 			(at 368.3 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -13139,7 +13139,7 @@
 				)
 			)
 		)
-		(property "DPN" "490-GRT188C71E225KE13DCT-ND"
+		(property "DPN" "81-GRT188C71E225KE3D "
 			(at 368.3 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -13331,7 +13331,7 @@
 				)
 			)
 		)
-		(property "DIS" "DigiKey"
+		(property "DIS" "Mouser"
 			(at 368.3 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -13342,7 +13342,7 @@
 				)
 			)
 		)
-		(property "DPN" "490-18215-1-ND"
+		(property "DPN" "81-GRT155C81E105KE3D"
 			(at 368.3 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -13569,7 +13569,7 @@
 			)
 		)
 		(property "Value" "3.3V"
-			(at 295.656 114.3 90)
+			(at 295.656 114.3 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13815,7 +13815,7 @@
 				)
 			)
 		)
-		(property "DIS" "DigiKey"
+		(property "DIS" "Mouser"
 			(at 294.64 175.26 0)
 			(hide yes)
 			(show_name no)
@@ -13826,7 +13826,7 @@
 				)
 			)
 		)
-		(property "DPN" "296-TPS71928-28DRVTCT-ND"
+		(property "DPN" "595-TPS71928-28DRVT "
 			(at 294.64 175.26 0)
 			(hide yes)
 			(show_name no)
@@ -14522,7 +14522,7 @@
 				)
 			)
 		)
-		(property "DIS" "DigiKey"
+		(property "DIS" "Mouser"
 			(at 88.9 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -14533,7 +14533,7 @@
 				)
 			)
 		)
-		(property "DPN" "478-MC2520Z27.0000C19XSHCT-ND"
+		(property "DPN" "346-MC2520Z27.0000C1"
 			(at 88.9 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -14555,7 +14555,7 @@
 				)
 			)
 		)
-		(property "MPN" "MC2520Z27.0000C19XSH"
+		(property "MPN" "MC2520Z27.0000C19XSH "
 			(at 88.9 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -14964,7 +14964,7 @@
 				)
 			)
 		)
-		(property "DIS" "DigiKey"
+		(property "DIS" "Mouser"
 			(at 388.62 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -14975,7 +14975,7 @@
 				)
 			)
 		)
-		(property "DPN" "490-18215-1-ND"
+		(property "DPN" "81-GRT155C81E105KE3D"
 			(at 388.62 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -15383,7 +15383,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small_US")
-		(at 78.74 127 180)
+		(at 78.74 127 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -15393,7 +15393,7 @@
 		(dnp no)
 		(uuid "ca4640cc-9b85-487c-ada7-c3a53009ad92")
 		(property "Reference" "R1"
-			(at 77.47 128.524 0)
+			(at 80.01 125.476 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15404,7 +15404,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 77.47 123.7234 0)
+			(at 80.01 130.2766 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15447,7 +15447,7 @@
 				)
 			)
 		)
-		(property "DIS" "Digikey"
+		(property "DIS" "Mouser"
 			(at 78.74 127 0)
 			(hide yes)
 			(show_name no)
@@ -15458,7 +15458,7 @@
 				)
 			)
 		)
-		(property "DPN" "RMCF0402FT10K0CT-ND"
+		(property "DPN" "708-RMCF0402FT10K0 "
 			(at 78.74 127 0)
 			(hide yes)
 			(show_name no)
@@ -15480,7 +15480,7 @@
 				)
 			)
 		)
-		(property "MPN" "RMCF0402FT10K0"
+		(property "MPN" "RMCF0402FT10K0 "
 			(at 78.74 127 0)
 			(hide yes)
 			(show_name no)
@@ -15683,7 +15683,7 @@
 			)
 		)
 		(property "Value" "3.3V"
-			(at 295.656 200.66 90)
+			(at 295.656 200.66 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15804,7 +15804,7 @@
 				)
 			)
 		)
-		(property "DIS" "Digikey"
+		(property "DIS" "Mouser"
 			(at 88.9 127 0)
 			(hide yes)
 			(show_name no)
@@ -15815,7 +15815,7 @@
 				)
 			)
 		)
-		(property "DPN" "RMCF0402FT10K0CT-ND"
+		(property "DPN" "708-RMCF0402FT10K0 "
 			(at 88.9 127 0)
 			(hide yes)
 			(show_name no)
@@ -15837,7 +15837,7 @@
 				)
 			)
 		)
-		(property "MPN" "RMCF0402FT10K0"
+		(property "MPN" "RMCF0402FT10K0 "
 			(at 88.9 127 0)
 			(hide yes)
 			(show_name no)
@@ -16706,7 +16706,7 @@
 				)
 			)
 		)
-		(property "DIS" "Digikey"
+		(property "DIS" "Mouser"
 			(at 266.7 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -16717,7 +16717,7 @@
 				)
 			)
 		)
-		(property "DPN" "RMCF0402FT10K0CT-ND"
+		(property "DPN" "708-RMCF0402FT10K0 "
 			(at 266.7 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -16739,7 +16739,7 @@
 				)
 			)
 		)
-		(property "MPN" "RMCF0402FT10K0"
+		(property "MPN" "RMCF0402FT10K0 "
 			(at 266.7 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -17445,7 +17445,7 @@
 			)
 		)
 		(property "Value" "3.3V"
-			(at 142.875 180.975 90)
+			(at 142.875 180.975 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects

@@ -3489,6 +3489,17 @@
 		)
 		(uuid "37c6e3d5-fbd7-4111-916f-3911f53f8877")
 	)
+	(text "Debug Connector\n"
+		(exclude_from_sim no)
+		(at 58.674 138.684 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "442cd9e7-0c90-45e6-91ba-1a58c2601a1c")
+	)
 	(text "0805\n"
 		(exclude_from_sim no)
 		(at 373.38 194.31 0)
