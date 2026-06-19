@@ -9101,7 +9101,7 @@
 				)
 			)
 		)
-		(property "Description" "10000 pF ±5% 50V Ceramic Capacitor X7R 0402 (1005 Metric)"
+		(property "Description" "0.01uF 10% 25VDC Ceramic Capacitor X7R 0402 (1005 Metric)"
 			(at 58.42 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -9112,7 +9112,7 @@
 				)
 			)
 		)
-		(property "DIS" "Digikey"
+		(property "DIS" "Mouser"
 			(at 58.42 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -9123,7 +9123,7 @@
 				)
 			)
 		)
-		(property "DPN" "399-19365-1-ND"
+		(property "DPN" "81-GXT155R71E103KE1D "
 			(at 58.42 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -9134,7 +9134,7 @@
 				)
 			)
 		)
-		(property "MFR" "KEMET"
+		(property "MFR" "Murata"
 			(at 58.42 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -9145,7 +9145,7 @@
 				)
 			)
 		)
-		(property "MPN" "C0402C103J5RACAUTO"
+		(property "MPN" "GXT155R71E103KE01D"
 			(at 58.42 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -9459,7 +9459,7 @@
 				)
 			)
 		)
-		(property "Description" "10 µF ±20% 16V Ceramic Capacitor X6S 0603 (1608 Metric)"
+		(property "Description" "10 µF ±5% 23V Ceramic Capacitor X7R 0603 (1608 Metric)"
 			(at 314.96 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -9470,7 +9470,7 @@
 				)
 			)
 		)
-		(property "DIS" "Digikey"
+		(property "DIS" "Mouser"
 			(at 314.96 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -9481,7 +9481,7 @@
 				)
 			)
 		)
-		(property "DPN" "490-12286-1-ND"
+		(property "DPN" "80-C0603C106J3RACTU"
 			(at 314.96 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -9492,7 +9492,7 @@
 				)
 			)
 		)
-		(property "MFR" "Murata Electronics"
+		(property "MFR" "KEMET"
 			(at 314.96 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -9503,7 +9503,7 @@
 				)
 			)
 		)
-		(property "MPN" "GRT188C81C106ME13D"
+		(property "MPN" "C0603C106J3RACTU "
 			(at 314.96 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -11850,7 +11850,7 @@
 				)
 			)
 		)
-		(property "DIS" "Digikey"
+		(property "DIS" "Mouser"
 			(at 368.3 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -11861,7 +11861,7 @@
 				)
 			)
 		)
-		(property "DPN" "399-17548-1-ND"
+		(property "DPN" "80-C0402C104J4RAUTO "
 			(at 368.3 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -12633,7 +12633,7 @@
 				)
 			)
 		)
-		(property "Description" "10 µF ±20% 16V Ceramic Capacitor X6S 0603 (1608 Metric)"
+		(property "Description" "10 µF ±5% 23V Ceramic Capacitor X7R 0603 (1608 Metric)"
 			(at 304.8 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -12644,7 +12644,7 @@
 				)
 			)
 		)
-		(property "DIS" "Digikey"
+		(property "DIS" "Mouser"
 			(at 304.8 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -12655,7 +12655,7 @@
 				)
 			)
 		)
-		(property "DPN" "490-12286-1-ND"
+		(property "DPN" "80-C0603C106J3RACTU"
 			(at 304.8 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -12666,7 +12666,7 @@
 				)
 			)
 		)
-		(property "MFR" "Murata Electronics"
+		(property "MFR" "KEMET"
 			(at 304.8 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -12677,7 +12677,7 @@
 				)
 			)
 		)
-		(property "MPN" "GRT188C81C106ME13D"
+		(property "MPN" "C0603C106J3RACTU "
 			(at 304.8 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -13679,7 +13679,7 @@
 				)
 			)
 		)
-		(property "Description" "10 µF ±20% 16V Ceramic Capacitor X6S 0603 (1608 Metric)"
+		(property "Description" "10 µF ±5% 23V Ceramic Capacitor X7R 0603 (1608 Metric)"
 			(at 284.48 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -13690,7 +13690,7 @@
 				)
 			)
 		)
-		(property "DIS" "Digikey"
+		(property "DIS" "Mouser"
 			(at 284.48 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -13701,7 +13701,7 @@
 				)
 			)
 		)
-		(property "DPN" "490-12286-1-ND"
+		(property "DPN" "80-C0603C106J3RACTU"
 			(at 284.48 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -13712,7 +13712,7 @@
 				)
 			)
 		)
-		(property "MFR" "Murata Electronics"
+		(property "MFR" "KEMET"
 			(at 284.48 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -13723,7 +13723,7 @@
 				)
 			)
 		)
-		(property "MPN" "GRT188C81C106ME13D"
+		(property "MPN" "C0603C106J3RACTU "
 			(at 284.48 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -14038,7 +14038,7 @@
 				)
 			)
 		)
-		(property "DIS" "Digikey"
+		(property "DIS" "Mouser"
 			(at 327.66 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -14049,7 +14049,7 @@
 				)
 			)
 		)
-		(property "DPN" "399-17548-1-ND"
+		(property "DPN" "80-C0402C104J4RAUTO "
 			(at 327.66 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -14230,7 +14230,7 @@
 				)
 			)
 		)
-		(property "Description" "10 µF ±20% 16V Ceramic Capacitor X6S 0603 (1608 Metric)"
+		(property "Description" "10 µF ±5% 23V Ceramic Capacitor X7R 0603 (1608 Metric)"
 			(at 274.32 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -14241,7 +14241,7 @@
 				)
 			)
 		)
-		(property "DIS" "Digikey"
+		(property "DIS" "Mouser"
 			(at 274.32 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -14252,7 +14252,7 @@
 				)
 			)
 		)
-		(property "DPN" "490-12286-1-ND"
+		(property "DPN" "80-C0603C106J3RACTU"
 			(at 274.32 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -14263,7 +14263,7 @@
 				)
 			)
 		)
-		(property "MFR" "Murata Electronics"
+		(property "MFR" "KEMET"
 			(at 274.32 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -14274,7 +14274,7 @@
 				)
 			)
 		)
-		(property "MPN" "GRT188C81C106ME13D"
+		(property "MPN" "C0603C106J3RACTU "
 			(at 274.32 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -15078,7 +15078,7 @@
 				)
 			)
 		)
-		(property "Description" "10 µF ±20% 16V Ceramic Capacitor X6S 0603 (1608 Metric)"
+		(property "Description" "10 µF ±5% 23V Ceramic Capacitor X7R 0603 (1608 Metric)"
 			(at 294.64 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -15089,7 +15089,7 @@
 				)
 			)
 		)
-		(property "DIS" "Digikey"
+		(property "DIS" "Mouser"
 			(at 294.64 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -15100,7 +15100,7 @@
 				)
 			)
 		)
-		(property "DPN" "490-12286-1-ND"
+		(property "DPN" "80-C0603C106J3RACTU"
 			(at 294.64 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -15111,7 +15111,7 @@
 				)
 			)
 		)
-		(property "MFR" "Murata Electronics"
+		(property "MFR" "KEMET"
 			(at 294.64 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -15122,7 +15122,7 @@
 				)
 			)
 		)
-		(property "MPN" "GRT188C81C106ME13D"
+		(property "MPN" "C0603C106J3RACTU "
 			(at 294.64 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -16957,7 +16957,7 @@
 				)
 			)
 		)
-		(property "DIS" "Digikey"
+		(property "DIS" "Mouser"
 			(at 358.14 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -16968,7 +16968,7 @@
 				)
 			)
 		)
-		(property "DPN" "399-17548-1-ND"
+		(property "DPN" "80-C0402C104J4RAUTO "
 			(at 358.14 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -17082,7 +17082,7 @@
 				)
 			)
 		)
-		(property "DIS" "Digikey"
+		(property "DIS" "Mouser"
 			(at 337.82 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -17093,7 +17093,7 @@
 				)
 			)
 		)
-		(property "DPN" "399-17548-1-ND"
+		(property "DPN" "80-C0402C104J4RAUTO "
 			(at 337.82 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -17207,7 +17207,7 @@
 				)
 			)
 		)
-		(property "DIS" "Digikey"
+		(property "DIS" "Mouser"
 			(at 347.98 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -17218,7 +17218,7 @@
 				)
 			)
 		)
-		(property "DPN" "399-17548-1-ND"
+		(property "DPN" "80-C0402C104J4RAUTO "
 			(at 347.98 50.8 0)
 			(hide yes)
 			(show_name no)

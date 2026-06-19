@@ -6717,7 +6717,7 @@
 	)
 	(wire
 		(pts
-			(xy 222.25 154.94) (xy 228.6 154.94)
+			(xy 218.44 154.94) (xy 228.6 154.94)
 		)
 		(stroke
 			(width 0)
@@ -7097,7 +7097,7 @@
 	)
 	(wire
 		(pts
-			(xy 222.25 160.02) (xy 228.6 160.02)
+			(xy 218.44 160.02) (xy 228.6 160.02)
 		)
 		(stroke
 			(width 0)
@@ -8929,7 +8929,7 @@
 	)
 	(hierarchical_label "UART0_RX"
 		(shape output)
-		(at 222.25 160.02 180)
+		(at 218.44 160.02 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8984,7 +8984,7 @@
 	)
 	(hierarchical_label "UART0_TX"
 		(shape input)
-		(at 222.25 154.94 180)
+		(at 218.44 154.94 180)
 		(effects
 			(font
 				(size 1.27 1.27)
