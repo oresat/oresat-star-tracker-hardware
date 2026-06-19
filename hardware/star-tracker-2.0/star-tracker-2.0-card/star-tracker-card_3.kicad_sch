@@ -16703,7 +16703,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRT21BC71E106KE13-01.pdf"
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/7851/1276_CL21B1.pdf"
 			(at 407.67 156.21 0)
 			(hide yes)
 			(show_name no)
@@ -16714,7 +16714,7 @@
 				)
 			)
 		)
-		(property "Description" "10 µF ±10% 25V Ceramic Capacitor X7S 0805 (2012 Metric)"
+		(property "Description" "10 µF ±10% 25V Ceramic Capacitor X7R 0805 (2012 Metric)"
 			(at 407.67 156.21 0)
 			(hide yes)
 			(show_name no)
@@ -16736,7 +16736,7 @@
 				)
 			)
 		)
-		(property "DPN" "490-GRT21BC71E106KE13KCT-ND"
+		(property "DPN" "1276-CL21B106KAYQNNETR-ND"
 			(at 407.67 156.21 0)
 			(hide yes)
 			(show_name no)
@@ -16747,7 +16747,7 @@
 				)
 			)
 		)
-		(property "MFR" "Murata Electronics"
+		(property "MFR" "Samsung Electro-Mechanics"
 			(at 407.67 156.21 0)
 			(hide yes)
 			(show_name no)
@@ -16758,7 +16758,7 @@
 				)
 			)
 		)
-		(property "MPN" "GRT21BC71E106KE13K"
+		(property "MPN" "CL21B106KAYQNNE"
 			(at 407.67 156.21 0)
 			(hide yes)
 			(show_name no)
@@ -20514,7 +20514,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRT21BC71E106KE13-01.pdf"
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/7851/1276_CL21B1.pdf"
 			(at 46.99 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -20525,7 +20525,7 @@
 				)
 			)
 		)
-		(property "Description" "10 µF ±10% 25V Ceramic Capacitor X7S 0805 (2012 Metric)"
+		(property "Description" "10 µF ±10% 25V Ceramic Capacitor X7R 0805 (2012 Metric)"
 			(at 46.99 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -20547,7 +20547,7 @@
 				)
 			)
 		)
-		(property "DPN" "490-GRT21BC71E106KE13KCT-ND"
+		(property "DPN" "1276-CL21B106KAYQNNETR-ND"
 			(at 46.99 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -20558,7 +20558,7 @@
 				)
 			)
 		)
-		(property "MFR" "Murata Electronics"
+		(property "MFR" "Samsung Electro-Mechanics"
 			(at 46.99 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -20569,7 +20569,7 @@
 				)
 			)
 		)
-		(property "MPN" "GRT21BC71E106KE13K"
+		(property "MPN" "CL21B106KAYQNNE"
 			(at 46.99 116.84 0)
 			(hide yes)
 			(show_name no)
