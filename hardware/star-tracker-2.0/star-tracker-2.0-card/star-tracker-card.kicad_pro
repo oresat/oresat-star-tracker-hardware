@@ -63,10 +63,10 @@
           "min_clearance": 0.2,
           "min_island_area": 10.0,
           "min_thickness": 0.127,
-          "pad_connection": 2,
+          "pad_connection": 1,
           "remove_islands": 0,
           "thermal_relief_gap": 0.127,
-          "thermal_relief_spoke_width": 0.3
+          "thermal_relief_spoke_width": 0.5
         }
       },
       "diff_pair_dimensions": [
@@ -79,10 +79,6 @@
       "drc_exclusions": [
         [
           "clearance|186180000|130295000|a8cf4187-34b7-4bea-a591-b66244dd66d5|ce7b3152-4f38-4b6d-80e4-f471c2e1d463",
-          ""
-        ],
-        [
-          "lib_footprint_mismatch|148401100|103828600|909716f6-9e2f-4200-b18e-66b0026f4af6|00000000-0000-0000-0000-000000000000",
           ""
         ],
         [
