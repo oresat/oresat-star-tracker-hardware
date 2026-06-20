@@ -50,23 +50,7 @@
         "silk_text_thickness": 0.125,
         "silk_text_upright": false,
         "zones": {
-          "border_display_style": 2,
-          "border_hatch_pitch": 0.5,
-          "corner_radius": 0.2,
-          "corner_smoothing": 2,
-          "fill_mode": 0,
-          "hatch_gap": 1.5,
-          "hatch_orientation": 0.0,
-          "hatch_smoothing_level": 0,
-          "hatch_smoothing_value": 0.1,
-          "hatch_thickness": 1.0,
-          "min_clearance": 0.2,
-          "min_island_area": 10.0,
-          "min_thickness": 0.127,
-          "pad_connection": 2,
-          "remove_islands": 0,
-          "thermal_relief_gap": 0.127,
-          "thermal_relief_spoke_width": 0.5
+          "min_clearance": 0.2
         }
       },
       "diff_pair_dimensions": [
@@ -77,14 +61,6 @@
         }
       ],
       "drc_exclusions": [
-        [
-          "items_not_allowed|147006231|104702432|0c11632b-7e51-4894-9b1d-21466fee2780|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "items_not_allowed|161506231|104702432|d0c8260f-3a07-4d5d-be81-f6cf5d3bfe02|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
         [
           "solder_mask_bridge|147377972|106168045|95c45dfa-a8f5-488c-a79d-2608bc828119|0c11632b-7e51-4894-9b1d-21466fee2780",
           ""
