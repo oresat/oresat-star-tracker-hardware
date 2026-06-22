@@ -130,7 +130,11 @@
           ""
         ],
         [
-          "solder_mask_bridge|184351750|133050000|67424339-c058-46b2-bf71-59bed208b36e|c7171376-4828-4804-91bb-a0cd488643f7",
+          "solder_mask_bridge|184351750|133050000|67424339-c058-46b2-bf71-59bed208b36e|c8d26e71-0787-4092-b9c4-1ec4363dec32",
+          ""
+        ],
+        [
+          "solder_mask_bridge|184351750|134050000|ed5c7dae-f181-4603-939d-f31c339ec730|c42be653-a754-4fbf-85a4-29cca52385c1",
           ""
         ],
         [
@@ -138,7 +142,7 @@
           ""
         ],
         [
-          "solder_mask_bridge|184851750|129050000|cea0ff7a-9943-41dd-94be-a34dad7bb316|aa475152-599c-418d-98b0-6c907eec7a78",
+          "solder_mask_bridge|184851750|129050000|cea0ff7a-9943-41dd-94be-a34dad7bb316|11ad4493-fa70-4529-98a7-99306cc1b687",
           ""
         ],
         [
@@ -146,7 +150,11 @@
           ""
         ],
         [
-          "solder_mask_bridge|184851750|133050000|67544ae1-1dc7-4d87-a814-230ee8643e4f|49bf1844-c2ee-4088-bc06-19ed9e519cad",
+          "solder_mask_bridge|184851750|133050000|67544ae1-1dc7-4d87-a814-230ee8643e4f|c8d26e71-0787-4092-b9c4-1ec4363dec32",
+          ""
+        ],
+        [
+          "solder_mask_bridge|184851750|134050000|ad372606-169f-4cce-bbf4-322396948fc6|c42be653-a754-4fbf-85a4-29cca52385c1",
           ""
         ],
         [
@@ -154,7 +162,11 @@
           ""
         ],
         [
-          "solder_mask_bridge|185351750|133050000|b5a5c26b-844e-4da6-b170-c6cd45331ee0|49bf1844-c2ee-4088-bc06-19ed9e519cad",
+          "solder_mask_bridge|185351750|133050000|b5a5c26b-844e-4da6-b170-c6cd45331ee0|6bfc5bd0-9918-4d9d-9dda-5669d5068302",
+          ""
+        ],
+        [
+          "solder_mask_bridge|185351750|134050000|9674b9e5-f5bd-42d1-a723-170049e8304c|c42be653-a754-4fbf-85a4-29cca52385c1",
           ""
         ],
         [
@@ -1254,7 +1266,7 @@
         "uuid": "324e9eb5-7420-4b7e-862c-cc20bb28618a"
       }
     ],
-    "used_designators": "",
+    "used_designators": "#SUPPLY2-4,TP52-56",
     "variants": []
   },
   "sheets": [

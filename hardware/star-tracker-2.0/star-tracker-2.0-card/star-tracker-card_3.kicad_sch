@@ -12549,6 +12549,12 @@
 		(uuid "0d559a8f-1ec2-432b-9d8e-e97bbf473a0f")
 	)
 	(junction
+		(at 132.08 93.98)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0df3636b-6b3e-4e01-8776-9ce7a20a0b48")
+	)
+	(junction
 		(at 151.13 123.19)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -12751,6 +12757,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a7f2eec8-a4f5-46ec-9f52-2ba4ed342421")
+	)
+	(junction
+		(at 134.62 97.79)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ad7d9b61-5b2b-4cbc-9d40-62e0d3319966")
 	)
 	(junction
 		(at 292.1 179.07)
@@ -13266,6 +13278,16 @@
 	)
 	(wire
 		(pts
+			(xy 132.08 93.98) (xy 132.08 80.01)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "19e03f06-8d40-4e7c-ab85-b7b250d7b399")
+	)
+	(wire
+		(pts
 			(xy 102.87 82.55) (xy 111.76 82.55)
 		)
 		(stroke
@@ -13693,6 +13715,16 @@
 			(type solid)
 		)
 		(uuid "50465f68-9c5b-4233-86a0-a8b98ca464c2")
+	)
+	(wire
+		(pts
+			(xy 102.87 69.85) (xy 110.49 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5366b35f-3149-4197-87f6-2ed5f2fa65ba")
 	)
 	(wire
 		(pts
@@ -14366,6 +14398,16 @@
 	)
 	(wire
 		(pts
+			(xy 41.91 69.85) (xy 52.07 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8f9818e7-80f9-486f-8ab9-724b5598d008")
+	)
+	(wire
+		(pts
 			(xy 334.01 201.93) (xy 323.85 201.93)
 		)
 		(stroke
@@ -14426,7 +14468,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 143.51) (xy 132.08 80.01)
+			(xy 132.08 143.51) (xy 132.08 93.98)
 		)
 		(stroke
 			(width 0.1524)
@@ -14543,6 +14585,16 @@
 			(type default)
 		)
 		(uuid "992598d9-faf2-4100-9cf5-f0de879add3a")
+	)
+	(wire
+		(pts
+			(xy 134.62 97.79) (xy 134.62 77.47)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "9a755a36-2bf2-4fec-9901-a24812eb1327")
 	)
 	(wire
 		(pts
@@ -14916,16 +14968,6 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 69.85) (xy 102.87 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b9cb3d07-4435-41cb-a111-fe9dda7ad663")
-	)
-	(wire
-		(pts
 			(xy 265.43 135.89) (xy 265.43 120.65)
 		)
 		(stroke
@@ -14976,7 +15018,7 @@
 	)
 	(wire
 		(pts
-			(xy 134.62 146.05) (xy 134.62 77.47)
+			(xy 134.62 146.05) (xy 134.62 97.79)
 		)
 		(stroke
 			(width 0.1524)
@@ -15203,16 +15245,6 @@
 			(type default)
 		)
 		(uuid "cdc554b2-ecc1-4b1c-a447-3fdeea36ac77")
-	)
-	(wire
-		(pts
-			(xy 52.07 69.85) (xy 48.26 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cdeb2774-5bb2-4d17-87e9-a665ea0e3023")
 	)
 	(wire
 		(pts
@@ -15866,7 +15898,7 @@
 	)
 	(hierarchical_label "IMU_INT1"
 		(shape output)
-		(at 48.26 69.85 180)
+		(at 41.91 69.85 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -16108,7 +16140,7 @@
 	)
 	(hierarchical_label "IMU_INT2"
 		(shape output)
-		(at 106.68 69.85 0)
+		(at 110.49 69.85 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -18219,6 +18251,85 @@
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/c38dcfbe-e8e3-410e-98db-09d235320446"
 					(reference "#PWR054")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "oresat-misc:Test-Point-1mm-round")
+		(at 134.62 97.79 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "389a380a-53a9-43a2-a8b7-ff3202bcb4e6")
+		(property "Reference" "TP55"
+			(at 140.97 97.79 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Test-Point"
+			(at 134.62 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "oresat-misc:TestPoint_Pad_D1.0mm"
+			(at 134.62 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 134.62 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "1mm round SMT test point"
+			(at 134.62 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "989c26c7-a187-4237-b900-bef8f5b2c488")
+		)
+		(instances
+			(project "star-tracker-card"
+				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/c38dcfbe-e8e3-410e-98db-09d235320446"
+					(reference "TP55")
 					(unit 1)
 				)
 			)
@@ -22290,6 +22401,85 @@
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/c38dcfbe-e8e3-410e-98db-09d235320446"
 					(reference "#PWR057")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "oresat-misc:Test-Point-1mm-round")
+		(at 132.08 93.98 0)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "9ec4d4e5-e62f-402d-9c6f-d652c9b42a4d")
+		(property "Reference" "TP56"
+			(at 125.73 93.98 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Test-Point"
+			(at 132.08 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "oresat-misc:TestPoint_Pad_D1.0mm"
+			(at 132.08 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 132.08 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "1mm round SMT test point"
+			(at 132.08 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "aee32cf5-6ed5-4358-94c2-596db059255b")
+		)
+		(instances
+			(project "star-tracker-card"
+				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/c38dcfbe-e8e3-410e-98db-09d235320446"
+					(reference "TP56")
 					(unit 1)
 				)
 			)

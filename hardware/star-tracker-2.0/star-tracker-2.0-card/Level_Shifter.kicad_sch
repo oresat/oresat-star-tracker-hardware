@@ -2744,6 +2744,112 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "star-tracker-card-eagle-import:TEST-POINT"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "TP"
+				(at -5.08 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.778 1.778)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "star-tracker-card:2MM-TEST-POINT"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TEST-POINT_1_0"
+				(pin passive line
+					(at 0 0 0)
+					(length 0)
+					(name "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+			)
+			(symbol "TEST-POINT_1_1"
+				(rectangle
+					(start -1.27 1.27)
+					(end 1.27 -1.27)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(text "Camera Output Level Shifter"
 		(exclude_from_sim no)
@@ -2856,6 +2962,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0954b11e-537d-4a99-ad92-7ad0ef64e90a")
+	)
+	(junction
+		(at 375.92 39.37)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "15fd0c90-913e-436d-9592-c8ad8e60d4c9")
 	)
 	(junction
 		(at 154.94 120.65)
@@ -3791,7 +3903,7 @@
 	)
 	(wire
 		(pts
-			(xy 375.92 41.91) (xy 375.92 38.1)
+			(xy 375.92 41.91) (xy 375.92 39.37)
 		)
 		(stroke
 			(width 0.1524)
@@ -3888,6 +4000,16 @@
 			(type solid)
 		)
 		(uuid "5ac23068-68ee-43d5-91be-04ebef1d5edf")
+	)
+	(wire
+		(pts
+			(xy 375.92 39.37) (xy 375.92 38.1)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "5bbda395-f0e2-4609-a143-0fc4f723f972")
 	)
 	(wire
 		(pts
@@ -6194,6 +6316,84 @@
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/9edd79c7-1f35-42ab-883b-4f04e19f8786"
 					(reference "TP25")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "star-tracker-card-eagle-import:TEST-POINT")
+		(at 375.92 39.37 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1ad89730-9a47-44fe-ac6d-214602d43d10")
+		(property "Reference" "TP53"
+			(at 382.524 38.862 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "TEST-POINT"
+			(at 375.92 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "star-tracker-card:2MM-TEST-POINT"
+			(at 375.92 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 375.92 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 375.92 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "eb445a51-59a4-4d0e-bf7a-7648bca944e9")
+		)
+		(instances
+			(project "star-tracker-card"
+				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/9edd79c7-1f35-42ab-883b-4f04e19f8786"
+					(reference "TP53")
 					(unit 1)
 				)
 			)
