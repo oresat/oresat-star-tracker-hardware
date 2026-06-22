@@ -8229,6 +8229,17 @@
 		)
 		(uuid "1d5b3220-2ea0-4ec3-98c4-76dfd4c99cc3")
 	)
+	(text "I2C0 bus used in the SIP internally for PMIC related tasks\n"
+		(exclude_from_sim no)
+		(at 96.266 188.214 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "28163fbc-6589-4421-a61c-f7b9eff546ea")
+	)
 	(text "SYS_VOUT"
 		(exclude_from_sim no)
 		(at 261.874 55.118 0)

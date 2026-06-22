@@ -4082,7 +4082,7 @@
 					)
 				)
 				(pin output line
-					(at 25.4 5.08 180)
+					(at -25.4 7.62 0)
 					(length 5.08)
 					(name "INT1/INT"
 						(effects
@@ -12919,6 +12919,10 @@
 		(uuid "322e3dbc-46f7-478a-ae5b-fd94f914f715")
 	)
 	(no_connect
+		(at 186.69 146.05)
+		(uuid "386d7cc3-0e9c-400d-bb6b-c8f9f97df147")
+	)
+	(no_connect
 		(at 52.07 74.93)
 		(uuid "406f227b-7992-427d-9f8e-b788e7e60864")
 	)
@@ -12947,6 +12951,10 @@
 		(uuid "50a3c8df-a4b1-421b-9d98-49f8dae4790d")
 	)
 	(no_connect
+		(at 186.69 143.51)
+		(uuid "50ff84ce-501a-417f-a0cd-70c1664a6539")
+	)
+	(no_connect
 		(at 247.65 168.91)
 		(uuid "54318513-c6da-4636-9c51-4593f5b41e05")
 	)
@@ -12963,10 +12971,6 @@
 		(uuid "94c13c36-c16c-4614-8428-4c39213bf903")
 	)
 	(no_connect
-		(at 186.69 151.13)
-		(uuid "9548e474-7f21-4049-bbae-0ce9ff8bc4ab")
-	)
-	(no_connect
 		(at 247.65 204.47)
 		(uuid "97df934b-4f45-4d46-a824-a5175046d6a7")
 	)
@@ -12981,10 +12985,6 @@
 	(no_connect
 		(at 247.65 207.01)
 		(uuid "bb8f9200-4c41-4917-85a2-ca7de6b29ea1")
-	)
-	(no_connect
-		(at 186.69 148.59)
-		(uuid "c4584e03-9889-46ab-a20e-a63b164059aa")
 	)
 	(no_connect
 		(at 247.65 146.05)
@@ -13088,16 +13088,6 @@
 	)
 	(wire
 		(pts
-			(xy 134.62 146.05) (xy 186.69 146.05)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "0cd4cb37-480d-4a5a-bcd1-495915942cdb")
-	)
-	(wire
-		(pts
 			(xy 247.65 133.35) (xy 262.89 133.35)
 		)
 		(stroke
@@ -13185,6 +13175,16 @@
 			(type solid)
 		)
 		(uuid "12f44b21-9833-444a-98bc-ef83d33592d8")
+	)
+	(wire
+		(pts
+			(xy 104.14 54.61) (xy 104.14 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "13f451d8-086c-422c-a933-69b88e283bed")
 	)
 	(wire
 		(pts
@@ -13718,7 +13718,17 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 69.85) (xy 110.49 69.85)
+			(xy 134.62 151.13) (xy 186.69 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "524a3067-d247-4e77-946d-537502dd8726")
+	)
+	(wire
+		(pts
+			(xy 107.95 57.15) (xy 110.49 57.15)
 		)
 		(stroke
 			(width 0)
@@ -14328,6 +14338,16 @@
 	)
 	(wire
 		(pts
+			(xy 107.95 57.15) (xy 107.95 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8a05abba-87ce-4c19-a197-39c7f276eeb9")
+	)
+	(wire
+		(pts
 			(xy 283.21 128.27) (xy 285.75 128.27)
 		)
 		(stroke
@@ -14398,16 +14418,6 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 69.85) (xy 52.07 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8f9818e7-80f9-486f-8ab9-724b5598d008")
-	)
-	(wire
-		(pts
 			(xy 334.01 201.93) (xy 323.85 201.93)
 		)
 		(stroke
@@ -14435,6 +14445,16 @@
 			(type default)
 		)
 		(uuid "90f0411b-df6f-4abf-a01a-042044cebdb8")
+	)
+	(wire
+		(pts
+			(xy 186.69 148.59) (xy 132.08 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "911ae67c-8ab8-4af5-a2ab-3f3c7b5980e8")
 	)
 	(wire
 		(pts
@@ -14605,6 +14625,16 @@
 			(type solid)
 		)
 		(uuid "9cb05e2c-fb83-485a-b74d-5d92fa77a9cf")
+	)
+	(wire
+		(pts
+			(xy 134.62 151.13) (xy 134.62 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9d26a18c-953b-4e0c-8ffa-b47023da2709")
 	)
 	(wire
 		(pts
@@ -15028,6 +15058,16 @@
 	)
 	(wire
 		(pts
+			(xy 107.95 69.85) (xy 102.87 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bbe1a324-a664-4408-ac20-e91c9a182a48")
+	)
+	(wire
+		(pts
 			(xy 377.19 148.59) (xy 346.71 148.59)
 		)
 		(stroke
@@ -15075,6 +15115,16 @@
 			(type solid)
 		)
 		(uuid "bd8ce010-85d0-42c6-bcbc-4e9565469204")
+	)
+	(wire
+		(pts
+			(xy 132.08 148.59) (xy 132.08 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bde1a7ba-ec8a-4158-86a1-20651cf271f5")
 	)
 	(wire
 		(pts
@@ -15628,6 +15678,16 @@
 	)
 	(wire
 		(pts
+			(xy 104.14 67.31) (xy 102.87 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f3d515f6-4682-46e3-a34a-92df5ba8df8d")
+	)
+	(wire
+		(pts
 			(xy 334.01 196.85) (xy 326.39 196.85)
 		)
 		(stroke
@@ -15638,13 +15698,13 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 143.51) (xy 186.69 143.51)
+			(xy 110.49 54.61) (xy 104.14 54.61)
 		)
 		(stroke
-			(width 0.1524)
-			(type solid)
+			(width 0)
+			(type default)
 		)
-		(uuid "f644894b-41da-48da-9c1e-09b8e1165099")
+		(uuid "f694e569-6e7b-49ac-9e41-2701f4dbe4f4")
 	)
 	(wire
 		(pts
@@ -15746,6 +15806,16 @@
 		)
 		(uuid "02e2e9cc-dfdb-4cee-b19d-4f05d073dce9")
 	)
+	(label "IMU_I2C1_SDA"
+		(at 170.18 148.59 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0ccafab6-4970-432e-a45e-724ddfb89f51")
+	)
 	(label "EMMC_D0"
 		(at 269.24 173.99 0)
 		(effects
@@ -15826,6 +15896,16 @@
 		)
 		(uuid "7c132639-2f90-425d-b656-899e1f613ab7")
 	)
+	(label "IMU_I2C1_SCLK"
+		(at 170.18 151.13 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7dccc715-9765-45f0-85c5-da264675d90b")
+	)
 	(label "EMMC_D2"
 		(at 269.24 179.07 0)
 		(effects
@@ -15895,17 +15975,6 @@
 			(justify left bottom)
 		)
 		(uuid "e3621fb1-e0db-4686-900a-2d6e3135b8e8")
-	)
-	(hierarchical_label "IMU_INT1"
-		(shape output)
-		(at 41.91 69.85 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "0a6dff20-43ab-4237-b589-82750e8b8a01")
 	)
 	(hierarchical_label "D4_I"
 		(shape output)
@@ -16138,9 +16207,20 @@
 		)
 		(uuid "dc0e7370-290c-4c63-b26d-78ac7b8ebbd1")
 	)
+	(hierarchical_label "IMU_INT1"
+		(shape output)
+		(at 110.49 54.61 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e8189835-3410-47a6-97c5-3178ef764144")
+	)
 	(hierarchical_label "IMU_INT2"
 		(shape output)
-		(at 110.49 69.85 0)
+		(at 110.49 57.15 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -22025,6 +22105,42 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "PARTREV" "1.2"
+			(at 77.47 46.482 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" "0.97mm"
+			(at 77.47 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "MANUFACTURER" "TDK InvenSense"
+			(at 77.724 52.578 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
 			)
 		)
 		(pin "4"

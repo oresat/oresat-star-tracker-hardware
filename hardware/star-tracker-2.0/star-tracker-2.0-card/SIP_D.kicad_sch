@@ -7733,6 +7733,17 @@
 		)
 		(uuid "3127581d-cc02-4425-85aa-dee0ea4c826e")
 	)
+	(text "F14 goes to I2C1 SDA"
+		(exclude_from_sim no)
+		(at 73.914 114.808 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "44ad9bf9-8d8f-4618-bf8f-6f969e1dd415")
+	)
 	(text "0"
 		(exclude_from_sim no)
 		(at 198.0419 154.94 0)
@@ -7830,6 +7841,17 @@
 			)
 		)
 		(uuid "a6fe7b72-e87e-44a6-bea1-fc0bd1e315b3")
+	)
+	(text "E15 goes to I2C1 SCL"
+		(exclude_from_sim no)
+		(at 73.914 116.84 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "adb7d096-1eed-4dc1-ba65-9ce217c0b516")
 	)
 	(text "0"
 		(exclude_from_sim no)
