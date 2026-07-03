@@ -7606,14 +7606,13 @@
 		)
 		(uuid "91c36121-a1a1-4106-a903-715161bcb3d7")
 	)
-	(text "3.3V"
+	(text "\"3.3V\""
 		(exclude_from_sim no)
-		(at 225.044 90.424 0)
+		(at 210.566 90.424 0)
 		(effects
 			(font
 				(size 1.27 1.27)
-				(thickness 0.254)
-				(bold yes)
+				(thickness 0.1588)
 			)
 		)
 		(uuid "96aba419-c10f-4a96-9cb1-4f7a91b44c63")
@@ -14193,7 +14192,7 @@
 				(justify right bottom)
 			)
 		)
-		(property "Value" "MMBT2907"
+		(property "Value" "PMBT2907,215"
 			(at 213.36 135.89 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14215,7 +14214,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PMBT2907A.pdf"
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PMBT2907.pdf"
 			(at 213.36 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -14226,7 +14225,7 @@
 				)
 			)
 		)
-		(property "Description" "Bipolar (BJT) Transistor PNP 60 V 600 mA 200MHz 250 mW Surface Mount TO-236AB"
+		(property "Description" "Bipolar (BJT) Transistor PNP 40 V 600 mA 200MHz 250 mW Surface Mount TO-236AB"
 			(at 213.36 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -14270,7 +14269,7 @@
 				)
 			)
 		)
-		(property "DPN" "1727-2958-1-ND"
+		(property "DPN" "1727-5176-1-ND"
 			(at 213.36 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -14292,7 +14291,7 @@
 				)
 			)
 		)
-		(property "MPN" "PMBT2907A,215"
+		(property "MPN" "PMBT2907,215"
 			(at 213.36 130.81 0)
 			(hide yes)
 			(show_name no)

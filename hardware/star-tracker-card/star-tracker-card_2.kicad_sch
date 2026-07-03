@@ -4479,6 +4479,16 @@
 		)
 		(uuid "2e0bf6b3-2e23-4fd0-a4b3-341f44690ebc")
 	)
+	(text "\"VBUSP\""
+		(exclude_from_sim no)
+		(at 387.096 58.42 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "36e8c9b2-8de8-4ee1-b884-1dbe24a15f71")
+	)
 	(text "ECS-MPI4040R4-6R8-R"
 		(exclude_from_sim no)
 		(at 247.65 196.85 0)
@@ -4523,6 +4533,16 @@
 		)
 		(uuid "5322f210-4185-4ffa-aeae-39b5862c937a")
 	)
+	(text "\"ON/OFF\""
+		(exclude_from_sim no)
+		(at 216.916 89.154 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "862e626b-df9b-4271-8c3b-f08474d8fed6")
+	)
 	(text "OreSat Power Domain (OPD) Controller"
 		(exclude_from_sim no)
 		(at 36.83 21.59 0)
@@ -4534,7 +4554,17 @@
 		)
 		(uuid "90a4c648-ea90-4959-9192-9c46fcf15528")
 	)
-	(text "~ 300 mA current limit"
+	(text "\"5V\""
+		(exclude_from_sim no)
+		(at 290.322 217.424 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "90c70f1e-3b7e-4e52-a57b-93c28786fc82")
+	)
+	(text "~ 924 mA current limit"
 		(exclude_from_sim no)
 		(at 310.896 47.498 0)
 		(effects
@@ -4546,17 +4576,6 @@
 			(justify left bottom)
 		)
 		(uuid "980966d1-ca2b-46a4-9c51-e3c07a52f329")
-	)
-	(text "Note: Address 0b0111110x is\nreserved on all oresat cards"
-		(exclude_from_sim no)
-		(at 87.63 147.32 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "a42e37ba-48a5-4ebe-bc5b-efb969366072")
 	)
 	(text "Star Tracker is OPD address 0x1C"
 		(exclude_from_sim no)
@@ -9016,7 +9035,7 @@
 				(justify right top)
 			)
 		)
-		(property "Value" "DMP2240UDM"
+		(property "Value" "DMP2110UVTQ-7"
 			(at 81.788 233.172 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9038,7 +9057,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/ds31197.pdf"
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMP2110UVTQ.pdf"
 			(at 82.55 226.06 0)
 			(hide yes)
 			(show_name no)
@@ -9049,7 +9068,7 @@
 				)
 			)
 		)
-		(property "Description" "Mosfet Array 2 P-Channel (Dual) 20V 2A 600mW Surface Mount SOT-26"
+		(property "Description" "Mosfet Array 20V 1.8A (Ta) 740mW (Ta) Surface Mount TSOT-26"
 			(at 82.55 227.33 0)
 			(hide yes)
 			(show_name no)
@@ -9071,7 +9090,7 @@
 				)
 			)
 		)
-		(property "DPN" "DMP2240UDMDICT-ND"
+		(property "DPN" "31-DMP2110UVTQ-7CT-ND"
 			(at 82.55 227.33 90)
 			(hide yes)
 			(show_name no)
@@ -9082,7 +9101,7 @@
 				)
 			)
 		)
-		(property "MFR" "Diodes Inc"
+		(property "MFR" "Diodes Incorporated"
 			(at 82.55 227.33 90)
 			(hide yes)
 			(show_name no)
@@ -9093,7 +9112,7 @@
 				)
 			)
 		)
-		(property "MPN" "DMP2240UDM-7"
+		(property "MPN" "DMP2110UVTQ-7"
 			(at 82.55 227.33 90)
 			(hide yes)
 			(show_name no)
@@ -9960,7 +9979,7 @@
 		(dnp no)
 		(uuid "17272b20-8736-4fd9-9760-4c3f26478124")
 		(property "Reference" "D6"
-			(at 218.44 88.265 0)
+			(at 218.44 80.01 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9971,7 +9990,7 @@
 			)
 		)
 		(property "Value" "AMB"
-			(at 221.615 82.55 0)
+			(at 219.202 82.55 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12673,7 +12692,7 @@
 				(justify right top)
 			)
 		)
-		(property "Value" "DMP3050LVT-7"
+		(property "Value" "DMPH2040UVTQ-7"
 			(at 232.156 36.322 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12697,7 +12716,7 @@
 				(justify left)
 			)
 		)
-		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMP3050LVTQ.pdf"
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMPH2040UVTQ.pdf"
 			(at 218.44 41.91 90)
 			(hide yes)
 			(show_name no)
@@ -12709,7 +12728,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" "P-Channel 30 V 4.5A (Ta) 1.6W (Ta) Surface Mount TSOT-26"
+		(property "Description" "P-Channel 20 V 5.6A (Ta), 11.7A (Tc) 1W (Ta) Surface Mount TSOT-26"
 			(at 218.44 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -12720,7 +12739,7 @@
 				)
 			)
 		)
-		(property "MPN" "DMP3050LVTQ-7"
+		(property "MPN" "DMPH2040UVTQ-7"
 			(at 218.44 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -12743,7 +12762,7 @@
 				)
 			)
 		)
-		(property "DPN" "31-DMP3050LVTQ-7-ND"
+		(property "DPN" "31-DMPH2040UVTQ-7CT-ND"
 			(at 218.44 41.91 90)
 			(hide yes)
 			(show_name no)
@@ -12754,7 +12773,7 @@
 				)
 			)
 		)
-		(property "MFR" "Diodes Inc"
+		(property "MFR" "Diodes Incorporated"
 			(at 218.44 41.91 90)
 			(hide yes)
 			(show_name no)
@@ -13145,7 +13164,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Value" "DMN3028LQ-7"
+		(property "Value" "DMN2050LQ-7"
 			(at 387.35 95.25 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13167,7 +13186,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMN3028LQ.pdf"
+		(property "Datasheet" "https://www.diodes.com/datasheet/download/DMN2050LQ.pdf"
 			(at 378.46 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -13178,7 +13197,7 @@
 				)
 			)
 		)
-		(property "Description" "N-Channel 30 V 6.2A (Ta) 860mW (Ta) Surface Mount SOT-23-3 (TO-236)"
+		(property "Description" "N-Channel 20 V 5.9A (Ta) 1.4W Surface Mount SOT-23-3"
 			(at 378.46 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -13189,7 +13208,7 @@
 				)
 			)
 		)
-		(property "DPN" "31-DMN3028LQ-7CT-ND"
+		(property "DPN" "31-DMN2050LQ-7CT-ND"
 			(at 378.46 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -13201,7 +13220,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "MPN" "DMN3028LQ-7"
+		(property "MPN" "DMN2050LQ-7"
 			(at 378.46 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -13604,7 +13623,7 @@
 				(justify right top)
 			)
 		)
-		(property "Value" "DMP3050LVT-7"
+		(property "Value" "DMPH2040UVTQ-7"
 			(at 372.872 36.068 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13628,7 +13647,7 @@
 				(justify left)
 			)
 		)
-		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMP3050LVTQ.pdf"
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMPH2040UVTQ.pdf"
 			(at 365.76 41.91 90)
 			(hide yes)
 			(show_name no)
@@ -13640,7 +13659,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" "P-Channel 30 V 4.5A (Ta) 1.6W (Ta) Surface Mount TSOT-26"
+		(property "Description" "P-Channel 20 V 5.6A (Ta), 11.7A (Tc) 1W (Ta) Surface Mount TSOT-26"
 			(at 365.76 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -13651,7 +13670,7 @@
 				)
 			)
 		)
-		(property "MPN" "DMP3050LVTQ-7"
+		(property "MPN" "DMPH2040UVTQ-7"
 			(at 365.76 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -13674,7 +13693,7 @@
 				)
 			)
 		)
-		(property "DPN" "31-DMP3050LVTQ-7-ND"
+		(property "DPN" "31-DMPH2040UVTQ-7CT-ND"
 			(at 365.76 41.91 90)
 			(hide yes)
 			(show_name no)
@@ -13685,7 +13704,7 @@
 				)
 			)
 		)
-		(property "MFR" "Diodes Inc"
+		(property "MFR" "Diodes Incorporated"
 			(at 365.76 41.91 90)
 			(hide yes)
 			(show_name no)
@@ -13810,7 +13829,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "5228e5d9-d58f-4e1d-9c28-399b60075951")
 		(property "Reference" "R51"
 			(at 353.06 58.6486 0)
@@ -13823,7 +13842,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Value" "NP"
+		(property "Value" "4.7k"
 			(at 346.71 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -13846,7 +13865,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.seielect.com/catalog/SEI-RMCF_RMCP.pdf"
 			(at 347.98 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -13857,7 +13876,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, small US symbol"
+		(property "Description" "4.7 kOhms ±1% 0.1W, 1/10W Chip Resistor 0603 (1608 Metric) Automotive AEC-Q200 Thick Film"
 			(at 347.98 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -13868,19 +13887,7 @@
 				)
 			)
 		)
-		(property "DIS" "Digi-Key"
-			(at 347.98 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "DPN" "1276-4275-1-ND"
+		(property "DIS" "DigiKey"
 			(at 347.98 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -13892,7 +13899,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "MFR" "Samsung"
+		(property "DPN" "RMCF0603FT4K70CT-ND"
 			(at 347.98 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -13904,7 +13911,19 @@
 				(justify left bottom)
 			)
 		)
-		(property "MPN" "RC1005F6653CS"
+		(property "MFR" "Stackpole Electronics"
+			(at 347.98 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "MPN" "RMCF0603FT4K70"
 			(at 347.98 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -14468,7 +14487,7 @@
 		(dnp no)
 		(uuid "626df177-411b-48c4-9a70-b04b67c91709")
 		(property "Reference" "R50"
-			(at 337.82 49.022 90)
+			(at 340.106 47.244 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14478,7 +14497,7 @@
 				(justify right top)
 			)
 		)
-		(property "Value" "0"
+		(property "Value" "10k"
 			(at 340.106 49.022 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14511,7 +14530,7 @@
 				)
 			)
 		)
-		(property "Description" "0 Ohms Jumper Chip Resistor 0603 (1608 Metric) Automotive AEC-Q200 Thick Film"
+		(property "Description" "10 kOhms ±1% 0.1W, 1/10W Chip Resistor 0603 (1608 Metric) Automotive AEC-Q200 Thick Film"
 			(at 337.82 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -14533,7 +14552,7 @@
 				)
 			)
 		)
-		(property "DPN" "RMCF0603ZT0R00CT-ND"
+		(property "DPN" "RMCF0603FT10K0CT-ND"
 			(at 337.82 52.07 90)
 			(hide yes)
 			(show_name no)
@@ -14555,7 +14574,7 @@
 				)
 			)
 		)
-		(property "MPN" "RMCF0603ZT0R00"
+		(property "MPN" "RMCF0603FT10K0"
 			(at 337.82 52.07 90)
 			(hide yes)
 			(show_name no)
@@ -15594,7 +15613,7 @@
 		(dnp no)
 		(uuid "7683f467-2f14-47b6-a51b-48501ca08abb")
 		(property "Reference" "D7"
-			(at 398.272 57.404 90)
+			(at 398.272 56.642 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15605,7 +15624,7 @@
 			)
 		)
 		(property "Value" "GRN"
-			(at 396.24 62.865 0)
+			(at 399.288 58.928 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19040,7 +19059,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Value" "DMN3028LQ-7"
+		(property "Value" "DMN2050LQ-7"
 			(at 221.234 59.182 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19062,7 +19081,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMN3028LQ.pdf"
+		(property "Datasheet" "https://www.diodes.com/datasheet/download/DMN2050LQ.pdf"
 			(at 215.9 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -19073,7 +19092,7 @@
 				)
 			)
 		)
-		(property "Description" "N-Channel 30 V 6.2A (Ta) 860mW (Ta) Surface Mount SOT-23-3 (TO-236)"
+		(property "Description" "N-Channel 20 V 5.9A (Ta) 1.4W Surface Mount SOT-23-3"
 			(at 215.9 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -19084,7 +19103,7 @@
 				)
 			)
 		)
-		(property "DPN" "31-DMN3028LQ-7CT-ND"
+		(property "DPN" "31-DMN2050LQ-7CT-ND"
 			(at 215.9 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -19096,7 +19115,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "MPN" "DMN3028LQ-7"
+		(property "MPN" "DMN2050LQ-7"
 			(at 215.9 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -19426,7 +19445,7 @@
 				(justify right top)
 			)
 		)
-		(property "Value" "DMP2240UDM"
+		(property "Value" "DMP2110UVTQ-7"
 			(at 84.074 192.786 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19448,7 +19467,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/ds31197.pdf"
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMP2110UVTQ.pdf"
 			(at 85.09 185.42 0)
 			(hide yes)
 			(show_name no)
@@ -19459,7 +19478,7 @@
 				)
 			)
 		)
-		(property "Description" "Mosfet Array 2 P-Channel (Dual) 20V 2A 600mW Surface Mount SOT-26"
+		(property "Description" "Mosfet Array 20V 1.8A (Ta) 740mW (Ta) Surface Mount TSOT-26"
 			(at 85.09 186.69 0)
 			(hide yes)
 			(show_name no)
@@ -19481,7 +19500,7 @@
 				)
 			)
 		)
-		(property "DPN" "DMP2240UDMDICT-ND"
+		(property "DPN" "31-DMP2110UVTQ-7CT-ND"
 			(at 85.09 186.69 90)
 			(hide yes)
 			(show_name no)
@@ -19492,7 +19511,7 @@
 				)
 			)
 		)
-		(property "MFR" "Diodes Inc"
+		(property "MFR" "Diodes Incorporated"
 			(at 85.09 186.69 90)
 			(hide yes)
 			(show_name no)
@@ -19503,7 +19522,7 @@
 				)
 			)
 		)
-		(property "MPN" "DMP2240UDM-7"
+		(property "MPN" "DMP2110UVTQ-7"
 			(at 85.09 186.69 90)
 			(hide yes)
 			(show_name no)
@@ -21991,7 +22010,7 @@
 		(dnp no)
 		(uuid "ec455591-90bf-4474-913e-7f5694d98f00")
 		(property "Reference" "R47"
-			(at 331.724 56.896 90)
+			(at 334.772 55.118 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -22002,7 +22021,7 @@
 			)
 		)
 		(property "Value" "0"
-			(at 335.026 56.896 90)
+			(at 333.756 56.896 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
