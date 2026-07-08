@@ -10021,7 +10021,7 @@
 		)
 		(uuid "543c25c0-903f-4280-ab19-214b3ff7024d")
 	)
-	(hierarchical_label "nRESET"
+	(hierarchical_label "nRESET_CLAMP"
 		(shape input)
 		(at 139.7 185.42 180)
 		(effects

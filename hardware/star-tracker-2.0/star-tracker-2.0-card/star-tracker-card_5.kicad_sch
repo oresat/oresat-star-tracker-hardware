@@ -8543,6 +8543,12 @@
 		(uuid "5e266361-51ec-43ec-8694-32091c9ad2b8")
 	)
 	(junction
+		(at 300.99 217.17)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5e9d9895-c866-4de6-8b0e-fdd3f3c4d05c")
+	)
+	(junction
 		(at 250.19 105.41)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -8783,6 +8789,16 @@
 			(type solid)
 		)
 		(uuid "045eb301-e66b-446e-b70a-194828cc1714")
+	)
+	(wire
+		(pts
+			(xy 300.99 217.17) (xy 300.99 222.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "06a64655-1681-417f-9179-b720d0dbf44e")
 	)
 	(wire
 		(pts
@@ -9323,6 +9339,16 @@
 			(type solid)
 		)
 		(uuid "516c1d44-b66d-4c0e-a77a-059e78ecf445")
+	)
+	(wire
+		(pts
+			(xy 300.99 217.17) (xy 303.53 217.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "51a4f70a-6eab-4e45-9fb6-3764c3812f17")
 	)
 	(wire
 		(pts
@@ -10056,7 +10082,7 @@
 	)
 	(wire
 		(pts
-			(xy 287.02 217.17) (xy 290.83 217.17)
+			(xy 287.02 217.17) (xy 300.99 217.17)
 		)
 		(stroke
 			(width 0)
@@ -10634,6 +10660,17 @@
 		)
 		(uuid "88c9a6e3-aed6-49f2-b13c-cb80d5dd8c1a")
 	)
+	(hierarchical_label "nRESET_CLAMP"
+		(shape output)
+		(at 300.99 222.25 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "0b7b6e76-eede-4e7f-888a-e079eb7ba92d")
+	)
 	(hierarchical_label "PMIC_SCL"
 		(shape input)
 		(at 152.4 184.15 180)
@@ -10680,7 +10717,7 @@
 	)
 	(hierarchical_label "nRESET"
 		(shape output)
-		(at 290.83 217.17 0)
+		(at 303.53 217.17 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10924,7 +10961,7 @@
 				(justify right bottom)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "10k"
 			(at 283.464 85.852 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10932,7 +10969,7 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right bottom)
+				(justify right top)
 			)
 		)
 		(property "Footprint" "oresat-passives:0603-C-NOSILK"
@@ -10957,7 +10994,7 @@
 				)
 			)
 		)
-		(property "Description" "1 kOhms ±1% 0.1W, 1/10W Chip Resistor 0603 (1608 Metric) Automotive AEC-Q200 Thick Film"
+		(property "Description" "10 kOhms ±1% 0.1W, 1/10W Chip Resistor 0603 (1608 Metric) Automotive AEC-Q200 Thick Film"
 			(at 279.4 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -10979,7 +11016,7 @@
 				)
 			)
 		)
-		(property "DPN" "RMCF0603FT2K70CT-ND"
+		(property "DPN" "RMCF0603FT10K0CT-ND"
 			(at 279.4 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -11001,7 +11038,7 @@
 				)
 			)
 		)
-		(property "MPN" "RMCF0603FT1K00"
+		(property "MPN" "RMCF0603FT10K0"
 			(at 279.4 83.82 0)
 			(hide yes)
 			(show_name no)

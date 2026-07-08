@@ -3916,10 +3916,6 @@
 		(uuid "bf7ce0bf-ce2f-4520-8175-2deaeb064508")
 	)
 	(no_connect
-		(at 57.15 161.29)
-		(uuid "e02fc2da-6e86-411f-b6a5-2ade364222e1")
-	)
-	(no_connect
 		(at 46.99 27.94)
 		(uuid "e7625e1e-1505-4a20-a109-29ed047ded29")
 	)
@@ -4223,16 +4219,6 @@
 	)
 	(wire
 		(pts
-			(xy 176.53 228.6) (xy 176.53 201.93)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2a384260-3b20-4135-abc3-f99171c9b38d")
-	)
-	(wire
-		(pts
 			(xy 48.26 55.88) (xy 190.5 55.88)
 		)
 		(stroke
@@ -4440,6 +4426,16 @@
 			(type default)
 		)
 		(uuid "4523d455-8baa-4d51-8359-82385abb56f4")
+	)
+	(wire
+		(pts
+			(xy 134.62 222.25) (xy 95.25 222.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4539df35-e74f-4028-9ebc-5254bd87d1fe")
 	)
 	(wire
 		(pts
@@ -4873,6 +4869,16 @@
 	)
 	(wire
 		(pts
+			(xy 95.25 222.25) (xy 95.25 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7dc0b1b6-7613-44d5-9444-2c4b495fe43e")
+	)
+	(wire
+		(pts
 			(xy 234.95 144.78) (xy 265.43 144.78)
 		)
 		(stroke
@@ -5173,6 +5179,16 @@
 	)
 	(wire
 		(pts
+			(xy 176.53 224.79) (xy 176.53 201.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b81933c0-61ad-4d28-875b-06a2955e44d9")
+	)
+	(wire
+		(pts
 			(xy 308.61 157.48) (xy 391.16 157.48)
 		)
 		(stroke
@@ -5310,6 +5326,16 @@
 			(type default)
 		)
 		(uuid "c7e4441f-db4f-4205-a99a-8679a6d75a02")
+	)
+	(wire
+		(pts
+			(xy 167.64 224.79) (xy 176.53 224.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ca5fbd03-ff16-4a7e-84fb-3a2e8ac151ba")
 	)
 	(wire
 		(pts
@@ -5523,6 +5549,16 @@
 	)
 	(wire
 		(pts
+			(xy 57.15 161.29) (xy 95.25 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e60ffcb6-c023-4966-9076-553973031118")
+	)
+	(wire
+		(pts
 			(xy 49.53 83.82) (xy 49.53 86.36)
 		)
 		(stroke
@@ -5540,16 +5576,6 @@
 			(type default)
 		)
 		(uuid "e96e4b99-f758-4b26-9071-8528577465e4")
-	)
-	(wire
-		(pts
-			(xy 167.64 228.6) (xy 176.53 228.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "eb277461-3a5a-451d-9f59-56c782178140")
 	)
 	(wire
 		(pts
@@ -8162,9 +8188,9 @@
 				(justify left)
 			)
 		)
-		(pin "nRESET" input
+		(pin "nRESET_CLAMP" input
 			(at 167.64 201.93 0)
-			(uuid "f4682f56-528e-44f2-9ba0-72088245f903")
+			(uuid "96821486-4507-48a0-8c1d-e4b8e62615d0")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8259,8 +8285,18 @@
 			)
 		)
 		(pin "nRESET" output
-			(at 167.64 228.6 0)
+			(at 134.62 222.25 180)
 			(uuid "bd30d9e3-907b-42d0-a58d-30028655cece")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "nRESET_CLAMP" output
+			(at 167.64 224.79 0)
+			(uuid "c3f799cd-9f75-4c2b-9a94-44461c891c17")
 			(effects
 				(font
 					(size 1.27 1.27)
