@@ -884,6 +884,334 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "oresat-ics:BMI270"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "BMI270_0_0"
+				(rectangle
+					(start -19.05 -2.54)
+					(end 21.59 -35.56)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin power_in line
+					(at 26.67 -5.08 180)
+					(length 5.08)
+					(name "VDD"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(symbol "BMI270_1_0"
+				(pin bidirectional line
+					(at -24.13 -25.4 0)
+					(length 5.08)
+					(name "SDO"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 26.67 -17.78 180)
+					(length 5.08)
+					(name "ASDx"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 26.67 -20.32 180)
+					(length 5.08)
+					(name "ASCx"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at -24.13 -10.16 0)
+					(length 5.08)
+					(name "INT1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 26.67 -7.62 180)
+					(length 5.08)
+					(name "VDD_IO"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 26.67 -33.02 180)
+					(length 5.08)
+					(name "GND_IO"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 26.67 -27.94 180)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -24.13 -12.7 0)
+					(length 5.08)
+					(name "INT2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 26.67 -22.86 180)
+					(length 5.08)
+					(name "OCSB"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 26.67 -25.4 180)
+					(length 5.08)
+					(name "OSDO"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -24.13 -17.78 0)
+					(length 5.08)
+					(name "CSB"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin input clock
+					(at -24.13 -20.32 0)
+					(length 5.08)
+					(name "SCX"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -24.13 -22.86 0)
+					(length 5.08)
+					(name "SDX"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "oresat-ics:EMMC+RESET+5.1-COMPATIBLE-BA"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -3895,386 +4223,6 @@
 						(effects
 							(font
 								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "oresat-ics:ICM-42688-P"
-			(pin_names
-				(offset 1.016)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U"
-				(at -20.32 16.002 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Value" "ICM-42688-P"
-				(at -20.32 -20.32 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Footprint" "oresat-ics:PQFN50P300X250X97-14N"
-				(at 0.508 20.066 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "PARTREV" "1.2"
-				(at 0 28.448 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-				)
-			)
-			(property "STANDARD" "IPC-7351B"
-				(at 0 26.162 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-				)
-			)
-			(property "MAXIMUM_PACKAGE_HEIGHT" "0.97mm"
-				(at 0 24.13 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-				)
-			)
-			(property "MANUFACTURER" "TDK InvenSense"
-				(at -0.254 22.352 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-				)
-			)
-			(symbol "ICM-42688-P_0_0"
-				(rectangle
-					(start -20.32 15.24)
-					(end 20.32 -17.78)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin bidirectional line
-					(at -25.4 -7.62 0)
-					(length 5.08)
-					(name "AP_SDO/AP_AD0"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 25.4 0 180)
-					(length 5.08)
-					(name "RESV_2"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 25.4 -2.54 180)
-					(length 5.08)
-					(name "RESV_3"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at -25.4 7.62 0)
-					(length 5.08)
-					(name "INT1/INT"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 25.4 10.16 180)
-					(length 5.08)
-					(name "VDDIO"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 25.4 -15.24 180)
-					(length 5.08)
-					(name "GND"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 25.4 -10.16 180)
-					(length 5.08)
-					(name "RESV_7"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 25.4 12.7 180)
-					(length 5.08)
-					(name "VDD"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -25.4 5.08 0)
-					(length 5.08)
-					(name "INT2/FSYNC/CLKIN"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 25.4 -5.08 180)
-					(length 5.08)
-					(name "RESV_10"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 25.4 -7.62 180)
-					(length 5.08)
-					(name "RESV_11"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "11"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -25.4 0 0)
-					(length 5.08)
-					(name "AP_CS"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "12"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin input clock
-					(at -25.4 -2.54 0)
-					(length 5.08)
-					(name "AP_SCL/AP_SCLK"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "13"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -25.4 -5.08 0)
-					(length 5.08)
-					(name "AP_SDA/AP_SDIO/AP_SDI"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "14"
-						(effects
-							(font
-								(size 1.016 1.016)
 							)
 						)
 					)
@@ -12717,12 +12665,6 @@
 		(uuid "8ceeb6be-b1e2-4cf9-976f-bcf256f1e520")
 	)
 	(junction
-		(at 40.64 58.42)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "90256dce-97a0-407c-99b3-0b2a67cf94b9")
-	)
-	(junction
 		(at 306.07 189.23)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -12733,12 +12675,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "95b310c7-532d-4cb3-8197-ea3437998409")
-	)
-	(junction
-		(at 38.1 44.45)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "966e7d32-005b-4132-8447-8607e85c1876")
 	)
 	(junction
 		(at 298.45 186.69)
@@ -13378,7 +13314,7 @@
 	)
 	(wire
 		(pts
-			(xy 38.1 44.45) (xy 33.02 44.45)
+			(xy 33.02 44.45) (xy 44.45 44.45)
 		)
 		(stroke
 			(width 0)
@@ -13545,16 +13481,6 @@
 			(type solid)
 		)
 		(uuid "3beb92e3-3e4c-4807-82d7-d72a2f81a016")
-	)
-	(wire
-		(pts
-			(xy 40.64 58.42) (xy 38.1 58.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3c7ac051-13dc-4884-aa63-58a8f4919521")
 	)
 	(wire
 		(pts
@@ -14178,16 +14104,6 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 44.45) (xy 38.1 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "79f29bdf-456c-44b3-b64b-34a378fd5f76")
-	)
-	(wire
-		(pts
 			(xy 247.65 176.53) (xy 318.77 176.53)
 		)
 		(stroke
@@ -14265,16 +14181,6 @@
 			(type solid)
 		)
 		(uuid "805b894f-a869-43ad-a512-0050af0b35df")
-	)
-	(wire
-		(pts
-			(xy 44.45 58.42) (xy 40.64 58.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "823f9fc0-07db-44d9-b26b-83a0ceac022a")
 	)
 	(wire
 		(pts
@@ -14728,16 +14634,6 @@
 	)
 	(wire
 		(pts
-			(xy 38.1 52.07) (xy 38.1 58.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a282460d-8d0a-426c-9a48-08faafcce7cd")
-	)
-	(wire
-		(pts
 			(xy 318.77 176.53) (xy 334.01 176.53)
 		)
 		(stroke
@@ -14978,7 +14874,7 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 58.42) (xy 44.45 52.07)
+			(xy 44.45 54.61) (xy 44.45 52.07)
 		)
 		(stroke
 			(width 0)
@@ -15005,16 +14901,6 @@
 			(type solid)
 		)
 		(uuid "b9d43e1e-4e74-415a-8dfc-3036f87a15ad")
-	)
-	(wire
-		(pts
-			(xy 38.1 44.45) (xy 38.1 46.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b9db4d56-095f-4e12-b24f-d762c044d96b")
 	)
 	(wire
 		(pts
@@ -18046,6 +17932,177 @@
 		)
 	)
 	(symbol
+		(lib_id "oresat-ics:BMI270")
+		(at 78.74 57.15 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "2f7b5abb-6fd4-488b-bf44-d1bd63db5790")
+		(property "Reference" "U11"
+			(at 78.74 53.34 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BMI270"
+			(at 78.74 55.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "oresat-ics:PQFN50P300X250X97-14N"
+			(at 78.74 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmi270-ds000.pdf"
+			(at 78.74 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Accelerometer, Gyroscope, 6 Axis Sensor I2C, SPI Output"
+			(at 78.74 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 78.74 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIST" "DigiKey"
+			(at 78.74 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DPN" "828-1091-1-ND"
+			(at 78.74 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFR" "Bosch Sensortec"
+			(at 78.74 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "BMI270"
+			(at 78.74 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "49c3eae9-8054-4856-abb8-ec4a81dffdf3")
+		)
+		(pin "14"
+			(uuid "9f8c8269-2f44-4a23-a0f6-9d4e03b662e4")
+		)
+		(pin "3"
+			(uuid "1999aaae-2dd2-4e9c-8e7c-77f8a2607641")
+		)
+		(pin "8"
+			(uuid "5574cf31-6fd7-447b-9d69-a2238188acd3")
+		)
+		(pin "2"
+			(uuid "aea24bb6-02f2-4f18-8c65-04c8f9b701ec")
+		)
+		(pin "5"
+			(uuid "03fe0512-84db-42b0-a63f-2869f4c76d44")
+		)
+		(pin "6"
+			(uuid "81b479e9-b55c-4f9c-979c-0132492f12aa")
+		)
+		(pin "7"
+			(uuid "8df3894b-0445-4772-be63-936b873913b3")
+		)
+		(pin "10"
+			(uuid "c73a8466-51ca-4d39-a2f9-1a32e4dce296")
+		)
+		(pin "4"
+			(uuid "105cb5eb-e78c-4e90-9a1f-dfc38a5de5a3")
+		)
+		(pin "9"
+			(uuid "05eae329-349b-4881-bc01-81c73c4bf0f7")
+		)
+		(pin "11"
+			(uuid "f68affd5-75e0-4375-a188-54bb6c13a963")
+		)
+		(pin "12"
+			(uuid "b9b3aaa7-1748-4321-ad43-f725f8aa4dee")
+		)
+		(pin "13"
+			(uuid "e6c871da-e4b1-4c4e-8873-0f1c2b577a2a")
+		)
+		(instances
+			(project "star-tracker-card"
+				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/c38dcfbe-e8e3-410e-98db-09d235320446"
+					(reference "U11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "star-tracker-card-eagle-import:3.3V")
 		(at 120.65 60.96 0)
 		(unit 1)
@@ -21036,7 +21093,7 @@
 	(symbol
 		(lib_name "GND_1")
 		(lib_id "power:GND")
-		(at 40.64 58.42 0)
+		(at 44.45 54.61 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -21047,7 +21104,7 @@
 		(dnp no)
 		(uuid "82d14714-7433-44a5-845b-ff069e69c6f5")
 		(property "Reference" "#GND02"
-			(at 40.64 64.77 0)
+			(at 44.45 60.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21058,7 +21115,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 40.64 62.23 0)
+			(at 44.45 58.42 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -21068,7 +21125,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 40.64 58.42 0)
+			(at 44.45 54.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21079,7 +21136,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 40.64 58.42 0)
+			(at 44.45 54.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21090,7 +21147,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 40.64 58.42 0)
+			(at 44.45 54.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21968,227 +22025,6 @@
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/c38dcfbe-e8e3-410e-98db-09d235320446"
 					(reference "#GND04")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "oresat-ics:ICM-42688-P")
-		(at 77.47 74.93 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "93096e0d-60fa-4aca-9ef9-12470d760a91")
-		(property "Reference" "U11"
-			(at 77.47 54.61 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "ICM-42688-P"
-			(at 77.47 57.15 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "oresat-ics:PQFN50P300X250X97-14N"
-			(at 76.962 54.864 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "Datasheet" "http://invensense.tdk.com/download-pdf/icm-42688-p-datasheet/"
-			(at 77.47 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Accelerometer, Gyroscope, 6 Axis Sensor Output"
-			(at 77.47 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "STANDARD" "IPC-7351B"
-			(at 77.47 48.768 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "DPN" "1428-ICM-42688-PCT-ND"
-			(at 77.47 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MFR" "TDK InvenSense"
-			(at 77.47 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "ICM-42688-P"
-			(at 77.47 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIS" "DigiKey"
-			(at 77.47 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIST" "DigiKey"
-			(at 77.47 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PARTREV" "1.2"
-			(at 77.47 46.482 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "MAXIMUM_PACKAGE_HEIGHT" "0.97mm"
-			(at 77.47 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "MANUFACTURER" "TDK InvenSense"
-			(at 77.724 52.578 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(pin "4"
-			(uuid "722e273b-4e03-4840-9a37-fa8fbf214951")
-		)
-		(pin "10"
-			(uuid "83560a4b-82e5-4c46-84f0-d531d214702d")
-		)
-		(pin "11"
-			(uuid "d6fab6c6-0a08-46c6-bb51-3fca98f66790")
-		)
-		(pin "3"
-			(uuid "6e26b5c5-6c48-4a10-9a06-05a480f08d5b")
-		)
-		(pin "13"
-			(uuid "ad27136e-e9fa-4fd9-8554-35f5922db1fa")
-		)
-		(pin "12"
-			(uuid "17a40d50-c5ab-43e3-bead-953f3b402345")
-		)
-		(pin "14"
-			(uuid "e839a854-e9b4-4b6b-8f33-df35fb5c5198")
-		)
-		(pin "1"
-			(uuid "bbaf8b7f-9a38-491f-b81f-c328fb8cf84f")
-		)
-		(pin "5"
-			(uuid "29bb1617-892e-4c44-a64e-c6bdd9382c4e")
-		)
-		(pin "2"
-			(uuid "b10e9220-b9e4-42ee-ac8d-a9c755163e22")
-		)
-		(pin "6"
-			(uuid "d3a4d9af-0ce7-4b7e-9a5a-d263b7090e2b")
-		)
-		(pin "7"
-			(uuid "2f9da614-0d08-4320-b454-dd02caa1ae23")
-		)
-		(pin "9"
-			(uuid "18f50399-117c-4846-b744-567aa615f626")
-		)
-		(pin "8"
-			(uuid "f71ce4b4-750d-4ab7-b968-d33553f98a02")
-		)
-		(instances
-			(project "star-tracker-card"
-				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/c38dcfbe-e8e3-410e-98db-09d235320446"
-					(reference "U11")
 					(unit 1)
 				)
 			)
@@ -23164,6 +23000,143 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C_Small")
+		(at 29.21 71.12 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c9ca224d-3b25-4d8d-926e-63cfa0dae4e4")
+		(property "Reference" "C53"
+			(at 36.068 69.596 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 35.814 71.882 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "oresat-passives:0603-C-NOSILK"
+			(at 29.21 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://search.kemet.com/download/specsheet/C0603C104K5RACAUTO"
+			(at 29.21 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "0.1 µF ±10% 50V Ceramic Capacitor X7R 0603 (1608 Metric)"
+			(at 29.21 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DPN" "399-6856-1-ND"
+			(at 29.21 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFR" "KEMET"
+			(at 29.21 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "C0603C104K5RACAUTO"
+			(at 29.21 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIS" "DigiKey"
+			(at 29.21 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DIST" "DigiKey"
+			(at 29.21 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "449b7fb0-0da8-45d5-bed8-b53baa643429")
+		)
+		(pin "2"
+			(uuid "a5987746-a5a2-4555-a95e-02069f864e9e")
+		)
+		(instances
+			(project "star-tracker-card"
+				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/c38dcfbe-e8e3-410e-98db-09d235320446"
+					(reference "C53")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "oresat-power:3.3V")
 		(at 29.21 62.23 0)
 		(mirror y)
@@ -23453,144 +23426,6 @@
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/c38dcfbe-e8e3-410e-98db-09d235320446"
 					(reference "#GND03")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 29.21 71.12 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "dc9ef464-d463-4467-a5eb-709df23db694")
-		(property "Reference" "C30"
-			(at 26.67 69.8562 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10n"
-			(at 26.67 72.3962 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "oresat-passives:0603-C-NOSILK"
-			(at 29.21 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.yageogroup.com/content/datasheet/asset/file/KEM_C1023_X7R_AUTO_SMD"
-			(at 29.21 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "10000 pF ±5% 50V Ceramic Capacitor X7R 0603 (1608 Metric)"
-			(at 29.21 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DPN" "399-12983-1-ND"
-			(at 29.21 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MFR" "KEMET"
-			(at 29.21 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "C0603C103J5RACAUTO"
-			(at 29.21 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIS" "DigiKey"
-			(at 29.21 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIST" "DigiKey"
-			(at 29.21 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c1429c37-2b36-4a97-a196-a3009caca987")
-		)
-		(pin "2"
-			(uuid "1d7abaa6-7458-4e4c-bb8d-b7d36c483b44")
-		)
-		(instances
-			(project "star-tracker-card"
-				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/c38dcfbe-e8e3-410e-98db-09d235320446"
-					(reference "C30")
 					(unit 1)
 				)
 			)
@@ -24139,144 +23974,6 @@
 			(project "star-tracker-card"
 				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/c38dcfbe-e8e3-410e-98db-09d235320446"
 					(reference "R70")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 38.1 49.53 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f959f4aa-ac66-409b-b671-eb315e66530a")
-		(property "Reference" "C31"
-			(at 35.56 48.2662 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "2.2u"
-			(at 35.56 50.8062 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "oresat-passives:0603-C-NOSILK"
-			(at 38.1 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRT188C71E225KE13-01.pdf"
-			(at 38.1 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "2.2 µF ±10% 25V Ceramic Capacitor X7S 0603 (1608 Metric)"
-			(at 38.1 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DPN" "490-GRT188C71E225KE13DCT-ND"
-			(at 38.1 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MFR" "Murata Electronics"
-			(at 38.1 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "GRT188C71E225KE13D"
-			(at 38.1 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIS" "DigiKey"
-			(at 38.1 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DIST" "DigiKey"
-			(at 38.1 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e587c313-f7fd-41e4-9628-80eb6ae90796")
-		)
-		(pin "2"
-			(uuid "294d992d-496f-4b31-bcd3-a84e64ea3f91")
-		)
-		(instances
-			(project "star-tracker-card"
-				(path "/324e9eb5-7420-4b7e-862c-cc20bb28618a/c38dcfbe-e8e3-410e-98db-09d235320446"
-					(reference "C31")
 					(unit 1)
 				)
 			)
