@@ -5,18 +5,18 @@
 # The makefile automatically looks for a local *.kicad_pro file and assumes that's your project name. It
 # then assumes you want your build products to go into a folder called "build", of course.
 #
-# Note: PRESET_NAME is the preset for your BOM format. kicad-cli will happily output a completely useless BOM
-# of just REF, VALUE, FOOTPRINT, that's it, unless you set up the BOM tool with a "preset". We suggest you create
-# 'bom-preset' when working in KiCad which has "all the things" when you're editing the schematic, and then 
-# another preset called 'bom-export-preset' when exporting your BOM into a CSV file. This export preset removes
-# VALUE, FOOTPRINT, and DATASHEET.
+# Note: Your BOM must have at least the following headers: "Qty","Reference","MFR","MPN","DIS","DPN","Description"
+#
+# This Makefile requires the following packages/tools:
+# make
+# pandoc (Packages: )
+# zip
 
 PROJECT_FILE = $(firstword $(shell echo *.kicad_pro))
 PROJECT_NAME = $(PROJECT_FILE:%.kicad_pro=%)
 SCHEMATIC    = $(PROJECT_NAME).kicad_sch
 BOARD        = $(PROJECT_NAME).kicad_pcb
 TIMESTAMP   = $(shell date '+%Y-%m-%dT%H-%M-%S')
-PRESET_NAME ?= bom-export-preset
 OUTPUT_DIR  ?= build
 DOC_DIR     ?= documentation
 FAB_DIR     ?= fabrication
@@ -39,7 +39,7 @@ pdf:	## Generate a PDF of the schematic
 	kicad-cli sch export pdf -o $(OUTPUT_DIR)/$(DOC_DIR)/$(PROJECT_NAME)-schematic.pdf $(SCHEMATIC)
 	
 bom:	## Generate a CSV Bill of Materials (BOM) with the output preset file that you created in your schematic.
-	kicad-cli sch export bom --preset $(PRESET_NAME) -o $(OUTPUT_DIR)/$(ASM_DIR)/$(PROJECT_NAME)-bom.csv $(SCHEMATIC)	
+	kicad-cli sch export bom -o $(OUTPUT_DIR)/$(ASM_DIR)/$(PROJECT_NAME)-bom.csv --fields "QUANTITY,Reference,Value,Footprint,MFR,MPN,DIS,DPN,Description" --group-by "Reference,Value,Footprint" --exclude-dnp  $(SCHEMATIC)
 
 # Generate build files from the board
 
